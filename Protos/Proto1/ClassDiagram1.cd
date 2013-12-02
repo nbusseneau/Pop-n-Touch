@@ -1,0 +1,79 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Proto1.App" Collapsed="true">
+    <Position X="4" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proto1.SurfaceWindow1">
+    <Position X="1" Y="2.25" Width="2.75" />
+    <NestedTypes>
+      <Enum Name="Proto1.SurfaceWindow1.GameState" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>View\SurfaceWindow1.xaml.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AEAAAIAQAAAAAACAKQAIAIgAAAAgIIoAAAAAAAAAAAA=</HashCode>
+      <FileName>View\SurfaceWindow1.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proto1.Tab">
+    <Position X="4" Y="2.25" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAIAgAAAAgAAAAAAAAAAIAAwAAAABCAAIBAAAAIgAA=</HashCode>
+      <FileName>View\Tab.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proto1.Properties.Resources" Collapsed="true">
+    <Position X="5.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proto1.Properties.Settings" Collapsed="true">
+    <Position X="7.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proto1.Melody">
+    <Position X="8.5" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAgAAgAAAAAAAEEAAAIEAVQAAQAAAAEAAAAAAAMCAA=</HashCode>
+      <FileName>Model\Melody.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proto1.Note">
+    <Position X="12" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAAgAAACAAAgAAAAAAAAAAAAAAAAAARAAAQAAAA=</HashCode>
+      <FileName>Model\Note.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proto1.Instrument">
+    <Position X="10.25" Y="2.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAEAAAAAQAAAAAAAAgAAAAAAAAAQA=</HashCode>
+      <FileName>Model\Instrument.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proto1.AudioController" Collapsed="true">
+    <Position X="10.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAACAAAAAAABAQAAAAAgAAAQAAAAAAgQAAAAAAAI=</HashCode>
+      <FileName>Model\AudioController.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proto1.NoteView">
+    <Position X="12" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAQAAAAAgAAIAAAAAAAAAACAACAAAAAgAAEAAAA=</HashCode>
+      <FileName>ViewModel\NoteView.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
