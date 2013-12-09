@@ -66,7 +66,7 @@
 				</TransformGroup>
 			</s:SurfaceButton.RenderTransform>
 		</s:SurfaceButton>
-		<s:SurfaceButton Name="btnSong2" Height="100" Width="500" HorizontalAlignment="Center" Margin="0,0,-927,0" VerticalAlignment="Center" Content="Au clair de la lune" Padding="22" FontSize="35" Click="Button_ChooseSong_Click" Background="#9923956B" BorderBrush="White"/>
+		<s:SurfaceButton Name="btnSong2" Height="100" Width="500" HorizontalAlignment="Center" Margin="0,0,-927,0" VerticalAlignment="Center" Content="Iron" Padding="22" FontSize="35" Click="Button_ChooseSong_Click" Background="#9923956B" BorderBrush="White"/>
 		<s:SurfaceButton Name="btnSong3" Height="50" Width="250" HorizontalAlignment="Center" Margin="0,0,-570,370" VerticalAlignment="Center" Content="What Does The Fox Say ?" Padding="12" RenderTransformOrigin="0.5,0.5" Background="#99389523" BorderBrush="White">
 			<s:SurfaceButton.RenderTransform>
 				<TransformGroup>

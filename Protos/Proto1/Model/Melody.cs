@@ -4,6 +4,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Windows.Threading;
+using Microsoft.Xna.Framework.Media;
 
 namespace Proto1 {
 	public class Melody {
@@ -94,6 +95,22 @@ namespace Proto1 {
 		/// <param name="e"></param>
 		private void PlayList(object source, EventArgs e) {
 			bool play = true;
+
+            // TODO : (WIP) Music doesn't work for now
+
+            String path = System.Environment.CurrentDirectory;
+            path = path.Replace(@"\bin\Debug", @"\Resources");
+            path = path.Replace(@"\bin\Release", @"\Resources");
+
+            MediaPlayer.Stop();
+            Console.WriteLine("Reading : Iron");
+            Uri uri = new Uri(path + @"\Tracks\Iron.mp3");
+            Console.WriteLine("Uri created");
+            Song song = Song.FromUri("Iron", uri);
+            Console.WriteLine("Song created");
+            MediaPlayer.Volume = 100;
+            MediaPlayer.Play(song);
+            Console.WriteLine("Playing song...");
 
 			if (PositionNote <= MaxPosition + 4)
 			{
