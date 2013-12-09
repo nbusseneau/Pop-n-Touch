@@ -34,6 +34,7 @@ namespace Proto1 {
             Timer = new DispatcherTimer();
             IteratorNotes = 0;
             PositionNote = 0;
+            Microsoft.Xna.Framework.FrameworkDispatcher.Update();
         }
 
 		/// <summary>
@@ -66,6 +67,18 @@ namespace Proto1 {
 		public void PlayMusic() {
 			isPlaying = true;
 			RewindMusic();
+
+            String path = System.Environment.CurrentDirectory;
+            Console.WriteLine(path);
+            path = path.Replace(@"\bin\x86\Debug", @"\Resources");
+            path = path.Replace(@"\bin\x86\Release", @"\Resources");
+
+            MediaPlayer.Stop();
+            Uri uri = new Uri(path + @"\Tracks\Iron.wma");
+            Song song = Song.FromUri("Iron", uri);
+            MediaPlayer.Volume = 100;
+            MediaPlayer.Play(song);
+
 			Timer.Interval = TimeSpan.FromMilliseconds(500);//(30000 / CurrentInstrument.Bpm);
 			Timer.Tick += new EventHandler(PlayList);
 			Timer.Start();
@@ -95,22 +108,6 @@ namespace Proto1 {
 		/// <param name="e"></param>
 		private void PlayList(object source, EventArgs e) {
 			bool play = true;
-
-            // TODO : (WIP) Music doesn't work for now
-
-            String path = System.Environment.CurrentDirectory;
-            path = path.Replace(@"\bin\Debug", @"\Resources");
-            path = path.Replace(@"\bin\Release", @"\Resources");
-
-            MediaPlayer.Stop();
-            Console.WriteLine("Reading : Iron");
-            Uri uri = new Uri(path + @"\Tracks\Iron.mp3");
-            Console.WriteLine("Uri created");
-            Song song = Song.FromUri("Iron", uri);
-            Console.WriteLine("Song created");
-            MediaPlayer.Volume = 100;
-            MediaPlayer.Play(song);
-            Console.WriteLine("Playing song...");
 
 			if (PositionNote <= MaxPosition + 4)
 			{
@@ -142,6 +139,7 @@ namespace Proto1 {
 		/// </summary>
 		public void StopMusic() {
 			isPlaying = false;
+            MediaPlayer.Stop();
 			Timer.Stop();
 			Timer.Tick -= new EventHandler(PlayList);
 			RewindMusic();
