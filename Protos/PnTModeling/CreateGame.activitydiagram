@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="48e600cb-eef3-4e0d-8dc7-dfc6f214b47d" name="CreateGame" linkedPackageId="15e6ead2-1ffc-4be1-899e-edb11c53b994" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+  <packagedElements>
+    <activityRootModelHasActivity>
+      <activity Id="86a43670-38f8-4f80-9905-545c0a14ebce" name="CreateGame" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
+        <elementDefinition Id="0b08cf8a-2c44-48f2-8f85-2f5f8ce7d652" />
+        <nodes>
+          <initialNode Id="882caf64-bb8c-4ddd-a1c3-ce49d378109d" name="Initial1" isLeaf="false">
+            <elementDefinition Id="1564c8be-0649-42ca-9214-ae0478f7bb31" />
+            <flowNodeTargets>
+              <controlFlow Id="f1172b6d-b566-4180-a8ee-05772b74715f" isLeaf="false">
+                <decisionNodeMoniker Id="fb7405db-5df8-4d22-8553-8b36d0be6d03" LastKnownName="Decision1" />
+                <elementDefinition Id="b7ce2467-a0a6-414f-8dc7-de8072f18365" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <decisionNode Id="fb7405db-5df8-4d22-8553-8b36d0be6d03" name="Decision1" isLeaf="false">
+            <elementDefinition Id="a379b8d0-5c71-47c1-89b0-8fc9c74dfc88" />
+            <flowNodeTargets>
+              <controlFlow Id="e81868f7-1051-40a5-92ca-5e7c81009355" guard="Song not already chosen" isLeaf="false">
+                <opaqueActionMoniker Id="c50797ee-b75f-4827-aac7-b0250575b295" LastKnownName="Display songs" />
+                <elementDefinition Id="928cd5e6-a6dd-46c8-9659-bfd639504c4a" />
+              </controlFlow>
+              <controlFlow Id="3c3bb72f-689d-40f7-be8b-2edf03e81db2" guard="Song alread chosen" isLeaf="false">
+                <opaqueActionMoniker Id="a9d18c31-0f85-4c90-9a21-dd0c189f6969" LastKnownName="Join" />
+                <elementDefinition Id="c7f663af-28cd-406b-af50-ab94ccfd5d73" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="c50797ee-b75f-4827-aac7-b0250575b295" name="Display songs" isLeaf="false">
+            <elementDefinition Id="eb807973-0cb0-4e64-8b3a-d748050d04e3" />
+            <flowNodeTargets>
+              <controlFlow Id="6954684a-01b7-4878-ac14-e3d720f0fa63" isLeaf="false">
+                <opaqueActionMoniker Id="e9628afe-4bc3-4acd-933e-61b99d0c737b" LastKnownName="Choose song" />
+                <elementDefinition Id="55ec2622-83ce-481b-9d92-26ba68a95725" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="e9628afe-4bc3-4acd-933e-61b99d0c737b" name="Choose song" isLeaf="false">
+            <elementDefinition Id="98b77cf1-250b-4719-a19e-a76e12de6513" />
+            <flowNodeTargets>
+              <controlFlow Id="e4eff374-8e32-4114-abc0-855db0ec4647" isLeaf="false">
+                <mergeNodeMoniker Id="b235562f-0606-4dba-a282-ad15c117e896" LastKnownName="Merge1" />
+                <elementDefinition Id="648c9388-07c7-46c0-9680-6fcb7677e1b1" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <forkNode Id="e7abd911-2f13-4619-abaf-1b84eaa19dd7" name="Fork1" isLeaf="false">
+            <elementDefinition Id="39dd5664-de8e-4582-99d0-f5d88718b680" />
+            <flowNodeTargets>
+              <controlFlow Id="a5ccd3ae-c806-4a93-83d0-ca6313ce54df" isLeaf="false">
+                <opaqueActionMoniker Id="43e3a7fa-5846-4de4-9b3c-c99d4c0f73a4" LastKnownName="Chose instrument" />
+                <elementDefinition Id="67605e71-6c06-4efb-8e3e-72595df77236" />
+              </controlFlow>
+              <controlFlow Id="d27bdc78-c5cf-4046-bf29-2df40001c2a5" isLeaf="false">
+                <opaqueActionMoniker Id="8a2d3eb9-8b8d-4580-ab21-95a49dfc807b" LastKnownName="Chose difficulty" />
+                <elementDefinition Id="399cf246-3071-412e-a60c-e53f0f6b94a9" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+          <opaqueAction Id="a9d18c31-0f85-4c90-9a21-dd0c189f6969" name="Join" isLeaf="false">
+            <elementDefinition Id="f245bbc5-623b-4fa0-b0b9-c7eb03e7524d" />
+            <flowNodeTargets>
+              <controlFlow Id="48de02e1-4d9b-4cc2-91c5-9e28290dece9" isLeaf="false">
+                <mergeNodeMoniker Id="b235562f-0606-4dba-a282-ad15c117e896" LastKnownName="Merge1" />
+                <elementDefinition Id="70246daa-7a1a-455b-bdae-cfbf96ee343d" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <mergeNode Id="b235562f-0606-4dba-a282-ad15c117e896" name="Merge1" isLeaf="false">
+            <elementDefinition Id="fa54c485-dbde-48d7-8969-3a991c958994" />
+            <flowNodeTargets>
+              <controlFlow Id="65b82210-1a44-4513-9acc-a96babf62a14" isLeaf="false">
+                <forkNodeMoniker Id="e7abd911-2f13-4619-abaf-1b84eaa19dd7" LastKnownName="Fork1" />
+                <elementDefinition Id="262fc5f4-8ea4-4adb-96f4-f42bf9a72df5" />
+              </controlFlow>
+            </flowNodeTargets>
+          </mergeNode>
+          <opaqueAction Id="43e3a7fa-5846-4de4-9b3c-c99d4c0f73a4" name="Chose instrument" isLeaf="false">
+            <elementDefinition Id="b4977335-c364-4254-9590-8a84593e41d7" />
+            <flowNodeTargets>
+              <controlFlow Id="98c97897-3bcc-4a8d-bf08-ef9d8ebeb142" isLeaf="false">
+                <joinNodeMoniker Id="fff46e96-9b78-430d-a947-ea5efa8f2e21" LastKnownName="Join1" />
+                <elementDefinition Id="1a936b20-87bc-4652-b895-af44bc74e40a" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction Id="8a2d3eb9-8b8d-4580-ab21-95a49dfc807b" name="Chose difficulty" isLeaf="false">
+            <elementDefinition Id="4fc7db6c-4964-4c08-848e-5a2e14e229a5" />
+            <flowNodeTargets>
+              <controlFlow Id="1b7cce90-89e1-471e-ab78-03de5b0bc1f8" isLeaf="false">
+                <joinNodeMoniker Id="fff46e96-9b78-430d-a947-ea5efa8f2e21" LastKnownName="Join1" />
+                <elementDefinition Id="1ca1ce6c-e39a-41f0-b3ed-5e1366779687" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <joinNode Id="fff46e96-9b78-430d-a947-ea5efa8f2e21" name="Join1" isLeaf="false">
+            <elementDefinition Id="5ca69dc7-86bd-4c12-986c-807e218fd6bb" />
+            <flowNodeTargets>
+              <controlFlow Id="25ffca77-99e4-4e06-89a6-99906f693ca1" isLeaf="false">
+                <decisionNodeMoniker Id="3fefeb58-5dc7-4600-bad4-15a017445ddf" LastKnownName="Decision2" />
+                <elementDefinition Id="9a60a81b-ad88-4027-bc2e-034d1ebb9770" />
+              </controlFlow>
+            </flowNodeTargets>
+          </joinNode>
+          <decisionNode Id="3fefeb58-5dc7-4600-bad4-15a017445ddf" name="Decision2" isLeaf="false">
+            <elementDefinition Id="ba26c015-5dbc-40d3-a8a2-7902597f1553" />
+            <flowNodeTargets>
+              <controlFlow Id="6d20d574-d152-4e05-888a-36a565828054" guard="Difficulty or instrument not chosen for everyone" isLeaf="false">
+                <mergeNodeMoniker Id="b235562f-0606-4dba-a282-ad15c117e896" LastKnownName="Merge1" />
+                <elementDefinition Id="8ac2db17-e74a-47b3-94b9-cf58f0bebf50" />
+              </controlFlow>
+              <controlFlow Id="b84fe2a5-9f3d-4097-a452-7e4141555ab6" guard="Everyone ok" isLeaf="false">
+                <opaqueActionMoniker Id="01751b08-b012-4e35-8737-07da3564cfcb" LastKnownName="Launch game" />
+                <elementDefinition Id="31ce32b9-2a28-47cc-b8d1-2360bbfb67c9" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction Id="01751b08-b012-4e35-8737-07da3564cfcb" name="Launch game" isLeaf="false">
+            <elementDefinition Id="daa7351b-084b-439f-8eb7-cf2bac47054f" />
+            <flowNodeTargets>
+              <controlFlow Id="2a72e797-4670-4f3f-9741-4d4acc0b413c" isLeaf="false">
+                <activityFinalNodeMoniker Id="89981315-88dc-4845-9ffc-2501e778106f" LastKnownName="ActivityFinal1" />
+                <elementDefinition Id="7d12a782-aaa5-4ca0-b783-e24e69fd1c47" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode Id="89981315-88dc-4845-9ffc-2501e778106f" name="ActivityFinal1" isLeaf="false">
+            <elementDefinition Id="f895b8eb-7634-4d6c-aa74-988d3633c066" />
+          </activityFinalNode>
+        </nodes>
+      </activity>
+    </activityRootModelHasActivity>
+  </packagedElements>
+  <package Id="15e6ead2-1ffc-4be1-899e-edb11c53b994" name="PnTModeling">
+    <elementDefinition Id="ba7d1a55-5166-45ac-8041-c152888f5086" />
+  </package>
+</activityRootModel>

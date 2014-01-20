@@ -1,0 +1,1196 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
+  dslVersion="1.0.0.0"
+  Id="ba7d1a55-5166-45ac-8041-c152888f5086"
+  name="PnTModeling" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <packagedElements>
+    <packageHasNamedElement>
+      <actor
+        Id="d53745ca-7100-42d1-9bf9-afaa13f5c387"
+        name="Player"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="6969c4e3-42d4-42d4-b856-ddc310f56a06"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="Pick Song"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="a027104b-e41c-4a82-ac1e-19670d641ac2"
+              LastKnownName="Pick Song"
+              LastKnownLocation="PnTModeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="36d8f855-7d17-4e28-b55d-f1a186187f39"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d9782051-0649-427b-bf6d-db90175ef120"
+                  name="Pick Song"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="9030210e-d3ed-4708-8e30-12bac91ea026"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="Join"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="2064c927-72a5-45a7-9549-82643e16bc82"
+              LastKnownName="Join"
+              LastKnownLocation="PnTModeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d47aa562-ba51-487f-bee0-dcf424ab6be9"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c87c0808-1bad-4a1f-9a6e-a0f5f4f90e7f"
+                  name="Join"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="ce15477c-1c07-486c-8742-3bbe7e9dc076"
+        name="Pick Song"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="d05504d7-9099-422f-896d-93ab00982201">
+            <useCaseMoniker
+              Id="c388ab1d-1eab-4062-87a8-e59b44786e4e"
+              LastKnownName="Pick difficulty"
+              LastKnownLocation="PnTModeling.uml" />
+          </include>
+          <include
+            Id="ba06f45a-52d3-448c-9b1d-496056e64ba7">
+            <useCaseMoniker
+              Id="7e90cfa6-4820-41d5-bc50-07e03236626d"
+              LastKnownName="Pick intrument"
+              LastKnownLocation="PnTModeling.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="7628847c-2fe9-4215-b573-e737649c7e39"
+        name="Join"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="c68a72c8-7921-446c-8a45-1389dc678931">
+            <useCaseMoniker
+              Id="c388ab1d-1eab-4062-87a8-e59b44786e4e"
+              LastKnownName="Pick difficulty"
+              LastKnownLocation="PnTModeling.uml" />
+          </include>
+          <include
+            Id="a5fdceac-1320-4057-bc48-ecfe52c661f6">
+            <useCaseMoniker
+              Id="7e90cfa6-4820-41d5-bc50-07e03236626d"
+              LastKnownName="Pick intrument"
+              LastKnownLocation="PnTModeling.uml" />
+          </include>
+        </additions>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="361d096b-833c-44c1-b586-996385ea5382"
+        name="Start"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="c9036b26-ff3f-48bd-87c8-7c6204e945af">
+            <useCaseMoniker
+              Id="ce15477c-1c07-486c-8742-3bbe7e9dc076"
+              LastKnownName="Pick Song"
+              LastKnownLocation="PnTModeling.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e67390cb-5684-4848-9774-5f280232a34c"
+        name="Quit"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="4c1b4b80-86dc-46a1-9c40-bbba87a5160b">
+            <useCaseMoniker
+              Id="7628847c-2fe9-4215-b573-e737649c7e39"
+              LastKnownName="Join"
+              LastKnownLocation="PnTModeling.uml" />
+          </extend>
+        </extendedCases>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c388ab1d-1eab-4062-87a8-e59b44786e4e"
+        name="Pick difficulty"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="7e90cfa6-4820-41d5-bc50-07e03236626d"
+        name="Pick intrument"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="0fe32c14-40e0-4d66-aa02-061820a8749a"
+        name="CreateGame"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="a027104b-e41c-4a82-ac1e-19670d641ac2"
+        name="Pick Song"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="aceb8e44-0ada-43f5-a768-008adc96f1e6">
+            <useCaseMoniker
+              Id="24c4beea-4150-47e3-9f1a-d13b223ed66d"
+              LastKnownName="Pick difficulty"
+              LastKnownLocation="PnTModeling.uml" />
+          </include>
+          <include
+            Id="a609c6c2-2212-4a08-af35-592b1d10e0e6">
+            <useCaseMoniker
+              Id="763d956c-4bc3-44b4-a295-1b630e5bbc10"
+              LastKnownName="Pick instrument"
+              LastKnownLocation="PnTModeling.uml" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker
+            Id="0fe32c14-40e0-4d66-aa02-061820a8749a"
+            LastKnownName="CreateGame"
+            LastKnownLocation="PnTModeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2064c927-72a5-45a7-9549-82643e16bc82"
+        name="Join"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="54fc343f-f086-40e2-882e-87365b172f46">
+            <useCaseMoniker
+              Id="24c4beea-4150-47e3-9f1a-d13b223ed66d"
+              LastKnownName="Pick difficulty"
+              LastKnownLocation="PnTModeling.uml" />
+          </include>
+          <include
+            Id="567d6912-a2fe-4e75-aae7-bcc70e2940d5">
+            <useCaseMoniker
+              Id="763d956c-4bc3-44b4-a295-1b630e5bbc10"
+              LastKnownName="Pick instrument"
+              LastKnownLocation="PnTModeling.uml" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker
+            Id="0fe32c14-40e0-4d66-aa02-061820a8749a"
+            LastKnownName="CreateGame"
+            LastKnownLocation="PnTModeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="ef41aef1-96ae-486c-82c1-cb46c1145c7d"
+        name="Start"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="649b6323-581f-4bd9-95fa-04dbe9f1c2bf">
+            <useCaseMoniker
+              Id="a027104b-e41c-4a82-ac1e-19670d641ac2"
+              LastKnownName="Pick Song"
+              LastKnownLocation="PnTModeling.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="0fe32c14-40e0-4d66-aa02-061820a8749a"
+            LastKnownName="CreateGame"
+            LastKnownLocation="PnTModeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="1221e35d-62c6-4900-84df-9eb44c140217"
+        name="Quit"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="b105c335-9d03-4eee-9a35-aeb183b6d8e3">
+            <useCaseMoniker
+              Id="2064c927-72a5-45a7-9549-82643e16bc82"
+              LastKnownName="Join"
+              LastKnownLocation="PnTModeling.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="0fe32c14-40e0-4d66-aa02-061820a8749a"
+            LastKnownName="CreateGame"
+            LastKnownLocation="PnTModeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="24c4beea-4150-47e3-9f1a-d13b223ed66d"
+        name="Pick difficulty"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="0fe32c14-40e0-4d66-aa02-061820a8749a"
+            LastKnownName="CreateGame"
+            LastKnownLocation="PnTModeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="763d956c-4bc3-44b4-a295-1b630e5bbc10"
+        name="Pick instrument"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="0fe32c14-40e0-4d66-aa02-061820a8749a"
+            LastKnownName="CreateGame"
+            LastKnownLocation="PnTModeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="f6daf833-77e4-4e6e-bc0e-ca87329172ef"
+        name="Player"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="34db8b7e-a307-4c17-8bb7-a35c81f87eb6"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="Play note"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="be21eccf-a769-4a27-8854-03f6fc7dbe99"
+              LastKnownName="Play note"
+              LastKnownLocation="PnTModeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="27982c3d-2219-46c6-b61a-d51d856d15d6"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="32b86710-1758-40a4-a140-a6351e285ef4"
+                  name="Play note"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="dc88e96c-9f96-4661-ab23-e07d922f118b"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="Pause"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="b1f2e6e8-6d55-4181-8097-b2152f2aed46"
+              LastKnownName="Pause"
+              LastKnownLocation="PnTModeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ca849b12-6f38-46e1-9a52-70f2c1763614"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6290e187-26fc-4b53-b997-5b0fb065678a"
+                  name="Pause"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="5fa3a28f-6bca-49c9-9631-f4a062c6959e"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="Join game"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="ce5d4c1e-888e-4220-bb4d-0876a3fbb13f"
+              LastKnownName="Join game"
+              LastKnownLocation="PnTModeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="670330a6-417e-459e-b196-19bdcf975abf"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ae389b70-5d3d-48a4-a5c8-ca668e694672"
+                  name="Join game"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="22239ce7-c1b9-4fb4-acc9-904d505868bf"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="Get bonus"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="c1886214-9938-4a49-97e4-da048f35b22f"
+              LastKnownName="Get bonus"
+              LastKnownLocation="PnTModeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="99edccfa-1848-4600-85be-40c35203993b"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3c7045e4-3050-4998-8d8c-eddec35cb383"
+                  name="Get bonus"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="2a147230-ac22-417c-b2e8-19cbe21cf9d5"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="Quit"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="27a505dd-93b8-4c6e-a21f-a745347caf85"
+              LastKnownName="Quit"
+              LastKnownLocation="PnTModeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d491996d-8183-47f6-b1be-555daebfaa46"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="baeb8af6-48fd-49ec-a7d6-a2510b5fe79a"
+                  name="Quit"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="f8820a29-1ab1-4dce-a639-bb3027f29c41"
+        name="Game"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="be21eccf-a769-4a27-8854-03f6fc7dbe99"
+        name="Play note"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="f8820a29-1ab1-4dce-a639-bb3027f29c41"
+            LastKnownName="Game"
+            LastKnownLocation="PnTModeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="c1886214-9938-4a49-97e4-da048f35b22f"
+        name="Get bonus"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="f8820a29-1ab1-4dce-a639-bb3027f29c41"
+            LastKnownName="Game"
+            LastKnownLocation="PnTModeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="ce5d4c1e-888e-4220-bb4d-0876a3fbb13f"
+        name="Join game"
+        isAbstract="false"
+        isLeaf="false">
+        <additions>
+          <include
+            Id="6d1cdbc2-6c81-4c58-91c8-ba3a9e363552">
+            <useCaseMoniker
+              Id="add68d78-ef14-4ff7-8198-d86b508ccccf"
+              LastKnownName="Pick difficulty"
+              LastKnownLocation="PnTModeling.uml" />
+          </include>
+          <include
+            Id="130e4df0-4aa1-4d48-9948-adea6ed387c3">
+            <useCaseMoniker
+              Id="16979db0-4ae7-4bc2-aec4-d134dac404d9"
+              LastKnownName="Pick instrument"
+              LastKnownLocation="PnTModeling.uml" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker
+            Id="f8820a29-1ab1-4dce-a639-bb3027f29c41"
+            LastKnownName="Game"
+            LastKnownLocation="PnTModeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="27a505dd-93b8-4c6e-a21f-a745347caf85"
+        name="Quit"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="f8820a29-1ab1-4dce-a639-bb3027f29c41"
+            LastKnownName="Game"
+            LastKnownLocation="PnTModeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="b1f2e6e8-6d55-4181-8097-b2152f2aed46"
+        name="Pause"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="f8820a29-1ab1-4dce-a639-bb3027f29c41"
+            LastKnownName="Game"
+            LastKnownLocation="PnTModeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="5f30bd04-9fc3-419a-a979-759e3cd462ee"
+        name="Use bonus"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="1a9bb9f6-75c2-4769-9fac-a3155a36da84">
+            <useCaseMoniker
+              Id="c1886214-9938-4a49-97e4-da048f35b22f"
+              LastKnownName="Get bonus"
+              LastKnownLocation="PnTModeling.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="f8820a29-1ab1-4dce-a639-bb3027f29c41"
+            LastKnownName="Game"
+            LastKnownLocation="PnTModeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="add68d78-ef14-4ff7-8198-d86b508ccccf"
+        name="Pick difficulty"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="f8820a29-1ab1-4dce-a639-bb3027f29c41"
+            LastKnownName="Game"
+            LastKnownLocation="PnTModeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="5bfaede9-f34e-4788-bdfe-313ca5a0674d"
+        name="Unpause"
+        isAbstract="false"
+        isLeaf="false">
+        <extendedCases>
+          <extend
+            Id="96e616cd-ac77-4bb6-a9a3-f323c513c9d7">
+            <useCaseMoniker
+              Id="b1f2e6e8-6d55-4181-8097-b2152f2aed46"
+              LastKnownName="Pause"
+              LastKnownLocation="PnTModeling.uml" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker
+            Id="f8820a29-1ab1-4dce-a639-bb3027f29c41"
+            LastKnownName="Game"
+            LastKnownLocation="PnTModeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="16979db0-4ae7-4bc2-aec4-d134dac404d9"
+        name="Pick instrument"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="f8820a29-1ab1-4dce-a639-bb3027f29c41"
+            LastKnownName="Game"
+            LastKnownLocation="PnTModeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <actor
+        Id="c15f0d63-53cf-47cd-a4b0-bdc2616e928e"
+        name="Player1"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="cb223628-7c4f-4f9a-9786-566ca78ff63a"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="See scores"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="e671a04b-f2b9-4fc0-80c5-60088f749a8e"
+              LastKnownName="See scores"
+              LastKnownLocation="PnTModeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c53c5468-9ca7-4cfc-b7ea-c65debe7669d"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5dd85193-e976-4d49-a381-124cefc058f5"
+                  name="See scores"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="aac30374-f38f-46b6-b731-8d3a7348be11"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="Leave"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="e7d300de-9ca7-4c28-b87e-d51df7afff6f"
+              LastKnownName="Leave"
+              LastKnownLocation="PnTModeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8db416be-ce63-4fe3-9054-f0bd5da2f79d"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="dd74543b-5b9c-42c0-a83d-5734227713c1"
+                  name="Leave"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="9d0eac28-af2c-435b-97be-9b41a82332e8"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="Back to the main menu"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="2e112c47-4bbb-46f3-bc39-cc3ac11dfb06"
+              LastKnownName="Back to the main menu"
+              LastKnownLocation="PnTModeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d151f733-7161-4065-ae4e-cb91080df7fa"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c6841aa8-298b-41f4-98fd-e536b2b5595e"
+                  name="Back to the main menu"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="069a6a92-fc54-4946-8ef4-be8576b4b5e8"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="Restart"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="4d8480a6-8e81-4e50-9ea2-43de3f984971"
+              LastKnownName="Restart"
+              LastKnownLocation="PnTModeling.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5380bf7d-6ac0-49eb-bb51-c3c2de18e9f5"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3e8770bd-7448-4cb4-8d5d-97fb9daf990e"
+                  name="Restart"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </actor>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <subsystem
+        Id="44f69904-405d-4b3e-b41d-e3361d23a952"
+        name="EndGame"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedCommentsInternal>
+          <comment
+            Id="8f9ba32b-5e1a-4d07-9417-d95cbb61b10e">
+            <body>Keep the same song</body>
+            <annotatedElements>
+              <useCaseMoniker
+                Id="4d8480a6-8e81-4e50-9ea2-43de3f984971"
+                LastKnownName="Restart"
+                LastKnownLocation="PnTModeling.uml" />
+            </annotatedElements>
+          </comment>
+        </ownedCommentsInternal>
+      </subsystem>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e671a04b-f2b9-4fc0-80c5-60088f749a8e"
+        name="See scores"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="44f69904-405d-4b3e-b41d-e3361d23a952"
+            LastKnownName="EndGame"
+            LastKnownLocation="PnTModeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="e7d300de-9ca7-4c28-b87e-d51df7afff6f"
+        name="Leave"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="44f69904-405d-4b3e-b41d-e3361d23a952"
+            LastKnownName="EndGame"
+            LastKnownLocation="PnTModeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="2e112c47-4bbb-46f3-bc39-cc3ac11dfb06"
+        name="Back to the main menu"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="44f69904-405d-4b3e-b41d-e3361d23a952"
+            LastKnownName="EndGame"
+            LastKnownLocation="PnTModeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="4d8480a6-8e81-4e50-9ea2-43de3f984971"
+        name="Restart"
+        isAbstract="false"
+        isLeaf="false">
+        <subjects>
+          <subsystemMoniker
+            Id="44f69904-405d-4b3e-b41d-e3361d23a952"
+            LastKnownName="EndGame"
+            LastKnownLocation="PnTModeling.uml" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <activity
+        Id="0b08cf8a-2c44-48f2-8f85-2f5f8ce7d652"
+        name="CreateGame"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false"
+        isReentrant="false"
+        isReadOnly="false"
+        isSingleExecution="false">
+        <nodes>
+          <initialNode
+            Id="1564c8be-0649-42ca-9214-ae0478f7bb31"
+            name="Initial1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="b7ce2467-a0a6-414f-8dc7-de8072f18365"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="a379b8d0-5c71-47c1-89b0-8fc9c74dfc88"
+                  LastKnownName="Decision1"
+                  LastKnownLocation="PnTModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </initialNode>
+          <decisionNode
+            Id="a379b8d0-5c71-47c1-89b0-8fc9c74dfc88"
+            name="Decision1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="928cd5e6-a6dd-46c8-9659-bfd639504c4a"
+                guard="Song not already chosen"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="eb807973-0cb0-4e64-8b3a-d748050d04e3"
+                  LastKnownName="Display songs"
+                  LastKnownLocation="PnTModeling.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="c7f663af-28cd-406b-af50-ab94ccfd5d73"
+                guard="Song alread chosen"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="f245bbc5-623b-4fa0-b0b9-c7eb03e7524d"
+                  LastKnownName="Join"
+                  LastKnownLocation="PnTModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="eb807973-0cb0-4e64-8b3a-d748050d04e3"
+            name="Display songs"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="55ec2622-83ce-481b-9d92-26ba68a95725"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="98b77cf1-250b-4719-a19e-a76e12de6513"
+                  LastKnownName="Choose song"
+                  LastKnownLocation="PnTModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="98b77cf1-250b-4719-a19e-a76e12de6513"
+            name="Choose song"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="648c9388-07c7-46c0-9680-6fcb7677e1b1"
+                isLeaf="false">
+                <mergeNodeMoniker
+                  Id="fa54c485-dbde-48d7-8969-3a991c958994"
+                  LastKnownName="Merge1"
+                  LastKnownLocation="PnTModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <forkNode
+            Id="39dd5664-de8e-4582-99d0-f5d88718b680"
+            name="Fork1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="67605e71-6c06-4efb-8e3e-72595df77236"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="b4977335-c364-4254-9590-8a84593e41d7"
+                  LastKnownName="Chose instrument"
+                  LastKnownLocation="PnTModeling.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="399cf246-3071-412e-a60c-e53f0f6b94a9"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="4fc7db6c-4964-4c08-848e-5a2e14e229a5"
+                  LastKnownName="Chose difficulty"
+                  LastKnownLocation="PnTModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </forkNode>
+          <opaqueAction
+            Id="f245bbc5-623b-4fa0-b0b9-c7eb03e7524d"
+            name="Join"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="70246daa-7a1a-455b-bdae-cfbf96ee343d"
+                isLeaf="false">
+                <mergeNodeMoniker
+                  Id="fa54c485-dbde-48d7-8969-3a991c958994"
+                  LastKnownName="Merge1"
+                  LastKnownLocation="PnTModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <mergeNode
+            Id="fa54c485-dbde-48d7-8969-3a991c958994"
+            name="Merge1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="262fc5f4-8ea4-4adb-96f4-f42bf9a72df5"
+                isLeaf="false">
+                <forkNodeMoniker
+                  Id="39dd5664-de8e-4582-99d0-f5d88718b680"
+                  LastKnownName="Fork1"
+                  LastKnownLocation="PnTModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </mergeNode>
+          <opaqueAction
+            Id="b4977335-c364-4254-9590-8a84593e41d7"
+            name="Chose instrument"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="1a936b20-87bc-4652-b895-af44bc74e40a"
+                isLeaf="false">
+                <joinNodeMoniker
+                  Id="5ca69dc7-86bd-4c12-986c-807e218fd6bb"
+                  LastKnownName="Join1"
+                  LastKnownLocation="PnTModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <opaqueAction
+            Id="4fc7db6c-4964-4c08-848e-5a2e14e229a5"
+            name="Chose difficulty"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="1ca1ce6c-e39a-41f0-b3ed-5e1366779687"
+                isLeaf="false">
+                <joinNodeMoniker
+                  Id="5ca69dc7-86bd-4c12-986c-807e218fd6bb"
+                  LastKnownName="Join1"
+                  LastKnownLocation="PnTModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <joinNode
+            Id="5ca69dc7-86bd-4c12-986c-807e218fd6bb"
+            name="Join1"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="9a60a81b-ad88-4027-bc2e-034d1ebb9770"
+                isLeaf="false">
+                <decisionNodeMoniker
+                  Id="ba26c015-5dbc-40d3-a8a2-7902597f1553"
+                  LastKnownName="Decision2"
+                  LastKnownLocation="PnTModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </joinNode>
+          <decisionNode
+            Id="ba26c015-5dbc-40d3-a8a2-7902597f1553"
+            name="Decision2"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="8ac2db17-e74a-47b3-94b9-cf58f0bebf50"
+                guard="Difficulty or instrument not chosen for everyone"
+                isLeaf="false">
+                <mergeNodeMoniker
+                  Id="fa54c485-dbde-48d7-8969-3a991c958994"
+                  LastKnownName="Merge1"
+                  LastKnownLocation="PnTModeling.uml" />
+              </controlFlow>
+              <controlFlow
+                Id="31ce32b9-2a28-47cc-b8d1-2360bbfb67c9"
+                guard="Everyone ok"
+                isLeaf="false">
+                <opaqueActionMoniker
+                  Id="daa7351b-084b-439f-8eb7-cf2bac47054f"
+                  LastKnownName="Launch game"
+                  LastKnownLocation="PnTModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
+          <opaqueAction
+            Id="daa7351b-084b-439f-8eb7-cf2bac47054f"
+            name="Launch game"
+            isLeaf="false">
+            <flowNodeTargets>
+              <controlFlow
+                Id="7d12a782-aaa5-4ca0-b783-e24e69fd1c47"
+                isLeaf="false">
+                <activityFinalNodeMoniker
+                  Id="f895b8eb-7634-4d6c-aa74-988d3633c066"
+                  LastKnownName="ActivityFinal1"
+                  LastKnownLocation="PnTModeling.uml" />
+              </controlFlow>
+            </flowNodeTargets>
+          </opaqueAction>
+          <activityFinalNode
+            Id="f895b8eb-7634-4d6c-aa74-988d3633c066"
+            name="ActivityFinal1"
+            isLeaf="false" />
+        </nodes>
+      </activity>
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

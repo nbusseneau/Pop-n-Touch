@@ -1,0 +1,125 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="bddf4883-74f2-4663-95d5-1665c4bc139e" name="EndGame" linkedPackageId="b7caee3d-9e5d-4ff3-8139-c5295c942f45" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="29fce0ba-6a22-42f1-9e0d-46b0869d4e4c" name="Player1" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c15f0d63-53cf-47cd-a4b0-bdc2616e928e" />
+        <targetEnds>
+          <association Id="2659506a-7e99-4c2d-a35f-16fd50713a1e" isDerived="false" sourceEndRoleName="Player" targetEndRoleName="See scores" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="bfbcb2a6-5457-498e-b992-541449037079" LastKnownName="See scores" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="81cb9026-74c3-44d2-b83c-fe69eaedce47" name="Player" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="c53c5468-9ca7-4cfc-b7ea-c65debe7669d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="35d87021-14f2-48f3-97e9-86f156f074e1" name="See scores" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="5dd85193-e976-4d49-a381-124cefc058f5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="cb223628-7c4f-4f9a-9786-566ca78ff63a" />
+          </association>
+          <association Id="9ed72677-1cbc-4632-b928-1227a0990db2" isDerived="false" sourceEndRoleName="Player" targetEndRoleName="Leave" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="bc7fd7eb-d51f-4fa4-9706-31e69d69210b" LastKnownName="Leave" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ee5fecf2-5988-4718-b467-d0dee15e9e8d" name="Player" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="8db416be-ce63-4fe3-9054-f0bd5da2f79d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="a1f08281-3c29-4011-b9c5-feb68a2baeea" name="Leave" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="dd74543b-5b9c-42c0-a83d-5734227713c1" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="aac30374-f38f-46b6-b731-8d3a7348be11" />
+          </association>
+          <association Id="c9472db7-29d9-44f1-9519-a256c144cf8a" isDerived="false" sourceEndRoleName="Player" targetEndRoleName="Back to the main menu" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="0d7d9c7c-7d34-47f6-bf15-1dcacb250aa2" LastKnownName="Back to the main menu" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="eb1bbb89-0911-4ba7-a4c6-e8051eafbb88" name="Player" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d151f733-7161-4065-ae4e-cb91080df7fa" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="13300791-50f1-48e7-9863-c74490fbe655" name="Back to the main menu" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c6841aa8-298b-41f4-98fd-e536b2b5595e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9d0eac28-af2c-435b-97be-9b41a82332e8" />
+          </association>
+          <association Id="e9d4fd80-3d0d-45bf-b363-6bedf0317fb6" isDerived="false" sourceEndRoleName="Player" targetEndRoleName="Restart" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="d81a93ef-c545-46f3-9612-7fcc4f3fff1e" LastKnownName="Restart" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7401d615-28e6-4cda-9def-bde7909611d9" name="Player" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="5380bf7d-6ac0-49eb-bb51-c3c2de18e9f5" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="5e4a3e64-7b4e-4c46-bacd-30652a2380b0" name="Restart" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="3e8770bd-7448-4cb4-8d5d-97fb9daf990e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="069a6a92-fc54-4946-8ef4-be8576b4b5e8" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="328b27c0-57a0-4f07-9c26-f1b01c8507ec" name="EndGame" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <ownedCommentsInternal>
+          <comment Id="8e49fcc5-20d3-4190-98dd-878e807beedc">
+            <elementDefinition Id="8f9ba32b-5e1a-4d07-9417-d95cbb61b10e" />
+            <body>Keep the same song</body>
+            <annotatedElements>
+              <useCaseMoniker Id="d81a93ef-c545-46f3-9612-7fcc4f3fff1e" LastKnownName="Restart" />
+            </annotatedElements>
+          </comment>
+        </ownedCommentsInternal>
+        <elementDefinition Id="44f69904-405d-4b3e-b41d-e3361d23a952" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="bfbcb2a6-5457-498e-b992-541449037079" name="See scores" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e671a04b-f2b9-4fc0-80c5-60088f749a8e" />
+        <subjects>
+          <subsystemMoniker Id="328b27c0-57a0-4f07-9c26-f1b01c8507ec" LastKnownName="EndGame" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="bc7fd7eb-d51f-4fa4-9706-31e69d69210b" name="Leave" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="e7d300de-9ca7-4c28-b87e-d51df7afff6f" />
+        <subjects>
+          <subsystemMoniker Id="328b27c0-57a0-4f07-9c26-f1b01c8507ec" LastKnownName="EndGame" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="0d7d9c7c-7d34-47f6-bf15-1dcacb250aa2" name="Back to the main menu" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2e112c47-4bbb-46f3-bc39-cc3ac11dfb06" />
+        <subjects>
+          <subsystemMoniker Id="328b27c0-57a0-4f07-9c26-f1b01c8507ec" LastKnownName="EndGame" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d81a93ef-c545-46f3-9612-7fcc4f3fff1e" name="Restart" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="4d8480a6-8e81-4e50-9ea2-43de3f984971" />
+        <subjects>
+          <subsystemMoniker Id="328b27c0-57a0-4f07-9c26-f1b01c8507ec" LastKnownName="EndGame" />
+        </subjects>
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="b7caee3d-9e5d-4ff3-8139-c5295c942f45" name="PnTModeling">
+    <elementDefinition Id="ba7d1a55-5166-45ac-8041-c152888f5086" />
+  </package>
+</useCaseModelRoot>

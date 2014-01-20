@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="4491579f-9731-4086-8cda-107c0c203247" name="CreateGame" linkedPackageId="bea8cd62-8551-4642-98e4-e96ce05892b3" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="84157684-5929-4078-baf4-2db1f06440a1" name="Player" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="d53745ca-7100-42d1-9bf9-afaa13f5c387" />
+        <targetEnds>
+          <association Id="45377dee-eea1-4ddf-aa53-8462b7ad9d47" isDerived="false" sourceEndRoleName="Player" targetEndRoleName="Pick Song" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="b34235d3-3a53-4a54-b614-ddc59f9530ad" LastKnownName="Pick Song" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7a0e5716-8e57-4d6d-b947-db43c69df474" name="Player" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="36d8f855-7d17-4e28-b55d-f1a186187f39" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="125cdb3a-321c-45b6-a89b-7b02330b48f2" name="Pick Song" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="d9782051-0649-427b-bf6d-db90175ef120" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="6969c4e3-42d4-42d4-b856-ddc310f56a06" />
+          </association>
+          <association Id="d48d23ce-7a7e-4463-9f02-6b9843edcccc" isDerived="false" sourceEndRoleName="Player" targetEndRoleName="Join" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="985e3014-2750-4641-92ee-02608214a5ef" LastKnownName="Join" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f9694efc-345b-4e63-89ca-b9be0162b9d9" name="Player" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="d47aa562-ba51-487f-bee0-dcf424ab6be9" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="173aae3f-8bd5-4383-a00f-fe0e20fe7d93" name="Join" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="c87c0808-1bad-4a1f-9a6e-a0f5f4f90e7f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="9030210e-d3ed-4708-8e30-12bac91ea026" />
+          </association>
+        </targetEnds>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <subsystem Id="62e553f7-0420-4321-b76a-f96758d4eab0" name="CreateGame" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0fe32c14-40e0-4d66-aa02-061820a8749a" />
+      </subsystem>
+    </useCaseModelRootHasTypes>
+    <packageHasNamedElement>
+      <useCase Id="b34235d3-3a53-4a54-b614-ddc59f9530ad" name="Pick Song" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="a027104b-e41c-4a82-ac1e-19670d641ac2" />
+        <additions>
+          <include Id="1ec7358c-2ebe-4455-9b07-dc784f345175">
+            <useCaseMoniker Id="24353054-2a5b-4f96-b474-d181bd2fe97a" LastKnownName="Pick difficulty" />
+            <elementDefinition Id="aceb8e44-0ada-43f5-a768-008adc96f1e6" />
+          </include>
+          <include Id="3ed84b96-b78d-4fd8-9e01-fd6c0dc3189e">
+            <useCaseMoniker Id="c5f31aae-0879-44f0-884e-ea91bd4f4ac9" LastKnownName="Pick instrument" />
+            <elementDefinition Id="a609c6c2-2212-4a08-af35-592b1d10e0e6" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="62e553f7-0420-4321-b76a-f96758d4eab0" LastKnownName="CreateGame" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="985e3014-2750-4641-92ee-02608214a5ef" name="Join" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2064c927-72a5-45a7-9549-82643e16bc82" />
+        <additions>
+          <include Id="e003f4ca-28b3-440f-a476-9109160a5cbd">
+            <useCaseMoniker Id="24353054-2a5b-4f96-b474-d181bd2fe97a" LastKnownName="Pick difficulty" />
+            <elementDefinition Id="54fc343f-f086-40e2-882e-87365b172f46" />
+          </include>
+          <include Id="f68ce893-faa1-4b15-b2a2-ca7cdb4d6178">
+            <useCaseMoniker Id="c5f31aae-0879-44f0-884e-ea91bd4f4ac9" LastKnownName="Pick instrument" />
+            <elementDefinition Id="567d6912-a2fe-4e75-aae7-bcc70e2940d5" />
+          </include>
+        </additions>
+        <subjects>
+          <subsystemMoniker Id="62e553f7-0420-4321-b76a-f96758d4eab0" LastKnownName="CreateGame" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="e6adf604-53e2-4bf9-a031-9abff06458fc" name="Start" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="ef41aef1-96ae-486c-82c1-cb46c1145c7d" />
+        <extendedCases>
+          <extend Id="759c8f15-1da9-4f36-ae41-3ba9326c774a">
+            <useCaseMoniker Id="b34235d3-3a53-4a54-b614-ddc59f9530ad" LastKnownName="Pick Song" />
+            <elementDefinition Id="649b6323-581f-4bd9-95fa-04dbe9f1c2bf" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="62e553f7-0420-4321-b76a-f96758d4eab0" LastKnownName="CreateGame" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="deea407e-7ec4-45a1-9401-947885f83833" name="Quit" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="1221e35d-62c6-4900-84df-9eb44c140217" />
+        <extendedCases>
+          <extend Id="31e89f7d-a894-416d-bda1-5fbf2c3d9896">
+            <useCaseMoniker Id="985e3014-2750-4641-92ee-02608214a5ef" LastKnownName="Join" />
+            <elementDefinition Id="b105c335-9d03-4eee-9a35-aeb183b6d8e3" />
+          </extend>
+        </extendedCases>
+        <subjects>
+          <subsystemMoniker Id="62e553f7-0420-4321-b76a-f96758d4eab0" LastKnownName="CreateGame" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="24353054-2a5b-4f96-b474-d181bd2fe97a" name="Pick difficulty" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="24c4beea-4150-47e3-9f1a-d13b223ed66d" />
+        <subjects>
+          <subsystemMoniker Id="62e553f7-0420-4321-b76a-f96758d4eab0" LastKnownName="CreateGame" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase Id="c5f31aae-0879-44f0-884e-ea91bd4f4ac9" name="Pick instrument" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="763d956c-4bc3-44b4-a295-1b630e5bbc10" />
+        <subjects>
+          <subsystemMoniker Id="62e553f7-0420-4321-b76a-f96758d4eab0" LastKnownName="CreateGame" />
+        </subjects>
+      </useCase>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="bea8cd62-8551-4642-98e4-e96ce05892b3" name="PnTModeling">
+    <elementDefinition Id="ba7d1a55-5166-45ac-8041-c152888f5086" />
+  </package>
+</useCaseModelRoot>
