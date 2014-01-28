@@ -1,44 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
-  Id="9a10ff1a-d9c0-4b99-9250-c4989aaf8c2b"
+  Id="3da83189-6e86-49cb-982a-ea4a67f495c4"
   name="View" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
   <ownedCommentsInternal>
     <comment
-      Id="f5229f9c-de5e-4195-a21b-6a03676fe03b">
+      Id="5420cb1f-5d4e-4ee6-bb40-d858f1510dab">
       <body>Singleton</body>
       <annotatedElements>
         <classMoniker
-          Id="fafa77bc-9428-4748-be3e-3e62fefd6863"
+          Id="cfe89220-4ffd-4a2f-9518-5d04b523997d"
           LastKnownName="MainWindow"
-          LastKnownLocation="Package2_2311.uml" />
+          LastKnownLocation="Package2_1204.uml" />
       </annotatedElements>
     </comment>
   </ownedCommentsInternal>
   <packagedElements>
     <packageHasNamedElement>
       <class
-        Id="fafa77bc-9428-4748-be3e-3e62fefd6863"
+        Id="cfe89220-4ffd-4a2f-9518-5d04b523997d"
         name="MainWindow"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
         <targetEnds>
           <association
-            Id="5c816040-0680-4e61-8d92-d37f811bf7b1"
+            Id="9b5ecda3-8d4c-4031-a355-6a13072200e3"
             isDerived="false"
             sourceEndRoleName="MainWindow"
             targetEndRoleName="PlayerView"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
-              Id="8d133608-c6c7-4dd0-9f30-eb2cbfd5bc11"
+              Id="e55b288d-6073-4f96-a39a-b79258cc03aa"
               LastKnownName="PlayerView"
-              LastKnownLocation="Package2_2311.uml" />
+              LastKnownLocation="Package2_1204.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="059238a8-3ca8-4cf2-afc0-5db1cf149c43"
+                  Id="970dd15d-16fd-4905-b032-179becba4534"
                   name="MainWindow"
                   isLeaf="false"
                   isStatic="false"
@@ -50,13 +50,13 @@
                   isNavigableOwned="false">
                   <lowerValueInternal>
                     <literalString
-                      Id="0a530554-65da-4b31-92eb-7899c0390c94"
+                      Id="5a98d706-2ff2-4da4-9f6e-7c34e483e130"
                       name="Lower"
                       value="1" />
                   </lowerValueInternal>
                   <upperValueInternal>
                     <literalString
-                      Id="3814244c-978d-4425-8f12-0d329659d272"
+                      Id="d8c6ab69-b2a5-4a27-9f6c-d5e0209fc16f"
                       name="Upper"
                       value="4" />
                   </upperValueInternal>
@@ -64,7 +64,7 @@
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="751db567-b92f-4775-aac3-fe311585697f"
+                  Id="5d05f92a-13d3-4b44-81aa-60fbd094e056"
                   name="PlayerView"
                   isLeaf="false"
                   isStatic="false"
@@ -77,20 +77,20 @@
             </relationshipOwnedElementsInternal>
           </association>
           <association
-            Id="5687596f-b817-4988-8538-60c8f66da127"
+            Id="3eabae12-6102-491d-af4f-d95c97bd4160"
             isDerived="false"
             sourceEndRoleName="MainWindow"
             targetEndRoleName="MainMenuView"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
-              Id="51a39528-8a22-4538-8d8d-03864de33144"
+              Id="7ed821c1-cf3c-4796-8e40-b6ed0efde149"
               LastKnownName="MainMenuView"
-              LastKnownLocation="Package2_2311.uml" />
+              LastKnownLocation="Package2_1204.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="ff634521-252b-46cf-9ebf-735bfc0f24c1"
+                  Id="5f7e1e9d-68ca-4e80-801e-97544df0e018"
                   name="MainWindow"
                   isLeaf="false"
                   isStatic="false"
@@ -103,7 +103,7 @@
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="571218ed-a078-41d4-b0ef-d33eacdd16c8"
+                  Id="727a0514-36bb-48ac-891c-6fb63e827ec9"
                   name="MainMenuView"
                   isLeaf="false"
                   isStatic="false"
@@ -120,27 +120,27 @@
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
-        Id="8d133608-c6c7-4dd0-9f30-eb2cbfd5bc11"
+        Id="e55b288d-6073-4f96-a39a-b79258cc03aa"
         name="PlayerView"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
         <targetEnds>
           <association
-            Id="ba3fa6e4-b345-4b60-969f-eed9ac6450bc"
+            Id="24868da3-ff0e-46da-9f9b-d908ac14a69e"
             isDerived="false"
             sourceEndRoleName="PlayerView"
             targetEndRoleName="ScoreView"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
-              Id="360a4dc4-c095-446b-a4be-ebf9e2519aef"
+              Id="3b7a2865-74c9-43c9-b72f-9495d18af62e"
               LastKnownName="ScoreView"
-              LastKnownLocation="Package2_2311.uml" />
+              LastKnownLocation="Package2_1204.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="233cdb68-a537-4e46-8602-394dd18a2d6b"
+                  Id="133fc661-d709-4e0c-adfe-9e7a3f2a6345"
                   name="PlayerView"
                   isLeaf="false"
                   isStatic="false"
@@ -153,7 +153,7 @@
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="5f464284-e997-456e-9f07-154520fb5b1e"
+                  Id="fb10c8a6-63bc-4fbf-946e-61587fd7a9dd"
                   name="ScoreView"
                   isLeaf="false"
                   isStatic="false"
@@ -166,20 +166,20 @@
             </relationshipOwnedElementsInternal>
           </association>
           <association
-            Id="889b54e6-48da-4fe4-b24a-9666c4b2150e"
+            Id="acbca731-4a65-48de-ada4-a567a960243b"
             isDerived="false"
             sourceEndRoleName="PlayTabView"
             targetEndRoleName="SheetMusicView"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
-              Id="a9d57ca6-7f7a-4458-ba84-08d397439dbc"
+              Id="cbc87cad-145c-4820-9870-b1d80975f4e5"
               LastKnownName="SheetMusicView"
-              LastKnownLocation="Package2_2311.uml" />
+              LastKnownLocation="Package2_1204.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="f2fe9339-21f0-4272-bb2e-8c64d81c6c1d"
+                  Id="2d6b4ea5-27c3-4e47-b97c-697e3f861f67"
                   name="PlayTabView"
                   isLeaf="false"
                   isStatic="false"
@@ -192,7 +192,7 @@
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="b26b9d79-19aa-46ad-8639-bd62d4028d27"
+                  Id="dd363583-cf3a-4a80-8bc0-546b2841a58d"
                   name="SheetMusicView"
                   isLeaf="false"
                   isStatic="false"
@@ -209,7 +209,7 @@
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
-        Id="51a39528-8a22-4538-8d8d-03864de33144"
+        Id="7ed821c1-cf3c-4796-8e40-b6ed0efde149"
         name="MainMenuView"
         isAbstract="false"
         isLeaf="false"
@@ -217,7 +217,7 @@
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
-        Id="360a4dc4-c095-446b-a4be-ebf9e2519aef"
+        Id="3b7a2865-74c9-43c9-b72f-9495d18af62e"
         name="ScoreView"
         isAbstract="false"
         isLeaf="false"
@@ -225,27 +225,27 @@
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
-        Id="a9d57ca6-7f7a-4458-ba84-08d397439dbc"
+        Id="cbc87cad-145c-4820-9870-b1d80975f4e5"
         name="SheetMusicView"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
         <targetEnds>
           <association
-            Id="2ac2ade1-5581-43b3-bb05-cb1cda635c30"
+            Id="ff33e5f2-a202-4e30-8ff6-8f4d1dae817e"
             isDerived="false"
             sourceEndRoleName="SheetMusicView"
             targetEndRoleName="NoteButtonView"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
-              Id="be14aa06-77bf-4f54-9970-fbdefab75310"
+              Id="1543cf33-763d-494f-a98c-6e9a1a89e532"
               LastKnownName="NoteButtonView"
-              LastKnownLocation="Package2_2311.uml" />
+              LastKnownLocation="Package2_1204.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="a1e5f15b-a54d-42b4-87e7-3585a399dc8b"
+                  Id="2689fcf3-3fb5-44fb-8f86-fa11d7307540"
                   name="SheetMusicView"
                   isLeaf="false"
                   isStatic="false"
@@ -258,7 +258,7 @@
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="c926bb43-3de2-4114-97ed-8f19d57553d7"
+                  Id="b3b7cfaf-94ae-4006-ae85-0f19c3579f7e"
                   name="NoteButtonView"
                   isLeaf="false"
                   isStatic="false"
@@ -269,13 +269,13 @@
                   isComposite="false">
                   <lowerValueInternal>
                     <literalString
-                      Id="3583387f-e624-4d3b-b456-729176da0044"
+                      Id="0401038c-dd4c-4f43-ae87-f20354181e1f"
                       name="Lower"
                       value="Quelques uns" />
                   </lowerValueInternal>
                   <upperValueInternal>
                     <literalString
-                      Id="1cc0918a-f8a6-4908-b533-92b71a966eef"
+                      Id="8eaa1a03-4cc8-4ca4-95f4-011076b82a71"
                       name="Upper"
                       value="Quelques uns" />
                   </upperValueInternal>
@@ -288,7 +288,7 @@
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
-        Id="be14aa06-77bf-4f54-9970-fbdefab75310"
+        Id="1543cf33-763d-494f-a98c-6e9a1a89e532"
         name="NoteButtonView"
         isAbstract="false"
         isLeaf="false"

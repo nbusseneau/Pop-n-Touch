@@ -2061,6 +2061,24 @@
         isLeaf="false"
         isActiveClass="false" />
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="ddae1ba9-57fe-4e90-a18b-cbd6f7dba023"
+        LastKnownName="Model"
+        LastKnownLocation="Package_1204.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="19319867-6c6d-4b10-81b6-03b8e92becf4"
+        LastKnownName="ViewModel"
+        LastKnownLocation="Package1_1204.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <packageMoniker
+        Id="3da83189-6e86-49cb-982a-ea4a67f495c4"
+        LastKnownName="View"
+        LastKnownLocation="Package2_1204.uml" />
+    </packageHasNamedElement>
   </packagedElements>
   <primitiveType
     Id="220a3521-e091-4221-bae9-3ef9018e845c"

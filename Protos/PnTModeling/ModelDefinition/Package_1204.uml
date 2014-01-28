@@ -1,56 +1,44 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
-  Id="c67bf125-c11e-4ab7-8e60-b8751d3860b4"
+  Id="ddae1ba9-57fe-4e90-a18b-cbd6f7dba023"
   name="Model" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
   <ownedCommentsInternal>
     <comment
-      Id="38c7c5f6-3867-4d61-90ae-381c2ec11186">
-      <body>Factory ?</body>
-    </comment>
-    <comment
-      Id="32b5fa80-2a9e-42de-b395-553b915ab6fd">
-      <body>Builder</body>
-    </comment>
-    <comment
-      Id="a75abeec-6202-4808-a1c3-15d9afc21d34">
+      Id="3ad91b75-774b-4cc2-b79b-1b5c41c3ae8c">
       <body>Singleton</body>
       <annotatedElements>
         <classMoniker
-          Id="4bcaac4c-ae75-4784-b25e-a244088cc426"
+          Id="33201db4-1acf-4897-88f5-638a8d239efc"
           LastKnownName="AudioController"
-          LastKnownLocation="Package_2311.uml" />
+          LastKnownLocation="Package_1204.uml" />
       </annotatedElements>
-    </comment>
-    <comment
-      Id="f99179ac-7efc-4519-a4d3-ca727f506045">
-      <body>Strategy ?</body>
     </comment>
   </ownedCommentsInternal>
   <packagedElements>
     <packageHasNamedElement>
       <class
-        Id="39b6a917-780f-4533-87ec-68125efcf685"
+        Id="53ce5291-1cbb-446f-ad01-bb56da4a7bf1"
         name="GameMaster"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
         <targetEnds>
           <association
-            Id="8736e2ea-7045-4d3c-8b13-754cb357d3f2"
+            Id="ab962d9b-3cb8-4a77-b7ba-e9bfb7d6a4e3"
             isDerived="false"
             sourceEndRoleName="GameMaster"
             targetEndRoleName="Game"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
-              Id="46fa029b-17ff-4177-bc6b-3e2ad3e210f2"
+              Id="0214bb0f-9bad-4649-b454-527b42ff0c6b"
               LastKnownName="Game"
-              LastKnownLocation="Package_2311.uml" />
+              LastKnownLocation="Package_1204.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="782396c5-d35e-4d66-b6bb-29bacf78ea53"
+                  Id="e446aaca-2faa-4e4d-8c6c-054a843399c5"
                   name="GameMaster"
                   isLeaf="false"
                   isStatic="false"
@@ -63,7 +51,7 @@
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="4f2af545-bea3-4fbc-9564-10debf3b7656"
+                  Id="9f8e3726-bd17-48e0-85d9-b560005c7a8f"
                   name="Game"
                   isLeaf="false"
                   isStatic="false"
@@ -76,20 +64,20 @@
             </relationshipOwnedElementsInternal>
           </association>
           <association
-            Id="2db470b8-6446-4b50-90f7-7f21b0531b90"
+            Id="4bb50311-4f8b-4fe3-b380-7d1e81cf752d"
             isDerived="false"
             sourceEndRoleName="GameMaster"
-            targetEndRoleName="Player"
+            targetEndRoleName="Players"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
-              Id="1e98093d-5e21-4dc6-8339-617e543ff695"
+              Id="bb734848-c650-48aa-8c21-ea4d6fa8380d"
               LastKnownName="Player"
-              LastKnownLocation="Package_2311.uml" />
+              LastKnownLocation="Package_1204.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="bd06a4d0-cdbe-4919-af30-f68db6d2af0e"
+                  Id="665bfddb-aa9e-422d-8649-d9c99854dc32"
                   name="GameMaster"
                   isLeaf="false"
                   isStatic="false"
@@ -102,8 +90,8 @@
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="4ffcde08-68f9-4773-9ce7-56829a8ab77f"
-                  name="Player"
+                  Id="35c70fd2-c53e-445c-9d9d-5d68f67fd1f0"
+                  name="Players"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -113,13 +101,13 @@
                   isComposite="true">
                   <lowerValueInternal>
                     <literalString
-                      Id="29263712-fbf6-4210-b966-e9a5b138d670"
+                      Id="bcdb30de-88ea-422f-b8bb-8a210c39d17d"
                       name="Lower"
                       value="1" />
                   </lowerValueInternal>
                   <upperValueInternal>
                     <literalString
-                      Id="05eac356-69de-4f94-b20a-fef6a81685c8"
+                      Id="0bd5e907-9cdb-4f8a-94c0-036f3cbe4ede"
                       name="Upper"
                       value="4" />
                   </upperValueInternal>
@@ -132,28 +120,36 @@
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
-        Id="46fa029b-17ff-4177-bc6b-3e2ad3e210f2"
+        Id="0214bb0f-9bad-4649-b454-527b42ff0c6b"
         name="Game"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="bb734848-c650-48aa-8c21-ea4d6fa8380d"
+        name="Player"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
         <targetEnds>
           <association
-            Id="b219d4e4-2240-4e11-8f2a-e325f971f049"
+            Id="71f7b3f0-7db3-4616-81ec-1c147d6b3f1e"
             isDerived="false"
-            sourceEndRoleName="Game"
-            targetEndRoleName="GameMaster"
+            sourceEndRoleName="Player"
+            targetEndRoleName="SheetMusic"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
-              Id="39b6a917-780f-4533-87ec-68125efcf685"
-              LastKnownName="GameMaster"
-              LastKnownLocation="Package_2311.uml" />
+              Id="db8681ec-f340-44d7-9c21-1903c4a19ca7"
+              LastKnownName="SheetMusic"
+              LastKnownLocation="Package_1204.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="ce2df7b7-4697-4445-b123-6161009d29e0"
-                  name="Game"
+                  Id="fc098f3d-e23e-4937-ac11-81c23ed7bdb5"
+                  name="Player"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -165,8 +161,8 @@
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="b58ce4ad-13ce-4729-b980-ae7ef7abf02c"
-                  name="GameMaster"
+                  Id="e6bb9569-4b07-4212-b672-e0d67dd3210c"
+                  name="SheetMusic"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -177,211 +173,180 @@
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="f1bf6168-95bc-462a-be30-b41a5a6c34df"
+        name="INote"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
           <association
-            Id="9914fa32-4bf1-415a-81f6-1c25f5ef8903"
+            Id="60dcf931-c648-4742-bfa7-a62b06dbbe39"
             isDerived="false"
-            sourceEndRoleName="Game"
-            targetEndRoleName="Player"
+            sourceEndRoleName="INote"
+            targetEndRoleName="Accidental"
             isLeaf="false"
             isAbstract="false">
-            <classMoniker
-              Id="1e98093d-5e21-4dc6-8339-617e543ff695"
-              LastKnownName="Player"
-              LastKnownLocation="Package_2311.uml" />
+            <enumerationMoniker
+              Id="33fb343c-bbd4-4f30-a5d1-b61b7d2b01a4"
+              LastKnownName="Accidental"
+              LastKnownLocation="Package_1204.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="4a37e9a2-4e7c-47b5-a77a-55e7bc93f652"
-                  name="Game"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="Shared"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="6a96e4e9-36fe-4e74-9760-ec2369171721"
-                  name="Player"
+                  Id="07c0c784-8d24-49fb-988e-fe3038e0066e"
+                  name="INote"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
                   isDerived="false"
                   isDerivedUnion="false"
                   aggregation="None"
-                  isComposite="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="82b28d9a-efbc-48e0-8f95-6e1a647d6e0a"
-                      name="Lower"
-                      value="1" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="dee1a925-e5be-4507-b15e-bd3fa9862a8a"
-                      name="Upper"
-                      value="4" />
-                  </upperValueInternal>
-                </memberEnd>
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="69a918f9-1111-4f85-99fd-6c4b6ec92085"
+                  name="Accidental"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="d74972ac-e0c1-4548-9eca-44ffb41f62a8"
+            isDerived="false"
+            sourceEndRoleName="INote"
+            targetEndRoleName="Height"
+            isLeaf="false"
+            isAbstract="false">
+            <enumerationMoniker
+              Id="cf059715-80e1-4b0a-bdf8-f770bf984480"
+              LastKnownName="Height"
+              LastKnownLocation="Package_1204.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d52ce93e-0379-4ed1-83e0-05e78cd40bc5"
+                  name="INote"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7f385d4c-f4fc-4124-bcb2-3c4b4265a147"
+                  name="Height"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
         </targetEnds>
-      </class>
+      </Interface>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <Interface
-        Id="58dad990-c868-4601-8f86-04ac1cea5155"
-        name="ISong"
-        isAbstract="false"
-        isLeaf="false" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <class
-        Id="1e98093d-5e21-4dc6-8339-617e543ff695"
-        name="Player"
-        isAbstract="false"
-        isLeaf="false"
-        isActiveClass="false" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <Interface
-        Id="29654697-64af-4ec6-b5ed-0acad4619ddd"
-        name="INote"
-        isAbstract="false"
-        isLeaf="false" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <Interface
-        Id="a61d7676-c6c3-4fcc-8b86-6f22d8b798c8"
-        name="Note1"
-        isAbstract="false"
-        isLeaf="false" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <Interface
-        Id="d47a3fac-c717-49c2-84e3-58699070a6f6"
+        Id="1e1686ab-4132-4d89-b17e-1b635c96135a"
         name="IBonus"
         isAbstract="false"
         isLeaf="false" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
-        Id="70ac2c77-8233-4df7-8503-aedf5e3662e4"
+        Id="313743d5-7bd1-4218-a3e8-e6cf9bd5bd36"
         name="BonusInkBubble"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
         <suppliersInternal>
           <interfaceRealization
-            Id="0da64cf3-884b-4256-8aec-19c1a0a9c06b">
+            Id="4d469077-5ea1-4c0d-805b-6a12491320c8">
             <interfaceMoniker
-              Id="d47a3fac-c717-49c2-84e3-58699070a6f6"
+              Id="1e1686ab-4132-4d89-b17e-1b635c96135a"
               LastKnownName="IBonus"
-              LastKnownLocation="Package_2311.uml" />
+              LastKnownLocation="Package_1204.uml" />
           </interfaceRealization>
         </suppliersInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
-        Id="ba881261-4e12-4f42-a8a7-31b249643eda"
+        Id="36f31ead-cf8d-418b-b608-bf692d19aef8"
         name="BonusAutoPilot"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
         <suppliersInternal>
           <interfaceRealization
-            Id="42d03e06-ef9d-46e2-b15d-d3d52571a6de">
+            Id="6f7f3239-ff65-4d65-b612-b5aab8654a8f">
             <interfaceMoniker
-              Id="d47a3fac-c717-49c2-84e3-58699070a6f6"
+              Id="1e1686ab-4132-4d89-b17e-1b635c96135a"
               LastKnownName="IBonus"
-              LastKnownLocation="Package_2311.uml" />
+              LastKnownLocation="Package_1204.uml" />
           </interfaceRealization>
         </suppliersInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
-        Id="3817f94d-ed0b-47fb-b1bc-81d8b1eb2710"
-        name="PlayTab"
-        isAbstract="false"
-        isLeaf="false"
-        isActiveClass="false">
-        <targetEnds>
-          <association
-            Id="e21683b7-21ed-46a8-80ef-705ba421a5d7"
-            isDerived="false"
-            sourceEndRoleName="PlayTab"
-            targetEndRoleName="Player"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="1e98093d-5e21-4dc6-8339-617e543ff695"
-              LastKnownName="Player"
-              LastKnownLocation="Package_2311.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="27b35c11-183a-48de-88fb-5e905b01cfd0"
-                  name="PlayTab"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="Composite"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="a787cecb-7804-4f09-ab21-015376cc5368"
-                  name="Player"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="true" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-        </targetEnds>
-      </class>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <class
-        Id="317a8b62-3c90-482b-9c82-1337bc09f7fc"
-        name="Note"
+        Id="c15ac099-2f3b-4bf3-a4c2-fceb851965b5"
+        name="Whole"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
         <suppliersInternal>
           <interfaceRealization
-            Id="41c4c447-814f-4c32-9391-c2384f64db0e">
+            Id="90eb8a0a-9fbe-4753-b4cd-33d8dbae9b9a">
             <interfaceMoniker
-              Id="29654697-64af-4ec6-b5ed-0acad4619ddd"
+              Id="f1bf6168-95bc-462a-be30-b41a5a6c34df"
               LastKnownName="INote"
-              LastKnownLocation="Package_2311.uml" />
+              LastKnownLocation="Package_1204.uml" />
           </interfaceRealization>
         </suppliersInternal>
       </class>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <enumeration
-        Id="6fe84baa-9c3e-4299-ba21-5d44b744a6b6"
-        name="NoteType"
+        Id="33fb343c-bbd4-4f30-a5d1-b61b7d2b01a4"
+        name="Accidental"
         isAbstract="false"
-        isLeaf="false" />
+        isLeaf="false">
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="de843aed-5107-4d8d-88e2-d27ce59f165a"
+            name="None" />
+          <enumerationLiteral
+            Id="0aea158e-cd2e-4a14-b0b9-e81bd0a4714c"
+            name="Flat" />
+          <enumerationLiteral
+            Id="c302f0f8-cde7-40db-bba8-385a4b6174db"
+            name="Sharp" />
+        </ownedLiterals>
+      </enumeration>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
-        Id="b1611e13-4b9b-47c1-b254-214164786f71"
+        Id="37c6b541-a67d-4a0f-bd8a-5636c6a46990"
         name="Song"
         isAbstract="false"
         isLeaf="false"
@@ -389,7 +354,7 @@
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
-        Id="a7426b4d-bbf2-48cb-ace9-a59fdbc72c8b"
+        Id="1f8894f9-a0b6-4613-9234-859f8690485c"
         name="Instrument"
         isAbstract="false"
         isLeaf="false"
@@ -397,77 +362,27 @@
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
-        Id="c0e4400e-9b06-46ba-9179-b0d8b5678425"
-        name="GameBuilder"
-        isAbstract="false"
-        isLeaf="false"
-        isActiveClass="false">
-        <targetEnds>
-          <association
-            Id="3c62b8a3-793c-4b66-95d0-b00964a962b0"
-            isDerived="false"
-            sourceEndRoleName="GameBuilder"
-            targetEndRoleName="GameMaster"
-            isLeaf="false"
-            isAbstract="false">
-            <classMoniker
-              Id="39b6a917-780f-4533-87ec-68125efcf685"
-              LastKnownName="GameMaster"
-              LastKnownLocation="Package_2311.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="1f74210a-2377-4d0f-be87-429edc048bc1"
-                  name="GameBuilder"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="Composite"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="25e56445-2e5a-4c12-9947-8e168f46a7aa"
-                  name="GameMaster"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="true" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-        </targetEnds>
-      </class>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <class
-        Id="f65b36fa-5d63-48b2-8816-63bcf501ab46"
+        Id="db8681ec-f340-44d7-9c21-1903c4a19ca7"
         name="SheetMusic"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
         <targetEnds>
           <association
-            Id="f971ebef-16d9-4018-85d2-b75b260968ef"
+            Id="6dfd5481-2737-46a3-b080-88b5fc9be474"
             isDerived="false"
             sourceEndRoleName="SheetMusic"
             targetEndRoleName="Notes"
             isLeaf="false"
             isAbstract="false">
             <interfaceMoniker
-              Id="29654697-64af-4ec6-b5ed-0acad4619ddd"
+              Id="f1bf6168-95bc-462a-be30-b41a5a6c34df"
               LastKnownName="INote"
-              LastKnownLocation="Package_2311.uml" />
+              LastKnownLocation="Package_1204.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="c4fe7df7-a6e2-4271-8747-ceed45469289"
+                  Id="27514fbb-a112-4293-88b0-2e6461f3792f"
                   name="SheetMusic"
                   isLeaf="false"
                   isStatic="false"
@@ -480,7 +395,7 @@
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="fc6a5ba0-5e9e-476f-81d5-c5766509cb53"
+                  Id="95a86136-5c91-4206-ad48-e4b5c9e3044d"
                   name="Notes"
                   isLeaf="false"
                   isStatic="false"
@@ -491,15 +406,67 @@
                   isComposite="true">
                   <lowerValueInternal>
                     <literalString
-                      Id="bd7c0127-b95f-472e-9a4e-0a6c934a9459"
+                      Id="ae9c3d53-8c02-42de-a16f-b9f3eddb9954"
                       name="Lower"
-                      value="Tout plein tout plein" />
+                      value="Many many" />
                   </lowerValueInternal>
                   <upperValueInternal>
                     <literalString
-                      Id="59410a9e-990d-4f95-8eef-6f92d05d40af"
+                      Id="68e65677-bff6-44cd-9fba-15ee33b6b67b"
                       name="Upper"
-                      value="Tout plein tout plein" />
+                      value="Many many" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="af5eebea-46b4-4a23-9cfb-3f505f9a471c"
+            isDerived="false"
+            sourceEndRoleName="SheetMusic"
+            targetEndRoleName="Bonuses"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="1e1686ab-4132-4d89-b17e-1b635c96135a"
+              LastKnownName="IBonus"
+              LastKnownLocation="Package_1204.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="403bf4cc-fde8-40f4-85ba-00e306e679ca"
+                  name="SheetMusic"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2bcf2b51-9579-4a6d-9615-102f3d4f4671"
+                  name="Bonuses"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="8fea766f-9aab-4b47-810e-c2f42067738e"
+                      name="Lower"
+                      value="Some" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="03b1af98-ac2d-4849-9e33-f4e40f4557b7"
+                      name="Upper"
+                      value="Some" />
                   </upperValueInternal>
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -510,47 +477,47 @@
     </packageHasNamedElement>
     <packageHasNamedElement>
       <enumeration
-        Id="d5a09b03-7100-4b72-b785-c7ed40a89d88"
+        Id="3453abaa-033c-4981-a1fb-d6fe2279bf41"
         name="Difficulty"
         isAbstract="false"
         isLeaf="false">
         <ownedLiterals>
           <enumerationLiteral
-            Id="47b750b0-bcee-47b6-888f-6d757dcf6041"
+            Id="5d1b5c5d-42d0-4cde-93ec-08e1ca3607a4"
             name="Beginner" />
           <enumerationLiteral
-            Id="0da8ddb5-22ea-4784-b98d-bec3f3e166d6"
+            Id="edc9f164-c4ad-42c7-946f-8abad4ca3987"
             name="Expert" />
           <enumerationLiteral
-            Id="7119a63a-4618-479f-bfa9-8e25dafc0a2b"
+            Id="22ec991c-2237-4990-89cd-70e85a971969"
             name="Classic" />
         </ownedLiterals>
       </enumeration>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
-        Id="6b8c1a19-4562-4876-9bc6-63f3b6ecc685"
+        Id="123fa27d-b5ec-4b76-a339-09f4052f5076"
         name="SheetBuilder"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
         <targetEnds>
           <association
-            Id="036510d8-f4de-4969-b1c5-9fd416a108a0"
+            Id="ba0b0618-6af3-499c-9ee3-33e40e6ea68c"
             isDerived="false"
-            sourceEndRoleName="QueueBuilder"
+            sourceEndRoleName="SheetBuilder"
             targetEndRoleName="Difficulty"
             isLeaf="false"
             isAbstract="false">
             <enumerationMoniker
-              Id="d5a09b03-7100-4b72-b785-c7ed40a89d88"
+              Id="3453abaa-033c-4981-a1fb-d6fe2279bf41"
               LastKnownName="Difficulty"
-              LastKnownLocation="Package_2311.uml" />
+              LastKnownLocation="Package_1204.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="a9c9e816-ca4f-4374-9126-3eb3c5ab9817"
-                  name="QueueBuilder"
+                  Id="8048fef3-5165-49fe-8960-ad4c2a826ba9"
+                  name="SheetBuilder"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -562,7 +529,7 @@
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="5da4e038-f82a-4269-8a02-b2b416cf8f67"
+                  Id="316b6847-b75f-474f-93a8-0e3cb83e38d6"
                   name="Difficulty"
                   isLeaf="false"
                   isStatic="false"
@@ -575,20 +542,20 @@
             </relationshipOwnedElementsInternal>
           </association>
           <association
-            Id="bf14bb70-b768-44fb-840f-a795a91dd94d"
+            Id="22d841ff-6e9f-4f95-ba7b-a38304746c2f"
             isDerived="false"
             sourceEndRoleName="SheetBuilder"
             targetEndRoleName="Instrument"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
-              Id="a7426b4d-bbf2-48cb-ace9-a59fdbc72c8b"
+              Id="1f8894f9-a0b6-4613-9234-859f8690485c"
               LastKnownName="Instrument"
-              LastKnownLocation="Package_2311.uml" />
+              LastKnownLocation="Package_1204.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="c9973ca4-ea60-48ba-801b-a10f7a990dd4"
+                  Id="cc651fe4-2b99-47de-b71b-da050a0efa80"
                   name="SheetBuilder"
                   isLeaf="false"
                   isStatic="false"
@@ -601,7 +568,7 @@
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="efff9e87-a546-4c7d-b324-9a56cf30a1c5"
+                  Id="5677d557-2560-4d1e-85d3-8530d4194ebd"
                   name="Instrument"
                   isLeaf="false"
                   isStatic="false"
@@ -614,20 +581,20 @@
             </relationshipOwnedElementsInternal>
           </association>
           <association
-            Id="21797d63-ba33-4a77-a501-242ebcba7e51"
+            Id="73385892-67be-49c1-9ddc-9daf979565e4"
             isDerived="false"
             sourceEndRoleName="SheetBuilder"
             targetEndRoleName="Song"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
-              Id="b1611e13-4b9b-47c1-b254-214164786f71"
+              Id="37c6b541-a67d-4a0f-bd8a-5636c6a46990"
               LastKnownName="Song"
-              LastKnownLocation="Package_2311.uml" />
+              LastKnownLocation="Package_1204.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="e14f8809-b726-4d1a-9870-c01dfb966bfa"
+                  Id="9f4f5571-2a3e-431e-90ca-9bb901e91589"
                   name="SheetBuilder"
                   isLeaf="false"
                   isStatic="false"
@@ -640,7 +607,7 @@
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="20ab1bdc-f254-48d4-8917-fddaf58ceabe"
+                  Id="fbf115d1-1cf3-4996-833f-77f9c775b106"
                   name="Song"
                   isLeaf="false"
                   isStatic="false"
@@ -657,11 +624,96 @@
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
-        Id="4bcaac4c-ae75-4784-b25e-a244088cc426"
+        Id="33201db4-1acf-4897-88f5-638a8d239efc"
         name="AudioController"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d0e18e6a-f9fe-4ef6-bc68-ad1a58e7af64"
+        name="Half"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="9ee64ed1-16c3-49d7-aee3-bf680b852262">
+            <interfaceMoniker
+              Id="f1bf6168-95bc-462a-be30-b41a5a6c34df"
+              LastKnownName="INote"
+              LastKnownLocation="Package_1204.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="63fb6e43-d74f-4aa8-a661-c6971f43efa4"
+        name="Quarter"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="0e8bb771-0e81-44ca-b166-4b12ce45d47d">
+            <interfaceMoniker
+              Id="f1bf6168-95bc-462a-be30-b41a5a6c34df"
+              LastKnownName="INote"
+              LastKnownLocation="Package_1204.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="d1e14a62-6410-445e-abc5-650588cb7d5e"
+        name="Eighth"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="36c8abcb-5271-4002-8d2f-f6ac85e6858f">
+            <interfaceMoniker
+              Id="f1bf6168-95bc-462a-be30-b41a5a6c34df"
+              LastKnownName="INote"
+              LastKnownLocation="Package_1204.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="cf059715-80e1-4b0a-bdf8-f770bf984480"
+        name="Height"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="4d5c1b4a-668c-4ca4-8af1-6b8139f53ec2"
+            name="Re" />
+          <enumerationLiteral
+            Id="c77883aa-f6f6-417e-a69f-28a3642681eb"
+            name="Do" />
+          <enumerationLiteral
+            Id="9b96ac4f-a8f0-4587-9680-87d05a703429"
+            name="Mi" />
+          <enumerationLiteral
+            Id="835fd0b2-48dc-4a87-a4c9-81f7e4f2efff"
+            name="Fa" />
+          <enumerationLiteral
+            Id="88ae0389-28b0-4568-aba7-24c634809f78"
+            name="Sol" />
+          <enumerationLiteral
+            Id="fd8f3260-5b07-4e70-bf8e-95cb90987d2a"
+            name="La" />
+          <enumerationLiteral
+            Id="743fb1dc-dba4-4fa1-b8a4-bbb0d9baa028"
+            name="Si" />
+        </ownedLiterals>
+      </enumeration>
     </packageHasNamedElement>
   </packagedElements>
 </package>

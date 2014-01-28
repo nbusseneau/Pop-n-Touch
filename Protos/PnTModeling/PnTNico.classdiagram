@@ -1,0 +1,735 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="42b111d9-aa66-4cde-8fe2-6b7c9361bc75" name="PnTNico" linkedPackageId="9083596e-beba-4361-a1d4-f5b04dd77df0" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="43925a60-c6c6-4e7b-8068-645590c5e255" name="Model">
+        <ownedCommentsInternal>
+          <comment Id="4bef978c-952c-4984-b403-39491a341b43">
+            <elementDefinition Id="3ad91b75-774b-4cc2-b79b-1b5c41c3ae8c" />
+            <body>Singleton</body>
+            <annotatedElements>
+              <classMoniker Id="455d6c3b-1a9d-4984-9a88-1a95d8cd997c" LastKnownName="AudioController" />
+            </annotatedElements>
+          </comment>
+        </ownedCommentsInternal>
+        <elementDefinition Id="ddae1ba9-57fe-4e90-a18b-cbd6f7dba023" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="47dae021-ead2-4052-b9a9-c499199b4431" name="GameMaster" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="53ce5291-1cbb-446f-ad01-bb56da4a7bf1" />
+              <targetEnds>
+                <association Id="03eb84c6-9f6f-4e44-b1ee-eac232bacd34" isDerived="false" sourceEndRoleName="GameMaster" targetEndRoleName="Game" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="91e0ff0e-4e5d-436a-80f1-5cc2f27677ad" LastKnownName="Game" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="a71c8100-4ba9-4d04-afe1-2ef31e90b299" name="GameMaster" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="e446aaca-2faa-4e4d-8c6c-054a843399c5" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="0b78205f-b9d9-4bc8-983b-6e67385ed5cf" name="Game" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <elementDefinition Id="9f8e3726-bd17-48e0-85d9-b560005c7a8f" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="ab962d9b-3cb8-4a77-b7ba-e9bfb7d6a4e3" />
+                </association>
+                <association Id="5a1d66ee-0cb4-4b56-9bc6-ab88c4904fbf" isDerived="false" sourceEndRoleName="GameMaster" targetEndRoleName="Players" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="0644d252-07fd-409b-9719-ea63005b7fa8" LastKnownName="Player" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="1982b122-9f26-4ed0-bdca-ea55e389ff86" name="GameMaster" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="665bfddb-aa9e-422d-8649-d9c99854dc32" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="f614b455-c64c-4475-992b-d9adfec92281" name="Players" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <lowerValueInternal>
+                          <literalString Id="78cc6aee-b8b6-4bf1-bef2-ded41be4c5cf" name="Lower" value="1">
+                            <elementDefinition Id="bcdb30de-88ea-422f-b8bb-8a210c39d17d" />
+                          </literalString>
+                        </lowerValueInternal>
+                        <upperValueInternal>
+                          <literalString Id="927408df-4d6e-4079-9973-3e5ffd3bcce3" name="Upper" value="4">
+                            <elementDefinition Id="0bd5e907-9cdb-4f8a-94c0-036f3cbe4ede" />
+                          </literalString>
+                        </upperValueInternal>
+                        <elementDefinition Id="35c70fd2-c53e-445c-9d9d-5d68f67fd1f0" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="4bb50311-4f8b-4fe3-b380-7d1e81cf752d" />
+                </association>
+              </targetEnds>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="91e0ff0e-4e5d-436a-80f1-5cc2f27677ad" name="Game" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="0214bb0f-9bad-4649-b454-527b42ff0c6b" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="0644d252-07fd-409b-9719-ea63005b7fa8" name="Player" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="bb734848-c650-48aa-8c21-ea4d6fa8380d" />
+              <targetEnds>
+                <association Id="cbdc5347-d850-405e-aede-c3601844fda6" isDerived="false" sourceEndRoleName="Player" targetEndRoleName="SheetMusic" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="e3c20b51-5317-49f4-9b76-5f78d47bfd7a" LastKnownName="SheetMusic" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="72a8a5fc-d7bf-4514-9db0-c26e48328ec8" name="Player" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="fc098f3d-e23e-4937-ac11-81c23ed7bdb5" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="5d0d6fac-0a98-4641-aef8-b6c3c707dfea" name="SheetMusic" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <elementDefinition Id="e6bb9569-4b07-4212-b672-e0d67dd3210c" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="71f7b3f0-7db3-4616-81ec-1c147d6b3f1e" />
+                </association>
+              </targetEnds>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <Interface Id="a1bdbbee-302e-4435-a720-9fe72f9cfdf0" name="INote" isAbstract="false" isLeaf="false">
+              <elementDefinition Id="f1bf6168-95bc-462a-be30-b41a5a6c34df" />
+              <targetEnds>
+                <association Id="dd32052f-41bd-4de6-acd9-7c59eb43577b" isDerived="false" sourceEndRoleName="INote" targetEndRoleName="Accidental" isLeaf="false" isAbstract="false">
+                  <enumerationMoniker Id="b9d34d57-d5fe-4339-a104-e9247b90cdae" LastKnownName="Accidental" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="c52c070f-50e3-4112-8333-21ffa77624d5" name="INote" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="07c0c784-8d24-49fb-988e-fe3038e0066e" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="8620ef94-82fb-427a-9c7c-3d9366b6548d" name="Accidental" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="69a918f9-1111-4f85-99fd-6c4b6ec92085" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="60dcf931-c648-4742-bfa7-a62b06dbbe39" />
+                </association>
+                <association Id="852aeeac-238e-47f0-ad82-229a6e4c1cdc" isDerived="false" sourceEndRoleName="INote" targetEndRoleName="Height" isLeaf="false" isAbstract="false">
+                  <enumerationMoniker Id="81d7fa57-7868-4068-b373-d17fd633decf" LastKnownName="Height" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="1ec9bf26-f686-4baf-b360-b4b2d99d6770" name="INote" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="d52ce93e-0379-4ed1-83e0-05e78cd40bc5" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="382b615b-fb0f-4f3b-893a-1e4551d40894" name="Height" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="7f385d4c-f4fc-4124-bcb2-3c4b4265a147" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="d74972ac-e0c1-4548-9eca-44ffb41f62a8" />
+                </association>
+              </targetEnds>
+            </Interface>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <Interface Id="abe85be9-891a-4601-9f78-df1f3bda8521" name="IBonus" isAbstract="false" isLeaf="false">
+              <elementDefinition Id="1e1686ab-4132-4d89-b17e-1b635c96135a" />
+            </Interface>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="1e5f20af-b0f9-4da2-b96f-1d3436399523" name="BonusInkBubble" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="313743d5-7bd1-4218-a3e8-e6cf9bd5bd36" />
+              <suppliersInternal>
+                <interfaceRealization Id="75010dbb-c70d-4fd7-90fb-92c549576495">
+                  <interfaceMoniker Id="abe85be9-891a-4601-9f78-df1f3bda8521" LastKnownName="IBonus" />
+                  <elementDefinition Id="4d469077-5ea1-4c0d-805b-6a12491320c8" />
+                </interfaceRealization>
+              </suppliersInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="b802b950-6be0-4439-9a61-55e29144b323" name="BonusAutoPilot" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="36f31ead-cf8d-418b-b608-bf692d19aef8" />
+              <suppliersInternal>
+                <interfaceRealization Id="7710d1a0-fe7d-4538-a27f-de98ea0f60c8">
+                  <interfaceMoniker Id="abe85be9-891a-4601-9f78-df1f3bda8521" LastKnownName="IBonus" />
+                  <elementDefinition Id="6f7f3239-ff65-4d65-b612-b5aab8654a8f" />
+                </interfaceRealization>
+              </suppliersInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="54776707-0010-4e1c-baf4-c35f3e9e5443" name="Whole" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="c15ac099-2f3b-4bf3-a4c2-fceb851965b5" />
+              <suppliersInternal>
+                <interfaceRealization Id="11a54d36-c36c-4ca1-9f9f-4b2b0e038c66">
+                  <interfaceMoniker Id="a1bdbbee-302e-4435-a720-9fe72f9cfdf0" LastKnownName="INote" />
+                  <elementDefinition Id="90eb8a0a-9fbe-4753-b4cd-33d8dbae9b9a" />
+                </interfaceRealization>
+              </suppliersInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <enumeration Id="b9d34d57-d5fe-4339-a104-e9247b90cdae" name="Accidental" isAbstract="false" isLeaf="false">
+              <elementDefinition Id="33fb343c-bbd4-4f30-a5d1-b61b7d2b01a4" />
+              <ownedLiterals>
+                <enumerationLiteral Id="6e02c2c0-3be7-4295-8694-56d0272f40c7" name="None">
+                  <elementDefinition Id="de843aed-5107-4d8d-88e2-d27ce59f165a" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="4a97d165-b870-48cd-aa0b-8e03dc553d66" name="Flat">
+                  <elementDefinition Id="0aea158e-cd2e-4a14-b0b9-e81bd0a4714c" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="2e559317-e0a3-4211-b5ba-4756713af6f3" name="Sharp">
+                  <elementDefinition Id="c302f0f8-cde7-40db-bba8-385a4b6174db" />
+                </enumerationLiteral>
+              </ownedLiterals>
+            </enumeration>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="c9a2b980-bc62-499f-91b3-c3ae8962e67f" name="Song" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="37c6b541-a67d-4a0f-bd8a-5636c6a46990" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="7e0bc849-64e7-49df-8b70-e033e5c0b932" name="Instrument" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="1f8894f9-a0b6-4613-9234-859f8690485c" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="e3c20b51-5317-49f4-9b76-5f78d47bfd7a" name="SheetMusic" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="db8681ec-f340-44d7-9c21-1903c4a19ca7" />
+              <targetEnds>
+                <association Id="7ae4d219-7676-44bf-8fcb-48c87c2d7e73" isDerived="false" sourceEndRoleName="SheetMusic" targetEndRoleName="Notes" isLeaf="false" isAbstract="false">
+                  <interfaceMoniker Id="a1bdbbee-302e-4435-a720-9fe72f9cfdf0" LastKnownName="INote" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="4a31542e-316b-45a5-9d2e-99df47d62d55" name="SheetMusic" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="27514fbb-a112-4293-88b0-2e6461f3792f" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="5e21df9e-2ecf-4a67-87ed-b375dc84fedd" name="Notes" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <lowerValueInternal>
+                          <literalString Id="3ad345c3-9336-445d-a558-ff3e653bef3d" name="Lower" value="Many many">
+                            <elementDefinition Id="ae9c3d53-8c02-42de-a16f-b9f3eddb9954" />
+                          </literalString>
+                        </lowerValueInternal>
+                        <upperValueInternal>
+                          <literalString Id="ac17025a-5ff4-4192-997a-a56b93d294b8" name="Upper" value="Many many">
+                            <elementDefinition Id="68e65677-bff6-44cd-9fba-15ee33b6b67b" />
+                          </literalString>
+                        </upperValueInternal>
+                        <elementDefinition Id="95a86136-5c91-4206-ad48-e4b5c9e3044d" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="6dfd5481-2737-46a3-b080-88b5fc9be474" />
+                </association>
+                <association Id="8d11528e-1ab3-4548-b72e-d3290a7e4d4c" isDerived="false" sourceEndRoleName="SheetMusic" targetEndRoleName="Bonuses" isLeaf="false" isAbstract="false">
+                  <interfaceMoniker Id="abe85be9-891a-4601-9f78-df1f3bda8521" LastKnownName="IBonus" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="cf92f197-17b3-4aab-b37a-f6a522ec42ff" name="SheetMusic" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="403bf4cc-fde8-40f4-85ba-00e306e679ca" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="94609ab7-7c60-4de0-9421-bd52b44e54b4" name="Bonuses" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <lowerValueInternal>
+                          <literalString Id="a4badc55-f163-4e11-8136-53e34b95deab" name="Lower" value="Some">
+                            <elementDefinition Id="8fea766f-9aab-4b47-810e-c2f42067738e" />
+                          </literalString>
+                        </lowerValueInternal>
+                        <upperValueInternal>
+                          <literalString Id="0c73483e-39ce-40a4-9e1e-41740f9821c6" name="Upper" value="Some">
+                            <elementDefinition Id="03b1af98-ac2d-4849-9e33-f4e40f4557b7" />
+                          </literalString>
+                        </upperValueInternal>
+                        <elementDefinition Id="2bcf2b51-9579-4a6d-9615-102f3d4f4671" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="af5eebea-46b4-4a23-9cfb-3f505f9a471c" />
+                </association>
+              </targetEnds>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <enumeration Id="e131c747-f693-4384-8124-4e158065c18f" name="Difficulty" isAbstract="false" isLeaf="false">
+              <elementDefinition Id="3453abaa-033c-4981-a1fb-d6fe2279bf41" />
+              <ownedLiterals>
+                <enumerationLiteral Id="3b271494-f55e-43e5-bb8f-03cfdf6faaf0" name="Beginner">
+                  <elementDefinition Id="5d1b5c5d-42d0-4cde-93ec-08e1ca3607a4" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="7e35a58a-15ef-4f5c-8c48-08103cf8a0a0" name="Expert">
+                  <elementDefinition Id="edc9f164-c4ad-42c7-946f-8abad4ca3987" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="1f756b7f-cf59-4980-8a59-46c5df3e02ef" name="Classic">
+                  <elementDefinition Id="22ec991c-2237-4990-89cd-70e85a971969" />
+                </enumerationLiteral>
+              </ownedLiterals>
+            </enumeration>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="ae008708-b54c-474d-883a-6c4519c5c8ec" name="SheetBuilder" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="123fa27d-b5ec-4b76-a339-09f4052f5076" />
+              <targetEnds>
+                <association Id="8fd19e64-042b-40a3-bd84-0aea1a83cde1" isDerived="false" sourceEndRoleName="SheetBuilder" targetEndRoleName="Difficulty" isLeaf="false" isAbstract="false">
+                  <enumerationMoniker Id="e131c747-f693-4384-8124-4e158065c18f" LastKnownName="Difficulty" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="17233772-fd6d-4b88-8eff-0fdcbece9be0" name="SheetBuilder" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="8048fef3-5165-49fe-8960-ad4c2a826ba9" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="ca2f70c0-8ae9-4188-8a7d-472a3a246180" name="Difficulty" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="316b6847-b75f-474f-93a8-0e3cb83e38d6" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="ba0b0618-6af3-499c-9ee3-33e40e6ea68c" />
+                </association>
+                <association Id="d47ccde0-c4cd-429e-93ae-163588ec0e40" isDerived="false" sourceEndRoleName="SheetBuilder" targetEndRoleName="Instrument" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="7e0bc849-64e7-49df-8b70-e033e5c0b932" LastKnownName="Instrument" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="be345334-ce60-4651-8a6a-201a55e9b008" name="SheetBuilder" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="cc651fe4-2b99-47de-b71b-da050a0efa80" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="7c107dad-9cd9-4569-9a5f-ca788e5db48e" name="Instrument" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="5677d557-2560-4d1e-85d3-8530d4194ebd" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="22d841ff-6e9f-4f95-ba7b-a38304746c2f" />
+                </association>
+                <association Id="092853b8-6e70-4c4a-a201-b2bc78c50308" isDerived="false" sourceEndRoleName="SheetBuilder" targetEndRoleName="Song" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="c9a2b980-bc62-499f-91b3-c3ae8962e67f" LastKnownName="Song" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="83a446ca-0aff-424b-a9c7-66e2495959da" name="SheetBuilder" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="9f4f5571-2a3e-431e-90ca-9bb901e91589" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="9aaccb50-6bf7-48ae-b48f-835cbfd34733" name="Song" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="fbf115d1-1cf3-4996-833f-77f9c775b106" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="73385892-67be-49c1-9ddc-9daf979565e4" />
+                </association>
+              </targetEnds>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="455d6c3b-1a9d-4984-9a88-1a95d8cd997c" name="AudioController" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="33201db4-1acf-4897-88f5-638a8d239efc" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="a7cd4101-c84a-4efd-a3eb-29966f7e048a" name="Half" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="d0e18e6a-f9fe-4ef6-bc68-ad1a58e7af64" />
+              <suppliersInternal>
+                <interfaceRealization Id="94d647de-af54-4e6a-a306-665bb7388e5e">
+                  <interfaceMoniker Id="a1bdbbee-302e-4435-a720-9fe72f9cfdf0" LastKnownName="INote" />
+                  <elementDefinition Id="9ee64ed1-16c3-49d7-aee3-bf680b852262" />
+                </interfaceRealization>
+              </suppliersInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="66e78f18-fcf1-4fdd-8194-54f27251530a" name="Quarter" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="63fb6e43-d74f-4aa8-a661-c6971f43efa4" />
+              <suppliersInternal>
+                <interfaceRealization Id="ae89ccfc-fe3d-470d-99b5-36129c07c631">
+                  <interfaceMoniker Id="a1bdbbee-302e-4435-a720-9fe72f9cfdf0" LastKnownName="INote" />
+                  <elementDefinition Id="0e8bb771-0e81-44ca-b166-4b12ce45d47d" />
+                </interfaceRealization>
+              </suppliersInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="d6b7fa5f-8ea8-4a03-ac4d-3e9edff18b09" name="Eighth" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="d1e14a62-6410-445e-abc5-650588cb7d5e" />
+              <suppliersInternal>
+                <interfaceRealization Id="42c8f956-bb29-46a4-a739-cec919186110">
+                  <interfaceMoniker Id="a1bdbbee-302e-4435-a720-9fe72f9cfdf0" LastKnownName="INote" />
+                  <elementDefinition Id="36c8abcb-5271-4002-8d2f-f6ac85e6858f" />
+                </interfaceRealization>
+              </suppliersInternal>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <enumeration Id="81d7fa57-7868-4068-b373-d17fd633decf" name="Height" isAbstract="false" isLeaf="false">
+              <elementDefinition Id="cf059715-80e1-4b0a-bdf8-f770bf984480" />
+              <ownedLiterals>
+                <enumerationLiteral Id="3f43014c-24b6-41e4-be75-d75a4be32af2" name="Re">
+                  <elementDefinition Id="4d5c1b4a-668c-4ca4-8af1-6b8139f53ec2" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="b4ee4c16-67d6-4995-b197-b3d575addd96" name="Do">
+                  <elementDefinition Id="c77883aa-f6f6-417e-a69f-28a3642681eb" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="809f0f66-b959-4270-94d1-ac0dc2c68727" name="Mi">
+                  <elementDefinition Id="9b96ac4f-a8f0-4587-9680-87d05a703429" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="a18f78bd-8c5c-4c00-a185-c3c3095c5028" name="Fa">
+                  <elementDefinition Id="835fd0b2-48dc-4a87-a4c9-81f7e4f2efff" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="029bb1a0-09d9-405c-833a-68e8991948b6" name="Sol">
+                  <elementDefinition Id="88ae0389-28b0-4568-aba7-24c634809f78" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="cc646835-eda7-4aa2-97ce-b52d22e76437" name="La">
+                  <elementDefinition Id="fd8f3260-5b07-4e70-bf8e-95cb90987d2a" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="ffc71d77-3d32-4a31-885b-a89e287c4017" name="Si">
+                  <elementDefinition Id="743fb1dc-dba4-4fa1-b8a4-bbb0d9baa028" />
+                </enumerationLiteral>
+              </ownedLiterals>
+            </enumeration>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="9e3c014d-14d1-4a0b-addd-808f27a7e5c8" name="ViewModel">
+        <ownedCommentsInternal>
+          <comment Id="4b26de58-c1e1-4ccd-9ae6-256206c4e401">
+            <elementDefinition Id="a094b714-1b38-462f-bce2-5cb57c99efdc" />
+            <body>Singleton</body>
+            <annotatedElements>
+              <classMoniker Id="a141618f-15d0-4fd8-8763-06d66dbdc072" LastKnownName="ViewModelBase" />
+            </annotatedElements>
+          </comment>
+        </ownedCommentsInternal>
+        <elementDefinition Id="19319867-6c6d-4b10-81b6-03b8e92becf4" />
+        <importedPackagesInternal>
+          <packageImport Id="370842eb-7437-427c-b978-324e12bf4295" visibility="Public">
+            <packageMoniker Id="43925a60-c6c6-4e7b-8068-645590c5e255" LastKnownName="Model" />
+            <elementDefinition Id="80031206-700d-4890-b53f-c9a6becef5bd" />
+          </packageImport>
+          <packageImport Id="1561e1e1-23f2-4577-b184-463b74fabbb4" visibility="Public">
+            <packageMoniker Id="d8c88c42-b88f-4e6d-bb2c-fd5d7c6f8668" LastKnownName="View" />
+            <elementDefinition Id="78f71070-6619-40c5-893f-734f1f6ba3f1" />
+          </packageImport>
+        </importedPackagesInternal>
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="a141618f-15d0-4fd8-8763-06d66dbdc072" name="ViewModelBase" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="b0f9b87b-2919-4692-a51c-f0ac7bbb556c" />
+              <targetEnds>
+                <association Id="eb50441d-41d1-45e8-b53d-15ab80a7ca58" isDerived="false" sourceEndRoleName="ViewModelBase" targetEndRoleName="MainWindow" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="34471aec-d542-45a5-ab4e-f9561c59d79c" LastKnownName="MainWindow" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="42471f03-4c04-4cf9-a885-cce0feaf7961" name="ViewModelBase" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="b4d72fe1-9cc8-4317-8fc8-297395f047d7" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="76a23a1f-a00e-43a0-b513-d739fcb5e8a7" name="MainWindow" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="faaadfe1-86cd-4c3a-aefb-419d0590af0e" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="63b74406-89c5-45e0-8ea5-f31fbc798fa2" />
+                </association>
+                <association Id="04de4d90-5775-4267-821d-1aa118f8dd97" isDerived="false" sourceEndRoleName="ViewModelBase" targetEndRoleName="GameMaster" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="47dae021-ead2-4052-b9a9-c499199b4431" LastKnownName="GameMaster" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="3c692252-329f-4c5e-8788-75c64f1da935" name="ViewModelBase" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="d69949ff-c0d9-4b8f-8d82-1781a7e7e99f" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="01e745ce-7a13-4e14-a7ae-343a3e657cf5" name="GameMaster" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="a0ed8a4a-e13d-4894-8cce-8cc6d2715e9e" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="fd9a7dd8-bdee-472e-90f0-94771de4f8b3" />
+                </association>
+              </targetEnds>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="6a994460-ef69-487c-80d1-ab7548751ba8" name="MainMenuVM" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="5747fb71-952f-4e42-8351-e41321153d6d" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="c8ebc1ca-4517-4c29-8a66-d4b5806ecbe2" name="NoteButtonVM" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="c0bed91e-75d7-4e1a-88e4-c5bd2b86efd1" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="4363ba6e-dff3-4847-9285-64aead2d6b26" name="SheetMusicVM" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="0f35a2ea-fbd4-4380-88d4-256cf851d6de" />
+              <targetEnds>
+                <association Id="acf2b22f-20b7-4599-a20b-6b0328806605" isDerived="false" sourceEndRoleName="SheetMusicVM" targetEndRoleName="BonusVM" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="d06e824c-0c1c-4aa0-9ee1-4256f700a47a" LastKnownName="BonusVM" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="5663e102-5f05-4276-b1fd-4f996c91d098" name="SheetMusicVM" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <lowerValueInternal>
+                          <literalString Id="f9395817-682b-43fe-9f1b-5e74feefccaa" name="Lower" value="Pas trop beaucoup">
+                            <elementDefinition Id="410ab890-7973-4f7a-be75-f5c24810fb78" />
+                          </literalString>
+                        </lowerValueInternal>
+                        <upperValueInternal>
+                          <literalString Id="91844585-2166-4017-90be-d9f38a8852af" name="Upper" value="Pas trop beaucoup">
+                            <elementDefinition Id="aef589ff-e26e-486c-b614-6bcfd8bf3964" />
+                          </literalString>
+                        </upperValueInternal>
+                        <elementDefinition Id="9b9110bc-538c-4d52-87e0-9056dc8c92d4" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="dbc19ada-8287-42e2-93ad-f6977e1e11fe" name="BonusVM" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="2eeb4d0c-decd-4531-85eb-e745916d1a13" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="2cd22577-37c8-424c-8a58-7cbb88852742" />
+                </association>
+                <association Id="79b25f9d-b932-4285-a87c-addd8ed4f8ce" isDerived="false" sourceEndRoleName="SheetMusicVM" targetEndRoleName="NoteButtonVM" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="c8ebc1ca-4517-4c29-8a66-d4b5806ecbe2" LastKnownName="NoteButtonVM" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="7b4af430-cbd9-4821-be4b-c2e2d2a8e36b" name="SheetMusicVM" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <lowerValueInternal>
+                          <literalString Id="6f314419-f93e-483c-b84d-18d10a75ae03" name="Lower" value="Quelques uns">
+                            <elementDefinition Id="0409d53f-c5b1-4147-93de-689e7ff85384" />
+                          </literalString>
+                        </lowerValueInternal>
+                        <upperValueInternal>
+                          <literalString Id="988c8e53-91f3-4b3a-9636-6dd90bc004e5" name="Upper" value="Quelques uns">
+                            <elementDefinition Id="1e4cb993-f7eb-4c6f-8b13-1532e23a0ce5" />
+                          </literalString>
+                        </upperValueInternal>
+                        <elementDefinition Id="d9faed9b-7499-44d7-9e5f-f997eb773884" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="5e75f668-e12e-4ca4-84c5-dac9e33212a6" name="NoteButtonVM" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="978fc2bc-2761-4016-b17d-acf5b7eb8fd0" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="2e357485-c7c8-4040-bced-1bedb368a4de" />
+                </association>
+              </targetEnds>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="d06e824c-0c1c-4aa0-9ee1-4256f700a47a" name="BonusVM" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="30497f5f-c0eb-41d0-b4a7-0c08f65fe17d" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="9ecc0722-c57d-4fc9-a8ad-033fd2cb6cc1" name="ScoreVM" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="c942dfdc-f651-4fb3-84db-f3d678513f02" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="f1af0a0e-0e79-455c-aa11-f5f5c3770a13" name="PlayerVM" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="46117edc-0958-4303-9d23-15b76c17c507" />
+              <targetEnds>
+                <association Id="0b77f2a0-bbae-4bb6-959c-b6783d87794a" isDerived="false" sourceEndRoleName="PlayerVM" targetEndRoleName="SheetMusicVM" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="4363ba6e-dff3-4847-9285-64aead2d6b26" LastKnownName="SheetMusicVM" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="31657719-1e42-48d9-ae2a-8c33f7cda008" name="PlayerVM" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="e0e99594-6976-480e-a105-f5601edb6ffb" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="746fccf0-c88d-4ca1-9cf3-a6107cb9409c" name="SheetMusicVM" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <elementDefinition Id="3b0e8276-9e85-43ab-8490-42ded75964b8" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="9f1592c3-2e79-4bca-96bf-7ac258a0121d" />
+                </association>
+                <association Id="27b33fbe-71c3-4d4e-af06-5610e0edfd3d" isDerived="false" sourceEndRoleName="PlayerVM" targetEndRoleName="ScoreVM" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="9ecc0722-c57d-4fc9-a8ad-033fd2cb6cc1" LastKnownName="ScoreVM" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="ccfe93b4-84be-484c-bd97-40819d1c7ec6" name="PlayerVM" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="d3f715ab-c599-47ad-b508-bd1b0691ade6" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="a950bf39-0a8f-49b6-a257-1e00b9cfd944" name="ScoreVM" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <elementDefinition Id="cc565663-a23c-4109-b561-1e8e39d2da3f" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="223dbe57-1102-43a7-b537-acdaf440d7ca" />
+                </association>
+              </targetEnds>
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+    <logicalClassDesignerModelHasPackages>
+      <package Id="d8c88c42-b88f-4e6d-bb2c-fd5d7c6f8668" name="View">
+        <ownedCommentsInternal>
+          <comment Id="df841d26-55cf-415e-9301-08ed897667c3">
+            <elementDefinition Id="5420cb1f-5d4e-4ee6-bb40-d858f1510dab" />
+            <body>Singleton</body>
+            <annotatedElements>
+              <classMoniker Id="34471aec-d542-45a5-ab4e-f9561c59d79c" LastKnownName="MainWindow" />
+            </annotatedElements>
+          </comment>
+        </ownedCommentsInternal>
+        <elementDefinition Id="3da83189-6e86-49cb-982a-ea4a67f495c4" />
+        <packagedElements>
+          <packageHasNamedElement>
+            <class Id="34471aec-d542-45a5-ab4e-f9561c59d79c" name="MainWindow" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="cfe89220-4ffd-4a2f-9518-5d04b523997d" />
+              <targetEnds>
+                <association Id="be73d82f-0cf9-493b-aae2-fc71c8beaf78" isDerived="false" sourceEndRoleName="MainWindow" targetEndRoleName="PlayerView" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="ae24e9a7-00d6-40ce-afb2-860f05b11a28" LastKnownName="PlayerView" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="346cbf42-36e5-4ddc-8e49-c6962cfa9d11" name="MainWindow" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <lowerValueInternal>
+                          <literalString Id="3b2bfcac-47a8-4179-a3d7-24ce20775070" name="Lower" value="1">
+                            <elementDefinition Id="5a98d706-2ff2-4da4-9f6e-7c34e483e130" />
+                          </literalString>
+                        </lowerValueInternal>
+                        <upperValueInternal>
+                          <literalString Id="b42a4236-d35c-4364-9533-9d3eca3a5c45" name="Upper" value="4">
+                            <elementDefinition Id="d8c6ab69-b2a5-4a27-9f6c-d5e0209fc16f" />
+                          </literalString>
+                        </upperValueInternal>
+                        <elementDefinition Id="970dd15d-16fd-4905-b032-179becba4534" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="dc6bff71-591a-43b0-9ade-894f2e1a9df2" name="PlayerView" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <elementDefinition Id="5d05f92a-13d3-4b44-81aa-60fbd094e056" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="9b5ecda3-8d4c-4031-a355-6a13072200e3" />
+                </association>
+                <association Id="bdb2c27e-10af-4235-844a-ea1aef898be0" isDerived="false" sourceEndRoleName="MainWindow" targetEndRoleName="MainMenuView" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="08f0bfac-8581-434f-af8a-0f272c06e228" LastKnownName="MainMenuView" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="de121a5d-3b76-483d-b784-19ebd535a064" name="MainWindow" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="5f7e1e9d-68ca-4e80-801e-97544df0e018" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="ae2a0af5-77fb-4510-b9ce-e8d0a84f306d" name="MainMenuView" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <elementDefinition Id="727a0514-36bb-48ac-891c-6fb63e827ec9" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="3eabae12-6102-491d-af4f-d95c97bd4160" />
+                </association>
+              </targetEnds>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="ae24e9a7-00d6-40ce-afb2-860f05b11a28" name="PlayerView" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="e55b288d-6073-4f96-a39a-b79258cc03aa" />
+              <targetEnds>
+                <association Id="bf543c17-d9d9-47d3-9438-8b43b2df032f" isDerived="false" sourceEndRoleName="PlayerView" targetEndRoleName="ScoreView" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="aaeede4c-2c96-4dd8-85ea-41387d566aee" LastKnownName="ScoreView" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="6dab3a09-0fc0-4226-bbb9-4b86aae4b1f0" name="PlayerView" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="133fc661-d709-4e0c-adfe-9e7a3f2a6345" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="60c4d3c4-ac34-40dd-8a3f-c6b4b58dce6b" name="ScoreView" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="fb10c8a6-63bc-4fbf-946e-61587fd7a9dd" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="24868da3-ff0e-46da-9f9b-d908ac14a69e" />
+                </association>
+                <association Id="6045cc4b-362d-425d-b56b-c438bf74d39d" isDerived="false" sourceEndRoleName="PlayTabView" targetEndRoleName="SheetMusicView" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="0f4dbd45-b740-4f62-9e3f-58804015d331" LastKnownName="SheetMusicView" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="e75e58cb-be02-41e9-9c93-e4cedf7e9b88" name="PlayTabView" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="2d6b4ea5-27c3-4e47-b97c-697e3f861f67" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="33019769-b5be-45d6-bce8-48c856f1525d" name="SheetMusicView" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="dd363583-cf3a-4a80-8bc0-546b2841a58d" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="acbca731-4a65-48de-ada4-a567a960243b" />
+                </association>
+              </targetEnds>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="08f0bfac-8581-434f-af8a-0f272c06e228" name="MainMenuView" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="7ed821c1-cf3c-4796-8e40-b6ed0efde149" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="aaeede4c-2c96-4dd8-85ea-41387d566aee" name="ScoreView" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="3b7a2865-74c9-43c9-b72f-9495d18af62e" />
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="0f4dbd45-b740-4f62-9e3f-58804015d331" name="SheetMusicView" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="cbc87cad-145c-4820-9870-b1d80975f4e5" />
+              <targetEnds>
+                <association Id="7f259bef-7b3f-43b6-b254-8b9f92c295f3" isDerived="false" sourceEndRoleName="SheetMusicView" targetEndRoleName="NoteButtonView" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="66418ea7-d5ad-47d5-a69e-5ae58ff79394" LastKnownName="NoteButtonView" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="2d1c6109-6bc5-4afc-bdf8-9c1ec1d2abc1" name="SheetMusicView" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="2689fcf3-3fb5-44fb-8f86-fa11d7307540" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="b2eb76d2-a5aa-401e-ad42-e7673d63fb73" name="NoteButtonView" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <lowerValueInternal>
+                          <literalString Id="20d5211d-2bb7-4b69-afc2-7557c65038be" name="Lower" value="Quelques uns">
+                            <elementDefinition Id="0401038c-dd4c-4f43-ae87-f20354181e1f" />
+                          </literalString>
+                        </lowerValueInternal>
+                        <upperValueInternal>
+                          <literalString Id="b3d2927f-9494-45ba-aabe-b83237424a9e" name="Upper" value="Quelques uns">
+                            <elementDefinition Id="8eaa1a03-4cc8-4ca4-95f4-011076b82a71" />
+                          </literalString>
+                        </upperValueInternal>
+                        <elementDefinition Id="b3b7cfaf-94ae-4006-ae85-0f19c3579f7e" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="ff33e5f2-a202-4e30-8ff6-8f4d1dae817e" />
+                </association>
+              </targetEnds>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="66418ea7-d5ad-47d5-a69e-5ae58ff79394" name="NoteButtonView" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="1543cf33-763d-494f-a98c-6e9a1a89e532" />
+            </class>
+          </packageHasNamedElement>
+        </packagedElements>
+      </package>
+    </logicalClassDesignerModelHasPackages>
+  </packagedElements>
+  <package Id="9083596e-beba-4361-a1d4-f5b04dd77df0" name="PnTModeling">
+    <elementDefinition Id="ba7d1a55-5166-45ac-8041-c152888f5086" />
+  </package>
+</logicalClassDesignerModel>

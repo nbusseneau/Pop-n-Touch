@@ -1,62 +1,62 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
-  Id="d1726246-4aa5-400a-9362-8263592d6a98"
+  Id="19319867-6c6d-4b10-81b6-03b8e92becf4"
   name="ViewModel" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
   <ownedCommentsInternal>
     <comment
-      Id="bfe582e6-732b-45cb-94cc-c5debc04ff81">
+      Id="a094b714-1b38-462f-bce2-5cb57c99efdc">
       <body>Singleton</body>
       <annotatedElements>
         <classMoniker
-          Id="90e1c6ac-aa34-408e-b442-35ded797e16c"
+          Id="b0f9b87b-2919-4692-a51c-f0ac7bbb556c"
           LastKnownName="ViewModelBase"
-          LastKnownLocation="Package1_2311.uml" />
+          LastKnownLocation="Package1_1204.uml" />
       </annotatedElements>
     </comment>
   </ownedCommentsInternal>
   <importedPackagesInternal>
     <packageImport
-      Id="e1140f12-bb42-43f0-b0c2-46ea4e65f41f"
+      Id="80031206-700d-4890-b53f-c9a6becef5bd"
       visibility="Public">
       <packageMoniker
-        Id="c67bf125-c11e-4ab7-8e60-b8751d3860b4"
+        Id="ddae1ba9-57fe-4e90-a18b-cbd6f7dba023"
         LastKnownName="Model"
-        LastKnownLocation="Package_2311.uml" />
+        LastKnownLocation="Package_1204.uml" />
     </packageImport>
     <packageImport
-      Id="c49d6875-274e-41a7-b412-f06bf5e0891b"
+      Id="78f71070-6619-40c5-893f-734f1f6ba3f1"
       visibility="Public">
       <packageMoniker
-        Id="9a10ff1a-d9c0-4b99-9250-c4989aaf8c2b"
+        Id="3da83189-6e86-49cb-982a-ea4a67f495c4"
         LastKnownName="View"
-        LastKnownLocation="Package2_2311.uml" />
+        LastKnownLocation="Package2_1204.uml" />
     </packageImport>
   </importedPackagesInternal>
   <packagedElements>
     <packageHasNamedElement>
       <class
-        Id="90e1c6ac-aa34-408e-b442-35ded797e16c"
+        Id="b0f9b87b-2919-4692-a51c-f0ac7bbb556c"
         name="ViewModelBase"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
         <targetEnds>
           <association
-            Id="d1a38d7c-1a14-46c3-a1c2-a4e530a4ae3c"
+            Id="63b74406-89c5-45e0-8ea5-f31fbc798fa2"
             isDerived="false"
             sourceEndRoleName="ViewModelBase"
             targetEndRoleName="MainWindow"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
-              Id="fafa77bc-9428-4748-be3e-3e62fefd6863"
+              Id="cfe89220-4ffd-4a2f-9518-5d04b523997d"
               LastKnownName="MainWindow"
-              LastKnownLocation="Package2_2311.uml" />
+              LastKnownLocation="Package2_1204.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="8908a3d7-907b-4bc5-8d49-63bcffd5afd8"
+                  Id="b4d72fe1-9cc8-4317-8fc8-297395f047d7"
                   name="ViewModelBase"
                   isLeaf="false"
                   isStatic="false"
@@ -69,7 +69,7 @@
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="5a51c4b3-0b5a-4b97-b92d-861e2678160d"
+                  Id="faaadfe1-86cd-4c3a-aefb-419d0590af0e"
                   name="MainWindow"
                   isLeaf="false"
                   isStatic="false"
@@ -82,20 +82,20 @@
             </relationshipOwnedElementsInternal>
           </association>
           <association
-            Id="b66f9ddb-91fc-4610-bc59-89441726c024"
+            Id="fd9a7dd8-bdee-472e-90f0-94771de4f8b3"
             isDerived="false"
             sourceEndRoleName="ViewModelBase"
             targetEndRoleName="GameMaster"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
-              Id="39b6a917-780f-4533-87ec-68125efcf685"
+              Id="53ce5291-1cbb-446f-ad01-bb56da4a7bf1"
               LastKnownName="GameMaster"
-              LastKnownLocation="Package_2311.uml" />
+              LastKnownLocation="Package_1204.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="8afd46bf-df2d-4128-af60-f9cec65f2969"
+                  Id="d69949ff-c0d9-4b8f-8d82-1781a7e7e99f"
                   name="ViewModelBase"
                   isLeaf="false"
                   isStatic="false"
@@ -108,7 +108,7 @@
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="4a4f8d5f-af5f-4919-b3dc-152ba728a2e6"
+                  Id="a0ed8a4a-e13d-4894-8cce-8cc6d2715e9e"
                   name="GameMaster"
                   isLeaf="false"
                   isStatic="false"
@@ -125,7 +125,7 @@
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
-        Id="cc9570db-1826-4378-9704-6a1bd1d87a40"
+        Id="5747fb71-952f-4e42-8351-e41321153d6d"
         name="MainMenuVM"
         isAbstract="false"
         isLeaf="false"
@@ -133,7 +133,7 @@
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
-        Id="d2c28825-4628-4892-abe0-c497dbde345a"
+        Id="c0bed91e-75d7-4e1a-88e4-c5bd2b86efd1"
         name="NoteButtonVM"
         isAbstract="false"
         isLeaf="false"
@@ -141,27 +141,27 @@
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
-        Id="b0f423ce-eebe-4088-a3da-c18b77274e7b"
+        Id="0f35a2ea-fbd4-4380-88d4-256cf851d6de"
         name="SheetMusicVM"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
         <targetEnds>
           <association
-            Id="7f95d567-298f-42bc-a4d9-89d8fcd2a8a5"
+            Id="2cd22577-37c8-424c-8a58-7cbb88852742"
             isDerived="false"
             sourceEndRoleName="SheetMusicVM"
             targetEndRoleName="BonusVM"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
-              Id="557f4243-754d-4921-b1d3-65917d22f7cb"
+              Id="30497f5f-c0eb-41d0-b4a7-0c08f65fe17d"
               LastKnownName="BonusVM"
-              LastKnownLocation="Package1_2311.uml" />
+              LastKnownLocation="Package1_1204.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="4258d273-61e3-4cfe-b89b-2e36e58ea0a5"
+                  Id="9b9110bc-538c-4d52-87e0-9056dc8c92d4"
                   name="SheetMusicVM"
                   isLeaf="false"
                   isStatic="false"
@@ -173,13 +173,13 @@
                   isNavigableOwned="false">
                   <lowerValueInternal>
                     <literalString
-                      Id="44a2c9d8-48a1-4a92-aaf1-cc23bf13d2f0"
+                      Id="410ab890-7973-4f7a-be75-f5c24810fb78"
                       name="Lower"
                       value="Pas trop beaucoup" />
                   </lowerValueInternal>
                   <upperValueInternal>
                     <literalString
-                      Id="7dbbc267-da73-4bf1-874b-bdd70681c21b"
+                      Id="aef589ff-e26e-486c-b614-6bcfd8bf3964"
                       name="Upper"
                       value="Pas trop beaucoup" />
                   </upperValueInternal>
@@ -187,7 +187,7 @@
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="9f53f5a1-6329-4741-9ab9-2822ae9ff2a1"
+                  Id="2eeb4d0c-decd-4531-85eb-e745916d1a13"
                   name="BonusVM"
                   isLeaf="false"
                   isStatic="false"
@@ -200,20 +200,20 @@
             </relationshipOwnedElementsInternal>
           </association>
           <association
-            Id="d7498737-3fa8-4630-9936-02552bd86f76"
+            Id="2e357485-c7c8-4040-bced-1bedb368a4de"
             isDerived="false"
             sourceEndRoleName="SheetMusicVM"
             targetEndRoleName="NoteButtonVM"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
-              Id="d2c28825-4628-4892-abe0-c497dbde345a"
+              Id="c0bed91e-75d7-4e1a-88e4-c5bd2b86efd1"
               LastKnownName="NoteButtonVM"
-              LastKnownLocation="Package1_2311.uml" />
+              LastKnownLocation="Package1_1204.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="462719a8-01c8-4927-9b7f-d13e804ef989"
+                  Id="d9faed9b-7499-44d7-9e5f-f997eb773884"
                   name="SheetMusicVM"
                   isLeaf="false"
                   isStatic="false"
@@ -225,13 +225,13 @@
                   isNavigableOwned="false">
                   <lowerValueInternal>
                     <literalString
-                      Id="b62c79fc-cd4d-4738-8550-5a72e259e6eb"
+                      Id="0409d53f-c5b1-4147-93de-689e7ff85384"
                       name="Lower"
                       value="Quelques uns" />
                   </lowerValueInternal>
                   <upperValueInternal>
                     <literalString
-                      Id="9d79cbdb-f37e-4fd4-ba81-fa1fb44c5539"
+                      Id="1e4cb993-f7eb-4c6f-8b13-1532e23a0ce5"
                       name="Upper"
                       value="Quelques uns" />
                   </upperValueInternal>
@@ -239,7 +239,7 @@
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="521f5594-0bdc-4fc3-a3ac-77947aac7328"
+                  Id="978fc2bc-2761-4016-b17d-acf5b7eb8fd0"
                   name="NoteButtonVM"
                   isLeaf="false"
                   isStatic="false"
@@ -256,7 +256,7 @@
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
-        Id="557f4243-754d-4921-b1d3-65917d22f7cb"
+        Id="30497f5f-c0eb-41d0-b4a7-0c08f65fe17d"
         name="BonusVM"
         isAbstract="false"
         isLeaf="false"
@@ -264,7 +264,7 @@
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
-        Id="944e3f75-c070-4ad0-a0c2-0c696d7ab449"
+        Id="c942dfdc-f651-4fb3-84db-f3d678513f02"
         name="ScoreVM"
         isAbstract="false"
         isLeaf="false"
@@ -272,27 +272,27 @@
     </packageHasNamedElement>
     <packageHasNamedElement>
       <class
-        Id="9b12cab9-7ff6-42a9-9325-8668e6e95251"
+        Id="46117edc-0958-4303-9d23-15b76c17c507"
         name="PlayerVM"
         isAbstract="false"
         isLeaf="false"
         isActiveClass="false">
         <targetEnds>
           <association
-            Id="beeec1f6-92f3-4cee-a3ab-7653d74dcbfb"
+            Id="9f1592c3-2e79-4bca-96bf-7ac258a0121d"
             isDerived="false"
             sourceEndRoleName="PlayerVM"
             targetEndRoleName="SheetMusicVM"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
-              Id="b0f423ce-eebe-4088-a3da-c18b77274e7b"
+              Id="0f35a2ea-fbd4-4380-88d4-256cf851d6de"
               LastKnownName="SheetMusicVM"
-              LastKnownLocation="Package1_2311.uml" />
+              LastKnownLocation="Package1_1204.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="e233945e-bfec-4189-b634-ac1f9fd5796c"
+                  Id="e0e99594-6976-480e-a105-f5601edb6ffb"
                   name="PlayerVM"
                   isLeaf="false"
                   isStatic="false"
@@ -305,7 +305,7 @@
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="c59e9238-443e-40b1-a228-a933eb6da5c4"
+                  Id="3b0e8276-9e85-43ab-8490-42ded75964b8"
                   name="SheetMusicVM"
                   isLeaf="false"
                   isStatic="false"
@@ -318,20 +318,20 @@
             </relationshipOwnedElementsInternal>
           </association>
           <association
-            Id="cabed679-bae9-4fad-a436-b0f8f75611c9"
+            Id="223dbe57-1102-43a7-b537-acdaf440d7ca"
             isDerived="false"
             sourceEndRoleName="PlayerVM"
             targetEndRoleName="ScoreVM"
             isLeaf="false"
             isAbstract="false">
             <classMoniker
-              Id="944e3f75-c070-4ad0-a0c2-0c696d7ab449"
+              Id="c942dfdc-f651-4fb3-84db-f3d678513f02"
               LastKnownName="ScoreVM"
-              LastKnownLocation="Package1_2311.uml" />
+              LastKnownLocation="Package1_1204.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="18eb776f-16bf-4744-a95d-70b3f11f66d7"
+                  Id="d3f715ab-c599-47ad-b508-bd1b0691ade6"
                   name="PlayerVM"
                   isLeaf="false"
                   isStatic="false"
@@ -344,7 +344,7 @@
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="c3caa1d8-bd19-4cff-a1ba-7b382c42e5aa"
+                  Id="cc565663-a23c-4109-b561-1e8e39d2da3f"
                   name="ScoreVM"
                   isLeaf="false"
                   isStatic="false"
