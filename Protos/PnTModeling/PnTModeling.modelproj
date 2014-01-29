@@ -36,6 +36,13 @@
       <SubType>Content</SubType>
       <DependentUpon>CreateGame.usecasediagram</DependentUpon>
     </Content>
+    <Content Include="CreationGameJu.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="CreationGameJu.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>CreationGameJu.sequencediagram</DependentUpon>
+    </Content>
     <Content Include="ModelDefinition\Package1_1204.uml">
       <SubType>Content</SubType>
     </Content>
@@ -54,26 +61,19 @@
     <Content Include="ModelDefinition\Package_2311.uml">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="PnTGwen.classdiagram">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="PnTGwen.classdiagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>PnTGwen.classdiagram</DependentUpon>
-    </Content>
-    <Content Include="PnTJuliette.classdiagram">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="PnTJuliette.classdiagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>PnTJuliette.classdiagram</DependentUpon>
-    </Content>
     <Content Include="PnTNico.classdiagram">
       <SubType>Content</SubType>
     </Content>
     <Content Include="PnTNico.classdiagram.layout">
       <SubType>Content</SubType>
       <DependentUpon>PnTNico.classdiagram</DependentUpon>
+    </Content>
+    <Content Include="SheetCreationJu.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="SheetCreationJu.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>SheetCreationJu.sequencediagram</DependentUpon>
     </Content>
     <Folder Include="ModelDefinition\" />
     <Content Include="EndGame.usecasediagram">

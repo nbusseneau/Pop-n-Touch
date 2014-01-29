@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="42b111d9-aa66-4cde-8fe2-6b7c9361bc75" name="PnTNico" linkedPackageId="9083596e-beba-4361-a1d4-f5b04dd77df0" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="42b111d9-aa66-4cde-8fe2-6b7c9361bc75" name="PnTNico" linkedPackageId="9083596e-beba-4361-a1d4-f5b04dd77df0" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <packagedElements>
     <logicalClassDesignerModelHasPackages>
       <package Id="43925a60-c6c6-4e7b-8068-645590c5e255" name="Model">
@@ -366,22 +366,22 @@
             <enumeration Id="81d7fa57-7868-4068-b373-d17fd633decf" name="Height" isAbstract="false" isLeaf="false">
               <elementDefinition Id="cf059715-80e1-4b0a-bdf8-f770bf984480" />
               <ownedLiterals>
-                <enumerationLiteral Id="3f43014c-24b6-41e4-be75-d75a4be32af2" name="Re">
+                <enumerationLiteral Id="3f43014c-24b6-41e4-be75-d75a4be32af2" name="Mi">
                   <elementDefinition Id="4d5c1b4a-668c-4ca4-8af1-6b8139f53ec2" />
                 </enumerationLiteral>
-                <enumerationLiteral Id="b4ee4c16-67d6-4995-b197-b3d575addd96" name="Do">
+                <enumerationLiteral Id="b4ee4c16-67d6-4995-b197-b3d575addd96" name="Fa">
                   <elementDefinition Id="c77883aa-f6f6-417e-a69f-28a3642681eb" />
                 </enumerationLiteral>
-                <enumerationLiteral Id="809f0f66-b959-4270-94d1-ac0dc2c68727" name="Mi">
+                <enumerationLiteral Id="809f0f66-b959-4270-94d1-ac0dc2c68727" name="Do">
                   <elementDefinition Id="9b96ac4f-a8f0-4587-9680-87d05a703429" />
                 </enumerationLiteral>
-                <enumerationLiteral Id="a18f78bd-8c5c-4c00-a185-c3c3095c5028" name="Fa">
+                <enumerationLiteral Id="a18f78bd-8c5c-4c00-a185-c3c3095c5028" name="La">
                   <elementDefinition Id="835fd0b2-48dc-4a87-a4c9-81f7e4f2efff" />
                 </enumerationLiteral>
                 <enumerationLiteral Id="029bb1a0-09d9-405c-833a-68e8991948b6" name="Sol">
                   <elementDefinition Id="88ae0389-28b0-4568-aba7-24c634809f78" />
                 </enumerationLiteral>
-                <enumerationLiteral Id="cc646835-eda7-4aa2-97ce-b52d22e76437" name="La">
+                <enumerationLiteral Id="cc646835-eda7-4aa2-97ce-b52d22e76437" name="Re">
                   <elementDefinition Id="fd8f3260-5b07-4e70-bf8e-95cb90987d2a" />
                 </enumerationLiteral>
                 <enumerationLiteral Id="ffc71d77-3d32-4a31-885b-a89e287c4017" name="Si">
@@ -389,6 +389,11 @@
                 </enumerationLiteral>
               </ownedLiterals>
             </enumeration>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="3276acb6-3103-4bd5-adea-505fa8085680" name="Inote" isAbstract="true" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="ad3a0640-da47-4706-96e6-fa82abde78ce" />
+            </class>
           </packageHasNamedElement>
         </packagedElements>
       </package>

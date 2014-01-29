@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
   dslVersion="1.0.0.0"
   Id="ddae1ba9-57fe-4e90-a18b-cbd6f7dba023"
   name="Model" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -693,27 +693,42 @@
         <ownedLiterals>
           <enumerationLiteral
             Id="4d5c1b4a-668c-4ca4-8af1-6b8139f53ec2"
-            name="Re" />
-          <enumerationLiteral
-            Id="c77883aa-f6f6-417e-a69f-28a3642681eb"
-            name="Do" />
-          <enumerationLiteral
-            Id="9b96ac4f-a8f0-4587-9680-87d05a703429"
             name="Mi" />
           <enumerationLiteral
-            Id="835fd0b2-48dc-4a87-a4c9-81f7e4f2efff"
+            Id="c77883aa-f6f6-417e-a69f-28a3642681eb"
             name="Fa" />
+          <enumerationLiteral
+            Id="9b96ac4f-a8f0-4587-9680-87d05a703429"
+            name="Do" />
+          <enumerationLiteral
+            Id="835fd0b2-48dc-4a87-a4c9-81f7e4f2efff"
+            name="La" />
           <enumerationLiteral
             Id="88ae0389-28b0-4568-aba7-24c634809f78"
             name="Sol" />
           <enumerationLiteral
             Id="fd8f3260-5b07-4e70-bf8e-95cb90987d2a"
-            name="La" />
+            name="Re" />
           <enumerationLiteral
             Id="743fb1dc-dba4-4fa1-b8a4-bbb0d9baa028"
             name="Si" />
         </ownedLiterals>
       </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="8f043d44-27b1-4666-8324-f6e01ff6d27a"
+        isAbstract="true"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="ad3a0640-da47-4706-96e6-fa82abde78ce"
+        name="Inote"
+        isAbstract="true"
+        isLeaf="false"
+        isActiveClass="false" />
     </packageHasNamedElement>
   </packagedElements>
 </package>

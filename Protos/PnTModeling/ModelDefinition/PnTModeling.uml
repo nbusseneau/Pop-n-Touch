@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
   dslVersion="1.0.0.0"
   Id="ba7d1a55-5166-45ac-8041-c152888f5086"
   name="PnTModeling" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -2078,6 +2078,2402 @@
         Id="3da83189-6e86-49cb-982a-ea4a67f495c4"
         LastKnownName="View"
         LastKnownLocation="Package2_1204.uml" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <interaction
+        Id="4f40cbb8-c092-4b3d-bb60-b267bad7699a"
+        name="CreationGameJu"
+        collapseFragmentsFlag="false"
+        isActiveClass="false"
+        isAbstract="false"
+        isLeaf="false"
+        isReentrant="false">
+        <ownedCommentsInternal>
+          <comment
+            Id="162a048d-c3ac-4cd1-88a7-865c8c837971">
+            <body>Pourquoi Instrument et Song pas énumérations ?
+
+cf sheetCreations.sequenceddiagram</body>
+            <annotatedElements>
+              <behaviorExecutionSpecificationMoniker
+                Id="c286e86f-59f8-4d2d-8cf6-ab09c881c72e"
+                LastKnownName="BehaviorExecutionSpecification11"
+                LastKnownLocation="PnTModeling.uml" />
+            </annotatedElements>
+          </comment>
+        </ownedCommentsInternal>
+        <fragments>
+          <behaviorExecutionSpecification
+            Id="3ad57b98-063b-4bfc-a9e2-7b703871b021"
+            name="BehaviorExecutionSpecification1">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="813b0a3c-5c1f-4049-8894-13288a4de811"
+                LastKnownName="GM : GameMaster"
+                LastKnownLocation="PnTModeling.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="8c6623e8-d1f2-43ec-86a8-6eb1f9d6cc07"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="PnTModeling.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="1abb0ccc-345c-4ac0-b31a-c46106e45f80"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="PnTModeling.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="f913758a-1888-40b2-87e3-38bb355e8625"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="PnTModeling.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="1abb0ccc-345c-4ac0-b31a-c46106e45f80"
+            name="ExecutionOccurrenceSpecification1">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="5e44b492-eae7-4aeb-86d6-a2ba6abf5202"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="PnTModeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="813b0a3c-5c1f-4049-8894-13288a4de811"
+                LastKnownName="GM : GameMaster"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="7cf4287f-8819-4c57-81f6-fba73499de1a"
+            name="MessageOccurrenceSpecification1">
+            <covered>
+              <lifelineMoniker
+                Id="4f25b3f2-a576-4b0d-b1f0-b7727c5e0cbe"
+                LastKnownName="Ptit bonhomme"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="f913758a-1888-40b2-87e3-38bb355e8625"
+            name="MessageOccurrenceSpecification2">
+            <covered>
+              <lifelineMoniker
+                Id="813b0a3c-5c1f-4049-8894-13288a4de811"
+                LastKnownName="GM : GameMaster"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="8c6623e8-d1f2-43ec-86a8-6eb1f9d6cc07"
+            name="ExecutionOccurrenceSpecification2">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="aa6bd136-488c-40f9-8a09-4c44b5f295b4"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="PnTModeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="813b0a3c-5c1f-4049-8894-13288a4de811"
+                LastKnownName="GM : GameMaster"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="28df9537-0a10-4e6b-acb6-1e58e96398f3"
+            name="BehaviorExecutionSpecification2">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="9dcac654-5f36-4605-990c-96f01bad68c5"
+                LastKnownName="G : Game"
+                LastKnownLocation="PnTModeling.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="9704fc76-966e-4377-9f7f-6e3f86986215"
+                LastKnownName="ExecutionOccurrenceSpecification4"
+                LastKnownLocation="PnTModeling.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="d1a97fca-f608-4be4-a876-e2b9f6e436ef"
+                LastKnownName="ExecutionOccurrenceSpecification3"
+                LastKnownLocation="PnTModeling.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="04d68a8a-bc88-482c-a07d-8f28de4aed29"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="PnTModeling.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="daf67cff-92bb-42e0-bda6-78d3bfd29bd8"
+                LastKnownName="MessageOccurrenceSpecification5"
+                LastKnownLocation="PnTModeling.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="d1a97fca-f608-4be4-a876-e2b9f6e436ef"
+            name="ExecutionOccurrenceSpecification3">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="244321d7-ed22-4164-855c-928bb5e460ca"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="PnTModeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="9dcac654-5f36-4605-990c-96f01bad68c5"
+                LastKnownName="G : Game"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="04d68a8a-bc88-482c-a07d-8f28de4aed29"
+            name="MessageOccurrenceSpecification4">
+            <covered>
+              <lifelineMoniker
+                Id="9dcac654-5f36-4605-990c-96f01bad68c5"
+                LastKnownName="G : Game"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="55a0369d-6bfb-4960-9b67-72d542788b4a"
+            name="MessageOccurrenceSpecification3">
+            <covered>
+              <lifelineMoniker
+                Id="813b0a3c-5c1f-4049-8894-13288a4de811"
+                LastKnownName="GM : GameMaster"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="709b8948-198d-4180-8b41-5f85c740915f"
+            name="MessageOccurrenceSpecification6">
+            <covered>
+              <lifelineMoniker
+                Id="813b0a3c-5c1f-4049-8894-13288a4de811"
+                LastKnownName="GM : GameMaster"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="daf67cff-92bb-42e0-bda6-78d3bfd29bd8"
+            name="MessageOccurrenceSpecification5">
+            <covered>
+              <lifelineMoniker
+                Id="9dcac654-5f36-4605-990c-96f01bad68c5"
+                LastKnownName="G : Game"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="9704fc76-966e-4377-9f7f-6e3f86986215"
+            name="ExecutionOccurrenceSpecification4">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="e4d12dda-743d-4240-88a4-a4121f760a53"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="PnTModeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="9dcac654-5f36-4605-990c-96f01bad68c5"
+                LastKnownName="G : Game"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="3a387401-ef11-4581-96b6-43b4b599a203"
+            name="BehaviorExecutionSpecification4">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="1a256ae0-b74d-4c8f-9338-4b9ab2c9c8a2"
+                LastKnownName="SB1 : SheetBuilder"
+                LastKnownLocation="PnTModeling.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="5c7e1dea-307b-41f7-944b-6fc089cb3701"
+                LastKnownName="ExecutionOccurrenceSpecification8"
+                LastKnownLocation="PnTModeling.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="98255a02-2097-4bf6-89a7-e443f0a7b092"
+                LastKnownName="ExecutionOccurrenceSpecification7"
+                LastKnownLocation="PnTModeling.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="f59b4fff-5962-497a-b773-751f2a5fd173"
+                LastKnownName="MessageOccurrenceSpecification10"
+                LastKnownLocation="PnTModeling.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="98255a02-2097-4bf6-89a7-e443f0a7b092"
+            name="ExecutionOccurrenceSpecification7">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="e287dd3b-af10-47d9-866e-c1819f8c19ae"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="PnTModeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="1a256ae0-b74d-4c8f-9338-4b9ab2c9c8a2"
+                LastKnownName="SB1 : SheetBuilder"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="f59b4fff-5962-497a-b773-751f2a5fd173"
+            name="MessageOccurrenceSpecification10">
+            <covered>
+              <lifelineMoniker
+                Id="1a256ae0-b74d-4c8f-9338-4b9ab2c9c8a2"
+                LastKnownName="SB1 : SheetBuilder"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="dc96d2bc-4180-4ffc-a9ac-b25d3bf0249b"
+            name="MessageOccurrenceSpecification9">
+            <covered>
+              <lifelineMoniker
+                Id="813b0a3c-5c1f-4049-8894-13288a4de811"
+                LastKnownName="GM : GameMaster"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="d4337dd1-a65f-41b1-89de-0ac76ec2d723"
+            name="BehaviorExecutionSpecification3">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="49bfbefc-6fcc-4d8f-b588-9907dcb2ab51"
+                LastKnownName="P1 : Player"
+                LastKnownLocation="PnTModeling.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="b7b6e3b1-aff2-472a-a2ce-f281d3ef3446"
+                LastKnownName="ExecutionOccurrenceSpecification6"
+                LastKnownLocation="PnTModeling.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="0bea1e32-714a-4b1b-bab3-8a31a70b766c"
+                LastKnownName="ExecutionOccurrenceSpecification5"
+                LastKnownLocation="PnTModeling.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="b7ddf21f-4f53-4147-b2f0-907deb85e6b9"
+                LastKnownName="MessageOccurrenceSpecification8"
+                LastKnownLocation="PnTModeling.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="0bea1e32-714a-4b1b-bab3-8a31a70b766c"
+            name="ExecutionOccurrenceSpecification5">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="3702253a-3aaf-42af-946a-a7acd6e99f9c"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="PnTModeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="49bfbefc-6fcc-4d8f-b588-9907dcb2ab51"
+                LastKnownName="P1 : Player"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="6c61ecf1-7be2-4a96-8ade-301663877018"
+            name="MessageOccurrenceSpecification7">
+            <covered>
+              <lifelineMoniker
+                Id="4f25b3f2-a576-4b0d-b1f0-b7727c5e0cbe"
+                LastKnownName="Ptit bonhomme"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="b7ddf21f-4f53-4147-b2f0-907deb85e6b9"
+            name="MessageOccurrenceSpecification8">
+            <covered>
+              <lifelineMoniker
+                Id="49bfbefc-6fcc-4d8f-b588-9907dcb2ab51"
+                LastKnownName="P1 : Player"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="5c7e1dea-307b-41f7-944b-6fc089cb3701"
+            name="ExecutionOccurrenceSpecification8">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="d28b5641-ba7e-470b-a3bd-2744d23bd310"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="PnTModeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="1a256ae0-b74d-4c8f-9338-4b9ab2c9c8a2"
+                LastKnownName="SB1 : SheetBuilder"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="b7b6e3b1-aff2-472a-a2ce-f281d3ef3446"
+            name="ExecutionOccurrenceSpecification6">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="c1605333-d7e7-4201-b0ce-53cca048b3de"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="PnTModeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="49bfbefc-6fcc-4d8f-b588-9907dcb2ab51"
+                LastKnownName="P1 : Player"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="56b9ef8c-9416-43d1-8564-4b326b85d75c"
+            name="BehaviorExecutionSpecification6">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="1a256ae0-b74d-4c8f-9338-4b9ab2c9c8a2"
+                LastKnownName="SB1 : SheetBuilder"
+                LastKnownLocation="PnTModeling.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="f121bcc3-a7c4-4fe5-8e7a-de87a8ea1a52"
+                LastKnownName="ExecutionOccurrenceSpecification12"
+                LastKnownLocation="PnTModeling.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="09c06089-2ea7-4e79-bdbf-b9299fed7444"
+                LastKnownName="ExecutionOccurrenceSpecification11"
+                LastKnownLocation="PnTModeling.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="33503eea-37ba-40ab-af93-31ccc822569b"
+                LastKnownName="MessageOccurrenceSpecification15"
+                LastKnownLocation="PnTModeling.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="09c06089-2ea7-4e79-bdbf-b9299fed7444"
+            name="ExecutionOccurrenceSpecification11">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="e4fda5b8-7c6e-4a4b-bf2d-94878ada98e8"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="PnTModeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="1a256ae0-b74d-4c8f-9338-4b9ab2c9c8a2"
+                LastKnownName="SB1 : SheetBuilder"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="33503eea-37ba-40ab-af93-31ccc822569b"
+            name="MessageOccurrenceSpecification15">
+            <covered>
+              <lifelineMoniker
+                Id="1a256ae0-b74d-4c8f-9338-4b9ab2c9c8a2"
+                LastKnownName="SB1 : SheetBuilder"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="aada92cc-6d85-4cd7-bdb3-509764a12779"
+            name="MessageOccurrenceSpecification14">
+            <covered>
+              <lifelineMoniker
+                Id="49bfbefc-6fcc-4d8f-b588-9907dcb2ab51"
+                LastKnownName="P1 : Player"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="821def9b-5e38-446f-90ea-3e81fa93c0dc"
+            name="BehaviorExecutionSpecification7">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="49bfbefc-6fcc-4d8f-b588-9907dcb2ab51"
+                LastKnownName="P1 : Player"
+                LastKnownLocation="PnTModeling.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="ecdf7800-a398-49c5-8580-9b500d5675b3"
+                LastKnownName="ExecutionOccurrenceSpecification14"
+                LastKnownLocation="PnTModeling.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="8fccaeb9-e623-433f-a806-c0f197ee4771"
+                LastKnownName="ExecutionOccurrenceSpecification13"
+                LastKnownLocation="PnTModeling.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="6c19905e-b784-4a05-a052-fd7a1b23f942"
+                LastKnownName="MessageOccurrenceSpecification17"
+                LastKnownLocation="PnTModeling.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="8fccaeb9-e623-433f-a806-c0f197ee4771"
+            name="ExecutionOccurrenceSpecification13">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="fbafcc19-89f3-41e7-9a6f-48e22559197a"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="PnTModeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="49bfbefc-6fcc-4d8f-b588-9907dcb2ab51"
+                LastKnownName="P1 : Player"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="6c19905e-b784-4a05-a052-fd7a1b23f942"
+            name="MessageOccurrenceSpecification17">
+            <covered>
+              <lifelineMoniker
+                Id="49bfbefc-6fcc-4d8f-b588-9907dcb2ab51"
+                LastKnownName="P1 : Player"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="368fcd03-2aec-44b2-9501-43fe3794d0bc"
+            name="MessageOccurrenceSpecification16">
+            <covered>
+              <lifelineMoniker
+                Id="4f25b3f2-a576-4b0d-b1f0-b7727c5e0cbe"
+                LastKnownName="Ptit bonhomme"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="f121bcc3-a7c4-4fe5-8e7a-de87a8ea1a52"
+            name="ExecutionOccurrenceSpecification12">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="1829518f-92ae-475f-bf08-46a9bc8ea830"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="PnTModeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="1a256ae0-b74d-4c8f-9338-4b9ab2c9c8a2"
+                LastKnownName="SB1 : SheetBuilder"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="ecdf7800-a398-49c5-8580-9b500d5675b3"
+            name="ExecutionOccurrenceSpecification14">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="103221cd-8739-4cd8-80a7-ad4c2a19d9da"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="PnTModeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="49bfbefc-6fcc-4d8f-b588-9907dcb2ab51"
+                LastKnownName="P1 : Player"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="3e1c00d8-251a-402c-9ed4-578e5ae3a2ac"
+            name="BehaviorExecutionSpecification9">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="1a256ae0-b74d-4c8f-9338-4b9ab2c9c8a2"
+                LastKnownName="SB1 : SheetBuilder"
+                LastKnownLocation="PnTModeling.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="2bf8710d-80d0-4102-adbf-bbec19d9a326"
+                LastKnownName="ExecutionOccurrenceSpecification18"
+                LastKnownLocation="PnTModeling.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="b9c1fb3a-38c7-4151-81be-4ffe874e0e1a"
+                LastKnownName="ExecutionOccurrenceSpecification17"
+                LastKnownLocation="PnTModeling.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="000d1494-dbbf-43aa-b763-879f81c937ca"
+                LastKnownName="MessageOccurrenceSpecification21"
+                LastKnownLocation="PnTModeling.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="b9c1fb3a-38c7-4151-81be-4ffe874e0e1a"
+            name="ExecutionOccurrenceSpecification17">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="b1640c17-f8e4-4217-8695-27fb322d1653"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="PnTModeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="1a256ae0-b74d-4c8f-9338-4b9ab2c9c8a2"
+                LastKnownName="SB1 : SheetBuilder"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="508e81d0-5351-4b54-933a-8c6ca69fcd2f"
+            name="MessageOccurrenceSpecification20">
+            <covered>
+              <lifelineMoniker
+                Id="49bfbefc-6fcc-4d8f-b588-9907dcb2ab51"
+                LastKnownName="P1 : Player"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="000d1494-dbbf-43aa-b763-879f81c937ca"
+            name="MessageOccurrenceSpecification21">
+            <covered>
+              <lifelineMoniker
+                Id="1a256ae0-b74d-4c8f-9338-4b9ab2c9c8a2"
+                LastKnownName="SB1 : SheetBuilder"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="2bf8710d-80d0-4102-adbf-bbec19d9a326"
+            name="ExecutionOccurrenceSpecification18">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="10d47350-0089-4dc0-8e09-5fce984d46ee"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="PnTModeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="1a256ae0-b74d-4c8f-9338-4b9ab2c9c8a2"
+                LastKnownName="SB1 : SheetBuilder"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="c286e86f-59f8-4d2d-8cf6-ab09c881c72e"
+            name="BehaviorExecutionSpecification11">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="1a256ae0-b74d-4c8f-9338-4b9ab2c9c8a2"
+                LastKnownName="SB1 : SheetBuilder"
+                LastKnownLocation="PnTModeling.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="15c2af3d-7456-45ab-bd63-4b5df2fcbf29"
+                LastKnownName="ExecutionOccurrenceSpecification22"
+                LastKnownLocation="PnTModeling.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="17b14036-49ec-44ff-accf-e0c4cee54ad0"
+                LastKnownName="ExecutionOccurrenceSpecification21"
+                LastKnownLocation="PnTModeling.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="6733ab8f-02d3-448f-a0e7-69416dec7028"
+                LastKnownName="MessageOccurrenceSpecification25"
+                LastKnownLocation="PnTModeling.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="59d8865a-6b9e-4458-a555-3e92ff144be5"
+                LastKnownName="MessageOccurrenceSpecification28"
+                LastKnownLocation="PnTModeling.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="859b7bce-a353-4051-b20b-f76e0a5488ca"
+                LastKnownName="MessageOccurrenceSpecification31"
+                LastKnownLocation="PnTModeling.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="08403c9a-00ec-4776-bafa-a8f9b7782211"
+                LastKnownName="MessageOccurrenceSpecification26"
+                LastKnownLocation="PnTModeling.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="17b14036-49ec-44ff-accf-e0c4cee54ad0"
+            name="ExecutionOccurrenceSpecification21">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="eb4bbb0b-dfbf-4526-803c-b20de271ffeb"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="PnTModeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="1a256ae0-b74d-4c8f-9338-4b9ab2c9c8a2"
+                LastKnownName="SB1 : SheetBuilder"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="e9263d19-e54e-40c5-84b3-83e703105d4c"
+            name="MessageOccurrenceSpecification24">
+            <covered>
+              <lifelineMoniker
+                Id="49bfbefc-6fcc-4d8f-b588-9907dcb2ab51"
+                LastKnownName="P1 : Player"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="6733ab8f-02d3-448f-a0e7-69416dec7028"
+            name="MessageOccurrenceSpecification25">
+            <covered>
+              <lifelineMoniker
+                Id="1a256ae0-b74d-4c8f-9338-4b9ab2c9c8a2"
+                LastKnownName="SB1 : SheetBuilder"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="4a8b186e-7a45-48a7-a40e-f13311994ead"
+            name="BehaviorExecutionSpecification12">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="dd44f853-6976-4568-a3f4-cb07ce73beef"
+                LastKnownName="S1 : Sheet"
+                LastKnownLocation="PnTModeling.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="79b67306-b914-4087-a513-f19b826486d4"
+                LastKnownName="ExecutionOccurrenceSpecification24"
+                LastKnownLocation="PnTModeling.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="ecd978a5-4596-4821-9e39-17c164f42eb2"
+                LastKnownName="ExecutionOccurrenceSpecification23"
+                LastKnownLocation="PnTModeling.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="2b63d466-b216-48b1-bc68-602c68e91d2e"
+                LastKnownName="MessageOccurrenceSpecification29"
+                LastKnownLocation="PnTModeling.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="6e130d50-767e-4f85-9dc1-cdf0b8f315c3"
+                LastKnownName="MessageOccurrenceSpecification30"
+                LastKnownLocation="PnTModeling.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="ecd978a5-4596-4821-9e39-17c164f42eb2"
+            name="ExecutionOccurrenceSpecification23">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="2b52c7da-f792-4a2f-bbb8-9da9f7954217"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="PnTModeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="dd44f853-6976-4568-a3f4-cb07ce73beef"
+                LastKnownName="S1 : Sheet"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="2b63d466-b216-48b1-bc68-602c68e91d2e"
+            name="MessageOccurrenceSpecification29">
+            <covered>
+              <lifelineMoniker
+                Id="dd44f853-6976-4568-a3f4-cb07ce73beef"
+                LastKnownName="S1 : Sheet"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="59d8865a-6b9e-4458-a555-3e92ff144be5"
+            name="MessageOccurrenceSpecification28">
+            <covered>
+              <lifelineMoniker
+                Id="1a256ae0-b74d-4c8f-9338-4b9ab2c9c8a2"
+                LastKnownName="SB1 : SheetBuilder"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="6e130d50-767e-4f85-9dc1-cdf0b8f315c3"
+            name="MessageOccurrenceSpecification30">
+            <covered>
+              <lifelineMoniker
+                Id="dd44f853-6976-4568-a3f4-cb07ce73beef"
+                LastKnownName="S1 : Sheet"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="859b7bce-a353-4051-b20b-f76e0a5488ca"
+            name="MessageOccurrenceSpecification31">
+            <covered>
+              <lifelineMoniker
+                Id="1a256ae0-b74d-4c8f-9338-4b9ab2c9c8a2"
+                LastKnownName="SB1 : SheetBuilder"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="79b67306-b914-4087-a513-f19b826486d4"
+            name="ExecutionOccurrenceSpecification24">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="f2652b0b-fbff-46ef-9982-6fec9c4e6aac"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="PnTModeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="dd44f853-6976-4568-a3f4-cb07ce73beef"
+                LastKnownName="S1 : Sheet"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="830eb62c-0207-4da7-8549-8e75e2c11898"
+            name="MessageOccurrenceSpecification27">
+            <covered>
+              <lifelineMoniker
+                Id="49bfbefc-6fcc-4d8f-b588-9907dcb2ab51"
+                LastKnownName="P1 : Player"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="08403c9a-00ec-4776-bafa-a8f9b7782211"
+            name="MessageOccurrenceSpecification26">
+            <covered>
+              <lifelineMoniker
+                Id="1a256ae0-b74d-4c8f-9338-4b9ab2c9c8a2"
+                LastKnownName="SB1 : SheetBuilder"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="15c2af3d-7456-45ab-bd63-4b5df2fcbf29"
+            name="ExecutionOccurrenceSpecification22">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="a7648d03-17f9-48d6-8631-4dfa3f4e354c"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="PnTModeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="1a256ae0-b74d-4c8f-9338-4b9ab2c9c8a2"
+                LastKnownName="SB1 : SheetBuilder"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline
+            Id="4f25b3f2-a576-4b0d-b1f0-b7727c5e0cbe"
+            name="Ptit bonhomme"
+            isActor="true"
+            lifelineDisplayName="Ptit bonhomme">
+            <topLevelOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="7cf4287f-8819-4c57-81f6-fba73499de1a"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="PnTModeling.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="6c61ecf1-7be2-4a96-8ade-301663877018"
+                LastKnownName="MessageOccurrenceSpecification7"
+                LastKnownLocation="PnTModeling.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="368fcd03-2aec-44b2-9501-43fe3794d0bc"
+                LastKnownName="MessageOccurrenceSpecification16"
+                LastKnownLocation="PnTModeling.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="813b0a3c-5c1f-4049-8894-13288a4de811"
+            name="GM : GameMaster"
+            isActor="false"
+            lifelineDisplayName="GM : GameMaster">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="1abb0ccc-345c-4ac0-b31a-c46106e45f80"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="PnTModeling.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="8c6623e8-d1f2-43ec-86a8-6eb1f9d6cc07"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="PnTModeling.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="55a0369d-6bfb-4960-9b67-72d542788b4a"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="PnTModeling.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="709b8948-198d-4180-8b41-5f85c740915f"
+                LastKnownName="MessageOccurrenceSpecification6"
+                LastKnownLocation="PnTModeling.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="dc96d2bc-4180-4ffc-a9ac-b25d3bf0249b"
+                LastKnownName="MessageOccurrenceSpecification9"
+                LastKnownLocation="PnTModeling.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="9dcac654-5f36-4605-990c-96f01bad68c5"
+            name="G : Game"
+            isActor="false"
+            lifelineDisplayName="G : Game">
+            <represents>
+              <propertyMoniker
+                Id="a6ec7cc2-644b-424f-a4f3-91124b6ef2cc"
+                LastKnownLocation="PnTModeling.uml" />
+            </represents>
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="d1a97fca-f608-4be4-a876-e2b9f6e436ef"
+                LastKnownName="ExecutionOccurrenceSpecification3"
+                LastKnownLocation="PnTModeling.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="9704fc76-966e-4377-9f7f-6e3f86986215"
+                LastKnownName="ExecutionOccurrenceSpecification4"
+                LastKnownLocation="PnTModeling.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="49bfbefc-6fcc-4d8f-b588-9907dcb2ab51"
+            name="P1 : Player"
+            isActor="false"
+            lifelineDisplayName="P1 : Player">
+            <represents>
+              <propertyMoniker
+                Id="6b5153fd-81fe-4a40-a783-b67ec0abeafb"
+                LastKnownLocation="PnTModeling.uml" />
+            </represents>
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="0bea1e32-714a-4b1b-bab3-8a31a70b766c"
+                LastKnownName="ExecutionOccurrenceSpecification5"
+                LastKnownLocation="PnTModeling.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="b7b6e3b1-aff2-472a-a2ce-f281d3ef3446"
+                LastKnownName="ExecutionOccurrenceSpecification6"
+                LastKnownLocation="PnTModeling.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="aada92cc-6d85-4cd7-bdb3-509764a12779"
+                LastKnownName="MessageOccurrenceSpecification14"
+                LastKnownLocation="PnTModeling.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="8fccaeb9-e623-433f-a806-c0f197ee4771"
+                LastKnownName="ExecutionOccurrenceSpecification13"
+                LastKnownLocation="PnTModeling.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="ecdf7800-a398-49c5-8580-9b500d5675b3"
+                LastKnownName="ExecutionOccurrenceSpecification14"
+                LastKnownLocation="PnTModeling.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="508e81d0-5351-4b54-933a-8c6ca69fcd2f"
+                LastKnownName="MessageOccurrenceSpecification20"
+                LastKnownLocation="PnTModeling.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="e9263d19-e54e-40c5-84b3-83e703105d4c"
+                LastKnownName="MessageOccurrenceSpecification24"
+                LastKnownLocation="PnTModeling.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="830eb62c-0207-4da7-8549-8e75e2c11898"
+                LastKnownName="MessageOccurrenceSpecification27"
+                LastKnownLocation="PnTModeling.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="1a256ae0-b74d-4c8f-9338-4b9ab2c9c8a2"
+            name="SB1 : SheetBuilder"
+            isActor="false"
+            lifelineDisplayName="SB1 : SheetBuilder">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="98255a02-2097-4bf6-89a7-e443f0a7b092"
+                LastKnownName="ExecutionOccurrenceSpecification7"
+                LastKnownLocation="PnTModeling.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="5c7e1dea-307b-41f7-944b-6fc089cb3701"
+                LastKnownName="ExecutionOccurrenceSpecification8"
+                LastKnownLocation="PnTModeling.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="09c06089-2ea7-4e79-bdbf-b9299fed7444"
+                LastKnownName="ExecutionOccurrenceSpecification11"
+                LastKnownLocation="PnTModeling.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="f121bcc3-a7c4-4fe5-8e7a-de87a8ea1a52"
+                LastKnownName="ExecutionOccurrenceSpecification12"
+                LastKnownLocation="PnTModeling.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="b9c1fb3a-38c7-4151-81be-4ffe874e0e1a"
+                LastKnownName="ExecutionOccurrenceSpecification17"
+                LastKnownLocation="PnTModeling.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="2bf8710d-80d0-4102-adbf-bbec19d9a326"
+                LastKnownName="ExecutionOccurrenceSpecification18"
+                LastKnownLocation="PnTModeling.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="17b14036-49ec-44ff-accf-e0c4cee54ad0"
+                LastKnownName="ExecutionOccurrenceSpecification21"
+                LastKnownLocation="PnTModeling.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="15c2af3d-7456-45ab-bd63-4b5df2fcbf29"
+                LastKnownName="ExecutionOccurrenceSpecification22"
+                LastKnownLocation="PnTModeling.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="dd44f853-6976-4568-a3f4-cb07ce73beef"
+            name="S1 : Sheet"
+            isActor="false"
+            lifelineDisplayName="S1 : Sheet">
+            <topLevelOccurrences>
+              <executionOccurrenceSpecificationMoniker
+                Id="ecd978a5-4596-4821-9e39-17c164f42eb2"
+                LastKnownName="ExecutionOccurrenceSpecification23"
+                LastKnownLocation="PnTModeling.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="79b67306-b914-4087-a513-f19b826486d4"
+                LastKnownName="ExecutionOccurrenceSpecification24"
+                LastKnownLocation="PnTModeling.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message
+            Id="05aa36a9-e866-44f3-b8c3-e8e2f9540457"
+            name="createGame(Song song)"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="7cf4287f-8819-4c57-81f6-fba73499de1a"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="PnTModeling.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="f913758a-1888-40b2-87e3-38bb355e8625"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="PnTModeling.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="0399a197-c93d-43a7-a4ac-5cb8ef001ce7"
+            name="Game(Song song)"
+            messageKind="Complete"
+            messageSort="CreateMessage"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="55a0369d-6bfb-4960-9b67-72d542788b4a"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="PnTModeling.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="04d68a8a-bc88-482c-a07d-8f28de4aed29"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="PnTModeling.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="0d9db5d9-40d8-4f89-8fcf-0fb90666e911"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="daf67cff-92bb-42e0-bda6-78d3bfd29bd8"
+                LastKnownName="MessageOccurrenceSpecification5"
+                LastKnownLocation="PnTModeling.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="709b8948-198d-4180-8b41-5f85c740915f"
+                LastKnownName="MessageOccurrenceSpecification6"
+                LastKnownLocation="PnTModeling.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="35282af0-3701-4141-ac7d-63dfe89477fe"
+            name="setSong(Song song)"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="dc96d2bc-4180-4ffc-a9ac-b25d3bf0249b"
+                LastKnownName="MessageOccurrenceSpecification9"
+                LastKnownLocation="PnTModeling.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="f59b4fff-5962-497a-b773-751f2a5fd173"
+                LastKnownName="MessageOccurrenceSpecification10"
+                LastKnownLocation="PnTModeling.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="65422bac-c0a7-4580-baa7-03984912a27f"
+            name="setDiff(Difficulty diff)"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="6c61ecf1-7be2-4a96-8ade-301663877018"
+                LastKnownName="MessageOccurrenceSpecification7"
+                LastKnownLocation="PnTModeling.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="b7ddf21f-4f53-4147-b2f0-907deb85e6b9"
+                LastKnownName="MessageOccurrenceSpecification8"
+                LastKnownLocation="PnTModeling.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="2b6fb51f-f9aa-4681-9d0d-16ddd4b9152f"
+            name="setDiff(Player P1, Difficulty diff)"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="aada92cc-6d85-4cd7-bdb3-509764a12779"
+                LastKnownName="MessageOccurrenceSpecification14"
+                LastKnownLocation="PnTModeling.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="33503eea-37ba-40ab-af93-31ccc822569b"
+                LastKnownName="MessageOccurrenceSpecification15"
+                LastKnownLocation="PnTModeling.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="d43d22f5-87fe-4a03-9c69-ba3dd4cf946a"
+            name="setInstr(Instrument instr)"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="368fcd03-2aec-44b2-9501-43fe3794d0bc"
+                LastKnownName="MessageOccurrenceSpecification16"
+                LastKnownLocation="PnTModeling.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="6c19905e-b784-4a05-a052-fd7a1b23f942"
+                LastKnownName="MessageOccurrenceSpecification17"
+                LastKnownLocation="PnTModeling.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="36d2c5eb-202e-45b0-9eb1-131c9c2d8761"
+            name="setInstr(Player P1, Instrument instr)"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="508e81d0-5351-4b54-933a-8c6ca69fcd2f"
+                LastKnownName="MessageOccurrenceSpecification20"
+                LastKnownLocation="PnTModeling.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="000d1494-dbbf-43aa-b763-879f81c937ca"
+                LastKnownName="MessageOccurrenceSpecification21"
+                LastKnownLocation="PnTModeling.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="67b1acca-bfc9-469a-bdbf-1930533fd00c"
+            name="createSheet()"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="e9263d19-e54e-40c5-84b3-83e703105d4c"
+                LastKnownName="MessageOccurrenceSpecification24"
+                LastKnownLocation="PnTModeling.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="6733ab8f-02d3-448f-a0e7-69416dec7028"
+                LastKnownName="MessageOccurrenceSpecification25"
+                LastKnownLocation="PnTModeling.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="ac2f81a1-0a2e-4ae5-a92a-91dfc1f24357"
+            name="&lt;&lt;create&gt;&gt;"
+            messageKind="Complete"
+            messageSort="CreateMessage"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="59d8865a-6b9e-4458-a555-3e92ff144be5"
+                LastKnownName="MessageOccurrenceSpecification28"
+                LastKnownLocation="PnTModeling.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="2b63d466-b216-48b1-bc68-602c68e91d2e"
+                LastKnownName="MessageOccurrenceSpecification29"
+                LastKnownLocation="PnTModeling.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="8f91bec7-65e2-4fe2-b3d0-78e588c082ed"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="6e130d50-767e-4f85-9dc1-cdf0b8f315c3"
+                LastKnownName="MessageOccurrenceSpecification30"
+                LastKnownLocation="PnTModeling.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="859b7bce-a353-4051-b20b-f76e0a5488ca"
+                LastKnownName="MessageOccurrenceSpecification31"
+                LastKnownLocation="PnTModeling.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="ea6dd855-c0e6-4fe1-b83f-07530df751e7"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="08403c9a-00ec-4776-bafa-a8f9b7782211"
+                LastKnownName="MessageOccurrenceSpecification26"
+                LastKnownLocation="PnTModeling.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="830eb62c-0207-4da7-8549-8e75e2c11898"
+                LastKnownName="MessageOccurrenceSpecification27"
+                LastKnownLocation="PnTModeling.uml" />
+            </receiveEvent>
+          </message>
+        </messages>
+        <ownedAttributesInternal>
+          <property
+            Id="a6ec7cc2-644b-424f-a4f3-91124b6ef2cc"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <subsystemMoniker
+                Id="f8820a29-1ab1-4dce-a639-bb3027f29c41"
+                LastKnownName="Game"
+                LastKnownLocation="PnTModeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="6b5153fd-81fe-4a40-a783-b67ec0abeafb"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <actorMoniker
+                Id="d53745ca-7100-42d1-9bf9-afaa13f5c387"
+                LastKnownName="Player"
+                LastKnownLocation="PnTModeling.uml" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="5e44b492-eae7-4aeb-86d6-a2ba6abf5202"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="aa6bd136-488c-40f9-8a09-4c44b5f295b4"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="244321d7-ed22-4164-855c-928bb5e460ca"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="e4d12dda-743d-4240-88a4-a4121f760a53"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="3702253a-3aaf-42af-946a-a7acd6e99f9c"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="c1605333-d7e7-4201-b0ce-53cca048b3de"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="e287dd3b-af10-47d9-866e-c1819f8c19ae"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="d28b5641-ba7e-470b-a3bd-2744d23bd310"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="e4fda5b8-7c6e-4a4b-bf2d-94878ada98e8"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="1829518f-92ae-475f-bf08-46a9bc8ea830"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="fbafcc19-89f3-41e7-9a6f-48e22559197a"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="103221cd-8739-4cd8-80a7-ad4c2a19d9da"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="b1640c17-f8e4-4217-8695-27fb322d1653"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="10d47350-0089-4dc0-8e09-5fce984d46ee"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="eb4bbb0b-dfbf-4526-803c-b20de271ffeb"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="a7648d03-17f9-48d6-8631-4dfa3f4e354c"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="2b52c7da-f792-4a2f-bbb8-9da9f7954217"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="f2652b0b-fbff-46ef-9982-6fec9c4e6aac"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <interaction
+        Id="6da2ae76-3a5e-464a-a740-cb94613e4da0"
+        name="SheetCreationJu"
+        collapseFragmentsFlag="false"
+        isActiveClass="false"
+        isAbstract="false"
+        isLeaf="false"
+        isReentrant="false">
+        <ownedCommentsInternal>
+          <comment
+            Id="c7d9d58f-c0bc-4111-b378-de422eef194d">
+            <body>Et on met tout ça là où il faut \o/ Et on recommence !</body>
+          </comment>
+        </ownedCommentsInternal>
+        <fragments>
+          <messageOccurrenceSpecification
+            Id="8a776287-ce80-476f-b45a-16ac27e8a317"
+            name="MessageOccurrenceSpecification1">
+            <covered>
+              <lifelineMoniker
+                Id="de26d987-b41a-4314-88ba-dfad4082e31b"
+                LastKnownName="SheetBuildeur"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="f2280974-30e6-479c-90b8-94a53f042025"
+            name="BehaviorExecutionSpecification1">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="de26d987-b41a-4314-88ba-dfad4082e31b"
+                LastKnownName="SheetBuildeur"
+                LastKnownLocation="PnTModeling.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="f3665efb-0d25-4364-afe6-46869bf15cdf"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="PnTModeling.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="7c2cbdc2-a726-4b72-8ba2-78f777085c3d"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="PnTModeling.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="d52a8326-3690-4787-aef1-96c75d3a5a4f"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="PnTModeling.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="7c2cbdc2-a726-4b72-8ba2-78f777085c3d"
+            name="ExecutionOccurrenceSpecification1">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="120afa8e-60c1-4b83-b808-758fe1b5ba93"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="PnTModeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="de26d987-b41a-4314-88ba-dfad4082e31b"
+                LastKnownName="SheetBuildeur"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="d52a8326-3690-4787-aef1-96c75d3a5a4f"
+            name="MessageOccurrenceSpecification2">
+            <covered>
+              <lifelineMoniker
+                Id="de26d987-b41a-4314-88ba-dfad4082e31b"
+                LastKnownName="SheetBuildeur"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="f3665efb-0d25-4364-afe6-46869bf15cdf"
+            name="ExecutionOccurrenceSpecification2">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="f028659b-4565-4ebc-a79e-48ccdf27b100"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="PnTModeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="de26d987-b41a-4314-88ba-dfad4082e31b"
+                LastKnownName="SheetBuildeur"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <combinedFragment
+            Id="bd8e39f1-9ca0-4b0a-a00d-faca45be163c"
+            name="CombinedFragment1"
+            interactionOperator="Alt">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="aefaf93e-ba5e-43b1-be48-28740280c79d"
+                LastKnownName="Whole"
+                LastKnownLocation="PnTModeling.uml" />
+              <lifelineMoniker
+                Id="de26d987-b41a-4314-88ba-dfad4082e31b"
+                LastKnownName="SheetBuildeur"
+                LastKnownLocation="PnTModeling.uml" />
+              <lifelineMoniker
+                Id="1e89b53a-19cd-4e32-8a2d-07c6a1de1796"
+                LastKnownName="Half"
+                LastKnownLocation="PnTModeling.uml" />
+            </coveredLifelines>
+            <operands>
+              <interactionOperand
+                Id="204a8cc2-0abd-4998-acf9-e5f73e081903"
+                name="InteractionOperand1">
+                <coveredLifelines>
+                  <lifelineMoniker
+                    Id="aefaf93e-ba5e-43b1-be48-28740280c79d"
+                    LastKnownName="Whole"
+                    LastKnownLocation="PnTModeling.uml" />
+                  <lifelineMoniker
+                    Id="de26d987-b41a-4314-88ba-dfad4082e31b"
+                    LastKnownName="SheetBuildeur"
+                    LastKnownLocation="PnTModeling.uml" />
+                  <lifelineMoniker
+                    Id="1e89b53a-19cd-4e32-8a2d-07c6a1de1796"
+                    LastKnownName="Half"
+                    LastKnownLocation="PnTModeling.uml" />
+                </coveredLifelines>
+                <guard>
+                  <interactionConstraint
+                    Id="fdcf3f29-11cb-436f-b300-674c601a2666"
+                    guardText="actualNote = &quot;Whole&quot;" />
+                </guard>
+                <operandOccurrenceSpecifications>
+                  <operandOccurrenceSpecificationMoniker
+                    Id="742ebd46-b906-49a0-a23e-5deac3b499ba"
+                    LastKnownName="OperandOccurrenceSpecification1"
+                    LastKnownLocation="PnTModeling.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="553b713b-69cf-4543-a348-0bccae1e9846"
+                    LastKnownName="OperandOccurrenceSpecification2"
+                    LastKnownLocation="PnTModeling.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="310a5f10-7ccf-48ca-94f7-acd1d51e4490"
+                    LastKnownName="OperandOccurrenceSpecification3"
+                    LastKnownLocation="PnTModeling.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="1a0f26dd-cc3f-438b-a8a2-d58ca1111ee4"
+                    LastKnownName="OperandOccurrenceSpecification4"
+                    LastKnownLocation="PnTModeling.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="86789e4a-a720-4ab4-ac12-a1357b464dfe"
+                    LastKnownName="OperandOccurrenceSpecification9"
+                    LastKnownLocation="PnTModeling.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="7957e3e6-b6fd-4bfa-adf2-ebf76f2709eb"
+                    LastKnownName="OperandOccurrenceSpecification10"
+                    LastKnownLocation="PnTModeling.uml" />
+                </operandOccurrenceSpecifications>
+              </interactionOperand>
+              <interactionOperand
+                Id="93793e29-e7d9-447c-832d-104af2a7127b"
+                name="InteractionOperand2">
+                <coveredLifelines>
+                  <lifelineMoniker
+                    Id="aefaf93e-ba5e-43b1-be48-28740280c79d"
+                    LastKnownName="Whole"
+                    LastKnownLocation="PnTModeling.uml" />
+                  <lifelineMoniker
+                    Id="de26d987-b41a-4314-88ba-dfad4082e31b"
+                    LastKnownName="SheetBuildeur"
+                    LastKnownLocation="PnTModeling.uml" />
+                  <lifelineMoniker
+                    Id="1e89b53a-19cd-4e32-8a2d-07c6a1de1796"
+                    LastKnownName="Half"
+                    LastKnownLocation="PnTModeling.uml" />
+                </coveredLifelines>
+                <fragments>
+                  <combinedFragment
+                    Id="32f9e23e-0332-45d4-bc4b-df9a13745ba5"
+                    name="CombinedFragment1"
+                    interactionOperator="Alt">
+                    <coveredLifelines>
+                      <lifelineMoniker
+                        Id="1e89b53a-19cd-4e32-8a2d-07c6a1de1796"
+                        LastKnownName="Half"
+                        LastKnownLocation="PnTModeling.uml" />
+                      <lifelineMoniker
+                        Id="de26d987-b41a-4314-88ba-dfad4082e31b"
+                        LastKnownName="SheetBuildeur"
+                        LastKnownLocation="PnTModeling.uml" />
+                    </coveredLifelines>
+                    <operands>
+                      <interactionOperand
+                        Id="5f6138ef-c208-4831-999a-223c4555cc11"
+                        name="InteractionOperand1">
+                        <coveredLifelines>
+                          <lifelineMoniker
+                            Id="1e89b53a-19cd-4e32-8a2d-07c6a1de1796"
+                            LastKnownName="Half"
+                            LastKnownLocation="PnTModeling.uml" />
+                          <lifelineMoniker
+                            Id="de26d987-b41a-4314-88ba-dfad4082e31b"
+                            LastKnownName="SheetBuildeur"
+                            LastKnownLocation="PnTModeling.uml" />
+                        </coveredLifelines>
+                        <guard>
+                          <interactionConstraint
+                            Id="639c82e8-4e37-45a5-b225-9ad9734a7163"
+                            guardText="[actualNote = &quot;Half&quot;]" />
+                        </guard>
+                        <operandOccurrenceSpecifications>
+                          <operandOccurrenceSpecificationMoniker
+                            Id="9b938999-d837-438d-ac40-0dce6f48490b"
+                            LastKnownName="OperandOccurrenceSpecification13"
+                            LastKnownLocation="PnTModeling.uml" />
+                          <operandOccurrenceSpecificationMoniker
+                            Id="664bf313-c7ec-49c6-9fba-e06cb87c6b35"
+                            LastKnownName="OperandOccurrenceSpecification14"
+                            LastKnownLocation="PnTModeling.uml" />
+                          <operandOccurrenceSpecificationMoniker
+                            Id="c69286fb-eee6-4bbe-85e1-3867bd1eb356"
+                            LastKnownName="OperandOccurrenceSpecification15"
+                            LastKnownLocation="PnTModeling.uml" />
+                          <operandOccurrenceSpecificationMoniker
+                            Id="cbb86843-9f66-4d97-b9f4-70e9c5cda3be"
+                            LastKnownName="OperandOccurrenceSpecification16"
+                            LastKnownLocation="PnTModeling.uml" />
+                        </operandOccurrenceSpecifications>
+                      </interactionOperand>
+                      <interactionOperand
+                        Id="942b621e-89fb-44b6-a622-16f3083709e7"
+                        name="InteractionOperand2">
+                        <coveredLifelines>
+                          <lifelineMoniker
+                            Id="1e89b53a-19cd-4e32-8a2d-07c6a1de1796"
+                            LastKnownName="Half"
+                            LastKnownLocation="PnTModeling.uml" />
+                          <lifelineMoniker
+                            Id="de26d987-b41a-4314-88ba-dfad4082e31b"
+                            LastKnownName="SheetBuildeur"
+                            LastKnownLocation="PnTModeling.uml" />
+                        </coveredLifelines>
+                        <guard>
+                          <interactionConstraint
+                            Id="955a3f84-ab93-428b-8e74-3b106bc17aba"
+                            guardText="etc." />
+                        </guard>
+                        <operandOccurrenceSpecifications>
+                          <operandOccurrenceSpecificationMoniker
+                            Id="c64293db-a167-407f-8d10-06322fef5f4d"
+                            LastKnownName="OperandOccurrenceSpecification17"
+                            LastKnownLocation="PnTModeling.uml" />
+                          <operandOccurrenceSpecificationMoniker
+                            Id="44e8c2e4-d65e-4aef-876f-355afd0e669c"
+                            LastKnownName="OperandOccurrenceSpecification18"
+                            LastKnownLocation="PnTModeling.uml" />
+                          <operandOccurrenceSpecificationMoniker
+                            Id="99526fe7-889e-47f4-a021-3b9ca14693b3"
+                            LastKnownName="OperandOccurrenceSpecification19"
+                            LastKnownLocation="PnTModeling.uml" />
+                          <operandOccurrenceSpecificationMoniker
+                            Id="7c21f4f3-4df8-4f0f-bca8-b192eac96b5b"
+                            LastKnownName="OperandOccurrenceSpecification20"
+                            LastKnownLocation="PnTModeling.uml" />
+                        </operandOccurrenceSpecifications>
+                      </interactionOperand>
+                    </operands>
+                  </combinedFragment>
+                </fragments>
+                <guard>
+                  <interactionConstraint
+                    Id="a98105f2-8b05-476f-82be-4777e9901ab9" />
+                </guard>
+                <operandOccurrenceSpecifications>
+                  <operandOccurrenceSpecificationMoniker
+                    Id="00062c23-9efb-4630-9af7-213a45361e2a"
+                    LastKnownName="OperandOccurrenceSpecification5"
+                    LastKnownLocation="PnTModeling.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="8a986a9a-e00a-4316-84c2-4923f46ef2b3"
+                    LastKnownName="OperandOccurrenceSpecification6"
+                    LastKnownLocation="PnTModeling.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="7fe3620c-bddf-48df-9e87-8c3157c7b1d5"
+                    LastKnownName="OperandOccurrenceSpecification7"
+                    LastKnownLocation="PnTModeling.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="cd116fa0-8371-4c11-b8a6-cbc06843e57d"
+                    LastKnownName="OperandOccurrenceSpecification8"
+                    LastKnownLocation="PnTModeling.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="e9f78797-b8a7-4661-b701-fd1658fe66fd"
+                    LastKnownName="OperandOccurrenceSpecification11"
+                    LastKnownLocation="PnTModeling.uml" />
+                  <operandOccurrenceSpecificationMoniker
+                    Id="0fbd5002-cd28-4157-bee0-a8a0fd5388d0"
+                    LastKnownName="OperandOccurrenceSpecification12"
+                    LastKnownLocation="PnTModeling.uml" />
+                </operandOccurrenceSpecifications>
+              </interactionOperand>
+            </operands>
+          </combinedFragment>
+          <operandOccurrenceSpecification
+            Id="742ebd46-b906-49a0-a23e-5deac3b499ba"
+            name="OperandOccurrenceSpecification1">
+            <covered>
+              <lifelineMoniker
+                Id="aefaf93e-ba5e-43b1-be48-28740280c79d"
+                LastKnownName="Whole"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="86789e4a-a720-4ab4-ac12-a1357b464dfe"
+            name="OperandOccurrenceSpecification9">
+            <covered>
+              <lifelineMoniker
+                Id="1e89b53a-19cd-4e32-8a2d-07c6a1de1796"
+                LastKnownName="Half"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="310a5f10-7ccf-48ca-94f7-acd1d51e4490"
+            name="OperandOccurrenceSpecification3">
+            <covered>
+              <lifelineMoniker
+                Id="de26d987-b41a-4314-88ba-dfad4082e31b"
+                LastKnownName="SheetBuildeur"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="17c2dfa8-0dfc-476b-b226-c313f08fdd9c"
+            name="BehaviorExecutionSpecification2">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="aefaf93e-ba5e-43b1-be48-28740280c79d"
+                LastKnownName="Whole"
+                LastKnownLocation="PnTModeling.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="de7480ce-44a6-47b9-b148-68af89609f49"
+                LastKnownName="ExecutionOccurrenceSpecification4"
+                LastKnownLocation="PnTModeling.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="64316edc-82e1-4a0e-8781-37eda9db0764"
+                LastKnownName="ExecutionOccurrenceSpecification3"
+                LastKnownLocation="PnTModeling.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="6cb93973-8836-4d25-81c0-f7f7406adfd6"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="PnTModeling.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="c2e5c112-47da-42f7-8d4f-74cee5ba01ff"
+                LastKnownName="MessageOccurrenceSpecification5"
+                LastKnownLocation="PnTModeling.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="64316edc-82e1-4a0e-8781-37eda9db0764"
+            name="ExecutionOccurrenceSpecification3">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="ebf4cf76-3c70-4fbb-8509-6dd2b2d8bf05"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="PnTModeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="aefaf93e-ba5e-43b1-be48-28740280c79d"
+                LastKnownName="Whole"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="6cb93973-8836-4d25-81c0-f7f7406adfd6"
+            name="MessageOccurrenceSpecification4">
+            <covered>
+              <lifelineMoniker
+                Id="aefaf93e-ba5e-43b1-be48-28740280c79d"
+                LastKnownName="Whole"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="9da62ab3-a0b4-48e3-b2bf-e09bd6a9e856"
+            name="MessageOccurrenceSpecification3">
+            <covered>
+              <lifelineMoniker
+                Id="de26d987-b41a-4314-88ba-dfad4082e31b"
+                LastKnownName="SheetBuildeur"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="18066a4e-1969-430c-8690-c4025aaedcb2"
+            name="MessageOccurrenceSpecification6">
+            <covered>
+              <lifelineMoniker
+                Id="de26d987-b41a-4314-88ba-dfad4082e31b"
+                LastKnownName="SheetBuildeur"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="c2e5c112-47da-42f7-8d4f-74cee5ba01ff"
+            name="MessageOccurrenceSpecification5">
+            <covered>
+              <lifelineMoniker
+                Id="aefaf93e-ba5e-43b1-be48-28740280c79d"
+                LastKnownName="Whole"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="de7480ce-44a6-47b9-b148-68af89609f49"
+            name="ExecutionOccurrenceSpecification4">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="db650ddd-7314-4ccb-98a3-0242845a4dd0"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="PnTModeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="aefaf93e-ba5e-43b1-be48-28740280c79d"
+                LastKnownName="Whole"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="7957e3e6-b6fd-4bfa-adf2-ebf76f2709eb"
+            name="OperandOccurrenceSpecification10">
+            <covered>
+              <lifelineMoniker
+                Id="1e89b53a-19cd-4e32-8a2d-07c6a1de1796"
+                LastKnownName="Half"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="553b713b-69cf-4543-a348-0bccae1e9846"
+            name="OperandOccurrenceSpecification2">
+            <covered>
+              <lifelineMoniker
+                Id="aefaf93e-ba5e-43b1-be48-28740280c79d"
+                LastKnownName="Whole"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="1a0f26dd-cc3f-438b-a8a2-d58ca1111ee4"
+            name="OperandOccurrenceSpecification4">
+            <covered>
+              <lifelineMoniker
+                Id="de26d987-b41a-4314-88ba-dfad4082e31b"
+                LastKnownName="SheetBuildeur"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="e9f78797-b8a7-4661-b701-fd1658fe66fd"
+            name="OperandOccurrenceSpecification11">
+            <covered>
+              <lifelineMoniker
+                Id="1e89b53a-19cd-4e32-8a2d-07c6a1de1796"
+                LastKnownName="Half"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="7fe3620c-bddf-48df-9e87-8c3157c7b1d5"
+            name="OperandOccurrenceSpecification7">
+            <covered>
+              <lifelineMoniker
+                Id="de26d987-b41a-4314-88ba-dfad4082e31b"
+                LastKnownName="SheetBuildeur"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="00062c23-9efb-4630-9af7-213a45361e2a"
+            name="OperandOccurrenceSpecification5">
+            <covered>
+              <lifelineMoniker
+                Id="aefaf93e-ba5e-43b1-be48-28740280c79d"
+                LastKnownName="Whole"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="9b938999-d837-438d-ac40-0dce6f48490b"
+            name="OperandOccurrenceSpecification13">
+            <covered>
+              <lifelineMoniker
+                Id="1e89b53a-19cd-4e32-8a2d-07c6a1de1796"
+                LastKnownName="Half"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="c69286fb-eee6-4bbe-85e1-3867bd1eb356"
+            name="OperandOccurrenceSpecification15">
+            <covered>
+              <lifelineMoniker
+                Id="de26d987-b41a-4314-88ba-dfad4082e31b"
+                LastKnownName="SheetBuildeur"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="d847d505-b3c9-4ec3-a840-1c4b83b5fdd5"
+            name="BehaviorExecutionSpecification3">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="1e89b53a-19cd-4e32-8a2d-07c6a1de1796"
+                LastKnownName="Half"
+                LastKnownLocation="PnTModeling.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="ac34e62d-1dfd-4b3a-9e98-05f54645effa"
+                LastKnownName="ExecutionOccurrenceSpecification6"
+                LastKnownLocation="PnTModeling.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="fbd2836d-f61a-4191-b96c-b26fb42ea734"
+                LastKnownName="ExecutionOccurrenceSpecification5"
+                LastKnownLocation="PnTModeling.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="6a51e165-7f4f-491d-9aea-0797dc88f3e4"
+                LastKnownName="MessageOccurrenceSpecification8"
+                LastKnownLocation="PnTModeling.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="ef8a6eef-2474-4247-8a89-f9c246f97a11"
+                LastKnownName="MessageOccurrenceSpecification9"
+                LastKnownLocation="PnTModeling.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="fbd2836d-f61a-4191-b96c-b26fb42ea734"
+            name="ExecutionOccurrenceSpecification5">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="137302f8-4f20-45e1-a1b7-1501a622ecf7"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="PnTModeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="1e89b53a-19cd-4e32-8a2d-07c6a1de1796"
+                LastKnownName="Half"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="7eca35b7-9f5e-47df-a184-a324d41b8fce"
+            name="MessageOccurrenceSpecification7">
+            <covered>
+              <lifelineMoniker
+                Id="de26d987-b41a-4314-88ba-dfad4082e31b"
+                LastKnownName="SheetBuildeur"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="6a51e165-7f4f-491d-9aea-0797dc88f3e4"
+            name="MessageOccurrenceSpecification8">
+            <covered>
+              <lifelineMoniker
+                Id="1e89b53a-19cd-4e32-8a2d-07c6a1de1796"
+                LastKnownName="Half"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="ef8a6eef-2474-4247-8a89-f9c246f97a11"
+            name="MessageOccurrenceSpecification9">
+            <covered>
+              <lifelineMoniker
+                Id="1e89b53a-19cd-4e32-8a2d-07c6a1de1796"
+                LastKnownName="Half"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="7ea5ddc0-72e9-44b1-bc3f-0054d1bd62bb"
+            name="MessageOccurrenceSpecification10">
+            <covered>
+              <lifelineMoniker
+                Id="de26d987-b41a-4314-88ba-dfad4082e31b"
+                LastKnownName="SheetBuildeur"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="ac34e62d-1dfd-4b3a-9e98-05f54645effa"
+            name="ExecutionOccurrenceSpecification6">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="b19ab6b7-e752-46d5-a424-0d4023dacad7"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="PnTModeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="1e89b53a-19cd-4e32-8a2d-07c6a1de1796"
+                LastKnownName="Half"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="664bf313-c7ec-49c6-9fba-e06cb87c6b35"
+            name="OperandOccurrenceSpecification14">
+            <covered>
+              <lifelineMoniker
+                Id="1e89b53a-19cd-4e32-8a2d-07c6a1de1796"
+                LastKnownName="Half"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="cbb86843-9f66-4d97-b9f4-70e9c5cda3be"
+            name="OperandOccurrenceSpecification16">
+            <covered>
+              <lifelineMoniker
+                Id="de26d987-b41a-4314-88ba-dfad4082e31b"
+                LastKnownName="SheetBuildeur"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="99526fe7-889e-47f4-a021-3b9ca14693b3"
+            name="OperandOccurrenceSpecification19">
+            <covered>
+              <lifelineMoniker
+                Id="de26d987-b41a-4314-88ba-dfad4082e31b"
+                LastKnownName="SheetBuildeur"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="c64293db-a167-407f-8d10-06322fef5f4d"
+            name="OperandOccurrenceSpecification17">
+            <covered>
+              <lifelineMoniker
+                Id="1e89b53a-19cd-4e32-8a2d-07c6a1de1796"
+                LastKnownName="Half"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="44e8c2e4-d65e-4aef-876f-355afd0e669c"
+            name="OperandOccurrenceSpecification18">
+            <covered>
+              <lifelineMoniker
+                Id="1e89b53a-19cd-4e32-8a2d-07c6a1de1796"
+                LastKnownName="Half"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="7c21f4f3-4df8-4f0f-bca8-b192eac96b5b"
+            name="OperandOccurrenceSpecification20">
+            <covered>
+              <lifelineMoniker
+                Id="de26d987-b41a-4314-88ba-dfad4082e31b"
+                LastKnownName="SheetBuildeur"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="0fbd5002-cd28-4157-bee0-a8a0fd5388d0"
+            name="OperandOccurrenceSpecification12">
+            <covered>
+              <lifelineMoniker
+                Id="1e89b53a-19cd-4e32-8a2d-07c6a1de1796"
+                LastKnownName="Half"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="8a986a9a-e00a-4316-84c2-4923f46ef2b3"
+            name="OperandOccurrenceSpecification6">
+            <covered>
+              <lifelineMoniker
+                Id="aefaf93e-ba5e-43b1-be48-28740280c79d"
+                LastKnownName="Whole"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="cd116fa0-8371-4c11-b8a6-cbc06843e57d"
+            name="OperandOccurrenceSpecification8">
+            <covered>
+              <lifelineMoniker
+                Id="de26d987-b41a-4314-88ba-dfad4082e31b"
+                LastKnownName="SheetBuildeur"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+        </fragments>
+        <lifelines>
+          <lifeline
+            Id="de26d987-b41a-4314-88ba-dfad4082e31b"
+            name="SheetBuildeur"
+            isActor="false"
+            lifelineDisplayName="SheetBuildeur">
+            <topLevelOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="8a776287-ce80-476f-b45a-16ac27e8a317"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="PnTModeling.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="7c2cbdc2-a726-4b72-8ba2-78f777085c3d"
+                LastKnownName="ExecutionOccurrenceSpecification1"
+                LastKnownLocation="PnTModeling.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="f3665efb-0d25-4364-afe6-46869bf15cdf"
+                LastKnownName="ExecutionOccurrenceSpecification2"
+                LastKnownLocation="PnTModeling.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="310a5f10-7ccf-48ca-94f7-acd1d51e4490"
+                LastKnownName="OperandOccurrenceSpecification3"
+                LastKnownLocation="PnTModeling.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="9da62ab3-a0b4-48e3-b2bf-e09bd6a9e856"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="PnTModeling.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="18066a4e-1969-430c-8690-c4025aaedcb2"
+                LastKnownName="MessageOccurrenceSpecification6"
+                LastKnownLocation="PnTModeling.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="1a0f26dd-cc3f-438b-a8a2-d58ca1111ee4"
+                LastKnownName="OperandOccurrenceSpecification4"
+                LastKnownLocation="PnTModeling.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="7fe3620c-bddf-48df-9e87-8c3157c7b1d5"
+                LastKnownName="OperandOccurrenceSpecification7"
+                LastKnownLocation="PnTModeling.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="c69286fb-eee6-4bbe-85e1-3867bd1eb356"
+                LastKnownName="OperandOccurrenceSpecification15"
+                LastKnownLocation="PnTModeling.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="7eca35b7-9f5e-47df-a184-a324d41b8fce"
+                LastKnownName="MessageOccurrenceSpecification7"
+                LastKnownLocation="PnTModeling.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="7ea5ddc0-72e9-44b1-bc3f-0054d1bd62bb"
+                LastKnownName="MessageOccurrenceSpecification10"
+                LastKnownLocation="PnTModeling.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="cbb86843-9f66-4d97-b9f4-70e9c5cda3be"
+                LastKnownName="OperandOccurrenceSpecification16"
+                LastKnownLocation="PnTModeling.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="99526fe7-889e-47f4-a021-3b9ca14693b3"
+                LastKnownName="OperandOccurrenceSpecification19"
+                LastKnownLocation="PnTModeling.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="7c21f4f3-4df8-4f0f-bca8-b192eac96b5b"
+                LastKnownName="OperandOccurrenceSpecification20"
+                LastKnownLocation="PnTModeling.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="cd116fa0-8371-4c11-b8a6-cbc06843e57d"
+                LastKnownName="OperandOccurrenceSpecification8"
+                LastKnownLocation="PnTModeling.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="aefaf93e-ba5e-43b1-be48-28740280c79d"
+            name="Whole"
+            isActor="false"
+            lifelineDisplayName="Whole">
+            <topLevelOccurrences>
+              <operandOccurrenceSpecificationMoniker
+                Id="742ebd46-b906-49a0-a23e-5deac3b499ba"
+                LastKnownName="OperandOccurrenceSpecification1"
+                LastKnownLocation="PnTModeling.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="64316edc-82e1-4a0e-8781-37eda9db0764"
+                LastKnownName="ExecutionOccurrenceSpecification3"
+                LastKnownLocation="PnTModeling.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="de7480ce-44a6-47b9-b148-68af89609f49"
+                LastKnownName="ExecutionOccurrenceSpecification4"
+                LastKnownLocation="PnTModeling.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="553b713b-69cf-4543-a348-0bccae1e9846"
+                LastKnownName="OperandOccurrenceSpecification2"
+                LastKnownLocation="PnTModeling.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="00062c23-9efb-4630-9af7-213a45361e2a"
+                LastKnownName="OperandOccurrenceSpecification5"
+                LastKnownLocation="PnTModeling.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="8a986a9a-e00a-4316-84c2-4923f46ef2b3"
+                LastKnownName="OperandOccurrenceSpecification6"
+                LastKnownLocation="PnTModeling.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+          <lifeline
+            Id="1e89b53a-19cd-4e32-8a2d-07c6a1de1796"
+            name="Half"
+            isActor="false"
+            lifelineDisplayName="Half">
+            <topLevelOccurrences>
+              <operandOccurrenceSpecificationMoniker
+                Id="86789e4a-a720-4ab4-ac12-a1357b464dfe"
+                LastKnownName="OperandOccurrenceSpecification9"
+                LastKnownLocation="PnTModeling.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="7957e3e6-b6fd-4bfa-adf2-ebf76f2709eb"
+                LastKnownName="OperandOccurrenceSpecification10"
+                LastKnownLocation="PnTModeling.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="e9f78797-b8a7-4661-b701-fd1658fe66fd"
+                LastKnownName="OperandOccurrenceSpecification11"
+                LastKnownLocation="PnTModeling.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="9b938999-d837-438d-ac40-0dce6f48490b"
+                LastKnownName="OperandOccurrenceSpecification13"
+                LastKnownLocation="PnTModeling.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="fbd2836d-f61a-4191-b96c-b26fb42ea734"
+                LastKnownName="ExecutionOccurrenceSpecification5"
+                LastKnownLocation="PnTModeling.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="ac34e62d-1dfd-4b3a-9e98-05f54645effa"
+                LastKnownName="ExecutionOccurrenceSpecification6"
+                LastKnownLocation="PnTModeling.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="664bf313-c7ec-49c6-9fba-e06cb87c6b35"
+                LastKnownName="OperandOccurrenceSpecification14"
+                LastKnownLocation="PnTModeling.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="c64293db-a167-407f-8d10-06322fef5f4d"
+                LastKnownName="OperandOccurrenceSpecification17"
+                LastKnownLocation="PnTModeling.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="44e8c2e4-d65e-4aef-876f-355afd0e669c"
+                LastKnownName="OperandOccurrenceSpecification18"
+                LastKnownLocation="PnTModeling.uml" />
+              <operandOccurrenceSpecificationMoniker
+                Id="0fbd5002-cd28-4157-bee0-a8a0fd5388d0"
+                LastKnownName="OperandOccurrenceSpecification12"
+                LastKnownLocation="PnTModeling.uml" />
+            </topLevelOccurrences>
+          </lifeline>
+        </lifelines>
+        <messages>
+          <message
+            Id="dfec76fc-8749-4542-b853-f7b20fb7bbc9"
+            name="getFileNotes(Instrument instrument, Difficulty difficulty, Song song)"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="true">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="8a776287-ce80-476f-b45a-16ac27e8a317"
+                LastKnownName="MessageOccurrenceSpecification1"
+                LastKnownLocation="PnTModeling.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="d52a8326-3690-4787-aef1-96c75d3a5a4f"
+                LastKnownName="MessageOccurrenceSpecification2"
+                LastKnownLocation="PnTModeling.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="0af2429f-f8a9-496f-924e-d38e8cdd4e64"
+            name="Whole( actuelHeight)"
+            messageKind="Complete"
+            messageSort="CreateMessage"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="9da62ab3-a0b4-48e3-b2bf-e09bd6a9e856"
+                LastKnownName="MessageOccurrenceSpecification3"
+                LastKnownLocation="PnTModeling.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="6cb93973-8836-4d25-81c0-f7f7406adfd6"
+                LastKnownName="MessageOccurrenceSpecification4"
+                LastKnownLocation="PnTModeling.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="f7241c87-14ef-44c9-a52d-0890aea6017e"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="c2e5c112-47da-42f7-8d4f-74cee5ba01ff"
+                LastKnownName="MessageOccurrenceSpecification5"
+                LastKnownLocation="PnTModeling.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="18066a4e-1969-430c-8690-c4025aaedcb2"
+                LastKnownName="MessageOccurrenceSpecification6"
+                LastKnownLocation="PnTModeling.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="7e1dc0fa-902d-4588-bf62-540c74f6688c"
+            name="Half(actuelHeight)"
+            messageKind="Complete"
+            messageSort="CreateMessage"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="7eca35b7-9f5e-47df-a184-a324d41b8fce"
+                LastKnownName="MessageOccurrenceSpecification7"
+                LastKnownLocation="PnTModeling.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="6a51e165-7f4f-491d-9aea-0797dc88f3e4"
+                LastKnownName="MessageOccurrenceSpecification8"
+                LastKnownLocation="PnTModeling.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="5ef9fe45-e18b-485c-8c8c-c476da44e16d"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="ef8a6eef-2474-4247-8a89-f9c246f97a11"
+                LastKnownName="MessageOccurrenceSpecification9"
+                LastKnownLocation="PnTModeling.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="7ea5ddc0-72e9-44b1-bc3f-0054d1bd62bb"
+                LastKnownName="MessageOccurrenceSpecification10"
+                LastKnownLocation="PnTModeling.uml" />
+            </receiveEvent>
+          </message>
+        </messages>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="120afa8e-60c1-4b83-b808-758fe1b5ba93"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="f028659b-4565-4ebc-a79e-48ccdf27b100"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="ebf4cf76-3c70-4fbb-8509-6dd2b2d8bf05"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="db650ddd-7314-4ccb-98a3-0242845a4dd0"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="137302f8-4f20-45e1-a1b7-1501a622ecf7"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="b19ab6b7-e752-46d5-a424-0d4023dacad7"
+        name="ExecutionEvent" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType
