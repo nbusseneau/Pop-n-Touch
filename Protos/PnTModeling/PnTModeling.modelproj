@@ -36,6 +36,13 @@
       <SubType>Content</SubType>
       <DependentUpon>CreateGame.usecasediagram</DependentUpon>
     </Content>
+    <Content Include="CreateGameGwen.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="CreateGameGwen.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>CreateGameGwen.sequencediagram</DependentUpon>
+    </Content>
     <Content Include="CreationGameJu.sequencediagram">
       <SubType>Content</SubType>
     </Content>
