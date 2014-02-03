@@ -80,6 +80,13 @@
       <SubType>Content</SubType>
       <DependentUpon>SheetCreationJu.sequencediagram</DependentUpon>
     </Content>
+    <Content Include="Bonus.sequencediagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Bonus.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Bonus.sequencediagram</DependentUpon>
+    </Content>
     <Folder Include="ModelDefinition\" />
     <Content Include="EndGame.usecasediagram">
       <SubType>Content</SubType>
