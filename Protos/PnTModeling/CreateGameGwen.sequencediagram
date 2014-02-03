@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="a8687540-8794-4049-9b68-6509327414fc" name="CreateGameGwen" linkedPackageId="7448916d-89d0-469a-ae6a-592a56c5e133" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm12="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="a8687540-8794-4049-9b68-6509327414fc" name="CreateGameGwen" linkedPackageId="7448916d-89d0-469a-ae6a-592a56c5e133" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
   <packagedElements>
     <packageHasNamedElement>
       <interaction Id="8cde42bd-6ca7-4777-9be0-c25114725629" name="CreateGameGwen" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
@@ -147,16 +147,16 @@
               <lifelineMoniker Id="acf48383-766d-4fa1-bb4c-e241a0a1663d" LastKnownName="game : Game" />
             </covered>
           </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="d587bafb-ab11-4e02-84ae-8a1564012987" name="MessageOccurrenceSpecification8">
-            <elementDefinition Id="93b4dff2-f339-417f-b6d9-c527312d6734" />
-            <covered>
-              <lifelineMoniker Id="acf48383-766d-4fa1-bb4c-e241a0a1663d" LastKnownName="game : Game" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="f2e707df-0b39-41b9-8543-b4bc0422f63f" name="MessageOccurrenceSpecification7">
             <elementDefinition Id="66c031ae-6b91-4b7e-9ea3-02a36b872f22" />
             <covered>
               <lifelineMoniker Id="7dbd3b35-7bc0-41a4-88c9-dae428474592" LastKnownName="gameMaster : GameMaster" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="d587bafb-ab11-4e02-84ae-8a1564012987" name="MessageOccurrenceSpecification8">
+            <elementDefinition Id="93b4dff2-f339-417f-b6d9-c527312d6734" />
+            <covered>
+              <lifelineMoniker Id="acf48383-766d-4fa1-bb4c-e241a0a1663d" LastKnownName="game : Game" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="d5bbbd11-d0e1-409d-875c-460ce4f80505" name="MessageOccurrenceSpecification10">
@@ -845,18 +845,6 @@
               </interactionOperand>
             </operands>
           </combinedFragment>
-          <operandOccurrenceSpecification Id="a4516d21-8ad5-400e-9b6c-0eb005a8e38c" name="OperandOccurrenceSpecification13">
-            <elementDefinition Id="29604ada-ca02-4cc1-ae8b-abdd94c142c3" />
-            <covered>
-              <lifelineMoniker Id="4f533a26-9056-4f2c-91be-11ea7d4a5a05" LastKnownName="player1 : Player" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification Id="969c0671-1ee2-4e5c-b0f3-537b2f3444b7" name="OperandOccurrenceSpecification17">
-            <elementDefinition Id="aac52a75-3001-4ec4-91cd-363c93be5c98" />
-            <covered>
-              <lifelineMoniker Id="7dbd3b35-7bc0-41a4-88c9-dae428474592" LastKnownName="gameMaster : GameMaster" />
-            </covered>
-          </operandOccurrenceSpecification>
           <operandOccurrenceSpecification Id="b84f1f75-25a1-4dec-b8a2-501809248797" name="OperandOccurrenceSpecification19">
             <elementDefinition Id="bac496d6-fe81-4abe-8f5d-c371f407ce28" />
             <covered>
@@ -867,6 +855,18 @@
             <elementDefinition Id="52413d5b-b2cd-463d-93e4-0555d7a292e7" />
             <covered>
               <lifelineMoniker Id="c80052d3-ffac-4bc6-aa79-9a460755fecb" LastKnownName="derpy : Player" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="a4516d21-8ad5-400e-9b6c-0eb005a8e38c" name="OperandOccurrenceSpecification13">
+            <elementDefinition Id="29604ada-ca02-4cc1-ae8b-abdd94c142c3" />
+            <covered>
+              <lifelineMoniker Id="4f533a26-9056-4f2c-91be-11ea7d4a5a05" LastKnownName="player1 : Player" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="969c0671-1ee2-4e5c-b0f3-537b2f3444b7" name="OperandOccurrenceSpecification17">
+            <elementDefinition Id="aac52a75-3001-4ec4-91cd-363c93be5c98" />
+            <covered>
+              <lifelineMoniker Id="7dbd3b35-7bc0-41a4-88c9-dae428474592" LastKnownName="gameMaster : GameMaster" />
             </covered>
           </operandOccurrenceSpecification>
           <behaviorExecutionSpecification Id="4a469ff6-4ab7-40c5-b550-ad5b54878d8e" name="BehaviorExecutionSpecification24">
@@ -1489,15 +1489,9 @@
           </property>
           <property Id="81599bd5-aa85-41ef-bccc-c83dea91d3ff" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="04f5df10-0f00-4702-afcb-2e5c072ae24a" />
-            <type_NamedElement>
-              <referencedTypeMoniker Id="70254825-0c94-4239-96d6-aaa8eade03ac" LastKnownName="GameMaster" />
-            </type_NamedElement>
           </property>
           <property Id="01ff0e26-d13b-42ff-91e4-75d6f0714c59" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="9f099a87-7030-408d-a8a3-7080924c3287" />
-            <type_NamedElement>
-              <referencedTypeMoniker Id="46c90a39-c1d5-4321-ae73-ebb5fd103c64" LastKnownName="Game" />
-            </type_NamedElement>
           </property>
           <property Id="a026b22e-e084-42cb-bb99-da40a4affad1" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="d75b9a74-4d63-4595-888e-5176063c0424" />
@@ -1541,16 +1535,6 @@
     <packageHasNamedElement>
       <referencedType Id="aeb26928-a95c-48a3-9247-d003662b3c3d" name="Player" isAbstract="false" isLeaf="false" cachedFullName="PnTModeling::Player">
         <elementDefinition Id="f6daf833-77e4-4e6e-bc0e-ca87329172ef" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="70254825-0c94-4239-96d6-aaa8eade03ac" name="GameMaster" isAbstract="false" isLeaf="false" cachedFullName="PnTModeling::Model::GameMaster">
-        <elementDefinition Id="39b6a917-780f-4533-87ec-68125efcf685" />
-      </referencedType>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <referencedType Id="46c90a39-c1d5-4321-ae73-ebb5fd103c64" name="Game" isAbstract="false" isLeaf="false" cachedFullName="PnTModeling::Model::Game">
-        <elementDefinition Id="46fa029b-17ff-4177-bc6b-3e2ad3e210f2" />
       </referencedType>
     </packageHasNamedElement>
     <packageHasNamedElement>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<sequenceDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 11.875" name="UMLSequenceDiagram1">
+<sequenceDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 11.875" name="BonusClo">
   <SequenceDesignerModelMoniker Id="8a6c81da-9bf6-4e46-89a7-279f5f8045f9" />
   <nestedChildShapes>
     <lifelineShape Id="fa77f6eb-22d1-40eb-b058-d62fddf84366" absoluteBounds="1.025, 1, 0.15, 10.672013836354022" visible="true" visualStyleMode="Modified">

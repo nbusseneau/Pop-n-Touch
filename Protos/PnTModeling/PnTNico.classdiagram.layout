@@ -139,13 +139,6 @@
             <LiteralElementListCompartment Id="d077b434-55dd-4420-bd21-0463a4a61380" absoluteBounds="8.765, 5.8900000000000006, 1.4700000000000002, 1.3222655827800431" name="LiteralsCompartment" titleTextColor="Black" itemTextColor="Black" />
           </nestedChildShapes>
         </enumerationShape>
-        <classShape Id="fa1738e4-61ee-4056-9c66-6b1b16007ad4" absoluteBounds="6.5, 3.75, 1.5, 0.90234373509883881" hideQualifiedName="false" increaseHeight="0" customColor="181, 193, 223">
-          <classMoniker Id="3276acb6-3103-4bd5-adea-505fa8085680" LastKnownName="Inote" />
-          <nestedChildShapes>
-            <AttributeElementListCompartment Id="e3434857-d4d0-405f-af4c-e704b7155e39" absoluteBounds="6.5150000000000006, 4.1400000000000006, 1.4700000000000002, 0.2011718675494194" name="AttributesCompartment" titleTextColor="Black" itemTextColor="Black" />
-            <OperationElementListCompartment Id="548b56b5-2379-49be-b539-b8169ea79f53" absoluteBounds="6.5150000000000006, 4.35117186754942, 1.4700000000000002, 0.2011718675494194" name="OperationsCompartment" titleTextColor="Black" itemTextColor="Black" />
-          </nestedChildShapes>
-        </classShape>
       </nestedChildShapes>
     </packageShape>
     <associationConnector edgePoints="[(2.25 : 2.27734373509884); (2.25 : 2.75)]" fixedFrom="NotFixed" fixedTo="NotFixed" customColor="113, 111, 110" sourceMultiplicity="1" targetMultiplicity="1">

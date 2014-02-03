@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sequenceDesignerDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="EndGameNico">
+  <SequenceDesignerModelMoniker Id="81cf14cd-fce8-4d2e-bcec-8c306fd2c66a" />
+  <nestedChildShapes>
+    <lifelineShape Id="e1eed1f5-e809-4c91-8c78-488416a24739" absoluteBounds="1.7083333730697632, 1, 0.15, 7" visible="true" visualStyleMode="Modified">
+      <lifelineMoniker Id="43f247ed-6166-4700-a578-6229676a8186" LastKnownName="Herpina" />
+      <relativeChildShapes>
+        <umlLifelineHeadShape Id="cb79a095-7b1f-4d67-99b2-abc8f0070f7b" absoluteBounds="1.2833333730697631, 0.6, 1, 0.4" customColor="White" visualStyleMode="Modified">
+          <lifelineMoniker Id="43f247ed-6166-4700-a578-6229676a8186" LastKnownName="Herpina" />
+          <relativeChildShapes />
+        </umlLifelineHeadShape>
+        <lifelineHoverShape Id="70cff9c5-9a55-4475-82b2-9b093cf9a9da" absoluteBounds="1.7083333730697632, 1, 0, 7">
+          <lifelineMoniker Id="43f247ed-6166-4700-a578-6229676a8186" LastKnownName="Herpina" />
+        </lifelineHoverShape>
+      </relativeChildShapes>
+    </lifelineShape>
+    <lifelineShape Id="989f284d-38bc-462b-b7ab-2ff7c1848352" absoluteBounds="2.8854167461395264, 1, 0.15, 7" visible="true" visualStyleMode="Modified">
+      <lifelineMoniker Id="a50e6070-5e2b-4025-8ad3-7e2b2eb509ac" LastKnownName="GameMaster" />
+      <relativeChildShapes>
+        <umlLifelineHeadShape Id="3e8f43a1-3ed1-400d-90fa-e9b0926a2171" absoluteBounds="2.4604167461395265, 0.6, 1, 0.4" customColor="White" visualStyleMode="Modified">
+          <lifelineMoniker Id="a50e6070-5e2b-4025-8ad3-7e2b2eb509ac" LastKnownName="GameMaster" />
+          <relativeChildShapes />
+        </umlLifelineHeadShape>
+        <lifelineHoverShape Id="e11284ab-1995-4dda-878f-f453c0029d97" absoluteBounds="2.8854167461395264, 1, 0, 7">
+          <lifelineMoniker Id="a50e6070-5e2b-4025-8ad3-7e2b2eb509ac" LastKnownName="GameMaster" />
+        </lifelineHoverShape>
+      </relativeChildShapes>
+    </lifelineShape>
+  </nestedChildShapes>
+</sequenceDesignerDiagram>

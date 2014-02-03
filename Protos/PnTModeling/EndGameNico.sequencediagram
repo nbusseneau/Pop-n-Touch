@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm12="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="81cf14cd-fce8-4d2e-bcec-8c306fd2c66a" name="EndGameNico" linkedPackageId="c813223e-441f-48c7-823a-5e5d20f4af2c" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+  <packagedElements>
+    <packageHasNamedElement>
+      <interaction Id="dc38b1ce-8d74-4d8f-a158-fbf0f20c533f" name="EndGameNico" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
+        <elementDefinition Id="2faee0a1-7754-49e4-8c0a-371558f0f6e8" />
+        <lifelines>
+          <lifeline Id="43f247ed-6166-4700-a578-6229676a8186" name="Herpina" isActor="true" lifelineDisplayName="Herpina">
+            <elementDefinition Id="8b17cbee-40b6-44ce-8508-68826598ab6c" />
+          </lifeline>
+          <lifeline Id="a50e6070-5e2b-4025-8ad3-7e2b2eb509ac" name="GameMaster" isActor="false" lifelineDisplayName="GameMaster">
+            <elementDefinition Id="024129f1-7292-491e-a6ec-0ead294692a7" />
+            <represents>
+              <propertyMoniker Id="c5e0591a-938f-4067-846a-850f219a3a79" />
+            </represents>
+          </lifeline>
+        </lifelines>
+        <ownedAttributesInternal>
+          <property Id="c5e0591a-938f-4067-846a-850f219a3a79" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c4e0af31-c2c3-4e91-aaf7-5c7252bcc668" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="1a2b9ac6-305d-41b8-94ce-b2af58560d03" LastKnownName="GameMaster" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+      </interaction>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="1a2b9ac6-305d-41b8-94ce-b2af58560d03" name="GameMaster" isAbstract="false" isLeaf="false" cachedFullName="PnTModeling::Model::GameMaster">
+        <elementDefinition Id="53ce5291-1cbb-446f-ad01-bb56da4a7bf1" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <package Id="c813223e-441f-48c7-823a-5e5d20f4af2c" name="PnTModeling">
+    <elementDefinition Id="ba7d1a55-5166-45ac-8041-c152888f5086" />
+  </package>
+</SequenceDesignerModel>

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" dslVersion="1.0.0.0" Id="052d731c-1204-4638-b7b9-b0f967f3c998" name="Game" linkedPackageId="762d7b4e-a13d-46ab-9e3e-a154c53e1d94" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="052d731c-1204-4638-b7b9-b0f967f3c998" name="Game" linkedPackageId="762d7b4e-a13d-46ab-9e3e-a154c53e1d94" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
   <packagedElements>
     <useCaseModelRootHasTypes>
       <actor Id="4ecd6c79-ff67-4836-8693-42f4054290f5" name="Player" isAbstract="false" isLeaf="false">
@@ -70,7 +70,7 @@
             <elementDefinition Id="22239ce7-c1b9-4fb4-acc9-904d505868bf" />
           </association>
           <association Id="f835cfde-af81-4b8d-bbdb-2990f25ee3db" isDerived="false" sourceEndRoleName="Player" targetEndRoleName="Quit" isLeaf="false" isAbstract="false">
-            <useCaseMoniker Id="47e78dfc-7b26-4989-8d78-eda6bf0576cf" LastKnownName="Quit" />
+            <useCaseMoniker Id="47e78dfc-7b26-4989-8d78-eda6bf0576cf" LastKnownName="Leave" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd Id="61a7e2ef-f000-48b3-9a23-04f968a03afb" name="Player" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
@@ -128,7 +128,7 @@
       </useCase>
     </useCaseModelRootHasTypes>
     <useCaseModelRootHasTypes>
-      <useCase Id="47e78dfc-7b26-4989-8d78-eda6bf0576cf" name="Quit" isAbstract="false" isLeaf="false">
+      <useCase Id="47e78dfc-7b26-4989-8d78-eda6bf0576cf" name="Leave" isAbstract="false" isLeaf="false">
         <elementDefinition Id="27a505dd-93b8-4c6e-a21f-a745347caf85" />
         <subjects>
           <subsystemMoniker Id="cc024011-6e4b-49d7-82b8-69483290eafc" LastKnownName="Game" />

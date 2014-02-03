@@ -22,7 +22,7 @@
           <relativeChildShapes />
         </useCaseShape>
         <useCaseShape Id="aa293778-3355-496a-9a7e-1c6e91318ba4" absoluteBounds="5.375, 3.75, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
-          <useCaseMoniker Id="deea407e-7ec4-45a1-9401-947885f83833" LastKnownName="Quit" />
+          <useCaseMoniker Id="deea407e-7ec4-45a1-9401-947885f83833" LastKnownName="Leave" />
           <relativeChildShapes />
         </useCaseShape>
         <useCaseShape Id="ee46ff06-4a3e-4d7a-8268-94b2e616643c" absoluteBounds="6.75, 2, 1, 0.5" customColor="238, 237, 131" heightOffset="0">

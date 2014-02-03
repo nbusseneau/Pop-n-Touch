@@ -50,22 +50,20 @@
       <SubType>Content</SubType>
       <DependentUpon>CreationGameJu.sequencediagram</DependentUpon>
     </Content>
-    <Content Include="ModelDefinition\Package1_1204.uml">
+    <Content Include="EndGameNico.sequencediagram">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="ModelDefinition\Package1_2311.uml">
+    <Content Include="EndGameNico.sequencediagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>EndGameNico.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="ModelDefinition\Package1_1204.uml">
       <SubType>Content</SubType>
     </Content>
     <Content Include="ModelDefinition\Package2_1204.uml">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="ModelDefinition\Package2_2311.uml">
-      <SubType>Content</SubType>
-    </Content>
     <Content Include="ModelDefinition\Package_1204.uml">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="ModelDefinition\Package_2311.uml">
       <SubType>Content</SubType>
     </Content>
     <Content Include="PnTNico.classdiagram">
