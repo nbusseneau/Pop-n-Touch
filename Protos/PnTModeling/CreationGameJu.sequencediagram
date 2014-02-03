@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="58d61e59-db30-4013-a2fb-2985ec1b2131" name="CreationGameJu" linkedPackageId="9db17a71-10fc-4079-9c99-fcbed9bfffa0" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm12="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="58d61e59-db30-4013-a2fb-2985ec1b2131" name="CreationGameJu" linkedPackageId="9db17a71-10fc-4079-9c99-fcbed9bfffa0" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
   <packagedElements>
     <packageHasNamedElement>
       <interaction Id="07af69b2-910a-494b-9f88-1ab95e8bcdc5" name="CreationGameJu" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
@@ -251,16 +251,16 @@ cf sheetCreations.sequenceddiagram</body>
               <lifelineMoniker Id="ac8f28c4-8684-4207-b36d-51336999b426" LastKnownName="SB1 : SheetBuilder" />
             </covered>
           </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="4f565b28-0104-447b-89e6-b5ff977b2396" name="MessageOccurrenceSpecification15">
-            <elementDefinition Id="33503eea-37ba-40ab-af93-31ccc822569b" />
-            <covered>
-              <lifelineMoniker Id="ac8f28c4-8684-4207-b36d-51336999b426" LastKnownName="SB1 : SheetBuilder" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="8de5fabc-b41c-40ed-9820-4932426d14ec" name="MessageOccurrenceSpecification14">
             <elementDefinition Id="aada92cc-6d85-4cd7-bdb3-509764a12779" />
             <covered>
               <lifelineMoniker Id="54c94893-f967-43e8-8da9-b918e914c82b" LastKnownName="P1 : Player" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="4f565b28-0104-447b-89e6-b5ff977b2396" name="MessageOccurrenceSpecification15">
+            <elementDefinition Id="33503eea-37ba-40ab-af93-31ccc822569b" />
+            <covered>
+              <lifelineMoniker Id="ac8f28c4-8684-4207-b36d-51336999b426" LastKnownName="SB1 : SheetBuilder" />
             </covered>
           </messageOccurrenceSpecification>
           <behaviorExecutionSpecification Id="305d8d3a-8d6e-46ac-a334-4792eccc210f" name="BehaviorExecutionSpecification7">
@@ -416,7 +416,7 @@ cf sheetCreations.sequenceddiagram</body>
           <behaviorExecutionSpecification Id="0ed3b646-54de-4542-83d0-597982409b84" name="BehaviorExecutionSpecification12">
             <elementDefinition Id="4a8b186e-7a45-48a7-a40e-f13311994ead" />
             <coveredLifelines>
-              <lifelineMoniker Id="5c65d999-dc79-412d-a140-b496f92f3d9e" LastKnownName="S1 : Sheet" />
+              <lifelineMoniker Id="5c65d999-dc79-412d-a140-b496f92f3d9e" LastKnownName="S1 : SheetMusic" />
             </coveredLifelines>
             <finish>
               <executionOccurrenceSpecificationMoniker Id="a54b2617-1daa-4beb-8b69-92f5cdee8a41" LastKnownName="ExecutionOccurrenceSpecification24" />
@@ -437,13 +437,13 @@ cf sheetCreations.sequenceddiagram</body>
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="5c65d999-dc79-412d-a140-b496f92f3d9e" LastKnownName="S1 : Sheet" />
+              <lifelineMoniker Id="5c65d999-dc79-412d-a140-b496f92f3d9e" LastKnownName="S1 : SheetMusic" />
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification Id="21f4a2e9-09e5-4e64-a313-064383c29ed0" name="MessageOccurrenceSpecification29">
             <elementDefinition Id="2b63d466-b216-48b1-bc68-602c68e91d2e" />
             <covered>
-              <lifelineMoniker Id="5c65d999-dc79-412d-a140-b496f92f3d9e" LastKnownName="S1 : Sheet" />
+              <lifelineMoniker Id="5c65d999-dc79-412d-a140-b496f92f3d9e" LastKnownName="S1 : SheetMusic" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="49078f2e-789c-4bb3-be73-22a38cd4508b" name="MessageOccurrenceSpecification28">
@@ -455,7 +455,7 @@ cf sheetCreations.sequenceddiagram</body>
           <messageOccurrenceSpecification Id="6d3f69d5-6de8-4654-baab-bb10c1333a0c" name="MessageOccurrenceSpecification30">
             <elementDefinition Id="6e130d50-767e-4f85-9dc1-cdf0b8f315c3" />
             <covered>
-              <lifelineMoniker Id="5c65d999-dc79-412d-a140-b496f92f3d9e" LastKnownName="S1 : Sheet" />
+              <lifelineMoniker Id="5c65d999-dc79-412d-a140-b496f92f3d9e" LastKnownName="S1 : SheetMusic" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="50b0e44f-a2a3-4c4c-a916-0c7839cbb755" name="MessageOccurrenceSpecification31">
@@ -472,19 +472,19 @@ cf sheetCreations.sequenceddiagram</body>
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="5c65d999-dc79-412d-a140-b496f92f3d9e" LastKnownName="S1 : Sheet" />
+              <lifelineMoniker Id="5c65d999-dc79-412d-a140-b496f92f3d9e" LastKnownName="S1 : SheetMusic" />
             </covered>
           </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="5f15f15b-21ce-4111-97fb-cea35e8906d3" name="MessageOccurrenceSpecification27">
-            <elementDefinition Id="830eb62c-0207-4da7-8549-8e75e2c11898" />
-            <covered>
-              <lifelineMoniker Id="54c94893-f967-43e8-8da9-b918e914c82b" LastKnownName="P1 : Player" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="e05771ba-2e78-4cf3-a164-88d905ff1e74" name="MessageOccurrenceSpecification26">
             <elementDefinition Id="08403c9a-00ec-4776-bafa-a8f9b7782211" />
             <covered>
               <lifelineMoniker Id="ac8f28c4-8684-4207-b36d-51336999b426" LastKnownName="SB1 : SheetBuilder" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="5f15f15b-21ce-4111-97fb-cea35e8906d3" name="MessageOccurrenceSpecification27">
+            <elementDefinition Id="830eb62c-0207-4da7-8549-8e75e2c11898" />
+            <covered>
+              <lifelineMoniker Id="54c94893-f967-43e8-8da9-b918e914c82b" LastKnownName="P1 : Player" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="f269db81-d0e9-474f-b84f-6c89e9ea7bc5" name="ExecutionOccurrenceSpecification22">
@@ -510,6 +510,9 @@ cf sheetCreations.sequenceddiagram</body>
           </lifeline>
           <lifeline Id="1c3fd71e-91ef-4575-a072-da3878a3dd75" name="GM : GameMaster" isActor="false" lifelineDisplayName="GM : GameMaster">
             <elementDefinition Id="813b0a3c-5c1f-4049-8894-13288a4de811" />
+            <represents>
+              <propertyMoniker Id="545ca261-98fd-4d21-ab4d-20ec9dd55d64" />
+            </represents>
             <topLevelOccurrences>
               <executionOccurrenceSpecificationMoniker Id="950ce2c9-70a6-4938-8453-02171b12f96b" LastKnownName="ExecutionOccurrenceSpecification1" />
               <executionOccurrenceSpecificationMoniker Id="02348ec5-1f36-403d-b140-6940a9be0b53" LastKnownName="ExecutionOccurrenceSpecification2" />
@@ -528,7 +531,7 @@ cf sheetCreations.sequenceddiagram</body>
               <executionOccurrenceSpecificationMoniker Id="eb48f4d1-cbcb-4f68-835b-b7cd9d860fef" LastKnownName="ExecutionOccurrenceSpecification4" />
             </topLevelOccurrences>
           </lifeline>
-          <lifeline Id="54c94893-f967-43e8-8da9-b918e914c82b" name="P1 : Player" isActor="false" lifelineDisplayName="P1 : Player">
+          <lifeline Id="54c94893-f967-43e8-8da9-b918e914c82b" name="P1 : Player" isActor="true" lifelineDisplayName="P1 : Player">
             <elementDefinition Id="49bfbefc-6fcc-4d8f-b588-9907dcb2ab51" />
             <represents>
               <propertyMoniker Id="4620187a-fe18-48a6-b0b6-6d08d92ae40e" />
@@ -546,6 +549,9 @@ cf sheetCreations.sequenceddiagram</body>
           </lifeline>
           <lifeline Id="ac8f28c4-8684-4207-b36d-51336999b426" name="SB1 : SheetBuilder" isActor="false" lifelineDisplayName="SB1 : SheetBuilder">
             <elementDefinition Id="1a256ae0-b74d-4c8f-9338-4b9ab2c9c8a2" />
+            <represents>
+              <propertyMoniker Id="4f60395d-5d0f-426c-842f-72a6c06af2d6" />
+            </represents>
             <topLevelOccurrences>
               <executionOccurrenceSpecificationMoniker Id="d6d47ee3-4d7f-4bf3-998e-41e1b47930ee" LastKnownName="ExecutionOccurrenceSpecification7" />
               <executionOccurrenceSpecificationMoniker Id="01c4dc1f-3de5-4b3d-b45b-3505560cd470" LastKnownName="ExecutionOccurrenceSpecification8" />
@@ -557,8 +563,11 @@ cf sheetCreations.sequenceddiagram</body>
               <executionOccurrenceSpecificationMoniker Id="f269db81-d0e9-474f-b84f-6c89e9ea7bc5" LastKnownName="ExecutionOccurrenceSpecification22" />
             </topLevelOccurrences>
           </lifeline>
-          <lifeline Id="5c65d999-dc79-412d-a140-b496f92f3d9e" name="S1 : Sheet" isActor="false" lifelineDisplayName="S1 : Sheet">
+          <lifeline Id="5c65d999-dc79-412d-a140-b496f92f3d9e" name="S1 : SheetMusic" isActor="false" lifelineDisplayName="S1 : SheetMusic">
             <elementDefinition Id="dd44f853-6976-4568-a3f4-cb07ce73beef" />
+            <represents>
+              <propertyMoniker Id="3b862c31-db5b-4f38-864f-24982dc9eb57" />
+            </represents>
             <topLevelOccurrences>
               <executionOccurrenceSpecificationMoniker Id="fed7be00-5e5a-4869-ba32-9b05ffea7b6d" LastKnownName="ExecutionOccurrenceSpecification23" />
               <executionOccurrenceSpecificationMoniker Id="a54b2617-1daa-4beb-8b69-92f5cdee8a41" LastKnownName="ExecutionOccurrenceSpecification24" />
@@ -679,13 +688,31 @@ cf sheetCreations.sequenceddiagram</body>
           <property Id="c58a45ff-7b2e-4280-a1f4-cf5463037dad" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="a6ec7cc2-644b-424f-a4f3-91124b6ef2cc" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="2896c7e3-4f7b-4400-bdcb-f741d9d40af9" LastKnownName="Game" />
+              <referencedTypeMoniker Id="40aa4315-f53b-4b60-8859-62f1196c7f4a" LastKnownName="Game" />
             </type_NamedElement>
           </property>
           <property Id="4620187a-fe18-48a6-b0b6-6d08d92ae40e" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="6b5153fd-81fe-4a40-a783-b67ec0abeafb" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="42c88689-17c4-4ab3-8ed1-8a922ac7d3ce" LastKnownName="Player" />
+              <referencedTypeMoniker Id="34f7ccc2-2aec-4beb-871f-92a3f6eb1ad9" LastKnownName="Player" />
+            </type_NamedElement>
+          </property>
+          <property Id="545ca261-98fd-4d21-ab4d-20ec9dd55d64" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="102f46fc-f92e-4047-b63f-ada91a5ee5ed" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="decf47d2-4857-4154-9a74-2ca5643f39c9" LastKnownName="GameMaster" />
+            </type_NamedElement>
+          </property>
+          <property Id="4f60395d-5d0f-426c-842f-72a6c06af2d6" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="fedbc333-b9da-4843-b6da-1ffd21b5b843" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="aaffe97f-050c-4e5a-9faf-c8847385b435" LastKnownName="SheetBuilder" />
+            </type_NamedElement>
+          </property>
+          <property Id="3b862c31-db5b-4f38-864f-24982dc9eb57" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="35f46ac3-41b9-4ee9-97f3-199b7209a8f4" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="60caa5b0-d7f3-4977-a58e-bd3ae22c607a" LastKnownName="SheetMusic" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
@@ -790,6 +817,36 @@ cf sheetCreations.sequenceddiagram</body>
       <executionEvent Id="a8d5a415-1698-45e5-8c02-f402bcced227" name="ExecutionEvent">
         <elementDefinition Id="f2652b0b-fbff-46ef-9982-6fec9c4e6aac" />
       </executionEvent>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="40aa4315-f53b-4b60-8859-62f1196c7f4a" name="Game" isAbstract="false" isLeaf="false" cachedFullName="PnTModeling::Model::Game">
+        <elementDefinition Id="0214bb0f-9bad-4649-b454-527b42ff0c6b" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="decf47d2-4857-4154-9a74-2ca5643f39c9" name="GameMaster" isAbstract="false" isLeaf="false" cachedFullName="PnTModeling::Model::GameMaster">
+        <elementDefinition Id="53ce5291-1cbb-446f-ad01-bb56da4a7bf1" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="83955583-305b-4947-8e8a-645eb5ab7006" name="Player" isAbstract="false" isLeaf="false" cachedFullName="PnTModeling::Player">
+        <elementDefinition Id="c15f0d63-53cf-47cd-a4b0-bdc2616e928e" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="34f7ccc2-2aec-4beb-871f-92a3f6eb1ad9" name="Player" isAbstract="false" isLeaf="false" cachedFullName="PnTModeling::Model::Player">
+        <elementDefinition Id="bb734848-c650-48aa-8c21-ea4d6fa8380d" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="aaffe97f-050c-4e5a-9faf-c8847385b435" name="SheetBuilder" isAbstract="false" isLeaf="false" cachedFullName="PnTModeling::Model::SheetBuilder">
+        <elementDefinition Id="123fa27d-b5ec-4b76-a339-09f4052f5076" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="60caa5b0-d7f3-4977-a58e-bd3ae22c607a" name="SheetMusic" isAbstract="false" isLeaf="false" cachedFullName="PnTModeling::Model::SheetMusic">
+        <elementDefinition Id="db8681ec-f340-44d7-9c21-1903c4a19ca7" />
+      </referencedType>
     </packageHasNamedElement>
   </packagedElements>
   <package Id="9db17a71-10fc-4079-9c99-fcbed9bfffa0" name="PnTModeling">

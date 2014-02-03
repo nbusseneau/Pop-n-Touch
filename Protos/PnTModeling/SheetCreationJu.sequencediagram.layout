@@ -3,14 +3,14 @@
   <SequenceDesignerModelMoniker Id="354f69eb-ea15-4907-ba62-ac1551954c48" />
   <nestedChildShapes>
     <lifelineShape Id="4301c56a-770b-4cca-9673-7e7917a04966" absoluteBounds="1.025, 1, 0.15, 7" visible="true" visualStyleMode="Modified">
-      <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuildeur" />
+      <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuilder" />
       <relativeChildShapes>
-        <umlLifelineHeadShape Id="0773e3c7-7892-4063-8d35-69f0086d3223" absoluteBounds="0.57004162192344654, 0.6, 1.0599167561531067, 0.4" customColor="White" visualStyleMode="Modified">
-          <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuildeur" />
+        <umlLifelineHeadShape Id="0773e3c7-7892-4063-8d35-69f0086d3223" absoluteBounds="0.59999999999999987, 0.6, 1, 0.4" customColor="White" visualStyleMode="Modified">
+          <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuilder" />
           <relativeChildShapes />
         </umlLifelineHeadShape>
         <lifelineHoverShape Id="1aa56454-e61b-48d9-b79a-867181b25180" absoluteBounds="1.025, 1, 0, 7">
-          <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuildeur" />
+          <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuilder" />
         </lifelineHoverShape>
         <umlExecutionSpecificationShape Id="c26786cb-6e78-4213-9e27-231553cc472f" absoluteBounds="1.025, 1.55, 0.15, 0.55" customColor="184, 204, 215" visualStyleMode="Modified">
           <behaviorExecutionSpecificationMoniker Id="619dc4a8-b6d0-4b3d-9d98-b771bca8fce4" LastKnownName="BehaviorExecutionSpecification1" />

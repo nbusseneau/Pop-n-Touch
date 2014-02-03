@@ -143,14 +143,14 @@
       </nodes>
     </asyncMessageConnector>
     <lifelineShape Id="411b4e47-4eec-42f6-a000-254e6df952ef" absoluteBounds="7.9479168256123849, 1, 0.15, 7" visible="true" visualStyleMode="Modified">
-      <lifelineMoniker Id="5c65d999-dc79-412d-a140-b496f92f3d9e" LastKnownName="S1 : Sheet" />
+      <lifelineMoniker Id="5c65d999-dc79-412d-a140-b496f92f3d9e" LastKnownName="S1 : SheetMusic" />
       <relativeChildShapes>
-        <umlLifelineHeadShape Id="e5090f81-ecac-4b38-948a-5e4a21c601d5" absoluteBounds="7.5229168256123851, 0.6, 1, 0.4" customColor="White" visualStyleMode="Modified">
-          <lifelineMoniker Id="5c65d999-dc79-412d-a140-b496f92f3d9e" LastKnownName="S1 : Sheet" />
+        <umlLifelineHeadShape Id="e5090f81-ecac-4b38-948a-5e4a21c601d5" absoluteBounds="7.4432080002625769, 0.6, 1.1594176506996154, 0.4" customColor="White" visualStyleMode="Modified">
+          <lifelineMoniker Id="5c65d999-dc79-412d-a140-b496f92f3d9e" LastKnownName="S1 : SheetMusic" />
           <relativeChildShapes />
         </umlLifelineHeadShape>
         <lifelineHoverShape Id="ea5bafff-4983-4ccd-b6f9-91f80fffba99" absoluteBounds="7.9479168256123849, 1, 0, 7">
-          <lifelineMoniker Id="5c65d999-dc79-412d-a140-b496f92f3d9e" LastKnownName="S1 : Sheet" />
+          <lifelineMoniker Id="5c65d999-dc79-412d-a140-b496f92f3d9e" LastKnownName="S1 : SheetMusic" />
         </lifelineHoverShape>
         <umlExecutionSpecificationShape Id="1329ff69-3e78-4ebc-818c-036d54843a31" absoluteBounds="7.9479168256123849, 6.6666666666666652, 0.15, 0.55" customColor="184, 204, 215" visualStyleMode="Modified">
           <behaviorExecutionSpecificationMoniker Id="0ed3b646-54de-4542-83d0-597982409b84" LastKnownName="BehaviorExecutionSpecification12" />

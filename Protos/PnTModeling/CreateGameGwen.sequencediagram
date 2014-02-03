@@ -1484,7 +1484,7 @@
           <property Id="d50a6593-9d0b-4bb2-9d4b-ecb62e912ecf" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="3ebab5f3-a757-4914-9af0-ea57e4c03f42" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="aeb26928-a95c-48a3-9247-d003662b3c3d" LastKnownName="Player" />
+              <referencedTypeMoniker Id="a6d4a8ea-f8e6-4d05-9a55-49045fac8995" LastKnownName="Player" />
             </type_NamedElement>
           </property>
           <property Id="81599bd5-aa85-41ef-bccc-c83dea91d3ff" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -1746,6 +1746,11 @@
       <executionEvent Id="d4c432d2-ec70-4d9f-ac15-f7d9d42eac8d" name="ExecutionEvent">
         <elementDefinition Id="d43e4dc9-f255-4536-a935-e55adc2b78f4" />
       </executionEvent>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="a6d4a8ea-f8e6-4d05-9a55-49045fac8995" name="Player" isAbstract="false" isLeaf="false" cachedFullName="PnTModeling::Player">
+        <elementDefinition Id="c15f0d63-53cf-47cd-a4b0-bdc2616e928e" />
+      </referencedType>
     </packageHasNamedElement>
   </packagedElements>
   <package Id="7448916d-89d0-469a-ae6a-592a56c5e133" name="PnTModeling">

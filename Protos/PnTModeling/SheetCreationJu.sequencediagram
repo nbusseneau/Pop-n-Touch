@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="354f69eb-ea15-4907-ba62-ac1551954c48" name="SheetCreationJu" linkedPackageId="ce5b4332-6044-43de-b348-4c757ce178c7" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm12="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="354f69eb-ea15-4907-ba62-ac1551954c48" name="SheetCreationJu" linkedPackageId="ce5b4332-6044-43de-b348-4c757ce178c7" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
   <packagedElements>
     <packageHasNamedElement>
       <interaction Id="f8585684-1350-4d91-bb09-f9811068884f" name="SheetCreationJu" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
@@ -14,13 +14,13 @@
           <messageOccurrenceSpecification Id="654f4a7d-d7f0-433e-876a-d835fc45739a" name="MessageOccurrenceSpecification1">
             <elementDefinition Id="8a776287-ce80-476f-b45a-16ac27e8a317" />
             <covered>
-              <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuildeur" />
+              <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuilder" />
             </covered>
           </messageOccurrenceSpecification>
           <behaviorExecutionSpecification Id="619dc4a8-b6d0-4b3d-9d98-b771bca8fce4" name="BehaviorExecutionSpecification1">
             <elementDefinition Id="f2280974-30e6-479c-90b8-94a53f042025" />
             <coveredLifelines>
-              <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuildeur" />
+              <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuilder" />
             </coveredLifelines>
             <finish>
               <executionOccurrenceSpecificationMoniker Id="0a9ecebe-656f-4ebb-b107-afab9dcbbd30" LastKnownName="ExecutionOccurrenceSpecification2" />
@@ -40,13 +40,13 @@
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuildeur" />
+              <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuilder" />
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification Id="84f58e92-cdb4-47e1-bff3-fdd626a8683f" name="MessageOccurrenceSpecification2">
             <elementDefinition Id="d52a8326-3690-4787-aef1-96c75d3a5a4f" />
             <covered>
-              <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuildeur" />
+              <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuilder" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="0a9ecebe-656f-4ebb-b107-afab9dcbbd30" name="ExecutionOccurrenceSpecification2">
@@ -57,22 +57,22 @@
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
-              <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuildeur" />
+              <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuilder" />
             </covered>
           </executionOccurrenceSpecification>
           <combinedFragment Id="bed29200-6e69-4794-aabc-08ebe6cfd7e3" name="CombinedFragment1" interactionOperator="Alt">
             <elementDefinition Id="bd8e39f1-9ca0-4b0a-a00d-faca45be163c" />
             <coveredLifelines>
+              <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuilder" />
               <lifelineMoniker Id="ef7a8fc2-bf14-423d-8fdf-26a5bbf5327c" LastKnownName="Whole" />
-              <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuildeur" />
               <lifelineMoniker Id="17f0ab11-2eb5-482c-8ad2-8366afd943a1" LastKnownName="Half" />
             </coveredLifelines>
             <operands>
               <interactionOperand Id="aa127791-0348-4cbe-8b2a-415a9d92b416" name="InteractionOperand1">
                 <elementDefinition Id="204a8cc2-0abd-4998-acf9-e5f73e081903" />
                 <coveredLifelines>
+                  <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuilder" />
                   <lifelineMoniker Id="ef7a8fc2-bf14-423d-8fdf-26a5bbf5327c" LastKnownName="Whole" />
-                  <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuildeur" />
                   <lifelineMoniker Id="17f0ab11-2eb5-482c-8ad2-8366afd943a1" LastKnownName="Half" />
                 </coveredLifelines>
                 <guard>
@@ -92,23 +92,23 @@
               <interactionOperand Id="6726441d-f839-4a8e-8815-5a091e5a66dd" name="InteractionOperand2">
                 <elementDefinition Id="93793e29-e7d9-447c-832d-104af2a7127b" />
                 <coveredLifelines>
+                  <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuilder" />
                   <lifelineMoniker Id="ef7a8fc2-bf14-423d-8fdf-26a5bbf5327c" LastKnownName="Whole" />
-                  <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuildeur" />
                   <lifelineMoniker Id="17f0ab11-2eb5-482c-8ad2-8366afd943a1" LastKnownName="Half" />
                 </coveredLifelines>
                 <fragments>
                   <combinedFragment Id="44e0f281-f717-4444-a2d1-2db0526b40b0" name="CombinedFragment1" interactionOperator="Alt">
                     <elementDefinition Id="32f9e23e-0332-45d4-bc4b-df9a13745ba5" />
                     <coveredLifelines>
+                      <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuilder" />
                       <lifelineMoniker Id="17f0ab11-2eb5-482c-8ad2-8366afd943a1" LastKnownName="Half" />
-                      <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuildeur" />
                     </coveredLifelines>
                     <operands>
                       <interactionOperand Id="08ca8aa2-8694-4a5b-804a-b94148d4e194" name="InteractionOperand1">
                         <elementDefinition Id="5f6138ef-c208-4831-999a-223c4555cc11" />
                         <coveredLifelines>
+                          <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuilder" />
                           <lifelineMoniker Id="17f0ab11-2eb5-482c-8ad2-8366afd943a1" LastKnownName="Half" />
-                          <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuildeur" />
                         </coveredLifelines>
                         <guard>
                           <interactionConstraint Id="f70c2d66-bfc6-4761-9798-bb427e6cecbe" guardText="[actualNote = &quot;Half&quot;]">
@@ -125,8 +125,8 @@
                       <interactionOperand Id="9c7f987b-548c-43e5-a3fe-b4d60754e0f0" name="InteractionOperand2">
                         <elementDefinition Id="942b621e-89fb-44b6-a622-16f3083709e7" />
                         <coveredLifelines>
+                          <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuilder" />
                           <lifelineMoniker Id="17f0ab11-2eb5-482c-8ad2-8366afd943a1" LastKnownName="Half" />
-                          <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuildeur" />
                         </coveredLifelines>
                         <guard>
                           <interactionConstraint Id="3539e113-38fd-43b6-9bfa-74d1a4d48c3e" guardText="etc.">
@@ -174,7 +174,7 @@
           <operandOccurrenceSpecification Id="013fe419-5cc0-441c-8603-f5b9e42144a2" name="OperandOccurrenceSpecification3">
             <elementDefinition Id="310a5f10-7ccf-48ca-94f7-acd1d51e4490" />
             <covered>
-              <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuildeur" />
+              <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuilder" />
             </covered>
           </operandOccurrenceSpecification>
           <behaviorExecutionSpecification Id="c32a7c02-e042-43d7-bf1f-13fd29323a6e" name="BehaviorExecutionSpecification2">
@@ -213,13 +213,13 @@
           <messageOccurrenceSpecification Id="9d49c61d-8e18-4370-83dc-5a18c719461a" name="MessageOccurrenceSpecification3">
             <elementDefinition Id="9da62ab3-a0b4-48e3-b2bf-e09bd6a9e856" />
             <covered>
-              <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuildeur" />
+              <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuilder" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="a981d3e6-8b41-48fc-b3d9-4a9e34e9f16c" name="MessageOccurrenceSpecification6">
             <elementDefinition Id="18066a4e-1969-430c-8690-c4025aaedcb2" />
             <covered>
-              <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuildeur" />
+              <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuilder" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="4d0a811d-f24f-4b0f-af19-0d6336341300" name="MessageOccurrenceSpecification5">
@@ -254,7 +254,13 @@
           <operandOccurrenceSpecification Id="5038d2eb-2c68-4167-89fe-50a69894547a" name="OperandOccurrenceSpecification4">
             <elementDefinition Id="1a0f26dd-cc3f-438b-a8a2-d58ca1111ee4" />
             <covered>
-              <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuildeur" />
+              <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuilder" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="27a26120-c0ab-47f5-b157-7b2306fe8d31" name="OperandOccurrenceSpecification5">
+            <elementDefinition Id="00062c23-9efb-4630-9af7-213a45361e2a" />
+            <covered>
+              <lifelineMoniker Id="ef7a8fc2-bf14-423d-8fdf-26a5bbf5327c" LastKnownName="Whole" />
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification Id="510c612e-78ab-4b7f-aaa9-b53fca3b2de6" name="OperandOccurrenceSpecification11">
@@ -266,13 +272,7 @@
           <operandOccurrenceSpecification Id="8e64e065-30e4-432b-a9b3-819a3579c4ca" name="OperandOccurrenceSpecification7">
             <elementDefinition Id="7fe3620c-bddf-48df-9e87-8c3157c7b1d5" />
             <covered>
-              <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuildeur" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification Id="27a26120-c0ab-47f5-b157-7b2306fe8d31" name="OperandOccurrenceSpecification5">
-            <elementDefinition Id="00062c23-9efb-4630-9af7-213a45361e2a" />
-            <covered>
-              <lifelineMoniker Id="ef7a8fc2-bf14-423d-8fdf-26a5bbf5327c" LastKnownName="Whole" />
+              <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuilder" />
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification Id="bf76cbb5-f501-4c13-bbb6-eb7c527aa1cd" name="OperandOccurrenceSpecification13">
@@ -284,7 +284,7 @@
           <operandOccurrenceSpecification Id="81d7d662-146f-400f-8a16-20d9fef2181d" name="OperandOccurrenceSpecification15">
             <elementDefinition Id="c69286fb-eee6-4bbe-85e1-3867bd1eb356" />
             <covered>
-              <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuildeur" />
+              <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuilder" />
             </covered>
           </operandOccurrenceSpecification>
           <behaviorExecutionSpecification Id="7dfcec0f-8d3b-46d0-9307-7278a67a1fd1" name="BehaviorExecutionSpecification3">
@@ -317,7 +317,7 @@
           <messageOccurrenceSpecification Id="1cab0021-4026-4453-a5a8-4df6c7365933" name="MessageOccurrenceSpecification7">
             <elementDefinition Id="7eca35b7-9f5e-47df-a184-a324d41b8fce" />
             <covered>
-              <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuildeur" />
+              <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuilder" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="4f45f5b0-cca0-4e03-a9fb-ab8a8ef5fb2c" name="MessageOccurrenceSpecification8">
@@ -335,7 +335,7 @@
           <messageOccurrenceSpecification Id="ba32f367-1f7a-4b9a-a85d-b7757b3a5566" name="MessageOccurrenceSpecification10">
             <elementDefinition Id="7ea5ddc0-72e9-44b1-bc3f-0054d1bd62bb" />
             <covered>
-              <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuildeur" />
+              <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuilder" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="593c627d-7e5b-48cf-9488-5f08103eeb86" name="ExecutionOccurrenceSpecification6">
@@ -358,13 +358,13 @@
           <operandOccurrenceSpecification Id="495fedfb-c948-4568-95df-908b4f55f4af" name="OperandOccurrenceSpecification16">
             <elementDefinition Id="cbb86843-9f66-4d97-b9f4-70e9c5cda3be" />
             <covered>
-              <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuildeur" />
+              <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuilder" />
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification Id="dafae451-91ed-4508-8017-3866cf66b254" name="OperandOccurrenceSpecification19">
             <elementDefinition Id="99526fe7-889e-47f4-a021-3b9ca14693b3" />
             <covered>
-              <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuildeur" />
+              <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuilder" />
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification Id="144bdee7-eeef-4625-b68d-ba46d012c3c1" name="OperandOccurrenceSpecification17">
@@ -382,13 +382,7 @@
           <operandOccurrenceSpecification Id="fd96e8d8-ff07-4936-981a-a023e4de55f2" name="OperandOccurrenceSpecification20">
             <elementDefinition Id="7c21f4f3-4df8-4f0f-bca8-b192eac96b5b" />
             <covered>
-              <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuildeur" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification Id="1d594d87-a241-4561-9b96-3ba598195e44" name="OperandOccurrenceSpecification12">
-            <elementDefinition Id="0fbd5002-cd28-4157-bee0-a8a0fd5388d0" />
-            <covered>
-              <lifelineMoniker Id="17f0ab11-2eb5-482c-8ad2-8366afd943a1" LastKnownName="Half" />
+              <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuilder" />
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification Id="db619fbc-d621-4c90-bc02-a103d0041c87" name="OperandOccurrenceSpecification6">
@@ -397,16 +391,25 @@
               <lifelineMoniker Id="ef7a8fc2-bf14-423d-8fdf-26a5bbf5327c" LastKnownName="Whole" />
             </covered>
           </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="1d594d87-a241-4561-9b96-3ba598195e44" name="OperandOccurrenceSpecification12">
+            <elementDefinition Id="0fbd5002-cd28-4157-bee0-a8a0fd5388d0" />
+            <covered>
+              <lifelineMoniker Id="17f0ab11-2eb5-482c-8ad2-8366afd943a1" LastKnownName="Half" />
+            </covered>
+          </operandOccurrenceSpecification>
           <operandOccurrenceSpecification Id="8c59764e-c085-416d-9d6e-fd0c46255e3a" name="OperandOccurrenceSpecification8">
             <elementDefinition Id="cd116fa0-8371-4c11-b8a6-cbc06843e57d" />
             <covered>
-              <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuildeur" />
+              <lifelineMoniker Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" LastKnownName="SheetBuilder" />
             </covered>
           </operandOccurrenceSpecification>
         </fragments>
         <lifelines>
-          <lifeline Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" name="SheetBuildeur" isActor="false" lifelineDisplayName="SheetBuildeur">
+          <lifeline Id="f9c9420d-e2fc-4e89-b5ae-09cc7ba90860" name="SheetBuilder" isActor="false" lifelineDisplayName="SheetBuilder">
             <elementDefinition Id="de26d987-b41a-4314-88ba-dfad4082e31b" />
+            <represents>
+              <propertyMoniker Id="758c3b72-79e6-468e-821f-c0596933bcd6" />
+            </represents>
             <topLevelOccurrences>
               <messageOccurrenceSpecificationMoniker Id="654f4a7d-d7f0-433e-876a-d835fc45739a" LastKnownName="MessageOccurrenceSpecification1" />
               <executionOccurrenceSpecificationMoniker Id="199504d3-61d9-4722-8341-a885792155b0" LastKnownName="ExecutionOccurrenceSpecification1" />
@@ -427,6 +430,9 @@
           </lifeline>
           <lifeline Id="ef7a8fc2-bf14-423d-8fdf-26a5bbf5327c" name="Whole" isActor="false" lifelineDisplayName="Whole">
             <elementDefinition Id="aefaf93e-ba5e-43b1-be48-28740280c79d" />
+            <represents>
+              <propertyMoniker Id="ad2e6598-c417-4aa4-a8ce-3bd8405e1ce7" />
+            </represents>
             <topLevelOccurrences>
               <operandOccurrenceSpecificationMoniker Id="c2df05e7-635a-4ffb-9fc7-168b7d48e6d3" LastKnownName="OperandOccurrenceSpecification1" />
               <executionOccurrenceSpecificationMoniker Id="505f269b-25b9-45e9-b1a2-c9f5fbc63e3a" LastKnownName="ExecutionOccurrenceSpecification3" />
@@ -438,6 +444,9 @@
           </lifeline>
           <lifeline Id="17f0ab11-2eb5-482c-8ad2-8366afd943a1" name="Half" isActor="false" lifelineDisplayName="Half">
             <elementDefinition Id="1e89b53a-19cd-4e32-8a2d-07c6a1de1796" />
+            <represents>
+              <propertyMoniker Id="e99d18c9-3352-48f9-bd7c-b380a7008fee" />
+            </represents>
             <topLevelOccurrences>
               <operandOccurrenceSpecificationMoniker Id="d56c0130-f0b2-4b08-b50b-1ac713c961d7" LastKnownName="OperandOccurrenceSpecification9" />
               <operandOccurrenceSpecificationMoniker Id="29cf5841-57da-4d92-9f67-02b2d4e3436f" LastKnownName="OperandOccurrenceSpecification10" />
@@ -499,6 +508,26 @@
             </receiveEvent>
           </message>
         </messages>
+        <ownedAttributesInternal>
+          <property Id="758c3b72-79e6-468e-821f-c0596933bcd6" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="12ff6212-0aeb-47a9-b681-690cabcd528c" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="c539391a-ef92-4e67-9393-30badbdcd07a" LastKnownName="SheetBuilder" />
+            </type_NamedElement>
+          </property>
+          <property Id="ad2e6598-c417-4aa4-a8ce-3bd8405e1ce7" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="6f288aad-0db0-4d5d-8000-83448f8cd74a" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="ed7a1b83-b990-455f-9903-fe5a80ddac5a" LastKnownName="Whole" />
+            </type_NamedElement>
+          </property>
+          <property Id="e99d18c9-3352-48f9-bd7c-b380a7008fee" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="c84e141c-49cc-4b77-a23e-b3f212f8129b" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="77dc7a8d-4fe8-47af-be34-eb201a50f09e" LastKnownName="Half" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
       </interaction>
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -530,6 +559,21 @@
       <executionEvent Id="25a3cbef-e05e-467c-b603-468ac1408f9b" name="ExecutionEvent">
         <elementDefinition Id="b19ab6b7-e752-46d5-a424-0d4023dacad7" />
       </executionEvent>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="c539391a-ef92-4e67-9393-30badbdcd07a" name="SheetBuilder" isAbstract="false" isLeaf="false" cachedFullName="PnTModeling::Model::SheetBuilder">
+        <elementDefinition Id="123fa27d-b5ec-4b76-a339-09f4052f5076" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="ed7a1b83-b990-455f-9903-fe5a80ddac5a" name="Whole" isAbstract="false" isLeaf="false" cachedFullName="PnTModeling::Model::Whole">
+        <elementDefinition Id="c15ac099-2f3b-4bf3-a4c2-fceb851965b5" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="77dc7a8d-4fe8-47af-be34-eb201a50f09e" name="Half" isAbstract="false" isLeaf="false" cachedFullName="PnTModeling::Model::Half">
+        <elementDefinition Id="d0e18e6a-f9fe-4ef6-bc68-ad1a58e7af64" />
+      </referencedType>
     </packageHasNamedElement>
   </packagedElements>
   <package Id="ce5b4332-6044-43de-b348-4c757ce178c7" name="PnTModeling">
