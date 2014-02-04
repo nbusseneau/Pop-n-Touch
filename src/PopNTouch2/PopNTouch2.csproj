@@ -33,26 +33,26 @@
   </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="Model.cd" />
+    <None Include="Class Diagrams\Model.cd" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Accidental.cs" />
-    <Compile Include="AudioController.cs" />
-    <Compile Include="BonusAutoPilot.cs" />
-    <Compile Include="BonusInkBubble.cs" />
-    <Compile Include="Difficulty.cs" />
-    <Compile Include="Game.cs" />
-    <Compile Include="GameMaster.cs" />
-    <Compile Include="Height.cs" />
-    <Compile Include="IBonus.cs" />
-    <Compile Include="INote.cs" />
-    <Compile Include="Instrument.cs" />
-    <Compile Include="Length.cs" />
-    <Compile Include="NoteFactory.cs" />
-    <Compile Include="Player.cs" />
-    <Compile Include="SheetBuilder.cs" />
-    <Compile Include="SheetMusic.cs" />
-    <Compile Include="Song.cs" />
+    <Compile Include="Model\Accidental.cs" />
+    <Compile Include="Model\AudioController.cs" />
+    <Compile Include="Model\BonusAutoPilot.cs" />
+    <Compile Include="Model\BonusInkBubble.cs" />
+    <Compile Include="Model\Difficulty.cs" />
+    <Compile Include="Model\Game.cs" />
+    <Compile Include="Model\GameMaster.cs" />
+    <Compile Include="Model\Height.cs" />
+    <Compile Include="Model\IBonus.cs" />
+    <Compile Include="Model\INote.cs" />
+    <Compile Include="Model\Instrument.cs" />
+    <Compile Include="Model\Length.cs" />
+    <Compile Include="Model\NoteFactory.cs" />
+    <Compile Include="Model\Player.cs" />
+    <Compile Include="Model\SheetBuilder.cs" />
+    <Compile Include="Model\SheetMusic.cs" />
+    <Compile Include="Model\Song.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
