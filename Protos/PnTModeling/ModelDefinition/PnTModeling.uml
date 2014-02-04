@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="ba7d1a55-5166-45ac-8041-c152888f5086"
   name="PnTModeling" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -1543,22 +1543,22 @@ cf sheetCreations.sequenceddiagram</body>
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="aada92cc-6d85-4cd7-bdb3-509764a12779"
-            name="MessageOccurrenceSpecification14">
-            <covered>
-              <lifelineMoniker
-                Id="49bfbefc-6fcc-4d8f-b588-9907dcb2ab51"
-                LastKnownName="P1 : Player"
-                LastKnownLocation="PnTModeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="33503eea-37ba-40ab-af93-31ccc822569b"
             name="MessageOccurrenceSpecification15">
             <covered>
               <lifelineMoniker
                 Id="1a256ae0-b74d-4c8f-9338-4b9ab2c9c8a2"
                 LastKnownName="SB1 : SheetBuilder"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="aada92cc-6d85-4cd7-bdb3-509764a12779"
+            name="MessageOccurrenceSpecification14">
+            <covered>
+              <lifelineMoniker
+                Id="49bfbefc-6fcc-4d8f-b588-9907dcb2ab51"
+                LastKnownName="P1 : Player"
                 LastKnownLocation="PnTModeling.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -1935,22 +1935,22 @@ cf sheetCreations.sequenceddiagram</body>
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="08403c9a-00ec-4776-bafa-a8f9b7782211"
-            name="MessageOccurrenceSpecification26">
-            <covered>
-              <lifelineMoniker
-                Id="1a256ae0-b74d-4c8f-9338-4b9ab2c9c8a2"
-                LastKnownName="SB1 : SheetBuilder"
-                LastKnownLocation="PnTModeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="830eb62c-0207-4da7-8549-8e75e2c11898"
             name="MessageOccurrenceSpecification27">
             <covered>
               <lifelineMoniker
                 Id="49bfbefc-6fcc-4d8f-b588-9907dcb2ab51"
                 LastKnownName="P1 : Player"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="08403c9a-00ec-4776-bafa-a8f9b7782211"
+            name="MessageOccurrenceSpecification26">
+            <covered>
+              <lifelineMoniker
+                Id="1a256ae0-b74d-4c8f-9338-4b9ab2c9c8a2"
+                LastKnownName="SB1 : SheetBuilder"
                 LastKnownLocation="PnTModeling.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -3044,6 +3044,16 @@ cf sheetCreations.sequenceddiagram</body>
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
+            Id="7fe3620c-bddf-48df-9e87-8c3157c7b1d5"
+            name="OperandOccurrenceSpecification7">
+            <covered>
+              <lifelineMoniker
+                Id="de26d987-b41a-4314-88ba-dfad4082e31b"
+                LastKnownName="SheetBuilder"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
             Id="00062c23-9efb-4630-9af7-213a45361e2a"
             name="OperandOccurrenceSpecification5">
             <covered>
@@ -3060,16 +3070,6 @@ cf sheetCreations.sequenceddiagram</body>
               <lifelineMoniker
                 Id="1e89b53a-19cd-4e32-8a2d-07c6a1de1796"
                 LastKnownName="Half"
-                LastKnownLocation="PnTModeling.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="7fe3620c-bddf-48df-9e87-8c3157c7b1d5"
-            name="OperandOccurrenceSpecification7">
-            <covered>
-              <lifelineMoniker
-                Id="de26d987-b41a-4314-88ba-dfad4082e31b"
-                LastKnownName="SheetBuilder"
                 LastKnownLocation="PnTModeling.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -3262,22 +3262,22 @@ cf sheetCreations.sequenceddiagram</body>
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="8a986a9a-e00a-4316-84c2-4923f46ef2b3"
-            name="OperandOccurrenceSpecification6">
-            <covered>
-              <lifelineMoniker
-                Id="aefaf93e-ba5e-43b1-be48-28740280c79d"
-                LastKnownName="Whole"
-                LastKnownLocation="PnTModeling.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
             Id="0fbd5002-cd28-4157-bee0-a8a0fd5388d0"
             name="OperandOccurrenceSpecification12">
             <covered>
               <lifelineMoniker
                 Id="1e89b53a-19cd-4e32-8a2d-07c6a1de1796"
                 LastKnownName="Half"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="8a986a9a-e00a-4316-84c2-4923f46ef2b3"
+            name="OperandOccurrenceSpecification6">
+            <covered>
+              <lifelineMoniker
+                Id="aefaf93e-ba5e-43b1-be48-28740280c79d"
+                LastKnownName="Whole"
                 LastKnownLocation="PnTModeling.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -3581,10 +3581,10 @@ cf sheetCreations.sequenceddiagram</body>
             aggregation="None"
             isComposite="false">
             <type_NamedElement>
-              <classMoniker
-                Id="c15ac099-2f3b-4bf3-a4c2-fceb851965b5"
+              <undefinedTypeMoniker
+                Id="fcae4f2b-70ab-4f73-ba14-76827202d066"
                 LastKnownName="Whole"
-                LastKnownLocation="Package_1204.uml" />
+                LastKnownLocation="PnTModeling.uml" />
             </type_NamedElement>
           </property>
           <property
@@ -3597,10 +3597,10 @@ cf sheetCreations.sequenceddiagram</body>
             aggregation="None"
             isComposite="false">
             <type_NamedElement>
-              <classMoniker
-                Id="d0e18e6a-f9fe-4ef6-bc68-ad1a58e7af64"
+              <undefinedTypeMoniker
+                Id="c301d30a-5400-4995-836e-51bc38a8f355"
                 LastKnownName="Half"
-                LastKnownLocation="Package_1204.uml" />
+                LastKnownLocation="PnTModeling.uml" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
@@ -7316,16 +7316,6 @@ cf sheetCreations.sequenceddiagram</body>
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="417d9fb7-18a1-4ddf-961b-647a029d99f0"
-            name="OperandOccurrenceSpecification21">
-            <covered>
-              <lifelineMoniker
-                Id="f261fc60-0bfd-425f-86d2-f56139ad0157"
-                LastKnownName="P1 : Player"
-                LastKnownLocation="PnTModeling.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
             Id="e33ce037-9c6c-46ce-ba18-b676d7d9e5ea"
             name="OperandOccurrenceSpecification29">
             <covered>
@@ -7342,6 +7332,16 @@ cf sheetCreations.sequenceddiagram</body>
               <lifelineMoniker
                 Id="8b17cbee-40b6-44ce-8508-68826598ab6c"
                 LastKnownName="Herpina : Player"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="417d9fb7-18a1-4ddf-961b-647a029d99f0"
+            name="OperandOccurrenceSpecification21">
+            <covered>
+              <lifelineMoniker
+                Id="f261fc60-0bfd-425f-86d2-f56139ad0157"
+                LastKnownName="P1 : Player"
                 LastKnownLocation="PnTModeling.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -7460,6 +7460,16 @@ cf sheetCreations.sequenceddiagram</body>
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
+            Id="361ccd17-f1dd-4862-ac84-8d6f90e84b0e"
+            name="OperandOccurrenceSpecification27">
+            <covered>
+              <lifelineMoniker
+                Id="8b17cbee-40b6-44ce-8508-68826598ab6c"
+                LastKnownName="Herpina : Player"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
             Id="de9c82e3-dd1d-4abe-915d-1365c559cec3"
             name="OperandOccurrenceSpecification31">
             <covered>
@@ -7476,16 +7486,6 @@ cf sheetCreations.sequenceddiagram</body>
               <lifelineMoniker
                 Id="f261fc60-0bfd-425f-86d2-f56139ad0157"
                 LastKnownName="P1 : Player"
-                LastKnownLocation="PnTModeling.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="361ccd17-f1dd-4862-ac84-8d6f90e84b0e"
-            name="OperandOccurrenceSpecification27">
-            <covered>
-              <lifelineMoniker
-                Id="8b17cbee-40b6-44ce-8508-68826598ab6c"
-                LastKnownName="Herpina : Player"
                 LastKnownLocation="PnTModeling.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -7574,22 +7574,22 @@ cf sheetCreations.sequenceddiagram</body>
             </covered>
           </executionOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="0da927f3-77ee-423a-b259-b8b051faf6d6"
-            name="OperandOccurrenceSpecification26">
-            <covered>
-              <lifelineMoniker
-                Id="f261fc60-0bfd-425f-86d2-f56139ad0157"
-                LastKnownName="P1 : Player"
-                LastKnownLocation="PnTModeling.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
             Id="3a627cb3-6c11-4b04-aedd-72d5192a82b0"
             name="OperandOccurrenceSpecification32">
             <covered>
               <lifelineMoniker
                 Id="024129f1-7292-491e-a6ec-0ead294692a7"
                 LastKnownName="GM : GameMaster"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="0da927f3-77ee-423a-b259-b8b051faf6d6"
+            name="OperandOccurrenceSpecification26">
+            <covered>
+              <lifelineMoniker
+                Id="f261fc60-0bfd-425f-86d2-f56139ad0157"
+                LastKnownName="P1 : Player"
                 LastKnownLocation="PnTModeling.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -7604,22 +7604,22 @@ cf sheetCreations.sequenceddiagram</body>
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="71643fc1-c8d1-49db-99af-d02eee02370a"
-            name="OperandOccurrenceSpecification10">
-            <covered>
-              <lifelineMoniker
-                Id="8b17cbee-40b6-44ce-8508-68826598ab6c"
-                LastKnownName="Herpina : Player"
-                LastKnownLocation="PnTModeling.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
             Id="71951468-b3b9-4bb6-a3bb-59284673417c"
             name="OperandOccurrenceSpecification16">
             <covered>
               <lifelineMoniker
                 Id="f261fc60-0bfd-425f-86d2-f56139ad0157"
                 LastKnownName="P1 : Player"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="71643fc1-c8d1-49db-99af-d02eee02370a"
+            name="OperandOccurrenceSpecification10">
+            <covered>
+              <lifelineMoniker
+                Id="8b17cbee-40b6-44ce-8508-68826598ab6c"
+                LastKnownName="Herpina : Player"
                 LastKnownLocation="PnTModeling.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -8172,22 +8172,22 @@ cf sheetCreations.sequenceddiagram</body>
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="e6b26791-a6cf-4a42-add8-fdae161295b4"
-            name="MessageOccurrenceSpecification3">
-            <covered>
-              <lifelineMoniker
-                Id="1ab383ba-6baa-438e-bb71-4baa479d9291"
-                LastKnownName="Player"
-                LastKnownLocation="PnTModeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="88e8e35d-d2d7-4806-b140-c2692804ef06"
             name="MessageOccurrenceSpecification4">
             <covered>
               <lifelineMoniker
                 Id="6f347f50-6438-4588-bf7d-5d476d841632"
                 LastKnownName="sheetmusic1 : SheetMusic"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="e6b26791-a6cf-4a42-add8-fdae161295b4"
+            name="MessageOccurrenceSpecification3">
+            <covered>
+              <lifelineMoniker
+                Id="1ab383ba-6baa-438e-bb71-4baa479d9291"
+                LastKnownName="Player"
                 LastKnownLocation="PnTModeling.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -8391,16 +8391,6 @@ cf sheetCreations.sequenceddiagram</body>
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="7f195e98-b888-48b7-8fdf-7c30fa21c3d1"
-            name="MessageOccurrenceSpecification9">
-            <covered>
-              <lifelineMoniker
-                Id="6f347f50-6438-4588-bf7d-5d476d841632"
-                LastKnownName="sheetmusic1 : SheetMusic"
-                LastKnownLocation="PnTModeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="82b828ff-aa2e-4ff7-957f-047eead2a76c"
             name="MessageOccurrenceSpecification10">
             <covered>
@@ -8411,12 +8401,12 @@ cf sheetCreations.sequenceddiagram</body>
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="079140c8-7e99-45c8-9b6b-f9af843c30ff"
-            name="MessageOccurrenceSpecification11">
+            Id="7f195e98-b888-48b7-8fdf-7c30fa21c3d1"
+            name="MessageOccurrenceSpecification9">
             <covered>
               <lifelineMoniker
-                Id="1bde96b7-e897-4901-9378-615f3a16f3fd"
-                LastKnownName="bonus1 : BonusInkBubble"
+                Id="6f347f50-6438-4588-bf7d-5d476d841632"
+                LastKnownName="sheetmusic1 : SheetMusic"
                 LastKnownLocation="PnTModeling.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -8427,6 +8417,16 @@ cf sheetCreations.sequenceddiagram</body>
               <lifelineMoniker
                 Id="6f347f50-6438-4588-bf7d-5d476d841632"
                 LastKnownName="sheetmusic1 : SheetMusic"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="079140c8-7e99-45c8-9b6b-f9af843c30ff"
+            name="MessageOccurrenceSpecification11">
+            <covered>
+              <lifelineMoniker
+                Id="1bde96b7-e897-4901-9378-615f3a16f3fd"
+                LastKnownName="bonus1 : BonusInkBubble"
                 LastKnownLocation="PnTModeling.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -9170,16 +9170,6 @@ cf sheetCreations.sequenceddiagram</body>
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="c584e08d-715e-4026-960b-b1b7bc8edf96"
-            name="OperandOccurrenceSpecification21">
-            <covered>
-              <lifelineMoniker
-                Id="6f347f50-6438-4588-bf7d-5d476d841632"
-                LastKnownName="sheetmusic1 : SheetMusic"
-                LastKnownLocation="PnTModeling.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
             Id="977c2e62-c504-44cb-9eb6-61fb01f870a0"
             name="OperandOccurrenceSpecification23">
             <covered>
@@ -9196,6 +9186,16 @@ cf sheetCreations.sequenceddiagram</body>
               <lifelineMoniker
                 Id="1bde96b7-e897-4901-9378-615f3a16f3fd"
                 LastKnownName="bonus1 : BonusInkBubble"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="c584e08d-715e-4026-960b-b1b7bc8edf96"
+            name="OperandOccurrenceSpecification21">
+            <covered>
+              <lifelineMoniker
+                Id="6f347f50-6438-4588-bf7d-5d476d841632"
+                LastKnownName="sheetmusic1 : SheetMusic"
                 LastKnownLocation="PnTModeling.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -9284,6 +9284,16 @@ cf sheetCreations.sequenceddiagram</body>
             </covered>
           </executionOccurrenceSpecification>
           <operandOccurrenceSpecification
+            Id="55353416-aff5-4ffa-af83-0d0ad8d8c170"
+            name="OperandOccurrenceSpecification24">
+            <covered>
+              <lifelineMoniker
+                Id="3f070485-aa62-4696-8e13-64b751e7267d"
+                LastKnownName="sheetmusic2 : SheetMusic"
+                LastKnownLocation="PnTModeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
             Id="90178442-20b9-4df0-bd17-70cf43310c23"
             name="OperandOccurrenceSpecification20">
             <covered>
@@ -9300,16 +9310,6 @@ cf sheetCreations.sequenceddiagram</body>
               <lifelineMoniker
                 Id="6f347f50-6438-4588-bf7d-5d476d841632"
                 LastKnownName="sheetmusic1 : SheetMusic"
-                LastKnownLocation="PnTModeling.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="55353416-aff5-4ffa-af83-0d0ad8d8c170"
-            name="OperandOccurrenceSpecification24">
-            <covered>
-              <lifelineMoniker
-                Id="3f070485-aa62-4696-8e13-64b751e7267d"
-                LastKnownName="sheetmusic2 : SheetMusic"
                 LastKnownLocation="PnTModeling.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -9840,6 +9840,16 @@ cf sheetCreations.sequenceddiagram</body>
       <executionEvent
         Id="cea515b7-b108-4952-909f-5d1746dcd10f"
         name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="c301d30a-5400-4995-836e-51bc38a8f355"
+        name="Half" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="fcae4f2b-70ab-4f73-ba14-76827202d066"
+        name="Whole" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

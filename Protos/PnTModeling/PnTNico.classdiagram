@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm12="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="42b111d9-aa66-4cde-8fe2-6b7c9361bc75" name="PnTNico" linkedPackageId="9083596e-beba-4361-a1d4-f5b04dd77df0" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="42b111d9-aa66-4cde-8fe2-6b7c9361bc75" name="PnTNico" linkedPackageId="9083596e-beba-4361-a1d4-f5b04dd77df0" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <packagedElements>
     <logicalClassDesignerModelHasPackages>
       <package Id="43925a60-c6c6-4e7b-8068-645590c5e255" name="Model">
@@ -9,6 +9,20 @@
             <body>Singleton</body>
             <annotatedElements>
               <classMoniker Id="455d6c3b-1a9d-4984-9a88-1a95d8cd997c" LastKnownName="AudioController" />
+            </annotatedElements>
+          </comment>
+          <comment Id="4dcc7609-b7c6-4245-92a3-31bde3b2b5eb">
+            <elementDefinition Id="c90f7b2a-b08a-4a30-89f5-bbb067201a66" />
+            <body>Flyweight</body>
+            <annotatedElements>
+              <interfaceMoniker Id="a1bdbbee-302e-4435-a720-9fe72f9cfdf0" LastKnownName="INote" />
+            </annotatedElements>
+          </comment>
+          <comment Id="aee14416-3daf-4f87-927d-4d2858f81a3b">
+            <elementDefinition Id="ca711daa-7d7d-484f-ab3f-e43ca6c378f1" />
+            <body>Flyweight</body>
+            <annotatedElements>
+              <classMoniker Id="4a2786c1-ca23-455e-bf2a-a30558a1dc17" LastKnownName="NoteFactory" />
             </annotatedElements>
           </comment>
         </ownedCommentsInternal>
@@ -127,6 +141,22 @@
                   </relationshipOwnedElementsInternal>
                   <elementDefinition Id="d74972ac-e0c1-4548-9eca-44ffb41f62a8" />
                 </association>
+                <association Id="673eddb0-d16c-4ae3-8166-768d5808d247" isDerived="false" sourceEndRoleName="INote" targetEndRoleName="Length" isLeaf="false" isAbstract="false">
+                  <enumerationMoniker Id="6231894d-ba18-4a4d-ba8f-9e1ad0e01e0b" LastKnownName="Length" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="61cbec0c-9259-4cfe-8235-358f5e307241" name="INote" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="547e897d-8bce-4d86-9fb2-81b2ef39fac4" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="2d8ea173-30e1-4f92-8506-2416f3e686f7" name="Length" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="aee58f28-ca05-4e88-890a-3e4da6338971" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="7ecfc288-3e30-4c07-a100-f28566fe9fec" />
+                </association>
               </targetEnds>
             </Interface>
           </packageHasNamedElement>
@@ -153,17 +183,6 @@
                 <interfaceRealization Id="7710d1a0-fe7d-4538-a27f-de98ea0f60c8">
                   <interfaceMoniker Id="abe85be9-891a-4601-9f78-df1f3bda8521" LastKnownName="IBonus" />
                   <elementDefinition Id="6f7f3239-ff65-4d65-b612-b5aab8654a8f" />
-                </interfaceRealization>
-              </suppliersInternal>
-            </class>
-          </packageHasNamedElement>
-          <packageHasNamedElement>
-            <class Id="54776707-0010-4e1c-baf4-c35f3e9e5443" name="Whole" isAbstract="false" isLeaf="false" isActiveClass="false">
-              <elementDefinition Id="c15ac099-2f3b-4bf3-a4c2-fceb851965b5" />
-              <suppliersInternal>
-                <interfaceRealization Id="11a54d36-c36c-4ca1-9f9f-4b2b0e038c66">
-                  <interfaceMoniker Id="a1bdbbee-302e-4435-a720-9fe72f9cfdf0" LastKnownName="INote" />
-                  <elementDefinition Id="90eb8a0a-9fbe-4753-b4cd-33d8dbae9b9a" />
                 </interfaceRealization>
               </suppliersInternal>
             </class>
@@ -321,45 +340,28 @@
                   </relationshipOwnedElementsInternal>
                   <elementDefinition Id="73385892-67be-49c1-9ddc-9daf979565e4" />
                 </association>
+                <association Id="c46d90ee-9fed-4402-a408-2bbf68e4d87d" isDerived="false" sourceEndRoleName="SheetBuilder" targetEndRoleName="NoteFactory" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="4a2786c1-ca23-455e-bf2a-a30558a1dc17" LastKnownName="NoteFactory" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="f9895a03-6a64-4de0-8000-299fa54ee799" name="SheetBuilder" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="5d2bdbe7-cd97-4b34-b2b2-c3b4367a9ef5" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="b75da8f1-8249-4a61-a932-a40fcaebe4e5" name="NoteFactory" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="886a5804-0920-4189-9fe9-4ddee86f9696" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="0bff262a-595f-4e9a-841f-d6418e88191f" />
+                </association>
               </targetEnds>
             </class>
           </packageHasNamedElement>
           <packageHasNamedElement>
             <class Id="455d6c3b-1a9d-4984-9a88-1a95d8cd997c" name="AudioController" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="33201db4-1acf-4897-88f5-638a8d239efc" />
-            </class>
-          </packageHasNamedElement>
-          <packageHasNamedElement>
-            <class Id="a7cd4101-c84a-4efd-a3eb-29966f7e048a" name="Half" isAbstract="false" isLeaf="false" isActiveClass="false">
-              <elementDefinition Id="d0e18e6a-f9fe-4ef6-bc68-ad1a58e7af64" />
-              <suppliersInternal>
-                <interfaceRealization Id="94d647de-af54-4e6a-a306-665bb7388e5e">
-                  <interfaceMoniker Id="a1bdbbee-302e-4435-a720-9fe72f9cfdf0" LastKnownName="INote" />
-                  <elementDefinition Id="9ee64ed1-16c3-49d7-aee3-bf680b852262" />
-                </interfaceRealization>
-              </suppliersInternal>
-            </class>
-          </packageHasNamedElement>
-          <packageHasNamedElement>
-            <class Id="66e78f18-fcf1-4fdd-8194-54f27251530a" name="Quarter" isAbstract="false" isLeaf="false" isActiveClass="false">
-              <elementDefinition Id="63fb6e43-d74f-4aa8-a661-c6971f43efa4" />
-              <suppliersInternal>
-                <interfaceRealization Id="ae89ccfc-fe3d-470d-99b5-36129c07c631">
-                  <interfaceMoniker Id="a1bdbbee-302e-4435-a720-9fe72f9cfdf0" LastKnownName="INote" />
-                  <elementDefinition Id="0e8bb771-0e81-44ca-b166-4b12ce45d47d" />
-                </interfaceRealization>
-              </suppliersInternal>
-            </class>
-          </packageHasNamedElement>
-          <packageHasNamedElement>
-            <class Id="d6b7fa5f-8ea8-4a03-ac4d-3e9edff18b09" name="Eighth" isAbstract="false" isLeaf="false" isActiveClass="false">
-              <elementDefinition Id="d1e14a62-6410-445e-abc5-650588cb7d5e" />
-              <suppliersInternal>
-                <interfaceRealization Id="42c8f956-bb29-46a4-a739-cec919186110">
-                  <interfaceMoniker Id="a1bdbbee-302e-4435-a720-9fe72f9cfdf0" LastKnownName="INote" />
-                  <elementDefinition Id="36c8abcb-5271-4002-8d2f-f6ac85e6858f" />
-                </interfaceRealization>
-              </suppliersInternal>
             </class>
           </packageHasNamedElement>
           <packageHasNamedElement>
@@ -389,6 +391,58 @@
                 </enumerationLiteral>
               </ownedLiterals>
             </enumeration>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <enumeration Id="6231894d-ba18-4a4d-ba8f-9e1ad0e01e0b" name="Length" isAbstract="false" isLeaf="false">
+              <elementDefinition Id="35305a4c-352b-40db-8e1f-2ced7a1c96bb" />
+              <ownedLiterals>
+                <enumerationLiteral Id="b40be90b-65a0-46cf-9765-7ff1a4309cac" name="Whole">
+                  <elementDefinition Id="71726ef0-389d-49d0-bfe0-111490067bcc" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="05f2ac59-4418-4758-8508-a5d3e95660f5" name="Half">
+                  <elementDefinition Id="2fc19373-116a-405b-8c6a-8a457ba44c86" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="e12f295f-4f71-436c-a3a0-329431f3a456" name="Quarter">
+                  <elementDefinition Id="65e28aaf-2467-4b5f-a895-facb031fdf5e" />
+                </enumerationLiteral>
+                <enumerationLiteral Id="26f282db-9beb-4e88-88d6-ad222ab2d189" name="Eighth">
+                  <elementDefinition Id="1f27b50d-d092-4c4b-ba21-25c2286272c5" />
+                </enumerationLiteral>
+              </ownedLiterals>
+            </enumeration>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="4a2786c1-ca23-455e-bf2a-a30558a1dc17" name="NoteFactory" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="d913d907-89eb-4ff9-b833-0f0d05d6c5a5" />
+              <targetEnds>
+                <association Id="b333577c-ae6d-403e-95b5-308dc26a263c" isDerived="false" sourceEndRoleName="NoteFactory" targetEndRoleName="INote" isLeaf="false" isAbstract="false">
+                  <interfaceMoniker Id="a1bdbbee-302e-4435-a720-9fe72f9cfdf0" LastKnownName="INote" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="c0428171-62b7-4b79-b0f4-9486c12a30d1" name="NoteFactory" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="26d25511-82ec-47de-bcc2-7f43cf062b58" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="a82b5e21-215f-40e9-823e-a941c3ac50cb" name="INote" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <lowerValueInternal>
+                          <literalString Id="bc5c0632-22d6-4af2-b9b2-095ba44583ce" name="Lower" value="27">
+                            <elementDefinition Id="e11f6aee-72e2-402b-bd59-c74750901909" />
+                          </literalString>
+                        </lowerValueInternal>
+                        <upperValueInternal>
+                          <literalString Id="eb4b4168-6e63-4631-82fd-d65a0b62fd1c" name="Upper" value="27">
+                            <elementDefinition Id="464b148f-c19a-4fbe-bd52-36cb12513808" />
+                          </literalString>
+                        </upperValueInternal>
+                        <elementDefinition Id="8d0b11e1-b667-4b27-a8b6-5fba25b88793" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="f225c6b1-1268-4876-b79a-5f6565f30b52" />
+                </association>
+              </targetEnds>
+            </class>
           </packageHasNamedElement>
         </packagedElements>
       </package>
