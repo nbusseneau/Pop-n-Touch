@@ -36,19 +36,12 @@
       <SubType>Content</SubType>
       <DependentUpon>CreateGame.usecasediagram</DependentUpon>
     </Content>
-    <Content Include="CreateGameGwen.sequencediagram">
+    <Content Include="CreateGame.sequencediagram">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="CreateGameGwen.sequencediagram.layout">
+    <Content Include="CreateGame.sequencediagram.layout">
       <SubType>Content</SubType>
-      <DependentUpon>CreateGameGwen.sequencediagram</DependentUpon>
-    </Content>
-    <Content Include="CreationGameJu.sequencediagram">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="CreationGameJu.sequencediagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>CreationGameJu.sequencediagram</DependentUpon>
+      <DependentUpon>CreateGame.sequencediagram</DependentUpon>
     </Content>
     <Content Include="EndGameNico.sequencediagram">
       <SubType>Content</SubType>
@@ -72,13 +65,6 @@
     <Content Include="Modeling.classdiagram.layout">
       <SubType>Content</SubType>
       <DependentUpon>Modeling.classdiagram</DependentUpon>
-    </Content>
-    <Content Include="SheetCreationJu.sequencediagram">
-      <SubType>Content</SubType>
-    </Content>
-    <Content Include="SheetCreationJu.sequencediagram.layout">
-      <SubType>Content</SubType>
-      <DependentUpon>SheetCreationJu.sequencediagram</DependentUpon>
     </Content>
     <Content Include="Bonus.sequencediagram">
       <SubType>Content</SubType>
