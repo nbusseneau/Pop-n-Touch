@@ -1072,7 +1072,7 @@
               </controlFlow>
               <controlFlow
                 Id="7f34aa2f-f4bf-4734-999e-5f16f5f0346b"
-                guard="song cancelled &amp; only one player left"
+                guard="song cancelled"
                 isLeaf="false">
                 <activityFinalNodeMoniker
                   Id="bce59f1f-7d00-4427-92f4-02b66a259b9a"
@@ -1119,7 +1119,7 @@
               </controlFlow>
               <controlFlow
                 Id="0a7205ca-0f91-4e36-814e-69879ceaed99"
-                guard="song cancelled &amp; only one player left"
+                guard="song cancelled"
                 isLeaf="false">
                 <activityFinalNodeMoniker
                   Id="bce59f1f-7d00-4427-92f4-02b66a259b9a"
@@ -3686,12 +3686,6 @@ cf sheetCreations.sequenceddiagram</body>
           <comment
             Id="59035ef0-2099-440d-b439-b78723995bf3">
             <body>Some sort of Bean?</body>
-            <annotatedElements>
-              <behaviorExecutionSpecificationMoniker
-                Id="f84333a4-81cf-49ee-92d9-035848271967"
-                LastKnownName="BehaviorExecutionSpecification5"
-                LastKnownLocation="Modeling.uml" />
-            </annotatedElements>
           </comment>
         </ownedCommentsInternal>
         <fragments>
@@ -3720,14 +3714,6 @@ cf sheetCreations.sequenceddiagram</body>
               <messageOccurrenceSpecificationMoniker
                 Id="28ddcf0b-3f20-4247-9151-3261ee6ac43e"
                 LastKnownName="MessageOccurrenceSpecification2"
-                LastKnownLocation="Modeling.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="cde064d9-86ab-4edc-9784-98bbc359908f"
-                LastKnownName="MessageOccurrenceSpecification11"
-                LastKnownLocation="Modeling.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="6fe71f39-7187-453f-88e9-1a957221484e"
-                LastKnownName="MessageOccurrenceSpecification14"
                 LastKnownLocation="Modeling.uml" />
               <messageOccurrenceSpecificationMoniker
                 Id="66c031ae-6b91-4b7e-9ea3-02a36b872f22"
@@ -3771,7 +3757,7 @@ cf sheetCreations.sequenceddiagram</body>
             <covered>
               <lifelineMoniker
                 Id="36683fad-d047-41d8-8ef0-933583144d90"
-                LastKnownName="derpy : Player"
+                LastKnownName="Derpy"
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -3785,114 +3771,6 @@ cf sheetCreations.sequenceddiagram</body>
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </messageOccurrenceSpecification>
-          <behaviorExecutionSpecification
-            Id="5c773ede-d164-4df5-a150-5f7596470df1"
-            name="BehaviorExecutionSpecification4">
-            <coveredLifelines>
-              <lifelineMoniker
-                Id="8d4c1e4e-4831-41d3-81d7-c0b3a12d8972"
-                LastKnownName="song : Song"
-                LastKnownLocation="Modeling.uml" />
-            </coveredLifelines>
-            <finish>
-              <executionOccurrenceSpecificationMoniker
-                Id="b6d05553-40a6-4413-bc9c-005b5dd15c4a"
-                LastKnownName="ExecutionOccurrenceSpecification8"
-                LastKnownLocation="Modeling.uml" />
-            </finish>
-            <start>
-              <executionOccurrenceSpecificationMoniker
-                Id="fec86e3f-df9b-4f89-bf69-12cc478ac20f"
-                LastKnownName="ExecutionOccurrenceSpecification7"
-                LastKnownLocation="Modeling.uml" />
-            </start>
-            <nestedOccurrences>
-              <messageOccurrenceSpecificationMoniker
-                Id="0ad28f64-5c43-4538-b5e2-47c4718544cf"
-                LastKnownName="MessageOccurrenceSpecification12"
-                LastKnownLocation="Modeling.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="87bbf4e1-1dd0-4514-a666-72221f97fae7"
-                LastKnownName="MessageOccurrenceSpecification13"
-                LastKnownLocation="Modeling.uml" />
-            </nestedOccurrences>
-          </behaviorExecutionSpecification>
-          <executionOccurrenceSpecification
-            Id="fec86e3f-df9b-4f89-bf69-12cc478ac20f"
-            name="ExecutionOccurrenceSpecification7">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="f073a3c6-b4fe-4622-b527-c7b52843ec71"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="Modeling.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="8d4c1e4e-4831-41d3-81d7-c0b3a12d8972"
-                LastKnownName="song : Song"
-                LastKnownLocation="Modeling.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="0ad28f64-5c43-4538-b5e2-47c4718544cf"
-            name="MessageOccurrenceSpecification12">
-            <covered>
-              <lifelineMoniker
-                Id="8d4c1e4e-4831-41d3-81d7-c0b3a12d8972"
-                LastKnownName="song : Song"
-                LastKnownLocation="Modeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="cde064d9-86ab-4edc-9784-98bbc359908f"
-            name="MessageOccurrenceSpecification11">
-            <covered>
-              <lifelineMoniker
-                Id="6812c35f-459d-4acf-a0a4-d492a622b83e"
-                LastKnownName="gameMaster : GameMaster"
-                LastKnownLocation="Modeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="87bbf4e1-1dd0-4514-a666-72221f97fae7"
-            name="MessageOccurrenceSpecification13">
-            <covered>
-              <lifelineMoniker
-                Id="8d4c1e4e-4831-41d3-81d7-c0b3a12d8972"
-                LastKnownName="song : Song"
-                LastKnownLocation="Modeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="6fe71f39-7187-453f-88e9-1a957221484e"
-            name="MessageOccurrenceSpecification14">
-            <covered>
-              <lifelineMoniker
-                Id="6812c35f-459d-4acf-a0a4-d492a622b83e"
-                LastKnownName="gameMaster : GameMaster"
-                LastKnownLocation="Modeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <executionOccurrenceSpecification
-            Id="b6d05553-40a6-4413-bc9c-005b5dd15c4a"
-            name="ExecutionOccurrenceSpecification8">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="8552f8f6-547d-4c92-82e2-5fb3c6017ded"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="Modeling.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="8d4c1e4e-4831-41d3-81d7-c0b3a12d8972"
-                LastKnownName="song : Song"
-                LastKnownLocation="Modeling.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
           <behaviorExecutionSpecification
             Id="e8fedbcb-d113-49be-8864-b3a6681707be"
             name="BehaviorExecutionSpecification3">
@@ -3964,22 +3842,22 @@ cf sheetCreations.sequenceddiagram</body>
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="e88cd2ef-007a-4111-a0f1-51ced6c089cf"
-            name="MessageOccurrenceSpecification10">
-            <covered>
-              <lifelineMoniker
-                Id="6812c35f-459d-4acf-a0a4-d492a622b83e"
-                LastKnownName="gameMaster : GameMaster"
-                LastKnownLocation="Modeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="0f1bc785-85f9-436a-bf87-817e6dfdb788"
             name="MessageOccurrenceSpecification9">
             <covered>
               <lifelineMoniker
                 Id="dcb53691-56f3-4b69-b1e1-7b5d3de19de2"
                 LastKnownName="game : Game"
+                LastKnownLocation="Modeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="e88cd2ef-007a-4111-a0f1-51ced6c089cf"
+            name="MessageOccurrenceSpecification10">
+            <covered>
+              <lifelineMoniker
+                Id="6812c35f-459d-4acf-a0a4-d492a622b83e"
+                LastKnownName="gameMaster : GameMaster"
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -4007,7 +3885,7 @@ cf sheetCreations.sequenceddiagram</body>
             <coveredLifelines>
               <lifelineMoniker
                 Id="7431086f-0f4a-4486-9917-8167a64970e5"
-                LastKnownName="player1 : Player"
+                LastKnownName="playerDerpy : Player"
                 LastKnownLocation="Modeling.uml" />
             </coveredLifelines>
             <finish>
@@ -4028,12 +3906,12 @@ cf sheetCreations.sequenceddiagram</body>
                 LastKnownName="MessageOccurrenceSpecification4"
                 LastKnownLocation="Modeling.uml" />
               <messageOccurrenceSpecificationMoniker
-                Id="ed77db14-0259-43ba-97ba-4d20f10ddfdc"
-                LastKnownName="MessageOccurrenceSpecification15"
+                Id="fd42cb8e-7e68-40a2-b5f1-161c95f59cde"
+                LastKnownName="MessageOccurrenceSpecification73"
                 LastKnownLocation="Modeling.uml" />
               <messageOccurrenceSpecificationMoniker
-                Id="d9e24010-8a64-4f2d-bc50-d9a2f188dbc4"
-                LastKnownName="MessageOccurrenceSpecification18"
+                Id="d4e9b2e6-bbc1-4b10-8028-f640e5c8d54c"
+                LastKnownName="MessageOccurrenceSpecification76"
                 LastKnownLocation="Modeling.uml" />
               <messageOccurrenceSpecificationMoniker
                 Id="691c9b9b-5a50-4df1-9aec-b0b94e523a31"
@@ -4055,7 +3933,7 @@ cf sheetCreations.sequenceddiagram</body>
             <covered>
               <lifelineMoniker
                 Id="7431086f-0f4a-4486-9917-8167a64970e5"
-                LastKnownName="player1 : Player"
+                LastKnownName="playerDerpy : Player"
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -4065,7 +3943,7 @@ cf sheetCreations.sequenceddiagram</body>
             <covered>
               <lifelineMoniker
                 Id="7431086f-0f4a-4486-9917-8167a64970e5"
-                LastKnownName="player1 : Player"
+                LastKnownName="playerDerpy : Player"
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -4080,8 +3958,86 @@ cf sheetCreations.sequenceddiagram</body>
             </covered>
           </messageOccurrenceSpecification>
           <behaviorExecutionSpecification
-            Id="f84333a4-81cf-49ee-92d9-035848271967"
-            name="BehaviorExecutionSpecification5">
+            Id="fa978bd1-1a16-4747-88ed-991c738e02b9"
+            name="BehaviorExecutionSpecification27">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="dcb53691-56f3-4b69-b1e1-7b5d3de19de2"
+                LastKnownName="game : Game"
+                LastKnownLocation="Modeling.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="68f6d1c0-4bda-43a1-b363-f648c0d2625b"
+                LastKnownName="ExecutionOccurrenceSpecification54"
+                LastKnownLocation="Modeling.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="a0550bf4-ff9d-4acb-bd72-92177ffae251"
+                LastKnownName="ExecutionOccurrenceSpecification53"
+                LastKnownLocation="Modeling.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="f58efd0e-50c8-4c3b-bd21-875444c78630"
+                LastKnownName="MessageOccurrenceSpecification74"
+                LastKnownLocation="Modeling.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="784c4213-b02c-4b04-9624-3d1f08b072ea"
+                LastKnownName="MessageOccurrenceSpecification77"
+                LastKnownLocation="Modeling.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="dca688c8-4339-4259-a86c-f14490bd1c2c"
+                LastKnownName="MessageOccurrenceSpecification80"
+                LastKnownLocation="Modeling.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="d1821122-edf1-4469-959e-6a001ccd7d6c"
+                LastKnownName="MessageOccurrenceSpecification75"
+                LastKnownLocation="Modeling.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="a0550bf4-ff9d-4acb-bd72-92177ffae251"
+            name="ExecutionOccurrenceSpecification53">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="cd0f7ccf-686d-4bdc-9bce-a4e3eba75ef0"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="Modeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="dcb53691-56f3-4b69-b1e1-7b5d3de19de2"
+                LastKnownName="game : Game"
+                LastKnownLocation="Modeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="fd42cb8e-7e68-40a2-b5f1-161c95f59cde"
+            name="MessageOccurrenceSpecification73">
+            <covered>
+              <lifelineMoniker
+                Id="7431086f-0f4a-4486-9917-8167a64970e5"
+                LastKnownName="playerDerpy : Player"
+                LastKnownLocation="Modeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="f58efd0e-50c8-4c3b-bd21-875444c78630"
+            name="MessageOccurrenceSpecification74">
+            <covered>
+              <lifelineMoniker
+                Id="dcb53691-56f3-4b69-b1e1-7b5d3de19de2"
+                LastKnownName="game : Game"
+                LastKnownLocation="Modeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="747587e6-d1a1-4e7c-80cb-3e314d5b9bf9"
+            name="BehaviorExecutionSpecification28">
             <coveredLifelines>
               <lifelineMoniker
                 Id="8d4c1e4e-4831-41d3-81d7-c0b3a12d8972"
@@ -4090,34 +4046,34 @@ cf sheetCreations.sequenceddiagram</body>
             </coveredLifelines>
             <finish>
               <executionOccurrenceSpecificationMoniker
-                Id="aef43a88-4d6d-4c29-bff6-f032b2142ad8"
-                LastKnownName="ExecutionOccurrenceSpecification10"
+                Id="89729803-5b0c-43fb-8e73-c19f929c86b9"
+                LastKnownName="ExecutionOccurrenceSpecification56"
                 LastKnownLocation="Modeling.uml" />
             </finish>
             <start>
               <executionOccurrenceSpecificationMoniker
-                Id="fad78e30-49a9-47ff-9127-cda11d59f32b"
-                LastKnownName="ExecutionOccurrenceSpecification9"
+                Id="2c619784-fe4a-45a1-a430-678a51f9851c"
+                LastKnownName="ExecutionOccurrenceSpecification55"
                 LastKnownLocation="Modeling.uml" />
             </start>
             <nestedOccurrences>
               <messageOccurrenceSpecificationMoniker
-                Id="857bb43b-f86b-432c-a8a7-bab128f1c3ac"
-                LastKnownName="MessageOccurrenceSpecification16"
+                Id="baff3517-1071-4e59-b66a-c0a9fadde0dd"
+                LastKnownName="MessageOccurrenceSpecification78"
                 LastKnownLocation="Modeling.uml" />
               <messageOccurrenceSpecificationMoniker
-                Id="bad304b2-3404-4c51-82a7-7558cca216c2"
-                LastKnownName="MessageOccurrenceSpecification17"
+                Id="0b14d852-0370-452a-9e9d-2aa1bef9866c"
+                LastKnownName="MessageOccurrenceSpecification79"
                 LastKnownLocation="Modeling.uml" />
             </nestedOccurrences>
           </behaviorExecutionSpecification>
           <executionOccurrenceSpecification
-            Id="fad78e30-49a9-47ff-9127-cda11d59f32b"
-            name="ExecutionOccurrenceSpecification9">
+            Id="2c619784-fe4a-45a1-a430-678a51f9851c"
+            name="ExecutionOccurrenceSpecification55">
             <event>
               <executionOccurrenceSpecificationReferencesEvent>
                 <executionEventMoniker
-                  Id="a160d6aa-c032-4399-8450-3c561a3a8558"
+                  Id="0ec1d8e1-c4ff-4ed8-82b3-f01de7c04ca4"
                   LastKnownName="ExecutionEvent"
                   LastKnownLocation="Modeling.uml" />
               </executionOccurrenceSpecificationReferencesEvent>
@@ -4130,18 +4086,8 @@ cf sheetCreations.sequenceddiagram</body>
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="ed77db14-0259-43ba-97ba-4d20f10ddfdc"
-            name="MessageOccurrenceSpecification15">
-            <covered>
-              <lifelineMoniker
-                Id="7431086f-0f4a-4486-9917-8167a64970e5"
-                LastKnownName="player1 : Player"
-                LastKnownLocation="Modeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="857bb43b-f86b-432c-a8a7-bab128f1c3ac"
-            name="MessageOccurrenceSpecification16">
+            Id="baff3517-1071-4e59-b66a-c0a9fadde0dd"
+            name="MessageOccurrenceSpecification78">
             <covered>
               <lifelineMoniker
                 Id="8d4c1e4e-4831-41d3-81d7-c0b3a12d8972"
@@ -4150,8 +4096,18 @@ cf sheetCreations.sequenceddiagram</body>
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="bad304b2-3404-4c51-82a7-7558cca216c2"
-            name="MessageOccurrenceSpecification17">
+            Id="784c4213-b02c-4b04-9624-3d1f08b072ea"
+            name="MessageOccurrenceSpecification77">
+            <covered>
+              <lifelineMoniker
+                Id="dcb53691-56f3-4b69-b1e1-7b5d3de19de2"
+                LastKnownName="game : Game"
+                LastKnownLocation="Modeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="0b14d852-0370-452a-9e9d-2aa1bef9866c"
+            name="MessageOccurrenceSpecification79">
             <covered>
               <lifelineMoniker
                 Id="8d4c1e4e-4831-41d3-81d7-c0b3a12d8972"
@@ -4160,22 +4116,22 @@ cf sheetCreations.sequenceddiagram</body>
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="d9e24010-8a64-4f2d-bc50-d9a2f188dbc4"
-            name="MessageOccurrenceSpecification18">
+            Id="dca688c8-4339-4259-a86c-f14490bd1c2c"
+            name="MessageOccurrenceSpecification80">
             <covered>
               <lifelineMoniker
-                Id="7431086f-0f4a-4486-9917-8167a64970e5"
-                LastKnownName="player1 : Player"
+                Id="dcb53691-56f3-4b69-b1e1-7b5d3de19de2"
+                LastKnownName="game : Game"
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification
-            Id="aef43a88-4d6d-4c29-bff6-f032b2142ad8"
-            name="ExecutionOccurrenceSpecification10">
+            Id="89729803-5b0c-43fb-8e73-c19f929c86b9"
+            name="ExecutionOccurrenceSpecification56">
             <event>
               <executionOccurrenceSpecificationReferencesEvent>
                 <executionEventMoniker
-                  Id="ab8fb353-d231-4d9c-9e53-44d51b7187ec"
+                  Id="a8198ff1-0269-490c-81ce-69e0aed0a098"
                   LastKnownName="ExecutionEvent"
                   LastKnownLocation="Modeling.uml" />
               </executionOccurrenceSpecificationReferencesEvent>
@@ -4187,6 +4143,54 @@ cf sheetCreations.sequenceddiagram</body>
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="d1821122-edf1-4469-959e-6a001ccd7d6c"
+            name="MessageOccurrenceSpecification75">
+            <covered>
+              <lifelineMoniker
+                Id="dcb53691-56f3-4b69-b1e1-7b5d3de19de2"
+                LastKnownName="game : Game"
+                LastKnownLocation="Modeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="d4e9b2e6-bbc1-4b10-8028-f640e5c8d54c"
+            name="MessageOccurrenceSpecification76">
+            <covered>
+              <lifelineMoniker
+                Id="7431086f-0f4a-4486-9917-8167a64970e5"
+                LastKnownName="playerDerpy : Player"
+                LastKnownLocation="Modeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="68f6d1c0-4bda-43a1-b363-f648c0d2625b"
+            name="ExecutionOccurrenceSpecification54">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="86cbac81-c07d-49c0-919e-9de89e48e157"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="Modeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="dcb53691-56f3-4b69-b1e1-7b5d3de19de2"
+                LastKnownName="game : Game"
+                LastKnownLocation="Modeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="691c9b9b-5a50-4df1-9aec-b0b94e523a31"
+            name="MessageOccurrenceSpecification5">
+            <covered>
+              <lifelineMoniker
+                Id="7431086f-0f4a-4486-9917-8167a64970e5"
+                LastKnownName="playerDerpy : Player"
+                LastKnownLocation="Modeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
             Id="e698669b-a4f9-4e57-bb0d-8a3d48c5bab0"
             name="MessageOccurrenceSpecification6">
@@ -4194,16 +4198,6 @@ cf sheetCreations.sequenceddiagram</body>
               <lifelineMoniker
                 Id="6812c35f-459d-4acf-a0a4-d492a622b83e"
                 LastKnownName="gameMaster : GameMaster"
-                LastKnownLocation="Modeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="691c9b9b-5a50-4df1-9aec-b0b94e523a31"
-            name="MessageOccurrenceSpecification5">
-            <covered>
-              <lifelineMoniker
-                Id="7431086f-0f4a-4486-9917-8167a64970e5"
-                LastKnownName="player1 : Player"
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -4221,7 +4215,25 @@ cf sheetCreations.sequenceddiagram</body>
             <covered>
               <lifelineMoniker
                 Id="7431086f-0f4a-4486-9917-8167a64970e5"
-                LastKnownName="player1 : Player"
+                LastKnownName="playerDerpy : Player"
+                LastKnownLocation="Modeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <executionOccurrenceSpecification
+            Id="ae5e1426-e317-43c8-b448-90a21b9c5251"
+            name="ExecutionOccurrenceSpecification2">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="b31ddfeb-f869-4ed5-8925-bf67c9e86c55"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="Modeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="6812c35f-459d-4acf-a0a4-d492a622b83e"
+                LastKnownName="gameMaster : GameMaster"
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -4231,7 +4243,7 @@ cf sheetCreations.sequenceddiagram</body>
             <coveredLifelines>
               <lifelineMoniker
                 Id="7431086f-0f4a-4486-9917-8167a64970e5"
-                LastKnownName="player1 : Player"
+                LastKnownName="playerDerpy : Player"
                 LastKnownLocation="Modeling.uml" />
             </coveredLifelines>
             <finish>
@@ -4254,24 +4266,6 @@ cf sheetCreations.sequenceddiagram</body>
             </nestedOccurrences>
           </behaviorExecutionSpecification>
           <executionOccurrenceSpecification
-            Id="ae5e1426-e317-43c8-b448-90a21b9c5251"
-            name="ExecutionOccurrenceSpecification2">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="b31ddfeb-f869-4ed5-8925-bf67c9e86c55"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="Modeling.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="6812c35f-459d-4acf-a0a4-d492a622b83e"
-                LastKnownName="gameMaster : GameMaster"
-                LastKnownLocation="Modeling.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <executionOccurrenceSpecification
             Id="69b7a2c9-f349-4a5f-89fa-d2d14b7f418b"
             name="ExecutionOccurrenceSpecification11">
             <event>
@@ -4285,7 +4279,7 @@ cf sheetCreations.sequenceddiagram</body>
             <covered>
               <lifelineMoniker
                 Id="7431086f-0f4a-4486-9917-8167a64970e5"
-                LastKnownName="player1 : Player"
+                LastKnownName="playerDerpy : Player"
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -4295,7 +4289,7 @@ cf sheetCreations.sequenceddiagram</body>
             <covered>
               <lifelineMoniker
                 Id="7431086f-0f4a-4486-9917-8167a64970e5"
-                LastKnownName="player1 : Player"
+                LastKnownName="playerDerpy : Player"
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -4305,7 +4299,7 @@ cf sheetCreations.sequenceddiagram</body>
             <covered>
               <lifelineMoniker
                 Id="36683fad-d047-41d8-8ef0-933583144d90"
-                LastKnownName="derpy : Player"
+                LastKnownName="Derpy"
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -4323,7 +4317,7 @@ cf sheetCreations.sequenceddiagram</body>
             <covered>
               <lifelineMoniker
                 Id="7431086f-0f4a-4486-9917-8167a64970e5"
-                LastKnownName="player1 : Player"
+                LastKnownName="playerDerpy : Player"
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -4333,7 +4327,7 @@ cf sheetCreations.sequenceddiagram</body>
             <coveredLifelines>
               <lifelineMoniker
                 Id="7431086f-0f4a-4486-9917-8167a64970e5"
-                LastKnownName="player1 : Player"
+                LastKnownName="playerDerpy : Player"
                 LastKnownLocation="Modeling.uml" />
             </coveredLifelines>
             <finish>
@@ -4369,7 +4363,7 @@ cf sheetCreations.sequenceddiagram</body>
             <covered>
               <lifelineMoniker
                 Id="7431086f-0f4a-4486-9917-8167a64970e5"
-                LastKnownName="player1 : Player"
+                LastKnownName="playerDerpy : Player"
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -4379,7 +4373,7 @@ cf sheetCreations.sequenceddiagram</body>
             <covered>
               <lifelineMoniker
                 Id="7431086f-0f4a-4486-9917-8167a64970e5"
-                LastKnownName="player1 : Player"
+                LastKnownName="playerDerpy : Player"
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -4389,7 +4383,7 @@ cf sheetCreations.sequenceddiagram</body>
             <covered>
               <lifelineMoniker
                 Id="36683fad-d047-41d8-8ef0-933583144d90"
-                LastKnownName="derpy : Player"
+                LastKnownName="Derpy"
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -4407,7 +4401,7 @@ cf sheetCreations.sequenceddiagram</body>
             <covered>
               <lifelineMoniker
                 Id="7431086f-0f4a-4486-9917-8167a64970e5"
-                LastKnownName="player1 : Player"
+                LastKnownName="playerDerpy : Player"
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </executionOccurrenceSpecification>
@@ -4417,7 +4411,7 @@ cf sheetCreations.sequenceddiagram</body>
             <coveredLifelines>
               <lifelineMoniker
                 Id="7431086f-0f4a-4486-9917-8167a64970e5"
-                LastKnownName="player1 : Player"
+                LastKnownName="playerDerpy : Player"
                 LastKnownLocation="Modeling.uml" />
             </coveredLifelines>
             <finish>
@@ -4473,27 +4467,27 @@ cf sheetCreations.sequenceddiagram</body>
             <covered>
               <lifelineMoniker
                 Id="7431086f-0f4a-4486-9917-8167a64970e5"
-                LastKnownName="player1 : Player"
+                LastKnownName="playerDerpy : Player"
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="4409939c-f04a-4293-a8a6-386beef3d383"
-            name="MessageOccurrenceSpecification23">
-            <covered>
-              <lifelineMoniker
-                Id="36683fad-d047-41d8-8ef0-933583144d90"
-                LastKnownName="derpy : Player"
-                LastKnownLocation="Modeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
             Id="ef9ef8f2-4794-415f-881d-33a60330ff44"
             name="MessageOccurrenceSpecification24">
             <covered>
               <lifelineMoniker
                 Id="7431086f-0f4a-4486-9917-8167a64970e5"
-                LastKnownName="player1 : Player"
+                LastKnownName="playerDerpy : Player"
+                LastKnownLocation="Modeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="4409939c-f04a-4293-a8a6-386beef3d383"
+            name="MessageOccurrenceSpecification23">
+            <covered>
+              <lifelineMoniker
+                Id="36683fad-d047-41d8-8ef0-933583144d90"
+                LastKnownName="Derpy"
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -4563,7 +4557,7 @@ cf sheetCreations.sequenceddiagram</body>
             <covered>
               <lifelineMoniker
                 Id="7431086f-0f4a-4486-9917-8167a64970e5"
-                LastKnownName="player1 : Player"
+                LastKnownName="playerDerpy : Player"
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -4573,7 +4567,7 @@ cf sheetCreations.sequenceddiagram</body>
             <covered>
               <lifelineMoniker
                 Id="7431086f-0f4a-4486-9917-8167a64970e5"
-                LastKnownName="player1 : Player"
+                LastKnownName="playerDerpy : Player"
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -4632,12 +4626,24 @@ cf sheetCreations.sequenceddiagram</body>
                 LastKnownName="MessageOccurrenceSpecification52"
                 LastKnownLocation="Modeling.uml" />
               <messageOccurrenceSpecificationMoniker
-                Id="038429c9-afac-43d4-afd5-d12a5c4c2534"
-                LastKnownName="MessageOccurrenceSpecification55"
+                Id="78e97f8d-6f25-479d-a244-46d7c071c5f1"
+                LastKnownName="MessageOccurrenceSpecification81"
                 LastKnownLocation="Modeling.uml" />
               <messageOccurrenceSpecificationMoniker
-                Id="7987ddd4-2900-4ba0-8089-30f996ec386b"
-                LastKnownName="MessageOccurrenceSpecification58"
+                Id="97dd989d-5cfd-4c75-a765-3cc6ce5fe6a7"
+                LastKnownName="MessageOccurrenceSpecification84"
+                LastKnownLocation="Modeling.uml" />
+              <messageOccurrenceSpecificationMoniker
+                Id="3b5df1ec-9280-4c5b-94a3-bb80c6d485ec"
+                LastKnownName="MessageOccurrenceSpecification85"
+                LastKnownLocation="Modeling.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="59531e32-357d-47de-8d3a-fa23613bf2cc"
+                LastKnownName="ExecutionOccurrenceSpecification59"
+                LastKnownLocation="Modeling.uml" />
+              <executionOccurrenceSpecificationMoniker
+                Id="da133082-d1f9-484e-9a2e-41f19214069f"
+                LastKnownName="ExecutionOccurrenceSpecification60"
                 LastKnownLocation="Modeling.uml" />
               <messageOccurrenceSpecificationMoniker
                 Id="2bc4884b-e235-475c-93f6-671444745bfb"
@@ -4679,13 +4685,13 @@ cf sheetCreations.sequenceddiagram</body>
             <covered>
               <lifelineMoniker
                 Id="7431086f-0f4a-4486-9917-8167a64970e5"
-                LastKnownName="player1 : Player"
+                LastKnownName="playerDerpy : Player"
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </messageOccurrenceSpecification>
           <behaviorExecutionSpecification
-            Id="8f1aa4a8-2bf4-4c46-87c6-b329896ba06a"
-            name="BehaviorExecutionSpecification19">
+            Id="328ea7b7-07b6-45bf-aa4b-e5ccc0567d9a"
+            name="BehaviorExecutionSpecification29">
             <coveredLifelines>
               <lifelineMoniker
                 Id="57516218-1149-442c-a638-4c380e756a20"
@@ -4694,34 +4700,34 @@ cf sheetCreations.sequenceddiagram</body>
             </coveredLifelines>
             <finish>
               <executionOccurrenceSpecificationMoniker
-                Id="ac29e67d-22cf-4991-9199-ef78bb89cb37"
-                LastKnownName="ExecutionOccurrenceSpecification38"
+                Id="0f7011e3-a06a-4401-bcbc-d2f5323349d1"
+                LastKnownName="ExecutionOccurrenceSpecification58"
                 LastKnownLocation="Modeling.uml" />
             </finish>
             <start>
               <executionOccurrenceSpecificationMoniker
-                Id="d9e76d7f-35ee-42bf-a9ee-7618a8366bcc"
-                LastKnownName="ExecutionOccurrenceSpecification37"
+                Id="520069b0-b8b2-4684-80fc-2966a65a820d"
+                LastKnownName="ExecutionOccurrenceSpecification57"
                 LastKnownLocation="Modeling.uml" />
             </start>
             <nestedOccurrences>
               <messageOccurrenceSpecificationMoniker
-                Id="3b46a4ad-0adb-47a1-abc0-60298aaf0b6b"
-                LastKnownName="MessageOccurrenceSpecification56"
+                Id="3eac546c-9edf-4964-b8d5-9543a39d8fef"
+                LastKnownName="MessageOccurrenceSpecification82"
                 LastKnownLocation="Modeling.uml" />
               <messageOccurrenceSpecificationMoniker
-                Id="0fb6d25e-f9eb-4a0a-8fd3-2c600450b0d1"
-                LastKnownName="MessageOccurrenceSpecification57"
+                Id="616797f4-dec1-4134-b27d-fa13a11cf344"
+                LastKnownName="MessageOccurrenceSpecification83"
                 LastKnownLocation="Modeling.uml" />
             </nestedOccurrences>
           </behaviorExecutionSpecification>
           <executionOccurrenceSpecification
-            Id="d9e76d7f-35ee-42bf-a9ee-7618a8366bcc"
-            name="ExecutionOccurrenceSpecification37">
+            Id="520069b0-b8b2-4684-80fc-2966a65a820d"
+            name="ExecutionOccurrenceSpecification57">
             <event>
               <executionOccurrenceSpecificationReferencesEvent>
                 <executionEventMoniker
-                  Id="19786889-81cf-4669-ac8d-a3fe063eeeb6"
+                  Id="406f5ddc-7c1f-499a-8bb9-8aeca1aba2fa"
                   LastKnownName="ExecutionEvent"
                   LastKnownLocation="Modeling.uml" />
               </executionOccurrenceSpecificationReferencesEvent>
@@ -4734,8 +4740,18 @@ cf sheetCreations.sequenceddiagram</body>
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="038429c9-afac-43d4-afd5-d12a5c4c2534"
-            name="MessageOccurrenceSpecification55">
+            Id="3eac546c-9edf-4964-b8d5-9543a39d8fef"
+            name="MessageOccurrenceSpecification82">
+            <covered>
+              <lifelineMoniker
+                Id="57516218-1149-442c-a638-4c380e756a20"
+                LastKnownName="sheetMusic : SheetMusic"
+                LastKnownLocation="Modeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="78e97f8d-6f25-479d-a244-46d7c071c5f1"
+            name="MessageOccurrenceSpecification81">
             <covered>
               <lifelineMoniker
                 Id="83ffb035-a2d4-4b4b-a040-13c6085e95dd"
@@ -4744,8 +4760,18 @@ cf sheetCreations.sequenceddiagram</body>
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="3b46a4ad-0adb-47a1-abc0-60298aaf0b6b"
-            name="MessageOccurrenceSpecification56">
+            Id="97dd989d-5cfd-4c75-a765-3cc6ce5fe6a7"
+            name="MessageOccurrenceSpecification84">
+            <covered>
+              <lifelineMoniker
+                Id="83ffb035-a2d4-4b4b-a040-13c6085e95dd"
+                LastKnownName="sheetBuilder : SheetBuilder"
+                LastKnownLocation="Modeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="616797f4-dec1-4134-b27d-fa13a11cf344"
+            name="MessageOccurrenceSpecification83">
             <covered>
               <lifelineMoniker
                 Id="57516218-1149-442c-a638-4c380e756a20"
@@ -4753,19 +4779,83 @@ cf sheetCreations.sequenceddiagram</body>
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="0fb6d25e-f9eb-4a0a-8fd3-2c600450b0d1"
-            name="MessageOccurrenceSpecification57">
+          <executionOccurrenceSpecification
+            Id="0f7011e3-a06a-4401-bcbc-d2f5323349d1"
+            name="ExecutionOccurrenceSpecification58">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="187f8aca-f554-4ae1-a376-c5dd36519eb4"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="Modeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
             <covered>
               <lifelineMoniker
                 Id="57516218-1149-442c-a638-4c380e756a20"
                 LastKnownName="sheetMusic : SheetMusic"
                 LastKnownLocation="Modeling.uml" />
             </covered>
-          </messageOccurrenceSpecification>
+          </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="7987ddd4-2900-4ba0-8089-30f996ec386b"
-            name="MessageOccurrenceSpecification58">
+            Id="3b5df1ec-9280-4c5b-94a3-bb80c6d485ec"
+            name="MessageOccurrenceSpecification85">
+            <covered>
+              <lifelineMoniker
+                Id="83ffb035-a2d4-4b4b-a040-13c6085e95dd"
+                LastKnownName="sheetBuilder : SheetBuilder"
+                LastKnownLocation="Modeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <behaviorExecutionSpecification
+            Id="edd662d0-5526-463d-a57a-30957a51e362"
+            name="BehaviorExecutionSpecification30">
+            <coveredLifelines>
+              <lifelineMoniker
+                Id="83ffb035-a2d4-4b4b-a040-13c6085e95dd"
+                LastKnownName="sheetBuilder : SheetBuilder"
+                LastKnownLocation="Modeling.uml" />
+            </coveredLifelines>
+            <finish>
+              <executionOccurrenceSpecificationMoniker
+                Id="da133082-d1f9-484e-9a2e-41f19214069f"
+                LastKnownName="ExecutionOccurrenceSpecification60"
+                LastKnownLocation="Modeling.uml" />
+            </finish>
+            <start>
+              <executionOccurrenceSpecificationMoniker
+                Id="59531e32-357d-47de-8d3a-fa23613bf2cc"
+                LastKnownName="ExecutionOccurrenceSpecification59"
+                LastKnownLocation="Modeling.uml" />
+            </start>
+            <nestedOccurrences>
+              <messageOccurrenceSpecificationMoniker
+                Id="df5e8476-1c91-426c-b57d-7069893c3cbe"
+                LastKnownName="MessageOccurrenceSpecification86"
+                LastKnownLocation="Modeling.uml" />
+            </nestedOccurrences>
+          </behaviorExecutionSpecification>
+          <executionOccurrenceSpecification
+            Id="59531e32-357d-47de-8d3a-fa23613bf2cc"
+            name="ExecutionOccurrenceSpecification59">
+            <event>
+              <executionOccurrenceSpecificationReferencesEvent>
+                <executionEventMoniker
+                  Id="43d74542-3b22-4993-b5a2-eb0a7536a78c"
+                  LastKnownName="ExecutionEvent"
+                  LastKnownLocation="Modeling.uml" />
+              </executionOccurrenceSpecificationReferencesEvent>
+            </event>
+            <covered>
+              <lifelineMoniker
+                Id="83ffb035-a2d4-4b4b-a040-13c6085e95dd"
+                LastKnownName="sheetBuilder : SheetBuilder"
+                LastKnownLocation="Modeling.uml" />
+            </covered>
+          </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="df5e8476-1c91-426c-b57d-7069893c3cbe"
+            name="MessageOccurrenceSpecification86">
             <covered>
               <lifelineMoniker
                 Id="83ffb035-a2d4-4b4b-a040-13c6085e95dd"
@@ -4774,23 +4864,33 @@ cf sheetCreations.sequenceddiagram</body>
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification
-            Id="ac29e67d-22cf-4991-9199-ef78bb89cb37"
-            name="ExecutionOccurrenceSpecification38">
+            Id="da133082-d1f9-484e-9a2e-41f19214069f"
+            name="ExecutionOccurrenceSpecification60">
             <event>
               <executionOccurrenceSpecificationReferencesEvent>
                 <executionEventMoniker
-                  Id="c05cc6ac-e66f-4443-a61a-e12663b9cdf0"
+                  Id="4319a09f-578a-4f85-b91d-a127e22e446a"
                   LastKnownName="ExecutionEvent"
                   LastKnownLocation="Modeling.uml" />
               </executionOccurrenceSpecificationReferencesEvent>
             </event>
             <covered>
               <lifelineMoniker
-                Id="57516218-1149-442c-a638-4c380e756a20"
-                LastKnownName="sheetMusic : SheetMusic"
+                Id="83ffb035-a2d4-4b4b-a040-13c6085e95dd"
+                LastKnownName="sheetBuilder : SheetBuilder"
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </executionOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="be92bb70-cd6b-4e9b-a778-4a01b493b488"
+            name="MessageOccurrenceSpecification54">
+            <covered>
+              <lifelineMoniker
+                Id="7431086f-0f4a-4486-9917-8167a64970e5"
+                LastKnownName="playerDerpy : Player"
+                LastKnownLocation="Modeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
             Id="2bc4884b-e235-475c-93f6-671444745bfb"
             name="MessageOccurrenceSpecification53">
@@ -4798,16 +4898,6 @@ cf sheetCreations.sequenceddiagram</body>
               <lifelineMoniker
                 Id="83ffb035-a2d4-4b4b-a040-13c6085e95dd"
                 LastKnownName="sheetBuilder : SheetBuilder"
-                LastKnownLocation="Modeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="be92bb70-cd6b-4e9b-a778-4a01b493b488"
-            name="MessageOccurrenceSpecification54">
-            <covered>
-              <lifelineMoniker
-                Id="7431086f-0f4a-4486-9917-8167a64970e5"
-                LastKnownName="player1 : Player"
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -4854,10 +4944,6 @@ cf sheetCreations.sequenceddiagram</body>
               <messageOccurrenceSpecificationMoniker
                 Id="69e57510-e6a7-44b6-bebe-27055d68cae8"
                 LastKnownName="MessageOccurrenceSpecification60"
-                LastKnownLocation="Modeling.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="d1c6591a-8f47-4de5-aa45-44ee5d1745b5"
-                LastKnownName="MessageOccurrenceSpecification61"
                 LastKnownLocation="Modeling.uml" />
               <messageOccurrenceSpecificationMoniker
                 Id="41fb9f0f-ab1a-4c64-bc82-72144fe2dd18"
@@ -4907,56 +4993,10 @@ cf sheetCreations.sequenceddiagram</body>
             <covered>
               <lifelineMoniker
                 Id="7431086f-0f4a-4486-9917-8167a64970e5"
-                LastKnownName="player1 : Player"
+                LastKnownName="playerDerpy : Player"
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </messageOccurrenceSpecification>
-          <behaviorExecutionSpecification
-            Id="1a353756-2e06-42b6-88df-c5c81219ab3c"
-            name="BehaviorExecutionSpecification21">
-            <coveredLifelines>
-              <lifelineMoniker
-                Id="dcb53691-56f3-4b69-b1e1-7b5d3de19de2"
-                LastKnownName="game : Game"
-                LastKnownLocation="Modeling.uml" />
-            </coveredLifelines>
-            <finish>
-              <executionOccurrenceSpecificationMoniker
-                Id="f68e7fb4-3ebe-413c-b91c-bc8069e7c13f"
-                LastKnownName="ExecutionOccurrenceSpecification42"
-                LastKnownLocation="Modeling.uml" />
-            </finish>
-            <start>
-              <executionOccurrenceSpecificationMoniker
-                Id="de80fd69-d4ce-432b-b6f1-c1dc048e5011"
-                LastKnownName="ExecutionOccurrenceSpecification41"
-                LastKnownLocation="Modeling.uml" />
-            </start>
-            <nestedOccurrences>
-              <messageOccurrenceSpecificationMoniker
-                Id="9a219ec4-2894-4d3d-a53e-c5bd86d7abad"
-                LastKnownName="MessageOccurrenceSpecification62"
-                LastKnownLocation="Modeling.uml" />
-            </nestedOccurrences>
-          </behaviorExecutionSpecification>
-          <executionOccurrenceSpecification
-            Id="de80fd69-d4ce-432b-b6f1-c1dc048e5011"
-            name="ExecutionOccurrenceSpecification41">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="8ff63ad2-7130-468c-ad69-52144faf62df"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="Modeling.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="dcb53691-56f3-4b69-b1e1-7b5d3de19de2"
-                LastKnownName="game : Game"
-                LastKnownLocation="Modeling.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
           <executionOccurrenceSpecification
             Id="6f2aa4a4-23ee-40e5-befb-1b5119db814b"
             name="ExecutionOccurrenceSpecification16">
@@ -4971,30 +5011,10 @@ cf sheetCreations.sequenceddiagram</body>
             <covered>
               <lifelineMoniker
                 Id="7431086f-0f4a-4486-9917-8167a64970e5"
-                LastKnownName="player1 : Player"
+                LastKnownName="playerDerpy : Player"
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="d1c6591a-8f47-4de5-aa45-44ee5d1745b5"
-            name="MessageOccurrenceSpecification61">
-            <covered>
-              <lifelineMoniker
-                Id="6812c35f-459d-4acf-a0a4-d492a622b83e"
-                LastKnownName="gameMaster : GameMaster"
-                LastKnownLocation="Modeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="9a219ec4-2894-4d3d-a53e-c5bd86d7abad"
-            name="MessageOccurrenceSpecification62">
-            <covered>
-              <lifelineMoniker
-                Id="dcb53691-56f3-4b69-b1e1-7b5d3de19de2"
-                LastKnownName="game : Game"
-                LastKnownLocation="Modeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
             Id="41fb9f0f-ab1a-4c64-bc82-72144fe2dd18"
             name="MessageOccurrenceSpecification63">
@@ -5033,24 +5053,6 @@ cf sheetCreations.sequenceddiagram</body>
                 LastKnownLocation="Modeling.uml" />
             </nestedOccurrences>
           </behaviorExecutionSpecification>
-          <executionOccurrenceSpecification
-            Id="f68e7fb4-3ebe-413c-b91c-bc8069e7c13f"
-            name="ExecutionOccurrenceSpecification42">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="5e71a11b-65d6-4060-a102-5cfb9b837215"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="Modeling.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="dcb53691-56f3-4b69-b1e1-7b5d3de19de2"
-                LastKnownName="game : Game"
-                LastKnownLocation="Modeling.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
           <executionOccurrenceSpecification
             Id="5d275847-862f-4fa5-a83e-ca66471399cc"
             name="ExecutionOccurrenceSpecification43">
@@ -5122,7 +5124,7 @@ cf sheetCreations.sequenceddiagram</body>
             <coveredLifelines>
               <lifelineMoniker
                 Id="36683fad-d047-41d8-8ef0-933583144d90"
-                LastKnownName="derpy : Player"
+                LastKnownName="Derpy"
                 LastKnownLocation="Modeling.uml" />
               <lifelineMoniker
                 Id="6812c35f-459d-4acf-a0a4-d492a622b83e"
@@ -5130,11 +5132,7 @@ cf sheetCreations.sequenceddiagram</body>
                 LastKnownLocation="Modeling.uml" />
               <lifelineMoniker
                 Id="7431086f-0f4a-4486-9917-8167a64970e5"
-                LastKnownName="player1 : Player"
-                LastKnownLocation="Modeling.uml" />
-              <lifelineMoniker
-                Id="dcb53691-56f3-4b69-b1e1-7b5d3de19de2"
-                LastKnownName="game : Game"
+                LastKnownName="playerDerpy : Player"
                 LastKnownLocation="Modeling.uml" />
             </coveredLifelines>
             <operands>
@@ -5144,7 +5142,7 @@ cf sheetCreations.sequenceddiagram</body>
                 <coveredLifelines>
                   <lifelineMoniker
                     Id="36683fad-d047-41d8-8ef0-933583144d90"
-                    LastKnownName="derpy : Player"
+                    LastKnownName="Derpy"
                     LastKnownLocation="Modeling.uml" />
                   <lifelineMoniker
                     Id="6812c35f-459d-4acf-a0a4-d492a622b83e"
@@ -5152,11 +5150,7 @@ cf sheetCreations.sequenceddiagram</body>
                     LastKnownLocation="Modeling.uml" />
                   <lifelineMoniker
                     Id="7431086f-0f4a-4486-9917-8167a64970e5"
-                    LastKnownName="player1 : Player"
-                    LastKnownLocation="Modeling.uml" />
-                  <lifelineMoniker
-                    Id="dcb53691-56f3-4b69-b1e1-7b5d3de19de2"
-                    LastKnownName="game : Game"
+                    LastKnownName="playerDerpy : Player"
                     LastKnownLocation="Modeling.uml" />
                 </coveredLifelines>
                 <guard>
@@ -5188,25 +5182,17 @@ cf sheetCreations.sequenceddiagram</body>
                     Id="12b444d2-1f22-4d0b-a00d-b8a87f9095dc"
                     LastKnownName="OperandOccurrenceSpecification18"
                     LastKnownLocation="Modeling.uml" />
-                  <operandOccurrenceSpecificationMoniker
-                    Id="bac496d6-fe81-4abe-8f5d-c371f407ce28"
-                    LastKnownName="OperandOccurrenceSpecification19"
-                    LastKnownLocation="Modeling.uml" />
-                  <operandOccurrenceSpecificationMoniker
-                    Id="80383749-349b-4fe6-a992-195e44b818bb"
-                    LastKnownName="OperandOccurrenceSpecification20"
-                    LastKnownLocation="Modeling.uml" />
                 </operandOccurrenceSpecifications>
               </interactionOperand>
             </operands>
           </combinedFragment>
           <operandOccurrenceSpecification
-            Id="29604ada-ca02-4cc1-ae8b-abdd94c142c3"
-            name="OperandOccurrenceSpecification13">
+            Id="52413d5b-b2cd-463d-93e4-0555d7a292e7"
+            name="OperandOccurrenceSpecification15">
             <covered>
               <lifelineMoniker
-                Id="7431086f-0f4a-4486-9917-8167a64970e5"
-                LastKnownName="player1 : Player"
+                Id="36683fad-d047-41d8-8ef0-933583144d90"
+                LastKnownName="Derpy"
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -5221,22 +5207,12 @@ cf sheetCreations.sequenceddiagram</body>
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="bac496d6-fe81-4abe-8f5d-c371f407ce28"
-            name="OperandOccurrenceSpecification19">
+            Id="29604ada-ca02-4cc1-ae8b-abdd94c142c3"
+            name="OperandOccurrenceSpecification13">
             <covered>
               <lifelineMoniker
-                Id="dcb53691-56f3-4b69-b1e1-7b5d3de19de2"
-                LastKnownName="game : Game"
-                LastKnownLocation="Modeling.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="52413d5b-b2cd-463d-93e4-0555d7a292e7"
-            name="OperandOccurrenceSpecification15">
-            <covered>
-              <lifelineMoniker
-                Id="36683fad-d047-41d8-8ef0-933583144d90"
-                LastKnownName="derpy : Player"
+                Id="7431086f-0f4a-4486-9917-8167a64970e5"
+                LastKnownName="playerDerpy : Player"
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -5246,7 +5222,7 @@ cf sheetCreations.sequenceddiagram</body>
             <coveredLifelines>
               <lifelineMoniker
                 Id="7431086f-0f4a-4486-9917-8167a64970e5"
-                LastKnownName="player1 : Player"
+                LastKnownName="playerDerpy : Player"
                 LastKnownLocation="Modeling.uml" />
             </coveredLifelines>
             <finish>
@@ -5286,27 +5262,27 @@ cf sheetCreations.sequenceddiagram</body>
             <covered>
               <lifelineMoniker
                 Id="7431086f-0f4a-4486-9917-8167a64970e5"
-                LastKnownName="player1 : Player"
+                LastKnownName="playerDerpy : Player"
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="a166c7ba-98a6-428a-9eb2-e2126968a26b"
-            name="MessageOccurrenceSpecification68">
-            <covered>
-              <lifelineMoniker
-                Id="7431086f-0f4a-4486-9917-8167a64970e5"
-                LastKnownName="player1 : Player"
-                LastKnownLocation="Modeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
             Id="b1230e7e-7f82-4877-a300-7fd202acae42"
             name="MessageOccurrenceSpecification67">
             <covered>
               <lifelineMoniker
                 Id="36683fad-d047-41d8-8ef0-933583144d90"
-                LastKnownName="derpy : Player"
+                LastKnownName="Derpy"
+                LastKnownLocation="Modeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="a166c7ba-98a6-428a-9eb2-e2126968a26b"
+            name="MessageOccurrenceSpecification68">
+            <covered>
+              <lifelineMoniker
+                Id="7431086f-0f4a-4486-9917-8167a64970e5"
+                LastKnownName="playerDerpy : Player"
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -5336,10 +5312,6 @@ cf sheetCreations.sequenceddiagram</body>
                 Id="c63dc875-6947-41c6-bdd1-ed8a65ea7325"
                 LastKnownName="MessageOccurrenceSpecification70"
                 LastKnownLocation="Modeling.uml" />
-              <messageOccurrenceSpecificationMoniker
-                Id="1de5fc41-9da0-48fa-b421-1f0fa9953729"
-                LastKnownName="MessageOccurrenceSpecification71"
-                LastKnownLocation="Modeling.uml" />
             </nestedOccurrences>
           </behaviorExecutionSpecification>
           <executionOccurrenceSpecification
@@ -5366,7 +5338,7 @@ cf sheetCreations.sequenceddiagram</body>
             <covered>
               <lifelineMoniker
                 Id="7431086f-0f4a-4486-9917-8167a64970e5"
-                LastKnownName="player1 : Player"
+                LastKnownName="playerDerpy : Player"
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -5380,34 +5352,6 @@ cf sheetCreations.sequenceddiagram</body>
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </messageOccurrenceSpecification>
-          <behaviorExecutionSpecification
-            Id="23f937c3-2766-422b-ba9b-5c8868ae2d5f"
-            name="BehaviorExecutionSpecification26">
-            <coveredLifelines>
-              <lifelineMoniker
-                Id="dcb53691-56f3-4b69-b1e1-7b5d3de19de2"
-                LastKnownName="game : Game"
-                LastKnownLocation="Modeling.uml" />
-            </coveredLifelines>
-            <finish>
-              <executionOccurrenceSpecificationMoniker
-                Id="fe42e08c-7302-4a7f-b324-10096ec086be"
-                LastKnownName="ExecutionOccurrenceSpecification52"
-                LastKnownLocation="Modeling.uml" />
-            </finish>
-            <start>
-              <executionOccurrenceSpecificationMoniker
-                Id="1478fd65-c748-4fba-83c1-2acc67c6fb6f"
-                LastKnownName="ExecutionOccurrenceSpecification51"
-                LastKnownLocation="Modeling.uml" />
-            </start>
-            <nestedOccurrences>
-              <messageOccurrenceSpecificationMoniker
-                Id="15189109-5592-4b6d-a485-d2e30c75dba1"
-                LastKnownName="MessageOccurrenceSpecification72"
-                LastKnownLocation="Modeling.uml" />
-            </nestedOccurrences>
-          </behaviorExecutionSpecification>
           <executionOccurrenceSpecification
             Id="f1d29825-87d6-498d-a614-9afb7c22d822"
             name="ExecutionOccurrenceSpecification48">
@@ -5422,48 +5366,10 @@ cf sheetCreations.sequenceddiagram</body>
             <covered>
               <lifelineMoniker
                 Id="7431086f-0f4a-4486-9917-8167a64970e5"
-                LastKnownName="player1 : Player"
+                LastKnownName="playerDerpy : Player"
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </executionOccurrenceSpecification>
-          <executionOccurrenceSpecification
-            Id="1478fd65-c748-4fba-83c1-2acc67c6fb6f"
-            name="ExecutionOccurrenceSpecification51">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="bf81123e-7541-49c4-9f60-5e8e15d186fa"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="Modeling.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="dcb53691-56f3-4b69-b1e1-7b5d3de19de2"
-                LastKnownName="game : Game"
-                LastKnownLocation="Modeling.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="1de5fc41-9da0-48fa-b421-1f0fa9953729"
-            name="MessageOccurrenceSpecification71">
-            <covered>
-              <lifelineMoniker
-                Id="6812c35f-459d-4acf-a0a4-d492a622b83e"
-                LastKnownName="gameMaster : GameMaster"
-                LastKnownLocation="Modeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
-            Id="15189109-5592-4b6d-a485-d2e30c75dba1"
-            name="MessageOccurrenceSpecification72">
-            <covered>
-              <lifelineMoniker
-                Id="dcb53691-56f3-4b69-b1e1-7b5d3de19de2"
-                LastKnownName="game : Game"
-                LastKnownLocation="Modeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
           <executionOccurrenceSpecification
             Id="b065135d-a49c-43fe-a82c-e191870e7d4d"
             name="ExecutionOccurrenceSpecification50">
@@ -5482,44 +5388,6 @@ cf sheetCreations.sequenceddiagram</body>
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </executionOccurrenceSpecification>
-          <executionOccurrenceSpecification
-            Id="fe42e08c-7302-4a7f-b324-10096ec086be"
-            name="ExecutionOccurrenceSpecification52">
-            <event>
-              <executionOccurrenceSpecificationReferencesEvent>
-                <executionEventMoniker
-                  Id="d43e4dc9-f255-4536-a935-e55adc2b78f4"
-                  LastKnownName="ExecutionEvent"
-                  LastKnownLocation="Modeling.uml" />
-              </executionOccurrenceSpecificationReferencesEvent>
-            </event>
-            <covered>
-              <lifelineMoniker
-                Id="dcb53691-56f3-4b69-b1e1-7b5d3de19de2"
-                LastKnownName="game : Game"
-                LastKnownLocation="Modeling.uml" />
-            </covered>
-          </executionOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="7f8eef5d-06fa-46b8-89e7-3515b99e97f2"
-            name="OperandOccurrenceSpecification14">
-            <covered>
-              <lifelineMoniker
-                Id="7431086f-0f4a-4486-9917-8167a64970e5"
-                LastKnownName="player1 : Player"
-                LastKnownLocation="Modeling.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="ffa8c74f-1c3d-42ea-a363-433c2ce8d14d"
-            name="OperandOccurrenceSpecification16">
-            <covered>
-              <lifelineMoniker
-                Id="36683fad-d047-41d8-8ef0-933583144d90"
-                LastKnownName="derpy : Player"
-                LastKnownLocation="Modeling.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
             Id="12b444d2-1f22-4d0b-a00d-b8a87f9095dc"
             name="OperandOccurrenceSpecification18">
@@ -5531,12 +5399,22 @@ cf sheetCreations.sequenceddiagram</body>
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="80383749-349b-4fe6-a992-195e44b818bb"
-            name="OperandOccurrenceSpecification20">
+            Id="ffa8c74f-1c3d-42ea-a363-433c2ce8d14d"
+            name="OperandOccurrenceSpecification16">
             <covered>
               <lifelineMoniker
-                Id="dcb53691-56f3-4b69-b1e1-7b5d3de19de2"
-                LastKnownName="game : Game"
+                Id="36683fad-d047-41d8-8ef0-933583144d90"
+                LastKnownName="Derpy"
+                LastKnownLocation="Modeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="7f8eef5d-06fa-46b8-89e7-3515b99e97f2"
+            name="OperandOccurrenceSpecification14">
+            <covered>
+              <lifelineMoniker
+                Id="7431086f-0f4a-4486-9917-8167a64970e5"
+                LastKnownName="playerDerpy : Player"
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -5595,22 +5473,22 @@ cf sheetCreations.sequenceddiagram</body>
             </operands>
           </combinedFragment>
           <operandOccurrenceSpecification
-            Id="6710d1c8-624b-4671-96aa-e765f720e7fb"
-            name="OperandOccurrenceSpecification21">
-            <covered>
-              <lifelineMoniker
-                Id="dcb53691-56f3-4b69-b1e1-7b5d3de19de2"
-                LastKnownName="game : Game"
-                LastKnownLocation="Modeling.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
             Id="74911d86-3fbb-41e0-8d71-3471e4620ff1"
             name="OperandOccurrenceSpecification23">
             <covered>
               <lifelineMoniker
                 Id="6812c35f-459d-4acf-a0a4-d492a622b83e"
                 LastKnownName="gameMaster : GameMaster"
+                LastKnownLocation="Modeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="6710d1c8-624b-4671-96aa-e765f720e7fb"
+            name="OperandOccurrenceSpecification21">
+            <covered>
+              <lifelineMoniker
+                Id="dcb53691-56f3-4b69-b1e1-7b5d3de19de2"
+                LastKnownName="game : Game"
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -5661,22 +5539,22 @@ cf sheetCreations.sequenceddiagram</body>
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="cadb3c7d-8968-4306-94ec-318386be2ea6"
-            name="MessageOccurrenceSpecification66">
-            <covered>
-              <lifelineMoniker
-                Id="dcb53691-56f3-4b69-b1e1-7b5d3de19de2"
-                LastKnownName="game : Game"
-                LastKnownLocation="Modeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="b5d2cebb-7eaa-406b-9020-e240426e4383"
             name="MessageOccurrenceSpecification65">
             <covered>
               <lifelineMoniker
                 Id="6812c35f-459d-4acf-a0a4-d492a622b83e"
                 LastKnownName="gameMaster : GameMaster"
+                LastKnownLocation="Modeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="cadb3c7d-8968-4306-94ec-318386be2ea6"
+            name="MessageOccurrenceSpecification66">
+            <covered>
+              <lifelineMoniker
+                Id="dcb53691-56f3-4b69-b1e1-7b5d3de19de2"
+                LastKnownName="game : Game"
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -5699,16 +5577,6 @@ cf sheetCreations.sequenceddiagram</body>
             </covered>
           </executionOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="ea97beb9-1580-4f1a-9228-1da157567a2f"
-            name="OperandOccurrenceSpecification22">
-            <covered>
-              <lifelineMoniker
-                Id="dcb53691-56f3-4b69-b1e1-7b5d3de19de2"
-                LastKnownName="game : Game"
-                LastKnownLocation="Modeling.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
             Id="5e5d3498-4edc-4474-acac-757142c19e6c"
             name="OperandOccurrenceSpecification24">
             <covered>
@@ -5718,18 +5586,23 @@ cf sheetCreations.sequenceddiagram</body>
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="ea97beb9-1580-4f1a-9228-1da157567a2f"
+            name="OperandOccurrenceSpecification22">
+            <covered>
+              <lifelineMoniker
+                Id="dcb53691-56f3-4b69-b1e1-7b5d3de19de2"
+                LastKnownName="game : Game"
+                LastKnownLocation="Modeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
         </fragments>
         <lifelines>
           <lifeline
             Id="36683fad-d047-41d8-8ef0-933583144d90"
-            name="derpy : Player"
+            name="Derpy"
             isActor="true"
-            lifelineDisplayName="derpy : Player">
-            <represents>
-              <propertyMoniker
-                Id="3ebab5f3-a757-4914-9af0-ea57e4c03f42"
-                LastKnownLocation="Modeling.uml" />
-            </represents>
+            lifelineDisplayName="Derpy">
             <topLevelOccurrences>
               <messageOccurrenceSpecificationMoniker
                 Id="b28eec6c-73d5-4b99-95dc-10285c32a22b"
@@ -5820,9 +5693,9 @@ cf sheetCreations.sequenceddiagram</body>
           </lifeline>
           <lifeline
             Id="7431086f-0f4a-4486-9917-8167a64970e5"
-            name="player1 : Player"
+            name="playerDerpy : Player"
             isActor="false"
-            lifelineDisplayName="player1 : Player">
+            lifelineDisplayName="playerDerpy : Player">
             <represents>
               <propertyMoniker
                 Id="89d38714-b94b-429b-9dfc-8e2b9fe2df6d"
@@ -5899,28 +5772,12 @@ cf sheetCreations.sequenceddiagram</body>
                 LastKnownName="ExecutionOccurrenceSpecification6"
                 LastKnownLocation="Modeling.uml" />
               <executionOccurrenceSpecificationMoniker
-                Id="de80fd69-d4ce-432b-b6f1-c1dc048e5011"
-                LastKnownName="ExecutionOccurrenceSpecification41"
+                Id="a0550bf4-ff9d-4acb-bd72-92177ffae251"
+                LastKnownName="ExecutionOccurrenceSpecification53"
                 LastKnownLocation="Modeling.uml" />
               <executionOccurrenceSpecificationMoniker
-                Id="f68e7fb4-3ebe-413c-b91c-bc8069e7c13f"
-                LastKnownName="ExecutionOccurrenceSpecification42"
-                LastKnownLocation="Modeling.uml" />
-              <operandOccurrenceSpecificationMoniker
-                Id="bac496d6-fe81-4abe-8f5d-c371f407ce28"
-                LastKnownName="OperandOccurrenceSpecification19"
-                LastKnownLocation="Modeling.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="1478fd65-c748-4fba-83c1-2acc67c6fb6f"
-                LastKnownName="ExecutionOccurrenceSpecification51"
-                LastKnownLocation="Modeling.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="fe42e08c-7302-4a7f-b324-10096ec086be"
-                LastKnownName="ExecutionOccurrenceSpecification52"
-                LastKnownLocation="Modeling.uml" />
-              <operandOccurrenceSpecificationMoniker
-                Id="80383749-349b-4fe6-a992-195e44b818bb"
-                LastKnownName="OperandOccurrenceSpecification20"
+                Id="68f6d1c0-4bda-43a1-b363-f648c0d2625b"
+                LastKnownName="ExecutionOccurrenceSpecification54"
                 LastKnownLocation="Modeling.uml" />
               <operandOccurrenceSpecificationMoniker
                 Id="6710d1c8-624b-4671-96aa-e765f720e7fb"
@@ -5952,20 +5809,12 @@ cf sheetCreations.sequenceddiagram</body>
             </represents>
             <topLevelOccurrences>
               <executionOccurrenceSpecificationMoniker
-                Id="fec86e3f-df9b-4f89-bf69-12cc478ac20f"
-                LastKnownName="ExecutionOccurrenceSpecification7"
+                Id="2c619784-fe4a-45a1-a430-678a51f9851c"
+                LastKnownName="ExecutionOccurrenceSpecification55"
                 LastKnownLocation="Modeling.uml" />
               <executionOccurrenceSpecificationMoniker
-                Id="b6d05553-40a6-4413-bc9c-005b5dd15c4a"
-                LastKnownName="ExecutionOccurrenceSpecification8"
-                LastKnownLocation="Modeling.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="fad78e30-49a9-47ff-9127-cda11d59f32b"
-                LastKnownName="ExecutionOccurrenceSpecification9"
-                LastKnownLocation="Modeling.uml" />
-              <executionOccurrenceSpecificationMoniker
-                Id="aef43a88-4d6d-4c29-bff6-f032b2142ad8"
-                LastKnownName="ExecutionOccurrenceSpecification10"
+                Id="89729803-5b0c-43fb-8e73-c19f929c86b9"
+                LastKnownName="ExecutionOccurrenceSpecification56"
                 LastKnownLocation="Modeling.uml" />
             </topLevelOccurrences>
           </lifeline>
@@ -6010,12 +5859,12 @@ cf sheetCreations.sequenceddiagram</body>
             </represents>
             <topLevelOccurrences>
               <executionOccurrenceSpecificationMoniker
-                Id="d9e76d7f-35ee-42bf-a9ee-7618a8366bcc"
-                LastKnownName="ExecutionOccurrenceSpecification37"
+                Id="520069b0-b8b2-4684-80fc-2966a65a820d"
+                LastKnownName="ExecutionOccurrenceSpecification57"
                 LastKnownLocation="Modeling.uml" />
               <executionOccurrenceSpecificationMoniker
-                Id="ac29e67d-22cf-4991-9199-ef78bb89cb37"
-                LastKnownName="ExecutionOccurrenceSpecification38"
+                Id="0f7011e3-a06a-4401-bcbc-d2f5323349d1"
+                LastKnownName="ExecutionOccurrenceSpecification58"
                 LastKnownLocation="Modeling.uml" />
             </topLevelOccurrences>
           </lifeline>
@@ -6023,7 +5872,7 @@ cf sheetCreations.sequenceddiagram</body>
         <messages>
           <message
             Id="112adbc5-39c9-41b6-9398-6f4fe143f678"
-            name="Select a song"
+            name="selectSong(song)"
             messageKind="Complete"
             messageSort="AsynchCall"
             createSelfMessage="false">
@@ -6041,46 +5890,8 @@ cf sheetCreations.sequenceddiagram</body>
             </receiveEvent>
           </message>
           <message
-            Id="6d38a66b-06dd-44eb-b75a-143acc275224"
-            name="&lt;&lt;create&gt;&gt;"
-            messageKind="Complete"
-            messageSort="CreateMessage"
-            createSelfMessage="false">
-            <sendEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="cde064d9-86ab-4edc-9784-98bbc359908f"
-                LastKnownName="MessageOccurrenceSpecification11"
-                LastKnownLocation="Modeling.uml" />
-            </sendEvent>
-            <receiveEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="0ad28f64-5c43-4538-b5e2-47c4718544cf"
-                LastKnownName="MessageOccurrenceSpecification12"
-                LastKnownLocation="Modeling.uml" />
-            </receiveEvent>
-          </message>
-          <message
-            Id="c88d216c-ab35-4df8-a294-9c3b4acd2964"
-            name="&lt;&lt;return&gt;&gt;"
-            messageKind="Complete"
-            messageSort="Reply"
-            createSelfMessage="false">
-            <sendEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="87bbf4e1-1dd0-4514-a666-72221f97fae7"
-                LastKnownName="MessageOccurrenceSpecification13"
-                LastKnownLocation="Modeling.uml" />
-            </sendEvent>
-            <receiveEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="6fe71f39-7187-453f-88e9-1a957221484e"
-                LastKnownName="MessageOccurrenceSpecification14"
-                LastKnownLocation="Modeling.uml" />
-            </receiveEvent>
-          </message>
-          <message
             Id="10a5ca6a-fa67-42cb-b09b-0bf865f4b6a8"
-            name="&lt;&lt;create&gt;&gt;"
+            name="new(song)"
             messageKind="Complete"
             messageSort="CreateMessage"
             createSelfMessage="false">
@@ -6118,7 +5929,7 @@ cf sheetCreations.sequenceddiagram</body>
           </message>
           <message
             Id="8f15517c-7b10-4c90-8446-d56f2feb7a28"
-            name="&lt;&lt;create&gt;&gt;"
+            name="new(derpy)"
             messageKind="Complete"
             messageSort="CreateMessage"
             createSelfMessage="false">
@@ -6136,40 +5947,78 @@ cf sheetCreations.sequenceddiagram</body>
             </receiveEvent>
           </message>
           <message
-            Id="697be596-c846-4da2-86e6-22c65d3b06eb"
-            name="Get available Instruments list"
+            Id="f02ec042-644e-4110-a435-a2e2366e5ff0"
+            name="getInstruments()"
             messageKind="Complete"
             messageSort="SynchCall"
             createSelfMessage="false">
             <sendEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="ed77db14-0259-43ba-97ba-4d20f10ddfdc"
-                LastKnownName="MessageOccurrenceSpecification15"
+                Id="fd42cb8e-7e68-40a2-b5f1-161c95f59cde"
+                LastKnownName="MessageOccurrenceSpecification73"
                 LastKnownLocation="Modeling.uml" />
             </sendEvent>
             <receiveEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="857bb43b-f86b-432c-a8a7-bab128f1c3ac"
-                LastKnownName="MessageOccurrenceSpecification16"
+                Id="f58efd0e-50c8-4c3b-bd21-875444c78630"
+                LastKnownName="MessageOccurrenceSpecification74"
                 LastKnownLocation="Modeling.uml" />
             </receiveEvent>
           </message>
           <message
-            Id="bb616b66-7aac-4fd4-b682-c52c717693e3"
+            Id="17bf1249-012a-460f-8303-037424fadd5e"
+            name="getInstruments()"
+            messageKind="Complete"
+            messageSort="SynchCall"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="784c4213-b02c-4b04-9624-3d1f08b072ea"
+                LastKnownName="MessageOccurrenceSpecification77"
+                LastKnownLocation="Modeling.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="baff3517-1071-4e59-b66a-c0a9fadde0dd"
+                LastKnownName="MessageOccurrenceSpecification78"
+                LastKnownLocation="Modeling.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="0021d463-8268-4e5f-b52c-ad75f7c4f023"
             name="&lt;&lt;return&gt;&gt;"
             messageKind="Complete"
             messageSort="Reply"
             createSelfMessage="false">
             <sendEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="bad304b2-3404-4c51-82a7-7558cca216c2"
-                LastKnownName="MessageOccurrenceSpecification17"
+                Id="0b14d852-0370-452a-9e9d-2aa1bef9866c"
+                LastKnownName="MessageOccurrenceSpecification79"
                 LastKnownLocation="Modeling.uml" />
             </sendEvent>
             <receiveEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="d9e24010-8a64-4f2d-bc50-d9a2f188dbc4"
-                LastKnownName="MessageOccurrenceSpecification18"
+                Id="dca688c8-4339-4259-a86c-f14490bd1c2c"
+                LastKnownName="MessageOccurrenceSpecification80"
+                LastKnownLocation="Modeling.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="5d792d7f-2480-411b-9f4b-6667eb58cc7b"
+            name="&lt;&lt;return&gt;&gt;"
+            messageKind="Complete"
+            messageSort="Reply"
+            createSelfMessage="false">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="d1821122-edf1-4469-959e-6a001ccd7d6c"
+                LastKnownName="MessageOccurrenceSpecification75"
+                LastKnownLocation="Modeling.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="d4e9b2e6-bbc1-4b10-8028-f640e5c8d54c"
+                LastKnownName="MessageOccurrenceSpecification76"
                 LastKnownLocation="Modeling.uml" />
             </receiveEvent>
           </message>
@@ -6194,7 +6043,7 @@ cf sheetCreations.sequenceddiagram</body>
           </message>
           <message
             Id="bd64d0d4-c346-4474-8a7e-7b05541728c5"
-            name="Pick Instrument"
+            name="pickInstrument(instrument)"
             messageKind="Complete"
             messageSort="AsynchCall"
             createSelfMessage="false">
@@ -6213,7 +6062,7 @@ cf sheetCreations.sequenceddiagram</body>
           </message>
           <message
             Id="e55d9ce4-2d57-44ce-b1b7-61d9298c6609"
-            name="Pick difficulty"
+            name="pickDifficulty(difficulty)"
             messageKind="Complete"
             messageSort="AsynchCall"
             createSelfMessage="false">
@@ -6232,7 +6081,7 @@ cf sheetCreations.sequenceddiagram</body>
           </message>
           <message
             Id="699bd13e-ebb9-4241-9dfe-c27ba4efb3a7"
-            name="Ready!"
+            name="ready()"
             messageKind="Complete"
             messageSort="AsynchCall"
             createSelfMessage="false">
@@ -6251,7 +6100,7 @@ cf sheetCreations.sequenceddiagram</body>
           </message>
           <message
             Id="11705f32-9bdb-4dd4-bb29-917bbc16a2f4"
-            name="&lt;&lt;create&gt;&gt; avec tous les arguments"
+            name="new(game.getSong(), instrument, difficulty)"
             messageKind="Complete"
             messageSort="CreateMessage"
             createSelfMessage="false">
@@ -6289,7 +6138,7 @@ cf sheetCreations.sequenceddiagram</body>
           </message>
           <message
             Id="ca508571-3403-4ce1-9d81-25c1a34fa5ad"
-            name="Build Sheet"
+            name="buildSheet()"
             messageKind="Complete"
             messageSort="SynchCall"
             createSelfMessage="false">
@@ -6307,40 +6156,59 @@ cf sheetCreations.sequenceddiagram</body>
             </receiveEvent>
           </message>
           <message
-            Id="41244ccf-e74b-4c5f-9e1b-b3778d528074"
-            name="Build"
+            Id="76d8deba-b685-4d5c-a4e1-b33d3005cf23"
+            name="&lt;&lt;create&gt;&gt;"
             messageKind="Complete"
-            messageSort="SynchCall"
+            messageSort="CreateMessage"
             createSelfMessage="false">
             <sendEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="038429c9-afac-43d4-afd5-d12a5c4c2534"
-                LastKnownName="MessageOccurrenceSpecification55"
+                Id="78e97f8d-6f25-479d-a244-46d7c071c5f1"
+                LastKnownName="MessageOccurrenceSpecification81"
                 LastKnownLocation="Modeling.uml" />
             </sendEvent>
             <receiveEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="3b46a4ad-0adb-47a1-abc0-60298aaf0b6b"
-                LastKnownName="MessageOccurrenceSpecification56"
+                Id="3eac546c-9edf-4964-b8d5-9543a39d8fef"
+                LastKnownName="MessageOccurrenceSpecification82"
                 LastKnownLocation="Modeling.uml" />
             </receiveEvent>
           </message>
           <message
-            Id="8f7f84e2-b8de-4800-91d3-990170a984fd"
+            Id="d4d95523-8034-4cc0-9a8a-0404842b56b9"
             name="&lt;&lt;return&gt;&gt;"
             messageKind="Complete"
             messageSort="Reply"
             createSelfMessage="false">
             <sendEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="0fb6d25e-f9eb-4a0a-8fd3-2c600450b0d1"
-                LastKnownName="MessageOccurrenceSpecification57"
+                Id="616797f4-dec1-4134-b27d-fa13a11cf344"
+                LastKnownName="MessageOccurrenceSpecification83"
                 LastKnownLocation="Modeling.uml" />
             </sendEvent>
             <receiveEvent>
               <messageOccurrenceSpecificationMoniker
-                Id="7987ddd4-2900-4ba0-8089-30f996ec386b"
-                LastKnownName="MessageOccurrenceSpecification58"
+                Id="97dd989d-5cfd-4c75-a765-3cc6ce5fe6a7"
+                LastKnownName="MessageOccurrenceSpecification84"
+                LastKnownLocation="Modeling.uml" />
+            </receiveEvent>
+          </message>
+          <message
+            Id="ce2440a8-5737-42ef-9139-b73839d68c52"
+            name="build()"
+            messageKind="Complete"
+            messageSort="AsynchCall"
+            createSelfMessage="true">
+            <sendEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="3b5df1ec-9280-4c5b-94a3-bb80c6d485ec"
+                LastKnownName="MessageOccurrenceSpecification85"
+                LastKnownLocation="Modeling.uml" />
+            </sendEvent>
+            <receiveEvent>
+              <messageOccurrenceSpecificationMoniker
+                Id="df5e8476-1c91-426c-b57d-7069893c3cbe"
+                LastKnownName="MessageOccurrenceSpecification86"
                 LastKnownLocation="Modeling.uml" />
             </receiveEvent>
           </message>
@@ -6365,7 +6233,7 @@ cf sheetCreations.sequenceddiagram</body>
           </message>
           <message
             Id="9ad0f673-2ce3-491a-92e6-abb3e2add32a"
-            name="Player derpy ready!"
+            name="ready(playerDerpy)"
             messageKind="Complete"
             messageSort="AsynchCall"
             createSelfMessage="false">
@@ -6383,27 +6251,8 @@ cf sheetCreations.sequenceddiagram</body>
             </receiveEvent>
           </message>
           <message
-            Id="0f6bd94d-4052-43d4-8ba6-9b81787a34a7"
-            name="Add Player derpy"
-            messageKind="Complete"
-            messageSort="AsynchCall"
-            createSelfMessage="false">
-            <sendEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="d1c6591a-8f47-4de5-aa45-44ee5d1745b5"
-                LastKnownName="MessageOccurrenceSpecification61"
-                LastKnownLocation="Modeling.uml" />
-            </sendEvent>
-            <receiveEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="9a219ec4-2894-4d3d-a53e-c5bd86d7abad"
-                LastKnownName="MessageOccurrenceSpecification62"
-                LastKnownLocation="Modeling.uml" />
-            </receiveEvent>
-          </message>
-          <message
             Id="8ca2d7c8-3447-4573-9a86-3bb84357b11a"
-            name="Are all players ready?"
+            name="isEveryoneReady()"
             messageKind="Complete"
             messageSort="SynchCall"
             createSelfMessage="true">
@@ -6422,7 +6271,7 @@ cf sheetCreations.sequenceddiagram</body>
           </message>
           <message
             Id="12d1d931-1f25-4999-929b-3af795e79cea"
-            name="Cancel"
+            name="cancel()"
             messageKind="Complete"
             messageSort="AsynchCall"
             createSelfMessage="false">
@@ -6441,7 +6290,7 @@ cf sheetCreations.sequenceddiagram</body>
           </message>
           <message
             Id="dc093779-cbc8-4b66-9d25-4fea2ed7c229"
-            name="Player derpy not ready"
+            name="notReady(playerDerpy)"
             messageKind="Complete"
             messageSort="AsynchCall"
             createSelfMessage="false">
@@ -6459,27 +6308,8 @@ cf sheetCreations.sequenceddiagram</body>
             </receiveEvent>
           </message>
           <message
-            Id="570134d6-90f7-4a48-94b4-9c0dc6ea47a4"
-            name="Remove Player derpy"
-            messageKind="Complete"
-            messageSort="AsynchCall"
-            createSelfMessage="false">
-            <sendEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="1de5fc41-9da0-48fa-b421-1f0fa9953729"
-                LastKnownName="MessageOccurrenceSpecification71"
-                LastKnownLocation="Modeling.uml" />
-            </sendEvent>
-            <receiveEvent>
-              <messageOccurrenceSpecificationMoniker
-                Id="15189109-5592-4b6d-a485-d2e30c75dba1"
-                LastKnownName="MessageOccurrenceSpecification72"
-                LastKnownLocation="Modeling.uml" />
-            </receiveEvent>
-          </message>
-          <message
             Id="437c8331-6a6f-45e6-8571-83be9658956b"
-            name="Start Game"
+            name="start()"
             messageKind="Complete"
             messageSort="AsynchCall"
             createSelfMessage="false">
@@ -6498,22 +6328,6 @@ cf sheetCreations.sequenceddiagram</body>
           </message>
         </messages>
         <ownedAttributesInternal>
-          <property
-            Id="3ebab5f3-a757-4914-9af0-ea57e4c03f42"
-            isLeaf="false"
-            isStatic="false"
-            isReadOnly="false"
-            isDerived="false"
-            isDerivedUnion="false"
-            aggregation="None"
-            isComposite="false">
-            <type_NamedElement>
-              <actorMoniker
-                Id="c15f0d63-53cf-47cd-a4b0-bdc2616e928e"
-                LastKnownName="Player"
-                LastKnownLocation="Modeling.uml" />
-            </type_NamedElement>
-          </property>
           <property
             Id="04f5df10-0f00-4702-afcb-2e5c072ae24a"
             isLeaf="false"
@@ -6683,26 +6497,6 @@ cf sheetCreations.sequenceddiagram</body>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <executionEvent
-        Id="a160d6aa-c032-4399-8450-3c561a3a8558"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="ab8fb353-d231-4d9c-9e53-44d51b7187ec"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="f073a3c6-b4fe-4622-b527-c7b52843ec71"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="8552f8f6-547d-4c92-82e2-5fb3c6017ded"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
         Id="b870fded-935a-45a0-81f8-60661ce6c92c"
         name="ExecutionEvent" />
     </packageHasNamedElement>
@@ -6733,32 +6527,12 @@ cf sheetCreations.sequenceddiagram</body>
     </packageHasNamedElement>
     <packageHasNamedElement>
       <executionEvent
-        Id="19786889-81cf-4669-ac8d-a3fe063eeeb6"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="c05cc6ac-e66f-4443-a61a-e12663b9cdf0"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
         Id="d058381d-73d0-4d54-af2a-3261fa8e4f5c"
         name="ExecutionEvent" />
     </packageHasNamedElement>
     <packageHasNamedElement>
       <executionEvent
         Id="dde1cc20-2344-4204-9c8f-a5a2ed3f96a3"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="8ff63ad2-7130-468c-ad69-52144faf62df"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="5e71a11b-65d6-4060-a102-5cfb9b837215"
         name="ExecutionEvent" />
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -6799,16 +6573,6 @@ cf sheetCreations.sequenceddiagram</body>
     <packageHasNamedElement>
       <executionEvent
         Id="9d46ff1f-465d-42f1-b2cf-ddb7a0e56a23"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="bf81123e-7541-49c4-9f60-5e8e15d186fa"
-        name="ExecutionEvent" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <executionEvent
-        Id="d43e4dc9-f255-4536-a935-e55adc2b78f4"
         name="ExecutionEvent" />
     </packageHasNamedElement>
     <packageHasNamedElement>
@@ -9887,6 +9651,46 @@ cf sheetCreations.sequenceddiagram</body>
       <undefinedType
         Id="fcae4f2b-70ab-4f73-ba14-76827202d066"
         name="Whole" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="cd0f7ccf-686d-4bdc-9bce-a4e3eba75ef0"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="86cbac81-c07d-49c0-919e-9de89e48e157"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="0ec1d8e1-c4ff-4ed8-82b3-f01de7c04ca4"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="a8198ff1-0269-490c-81ce-69e0aed0a098"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="406f5ddc-7c1f-499a-8bb9-8aeca1aba2fa"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="187f8aca-f554-4ae1-a376-c5dd36519eb4"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="43d74542-3b22-4993-b5a2-eb0a7536a78c"
+        name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <executionEvent
+        Id="4319a09f-578a-4f85-b91d-a127e22e446a"
+        name="ExecutionEvent" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

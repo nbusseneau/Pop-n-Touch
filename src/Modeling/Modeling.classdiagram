@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="42b111d9-aa66-4cde-8fe2-6b7c9361bc75" name="PnTNico" linkedPackageId="9083596e-beba-4361-a1d4-f5b04dd77df0" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm12="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="42b111d9-aa66-4cde-8fe2-6b7c9361bc75" name="PnTNico" linkedPackageId="9083596e-beba-4361-a1d4-f5b04dd77df0" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <packagedElements>
     <logicalClassDesignerModelHasPackages>
       <package Id="43925a60-c6c6-4e7b-8068-645590c5e255" name="Model">
@@ -75,34 +75,77 @@
                   <elementDefinition Id="4bb50311-4f8b-4fe3-b380-7d1e81cf752d" />
                 </association>
               </targetEnds>
+              <ownedAttributesInternal>
+                <property Id="df9f6d1b-c979-4684-bc27-c19d2d75450f" name="Player[] players" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="b2132fa8-96cb-41ff-9cde-f5f375fdd3b7" />
+                </property>
+              </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="55e0b2cd-98fb-4e8a-8b87-dcb337714756" name="void selectSong" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="acf75608-e39c-4fd3-af3c-90dc9572b621" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="572bb6e8-ebe1-4b38-8d74-2caf976e9005" name="Song song" direction="In" isUnique="false">
+                        <elementDefinition Id="4a5fe94d-f85a-465a-aa3f-b183df5479bd" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="c9acc0f0-ab31-4b21-8ccc-9b627e483c6c" name="void ready" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="5bafd8de-44f9-421b-bafa-ee81e766703a" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="787918a2-2163-44dd-a399-50f0679ead3d" name="Player player" direction="In" isUnique="false">
+                        <elementDefinition Id="94e4740e-4743-469f-9d8a-d9be99323c3c" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="e16c7b37-3ab4-496d-ba48-9a1830ac018f" name="bool isEveryoneReady" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="be095f5a-35f6-46bb-be37-c831b41d1a46" />
+                </operation>
+                <operation Id="9fcc1f73-0152-4a2d-824b-67cf11627675" name="void notReady" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="f7deed5c-44b7-4580-a25f-ed6b1a594524" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="3b64a402-1bb8-4855-9cfb-363f186125fe" name="Player player" direction="In" isUnique="false">
+                        <elementDefinition Id="0e1648b1-078e-401c-a03d-582a67ef4eae" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+              </ownedOperationsInternal>
             </class>
           </packageHasNamedElement>
           <packageHasNamedElement>
             <class Id="91e0ff0e-4e5d-436a-80f1-5cc2f27677ad" name="Game" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="0214bb0f-9bad-4649-b454-527b42ff0c6b" />
-            </class>
-          </packageHasNamedElement>
-          <packageHasNamedElement>
-            <class Id="0644d252-07fd-409b-9719-ea63005b7fa8" name="Player" isAbstract="false" isLeaf="false" isActiveClass="false">
-              <elementDefinition Id="bb734848-c650-48aa-8c21-ea4d6fa8380d" />
-              <targetEnds>
-                <association Id="cbdc5347-d850-405e-aede-c3601844fda6" isDerived="false" sourceEndRoleName="Player" targetEndRoleName="SheetMusic" isLeaf="false" isAbstract="false">
-                  <classMoniker Id="e3c20b51-5317-49f4-9b76-5f78d47bfd7a" LastKnownName="SheetMusic" />
-                  <relationshipOwnedElementsInternal>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="72a8a5fc-d7bf-4514-9db0-c26e48328ec8" name="Player" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
-                        <elementDefinition Id="fc098f3d-e23e-4937-ac11-81c23ed7bdb5" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="5d0d6fac-0a98-4641-aef8-b6c3c707dfea" name="SheetMusic" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
-                        <elementDefinition Id="e6bb9569-4b07-4212-b672-e0d67dd3210c" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                  </relationshipOwnedElementsInternal>
-                  <elementDefinition Id="71f7b3f0-7db3-4616-81ec-1c147d6b3f1e" />
-                </association>
-              </targetEnds>
+              <ownedAttributesInternal>
+                <property Id="915ecc0a-29aa-4813-8b17-274d32e8e16f" name="Song song" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="25b0bd10-abea-4507-847b-da9789028214" />
+                </property>
+                <property Id="74f0467c-5ffe-416c-8f1e-94d9b4631ceb" name="GameMaster master" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="4cd9fcdc-ef43-4a6c-8ab9-fc9d2103fb9a" />
+                </property>
+              </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="3d578d6a-4a02-4ed7-995d-d904e0e8edae" name="Game" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="c6b70e50-5e26-47aa-ad1d-6ec0f2ff1526" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="b0ed74a9-221b-4594-8691-ecfda1fcdefa" name="Song song" direction="In" isUnique="false">
+                        <elementDefinition Id="a51dbde2-34c3-44f1-8448-79fe9c850a3a" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="7a1eed63-9ebe-48fa-83b6-dc123e627236" name="Instruments[] getInstruments" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="3d4146ae-743a-4610-92bf-68312c427bd2" />
+                </operation>
+                <operation Id="6302f01c-1152-4827-ae00-ef8894f83d74" name="void start" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="ba940157-1c04-48be-b02d-782ad8ef1b6f" />
+                </operation>
+              </ownedOperationsInternal>
             </class>
           </packageHasNamedElement>
           <packageHasNamedElement>
@@ -206,6 +249,11 @@
           <packageHasNamedElement>
             <class Id="c9a2b980-bc62-499f-91b3-c3ae8962e67f" name="Song" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="37c6b541-a67d-4a0f-bd8a-5636c6a46990" />
+              <ownedOperationsInternal>
+                <operation Id="b5b14478-32f2-4546-ad5d-d984e958178f" name="Instruments[] getInstruments" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="f31c2e18-855d-4710-ab87-7c2dc9413641" />
+                </operation>
+              </ownedOperationsInternal>
             </class>
           </packageHasNamedElement>
           <packageHasNamedElement>
@@ -357,6 +405,34 @@
                   <elementDefinition Id="0bff262a-595f-4e9a-841f-d6418e88191f" />
                 </association>
               </targetEnds>
+              <ownedOperationsInternal>
+                <operation Id="a72e49e7-ed0a-4265-b3cb-a6555188eb41" name="SheetBuilder" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="a7fc618c-fd4c-485e-a4a3-faf6a8c001ab" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="3382afbc-17a1-483f-9d23-5ddb23dd080b" name="Song song" direction="In" isUnique="false">
+                        <elementDefinition Id="cb96d629-6e29-43e5-aa10-e465f3ed2e9a" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="a6dd1df2-8443-434f-bf11-fe5d38bccb37" name="Instrument instrument" direction="In" isUnique="false">
+                        <elementDefinition Id="1d615fca-a33a-46d5-bdb0-64d28ba5d3fa" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="79857802-8330-4851-b6cb-baaa436a5118" name="Difficulty difficulty" direction="In" isUnique="false">
+                        <elementDefinition Id="bd0a10d8-56f0-4ab5-a2bb-c847a432dffc" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="d88dffde-e477-478c-ae4a-fe8df4a66b07" name="SheetMusic buildSheet" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="d7a6b5b2-9da4-4304-b490-1d9cb5c3969b" />
+                </operation>
+                <operation Id="aca874ff-8541-4928-93e1-240a20f34db1" name="void build" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="92fb24fb-3bcb-4324-88fd-f3438fd6980d" />
+                </operation>
+              </ownedOperationsInternal>
             </class>
           </packageHasNamedElement>
           <packageHasNamedElement>
@@ -442,6 +518,78 @@
                   <elementDefinition Id="f225c6b1-1268-4876-b79a-5f6565f30b52" />
                 </association>
               </targetEnds>
+            </class>
+          </packageHasNamedElement>
+          <packageHasNamedElement>
+            <class Id="0644d252-07fd-409b-9719-ea63005b7fa8" name="Player" isAbstract="false" isLeaf="false" isActiveClass="false">
+              <elementDefinition Id="bb734848-c650-48aa-8c21-ea4d6fa8380d" />
+              <targetEnds>
+                <association Id="cbdc5347-d850-405e-aede-c3601844fda6" isDerived="false" sourceEndRoleName="Player" targetEndRoleName="SheetMusic" isLeaf="false" isAbstract="false">
+                  <classMoniker Id="e3c20b51-5317-49f4-9b76-5f78d47bfd7a" LastKnownName="SheetMusic" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="72a8a5fc-d7bf-4514-9db0-c26e48328ec8" name="Player" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="fc098f3d-e23e-4937-ac11-81c23ed7bdb5" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="5d0d6fac-0a98-4641-aef8-b6c3c707dfea" name="SheetMusic" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                        <elementDefinition Id="e6bb9569-4b07-4212-b672-e0d67dd3210c" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="71f7b3f0-7db3-4616-81ec-1c147d6b3f1e" />
+                </association>
+              </targetEnds>
+              <ownedAttributesInternal>
+                <property Id="fe0a1bb0-19ce-43c5-b26a-e69554537632" name="string name" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="8c098256-9c84-4743-8476-a75baff38462" />
+                </property>
+                <property Id="3c177b7e-d519-4176-8e9b-50eacc948be5" name="Instrument instrument" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="2d334bcf-ccd7-4b0c-95b2-1b9328d439b4" />
+                </property>
+                <property Id="0508a9f5-fbca-4851-bc78-125f8872d5ac" name="Difficulty difficulty" visibility="Private" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="f7b93688-52fc-4d74-ac40-36e7acdf94fb" />
+                </property>
+              </ownedAttributesInternal>
+              <ownedOperationsInternal>
+                <operation Id="fc3ec17c-44f0-42da-8301-53e520b111f0" name="Player" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="e486ff61-6326-414f-9dce-9b5338d1a6ad" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="ca72cfa4-a572-4bf3-8962-55363de79d20" name="string name" direction="In" isUnique="false">
+                        <elementDefinition Id="c1e9151e-c382-4f8d-b6d3-bfc6918337af" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="d9c58ad7-6abe-4c84-824e-de6ff35dbf6a" name="void pickInstrument" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="b1af227a-de00-4c57-b9b3-625b5f5902fe" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="3f3bc091-9d2b-4334-bc95-e3717842b74d" name="Instrument instrument" direction="In" isUnique="false">
+                        <elementDefinition Id="b5d55ff1-b7fd-4d13-b7d5-c37ca20d9866" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="3bbf1717-efe0-4c75-92a0-08188ea785a9" name="void pickDifficulty" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="5c1ebd66-42c4-4267-852c-82b8cdcfe4ca" />
+                  <ownedParameters>
+                    <operationHasOwnedParameters>
+                      <parameter Id="9de8f514-64ca-40b6-bf55-d127455954e6" name="difficulty" direction="In" isUnique="false">
+                        <elementDefinition Id="714ac120-f443-4810-b792-6922378b2de0" />
+                      </parameter>
+                    </operationHasOwnedParameters>
+                  </ownedParameters>
+                </operation>
+                <operation Id="d2a1e276-167e-4db9-8b17-c476f76862fb" name="void ready" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="bb070be4-ff4c-4b81-bbf9-adfe84c545b0" />
+                </operation>
+                <operation Id="65655ab5-3763-4bf6-9b81-b560fb818ea5" name="void cancel" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+                  <elementDefinition Id="552372da-f85a-4f71-82b2-bd8a565e4387" />
+                </operation>
+              </ownedOperationsInternal>
             </class>
           </packageHasNamedElement>
         </packagedElements>
