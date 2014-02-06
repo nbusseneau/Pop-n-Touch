@@ -1072,7 +1072,7 @@
               </controlFlow>
               <controlFlow
                 Id="7f34aa2f-f4bf-4734-999e-5f16f5f0346b"
-                guard="song cancelled"
+                guard="song cancelled &amp; only one player left"
                 isLeaf="false">
                 <activityFinalNodeMoniker
                   Id="bce59f1f-7d00-4427-92f4-02b66a259b9a"
@@ -1119,7 +1119,7 @@
               </controlFlow>
               <controlFlow
                 Id="0a7205ca-0f91-4e36-814e-69879ceaed99"
-                guard="song cancelled"
+                guard="song cancelled &amp; only one player left"
                 isLeaf="false">
                 <activityFinalNodeMoniker
                   Id="bce59f1f-7d00-4427-92f4-02b66a259b9a"

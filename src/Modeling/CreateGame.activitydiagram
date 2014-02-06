@@ -114,7 +114,7 @@
                 <opaqueActionMoniker Id="01751b08-b012-4e35-8737-07da3564cfcb" LastKnownName="Launch game" />
                 <elementDefinition Id="31ce32b9-2a28-47cc-b8d1-2360bbfb67c9" />
               </controlFlow>
-              <controlFlow Id="3ba26e8e-414f-4d98-8c96-11b1ea47e0f6" guard="song cancelled" isLeaf="false">
+              <controlFlow Id="3ba26e8e-414f-4d98-8c96-11b1ea47e0f6" guard="song cancelled &amp; only one player left" isLeaf="false">
                 <activityFinalNodeMoniker Id="eeed5d02-201f-4e52-9370-500217613dd5" LastKnownName="ActivityFinal2" />
                 <elementDefinition Id="7f34aa2f-f4bf-4734-999e-5f16f5f0346b" />
               </controlFlow>
@@ -142,7 +142,7 @@
                 <forkNodeMoniker Id="e7abd911-2f13-4619-abaf-1b84eaa19dd7" LastKnownName="Fork1" />
                 <elementDefinition Id="a3bc95c3-fd65-4fab-b763-5fa15a3976f2" />
               </controlFlow>
-              <controlFlow Id="a9450129-1262-4b4e-b4ed-556e4de73cb3" guard="song cancelled" isLeaf="false">
+              <controlFlow Id="a9450129-1262-4b4e-b4ed-556e4de73cb3" guard="song cancelled &amp; only one player left" isLeaf="false">
                 <activityFinalNodeMoniker Id="eeed5d02-201f-4e52-9370-500217613dd5" LastKnownName="ActivityFinal2" />
                 <elementDefinition Id="0a7205ca-0f91-4e36-814e-69879ceaed99" />
               </controlFlow>
