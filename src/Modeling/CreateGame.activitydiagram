@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="48e600cb-eef3-4e0d-8dc7-dfc6f214b47d" name="CreateGame" linkedPackageId="15e6ead2-1ffc-4be1-899e-edb11c53b994" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm12="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="48e600cb-eef3-4e0d-8dc7-dfc6f214b47d" name="CreateGame" linkedPackageId="15e6ead2-1ffc-4be1-899e-edb11c53b994" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
   <packagedElements>
     <activityRootModelHasActivity>
       <activity Id="86a43670-38f8-4f80-9905-545c0a14ebce" name="CreateGame" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
@@ -70,9 +70,9 @@
           <mergeNode Id="b235562f-0606-4dba-a282-ad15c117e896" name="Merge1" isLeaf="false">
             <elementDefinition Id="fa54c485-dbde-48d7-8969-3a991c958994" />
             <flowNodeTargets>
-              <controlFlow Id="65b82210-1a44-4513-9acc-a96babf62a14" isLeaf="false">
-                <forkNodeMoniker Id="e7abd911-2f13-4619-abaf-1b84eaa19dd7" LastKnownName="Fork1" />
-                <elementDefinition Id="262fc5f4-8ea4-4adb-96f4-f42bf9a72df5" />
+              <controlFlow Id="faa99a25-a8a1-428f-af95-033dbdaa4af7" isLeaf="false">
+                <decisionNodeMoniker Id="5a71dcd0-b2a6-4087-bef9-3de8184e9a01" LastKnownName="Decision3" />
+                <elementDefinition Id="fb41e1ea-f72d-4ef9-a91c-7b16a7092fee" />
               </controlFlow>
             </flowNodeTargets>
           </mergeNode>
@@ -114,6 +114,10 @@
                 <opaqueActionMoniker Id="01751b08-b012-4e35-8737-07da3564cfcb" LastKnownName="Launch game" />
                 <elementDefinition Id="31ce32b9-2a28-47cc-b8d1-2360bbfb67c9" />
               </controlFlow>
+              <controlFlow Id="3ba26e8e-414f-4d98-8c96-11b1ea47e0f6" guard="song cancelled" isLeaf="false">
+                <activityFinalNodeMoniker Id="eeed5d02-201f-4e52-9370-500217613dd5" LastKnownName="ActivityFinal2" />
+                <elementDefinition Id="7f34aa2f-f4bf-4734-999e-5f16f5f0346b" />
+              </controlFlow>
             </flowNodeTargets>
           </decisionNode>
           <opaqueAction Id="01751b08-b012-4e35-8737-07da3564cfcb" name="Launch game" isLeaf="false">
@@ -128,6 +132,22 @@
           <activityFinalNode Id="89981315-88dc-4845-9ffc-2501e778106f" name="ActivityFinal1" isLeaf="false">
             <elementDefinition Id="f895b8eb-7634-4d6c-aa74-988d3633c066" />
           </activityFinalNode>
+          <activityFinalNode Id="eeed5d02-201f-4e52-9370-500217613dd5" name="ActivityFinal2" isLeaf="false">
+            <elementDefinition Id="bce59f1f-7d00-4427-92f4-02b66a259b9a" />
+          </activityFinalNode>
+          <decisionNode Id="5a71dcd0-b2a6-4087-bef9-3de8184e9a01" name="Decision3" isLeaf="false">
+            <elementDefinition Id="e7b1dcca-5762-4572-a8f3-02bdabbbbe47" />
+            <flowNodeTargets>
+              <controlFlow Id="d6b6dc3e-4de1-43ef-9c7d-52eede7a8294" isLeaf="false">
+                <forkNodeMoniker Id="e7abd911-2f13-4619-abaf-1b84eaa19dd7" LastKnownName="Fork1" />
+                <elementDefinition Id="a3bc95c3-fd65-4fab-b763-5fa15a3976f2" />
+              </controlFlow>
+              <controlFlow Id="a9450129-1262-4b4e-b4ed-556e4de73cb3" guard="song cancelled" isLeaf="false">
+                <activityFinalNodeMoniker Id="eeed5d02-201f-4e52-9370-500217613dd5" LastKnownName="ActivityFinal2" />
+                <elementDefinition Id="0a7205ca-0f91-4e36-814e-69879ceaed99" />
+              </controlFlow>
+            </flowNodeTargets>
+          </decisionNode>
         </nodes>
       </activity>
     </activityRootModelHasActivity>
