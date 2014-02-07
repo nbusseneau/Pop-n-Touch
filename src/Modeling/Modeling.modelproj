@@ -43,12 +43,12 @@
       <SubType>Content</SubType>
       <DependentUpon>CreateGame.sequencediagram</DependentUpon>
     </Content>
-    <Content Include="EndGameNico.sequencediagram">
+    <Content Include="EndGame.sequencediagram">
       <SubType>Content</SubType>
     </Content>
-    <Content Include="EndGameNico.sequencediagram.layout">
+    <Content Include="EndGame.sequencediagram.layout">
       <SubType>Content</SubType>
-      <DependentUpon>EndGameNico.sequencediagram</DependentUpon>
+      <DependentUpon>EndGame.sequencediagram</DependentUpon>
     </Content>
     <Content Include="ModelDefinition\Package1_1204.uml">
       <SubType>Content</SubType>
