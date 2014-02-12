@@ -27,10 +27,10 @@
       <relativeChildShapes />
     </mergeNodeShape>
     <actionShape Id="a3501fbf-30cf-41c5-af12-8954ee5bb3dc" absoluteBounds="1.875, 6.25, 1.125, 0.375" customColor="161, 199, 231">
-      <opaqueActionMoniker Id="43e3a7fa-5846-4de4-9b3c-c99d4c0f73a4" LastKnownName="Chose instrument" />
+      <opaqueActionMoniker Id="43e3a7fa-5846-4de4-9b3c-c99d4c0f73a4" LastKnownName="Choose instrument" />
     </actionShape>
     <actionShape Id="052aab66-745a-48ee-8bfc-30e03b7b809a" absoluteBounds="3.625, 6.25, 1.125, 0.375" customColor="161, 199, 231">
-      <opaqueActionMoniker Id="8a2d3eb9-8b8d-4580-ab21-95a49dfc807b" LastKnownName="Chose difficulty" />
+      <opaqueActionMoniker Id="8a2d3eb9-8b8d-4580-ab21-95a49dfc807b" LastKnownName="Choose difficulty" />
     </actionShape>
     <joinNodeShape Id="9e78109d-8927-488e-aeb3-66094d12e295" absoluteBounds="2.75, 7, 1.125, 0.125" customColor="32, 32, 32">
       <joinNodeMoniker Id="fff46e96-9b78-430d-a947-ea5efa8f2e21" LastKnownName="Join1" />
@@ -196,7 +196,7 @@
       <controlFlowMoniker Id="3ba26e8e-414f-4d98-8c96-11b1ea47e0f6" />
       <relativeChildShapes />
       <moveableDecoratorHostShapes>
-        <moveableDecoratorHostShape manuallyPlaced="true" absoluteBounds="3.5625, 7.9375, 0.86613857746124268, 0.14800345897674561" shapeFieldName="Guard" />
+        <moveableDecoratorHostShape manuallyPlaced="true" absoluteBounds="3.55615234375, 7.9375, 0.87883388996124268, 0.14800345897674561" shapeFieldName="Guard" />
       </moveableDecoratorHostShapes>
       <nodes>
         <decisionNodeShapeMoniker Id="73748e94-ae2b-4ce3-821e-711f73633338" />

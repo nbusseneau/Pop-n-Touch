@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm12="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="48e600cb-eef3-4e0d-8dc7-dfc6f214b47d" name="CreateGame" linkedPackageId="15e6ead2-1ffc-4be1-899e-edb11c53b994" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
+<activityRootModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="48e600cb-eef3-4e0d-8dc7-dfc6f214b47d" name="CreateGame" linkedPackageId="15e6ead2-1ffc-4be1-899e-edb11c53b994" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner">
   <packagedElements>
     <activityRootModelHasActivity>
       <activity Id="86a43670-38f8-4f80-9905-545c0a14ebce" name="CreateGame" isAbstract="false" isLeaf="false" isActiveClass="false" isReentrant="false" isReadOnly="false" isSingleExecution="false">
@@ -49,11 +49,11 @@
             <elementDefinition Id="39dd5664-de8e-4582-99d0-f5d88718b680" />
             <flowNodeTargets>
               <controlFlow Id="a5ccd3ae-c806-4a93-83d0-ca6313ce54df" isLeaf="false">
-                <opaqueActionMoniker Id="43e3a7fa-5846-4de4-9b3c-c99d4c0f73a4" LastKnownName="Chose instrument" />
+                <opaqueActionMoniker Id="43e3a7fa-5846-4de4-9b3c-c99d4c0f73a4" LastKnownName="Choose instrument" />
                 <elementDefinition Id="67605e71-6c06-4efb-8e3e-72595df77236" />
               </controlFlow>
               <controlFlow Id="d27bdc78-c5cf-4046-bf29-2df40001c2a5" isLeaf="false">
-                <opaqueActionMoniker Id="8a2d3eb9-8b8d-4580-ab21-95a49dfc807b" LastKnownName="Chose difficulty" />
+                <opaqueActionMoniker Id="8a2d3eb9-8b8d-4580-ab21-95a49dfc807b" LastKnownName="Choose difficulty" />
                 <elementDefinition Id="399cf246-3071-412e-a60c-e53f0f6b94a9" />
               </controlFlow>
             </flowNodeTargets>
@@ -76,7 +76,7 @@
               </controlFlow>
             </flowNodeTargets>
           </mergeNode>
-          <opaqueAction Id="43e3a7fa-5846-4de4-9b3c-c99d4c0f73a4" name="Chose instrument" isLeaf="false">
+          <opaqueAction Id="43e3a7fa-5846-4de4-9b3c-c99d4c0f73a4" name="Choose instrument" isLeaf="false">
             <elementDefinition Id="b4977335-c364-4254-9590-8a84593e41d7" />
             <flowNodeTargets>
               <controlFlow Id="98c97897-3bcc-4a8d-bf08-ef9d8ebeb142" isLeaf="false">
@@ -85,7 +85,7 @@
               </controlFlow>
             </flowNodeTargets>
           </opaqueAction>
-          <opaqueAction Id="8a2d3eb9-8b8d-4580-ab21-95a49dfc807b" name="Chose difficulty" isLeaf="false">
+          <opaqueAction Id="8a2d3eb9-8b8d-4580-ab21-95a49dfc807b" name="Choose difficulty" isLeaf="false">
             <elementDefinition Id="4fc7db6c-4964-4c08-848e-5a2e14e229a5" />
             <flowNodeTargets>
               <controlFlow Id="1b7cce90-89e1-471e-ab78-03de5b0bc1f8" isLeaf="false">
@@ -114,7 +114,7 @@
                 <opaqueActionMoniker Id="01751b08-b012-4e35-8737-07da3564cfcb" LastKnownName="Launch game" />
                 <elementDefinition Id="31ce32b9-2a28-47cc-b8d1-2360bbfb67c9" />
               </controlFlow>
-              <controlFlow Id="3ba26e8e-414f-4d98-8c96-11b1ea47e0f6" guard="song cancelled" isLeaf="false">
+              <controlFlow Id="3ba26e8e-414f-4d98-8c96-11b1ea47e0f6" guard="Song cancelled" isLeaf="false">
                 <activityFinalNodeMoniker Id="eeed5d02-201f-4e52-9370-500217613dd5" LastKnownName="ActivityFinal2" />
                 <elementDefinition Id="7f34aa2f-f4bf-4734-999e-5f16f5f0346b" />
               </controlFlow>
@@ -142,7 +142,7 @@
                 <forkNodeMoniker Id="e7abd911-2f13-4619-abaf-1b84eaa19dd7" LastKnownName="Fork1" />
                 <elementDefinition Id="a3bc95c3-fd65-4fab-b763-5fa15a3976f2" />
               </controlFlow>
-              <controlFlow Id="a9450129-1262-4b4e-b4ed-556e4de73cb3" guard="song cancelled" isLeaf="false">
+              <controlFlow Id="a9450129-1262-4b4e-b4ed-556e4de73cb3" guard="Song cancelled" isLeaf="false">
                 <activityFinalNodeMoniker Id="eeed5d02-201f-4e52-9370-500217613dd5" LastKnownName="ActivityFinal2" />
                 <elementDefinition Id="0a7205ca-0f91-4e36-814e-69879ceaed99" />
               </controlFlow>

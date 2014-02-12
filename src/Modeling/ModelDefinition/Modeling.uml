@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
   dslVersion="1.0.0.0"
   Id="ba7d1a55-5166-45ac-8041-c152888f5086"
   name="PnTModeling" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -959,7 +959,7 @@
                 isLeaf="false">
                 <opaqueActionMoniker
                   Id="b4977335-c364-4254-9590-8a84593e41d7"
-                  LastKnownName="Chose instrument"
+                  LastKnownName="Choose instrument"
                   LastKnownLocation="Modeling.uml" />
               </controlFlow>
               <controlFlow
@@ -967,7 +967,7 @@
                 isLeaf="false">
                 <opaqueActionMoniker
                   Id="4fc7db6c-4964-4c08-848e-5a2e14e229a5"
-                  LastKnownName="Chose difficulty"
+                  LastKnownName="Choose difficulty"
                   LastKnownLocation="Modeling.uml" />
               </controlFlow>
             </flowNodeTargets>
@@ -1004,7 +1004,7 @@
           </mergeNode>
           <opaqueAction
             Id="b4977335-c364-4254-9590-8a84593e41d7"
-            name="Chose instrument"
+            name="Choose instrument"
             isLeaf="false">
             <flowNodeTargets>
               <controlFlow
@@ -1019,7 +1019,7 @@
           </opaqueAction>
           <opaqueAction
             Id="4fc7db6c-4964-4c08-848e-5a2e14e229a5"
-            name="Chose difficulty"
+            name="Choose difficulty"
             isLeaf="false">
             <flowNodeTargets>
               <controlFlow
@@ -1072,7 +1072,7 @@
               </controlFlow>
               <controlFlow
                 Id="7f34aa2f-f4bf-4734-999e-5f16f5f0346b"
-                guard="song cancelled"
+                guard="Song cancelled"
                 isLeaf="false">
                 <activityFinalNodeMoniker
                   Id="bce59f1f-7d00-4427-92f4-02b66a259b9a"
@@ -1119,7 +1119,7 @@
               </controlFlow>
               <controlFlow
                 Id="0a7205ca-0f91-4e36-814e-69879ceaed99"
-                guard="song cancelled"
+                guard="Song cancelled"
                 isLeaf="false">
                 <activityFinalNodeMoniker
                   Id="bce59f1f-7d00-4427-92f4-02b66a259b9a"
@@ -3923,12 +3923,12 @@ cf sheetCreations.sequenceddiagram</body>
             interactionOperator="Alt">
             <coveredLifelines>
               <lifelineMoniker
-                Id="7431086f-0f4a-4486-9917-8167a64970e5"
-                LastKnownName="playerDerpy : Player"
-                LastKnownLocation="Modeling.uml" />
-              <lifelineMoniker
                 Id="6812c35f-459d-4acf-a0a4-d492a622b83e"
                 LastKnownName="gameMaster : GameMaster"
+                LastKnownLocation="Modeling.uml" />
+              <lifelineMoniker
+                Id="7431086f-0f4a-4486-9917-8167a64970e5"
+                LastKnownName="playerDerpy : Player"
                 LastKnownLocation="Modeling.uml" />
             </coveredLifelines>
             <operands>
@@ -3937,12 +3937,12 @@ cf sheetCreations.sequenceddiagram</body>
                 name="InteractionOperand1">
                 <coveredLifelines>
                   <lifelineMoniker
-                    Id="7431086f-0f4a-4486-9917-8167a64970e5"
-                    LastKnownName="playerDerpy : Player"
-                    LastKnownLocation="Modeling.uml" />
-                  <lifelineMoniker
                     Id="6812c35f-459d-4acf-a0a4-d492a622b83e"
                     LastKnownName="gameMaster : GameMaster"
+                    LastKnownLocation="Modeling.uml" />
+                  <lifelineMoniker
+                    Id="7431086f-0f4a-4486-9917-8167a64970e5"
+                    LastKnownName="playerDerpy : Player"
                     LastKnownLocation="Modeling.uml" />
                 </coveredLifelines>
                 <guard>
@@ -3974,12 +3974,12 @@ cf sheetCreations.sequenceddiagram</body>
                 name="InteractionOperand2">
                 <coveredLifelines>
                   <lifelineMoniker
-                    Id="7431086f-0f4a-4486-9917-8167a64970e5"
-                    LastKnownName="playerDerpy : Player"
-                    LastKnownLocation="Modeling.uml" />
-                  <lifelineMoniker
                     Id="6812c35f-459d-4acf-a0a4-d492a622b83e"
                     LastKnownName="gameMaster : GameMaster"
+                    LastKnownLocation="Modeling.uml" />
+                  <lifelineMoniker
+                    Id="7431086f-0f4a-4486-9917-8167a64970e5"
+                    LastKnownName="playerDerpy : Player"
                     LastKnownLocation="Modeling.uml" />
                 </coveredLifelines>
                 <guard>
@@ -4241,22 +4241,22 @@ cf sheetCreations.sequenceddiagram</body>
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="27fbb250-c254-4c94-a204-d662bc1593f0"
-            name="OperandOccurrenceSpecification43">
-            <covered>
-              <lifelineMoniker
-                Id="7431086f-0f4a-4486-9917-8167a64970e5"
-                LastKnownName="playerDerpy : Player"
-                LastKnownLocation="Modeling.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
             Id="620dc72b-a789-4e8e-a24d-5a0b6a6bba7f"
             name="OperandOccurrenceSpecification45">
             <covered>
               <lifelineMoniker
                 Id="6812c35f-459d-4acf-a0a4-d492a622b83e"
                 LastKnownName="gameMaster : GameMaster"
+                LastKnownLocation="Modeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="27fbb250-c254-4c94-a204-d662bc1593f0"
+            name="OperandOccurrenceSpecification43">
+            <covered>
+              <lifelineMoniker
+                Id="7431086f-0f4a-4486-9917-8167a64970e5"
+                LastKnownName="playerDerpy : Player"
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -4981,22 +4981,22 @@ cf sheetCreations.sequenceddiagram</body>
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="78e97f8d-6f25-479d-a244-46d7c071c5f1"
-            name="MessageOccurrenceSpecification81">
-            <covered>
-              <lifelineMoniker
-                Id="83ffb035-a2d4-4b4b-a040-13c6085e95dd"
-                LastKnownName="sheetBuilder : SheetBuilder"
-                LastKnownLocation="Modeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="3eac546c-9edf-4964-b8d5-9543a39d8fef"
             name="MessageOccurrenceSpecification82">
             <covered>
               <lifelineMoniker
                 Id="57516218-1149-442c-a638-4c380e756a20"
                 LastKnownName="sheetMusic : SheetMusic"
+                LastKnownLocation="Modeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="78e97f8d-6f25-479d-a244-46d7c071c5f1"
+            name="MessageOccurrenceSpecification81">
+            <covered>
+              <lifelineMoniker
+                Id="83ffb035-a2d4-4b4b-a040-13c6085e95dd"
+                LastKnownName="sheetBuilder : SheetBuilder"
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </messageOccurrenceSpecification>
