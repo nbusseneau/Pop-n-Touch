@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{F088123C-0E9E-452A-89E6-6BA2F21D5CAC}") = "Modeling", "Modeling\Modeling.modelproj", "{5C8AAC1C-AF9C-4483-87C3-8820EB03168F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PopNTouch2", "PopNTouch2\PopNTouch2.csproj", "{49AD39F7-8996-45FE-89AA-4B35762723D8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PopNTouch2", "PopNTouch2\PopNTouch2.csproj", "{3046FB26-B719-4ED9-84F0-3AF59FA426DD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,18 +29,18 @@ Global
 		{5C8AAC1C-AF9C-4483-87C3-8820EB03168F}.Release|Mixed Platforms.Build.0 = Release|Any CPU
 		{5C8AAC1C-AF9C-4483-87C3-8820EB03168F}.Release|x64.ActiveCfg = Release|Any CPU
 		{5C8AAC1C-AF9C-4483-87C3-8820EB03168F}.Release|x86.ActiveCfg = Release|Any CPU
-		{49AD39F7-8996-45FE-89AA-4B35762723D8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{49AD39F7-8996-45FE-89AA-4B35762723D8}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{49AD39F7-8996-45FE-89AA-4B35762723D8}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{49AD39F7-8996-45FE-89AA-4B35762723D8}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
-		{49AD39F7-8996-45FE-89AA-4B35762723D8}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{49AD39F7-8996-45FE-89AA-4B35762723D8}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{49AD39F7-8996-45FE-89AA-4B35762723D8}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{49AD39F7-8996-45FE-89AA-4B35762723D8}.Release|Any CPU.Build.0 = Release|Any CPU
-		{49AD39F7-8996-45FE-89AA-4B35762723D8}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
-		{49AD39F7-8996-45FE-89AA-4B35762723D8}.Release|Mixed Platforms.Build.0 = Release|Any CPU
-		{49AD39F7-8996-45FE-89AA-4B35762723D8}.Release|x64.ActiveCfg = Release|Any CPU
-		{49AD39F7-8996-45FE-89AA-4B35762723D8}.Release|x86.ActiveCfg = Release|Any CPU
+		{3046FB26-B719-4ED9-84F0-3AF59FA426DD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3046FB26-B719-4ED9-84F0-3AF59FA426DD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3046FB26-B719-4ED9-84F0-3AF59FA426DD}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{3046FB26-B719-4ED9-84F0-3AF59FA426DD}.Debug|Mixed Platforms.Build.0 = Debug|Any CPU
+		{3046FB26-B719-4ED9-84F0-3AF59FA426DD}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{3046FB26-B719-4ED9-84F0-3AF59FA426DD}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{3046FB26-B719-4ED9-84F0-3AF59FA426DD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3046FB26-B719-4ED9-84F0-3AF59FA426DD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3046FB26-B719-4ED9-84F0-3AF59FA426DD}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{3046FB26-B719-4ED9-84F0-3AF59FA426DD}.Release|Mixed Platforms.Build.0 = Release|Any CPU
+		{3046FB26-B719-4ED9-84F0-3AF59FA426DD}.Release|x64.ActiveCfg = Release|Any CPU
+		{3046FB26-B719-4ED9-84F0-3AF59FA426DD}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
