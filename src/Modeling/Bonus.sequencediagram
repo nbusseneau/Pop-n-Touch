@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="b53d01f8-c7f3-4cef-be16-1e5e4ad27d53" name="Sequence1" linkedPackageId="da052803-ae6e-47a1-9902-be5b06def3b7" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="b53d01f8-c7f3-4cef-be16-1e5e4ad27d53" name="Sequence1" linkedPackageId="da052803-ae6e-47a1-9902-be5b06def3b7" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
   <packagedElements>
     <packageHasNamedElement>
       <interaction Id="47f17d10-52fa-44b0-90b3-915435e6cf3b" name="Sequence1" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
@@ -94,16 +94,16 @@
               <lifelineMoniker Id="62158519-f732-4046-9489-6fac5de760f8" LastKnownName="sheetmusic1 : SheetMusic" />
             </covered>
           </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="73d998d7-07b6-4565-bc7b-167bac3a50b9" name="MessageOccurrenceSpecification3">
-            <elementDefinition Id="e6b26791-a6cf-4a42-add8-fdae161295b4" />
-            <covered>
-              <lifelineMoniker Id="a8d5dc2a-be5e-4d54-b9e1-df77140708a4" LastKnownName="Player" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="347c7a2f-8625-4be1-bdcf-fbd883ca7016" name="MessageOccurrenceSpecification4">
             <elementDefinition Id="88e8e35d-d2d7-4806-b140-c2692804ef06" />
             <covered>
               <lifelineMoniker Id="62158519-f732-4046-9489-6fac5de760f8" LastKnownName="sheetmusic1 : SheetMusic" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="73d998d7-07b6-4565-bc7b-167bac3a50b9" name="MessageOccurrenceSpecification3">
+            <elementDefinition Id="e6b26791-a6cf-4a42-add8-fdae161295b4" />
+            <covered>
+              <lifelineMoniker Id="a8d5dc2a-be5e-4d54-b9e1-df77140708a4" LastKnownName="Player" />
             </covered>
           </messageOccurrenceSpecification>
           <combinedFragment Id="8cb2f8d6-7dbb-44d5-a8c9-c26f22ad7a36" name="CombinedFragment1" interactionOperator="Alt">
@@ -203,28 +203,28 @@
               <lifelineMoniker Id="32092b0c-3b9c-4156-ae56-6fa058e72c56" LastKnownName="bonus1 : BonusInkBubble" />
             </covered>
           </executionOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="c2ad6639-0b4f-46cf-ac16-7b1f38870129" name="MessageOccurrenceSpecification9">
-            <elementDefinition Id="7f195e98-b888-48b7-8fdf-7c30fa21c3d1" />
-            <covered>
-              <lifelineMoniker Id="62158519-f732-4046-9489-6fac5de760f8" LastKnownName="sheetmusic1 : SheetMusic" />
-            </covered>
-          </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="c5a6d2b8-dbea-4232-bc31-51c6f4ea0b58" name="MessageOccurrenceSpecification10">
             <elementDefinition Id="82b828ff-aa2e-4ff7-957f-047eead2a76c" />
             <covered>
               <lifelineMoniker Id="32092b0c-3b9c-4156-ae56-6fa058e72c56" LastKnownName="bonus1 : BonusInkBubble" />
             </covered>
           </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification Id="738776d3-19e7-4e27-a961-658467890447" name="MessageOccurrenceSpecification11">
-            <elementDefinition Id="079140c8-7e99-45c8-9b6b-f9af843c30ff" />
+          <messageOccurrenceSpecification Id="c2ad6639-0b4f-46cf-ac16-7b1f38870129" name="MessageOccurrenceSpecification9">
+            <elementDefinition Id="7f195e98-b888-48b7-8fdf-7c30fa21c3d1" />
             <covered>
-              <lifelineMoniker Id="32092b0c-3b9c-4156-ae56-6fa058e72c56" LastKnownName="bonus1 : BonusInkBubble" />
+              <lifelineMoniker Id="62158519-f732-4046-9489-6fac5de760f8" LastKnownName="sheetmusic1 : SheetMusic" />
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification Id="42b59af2-3dbf-4dd4-95aa-4951f1705af4" name="MessageOccurrenceSpecification12">
             <elementDefinition Id="472c7273-cf1b-4452-a0a3-ec6c5f5b41ae" />
             <covered>
               <lifelineMoniker Id="62158519-f732-4046-9489-6fac5de760f8" LastKnownName="sheetmusic1 : SheetMusic" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification Id="738776d3-19e7-4e27-a961-658467890447" name="MessageOccurrenceSpecification11">
+            <elementDefinition Id="079140c8-7e99-45c8-9b6b-f9af843c30ff" />
+            <covered>
+              <lifelineMoniker Id="32092b0c-3b9c-4156-ae56-6fa058e72c56" LastKnownName="bonus1 : BonusInkBubble" />
             </covered>
           </messageOccurrenceSpecification>
           <executionOccurrenceSpecification Id="2d6eaa30-5155-4c81-b739-b1cc0b2f4368" name="ExecutionOccurrenceSpecification8">
@@ -626,12 +626,6 @@
               <lifelineMoniker Id="0cb405e2-aa0a-4a96-89b8-536f7d48e9f7" LastKnownName="sheetmusic2 : SheetMusic" />
             </covered>
           </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification Id="1e32f302-318e-4315-8d8c-0ec1955978a6" name="OperandOccurrenceSpecification21">
-            <elementDefinition Id="c584e08d-715e-4026-960b-b1b7bc8edf96" />
-            <covered>
-              <lifelineMoniker Id="62158519-f732-4046-9489-6fac5de760f8" LastKnownName="sheetmusic1 : SheetMusic" />
-            </covered>
-          </operandOccurrenceSpecification>
           <operandOccurrenceSpecification Id="a7301d3f-0463-431d-ab76-5d940c102211" name="OperandOccurrenceSpecification23">
             <elementDefinition Id="977c2e62-c504-44cb-9eb6-61fb01f870a0" />
             <covered>
@@ -642,6 +636,12 @@
             <elementDefinition Id="43e4945f-74c0-49db-9606-43049ad3f11d" />
             <covered>
               <lifelineMoniker Id="32092b0c-3b9c-4156-ae56-6fa058e72c56" LastKnownName="bonus1 : BonusInkBubble" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="1e32f302-318e-4315-8d8c-0ec1955978a6" name="OperandOccurrenceSpecification21">
+            <elementDefinition Id="c584e08d-715e-4026-960b-b1b7bc8edf96" />
+            <covered>
+              <lifelineMoniker Id="62158519-f732-4046-9489-6fac5de760f8" LastKnownName="sheetmusic1 : SheetMusic" />
             </covered>
           </operandOccurrenceSpecification>
           <messageOccurrenceSpecification Id="bb7be2f1-65a3-4ec0-bfbb-b48004e40350" name="MessageOccurrenceSpecification27">
@@ -693,6 +693,12 @@
               <lifelineMoniker Id="62158519-f732-4046-9489-6fac5de760f8" LastKnownName="sheetmusic1 : SheetMusic" />
             </covered>
           </executionOccurrenceSpecification>
+          <operandOccurrenceSpecification Id="529b5a8e-1d44-4a95-b595-f51e780dd01f" name="OperandOccurrenceSpecification24">
+            <elementDefinition Id="55353416-aff5-4ffa-af83-0d0ad8d8c170" />
+            <covered>
+              <lifelineMoniker Id="0cb405e2-aa0a-4a96-89b8-536f7d48e9f7" LastKnownName="sheetmusic2 : SheetMusic" />
+            </covered>
+          </operandOccurrenceSpecification>
           <operandOccurrenceSpecification Id="bcd9457e-5cd8-4f38-b991-ac4c7bae9aad" name="OperandOccurrenceSpecification20">
             <elementDefinition Id="90178442-20b9-4df0-bd17-70cf43310c23" />
             <covered>
@@ -703,12 +709,6 @@
             <elementDefinition Id="623ab966-13af-49ea-995f-924cfd691e82" />
             <covered>
               <lifelineMoniker Id="62158519-f732-4046-9489-6fac5de760f8" LastKnownName="sheetmusic1 : SheetMusic" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification Id="529b5a8e-1d44-4a95-b595-f51e780dd01f" name="OperandOccurrenceSpecification24">
-            <elementDefinition Id="55353416-aff5-4ffa-af83-0d0ad8d8c170" />
-            <covered>
-              <lifelineMoniker Id="0cb405e2-aa0a-4a96-89b8-536f7d48e9f7" LastKnownName="sheetmusic2 : SheetMusic" />
             </covered>
           </operandOccurrenceSpecification>
           <executionOccurrenceSpecification Id="fe66f516-e596-4542-815b-33bf7b60da30" name="ExecutionOccurrenceSpecification12">
@@ -737,6 +737,9 @@
           </lifeline>
           <lifeline Id="62158519-f732-4046-9489-6fac5de760f8" name="sheetmusic1 : SheetMusic" isActor="false" lifelineDisplayName="sheetmusic1 : SheetMusic">
             <elementDefinition Id="6f347f50-6438-4588-bf7d-5d476d841632" />
+            <represents>
+              <propertyMoniker Id="e5fd6222-60f3-4de4-b829-b2c43627f67a" />
+            </represents>
             <topLevelOccurrences>
               <executionOccurrenceSpecificationMoniker Id="499fd870-57f7-4e43-b7a5-f8238d63c49f" LastKnownName="ExecutionOccurrenceSpecification1" />
               <executionOccurrenceSpecificationMoniker Id="7da7d476-28a7-4004-9dda-bc883d05bd0a" LastKnownName="ExecutionOccurrenceSpecification2" />
@@ -748,6 +751,9 @@
           </lifeline>
           <lifeline Id="32092b0c-3b9c-4156-ae56-6fa058e72c56" name="bonus1 : BonusInkBubble" isActor="false" lifelineDisplayName="bonus1 : BonusInkBubble">
             <elementDefinition Id="1bde96b7-e897-4901-9378-615f3a16f3fd" />
+            <represents>
+              <propertyMoniker Id="99947210-7746-45a7-aef8-8da79e06a5ab" />
+            </represents>
             <topLevelOccurrences>
               <operandOccurrenceSpecificationMoniker Id="6c4be2f2-db65-490a-83f4-054d81fd3c01" LastKnownName="OperandOccurrenceSpecification1" />
               <executionOccurrenceSpecificationMoniker Id="98c36d6f-4674-4be2-8bfe-6c2e8b14f6a4" LastKnownName="ExecutionOccurrenceSpecification7" />
@@ -765,6 +771,9 @@
           </lifeline>
           <lifeline Id="16515797-382e-4669-92da-d0b255c3583e" name="bonus2 : BonusAutoPilot" isActor="false" lifelineDisplayName="bonus2 : BonusAutoPilot">
             <elementDefinition Id="2bbbf273-8842-4d8c-a1f4-9e0e5d7dc0d0" />
+            <represents>
+              <propertyMoniker Id="732272b8-8d35-4040-9fab-4fab8a093fca" />
+            </represents>
             <topLevelOccurrences>
               <operandOccurrenceSpecificationMoniker Id="499b3e56-bf43-4676-9d6e-032a7604aedd" LastKnownName="OperandOccurrenceSpecification9" />
               <operandOccurrenceSpecificationMoniker Id="d4a85c83-730c-4bbe-821c-aa63f87d4ed6" LastKnownName="OperandOccurrenceSpecification10" />
@@ -776,6 +785,9 @@
           </lifeline>
           <lifeline Id="0cb405e2-aa0a-4a96-89b8-536f7d48e9f7" name="sheetmusic2 : SheetMusic" isActor="false" lifelineDisplayName="sheetmusic2 : SheetMusic">
             <elementDefinition Id="3f070485-aa62-4696-8e13-64b751e7267d" />
+            <represents>
+              <propertyMoniker Id="432cea28-1af6-4071-955c-8443b78769ae" />
+            </represents>
             <topLevelOccurrences>
               <operandOccurrenceSpecificationMoniker Id="9cdce6df-3146-44c9-a294-feb1cc00bd9a" LastKnownName="OperandOccurrenceSpecification17" />
               <executionOccurrenceSpecificationMoniker Id="e55ac420-cf2b-4e05-b801-a14fcfa626c8" LastKnownName="ExecutionOccurrenceSpecification15" />
@@ -900,7 +912,31 @@
           <property Id="d46e1421-f252-4e10-b866-c15d036901d8" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="77dcbebd-052f-42fb-91c2-70865421ff68" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="53fd515b-e1e4-465e-ab19-f33bd66523a7" LastKnownName="Player" />
+              <referencedTypeMoniker Id="5c4b3b13-9120-45fc-b2ad-a5e74be573da" LastKnownName="Player" />
+            </type_NamedElement>
+          </property>
+          <property Id="e5fd6222-60f3-4de4-b829-b2c43627f67a" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="4891b50d-7fd1-4523-8a98-ef1de7e1d1ca" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="bba51d91-7b5a-4cd9-b924-ca663be19c7e" LastKnownName="SheetMusic" />
+            </type_NamedElement>
+          </property>
+          <property Id="432cea28-1af6-4071-955c-8443b78769ae" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="539d35f3-0016-4cac-9f6f-33bca186ea9d" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="bba51d91-7b5a-4cd9-b924-ca663be19c7e" LastKnownName="SheetMusic" />
+            </type_NamedElement>
+          </property>
+          <property Id="732272b8-8d35-4040-9fab-4fab8a093fca" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b7c5233d-a8c4-4fa7-a198-7796b0df4304" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="b5a7d590-2574-4ba0-b446-e44507b05a0f" LastKnownName="BonusAutoPilot" />
+            </type_NamedElement>
+          </property>
+          <property Id="99947210-7746-45a7-aef8-8da79e06a5ab" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="ee35e8ad-f176-4963-b1c7-b1a1f6f19e52" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="e4baf38a-929a-48bd-9b5a-b919e18a70a9" LastKnownName="BonusInkBubble" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
@@ -991,8 +1027,28 @@
         <elementDefinition Id="cea515b7-b108-4952-909f-5d1746dcd10f" />
       </executionEvent>
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="bba51d91-7b5a-4cd9-b924-ca663be19c7e" name="SheetMusic" isAbstract="false" isLeaf="false" cachedFullName="Modeling::Model::SheetMusic">
+        <elementDefinition Id="db8681ec-f340-44d7-9c21-1903c4a19ca7" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="b5a7d590-2574-4ba0-b446-e44507b05a0f" name="BonusAutoPilot" isAbstract="false" isLeaf="false" cachedFullName="Modeling::Model::BonusAutoPilot">
+        <elementDefinition Id="36f31ead-cf8d-418b-b608-bf692d19aef8" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="e4baf38a-929a-48bd-9b5a-b919e18a70a9" name="BonusInkBubble" isAbstract="false" isLeaf="false" cachedFullName="Modeling::Model::BonusInkBubble">
+        <elementDefinition Id="313743d5-7bd1-4218-a3e8-e6cf9bd5bd36" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="5c4b3b13-9120-45fc-b2ad-a5e74be573da" name="Player" isAbstract="false" isLeaf="false" cachedFullName="Modeling::Player">
+        <elementDefinition Id="c15f0d63-53cf-47cd-a4b0-bdc2616e928e" />
+      </referencedType>
+    </packageHasNamedElement>
   </packagedElements>
-  <package Id="da052803-ae6e-47a1-9902-be5b06def3b7" name="PnTModeling">
+  <package Id="da052803-ae6e-47a1-9902-be5b06def3b7" name="Modeling">
     <elementDefinition Id="ba7d1a55-5166-45ac-8041-c152888f5086" />
   </package>
 </SequenceDesignerModel>

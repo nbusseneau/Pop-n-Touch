@@ -12,7 +12,7 @@
   <Comment CommentText="Flyweight">
     <Position X="7.052" Y="6.73" Height="0.291" Width="0.721" />
   </Comment>
-  <Class Name="PopNTouch2.GameMaster">
+  <Class Name="PopNTouch2.Model.GameMaster">
     <Position X="3.75" Y="2" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAggAAAAAAAAAAAAAAA=</HashCode>
@@ -22,14 +22,14 @@
       <Property Name="Game" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="PopNTouch2.Game">
+  <Class Name="PopNTouch2.Model.Game">
     <Position X="3.75" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\Game.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="PopNTouch2.Player">
+  <Class Name="PopNTouch2.Model.Player">
     <Position X="6.25" Y="4" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
@@ -39,25 +39,25 @@
       <Property Name="SheetMusic" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="PopNTouch2.AudioController">
+  <Class Name="PopNTouch2.Model.AudioController">
     <Position X="8.5" Y="2" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>Model\AudioController.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="PopNTouch2.SheetMusic">
+  <Class Name="PopNTouch2.Model.SheetMusic">
     <Position X="6.25" Y="5.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAgAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Model\SheetMusic.cs</FileName>
+      <FileName>Model\Sheet\SheetMusic.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="PopNTouch2.SheetBuilder">
+  <Class Name="PopNTouch2.Model.SheetBuilder">
     <Position X="3.75" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAQAAAAAAABgACAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Model\SheetBuilder.cs</FileName>
+      <FileName>Model\Sheet\SheetBuilder.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Song" />
@@ -66,88 +66,88 @@
       <Property Name="NoteFactory" />
     </ShowAsAssociation>
   </Class>
-  <Class Name="PopNTouch2.Song">
+  <Class Name="PopNTouch2.Model.Song">
     <Position X="3.75" Y="10.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Model\Song.cs</FileName>
+      <FileName>Model\Sheet\Song.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="PopNTouch2.Instrument">
+  <Class Name="PopNTouch2.Model.Instrument">
     <Position X="6.25" Y="10.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Model\Instrument.cs</FileName>
+      <FileName>Model\Sheet\Instrument.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Class Name="PopNTouch2.BonusAutoPilot">
+  <Class Name="PopNTouch2.Model.BonusAutoPilot">
     <Position X="12.75" Y="5.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Model\BonusAutoPilot.cs</FileName>
+      <FileName>Model\Bonus\BonusAutoPilot.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="PopNTouch2.BonusInkBubble">
+  <Class Name="PopNTouch2.Model.BonusInkBubble">
     <Position X="12.75" Y="6.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Model\BonusInkBubble.cs</FileName>
+      <FileName>Model\Bonus\BonusInkBubble.cs</FileName>
     </TypeIdentifier>
     <Lollipop Position="0.2" />
   </Class>
-  <Class Name="PopNTouch2.NoteFactory">
+  <Class Name="PopNTouch2.Model.NoteFactory">
     <Position X="6.25" Y="7" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAIAA=</HashCode>
-      <FileName>Model\NoteFactory.cs</FileName>
+      <FileName>Model\Notes\NoteFactory.cs</FileName>
     </TypeIdentifier>
   </Class>
-  <Interface Name="PopNTouch2.INote">
+  <Class Name="PopNTouch2.Model.Note">
     <Position X="10" Y="4.25" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAABAAAAAAAAAAAAABAAAAAAAAACAAAAAAAAAA=</HashCode>
-      <FileName>Model\INote.cs</FileName>
+      <HashCode>AAAAAAAABAAAAAQAAEAAAABAAAAIAAAACAAAAAAAAAA=</HashCode>
+      <FileName>Model\Notes\Note.cs</FileName>
     </TypeIdentifier>
     <ShowAsAssociation>
       <Property Name="Length" />
       <Property Name="Accidental" />
       <Property Name="Height" />
     </ShowAsAssociation>
-  </Interface>
-  <Interface Name="PopNTouch2.IBonus">
+  </Class>
+  <Interface Name="PopNTouch2.Model.IBonus">
     <Position X="12.75" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Model\IBonus.cs</FileName>
+      <FileName>Model\Bonus\IBonus.cs</FileName>
     </TypeIdentifier>
   </Interface>
-  <Enum Name="PopNTouch2.Difficulty">
+  <Enum Name="PopNTouch2.Model.Difficulty">
     <Position X="6.25" Y="8.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAQAAAAAAAAAAAAAAgAA=</HashCode>
-      <FileName>Model\Difficulty.cs</FileName>
+      <FileName>Model\Sheet\Difficulty.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="PopNTouch2.Height">
-    <Position X="10" Y="8.75" Width="1.5" />
+  <Enum Name="PopNTouch2.Model.Height">
+    <Position X="10" Y="9.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AASAIAAAAAAQAAQAAAIAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Model\Height.cs</FileName>
+      <FileName>Model\Notes\Height.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="PopNTouch2.Accidental">
-    <Position X="10" Y="7.25" Width="1.5" />
+  <Enum Name="PopNTouch2.Model.Accidental">
+    <Position X="10" Y="8" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AQAAAAAAAAAAACAQAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
-      <FileName>Model\Accidental.cs</FileName>
+      <FileName>Model\Notes\Accidental.cs</FileName>
     </TypeIdentifier>
   </Enum>
-  <Enum Name="PopNTouch2.Length">
-    <Position X="10" Y="5.5" Width="1.5" />
+  <Enum Name="PopNTouch2.Model.Length">
+    <Position X="10" Y="6.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAACEAAAAAAAAAAAAAAABAQAAAAAAAAA=</HashCode>
-      <FileName>Model\Length.cs</FileName>
+      <FileName>Model\Notes\Length.cs</FileName>
     </TypeIdentifier>
   </Enum>
   <Font Name="Segoe UI" Size="9" />

@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 
-namespace PopNTouch2
+namespace PopNTouch2.Model
 {
     public class SheetMusic
     {
-        public List<INote> Notes
+        public List<Note> Notes
         {
             get
             {

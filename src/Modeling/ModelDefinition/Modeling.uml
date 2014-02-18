@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner"
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
   dslVersion="1.0.0.0"
   Id="ba7d1a55-5166-45ac-8041-c152888f5086"
-  name="PnTModeling" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  name="Modeling" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
   <ownedCommentsInternal>
     <comment
       Id="3e343dae-e65e-4e29-a54c-790f230e9c3a">
@@ -3619,7 +3619,7 @@ cf sheetCreations.sequenceddiagram</body>
             isComposite="false">
             <type_NamedElement>
               <undefinedTypeMoniker
-                Id="fcae4f2b-70ab-4f73-ba14-76827202d066"
+                Id="6c779f90-b9e1-427c-b77e-789b59b14dd1"
                 LastKnownName="Whole"
                 LastKnownLocation="Modeling.uml" />
             </type_NamedElement>
@@ -3635,7 +3635,7 @@ cf sheetCreations.sequenceddiagram</body>
             isComposite="false">
             <type_NamedElement>
               <undefinedTypeMoniker
-                Id="c301d30a-5400-4995-836e-51bc38a8f355"
+                Id="abb95f7c-cc13-4656-9a84-0fac7ca5b465"
                 LastKnownName="Half"
                 LastKnownLocation="Modeling.uml" />
             </type_NamedElement>
@@ -3795,7 +3795,7 @@ cf sheetCreations.sequenceddiagram</body>
             <covered>
               <lifelineMoniker
                 Id="36683fad-d047-41d8-8ef0-933583144d90"
-                LastKnownName="Derpy"
+                LastKnownName="Player"
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -4241,22 +4241,22 @@ cf sheetCreations.sequenceddiagram</body>
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="620dc72b-a789-4e8e-a24d-5a0b6a6bba7f"
-            name="OperandOccurrenceSpecification45">
-            <covered>
-              <lifelineMoniker
-                Id="6812c35f-459d-4acf-a0a4-d492a622b83e"
-                LastKnownName="gameMaster : GameMaster"
-                LastKnownLocation="Modeling.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
             Id="27fbb250-c254-4c94-a204-d662bc1593f0"
             name="OperandOccurrenceSpecification43">
             <covered>
               <lifelineMoniker
                 Id="7431086f-0f4a-4486-9917-8167a64970e5"
                 LastKnownName="playerDerpy : Player"
+                LastKnownLocation="Modeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="620dc72b-a789-4e8e-a24d-5a0b6a6bba7f"
+            name="OperandOccurrenceSpecification45">
+            <covered>
+              <lifelineMoniker
+                Id="6812c35f-459d-4acf-a0a4-d492a622b83e"
+                LastKnownName="gameMaster : GameMaster"
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -4668,7 +4668,7 @@ cf sheetCreations.sequenceddiagram</body>
             <covered>
               <lifelineMoniker
                 Id="36683fad-d047-41d8-8ef0-933583144d90"
-                LastKnownName="Derpy"
+                LastKnownName="Player"
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -4752,7 +4752,7 @@ cf sheetCreations.sequenceddiagram</body>
             <covered>
               <lifelineMoniker
                 Id="36683fad-d047-41d8-8ef0-933583144d90"
-                LastKnownName="Derpy"
+                LastKnownName="Player"
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -4848,7 +4848,7 @@ cf sheetCreations.sequenceddiagram</body>
             <covered>
               <lifelineMoniker
                 Id="36683fad-d047-41d8-8ef0-933583144d90"
-                LastKnownName="Derpy"
+                LastKnownName="Player"
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -4981,22 +4981,22 @@ cf sheetCreations.sequenceddiagram</body>
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="3eac546c-9edf-4964-b8d5-9543a39d8fef"
-            name="MessageOccurrenceSpecification82">
-            <covered>
-              <lifelineMoniker
-                Id="57516218-1149-442c-a638-4c380e756a20"
-                LastKnownName="sheetMusic : SheetMusic"
-                LastKnownLocation="Modeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="78e97f8d-6f25-479d-a244-46d7c071c5f1"
             name="MessageOccurrenceSpecification81">
             <covered>
               <lifelineMoniker
                 Id="83ffb035-a2d4-4b4b-a040-13c6085e95dd"
                 LastKnownName="sheetBuilder : SheetBuilder"
+                LastKnownLocation="Modeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="3eac546c-9edf-4964-b8d5-9543a39d8fef"
+            name="MessageOccurrenceSpecification82">
+            <covered>
+              <lifelineMoniker
+                Id="57516218-1149-442c-a638-4c380e756a20"
+                LastKnownName="sheetMusic : SheetMusic"
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -5281,7 +5281,7 @@ cf sheetCreations.sequenceddiagram</body>
             <coveredLifelines>
               <lifelineMoniker
                 Id="36683fad-d047-41d8-8ef0-933583144d90"
-                LastKnownName="Derpy"
+                LastKnownName="Player"
                 LastKnownLocation="Modeling.uml" />
               <lifelineMoniker
                 Id="6812c35f-459d-4acf-a0a4-d492a622b83e"
@@ -5299,7 +5299,7 @@ cf sheetCreations.sequenceddiagram</body>
                 <coveredLifelines>
                   <lifelineMoniker
                     Id="36683fad-d047-41d8-8ef0-933583144d90"
-                    LastKnownName="Derpy"
+                    LastKnownName="Player"
                     LastKnownLocation="Modeling.uml" />
                   <lifelineMoniker
                     Id="6812c35f-459d-4acf-a0a4-d492a622b83e"
@@ -5349,7 +5349,7 @@ cf sheetCreations.sequenceddiagram</body>
             <covered>
               <lifelineMoniker
                 Id="36683fad-d047-41d8-8ef0-933583144d90"
-                LastKnownName="Derpy"
+                LastKnownName="Player"
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -5429,7 +5429,7 @@ cf sheetCreations.sequenceddiagram</body>
             <covered>
               <lifelineMoniker
                 Id="36683fad-d047-41d8-8ef0-933583144d90"
-                LastKnownName="Derpy"
+                LastKnownName="Player"
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -5561,7 +5561,7 @@ cf sheetCreations.sequenceddiagram</body>
             <covered>
               <lifelineMoniker
                 Id="36683fad-d047-41d8-8ef0-933583144d90"
-                LastKnownName="Derpy"
+                LastKnownName="Player"
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -5757,9 +5757,14 @@ cf sheetCreations.sequenceddiagram</body>
         <lifelines>
           <lifeline
             Id="36683fad-d047-41d8-8ef0-933583144d90"
-            name="Derpy"
+            name="Player"
             isActor="true"
-            lifelineDisplayName="Derpy">
+            lifelineDisplayName="Player">
+            <represents>
+              <propertyMoniker
+                Id="6588ad4d-c6ba-44b8-9a0d-fcde9bd6c486"
+                LastKnownLocation="Modeling.uml" />
+            </represents>
             <topLevelOccurrences>
               <messageOccurrenceSpecificationMoniker
                 Id="b28eec6c-73d5-4b99-95dc-10285c32a22b"
@@ -6602,6 +6607,22 @@ cf sheetCreations.sequenceddiagram</body>
                 Id="37c6b541-a67d-4a0f-bd8a-5636c6a46990"
                 LastKnownName="Song"
                 LastKnownLocation="Package_1204.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="6588ad4d-c6ba-44b8-9a0d-fcde9bd6c486"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <actorMoniker
+                Id="c15f0d63-53cf-47cd-a4b0-bdc2616e928e"
+                LastKnownName="Player"
+                LastKnownLocation="Modeling.uml" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
@@ -7683,7 +7704,7 @@ cf sheetCreations.sequenceddiagram</body>
             isComposite="false">
             <type_NamedElement>
               <actorMoniker
-                Id="f6daf833-77e4-4e6e-bc0e-ca87329172ef"
+                Id="c15f0d63-53cf-47cd-a4b0-bdc2616e928e"
                 LastKnownName="Player"
                 LastKnownLocation="Modeling.uml" />
             </type_NamedElement>
@@ -7896,22 +7917,22 @@ cf sheetCreations.sequenceddiagram</body>
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="88e8e35d-d2d7-4806-b140-c2692804ef06"
-            name="MessageOccurrenceSpecification4">
-            <covered>
-              <lifelineMoniker
-                Id="6f347f50-6438-4588-bf7d-5d476d841632"
-                LastKnownName="sheetmusic1 : SheetMusic"
-                LastKnownLocation="Modeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="e6b26791-a6cf-4a42-add8-fdae161295b4"
             name="MessageOccurrenceSpecification3">
             <covered>
               <lifelineMoniker
                 Id="1ab383ba-6baa-438e-bb71-4baa479d9291"
                 LastKnownName="Player"
+                LastKnownLocation="Modeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="88e8e35d-d2d7-4806-b140-c2692804ef06"
+            name="MessageOccurrenceSpecification4">
+            <covered>
+              <lifelineMoniker
+                Id="6f347f50-6438-4588-bf7d-5d476d841632"
+                LastKnownName="sheetmusic1 : SheetMusic"
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -8115,16 +8136,6 @@ cf sheetCreations.sequenceddiagram</body>
             </covered>
           </executionOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="82b828ff-aa2e-4ff7-957f-047eead2a76c"
-            name="MessageOccurrenceSpecification10">
-            <covered>
-              <lifelineMoniker
-                Id="1bde96b7-e897-4901-9378-615f3a16f3fd"
-                LastKnownName="bonus1 : BonusInkBubble"
-                LastKnownLocation="Modeling.uml" />
-            </covered>
-          </messageOccurrenceSpecification>
-          <messageOccurrenceSpecification
             Id="7f195e98-b888-48b7-8fdf-7c30fa21c3d1"
             name="MessageOccurrenceSpecification9">
             <covered>
@@ -8135,12 +8146,12 @@ cf sheetCreations.sequenceddiagram</body>
             </covered>
           </messageOccurrenceSpecification>
           <messageOccurrenceSpecification
-            Id="472c7273-cf1b-4452-a0a3-ec6c5f5b41ae"
-            name="MessageOccurrenceSpecification12">
+            Id="82b828ff-aa2e-4ff7-957f-047eead2a76c"
+            name="MessageOccurrenceSpecification10">
             <covered>
               <lifelineMoniker
-                Id="6f347f50-6438-4588-bf7d-5d476d841632"
-                LastKnownName="sheetmusic1 : SheetMusic"
+                Id="1bde96b7-e897-4901-9378-615f3a16f3fd"
+                LastKnownName="bonus1 : BonusInkBubble"
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -8151,6 +8162,16 @@ cf sheetCreations.sequenceddiagram</body>
               <lifelineMoniker
                 Id="1bde96b7-e897-4901-9378-615f3a16f3fd"
                 LastKnownName="bonus1 : BonusInkBubble"
+                LastKnownLocation="Modeling.uml" />
+            </covered>
+          </messageOccurrenceSpecification>
+          <messageOccurrenceSpecification
+            Id="472c7273-cf1b-4452-a0a3-ec6c5f5b41ae"
+            name="MessageOccurrenceSpecification12">
+            <covered>
+              <lifelineMoniker
+                Id="6f347f50-6438-4588-bf7d-5d476d841632"
+                LastKnownName="sheetmusic1 : SheetMusic"
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </messageOccurrenceSpecification>
@@ -8894,16 +8915,6 @@ cf sheetCreations.sequenceddiagram</body>
             </covered>
           </operandOccurrenceSpecification>
           <operandOccurrenceSpecification
-            Id="977c2e62-c504-44cb-9eb6-61fb01f870a0"
-            name="OperandOccurrenceSpecification23">
-            <covered>
-              <lifelineMoniker
-                Id="3f070485-aa62-4696-8e13-64b751e7267d"
-                LastKnownName="sheetmusic2 : SheetMusic"
-                LastKnownLocation="Modeling.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
             Id="43e4945f-74c0-49db-9606-43049ad3f11d"
             name="OperandOccurrenceSpecification19">
             <covered>
@@ -8920,6 +8931,16 @@ cf sheetCreations.sequenceddiagram</body>
               <lifelineMoniker
                 Id="6f347f50-6438-4588-bf7d-5d476d841632"
                 LastKnownName="sheetmusic1 : SheetMusic"
+                LastKnownLocation="Modeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
+            Id="977c2e62-c504-44cb-9eb6-61fb01f870a0"
+            name="OperandOccurrenceSpecification23">
+            <covered>
+              <lifelineMoniker
+                Id="3f070485-aa62-4696-8e13-64b751e7267d"
+                LastKnownName="sheetmusic2 : SheetMusic"
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -9008,6 +9029,16 @@ cf sheetCreations.sequenceddiagram</body>
             </covered>
           </executionOccurrenceSpecification>
           <operandOccurrenceSpecification
+            Id="623ab966-13af-49ea-995f-924cfd691e82"
+            name="OperandOccurrenceSpecification22">
+            <covered>
+              <lifelineMoniker
+                Id="6f347f50-6438-4588-bf7d-5d476d841632"
+                LastKnownName="sheetmusic1 : SheetMusic"
+                LastKnownLocation="Modeling.uml" />
+            </covered>
+          </operandOccurrenceSpecification>
+          <operandOccurrenceSpecification
             Id="55353416-aff5-4ffa-af83-0d0ad8d8c170"
             name="OperandOccurrenceSpecification24">
             <covered>
@@ -9024,16 +9055,6 @@ cf sheetCreations.sequenceddiagram</body>
               <lifelineMoniker
                 Id="1bde96b7-e897-4901-9378-615f3a16f3fd"
                 LastKnownName="bonus1 : BonusInkBubble"
-                LastKnownLocation="Modeling.uml" />
-            </covered>
-          </operandOccurrenceSpecification>
-          <operandOccurrenceSpecification
-            Id="623ab966-13af-49ea-995f-924cfd691e82"
-            name="OperandOccurrenceSpecification22">
-            <covered>
-              <lifelineMoniker
-                Id="6f347f50-6438-4588-bf7d-5d476d841632"
-                LastKnownName="sheetmusic1 : SheetMusic"
                 LastKnownLocation="Modeling.uml" />
             </covered>
           </operandOccurrenceSpecification>
@@ -9087,6 +9108,11 @@ cf sheetCreations.sequenceddiagram</body>
             name="sheetmusic1 : SheetMusic"
             isActor="false"
             lifelineDisplayName="sheetmusic1 : SheetMusic">
+            <represents>
+              <propertyMoniker
+                Id="4891b50d-7fd1-4523-8a98-ef1de7e1d1ca"
+                LastKnownLocation="Modeling.uml" />
+            </represents>
             <topLevelOccurrences>
               <executionOccurrenceSpecificationMoniker
                 Id="9b780624-386f-4fe5-81c1-0e72d6cf6927"
@@ -9119,6 +9145,11 @@ cf sheetCreations.sequenceddiagram</body>
             name="bonus1 : BonusInkBubble"
             isActor="false"
             lifelineDisplayName="bonus1 : BonusInkBubble">
+            <represents>
+              <propertyMoniker
+                Id="ee35e8ad-f176-4963-b1c7-b1a1f6f19e52"
+                LastKnownLocation="Modeling.uml" />
+            </represents>
             <topLevelOccurrences>
               <operandOccurrenceSpecificationMoniker
                 Id="31b4c1bd-d6b3-4124-9e65-bb40b67f72d0"
@@ -9175,6 +9206,11 @@ cf sheetCreations.sequenceddiagram</body>
             name="bonus2 : BonusAutoPilot"
             isActor="false"
             lifelineDisplayName="bonus2 : BonusAutoPilot">
+            <represents>
+              <propertyMoniker
+                Id="b7c5233d-a8c4-4fa7-a198-7796b0df4304"
+                LastKnownLocation="Modeling.uml" />
+            </represents>
             <topLevelOccurrences>
               <operandOccurrenceSpecificationMoniker
                 Id="75503d08-8a0d-489c-aee3-ded2ff1e486a"
@@ -9207,6 +9243,11 @@ cf sheetCreations.sequenceddiagram</body>
             name="sheetmusic2 : SheetMusic"
             isActor="false"
             lifelineDisplayName="sheetmusic2 : SheetMusic">
+            <represents>
+              <propertyMoniker
+                Id="539d35f3-0016-4cac-9f6f-33bca186ea9d"
+                LastKnownLocation="Modeling.uml" />
+            </represents>
             <topLevelOccurrences>
               <operandOccurrenceSpecificationMoniker
                 Id="69e6297c-2519-483b-b85f-f58036b6d5cb"
@@ -9477,9 +9518,73 @@ cf sheetCreations.sequenceddiagram</body>
             isComposite="false">
             <type_NamedElement>
               <actorMoniker
-                Id="d53745ca-7100-42d1-9bf9-afaa13f5c387"
+                Id="c15f0d63-53cf-47cd-a4b0-bdc2616e928e"
                 LastKnownName="Player"
                 LastKnownLocation="Modeling.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="4891b50d-7fd1-4523-8a98-ef1de7e1d1ca"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="db8681ec-f340-44d7-9c21-1903c4a19ca7"
+                LastKnownName="SheetMusic"
+                LastKnownLocation="Package_1204.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="539d35f3-0016-4cac-9f6f-33bca186ea9d"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="db8681ec-f340-44d7-9c21-1903c4a19ca7"
+                LastKnownName="SheetMusic"
+                LastKnownLocation="Package_1204.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="b7c5233d-a8c4-4fa7-a198-7796b0df4304"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="36f31ead-cf8d-418b-b608-bf692d19aef8"
+                LastKnownName="BonusAutoPilot"
+                LastKnownLocation="Package_1204.uml" />
+            </type_NamedElement>
+          </property>
+          <property
+            Id="ee35e8ad-f176-4963-b1c7-b1a1f6f19e52"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false">
+            <type_NamedElement>
+              <classMoniker
+                Id="313743d5-7bd1-4218-a3e8-e6cf9bd5bd36"
+                LastKnownName="BonusInkBubble"
+                LastKnownLocation="Package_1204.uml" />
             </type_NamedElement>
           </property>
         </ownedAttributesInternal>
@@ -9566,16 +9671,6 @@ cf sheetCreations.sequenceddiagram</body>
         name="ExecutionEvent" />
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <undefinedType
-        Id="c301d30a-5400-4995-836e-51bc38a8f355"
-        name="Half" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <undefinedType
-        Id="fcae4f2b-70ab-4f73-ba14-76827202d066"
-        name="Whole" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
       <executionEvent
         Id="406f5ddc-7c1f-499a-8bb9-8aeca1aba2fa"
         name="ExecutionEvent" />
@@ -9644,6 +9739,16 @@ cf sheetCreations.sequenceddiagram</body>
       <executionEvent
         Id="4f460714-010d-4351-bfb7-b3024fc7817b"
         name="ExecutionEvent" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="abb95f7c-cc13-4656-9a84-0fac7ca5b465"
+        name="Half" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <undefinedType
+        Id="6c779f90-b9e1-427c-b77e-789b59b14dd1"
+        name="Whole" />
     </packageHasNamedElement>
   </packagedElements>
   <primitiveType

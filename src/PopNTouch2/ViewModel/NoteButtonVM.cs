@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace PopNTouch2.ViewModel
 {
-    class NoteButtonVM
+    public class NoteButtonVM
     {
     }
 }

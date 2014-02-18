@@ -4,9 +4,30 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PopNTouch2.View
+namespace PopNTouch2.ViewModel
 {
-    class PlayerVM
+    public class PlayerVM
     {
+        public ScoreVM ScoreVM
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
+
+        public SheetMusicVM SheetMusicVM
+        {
+            get
+            {
+                throw new System.NotImplementedException();
+            }
+            set
+            {
+            }
+        }
     }
 }

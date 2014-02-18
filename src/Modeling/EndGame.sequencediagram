@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" dslVersion="1.0.0.0" Id="81cf14cd-fce8-4d2e-bcec-8c306fd2c66a" name="EndGameNico" linkedPackageId="c813223e-441f-48c7-823a-5e5d20f4af2c" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
+<SequenceDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="81cf14cd-fce8-4d2e-bcec-8c306fd2c66a" name="EndGameNico" linkedPackageId="c813223e-441f-48c7-823a-5e5d20f4af2c" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner">
   <packagedElements>
     <packageHasNamedElement>
       <interaction Id="dc38b1ce-8d74-4d8f-a158-fbf0f20c533f" name="EndGameNico" collapseFragmentsFlag="false" isActiveClass="false" isAbstract="false" isLeaf="false" isReentrant="false">
@@ -488,7 +488,7 @@
           <property Id="9d3794b8-efcd-4633-9ba3-6bbeedd4e88e" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
             <elementDefinition Id="53afe4ea-62a0-4096-aa4d-57d7f9212f79" />
             <type_NamedElement>
-              <referencedTypeMoniker Id="6bac30a9-39bf-40a4-a32e-5fad6daaebb7" LastKnownName="Player" />
+              <referencedTypeMoniker Id="76a908ee-9446-48d5-89dd-c400642a3a3f" LastKnownName="Player" />
             </type_NamedElement>
           </property>
           <property Id="f58fae92-22b2-4ae6-a318-322b5e9fb8a9" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
@@ -555,8 +555,13 @@
         <elementDefinition Id="4f460714-010d-4351-bfb7-b3024fc7817b" />
       </executionEvent>
     </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="76a908ee-9446-48d5-89dd-c400642a3a3f" name="Player" isAbstract="false" isLeaf="false" cachedFullName="Modeling::Player">
+        <elementDefinition Id="c15f0d63-53cf-47cd-a4b0-bdc2616e928e" />
+      </referencedType>
+    </packageHasNamedElement>
   </packagedElements>
-  <package Id="c813223e-441f-48c7-823a-5e5d20f4af2c" name="PnTModeling">
+  <package Id="c813223e-441f-48c7-823a-5e5d20f4af2c" name="Modeling">
     <elementDefinition Id="ba7d1a55-5166-45ac-8041-c152888f5086" />
   </package>
 </SequenceDesignerModel>

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace PopNTouch2.View
+namespace PopNTouch2.ViewModel
 {
-    class MainMenuVM
+    public class MainMenuVM
     {
     }
 }

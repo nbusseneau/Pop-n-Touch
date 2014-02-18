@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm12="http://schemas.microsoft.com/dsltools/UseCaseModel"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
   dslVersion="1.0.0.0"
   Id="ddae1ba9-57fe-4e90-a18b-cbd6f7dba023"
   name="Model" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -17,12 +17,6 @@
     <comment
       Id="c90f7b2a-b08a-4a30-89f5-bbb067201a66">
       <body>Flyweight</body>
-      <annotatedElements>
-        <interfaceMoniker
-          Id="f1bf6168-95bc-462a-be30-b41a5a6c34df"
-          LastKnownName="INote"
-          LastKnownLocation="Package_1204.uml" />
-      </annotatedElements>
     </comment>
     <comment
       Id="ca711daa-7d7d-484f-ab3f-e43ca6c378f1">
@@ -448,133 +442,6 @@
     </packageHasNamedElement>
     <packageHasNamedElement>
       <Interface
-        Id="f1bf6168-95bc-462a-be30-b41a5a6c34df"
-        name="INote"
-        isAbstract="false"
-        isLeaf="false">
-        <targetEnds>
-          <association
-            Id="60dcf931-c648-4742-bfa7-a62b06dbbe39"
-            isDerived="false"
-            sourceEndRoleName="INote"
-            targetEndRoleName="Accidental"
-            isLeaf="false"
-            isAbstract="false">
-            <enumerationMoniker
-              Id="33fb343c-bbd4-4f30-a5d1-b61b7d2b01a4"
-              LastKnownName="Accidental"
-              LastKnownLocation="Package_1204.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="07c0c784-8d24-49fb-988e-fe3038e0066e"
-                  name="INote"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="69a918f9-1111-4f85-99fd-6c4b6ec92085"
-                  name="Accidental"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
-            Id="d74972ac-e0c1-4548-9eca-44ffb41f62a8"
-            isDerived="false"
-            sourceEndRoleName="INote"
-            targetEndRoleName="Height"
-            isLeaf="false"
-            isAbstract="false">
-            <enumerationMoniker
-              Id="cf059715-80e1-4b0a-bdf8-f770bf984480"
-              LastKnownName="Height"
-              LastKnownLocation="Package_1204.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="d52ce93e-0379-4ed1-83e0-05e78cd40bc5"
-                  name="INote"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="7f385d4c-f4fc-4124-bcb2-3c4b4265a147"
-                  name="Height"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
-            Id="7ecfc288-3e30-4c07-a100-f28566fe9fec"
-            isDerived="false"
-            sourceEndRoleName="INote"
-            targetEndRoleName="Length"
-            isLeaf="false"
-            isAbstract="false">
-            <enumerationMoniker
-              Id="35305a4c-352b-40db-8e1f-2ced7a1c96bb"
-              LastKnownName="Length"
-              LastKnownLocation="Package_1204.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="547e897d-8bce-4d86-9fb2-81b2ef39fac4"
-                  name="INote"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="aee58f28-ca05-4e88-890a-3e4da6338971"
-                  name="Length"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-        </targetEnds>
-      </Interface>
-    </packageHasNamedElement>
-    <packageHasNamedElement>
-      <Interface
         Id="1e1686ab-4132-4d89-b17e-1b635c96135a"
         name="IBonus"
         isAbstract="false"
@@ -671,58 +538,6 @@
         isActiveClass="false">
         <targetEnds>
           <association
-            Id="6dfd5481-2737-46a3-b080-88b5fc9be474"
-            isDerived="false"
-            sourceEndRoleName="SheetMusic"
-            targetEndRoleName="Notes"
-            isLeaf="false"
-            isAbstract="false">
-            <interfaceMoniker
-              Id="f1bf6168-95bc-462a-be30-b41a5a6c34df"
-              LastKnownName="INote"
-              LastKnownLocation="Package_1204.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="27514fbb-a112-4293-88b0-2e6461f3792f"
-                  name="SheetMusic"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="Composite"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="95a86136-5c91-4206-ad48-e4b5c9e3044d"
-                  name="Notes"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="true">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="ae9c3d53-8c02-42de-a16f-b9f3eddb9954"
-                      name="Lower"
-                      value="Many many" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="68e65677-bff6-44cd-9fba-15ee33b6b67b"
-                      name="Upper"
-                      value="Many many" />
-                  </upperValueInternal>
-                </memberEnd>
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
             Id="af5eebea-46b4-4a23-9cfb-3f505f9a471c"
             isDerived="false"
             sourceEndRoleName="SheetMusic"
@@ -769,6 +584,58 @@
                       Id="03b1af98-ac2d-4849-9e33-f4e40f4557b7"
                       name="Upper"
                       value="Some" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="63634a60-4f4c-4020-a47a-e457321296f4"
+            isDerived="false"
+            sourceEndRoleName="SheetMusic"
+            targetEndRoleName="Note"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="9e0111a4-fee8-46c9-b092-1dfe67a1a653"
+              LastKnownName="Note"
+              LastKnownLocation="Package_1204.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fd560466-8cc7-463d-9d00-099422fa8c82"
+                  name="SheetMusic"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e25d048f-94f9-4b3c-b6e2-ec071aa9e3c9"
+                  name="Note"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="a0da88d5-d79e-48a4-a6b4-78e5154202a7"
+                      name="Lower"
+                      value="Many many" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="c49371ac-c3e2-4ebf-baf5-be81ae738323"
+                      name="Upper"
+                      value="Many many" />
                   </upperValueInternal>
                 </memberEnd>
               </associationHasOwnedEnds>
@@ -1053,13 +920,6 @@
       </enumeration>
     </packageHasNamedElement>
     <packageHasNamedElement>
-      <class
-        Id="8f043d44-27b1-4666-8324-f6e01ff6d27a"
-        isAbstract="true"
-        isLeaf="false"
-        isActiveClass="false" />
-    </packageHasNamedElement>
-    <packageHasNamedElement>
       <enumeration
         Id="35305a4c-352b-40db-8e1f-2ced7a1c96bb"
         name="Length"
@@ -1090,21 +950,84 @@
         isActiveClass="false">
         <targetEnds>
           <association
-            Id="f225c6b1-1268-4876-b79a-5f6565f30b52"
+            Id="96322b0a-5c2e-4184-9fb0-f0f41c35fe7b"
             isDerived="false"
             sourceEndRoleName="NoteFactory"
-            targetEndRoleName="INote"
+            targetEndRoleName="Note"
             isLeaf="false"
             isAbstract="false">
-            <interfaceMoniker
-              Id="f1bf6168-95bc-462a-be30-b41a5a6c34df"
-              LastKnownName="INote"
+            <classMoniker
+              Id="9e0111a4-fee8-46c9-b092-1dfe67a1a653"
+              LastKnownName="Note"
               LastKnownLocation="Package_1204.uml" />
             <relationshipOwnedElementsInternal>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="26d25511-82ec-47de-bcc2-7f43cf062b58"
+                  Id="ebe70c0c-e064-4500-9a8e-f13a19899594"
                   name="NoteFactory"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="92fc1fe4-3f7c-4ce1-9923-abb59542da34"
+                  name="Note"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="e8cf5fcc-92d6-4ee0-bb8f-d598baf403f2"
+                      name="Lower"
+                      value="84" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="a564f2dd-f66a-43bb-ba75-39233b7cf4cf"
+                      name="Upper"
+                      value="84" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="9e0111a4-fee8-46c9-b092-1dfe67a1a653"
+        name="Note"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="f8b302ba-9cb7-45f4-abcb-fa111b7c5378"
+            isDerived="false"
+            sourceEndRoleName="Note"
+            targetEndRoleName="Accidental"
+            isLeaf="false"
+            isAbstract="false">
+            <enumerationMoniker
+              Id="33fb343c-bbd4-4f30-a5d1-b61b7d2b01a4"
+              LastKnownName="Accidental"
+              LastKnownLocation="Package_1204.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="efaefcc4-71e0-402e-8adf-282529fdfbff"
+                  name="Note"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
@@ -1116,28 +1039,93 @@
               </associationHasOwnedEnds>
               <associationHasOwnedEnds>
                 <memberEnd
-                  Id="8d0b11e1-b667-4b27-a8b6-5fba25b88793"
-                  name="INote"
+                  Id="9fab2585-e3a0-4d6a-b014-b9aad945cc36"
+                  name="Accidental"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"
                   isDerived="false"
                   isDerivedUnion="false"
                   aggregation="None"
-                  isComposite="false">
-                  <lowerValueInternal>
-                    <literalString
-                      Id="e11f6aee-72e2-402b-bd59-c74750901909"
-                      name="Lower"
-                      value="27" />
-                  </lowerValueInternal>
-                  <upperValueInternal>
-                    <literalString
-                      Id="464b148f-c19a-4fbe-bd52-36cb12513808"
-                      name="Upper"
-                      value="27" />
-                  </upperValueInternal>
-                </memberEnd>
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="ef48df1d-c028-42fc-aa11-ed2cf39599cf"
+            isDerived="false"
+            sourceEndRoleName="Note"
+            targetEndRoleName="Height"
+            isLeaf="false"
+            isAbstract="false">
+            <enumerationMoniker
+              Id="cf059715-80e1-4b0a-bdf8-f770bf984480"
+              LastKnownName="Height"
+              LastKnownLocation="Package_1204.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="01e344c0-cd2e-48e5-88b8-5c1d924a7a16"
+                  name="Note"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c3a58636-d0fb-4439-aead-170b92fad811"
+                  name="Height"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="4d854d60-72bf-44a2-8c8a-4d43f41bf4eb"
+            isDerived="false"
+            sourceEndRoleName="Note"
+            targetEndRoleName="Length"
+            isLeaf="false"
+            isAbstract="false">
+            <enumerationMoniker
+              Id="35305a4c-352b-40db-8e1f-2ced7a1c96bb"
+              LastKnownName="Length"
+              LastKnownLocation="Package_1204.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8a297861-de81-48d1-85a3-d9fc26b37f1f"
+                  name="Note"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="fc9bcb87-a9f6-4987-bc23-660f1cfb31d2"
+                  name="Length"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
               </associationHasOwnedEnds>
             </relationshipOwnedElementsInternal>
           </association>
