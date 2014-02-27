@@ -21,7 +21,7 @@ namespace PopNTouch2.View
     {
         public ScoreView()
         {
-            InitializeComponent();
+            //InitializeComponent();
         }
     }
 }

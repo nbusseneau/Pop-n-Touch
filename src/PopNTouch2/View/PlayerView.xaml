@@ -14,7 +14,7 @@
         <Image HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" Source="../Resources/UI/BGP_PlayerView.png"/>
 
         <!-- Stave -->
-        <PopNTouch2:SheetMusicView Margin="35,96,36,105"/>
+      <!--  <PopNTouch2:SheetMusicView Margin="35,96,36,105"/> -->
 
         <!-- Feedback -->
         <Ellipse Name="fdbckCorrect" HorizontalAlignment="Left" Height="30" Margin="168,44,0,0" Stroke="Green" Fill="GreenYellow" VerticalAlignment="Top" Width="30" Visibility="Hidden"/>

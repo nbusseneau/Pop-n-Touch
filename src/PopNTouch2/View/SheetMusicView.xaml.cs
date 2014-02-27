@@ -21,7 +21,7 @@ namespace PopNTouch2.Model.View
     {
         public SheetMusicView()
         {
-            InitializeComponent();
+            //InitializeComponent();
         }
     }
 }

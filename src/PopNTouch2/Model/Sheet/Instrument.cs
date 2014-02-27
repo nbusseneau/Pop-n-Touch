@@ -7,5 +7,16 @@ namespace PopNTouch2.Model
 {
     public class Instrument
     {
+        private string name;
+
+        public string Name
+        {
+            get
+            {
+                return name;
+            }
+        }
+
+        public Instrument(string n) { name = n; }
     }
 }
