@@ -50,5 +50,11 @@ namespace PopNTouch2.Model
             {
             }
         }
+
+        public SheetMusic buildSheet(Song song, Instrument instr, Difficulty diff)
+        {
+            SheetMusic sheetMusic = new SheetMusic();
+            return sheetMusic;
+        }
     }
 }
