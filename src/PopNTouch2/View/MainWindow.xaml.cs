@@ -30,7 +30,6 @@ namespace PopNTouch2.View
         public void Button_AddTab_Click(object sender, EventArgs e) { }
         public void Button_ChooseSong_Click(object sender, EventArgs e) { }
         public void Button_EraseAll_Click(object sender, EventArgs e) { }
-        public void Button_Start_Click(object sender, EventArgs e) { }
         public void Button_PlayStop_Unchecked(object sender, EventArgs e) { }
         public void Button_PlayStop_Checked(object sender, EventArgs e) { }
     }

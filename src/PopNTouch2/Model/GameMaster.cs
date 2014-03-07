@@ -15,53 +15,10 @@ namespace PopNTouch2.Model
         private Boolean upToDateGame;
         private SheetBuilder sheetBuilder;
 
-        public List<Player> Players
-        {
-            get
-            {
-                return players;
-            }
-            set
-            {
-                players = value;
-            }
-        }
-
-        public Game Game
-        {
-            get
-            {
-                return game;
-            }
-            set
-            {
-                game = value;
-            }
-        }
-
-        public Boolean UpToDateGame
-        {
-            get
-            {
-                return upToDateGame;
-            }
-            set
-            {
-                upToDateGame = value;
-            }
-        }
-
-        public SheetBuilder SheetBuilder
-        {
-            get
-            {
-                return sheetBuilder;
-            }
-            set
-            {
-                sheetBuilder = value;
-            }
-        }
+        public List<Player> Players {get; set;}
+        public Game Game {get; set;}
+        public Boolean UpToDateGame {get; set;}
+        public SheetBuilder SheetBuilder {get; set;}
 
         public GameMaster()
         {
@@ -70,7 +27,7 @@ namespace PopNTouch2.Model
             sheetBuilder = new SheetBuilder();
         }
 
-        public void selectSong(Song song)
+        public void SelectSong(Song song)
         {
             Game = new Game(song);
             UpToDateGame = true;
@@ -86,7 +43,7 @@ namespace PopNTouch2.Model
         }
 
         // Attribute ok ? See later
-        public void newPlayer()
+        public void NewPlayer()
         {
             Player player = new Player(this);
             Players.Add(player);
@@ -94,7 +51,7 @@ namespace PopNTouch2.Model
                 player.informNewGame();
         }
 
-        public void ready()
+        public void Ready()
         {
             Boolean everyoneReady = true;
             foreach (Player player in Players)
@@ -115,14 +72,14 @@ namespace PopNTouch2.Model
             instrus.Add(new Instrument("Violon"));
             Song song = new Song("Chanson bidon", instrus);
 
-            gameMaster.selectSong(song);
+            gameMaster.SelectSong(song);
             System.Console.WriteLine(gameMaster.Game.Song.Name + ", " + gameMaster.Game.Song.Instruments);
             foreach (Player player in gameMaster.Players)
             {
                 System.Console.WriteLine(player);
             }
 
-            gameMaster.newPlayer();
+            gameMaster.NewPlayer();
             foreach (Player player in gameMaster.Players)
             {
                 System.Console.WriteLine(player);
@@ -133,7 +90,7 @@ namespace PopNTouch2.Model
                 player.iMReady();
             }
 
-            gameMaster.newPlayer();
+            gameMaster.NewPlayer();
             foreach (Player player in gameMaster.Players)
             {
                 System.Console.WriteLine("1 " + player.CurrentGame + ", " + player.SheetMusic);
@@ -141,7 +98,7 @@ namespace PopNTouch2.Model
                 System.Console.WriteLine("2 " + player.CurrentGame + ", " + player.SheetMusic);
             }
 
-            while (true) { }
+            System.Console.ReadLine();
         }
     }
 }

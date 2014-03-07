@@ -3,20 +3,25 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:s="http://schemas.microsoft.com/surface/2008"
         xmlns:PopNTouch2="clr-namespace:PopNTouch2.View"
+        xmlns:ViewModel="clr-namespace:PopNTouch2.ViewModel"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
         Title="Pop'n Touch 2 : Revengeance" Left="0" Top="0" Width="1920" Height="1080">
     
+    <Window.DataContext>
+        <ViewModel:MainWindowVM/>
+    </Window.DataContext>
+    
     <Window.Resources>
-        <Storyboard x:Key="animBtnStart" Duration="0:0:1" RepeatBehavior="Forever" AutoReverse="True">
+        <Storyboard x:Key="startBtnAnim" Duration="0:0:1" RepeatBehavior="Forever" AutoReverse="True">
             <DoubleAnimation From="1.0" To="1.1" 
-            Storyboard.TargetName="btnStart"
+            Storyboard.TargetName="startBtn"
             Storyboard.TargetProperty="(Grid.RenderTransform).(ScaleTransform.ScaleX)">
                 <DoubleAnimation.EasingFunction>
                     <ElasticEase Oscillations="2" EasingMode="EaseIn" />
                 </DoubleAnimation.EasingFunction>
             </DoubleAnimation>
             <DoubleAnimation From="1.0" To="1.1" 
-            Storyboard.TargetName="btnStart"
+            Storyboard.TargetName="startBtn"
             Storyboard.TargetProperty="(Grid.RenderTransform).(ScaleTransform.ScaleY)">
                 <DoubleAnimation.EasingFunction>
                     <ElasticEase Oscillations="1" EasingMode="EaseIn" />
@@ -30,11 +35,19 @@
         <Image HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Source="../Resources/UI/BGP_Main.jpg" Panel.ZIndex="-10"/>
 
         <!-- Start screen-->
-        <s:SurfaceButton Name="btnStart" HorizontalAlignment="Center" VerticalAlignment="Center" Click="Button_Start_Click" Background="{x:Null}" RenderTransformOrigin="0.5,0.5">
+        <s:SurfaceButton Name="startBtn" HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding StartGame}" Background="{x:Null}" RenderTransformOrigin="0.5,0.5" Visibility="{Binding StartButtonVisibility}">
             <s:SurfaceButton.RenderTransform>
                 <ScaleTransform x:Name="scaleBtnStart" ScaleX="1.0" ScaleY="1.0"/>
             </s:SurfaceButton.RenderTransform>
-            <Image Height="320" Width="320" Source="../Resources/UI/BTNP_Start.png"/>
+            <Image Height="320" Width="320" Source="../Resources/UI/BTNP_Start.png" />
+            <s:SurfaceButton.Triggers>
+                <EventTrigger RoutedEvent="Image.Loaded">
+                    <BeginStoryboard Name="beginStartBtnAnim" Storyboard="{DynamicResource startBtnAnim}" />
+                </EventTrigger>
+                <EventTrigger RoutedEvent="s:SurfaceButton.Click">
+                    <StopStoryboard BeginStoryboardName="beginStartBtnAnim" />
+                </EventTrigger>
+            </s:SurfaceButton.Triggers>
         </s:SurfaceButton>
 
         <!-- Players views -->

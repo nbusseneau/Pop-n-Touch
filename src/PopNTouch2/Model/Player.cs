@@ -114,7 +114,7 @@ namespace PopNTouch2.Model
         {
             SheetMusic = GameMaster.SheetBuilder.buildSheet(GameMaster.Game.Song, Instrument, Difficulty);
             ready = true;
-            GameMaster.ready();
+            GameMaster.Ready();
         }
 
         public void notReadyAnymore()
