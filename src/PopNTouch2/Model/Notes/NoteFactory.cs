@@ -9,42 +9,42 @@ namespace PopNTouch2.Model
     {
         private readonly Lazy<Note>[] notes;
 
-        // Max values of enums for note positionning in array
-        private int maxAccidental = Enum.GetValues(typeof(Accidental)).Length + 1;
-        private int maxHeight = Enum.GetValues(typeof(Height)).Length + 1;
-
-        public Lazy<Note>[] Notes
-        {
-            get
-            {
-                return notes;
-            }
-        }
+        // Max values of enums for note positionning in array and array instantiation
+        private int maxLength = Enum.GetValues(typeof(Length)).Length;
+        private int maxAccidental = Enum.GetValues(typeof(Accidental)).Length;
+        private int maxHeight = Enum.GetValues(typeof(Height)).Length;
 
         public NoteFactory()
         {
+            this.notes = new Lazy<Note>[this.maxLength * this.maxAccidental * this.maxHeight];
+
             // Lazy instantiation of each possible note using all the values of the 3 enums
-            foreach (var length in (Length[])Enum.GetValues(typeof(Length)))
+            for (int length = 0; length < this.maxLength; length++)
             {
-                foreach (var accidental in (Accidental[])Enum.GetValues(typeof(Accidental)))
+                for (int accidental = 0; accidental < this.maxAccidental; accidental++)
                 {
-                    foreach (var height in (Height[])Enum.GetValues(typeof(Height)))
+                    for (int height = 0; height < this.maxHeight; height++)
                     {
+                        // Casting back to enums
+                        Length l = (Length)length;
+                        Accidental a = (Accidental)accidental;
+                        Height h = (Height)height;
+
                         // Store the lazy note in its appropriate position in the array
-                        notes[(int)length * this.maxAccidental * this.maxHeight +
-                              (int)accidental * this.maxHeight +
-                              (int)height
-                             ] = new Lazy<Note>(() => new Note(length, accidental, height));
+                        this.notes[length * this.maxAccidental * this.maxHeight +
+                                   accidental * this.maxHeight +
+                                   height
+                                  ] = new Lazy<Note>(() => new Note(l, a, h));
                     }
                 }
             }
         }
 
-        public Note getNote(Length length, Accidental accidental, Height height)
+        public Note GetNote(Length length, Accidental accidental, Height height)
         {
-            return notes[(int)length * this.maxAccidental * this.maxHeight +
-                         (int)accidental * this.maxHeight +
-                         (int)height].Value;
+            return this.notes[(int)length * this.maxAccidental * this.maxHeight +
+                              (int)accidental * this.maxHeight +
+                              (int)height].Value;
         }
     }
 }
