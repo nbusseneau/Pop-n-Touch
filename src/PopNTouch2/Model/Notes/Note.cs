@@ -7,45 +7,9 @@ namespace PopNTouch2.Model
 {
     public class Note
     {
-        private Length length;
-        private Accidental accidental;
-        private Height height;
-
-        public Length Length
-        {
-            get
-            {
-                return length;
-            }
-            set
-            {
-                length = value;
-            }
-        }
-
-        public Accidental Accidental
-        {
-            get
-            {
-                return accidental;
-            }
-            set
-            {
-                accidental = value;
-            }
-        }
-
-        public Height Height
-        {
-            get
-            {
-                return height;
-            }
-            set
-            {
-                height = value;
-            }
-        }
+        public Length Length { get; private set; }
+        public Accidental Accidental { get; private set; }
+        public Height Height { get; private set; }
 
         public Note(Length l, Accidental a, Height h)
         {

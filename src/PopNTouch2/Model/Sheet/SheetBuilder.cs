@@ -7,49 +7,10 @@ namespace PopNTouch2.Model
 {
     public class SheetBuilder
     {
-        public Song Song
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
-        public Difficulty Difficulty
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
-        public Instrument Instrument
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
-        public NoteFactory NoteFactory
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public Song Song { get; set; }
+        public Difficulty Difficulty { get; set; }
+        public Instrument Instrument { get; set; }
+        public NoteFactory NoteFactory { get; set; }
 
         public SheetMusic buildSheet(Song song, Instrument instr, Difficulty diff)
         {

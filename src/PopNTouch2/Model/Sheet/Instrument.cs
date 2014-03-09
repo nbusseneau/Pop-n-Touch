@@ -7,16 +7,11 @@ namespace PopNTouch2.Model
 {
     public class Instrument
     {
-        private string name;
+        public string Name { get; private set; }
 
-        public string Name
+        public Instrument(string n)
         {
-            get
-            {
-                return name;
-            }
+            this.Name = n;
         }
-
-        public Instrument(string n) { name = n; }
     }
 }

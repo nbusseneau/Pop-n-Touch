@@ -14,17 +14,17 @@ namespace UnitTesting.Model
             NoteFactory noteFactory = new NoteFactory();
             PrivateObject privateObject = new PrivateObject(noteFactory);
             Lazy<Note>[] notes = (Lazy<Note>[])privateObject.GetField("notes");
-            Lazy<Note> lazyNote1 = notes[5]; // Length.whole = 0, Accidental.none = 0, Height.la = 5
+            Lazy<Note> lazyNote = notes[5]; // Length.whole = 0, Accidental.none = 0, Height.la = 5
 
             // Act
-            bool isNoteInstantiated1 = lazyNote1.IsValueCreated;
-            Note noteDirect = lazyNote1.Value;
-            bool isNoteInstantiated2 = lazyNote1.IsValueCreated;
+            bool isNoteInstantiatedBefore = lazyNote.IsValueCreated;
+            Note noteDirect = lazyNote.Value;
+            bool isNoteInstantiatedAfter = lazyNote.IsValueCreated;
             Note noteGet = noteFactory.GetNote(Length.eighth, Accidental.sharp, Height.la);
 
             // Assert
-            Assert.AreEqual(false, isNoteInstantiated1);
-            Assert.AreEqual(true, isNoteInstantiated2);
+            Assert.AreEqual(false, isNoteInstantiatedBefore);
+            Assert.AreEqual(true, isNoteInstantiatedAfter);
 
             Assert.AreEqual(Length.whole, noteDirect.Length);
             Assert.AreEqual(Accidental.none, noteDirect.Accidental);

@@ -7,29 +7,13 @@ namespace PopNTouch2.Model
 {
     public class Song
     {
-        private string name;
-        private List<Instrument> instruments;
-
-        public String Name
-        {
-            get
-            {
-                return name;
-            }
-        }
-
-        public List<Instrument> Instruments
-        {
-            get
-            {
-                return instruments;
-            }
-        }
+        public String Name { get; private set; }
+        public List<Instrument> Instruments { get; private set; }
 
         public Song(string n, List<Instrument> instrs)
         {
-            name = n;
-            instruments = instrs;
+            this.Name = n;
+            this.Instruments = instrs;
         }
     }
 }
