@@ -7,27 +7,20 @@ namespace PopNTouch2.Model
 {
     public class Game
     {
-        private Song song;
+        /*private Song song;
+        private Boolean isPlaying;*/
 
-        public Song Song
+        public Song Song { get; set; }
+        public Boolean IsPlaying { get; set; }
+
+        public Game(Song s)
         {
-            get
-            {
-                return song;
-            }
-            set
-            {
-                song = value;
-            }
+            Song = s;
         }
 
-        public Game(Song song)
+        public void Launch()
         {
-            Song = song;
-        }
-
-        public void launch()
-        {
+            IsPlaying = true;
             System.Console.WriteLine("Le jeu se lance !");
         }
     }
