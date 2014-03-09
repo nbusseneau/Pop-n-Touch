@@ -7,26 +7,7 @@ namespace PopNTouch2.Model
 {
     public class SheetMusic
     {
-        public List<Note> Notes
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
-        public List<IBonus> Bonuses
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        public List<Note> Notes { get; set; }
+        public List<IBonus> Bonuses { get; set; }
     }
 }
