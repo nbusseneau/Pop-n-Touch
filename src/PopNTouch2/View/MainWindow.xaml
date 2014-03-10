@@ -35,7 +35,7 @@
         <Image HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Source="../Resources/UI/BGP_Main.jpg" Panel.ZIndex="-10"/>
 
         <!-- Start screen-->
-        <s:SurfaceButton Name="startBtn" HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding StartGame}" Background="{x:Null}" RenderTransformOrigin="0.5,0.5" Visibility="{Binding StartButtonVisibility}">
+        <s:SurfaceButton Name="startBtn" HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding StartGame}" Background="{x:Null}" RenderTransformOrigin="0.5,0.5" Visibility="{Binding StartButtonVisibility}" Margin="782,359,794,359">
             <s:SurfaceButton.RenderTransform>
                 <ScaleTransform x:Name="scaleBtnStart" ScaleX="1.0" ScaleY="1.0"/>
             </s:SurfaceButton.RenderTransform>
@@ -69,48 +69,8 @@
         </s:ScatterView>
 
         <!-- Temporary list to choose a song -->
-        <s:SurfaceButton Name="btnSong1" Height="50" Width="250" HorizontalAlignment="Center" Margin="0,0,-570,-370" VerticalAlignment="Center" Content="Les 4 saisons" Padding="12" RenderTransformOrigin="0.5,0.5" Background="#99237695" BorderBrush="White">
-            <s:SurfaceButton.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="35.872"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </s:SurfaceButton.RenderTransform>
-        </s:SurfaceButton>
-        <s:SurfaceButton Name="btnSong2" Height="100" Width="500" HorizontalAlignment="Center" Margin="0,0,-927,0" VerticalAlignment="Center" Content="Iron" Padding="22" FontSize="35" Click="Button_ChooseSong_Click" Background="#9923956B" BorderBrush="White"/>
-        <s:SurfaceButton Name="btnSong3" Height="50" Width="250" HorizontalAlignment="Center" Margin="0,0,-570,370" VerticalAlignment="Center" Content="What Does The Fox Say ?" Padding="12" RenderTransformOrigin="0.5,0.5" Background="#99389523" BorderBrush="White">
-            <s:SurfaceButton.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-35.513"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </s:SurfaceButton.RenderTransform>
-        </s:SurfaceButton>
-        <s:SurfaceButton Name="btnSong4" Height="40" Width="150" HorizontalAlignment="Center" Margin="0,0,-210,540" VerticalAlignment="Center" Content="Ashley's Roachclip" Padding="8" FontSize="15" RenderTransformOrigin="0.5,0.5" Background="#998B9523" BorderBrush="White">
-            <s:SurfaceButton.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-70.513"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </s:SurfaceButton.RenderTransform>
-        </s:SurfaceButton>
-        <s:SurfaceButton Name="btnSong5" Height="40" Width="150" HorizontalAlignment="Center" Margin="0,0,150,550" VerticalAlignment="Center" Content="Highway To Hell" Padding="8" FontSize="15" RenderTransformOrigin="0.5,0.5" Background="#99955723" BorderBrush="White">
-            <s:SurfaceButton.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-105.513"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </s:SurfaceButton.RenderTransform>
-        </s:SurfaceButton>
-
+        <PopNTouch2:MainMenuView />
+        
         <!-- Play song -->
         <s:SurfaceToggleButton Name="btnPlayPause" Visibility="Hidden" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Checked="Button_PlayStop_Checked" Unchecked="Button_PlayStop_Unchecked" Background="{x:Null}">
             <Image Height="220" Width="220" Source="../Resources/UI/BTNP_Play.png"/>

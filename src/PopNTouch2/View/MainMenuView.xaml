@@ -1,11 +1,57 @@
 ﻿<UserControl x:Class="PopNTouch2.View.MainMenuView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:ViewModel="clr-namespace:PopNTouch2.ViewModel"
+             xmlns:s="http://schemas.microsoft.com/surface/2008"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             d:DesignHeight="1080" d:DesignWidth="1920">
+    <UserControl.DataContext>
+        <ViewModel:MainMenuVM/>
+    </UserControl.DataContext>
+    
     <Grid>
-            
+        <s:SurfaceButton Name="btnSong1" Height="50" Width="250" HorizontalAlignment="Center" Margin="0,0,-570,-370" VerticalAlignment="Center" Content="Les 4 saisons" Padding="12" RenderTransformOrigin="0.5,0.5" Background="#99237695" BorderBrush="White" Command="{Binding SelectSong}" CommandParameter="1">
+            <s:SurfaceButton.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="35.872"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </s:SurfaceButton.RenderTransform>
+        </s:SurfaceButton>
+        <s:SurfaceButton Name="btnSong2" Height="100" Width="500" HorizontalAlignment="Center" Margin="0,0,-927,0" VerticalAlignment="Center" Content="Iron" Padding="22" FontSize="35" Background="#9923956B" BorderBrush="White" Command="{Binding SelectSong}" CommandParameter="2"/>
+        <s:SurfaceButton Name="btnSong3" Height="50" Width="250" HorizontalAlignment="Center" Margin="0,0,-570,370" VerticalAlignment="Center" Content="What Does The Fox Say ?" Padding="12" RenderTransformOrigin="0.5,0.5" Background="#99389523" BorderBrush="White" Command="{Binding SelectSong}" CommandParameter="3">
+            <s:SurfaceButton.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-35.513"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </s:SurfaceButton.RenderTransform>
+        </s:SurfaceButton>
+        <s:SurfaceButton Name="btnSong4" Height="40" Width="150" HorizontalAlignment="Center" Margin="0,0,-210,540" VerticalAlignment="Center" Content="Ashley's Roachclip" Padding="8" FontSize="15" RenderTransformOrigin="0.5,0.5" Background="#998B9523" BorderBrush="White" Command="{Binding SelectSong}" CommandParameter="4">
+            <s:SurfaceButton.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-70.513"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </s:SurfaceButton.RenderTransform>
+        </s:SurfaceButton>
+        <s:SurfaceButton Name="btnSong5" Height="40" Width="150" HorizontalAlignment="Center" Margin="0,0,150,550" VerticalAlignment="Center" Content="Highway To Hell" Padding="8" FontSize="15" RenderTransformOrigin="0.5,0.5" Background="#99955723" BorderBrush="White" Command="{Binding SelectSong}" CommandParameter="5">
+            <s:SurfaceButton.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-105.513"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </s:SurfaceButton.RenderTransform>
+        </s:SurfaceButton>
     </Grid>
 </UserControl>
