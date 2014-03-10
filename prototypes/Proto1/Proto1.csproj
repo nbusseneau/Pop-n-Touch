@@ -136,6 +136,11 @@
     <Content Include="Proto1.xml">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Resources\UI\parcheminenroule1.png" />
+    <Resource Include="Resources\UI\parcheminenroule2.png" />
+    <Resource Include="Resources\UI\parcheminenroule3.png" />
+    <Resource Include="Resources\UI\parcheminenroule4.png" />
+    <Resource Include="Resources\UI\parcheminenroule5.png" />
     <Resource Include="Resources\Tracks\Iron.wma" />
     <Resource Include="Resources\UI\btnStart.png" />
     <Resource Include="Resources\UI\Tab.png" />

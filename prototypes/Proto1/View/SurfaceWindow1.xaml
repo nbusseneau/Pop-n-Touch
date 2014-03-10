@@ -56,54 +56,80 @@
 		</s:ScatterView>
 
 		<!-- Temporary list to choose a song -->
-		<s:SurfaceButton Name="btnSong1" Height="50" Width="250" HorizontalAlignment="Center" Margin="0,0,-570,-370" VerticalAlignment="Center" Content="Les 4 saisons" Padding="12" RenderTransformOrigin="0.5,0.5" Background="#99237695" BorderBrush="White">
-			<s:SurfaceButton.RenderTransform>
-				<TransformGroup>
-					<ScaleTransform/>
-					<SkewTransform/>
-					<RotateTransform Angle="35.872"/>
-					<TranslateTransform/>
-				</TransformGroup>
-			</s:SurfaceButton.RenderTransform>
-		</s:SurfaceButton>
-		<s:SurfaceButton Name="btnSong2" Height="100" Width="500" HorizontalAlignment="Center" Margin="0,0,-927,0" VerticalAlignment="Center" Content="Iron" Padding="22" FontSize="35" Click="Button_ChooseSong_Click" Background="#9923956B" BorderBrush="White"/>
-		<s:SurfaceButton Name="btnSong3" Height="50" Width="250" HorizontalAlignment="Center" Margin="0,0,-570,370" VerticalAlignment="Center" Content="What Does The Fox Say ?" Padding="12" RenderTransformOrigin="0.5,0.5" Background="#99389523" BorderBrush="White">
-			<s:SurfaceButton.RenderTransform>
-				<TransformGroup>
-					<ScaleTransform/>
-					<SkewTransform/>
-					<RotateTransform Angle="-35.513"/>
-					<TranslateTransform/>
-				</TransformGroup>
-			</s:SurfaceButton.RenderTransform>
-		</s:SurfaceButton>
-		<s:SurfaceButton Name="btnSong4" Height="40" Width="150" HorizontalAlignment="Center" Margin="0,0,-210,540" VerticalAlignment="Center" Content="Ashley's Roachclip" Padding="8" FontSize="15" RenderTransformOrigin="0.5,0.5" Background="#998B9523" BorderBrush="White">
-			<s:SurfaceButton.RenderTransform>
-				<TransformGroup>
-					<ScaleTransform/>
-					<SkewTransform/>
-					<RotateTransform Angle="-70.513"/>
-					<TranslateTransform/>
-				</TransformGroup>
-			</s:SurfaceButton.RenderTransform>
-		</s:SurfaceButton>
-		<s:SurfaceButton Name="btnSong5" Height="40" Width="150" HorizontalAlignment="Center" Margin="0,0,150,550" VerticalAlignment="Center" Content="Highway To Hell" Padding="8" FontSize="15" RenderTransformOrigin="0.5,0.5" Background="#99955723" BorderBrush="White">
-			<s:SurfaceButton.RenderTransform>
-				<TransformGroup>
-					<ScaleTransform/>
-					<SkewTransform/>
-					<RotateTransform Angle="-105.513"/>
-					<TranslateTransform/>
-				</TransformGroup>
-			</s:SurfaceButton.RenderTransform>
-		</s:SurfaceButton>
+        <s:ScatterView Name="startmenu" MinHeight="1080" MaxHeight="1080" MaxWidth="1920" MinWidth="1920" Width="1920" Height="1080" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" Panel.ZIndex="10">
+            <s:ScatterViewItem ShowsActivationEffects="False" AngularDeceleration="0.1" Name="menu" MinHeight="1080" MaxHeight="1080" MaxWidth="1920" MinWidth="1920" Width="1920" CanMove="false" CanScale="false" CanRotate="true" Center="0,0" Orientation="0" Background="{x:Null}" RenderTransformOrigin="0.5,0.5" Margin="960,540,-960,-540" Height="1080" VerticalAlignment="Top" Panel.ZIndex="10">
+                <s:ScatterViewItem.RenderTransform>
+                    <TransformGroup>
+                    </TransformGroup>
+                </s:ScatterViewItem.RenderTransform>
 
-		<!-- Play song -->
-		<s:SurfaceToggleButton Name="btnPlayPause" Visibility="Hidden" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Checked="Button_PlayStop_Checked" Unchecked="Button_PlayStop_Unchecked" Background="{x:Null}">
-			<Image Height="220" Width="220" Source="../Resources/UI/btnPlay.png"/>
-		</s:SurfaceToggleButton>
 
-		<s:SurfaceButton Name="btnAddTab" Visibility="Hidden" Content="+" HorizontalAlignment="Center" Margin="0,0,-270,0" VerticalAlignment="Center" Height="61" Width="54" FontSize="38" Click="Button_AddTab_Click" Background="#FF497A44"/>
+                <Grid Height="1080" Width="1920">
+
+                    <s:SurfaceButton Name="btnSong1" Height="200" Width="100"  HorizontalAlignment="Center" Margin="950,540,729,260" VerticalAlignment="Center" Padding="12" RenderTransformOrigin="0.5,0.5" Background="{x:Null}"  BorderBrush="White" Click="Button_ChooseSong_Click">
+                        <s:SurfaceButton.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="45.682"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </s:SurfaceButton.RenderTransform>
+                        <Image Height="200" Width="100" Source="../Resources/UI/parcheminenroule1.png"/>
+                    </s:SurfaceButton>
+
+                    <s:SurfaceButton Name="btnSong2" Height="200" Width="100" HorizontalAlignment="Center" Margin="0,0,-400,0" VerticalAlignment="Center"  Padding="12" FontSize="35" Click="Button_ChooseSong_Click" Background="{x:Null}" BorderBrush="White" Visibility="Visible" >
+                        <s:SurfaceButton.RenderTransform>
+                            <RotateTransform Angle="0"/>
+                        </s:SurfaceButton.RenderTransform>
+                        <Image Height="200" Width="100" Source="../Resources/UI/parcheminenroule2.png"/>
+                    </s:SurfaceButton>
+
+                    <s:SurfaceButton Name="btnSong3" Height="200" Width="100" HorizontalAlignment="Center" Margin="0,0,-300,310" VerticalAlignment="Center" Padding="12" RenderTransformOrigin="0.5,0.5" Background="{x:Null}" BorderBrush="White" Click="Button_ChooseSong_Click">
+                        <s:SurfaceButton.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="-35.513"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </s:SurfaceButton.RenderTransform>
+                        <Image Height="200" Width="100" Source="../Resources/UI/parcheminenroule3.png"/>
+                    </s:SurfaceButton>
+
+                    <s:SurfaceButton Name="btnSong4" Height="200" Width="100" HorizontalAlignment="Center" Margin="910,230,910,0" VerticalAlignment="Top" Padding="12" FontSize="15" RenderTransformOrigin="0.5,0.5" Background="{x:Null}" BorderBrush="White" Click="Button_ChooseSong_Click">
+                        <s:SurfaceButton.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="-90"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </s:SurfaceButton.RenderTransform>
+                        <Image Height="200" Width="100" Source="../Resources/UI/parcheminenroule4.png"/>
+                    </s:SurfaceButton>
+
+                    <s:SurfaceButton Name="btnSong5" Height="200" Width="100" HorizontalAlignment="Center" Margin="0,0,350,310" VerticalAlignment="Center" Padding="12" FontSize="15" RenderTransformOrigin="0.5,0.5" Background="{x:Null}" BorderBrush="White" Click="Button_ChooseSong_Click">
+                        <s:SurfaceButton.RenderTransform>
+                            <TransformGroup>
+                                <ScaleTransform/>
+                                <SkewTransform/>
+                                <RotateTransform Angle="35.513"/>
+                                <TranslateTransform/>
+                            </TransformGroup>
+                        </s:SurfaceButton.RenderTransform>
+                        <Image Height="200" Width="100" Source="../Resources/UI/parcheminenroule5.png"/>
+                    </s:SurfaceButton>
+                </Grid>
+            </s:ScatterViewItem>
+        </s:ScatterView>
+
+        <!-- Play song -->
+        <s:SurfaceToggleButton Name="btnPlayPause" Visibility="Hidden" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Checked="Button_PlayStop_Checked" Unchecked="Button_PlayStop_Unchecked" Background="{x:Null}">
+            <Image Height="220" Width="220" Source="../Resources/UI/btnPlay.png"/>
+        </s:SurfaceToggleButton>
+
+        <s:SurfaceButton Name="btnAddTab" Visibility="Hidden" Content="+" HorizontalAlignment="Center" Margin="0,0,-270,0" VerticalAlignment="Center" Height="61" Width="54" FontSize="38" Click="Button_AddTab_Click" Background="#FF497A44"/>
 		<s:SurfaceButton Name="btnEraseAll" Visibility="Hidden" Content="X" HorizontalAlignment="Center" Margin="0,0,270,0" VerticalAlignment="Center" Height="61" Width="54" FontSize="38" Click="Button_EraseAll_Click" Background="#FF783936"/>
 
 	</Grid>

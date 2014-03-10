@@ -86,8 +86,17 @@ namespace Proto1
 			{
 				case GameState.Start:
 					btnStart.Visibility = System.Windows.Visibility.Visible;
-					break;
+					startmenu.Visibility = System.Windows.Visibility.Hidden;
+                    menu.Visibility = System.Windows.Visibility.Hidden;
+                    btnSong1.Visibility = System.Windows.Visibility.Hidden;
+					btnSong2.Visibility = System.Windows.Visibility.Hidden;
+					btnSong3.Visibility = System.Windows.Visibility.Hidden;
+					btnSong4.Visibility = System.Windows.Visibility.Hidden;
+					btnSong5.Visibility = System.Windows.Visibility.Hidden;
+                    break;
 				case GameState.ChooseSong:
+                    startmenu.Visibility = System.Windows.Visibility.Visible;
+                    menu.Visibility = System.Windows.Visibility.Visible;
 					btnSong1.Visibility = System.Windows.Visibility.Visible;
 					btnSong2.Visibility = System.Windows.Visibility.Visible;
 					btnSong3.Visibility = System.Windows.Visibility.Visible;
