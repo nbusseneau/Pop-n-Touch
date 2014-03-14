@@ -26,11 +26,7 @@ namespace PopNTouch2.ViewModel
                 if (startGame == null)
                     startGame = new RelayCommand(() =>
                     {
-                        if (this.startButtonVisibility == Visibility.Visible)
-                            this.startButtonVisibility = Visibility.Collapsed;
-                        else
-                            this.startButtonVisibility = Visibility.Visible;
-
+                        this.startButtonVisibility = Visibility.Collapsed;
                         RaisePropertyChanged("StartButtonVisibility");
                     });
                 return startGame;

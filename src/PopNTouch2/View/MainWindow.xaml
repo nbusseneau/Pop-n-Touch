@@ -10,8 +10,10 @@
     <Window.DataContext>
         <ViewModel:MainWindowVM/>
     </Window.DataContext>
-    
+
     <Window.Resources>
+        <ViewModel:InverseVisibilityConverter x:Key="inverseVisibilityConverter" />
+        
         <Storyboard x:Key="startBtnAnim" Duration="0:0:1" RepeatBehavior="Forever" AutoReverse="True">
             <DoubleAnimation From="1.0" To="1.1" 
             Storyboard.TargetName="startBtn"
@@ -69,7 +71,12 @@
         </s:ScatterView>
 
         <!-- Temporary list to choose a song -->
-        <PopNTouch2:MainMenuView />
+        <!-- FIXME -->
+        <PopNTouch2:MainMenuView Visibility="{Binding Path=StartButtonVisibility, Converter={StaticResource inverseVisibilityConverter}}" >
+            <PopNTouch2:MainMenuView.DataContext>
+                <ViewModel:MainWindowVM/>
+            </PopNTouch2:MainMenuView.DataContext>
+        </PopNTouch2:MainMenuView>
         
         <!-- Play song -->
         <s:SurfaceToggleButton Name="btnPlayPause" Visibility="Hidden" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Checked="Button_PlayStop_Checked" Unchecked="Button_PlayStop_Unchecked" Background="{x:Null}">
