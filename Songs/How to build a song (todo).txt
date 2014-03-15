@@ -1,0 +1,20 @@
+You want to add a sheet for an awesome song you know to the awesome game Pop'n'Touch 2 ?
+Here is what to do in a few steps :
+
+1. If the song doesn't already exists, create a directory with the song's name
+2. In the directory, add a ".song" file named like this : "instrument difficulty"
+   For example, "voice beginner.song" is a correctly named file.
+   The instrument may be what you want, but there are only three different difficulties : beginner, classic, and expert.
+3. Once your file is created, you need to fil it with the notes of your sheet. It may be fastidious !
+   You need to add a line for each note the sheet will have.
+   The lines must be like this : "length_of_the_note accidental_of_the_note height_of_the_note".
+   The different values of each parameter are listed below.
+   Note the rest is considered a note !
+	Length : whole, half, quarter, eighth
+	Accidental : None, flat, sharp
+	Height : do, re mi, fa, sol, la, si, rest
+4. Bonus todo
+
+The file "easy beginner.song" in the "au clair de la lune" directory is a correct example of what you must do.
+
+If your sheet is badly created, the game will lauch but you won't be able to play as the sheet will be empty, so be careful !

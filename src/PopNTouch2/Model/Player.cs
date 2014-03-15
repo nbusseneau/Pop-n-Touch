@@ -39,7 +39,7 @@ namespace PopNTouch2.Model
         {
             if (this.CurrentGame.Song.Instruments.Contains(this.Instrument) && this.Difficulty != null)
             {
-                this.SheetMusic = GameMaster.SheetBuilder.buildSheet(GameMaster.Game.Song, Instrument, Difficulty);
+                this.SheetMusic = GameMaster.SheetBuilder.BuildSheet(GameMaster.Game.Song, Instrument, Difficulty);
                 this.Ready = true;
                 GameMaster.Ready();
             }

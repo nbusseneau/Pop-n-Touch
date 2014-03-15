@@ -14,5 +14,6 @@ namespace PopNTouch2.Model
         sol,
         la,
         si,
+        rest,
     }
 }

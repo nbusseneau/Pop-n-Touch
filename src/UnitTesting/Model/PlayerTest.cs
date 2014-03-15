@@ -38,17 +38,17 @@ namespace UnitTesting.Model
             GameMaster gm = new GameMaster();
             List<Instrument> instrs = new List<Instrument>();
             instrs.Add(new Instrument("Clar"));
-            Instrument voix = new Instrument("Voix");
+            Instrument voix = new Instrument("Voice");
             //instrs.Add(new Instrument("Voix"));
             instrs.Add(voix);
-            Song s = new Song("song", instrs);
+            Song s = new Song("au clair de la lune", instrs);
             Player p = new Player(gm);
 
             gm.SelectSong(s);
             p.InformNewGame();
 
             p.Instrument = voix;
-            p.Difficulty = Difficulty.expert;
+            p.Difficulty = Difficulty.beginner;
 
             // Act
             p.IMReady();
