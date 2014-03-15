@@ -52,6 +52,8 @@
   <ItemGroup>
     <Compile Include="Model\NoteFactoryTest.cs" />
     <Compile Include="Model\GameMasterTest.cs" />
+    <Compile Include="Model\GameTest.cs" />
+    <Compile Include="Model\PlayerTest.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

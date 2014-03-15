@@ -25,25 +25,30 @@ namespace PopNTouch2.Model
 
         public Player(GameMaster gameMaster)
         {
-            GameMaster = gameMaster;
+            this.GameMaster = gameMaster;
         }
 
         public void InformNewGame()
         {
-            CurrentGame = GameMaster.Game;
-            AvailableInstruments = CurrentGame.Song.Instruments;
+            this.CurrentGame = GameMaster.Game;
+            this.AvailableInstruments = CurrentGame.Song.Instruments;
+            this.Ready = false;
         }
 
         public void IMReady()
         {
-            SheetMusic = GameMaster.SheetBuilder.buildSheet(GameMaster.Game.Song, Instrument, Difficulty);
-            Ready = true;
-            GameMaster.Ready();
+            if (this.CurrentGame.Song.Instruments.Contains(this.Instrument) && this.Difficulty != null)
+            {
+                this.SheetMusic = GameMaster.SheetBuilder.buildSheet(GameMaster.Game.Song, Instrument, Difficulty);
+                this.Ready = true;
+                GameMaster.Ready();
+            }
+            else throw new System.ArgumentException("No difficulty and/or wrong instrument.");
         }
 
         public void NotReadyAnymore()
         {
-            Ready = false;
+            this.Ready = false;
         }
     }
 }

@@ -15,12 +15,12 @@ namespace PopNTouch2.Model
 
         public Game(Song s)
         {
-            Song = s;
+            this.Song = s;
         }
 
         public void Launch()
         {
-            IsPlaying = true;
+            this.IsPlaying = true;
             System.Console.WriteLine("Le jeu se lance !");
         }
     }
