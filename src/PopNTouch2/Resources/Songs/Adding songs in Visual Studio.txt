@@ -6,7 +6,11 @@ This file targets developers wishing to add songs to be shipped with Pop'n'Touch
 1. In Visual Studio, go to "PopNTouch2/Resources/Songs".
 2. Right-click on "Songs" and add a new folder with the name of your song.
 3. Right-click on the new folder and add a new Text File item called "meta.data". Fill it as described in [HowTo].
-4. Do the same for every couple of instrument/difficulty you wish to add and name them "instrument-difficulty.sheet". Fill them as described in [HowTo].
-5. For every text file created, you need to make sure the "Copy to output directory" property is "Copy always", else it won't be included in the release.
+4. Do the same for every couple of instrument/difficulty you wish to add and name them "Instrument-Difficulty.sheet". Fill them as described in [HowTo].
+5. For every text file created, you need to make sure that:
+   - The "Copy to output directory" property is "Copy always";
+   - The "Build action" property is "None."
+   Else it won't be included in the release.
+   You also may want to check for each file that in File\Advanced Save Options, Line Endings are set to CRLF (enables easy edition using Notepad on Windows).
 
 That's about it.

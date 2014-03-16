@@ -247,12 +247,12 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\Songs\How to add songs or instruments.txt">
+    <None Include="Resources\Songs\How to add songs or instruments.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
+    </None>
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Resources\Songs\Adding songs in Visual Studio.txt" />
+    <None Include="Resources\Songs\Adding songs in Visual Studio.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
