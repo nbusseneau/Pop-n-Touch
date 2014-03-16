@@ -151,13 +151,13 @@ namespace UnitTesting.Model
             SheetBuilder sb = new SheetBuilder();
             List<Instrument> instrs = new List<Instrument>();
             //instrs.Add(new Instrument("Voice"));
-            Song s = new Song("au clair de la lune", instrs);
+            Song s = new Song("au clair de la lune", null, null, Difficulty.Beginner, instrs);
 
             // Act
-            SheetMusic sm = sb.BuildSheet(s, new Instrument("Voice"), Difficulty.beginner);
+            SheetMusic sm = sb.BuildSheet(s, Instrument.Violin, Difficulty.Beginner);
 
             // Assert
-            Assert.IsTrue(sm.Notes.Contains(sb.NoteFactory.GetNote(Length.quarter, Accidental.none, Height.@do)));
+            Assert.IsTrue(sm.Notes.Contains(sb.NoteFactory.GetNote(Length.Quarter, Accidental.None, Height.Do)));
         }
 
         [TestMethod]
@@ -167,10 +167,10 @@ namespace UnitTesting.Model
             SheetBuilder sb = new SheetBuilder();
             List<Instrument> instrs = new List<Instrument>();
             //instrs.Add(new Instrument("Voice"));
-            Song s = new Song("au clair de la lune", instrs);
+            Song s = new Song("au clair de la lune", null, null, Difficulty.Beginner, instrs);
 
             // Act
-            SheetMusic sm = sb.BuildSheet(s, new Instrument("incorrect"), Difficulty.beginner);
+            SheetMusic sm = sb.BuildSheet(s, Instrument.Guitar, Difficulty.Beginner);
 
             // Assert
             Assert.AreEqual(0, sm.Notes.Count);

@@ -14,25 +14,25 @@ namespace UnitTesting.Model
             NoteFactory noteFactory = new NoteFactory();
             PrivateObject privateObject = new PrivateObject(noteFactory);
             Lazy<Note>[] notes = (Lazy<Note>[])privateObject.GetField("notes");
-            Lazy<Note> lazyNote = notes[5]; // Length.whole = 0, Accidental.none = 0, Height.la = 5
+            Lazy<Note> lazyNote = notes[5]; // Length.Whole = 0, Accidental.None = 0, Height.La = 5
 
             // Act
             bool isNoteInstantiatedBefore = lazyNote.IsValueCreated;
             Note noteDirect = lazyNote.Value;
             bool isNoteInstantiatedAfter = lazyNote.IsValueCreated;
-            Note noteGet = noteFactory.GetNote(Length.eighth, Accidental.sharp, Height.la);
+            Note noteGet = noteFactory.GetNote(Length.Eighth, Accidental.Sharp, Height.La);
 
             // Assert
             Assert.AreEqual(false, isNoteInstantiatedBefore);
             Assert.AreEqual(true, isNoteInstantiatedAfter);
 
-            Assert.AreEqual(Length.whole, noteDirect.Length);
-            Assert.AreEqual(Accidental.none, noteDirect.Accidental);
-            Assert.AreEqual(Height.la, noteDirect.Height);
+            Assert.AreEqual(Length.Whole, noteDirect.Length);
+            Assert.AreEqual(Accidental.None, noteDirect.Accidental);
+            Assert.AreEqual(Height.La, noteDirect.Height);
 
-            Assert.AreEqual(Length.eighth, noteGet.Length);
-            Assert.AreEqual(Accidental.sharp, noteGet.Accidental);
-            Assert.AreEqual(Height.la, noteGet.Height);
+            Assert.AreEqual(Length.Eighth, noteGet.Length);
+            Assert.AreEqual(Accidental.Sharp, noteGet.Accidental);
+            Assert.AreEqual(Height.La, noteGet.Height);
         }
     }
 }

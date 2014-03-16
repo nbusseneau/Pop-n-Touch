@@ -5,13 +5,10 @@ using System.Text;
 
 namespace PopNTouch2.Model
 {
-    public class Instrument
+    public enum Instrument
     {
-        public string Name { get; private set; }
-
-        public Instrument(string n)
-        {
-            this.Name = n;
-        }
+        Guitar,
+        Violin,
+        Piano,
     }
 }

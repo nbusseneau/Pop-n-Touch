@@ -1,0 +1,12 @@
+﻿This is not the same tutorial as "How to add songs or instruments.txt" (will be referred to as [HowTo] in the rest of this file).
+[HowTo] targets end-users so that they can add songs to Pop'n'Touch after release.
+
+This file targets developers wishing to add songs to be shipped with Pop'n'Touch release.
+
+1. In Visual Studio, go to "PopNTouch2/Resources/Songs".
+2. Right-click on "Songs" and add a new folder with the name of your song.
+3. Right-click on the new folder and add a new Text File item called "meta.data". Fill it as described in [HowTo].
+4. Do the same for every couple of instrument/difficulty you wish to add and name them "instrument-difficulty.sheet". Fill them as described in [HowTo].
+5. For every text file created, you need to make sure the "Copy to output directory" property is "Copy always", else it won't be included in the release.
+
+That's about it.

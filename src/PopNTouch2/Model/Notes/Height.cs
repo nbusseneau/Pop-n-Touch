@@ -7,13 +7,13 @@ namespace PopNTouch2.Model
 {
     public enum Height
     {
-        @do,
-        re,
-        mi,
-        fa,
-        sol,
-        la,
-        si,
-        rest,
+        Do,
+        Re,
+        Mi,
+        Fa,
+        Sol,
+        La,
+        Si,
+        Rest,
     }
 }

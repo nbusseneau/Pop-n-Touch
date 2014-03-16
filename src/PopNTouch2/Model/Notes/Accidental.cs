@@ -7,8 +7,8 @@ namespace PopNTouch2.Model
 {
     public enum Accidental
     {
-        none,
-        flat,
-        sharp,
+        None,
+        Flat,
+        Sharp,
     }
 }

@@ -7,9 +7,9 @@ namespace PopNTouch2.Model
 {
     public enum Length
     {
-        whole,
-        half,
-        quarter,
-        eighth,
+        Whole,
+        Half,
+        Quarter,
+        Eighth,
     }
 }

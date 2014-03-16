@@ -24,7 +24,7 @@ namespace PopNTouch2.Model
             string pathOfFileToParse = null;
             try
             { 
-                pathOfFileToParse = this.FindFile(song.Name, instr.Name, diff.ToString());
+                pathOfFileToParse = this.FindFile(song.Title, instr.ToString(), diff.ToString());
             }
             catch (Exception e)
             {
@@ -79,7 +79,7 @@ namespace PopNTouch2.Model
                 string[] split = instrDiff.Split(separators);
                 if (split.Length == 2)
                 {
-                    if (split[0].ToLowerInvariant().Equals(instrName.ToLowerInvariant())
+                    if (split[0].ToLowerInvariant().Equals(instrName)
                         && split[1].ToLowerInvariant().Equals(diffName))
                     {
                         fileToParse = file;
@@ -101,16 +101,16 @@ namespace PopNTouch2.Model
             switch (length.ToLowerInvariant())
             {
                 case "whole":
-                    ret = Length.whole;
+                    ret = Length.Whole;
                     break;
                 case "half":
-                    ret = Length.half;
+                    ret = Length.Half;
                     break;
                 case "quarter":
-                    ret = Length.quarter;
+                    ret = Length.Quarter;
                     break;
                 case"eighth":
-                    ret = Length.eighth;
+                    ret = Length.Eighth;
                     break;
                 default:
                     throw new ArgumentException("Bad length.");
@@ -124,13 +124,13 @@ namespace PopNTouch2.Model
             switch (accidental.ToLowerInvariant())
             {
                 case "none":
-                    ret = Accidental.none;
+                    ret = Accidental.None;
                     break;
                 case "flat":
-                    ret = Accidental.flat;
+                    ret = Accidental.Flat;
                     break;
                 case "sharp":
-                    ret = Accidental.sharp;
+                    ret = Accidental.Sharp;
                     break;
                 default:
                     throw new ArgumentException("Bad accidental.");
@@ -144,28 +144,28 @@ namespace PopNTouch2.Model
             switch (height.ToLowerInvariant())
             {
                 case "do":
-                    ret = Height.@do;
+                    ret = Height.Do;
                     break;
                 case "re":
-                    ret = Height.re;
+                    ret = Height.Re;
                     break;
                 case "mi":
-                    ret = Height.mi;
+                    ret = Height.Mi;
                     break;
                 case "fa":
-                    ret = Height.fa;
+                    ret = Height.Fa;
                     break;
                 case "sol":
-                    ret = Height.sol;
+                    ret = Height.Sol;
                     break;
                 case "la":
-                    ret = Height.la;
+                    ret = Height.La;
                     break;
                 case "si":
-                    ret = Height.si;
+                    ret = Height.Si;
                     break;
                 case "rest":
-                    ret = Height.rest;
+                    ret = Height.Rest;
                     break;
                 default:
                     throw new ArgumentException("Bad height.");

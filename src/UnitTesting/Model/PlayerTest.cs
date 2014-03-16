@@ -14,9 +14,9 @@ namespace UnitTesting.Model
             // Arrange
             GameMaster gm = new GameMaster();
             List<Instrument> instrs = new List<Instrument>();
-            instrs.Add(new Instrument("Clar"));
-            instrs.Add(new Instrument("Voix"));
-            Song s = new Song("song", instrs);
+            instrs.Add(Instrument.Guitar); //instrs.Add(new Instrument("Clar"));
+            instrs.Add(Instrument.Violin); //instrs.Add(new Instrument("Voix"));
+            Song s = new Song("song", null, null, Difficulty.Beginner, instrs);
             Game g = new Game(s);
             Player p = new Player(gm);
             gm.Game = g;
@@ -37,18 +37,18 @@ namespace UnitTesting.Model
             // Arrange
             GameMaster gm = new GameMaster();
             List<Instrument> instrs = new List<Instrument>();
-            instrs.Add(new Instrument("Clar"));
-            Instrument voix = new Instrument("Voice");
+            instrs.Add(Instrument.Guitar); //instrs.Add(new Instrument("Clar"));
+            Instrument voix = Instrument.Violin;
             //instrs.Add(new Instrument("Voix"));
             instrs.Add(voix);
-            Song s = new Song("au clair de la lune", instrs);
+            Song s = new Song("au clair de la lune", null, null, Difficulty.Beginner, instrs);
             Player p = new Player(gm);
 
             gm.SelectSong(s);
             p.InformNewGame();
 
             p.Instrument = voix;
-            p.Difficulty = Difficulty.beginner;
+            p.Difficulty = Difficulty.Beginner;
 
             // Act
             p.IMReady();
@@ -69,9 +69,9 @@ namespace UnitTesting.Model
             // Arrange
             GameMaster gm = new GameMaster();
             List<Instrument> instrs = new List<Instrument>();
-            instrs.Add(new Instrument("Clar"));
-            instrs.Add(new Instrument("Voix"));
-            Song s = new Song("song", instrs);
+            instrs.Add(Instrument.Guitar); //instrs.Add(new Instrument("Clar"));
+            instrs.Add(Instrument.Violin); //instrs.Add(new Instrument("Voix"));
+            Song s = new Song("song", null, null, Difficulty.Beginner, instrs);
             Player p = new Player(gm);
 
             gm.SelectSong(s);
@@ -82,10 +82,10 @@ namespace UnitTesting.Model
             // Act
             try { p.IMReady(); }
             catch (ArgumentException) { numberOfExceptionsThrown++; }
-            p.Instrument = new Instrument("Voix");
+            p.Instrument = Instrument.Guitar; //p.Instrument = new Instrument("Voix");
             try { p.IMReady(); }
             catch (ArgumentException) { numberOfExceptionsThrown++; }
-            p.Instrument = new Instrument("Saxo");
+            p.Instrument = Instrument.Piano; //p.Instrument = new Instrument("Saxo");
             p.Difficulty = Difficulty.expert;
             try { p.IMReady(); }
             catch (ArgumentException) { numberOfExceptionsThrown++; }
@@ -99,9 +99,9 @@ namespace UnitTesting.Model
             // Arrange
             GameMaster gm = new GameMaster();
             List<Instrument> instrs = new List<Instrument>();
-            instrs.Add(new Instrument("Clar"));
-            instrs.Add(new Instrument("Voix"));
-            Song s = new Song("song", instrs);
+            instrs.Add(Instrument.Guitar); //instrs.Add(new Instrument("Clar"));
+            instrs.Add(Instrument.Violin); //instrs.Add(new Instrument("Voix"));
+            Song s = new Song("song", null, null, Difficulty.Beginner, instrs);
             Player p = new Player(gm);
 
             gm.SelectSong(s);

@@ -9,7 +9,20 @@ namespace UnitTesting.Model
     public class GameMasterTest
     {
         public GameMaster gameMaster = new GameMaster();
-        public Song song = new Song("Blabla", new System.Collections.Generic.List<Instrument>());
+        public Song song = new Song("Blabla", null, null, Difficulty.Beginner, new System.Collections.Generic.List<Instrument>());
+
+        [TestMethod]
+        public void LoadSongs()
+        {
+            // Arrange
+            
+
+            // Act
+            GameMaster gameMaster = new GameMaster();
+
+            // Assert
+            
+        }
 
         [TestMethod]
         public void SelectSongNormal()
@@ -22,7 +35,7 @@ namespace UnitTesting.Model
         public void SelectSongTwice()
         {
             gameMaster.SelectSong(song);
-            Song song2 = new Song("2", new System.Collections.Generic.List<Instrument>());
+            Song song2 = new Song("2", null, null, Difficulty.Beginner, new System.Collections.Generic.List<Instrument>());
             gameMaster.SelectSong(song2);
             foreach (Player player in gameMaster.Players)
             {
@@ -37,9 +50,9 @@ namespace UnitTesting.Model
             int numberOfPlayers = 0;
             gameMaster.UpToDateGame = true;
             List<Instrument> instrus = new List<Instrument>();
-            instrus.Add(new Instrument("Saxo"));
-            instrus.Add(new Instrument("Clarinette"));
-            Song song = new Song("Chanson bidon", instrus);
+            instrus.Add(Instrument.Guitar);
+            instrus.Add(Instrument.Violin);
+            Song song = new Song("Chanson bidon", null, null, Difficulty.Beginner, instrus);
             gameMaster.Game = new Game(song);
 
             // Act

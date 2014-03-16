@@ -7,8 +7,8 @@ namespace PopNTouch2.Model
 {
     public enum Difficulty
     {
-        beginner,
-        classic,
+        Beginner,
+        Classic,
         expert,
     }
 }

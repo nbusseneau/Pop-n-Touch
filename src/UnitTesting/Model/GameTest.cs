@@ -12,7 +12,7 @@ namespace UnitTesting.Model
         public void Launch()
         {
             // Arrange
-            Song s = new Song("song", null);
+            Song s = new Song("song", null, null, Difficulty.Beginner, null);
             Game g = new Game(s);
 
             // Act
