@@ -4,10 +4,16 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:PopNTouch2="clr-namespace:PopNTouch2.View"
+             xmlns:ViewModel="clr-namespace:PopNTouch2.ViewModel"
              xmlns:Custom="http://schemas.microsoft.com/surface/2008"
              mc:Ignorable="d" 
              Background="{x:Null}"
              d:DesignHeight="400" d:DesignWidth="650">
+    
+    <Custom:ScatterViewItem.DataContext>
+        <ViewModel:PlayerVM/>
+    </Custom:ScatterViewItem.DataContext>
+    
     <Grid Margin="0,0,0,0">
 
         <!-- Background border -->

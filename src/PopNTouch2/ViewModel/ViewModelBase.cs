@@ -18,6 +18,15 @@ namespace PopNTouch2.ViewModel
                 PropertyChanged(this, new PropertyChangedEventArgs(propertyName));
         }
 
+        protected void OnPropertyChanged(string info)
+        {
+            PropertyChangedEventHandler handler = PropertyChanged;
+            if (handler != null)
+            {
+                handler(this, new PropertyChangedEventArgs(info));
+            }
+        }
+
         public event PropertyChangedEventHandler PropertyChanged;
     }
 
