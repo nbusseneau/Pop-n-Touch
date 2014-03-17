@@ -9,11 +9,15 @@ namespace PopNTouch2.Model
     // Bonuses not implemented
     public class SheetBuilder
     {
-        public NoteFactory NoteFactory { get; set; }
+        private string extension = ".sheet";
 
-        public SheetBuilder()
+        public NoteFactory NoteFactory { get; set; }
+        public string SongsDirectory { get; private set; }
+
+        public SheetBuilder(string songsDirectory)
         {
             this.NoteFactory = new NoteFactory();
+            this.SongsDirectory = songsDirectory;
         }
 
         public SheetMusic BuildSheet(Song song, Instrument instr, Difficulty diff)
@@ -21,156 +25,44 @@ namespace PopNTouch2.Model
             SheetMusic sheetMusic = new SheetMusic();
 
             // Find the file
-            string pathOfFileToParse = null;
-            try
-            { 
-                pathOfFileToParse = this.FindFile(song.Title, instr.ToString(), diff.ToString());
-            }
-            catch (Exception e)
+            string instrName = Enum.GetName(typeof(Instrument), instr);
+            string diffName = Enum.GetName(typeof(Difficulty), diff);
+            string fileName = instrName + "-" + diffName;
+            string filePath = Path.Combine(this.SongsDirectory, song.Title, fileName + extension);
+
+            if (!File.Exists(filePath))
             {
-                Console.WriteLine(e.Message);
+                Console.WriteLine("No file found for that song, instrument and difficulty. " + filePath);
                 return new SheetMusic();
             }
 
             // Read the file and build sheet
-            StreamReader sr = File.OpenText(pathOfFileToParse);
-            try
+            string[] lines = File.ReadAllLines(filePath);
+            foreach(string line in lines)
             {
-                string line;
-                while (!sr.EndOfStream)
-                {
-                    line = sr.ReadLine();
-                    string[] infos = line.Split(new char[] { ' ' });
-                    sheetMusic.Notes.Add(this.NoteFactory.GetNote(ToLength(infos[0]),
-                                                                  ToAccidental(infos[1]),
-                                                                  ToHeight(infos[2])));
-                }
-                return sheetMusic;
+                string[] infos = line.Split(new char[] { ' ' });
+                Length length = (Length)Enum.Parse(typeof(Length), infos[0], true);
+                Accidental accidental = (Accidental)Enum.Parse(typeof(Accidental), infos[1], true);
+                Height height = (Height)Enum.Parse(typeof(Height), infos[2], true);
+                sheetMusic.Notes.Add(this.NoteFactory.GetNote(length, accidental, height));
+                Console.WriteLine(length + " " + accidental + " " + height);
             }
-            // Thrown by ToLength, ToAccidental, ToHeight
-            catch (ArgumentException e)
-            {
-                Console.WriteLine(e.Message);
-                return new SheetMusic();
-            }
-            finally
-            {
-                sr.Close();
-            }
+            return sheetMusic;
         }
 
-        /// <exception cref="DirectoryNotFoundException">No directory for that song.</exception>
-        /// <exception cref="FileNotFoundException">No file for that instrument and difficulty.</exception>
-        public string FindFile(string songName, string instrName, string diffName)
+        /*public static void Main(string[] args)
         {
-            // Find the song's directory
-            string path = "..\\..\\..\\..\\Songs\\" + songName;
-            string[] files = Directory.GetFiles(path, "*.song");
+            GameMaster gameMaster = GameMaster.Instance;
+            List<Song>.Enumerator es = gameMaster.Songs.GetEnumerator();
+            if (es.Current == null) es.MoveNext();
+            gameMaster.SelectSong(es.Current);
+            List<Player>.Enumerator ep = gameMaster.Players.GetEnumerator();
+            if (ep.Current == null) ep.MoveNext();
+            ep.Current.Instrument = Instrument.Guitar;
+            ep.Current.Difficulty = Difficulty.Beginner;
+            ep.Current.IMReady();
 
-            string fileToParse = "";
-            char[] separators = new char[] { ' ' };
-            foreach (string file in files)
-            {
-                // Remove path and file extension
-                string instrDiff = file.Remove(0, path.Length + 1);
-                instrDiff = instrDiff.Replace(".song", "");
-
-                // Find the file with right instrument and difficulty
-                string[] split = instrDiff.Split(separators);
-                if (split.Length == 2)
-                {
-                    if (split[0].ToLowerInvariant().Equals(instrName)
-                        && split[1].ToLowerInvariant().Equals(diffName))
-                    {
-                        fileToParse = file;
-                        break;
-                    }
-                }
-            }
-            // If something failed
-            if (fileToParse.Equals(""))
-            {
-                throw new FileNotFoundException("No file found for that song, instrument and difficulty.");
-            }
-            return fileToParse;
-        }
-
-        public Length ToLength(string length)
-        {
-            Length ret;
-            switch (length.ToLowerInvariant())
-            {
-                case "whole":
-                    ret = Length.Whole;
-                    break;
-                case "half":
-                    ret = Length.Half;
-                    break;
-                case "quarter":
-                    ret = Length.Quarter;
-                    break;
-                case"eighth":
-                    ret = Length.Eighth;
-                    break;
-                default:
-                    throw new ArgumentException("Bad length.");
-            }
-            return ret;
-        }
-
-        public Accidental ToAccidental(string accidental)
-        {
-            Accidental ret;
-            switch (accidental.ToLowerInvariant())
-            {
-                case "none":
-                    ret = Accidental.None;
-                    break;
-                case "flat":
-                    ret = Accidental.Flat;
-                    break;
-                case "sharp":
-                    ret = Accidental.Sharp;
-                    break;
-                default:
-                    throw new ArgumentException("Bad accidental.");
-            }
-            return ret;
-        }
-
-        public Height ToHeight(string height)
-        {
-            Height ret;
-            switch (height.ToLowerInvariant())
-            {
-                case "do":
-                    ret = Height.Do;
-                    break;
-                case "re":
-                    ret = Height.Re;
-                    break;
-                case "mi":
-                    ret = Height.Mi;
-                    break;
-                case "fa":
-                    ret = Height.Fa;
-                    break;
-                case "sol":
-                    ret = Height.Sol;
-                    break;
-                case "la":
-                    ret = Height.La;
-                    break;
-                case "si":
-                    ret = Height.Si;
-                    break;
-                case "rest":
-                    ret = Height.Rest;
-                    break;
-                default:
-                    throw new ArgumentException("Bad height.");
-            }
-            return ret;
-        }
+            while (true) { }
+        }*/
     }
 }

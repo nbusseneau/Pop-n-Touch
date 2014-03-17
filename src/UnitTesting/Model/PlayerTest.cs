@@ -12,97 +12,60 @@ namespace UnitTesting.Model
         public void InformNewGame()
         {
             // Arrange
-            GameMaster gm = new GameMaster();
+            GameMaster gm = GameMaster.Instance;
             List<Instrument> instrs = new List<Instrument>();
-            instrs.Add(Instrument.Guitar); //instrs.Add(new Instrument("Clar"));
-            instrs.Add(Instrument.Violin); //instrs.Add(new Instrument("Voix"));
+            instrs.Add(Instrument.Guitar);
+            instrs.Add(Instrument.Violin);
             Song s = new Song("song", null, null, Difficulty.Beginner, instrs);
-            Game g = new Game(s);
-            Player p = new Player(gm);
-            gm.Game = g;
+            Player p = new Player();
+            gm.SelectSong(s);
 
             // Act
             p.InformNewGame();
 
             // Assert
-            Assert.AreEqual(p.GameMaster, gm);
             Assert.AreEqual(p.CurrentGame, gm.Game);
             Assert.IsFalse(p.Ready);
-            Assert.AreEqual(s.Instruments, p.AvailableInstruments);
         }
 
         [TestMethod]
         public void IMReady()
         {
             // Arrange
-            GameMaster gm = new GameMaster();
+            GameMaster gm = GameMaster.Instance;
             List<Instrument> instrs = new List<Instrument>();
-            instrs.Add(Instrument.Guitar); //instrs.Add(new Instrument("Clar"));
-            Instrument voix = Instrument.Violin;
-            //instrs.Add(new Instrument("Voix"));
-            instrs.Add(voix);
+            instrs.Add(Instrument.Guitar);
+            Instrument violin = Instrument.Violin;
+            instrs.Add(violin);
             Song s = new Song("au clair de la lune", null, null, Difficulty.Beginner, instrs);
-            Player p = new Player(gm);
+            Player p = new Player();
 
             gm.SelectSong(s);
             p.InformNewGame();
 
-            p.Instrument = voix;
+            p.Instrument = violin;
             p.Difficulty = Difficulty.Beginner;
 
             // Act
             p.IMReady();
 
             // Assert
-            Assert.AreEqual(p.GameMaster, gm);
             Assert.IsNotNull(p.SheetMusic);
             Assert.AreEqual(p.CurrentGame, gm.Game);
             Assert.IsTrue(p.Ready);
-            Assert.AreEqual(s.Instruments, p.AvailableInstruments);
             Assert.IsNotNull(p.Instrument);
             Assert.IsNotNull(p.Difficulty);
-        }
-
-        [TestMethod]
-        public void NotReallyReady()
-        {
-            // Arrange
-            GameMaster gm = new GameMaster();
-            List<Instrument> instrs = new List<Instrument>();
-            instrs.Add(Instrument.Guitar); //instrs.Add(new Instrument("Clar"));
-            instrs.Add(Instrument.Violin); //instrs.Add(new Instrument("Voix"));
-            Song s = new Song("song", null, null, Difficulty.Beginner, instrs);
-            Player p = new Player(gm);
-
-            gm.SelectSong(s);
-            p.InformNewGame();
-
-            int numberOfExceptionsThrown = 0;
-
-            // Act
-            try { p.IMReady(); }
-            catch (ArgumentException) { numberOfExceptionsThrown++; }
-            p.Instrument = Instrument.Guitar; //p.Instrument = new Instrument("Voix");
-            try { p.IMReady(); }
-            catch (ArgumentException) { numberOfExceptionsThrown++; }
-            p.Instrument = Instrument.Piano; //p.Instrument = new Instrument("Saxo");
-            p.Difficulty = Difficulty.expert;
-            try { p.IMReady(); }
-            catch (ArgumentException) { numberOfExceptionsThrown++; }
-
-            // Assert
-            Assert.AreEqual(3, numberOfExceptionsThrown);
         }
 
         public void NotReadyAnymore()
         {
             // Arrange
-            GameMaster gm = new GameMaster();
+            GameMaster gm = GameMaster.Instance;
             List<Instrument> instrs = new List<Instrument>();
             instrs.Add(Instrument.Guitar); //instrs.Add(new Instrument("Clar"));
             instrs.Add(Instrument.Violin); //instrs.Add(new Instrument("Voix"));
             Song s = new Song("song", null, null, Difficulty.Beginner, instrs);
-            Player p = new Player(gm);
+            Player p = new Player();
 
             gm.SelectSong(s);
             p.InformNewGame();
@@ -112,11 +75,9 @@ namespace UnitTesting.Model
             p.NotReadyAnymore();
 
             // Assert
-            Assert.AreEqual(p.GameMaster, gm);
             Assert.IsNotNull(p.SheetMusic);
             Assert.AreEqual(p.CurrentGame, gm.Game);
             Assert.IsFalse(p.Ready);
-            Assert.AreEqual(s.Instruments, p.AvailableInstruments);
         }
     }
 }

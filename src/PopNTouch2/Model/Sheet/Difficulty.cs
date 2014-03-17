@@ -9,6 +9,6 @@ namespace PopNTouch2.Model
     {
         Beginner,
         Classic,
-        expert,
+        Expert,
     }
 }

@@ -6,26 +6,31 @@ using System.Text;
 
 namespace PopNTouch2.Model
 {
-    public class GameMaster
+    public sealed class GameMaster
     {
         /*private List<Player> players;
         private Game game;
         private Boolean upToDateGame;
         private SheetBuilder sheetBuilder;*/
-        private String SongsDirectory = @"Resources\Songs\";
+        private static readonly GameMaster instance = new GameMaster();
+        private string SongsDirectory = @"Resources\Songs\";
 
+        public static GameMaster Instance
+        {
+            get { return instance; }
+        }
         public List<Song> Songs { get; private set; }
-        public List<Player> Players { get; set; }
-        public Game Game { get; set; }
-        public Boolean UpToDateGame { get; set; }
-        public SheetBuilder SheetBuilder { get; set; }
+        public List<Player> Players { get; private set; }
+        public Game Game { get; private set; }
+        public Boolean UpToDateGame { get; private set; }
+        public SheetBuilder SheetBuilder { get; private set; }
 
-        public GameMaster()
+        private GameMaster()
         {
             this.Songs = this.LoadSongs();
             this.Players = new List<Player>();
             this.UpToDateGame = false;
-            this.SheetBuilder = new SheetBuilder();
+            this.SheetBuilder = new SheetBuilder(this.SongsDirectory);
         }
 
         private List<Song> LoadSongs()
@@ -78,7 +83,7 @@ namespace PopNTouch2.Model
             this.UpToDateGame = true;
             if (!this.Players.Any())
             {
-                this.Players.Add(new Player(this));
+                this.Players.Add(new Player());
             }
             foreach (Player player in this.Players)
             {
@@ -89,7 +94,7 @@ namespace PopNTouch2.Model
         // Attribute ok ? See later
         public void NewPlayer()
         {
-            Player player = new Player(this);
+            Player player = new Player();
             this.Players.Add(player);
             if (this.UpToDateGame)
                 player.InformNewGame();
