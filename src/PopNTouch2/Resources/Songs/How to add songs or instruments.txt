@@ -5,7 +5,7 @@ Here is what to do to fix it right away:
 
 1. If the song does not already exist, create a directory with the song's name.
 2. In this directory, add a text file name following the convention "Instrument-Difficulty.sheet" (beware of the extension! It must be ".sheet" and not ".txt").
-   For example, "Guitar-Beginner.song" is a valid filename referring to the sheet for a Guitar at Beginner level.
+   For example, "Guitar-Beginner.sheet" is a valid filename referring to the sheet for a Guitar at Beginner level.
    Available instruments:
      - Guitar;
      - Violin;

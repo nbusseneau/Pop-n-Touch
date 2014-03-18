@@ -8,8 +8,7 @@ namespace UnitTesting.Model
     [TestClass]
     public class GameMasterTest
     {
-        public GameMaster gameMaster = new GameMaster();
-        public Song song = new Song("Blabla", null, null, Difficulty.Beginner, new System.Collections.Generic.List<Instrument>());
+        public Song song = new Song("Blabla", null, null, Difficulty.Beginner, new List<Instrument>());
 
         [TestMethod]
         public void LoadSongs()
@@ -18,7 +17,7 @@ namespace UnitTesting.Model
             
 
             // Act
-            GameMaster gameMaster = new GameMaster();
+            GameMaster gameMaster = GameMaster.Instance;
 
             // Assert
             
@@ -27,6 +26,7 @@ namespace UnitTesting.Model
         [TestMethod]
         public void SelectSongNormal()
         {
+            GameMaster gameMaster = GameMaster.Instance;
             gameMaster.SelectSong(song);
             Assert.AreEqual(song, gameMaster.Game.Song);
         }
@@ -34,12 +34,17 @@ namespace UnitTesting.Model
         [TestMethod]
         public void SelectSongTwice()
         {
+            GameMaster gameMaster = GameMaster.Instance;
             gameMaster.SelectSong(song);
+            foreach (Player p in gameMaster.Players)
+            {
+                p.Ready = true;
+            }
             Song song2 = new Song("2", null, null, Difficulty.Beginner, new System.Collections.Generic.List<Instrument>());
             gameMaster.SelectSong(song2);
             foreach (Player player in gameMaster.Players)
             {
-                Assert.AreEqual(song2.Instruments, player.AvailableInstruments);
+                Assert.IsFalse(player.Ready);
             }
         }
 
@@ -47,31 +52,34 @@ namespace UnitTesting.Model
         public void NewPlayer()
         {
             // Arrange
-            int numberOfPlayers = 0;
-            gameMaster.UpToDateGame = true;
+            GameMaster gameMaster = GameMaster.Instance;
             List<Instrument> instrus = new List<Instrument>();
             instrus.Add(Instrument.Guitar);
             instrus.Add(Instrument.Violin);
             Song song = new Song("Chanson bidon", null, null, Difficulty.Beginner, instrus);
-            gameMaster.Game = new Game(song);
-
-            // Act
-            gameMaster.NewPlayer();
+            gameMaster.SelectSong(song);
+            int numberOfPlayers = 0;
             foreach (Player p in gameMaster.Players)
             {
                 numberOfPlayers++;
             }
 
-            // Assert
-            Assert.AreEqual(1, numberOfPlayers);
+            // Act
+            gameMaster.NewPlayer();
+            int numberOne = 0;
             foreach (Player p in gameMaster.Players)
             {
-                Assert.AreEqual(p.GameMaster, gameMaster);
+                numberOne++;
+            }
+
+            // Assert
+            Assert.AreEqual(numberOfPlayers+1, numberOne);
+            foreach (Player p in gameMaster.Players)
+            {
                 Assert.IsNull(p.SheetMusic);
                 Assert.AreEqual(p.CurrentGame, gameMaster.Game);
                 Assert.IsFalse(p.Ready);
-                Assert.AreEqual(p.AvailableInstruments, instrus);
-                Assert.IsNull(p.Instrument);
+                Assert.IsNotNull(p.Instrument);
                 Assert.IsInstanceOfType(p.Difficulty, typeof(Difficulty));
             }
         }
@@ -79,6 +87,7 @@ namespace UnitTesting.Model
         [TestMethod]
         public void Ready()
         {
+            GameMaster gameMaster = GameMaster.Instance;
             gameMaster.SelectSong(song);
             gameMaster.NewPlayer();
             gameMaster.Ready();
