@@ -12,6 +12,7 @@
     </Window.DataContext>
 
     <Window.Resources>
+        <BooleanToVisibilityConverter x:Key="bool2vis" />
         <ViewModel:InverseVisibilityConverter x:Key="inverseVisibilityConverter" />
         
         <Storyboard x:Key="startBtnAnim" Duration="0:0:1" RepeatBehavior="Forever" AutoReverse="True">
@@ -33,6 +34,7 @@
     </Window.Resources>
 
     <Grid Background="Black">
+        
         <!-- Background -->
         <Image HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Source="../Resources/UI/BGP_Main.jpg" Panel.ZIndex="-10"/>
 
@@ -68,11 +70,11 @@
                     <Setter Property="Background" Value="Transparent"/>
                     <Setter Property="BorderThickness" Value="0"/>
                     <Setter Property="CanScale" Value="False"/>
+                    <Setter Property="CanMove" Value="True"/>
+                    <Setter Property="CanRotate" Value="True"/>
                 </Style>
             </s:ScatterView.ItemContainerStyle>
-            <!--<s:ScatterViewItem>
-                <Proto1:Tab/>
-            </s:ScatterViewItem>-->
+            
         </s:ScatterView>
 
         <!-- Temporary list to choose a song -->
@@ -87,12 +89,12 @@
         <PopNTouch2:MainMenuView DataContext="{Binding MainMenu}" Visibility="{Binding Visibility}" />
         
         <!-- Play song -->
-        <s:SurfaceToggleButton Visibility="{Binding PlaySongVisibility}" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Checked="Button_PlayStop_Checked" Unchecked="Button_PlayStop_Unchecked" Background="{x:Null}">
+        <s:SurfaceToggleButton Visibility="{Binding MainMenu.IsReady, Converter={StaticResource bool2vis}}" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Checked="Button_PlayStop_Checked" Unchecked="Button_PlayStop_Unchecked" Background="{x:Null}">
             <Image Height="220" Width="220" Source="../Resources/UI/BTNP_Play.png"/>
         </s:SurfaceToggleButton>
 
-        <s:SurfaceButton Name="btnAddTab" Visibility="{Binding PlaySongVisibility}" Command="{Binding AddPlayer}" Content="+" HorizontalAlignment="Center" Margin="0,0,-270,0" VerticalAlignment="Center" Height="61" Width="54" FontSize="38" Background="#FF497A44"/>
-        <s:SurfaceButton Name="btnEraseAll" Visibility="{Binding PlaySongVisibility}" Command="{Binding EraseAll}" Content="X" HorizontalAlignment="Center" Margin="0,0,270,0" VerticalAlignment="Center" Height="61" Width="54" FontSize="38" Background="#FF783936"/>
+        <s:SurfaceButton Visibility="{Binding MainMenu.IsReady, Converter={StaticResource bool2vis}}" Command="{Binding AddPlayer}" Content="+" HorizontalAlignment="Center" Margin="0,0,-270,0" VerticalAlignment="Center" Height="61" Width="54" FontSize="38" Background="#FF497A44"/>
+        <s:SurfaceButton Visibility="{Binding MainMenu.IsReady, Converter={StaticResource bool2vis}}" Command="{Binding EraseAll}" Content="X" HorizontalAlignment="Center" Margin="0,0,270,0" VerticalAlignment="Center" Height="61" Width="54" FontSize="38" Background="#FF783936"/>
 
     </Grid>
 </s:SurfaceWindow>

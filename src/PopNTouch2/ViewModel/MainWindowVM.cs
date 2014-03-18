@@ -12,14 +12,9 @@ namespace PopNTouch2.ViewModel
 {
     public class MainWindowVM : ViewModelBase
     {
-        private MainWindow view = new MainWindow();
-
         public MainWindowVM()
         {
-            this.PlaySongVisibility = Visibility.Collapsed;
-            Binding menuReadyBinding = new Binding("IsReady");
-            menuReadyBinding.Source = this.mainMenu;
-            BindingOperations.SetBinding(this.view, PlaySongVisibilityProperty, menuReadyBinding);
+
         }
 
         /// <summary>
@@ -70,25 +65,6 @@ namespace PopNTouch2.ViewModel
         /// PlaySong buttons 
         /// </summary>
         #region PlaySong
-
-        public Visibility PlaySongVisibility
-        {
-            get { return (Visibility) this.view.GetValue(PlaySongVisibilityProperty); }
-            set
-            {
-                if (value != null)
-                    this.view.SetValue(PlaySongVisibilityProperty, value);
-                else
-                {
-                    Visibility playSongVisiblity = (this.mainMenu.IsReady) ? Visibility.Visible : Visibility.Collapsed;
-                    this.view.SetValue(PlaySongVisibilityProperty, playSongVisiblity);
-                }
-                RaisePropertyChanged("PlaySongVisibility");
-            }
-        }
-
-        public static readonly DependencyProperty PlaySongVisibilityProperty = DependencyProperty.Register("PlaySongVisibility", typeof(Visibility), typeof(MainWindow));
-
 
         ICommand addPlayer;
         public ICommand AddPlayer
