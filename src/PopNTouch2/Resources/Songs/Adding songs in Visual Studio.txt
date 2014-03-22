@@ -9,7 +9,7 @@ This file targets developers wishing to add songs to be shipped with Pop'n'Touch
 4. Do the same for every couple of instrument/difficulty you wish to add and name them "Instrument-Difficulty.sheet". Fill them as described in [HowTo].
 5. For every text file created, you need to make sure that:
    - The "Copy to output directory" property is "Copy always";
-   - The "Build action" property is "None."
+   - The "Build action" property is "None".
    Else it won't be included in the release.
    You also may want to check for each file that in File\Advanced Save Options, Line Endings are set to CRLF (enables easy edition using Notepad on Windows).
 
