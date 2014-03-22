@@ -5,14 +5,20 @@ using System.Text;
 
 namespace PopNTouch2.Model
 {
-    public class NoteFactory
+    public sealed class NoteFactory
     {
+        private static readonly NoteFactory instance = new NoteFactory();
         private readonly Lazy<Note>[] notes;
 
         // Max values of enums for note positionning in array and array instantiation
         private int maxLength = Enum.GetValues(typeof(Length)).Length;
         private int maxAccidental = Enum.GetValues(typeof(Accidental)).Length;
         private int maxHeight = Enum.GetValues(typeof(Height)).Length;
+
+        public static NoteFactory Instance
+        {
+            get { return instance; }
+        }
 
         public NoteFactory()
         {

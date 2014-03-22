@@ -13,10 +13,10 @@ namespace UnitTesting.Model
         {
             // Arrange
             GameMaster gm = GameMaster.Instance;
-            List<Instrument> instrs = new List<Instrument>();
-            instrs.Add(Instrument.Guitar);
-            instrs.Add(Instrument.Violin);
-            Song s = new Song("song", null, null, Difficulty.Beginner, instrs);
+            List<Tuple<Instrument, Difficulty>> sheets = new List<Tuple<Instrument, Difficulty>>();
+            sheets.Add(Tuple.Create(Instrument.Violin, Difficulty.Beginner));
+            sheets.Add(Tuple.Create(Instrument.Guitar, Difficulty.Beginner));
+            Song s = new Song("song", null, null, sheets);
             Player p = new Player();
             gm.SelectSong(s);
 
@@ -33,17 +33,16 @@ namespace UnitTesting.Model
         {
             // Arrange
             GameMaster gm = GameMaster.Instance;
-            List<Instrument> instrs = new List<Instrument>();
-            instrs.Add(Instrument.Guitar);
-            Instrument violin = Instrument.Violin;
-            instrs.Add(violin);
-            Song s = new Song("au clair de la lune", null, null, Difficulty.Beginner, instrs);
+            List<Tuple<Instrument, Difficulty>> sheets = new List<Tuple<Instrument, Difficulty>>();
+            sheets.Add(Tuple.Create(Instrument.Violin, Difficulty.Beginner));
+            sheets.Add(Tuple.Create(Instrument.Guitar, Difficulty.Beginner));
+            Song s = new Song("au clair de la lune", null, null, sheets);
             Player p = new Player();
 
             gm.SelectSong(s);
             p.InformNewGame();
 
-            p.Instrument = violin;
+            p.Instrument = Instrument.Violin;
             p.Difficulty = Difficulty.Beginner;
 
             // Act
@@ -61,10 +60,10 @@ namespace UnitTesting.Model
         {
             // Arrange
             GameMaster gm = GameMaster.Instance;
-            List<Instrument> instrs = new List<Instrument>();
-            instrs.Add(Instrument.Guitar); //instrs.Add(new Instrument("Clar"));
-            instrs.Add(Instrument.Violin); //instrs.Add(new Instrument("Voix"));
-            Song s = new Song("song", null, null, Difficulty.Beginner, instrs);
+            List<Tuple<Instrument, Difficulty>> sheets = new List<Tuple<Instrument, Difficulty>>();
+            sheets.Add(Tuple.Create(Instrument.Violin, Difficulty.Beginner));
+            sheets.Add(Tuple.Create(Instrument.Guitar, Difficulty.Beginner));
+            Song s = new Song("song", null, null, sheets);
             Player p = new Player();
 
             gm.SelectSong(s);

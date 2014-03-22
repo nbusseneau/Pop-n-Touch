@@ -16,15 +16,15 @@ namespace UnitTesting.Model
         {
             // Arrange
             SheetBuilder sb = new SheetBuilder(path);
-            List<Instrument> instrs = new List<Instrument>();
-            instrs.Add(Instrument.Guitar);
-            Song s = new Song("au clair de la lune", null, null, Difficulty.Beginner, instrs);
+            List<Tuple<Instrument, Difficulty>> sheets = new List<Tuple<Instrument, Difficulty>>();
+            sheets.Add(Tuple.Create(Instrument.Guitar, Difficulty.Beginner));
+            Song s = new Song("au clair de la lune", null, null, sheets);
 
             // Act
             SheetMusic sm = sb.BuildSheet(s, Instrument.Guitar, Difficulty.Beginner);
 
             // Assert
-            Assert.IsTrue(sm.Notes.Contains(sb.NoteFactory.GetNote(Length.Quarter, Accidental.None, Height.Do)));
+            Assert.IsTrue(sm.Notes.Contains(NoteFactory.Instance.GetNote(Length.Quarter, Accidental.None, Height.Do)));
         }
 
         [TestMethod]
@@ -32,9 +32,9 @@ namespace UnitTesting.Model
         {
             // Arrange
             SheetBuilder sb = new SheetBuilder(path);
-            List<Instrument> instrs = new List<Instrument>();
-            instrs.Add(Instrument.Violin);
-            Song s = new Song("au clair de la lune", null, null, Difficulty.Beginner, instrs);
+            List<Tuple<Instrument, Difficulty>> sheets = new List<Tuple<Instrument, Difficulty>>();
+            sheets.Add(Tuple.Create(Instrument.Violin, Difficulty.Beginner));
+            Song s = new Song("au clair de la lune", null, null, sheets);
 
             // Act
             SheetMusic sm = sb.BuildSheet(s, Instrument.Violin, Difficulty.Expert);

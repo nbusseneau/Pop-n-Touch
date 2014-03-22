@@ -8,16 +8,17 @@ namespace UnitTesting.Model
     [TestClass]
     public class GameMasterTest
     {
-        public Song song = new Song("Blabla", null, null, Difficulty.Beginner, new List<Instrument>());
+        public Song song = new Song("Blabla", null, null, new List<Tuple<Instrument, Difficulty>>());
 
         [TestMethod]
         public void LoadSongs()
         {
             // Arrange
-            
+            GameMaster gameMaster = GameMaster.Instance;
+            PrivateObject privateObject = new PrivateObject(gameMaster);
 
             // Act
-            GameMaster gameMaster = GameMaster.Instance;
+            List<Song> songs = (List<Song>)privateObject.Invoke("LoadSongs");
 
             // Assert
             
@@ -40,7 +41,7 @@ namespace UnitTesting.Model
             {
                 p.Ready = true;
             }
-            Song song2 = new Song("2", null, null, Difficulty.Beginner, new System.Collections.Generic.List<Instrument>());
+            Song song2 = new Song("2", null, null, new List<Tuple<Instrument, Difficulty>>());
             gameMaster.SelectSong(song2);
             foreach (Player player in gameMaster.Players)
             {
@@ -53,10 +54,10 @@ namespace UnitTesting.Model
         {
             // Arrange
             GameMaster gameMaster = GameMaster.Instance;
-            List<Instrument> instrus = new List<Instrument>();
-            instrus.Add(Instrument.Guitar);
-            instrus.Add(Instrument.Violin);
-            Song song = new Song("Chanson bidon", null, null, Difficulty.Beginner, instrus);
+            List<Tuple<Instrument, Difficulty>> sheets = new List<Tuple<Instrument, Difficulty>>();
+            sheets.Add(Tuple.Create(Instrument.Violin, Difficulty.Beginner));
+            sheets.Add(Tuple.Create(Instrument.Guitar, Difficulty.Beginner));
+            Song song = new Song("Chanson bidon", null, null, sheets);
             gameMaster.SelectSong(song);
             int numberOfPlayers = 0;
             foreach (Player p in gameMaster.Players)

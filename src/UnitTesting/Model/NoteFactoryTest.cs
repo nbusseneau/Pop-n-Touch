@@ -11,7 +11,7 @@ namespace UnitTesting.Model
         public void NoteFactoryLazyInstantiation()
         {
             // Arrange
-            NoteFactory noteFactory = new NoteFactory();
+            NoteFactory noteFactory = NoteFactory.Instance;
             PrivateObject privateObject = new PrivateObject(noteFactory);
             Lazy<Note>[] notes = (Lazy<Note>[])privateObject.GetField("notes");
             Lazy<Note> lazyNote = notes[5]; // Length.Whole = 0, Accidental.None = 0, Height.La = 5
