@@ -40,16 +40,18 @@ namespace PopNTouch2.Model
             foreach (string songDirectory in dirs)
             {
                 string title = null, author = null, year = null;
+                int bpm = 0;
                 string metadata = Path.Combine(songDirectory, "meta.data");
 
                 // Check for metadata
                 if (File.Exists(metadata)) {
                     string[] lines = File.ReadAllLines(metadata);
-                    if (lines.Length == 3)
+                    if (lines.Length == 4)
                     {
                         title = lines[0];
                         author = lines[1];
                         year = lines[2];
+                        bpm = Convert.ToInt32(lines[3]);
                     }
                 }
 
@@ -68,7 +70,7 @@ namespace PopNTouch2.Model
                         sheets.Add(Tuple.Create(instrument, difficulty));
                     }
 
-                    songs.Add(new Song(title, author, year, sheets));
+                    songs.Add(new Song(title, author, year, sheets, bpm));
                 }
             }
 
