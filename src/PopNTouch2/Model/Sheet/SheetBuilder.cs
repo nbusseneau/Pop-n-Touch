@@ -44,9 +44,8 @@ namespace PopNTouch2.Model
                 Length length = (Length)Enum.Parse(typeof(Length), infos[0], true);
                 Accidental accidental = (Accidental)Enum.Parse(typeof(Accidental), infos[1], true);
                 Height height = (Height)Enum.Parse(typeof(Height), infos[2], true);
-                sheetMusic.Notes.Add(new Tuple<double, Note>(time, NoteFactory.Instance.GetNote(length, accidental, height)));
-                //Console.WriteLine(length + " " + accidental + " " + height + " " + time);
                 time = millitick * LengthValue(length);
+                sheetMusic.Notes.Add(new Tuple<double, Note>(time, NoteFactory.Instance.GetNote(length, accidental, height)));
             }
             return sheetMusic;
         }
@@ -68,21 +67,5 @@ namespace PopNTouch2.Model
                     return 0.0;
             }
         }
-
-        /*public static void Main(string[] args)
-        {
-            GameMaster gameMaster = GameMaster.Instance;
-            List<Song>.Enumerator es = gameMaster.Songs.GetEnumerator();
-            if (es.Current == null) es.MoveNext();
-            gameMaster.SelectSong(es.Current);
-            List<Player>.Enumerator ep = gameMaster.Players.GetEnumerator();
-            if (ep.Current == null) ep.MoveNext();
-            ep.Current.Instrument = Instrument.Guitar;
-            ep.Current.Difficulty = Difficulty.Beginner;
-            ep.Current.IMReady();
-            ep.Current.ReadSheet();
-
-            while (true) { }
-        }*/
     }
 }

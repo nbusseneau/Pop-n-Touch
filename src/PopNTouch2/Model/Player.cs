@@ -15,6 +15,7 @@ namespace PopNTouch2.Model
         private List<Instrument> availableInstruments;
         private Instrument instrument;
         private Difficulty difficulty; */
+        private List<Tuple<double, Note>>.Enumerator enumerator;
 
         public SheetMusic SheetMusic { get; set; }
         public Game CurrentGame { get; set; }
@@ -22,13 +23,11 @@ namespace PopNTouch2.Model
         public Instrument Instrument { get; set; }
         public Difficulty Difficulty { get; set; }
         public Timer Timer { get; set; }
-        List<Tuple<double, Note>>.Enumerator Enumerator { get; set; }
-
+        public event TickHandler Tick;
         public class NoteTicked : EventArgs
         {
             public Note Note { get; set; }
         }
-        public event TickHandler Tick;
         public delegate void TickHandler(Player p, NoteTicked nt);
 
         public Player() { }
@@ -51,9 +50,28 @@ namespace PopNTouch2.Model
             this.Ready = false;
         }
 
+        /*
+         * EXAMPLE OF HOW TO USE NOTETICKED EVENT
+        Player p;
+        // Call that line before launching p.ReadSheet()
+        p.Tick += new Player.TickHandler(OnTickedNote);
+        // This is the method that will be run when the TickedNote Event is launched.
+        // The method must return void and have a Player and a Player.NoteTicked arguments
+        public void OnTickedNote(Player p, Player.NoteTicked nt)
+        {
+            // Do something, for example :
+            Console.WriteLine(nt.Note.Length.ToString() + " " + nt.Note.Accidental.ToString() + " " + nt.Note.Height.ToString());
+        }
+        // Or in a more compact manner :
+        p.Tick += delegate(Player sender, Player.NoteTicked nt)
+        {
+            // Do something
+        };
+        */
+
         public void ReadSheet()
         {
-            this.Enumerator = this.SheetMusic.Notes.GetEnumerator();
+            this.enumerator = this.SheetMusic.Notes.GetEnumerator();
             this.Timer = new Timer(this.SheetMusic.TimeRest);
             this.Timer.AutoReset = false;
             this.Timer.Elapsed += new ElapsedEventHandler(OnTimerTicked);
@@ -62,18 +80,15 @@ namespace PopNTouch2.Model
 
         public void OnTimerTicked(object source, ElapsedEventArgs e)
         {
-            Console.WriteLine("Tick");
-            if (Tick != null)
+            if (this.enumerator.MoveNext())
             {
-                NoteTicked nt = new NoteTicked();
-                nt.Note = this.Enumerator.Current.Item2;
-                Console.WriteLine("Tack");
-                Tick(this, nt);
-            }
-            if (this.Enumerator.MoveNext())
-            {
-                // ??
-                this.Timer.Interval = this.Enumerator.Current.Item1;
+                if (Tick != null)
+                {
+                    NoteTicked nt = new NoteTicked();
+                    nt.Note = this.enumerator.Current.Item2;
+                    Tick(this, nt);
+                }
+                this.Timer.Interval = this.enumerator.Current.Item1;
                 this.Timer.Start();
             }
         }

@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PopNTouch2.Model;
 using System.Collections.Generic;
+using System.Threading;
 
 namespace UnitTesting.Model
 {
@@ -16,7 +17,7 @@ namespace UnitTesting.Model
             List<Tuple<Instrument, Difficulty>> sheets = new List<Tuple<Instrument, Difficulty>>();
             sheets.Add(Tuple.Create(Instrument.Violin, Difficulty.Beginner));
             sheets.Add(Tuple.Create(Instrument.Guitar, Difficulty.Beginner));
-            Song s = new Song("song", null, null, sheets);
+            Song s = new Song("song", null, null, sheets, 90);
             Player p = new Player();
             gm.SelectSong(s);
 
@@ -36,7 +37,7 @@ namespace UnitTesting.Model
             List<Tuple<Instrument, Difficulty>> sheets = new List<Tuple<Instrument, Difficulty>>();
             sheets.Add(Tuple.Create(Instrument.Violin, Difficulty.Beginner));
             sheets.Add(Tuple.Create(Instrument.Guitar, Difficulty.Beginner));
-            Song s = new Song("au clair de la lune", null, null, sheets);
+            Song s = new Song("au clair de la lune", null, null, sheets, 90);
             Player p = new Player();
 
             gm.SelectSong(s);
@@ -56,6 +57,7 @@ namespace UnitTesting.Model
             Assert.IsNotNull(p.Difficulty);
         }
 
+        [TestMethod]
         public void NotReadyAnymore()
         {
             // Arrange
@@ -63,7 +65,7 @@ namespace UnitTesting.Model
             List<Tuple<Instrument, Difficulty>> sheets = new List<Tuple<Instrument, Difficulty>>();
             sheets.Add(Tuple.Create(Instrument.Violin, Difficulty.Beginner));
             sheets.Add(Tuple.Create(Instrument.Guitar, Difficulty.Beginner));
-            Song s = new Song("song", null, null, sheets);
+            Song s = new Song("song", null, null, sheets, 90);
             Player p = new Player();
 
             gm.SelectSong(s);
@@ -74,9 +76,37 @@ namespace UnitTesting.Model
             p.NotReadyAnymore();
 
             // Assert
-            Assert.IsNotNull(p.SheetMusic);
             Assert.AreEqual(p.CurrentGame, gm.Game);
             Assert.IsFalse(p.Ready);
+        }
+
+        [TestMethod]
+        public void ReadSheet()
+        {
+            // Arrange
+            int eventFired = 0;
+            GameMaster gm = GameMaster.Instance;
+            List<Tuple<Instrument, Difficulty>> sheets = new List<Tuple<Instrument, Difficulty>>();
+            sheets.Add(Tuple.Create(Instrument.Violin, Difficulty.Beginner));
+            sheets.Add(Tuple.Create(Instrument.Guitar, Difficulty.Beginner));
+            Song s = new Song("Au clair de la lune", null, null, sheets, 90);
+            Player p = new Player();
+            gm.SelectSong(s);
+            p.InformNewGame();
+            p.Instrument = Instrument.Guitar;
+            p.Difficulty = Difficulty.Beginner;
+            p.IMReady();
+            p.Tick += delegate(Player sender, Player.NoteTicked nt)
+            {
+                eventFired++;
+            };
+
+            // Act
+            p.ReadSheet();
+            Thread.Sleep(3000);
+
+            // Assert
+            Assert.AreNotEqual(0, eventFired);
         }
     }
 }

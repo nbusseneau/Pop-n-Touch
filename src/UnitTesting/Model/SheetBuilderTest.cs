@@ -18,13 +18,13 @@ namespace UnitTesting.Model
             SheetBuilder sb = new SheetBuilder(path);
             List<Tuple<Instrument, Difficulty>> sheets = new List<Tuple<Instrument, Difficulty>>();
             sheets.Add(Tuple.Create(Instrument.Guitar, Difficulty.Beginner));
-            Song s = new Song("au clair de la lune", null, null, sheets);
+            Song s = new Song("au clair de la lune", null, null, sheets, 90);
 
             // Act
             SheetMusic sm = sb.BuildSheet(s, Instrument.Guitar, Difficulty.Beginner);
 
             // Assert
-            Assert.IsTrue(sm.Notes.Contains(NoteFactory.Instance.GetNote(Length.Quarter, Accidental.None, Height.Do)));
+            Assert.AreNotEqual(0, sm.Notes.Count);
         }
 
         [TestMethod]
@@ -34,7 +34,7 @@ namespace UnitTesting.Model
             SheetBuilder sb = new SheetBuilder(path);
             List<Tuple<Instrument, Difficulty>> sheets = new List<Tuple<Instrument, Difficulty>>();
             sheets.Add(Tuple.Create(Instrument.Violin, Difficulty.Beginner));
-            Song s = new Song("au clair de la lune", null, null, sheets);
+            Song s = new Song("au clair de la lune", null, null, sheets, 90);
 
             // Act
             SheetMusic sm = sb.BuildSheet(s, Instrument.Violin, Difficulty.Expert);
