@@ -39,7 +39,7 @@
         <Image HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Source="../Resources/UI/BGP_Main.jpg" Panel.ZIndex="-10"/>
 
         <!-- Start screen-->
-        <s:SurfaceButton Name="startBtn" HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding StartGame}" Background="{x:Null}" RenderTransformOrigin="0.5,0.5" Visibility="{Binding StartButtonVisibility}" Margin="782,359,794,359">
+        <s:SurfaceButton Name="startBtn" HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding StartGame}" Background="{x:Null}" RenderTransformOrigin="0.5,0.5" Visibility="{Binding StartButtonVisibility}">
             <s:SurfaceButton.RenderTransform>
                 <ScaleTransform x:Name="scaleBtnStart" ScaleX="1.0" ScaleY="1.0"/>
             </s:SurfaceButton.RenderTransform>
@@ -55,7 +55,7 @@
         </s:SurfaceButton>
 
         <!-- Players views -->
-        <s:ScatterView Name="scatterViewTabsContainer" ItemsSource="{Binding Players}" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Panel.ZIndex="-1">
+        <s:ScatterView ItemsSource="{Binding Players}" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Panel.ZIndex="-1">
             <s:ScatterView.Resources>
                 <DataTemplate DataType="{x:Type ViewModel:PlayerVM}">
                     <PopNTouch2:PlayerView/>
@@ -89,9 +89,9 @@
         <PopNTouch2:MainMenuView DataContext="{Binding MainMenu}" Visibility="{Binding Visibility}" />
         
         <!-- Play song -->
-        <s:SurfaceToggleButton Visibility="{Binding MainMenu.IsReady, Converter={StaticResource bool2vis}}" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Checked="Button_PlayStop_Checked" Unchecked="Button_PlayStop_Unchecked" Background="{x:Null}">
+        <s:SurfaceButton Visibility="{Binding MainMenu.IsReady, Converter={StaticResource bool2vis}}" Command="{Binding PlaySong}" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="{x:Null}">
             <Image Height="220" Width="220" Source="../Resources/UI/BTNP_Play.png"/>
-        </s:SurfaceToggleButton>
+        </s:SurfaceButton>
 
         <s:SurfaceButton Visibility="{Binding MainMenu.IsReady, Converter={StaticResource bool2vis}}" Command="{Binding AddPlayer}" Content="+" HorizontalAlignment="Center" Margin="0,0,-270,0" VerticalAlignment="Center" Height="61" Width="54" FontSize="38" Background="#FF497A44"/>
         <s:SurfaceButton Visibility="{Binding MainMenu.IsReady, Converter={StaticResource bool2vis}}" Command="{Binding EraseAll}" Content="X" HorizontalAlignment="Center" Margin="0,0,270,0" VerticalAlignment="Center" Height="61" Width="54" FontSize="38" Background="#FF783936"/>

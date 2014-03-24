@@ -15,6 +15,11 @@ namespace PopNTouch2.ViewModel
         public bool IsReady
         {
             get { return this.isReady; }
+            set 
+            {
+                this.isReady = value;
+                RaisePropertyChanged("IsReady");
+            }
         }
 
         private Visibility visibility = Visibility.Collapsed;

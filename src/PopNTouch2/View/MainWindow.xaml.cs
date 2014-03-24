@@ -26,8 +26,5 @@ namespace PopNTouch2.View
         {
             //InitializeComponent();
         }
-
-        public void Button_PlayStop_Unchecked(object sender, EventArgs e) { }
-        public void Button_PlayStop_Checked(object sender, EventArgs e) { }
     }
 }

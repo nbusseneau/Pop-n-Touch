@@ -7,16 +7,12 @@ using System.Text;
 using System.Windows;
 using System.Windows.Data;
 using System.Windows.Input;
+using PopNTouch2.Model;
 
 namespace PopNTouch2.ViewModel
 {
     public class MainWindowVM : ViewModelBase
     {
-        public MainWindowVM()
-        {
-
-        }
-
         /// <summary>
         /// StartButton Behaviour, Properties and On Click Bindings
         /// </summary>
@@ -74,7 +70,9 @@ namespace PopNTouch2.ViewModel
                 if (addPlayer == null)
                     addPlayer = new RelayCommand(() =>
                     {
-                        this.players.Add(new PlayerVM());
+                        PlayerVM playerVM = new PlayerVM();
+                        playerVM.Player = new Player();
+                        this.players.Add(playerVM);
                         RaisePropertyChanged("Players");
 
                     });
@@ -96,6 +94,22 @@ namespace PopNTouch2.ViewModel
 
                     });
                 return this.eraseAll;
+            }
+        }
+
+        ICommand playSong;
+        public ICommand PlaySong
+        {
+            get
+            {
+                if (playSong == null)
+                    playSong = new RelayCommand(() =>
+                    {
+                        this.MainMenu.IsReady = false;
+                        foreach (PlayerVM pvm in this.players)
+                            pvm.ChoicesEnabled = true;
+                    });
+                return this.playSong;
             }
         }
 
