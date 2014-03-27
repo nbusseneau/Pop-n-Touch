@@ -15,9 +15,34 @@
     </s:ScatterViewItem.Resources>
 
     <Grid Margin="0,0,0,0">
+        
+        <Grid.Resources>
+            <Style x:Key="ToggleButtonStyle" TargetType="{x:Type s:SurfaceToggleButton}">
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding Player.Ready}" Value="False">
+                        <Setter Property="ContentTemplate">
+                            <Setter.Value>
+                                <DataTemplate>
+                                    <Image Width="50" Height="50" Source="../Resources/UI/BTNP_Ready.png" IsHitTestVisible="False" />
+                                </DataTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </DataTrigger>
+                    <DataTrigger Binding="{Binding Player.Ready}" Value="True">
+                        <Setter Property="ContentTemplate">
+                            <Setter.Value>
+                                <DataTemplate>
+                                    <Image Width="50" Height="50" Source="../Resources/UI/BTNP_Cancel.png" IsHitTestVisible="False" />
+                                </DataTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+        </Grid.Resources>
 
         <!-- Background border -->
-        <Image IsHitTestVisible="False" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" Source="../Resources/UI/BGP_PlayerView.png"/>
+        <Image IsHitTestVisible="False" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" Source="../Resources/UI/BGP_PlayerView.png" Panel.ZIndex="-1"/>
 
         <!-- Stave -->
         <!--  <PopNTouch2:SheetMusicView Margin="35,96,36,105"/> -->
@@ -27,42 +52,56 @@
         <Ellipse Name="fdbckIncorrect" HorizontalAlignment="Left" Height="30" Margin="168,44,0,0" Stroke="OrangeRed" Fill="Red" VerticalAlignment="Top" Width="30" Visibility="Hidden"/>
 
         <!-- Choices : Difficulty and Instrument -->
+        <s:SurfaceToggleButton Style="{StaticResource ToggleButtonStyle}" Visibility="{Binding ChoicesEnabled, Converter={StaticResource bool2vis}}" IsEnabled="{Binding ChoicesMade}" IsChecked="{Binding ReadyChecked, Mode=TwoWay}" Command="{Binding ClickReady}" HorizontalAlignment="Left" Margin="294,10,0,0" VerticalAlignment="Top" Opacity="0.8">
+            <Image />
+        </s:SurfaceToggleButton>
+        
         <StackPanel Orientation="Horizontal" Visibility="{Binding Path=ChoicesEnabled, Converter={StaticResource bool2vis}}" HorizontalAlignment="Left" Width="615" Height="216" VerticalAlignment="Bottom" Margin="40,0,0,105">
             <Grid Background="Transparent">
                 
                 <Grid.Resources>
-                    <DataTemplate DataType="{x:Type s:SurfaceButton}">
-                        <s:SurfaceButton Name="button"/>
-                        <DataTemplate.Triggers>
+                    <Style x:Key="ButtonStyle" TargetType="{x:Type s:SurfaceButton}">
+                        <Setter Property="Background" Value="Transparent"/>
+                    </Style>
+                    <Style x:Key="SelectedEasyButtonStyle" TargetType="{x:Type s:SurfaceButton}" BasedOn="{StaticResource ButtonStyle}">
+                        <Style.Triggers>
                             <DataTrigger Binding="{Binding Player.Difficulty}" Value="Beginner">
-                                <Setter TargetName="button" Property="Background" Value="Green" />
+                                <Setter Property="Background" Value="Green" />
                             </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                    <Style x:Key="SelectedMediumButtonStyle"  TargetType="{x:Type s:SurfaceButton}" BasedOn="{StaticResource ButtonStyle}">
+                        <Style.Triggers>
                             <DataTrigger Binding="{Binding Player.Difficulty}" Value="Classic">
-                                <Setter TargetName="button" Property="Background" Value="Orange" />
+                                <Setter Property="Background" Value="Orange" />
                             </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                    <Style x:Key="SelectedHardButtonStyle" TargetType="{x:Type s:SurfaceButton}" BasedOn="{StaticResource ButtonStyle}">
+                        <Style.Triggers>
                             <DataTrigger Binding="{Binding Player.Difficulty}" Value="Expert">
-                                <Setter TargetName="button" Property="Background" Value="Red" />
+                                <Setter Property="Background" Value="Red" />
                             </DataTrigger>
-                        </DataTemplate.Triggers>
-                    </DataTemplate>
+                        </Style.Triggers>
+                    </Style>
                 </Grid.Resources>
                 
                 <TextBlock Text="Difficulty" Foreground="Black" FontWeight="Bold" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="66,10,69,0"/>
-                <s:SurfaceButton Command="{Binding PickDifficulty}" CommandParameter="Beginner" Background="Transparent" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Margin="10,86,0,0" Width="51">
+                <s:SurfaceButton Style="{StaticResource SelectedEasyButtonStyle}" Command="{Binding PickDifficulty}" CommandParameter="Beginner" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Margin="10,86,0,0" Width="51">
                     <Image Source="../Resources/UI/BTNP_Easy.png" IsHitTestVisible="False"/>
                 </s:SurfaceButton>
-                <s:SurfaceButton Command="{Binding PickDifficulty}" CommandParameter="Classic" Background="Transparent" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Margin="106,86,0,0" Width="51">
+                <s:SurfaceButton Style="{StaticResource SelectedMediumButtonStyle}" Command="{Binding PickDifficulty}" CommandParameter="Classic" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Margin="106,86,0,0" Width="51">
                     <Image Source="../Resources/UI/BTNP_Medium.png" IsHitTestVisible="False"/>
                 </s:SurfaceButton>
-                <s:SurfaceButton Command="{Binding PickDifficulty}" CommandParameter="Expert" Background="Transparent" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Margin="206,86,0,0" Width="51">
+                <s:SurfaceButton Style="{StaticResource SelectedHardButtonStyle}" Command="{Binding PickDifficulty}" CommandParameter="Expert" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Margin="206,86,0,0" Width="51">
                     <Image Source="../Resources/UI/BTNP_Hard.png" IsHitTestVisible="False"/>
                 </s:SurfaceButton>
             </Grid>
             <Grid Background="Transparent">
                 <TextBlock Text="Instrument" Foreground="Black" FontWeight="Bold" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="76,10,59,0"/>
-                <s:SurfaceButton Background="Red" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Margin="133,86,0,0" Width="51"/>
-                <s:SurfaceButton Background="Red" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Margin="32,86,0,0" Width="51"/>
-                <s:SurfaceButton Background="Red" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Margin="240,86,0,0" Width="51"/>
+                <s:SurfaceButton Background="Red" Command="{Binding PickInstrument}" CommandParameter="instr1" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Margin="133,86,0,0" Width="51"/>
+                <s:SurfaceButton Background="Red" Command="{Binding PickInstrument}" CommandParameter="instr2" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Margin="32,86,0,0" Width="51"/>
+                <s:SurfaceButton Background="Red" Command="{Binding PickInstrument}" CommandParameter="instr3" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Margin="240,86,0,0" Width="51"/>
             </Grid>
         </StackPanel>
 

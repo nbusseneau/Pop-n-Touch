@@ -70,8 +70,10 @@ namespace PopNTouch2.ViewModel
                 if (addPlayer == null)
                     addPlayer = new RelayCommand(() =>
                     {
+                        Player player = new Player();
                         PlayerVM playerVM = new PlayerVM();
-                        playerVM.Player = new Player();
+                        playerVM.Player = player;
+                        GameMaster.Instance.NewPlayer(player);
                         this.players.Add(playerVM);
                         RaisePropertyChanged("Players");
 
@@ -105,7 +107,7 @@ namespace PopNTouch2.ViewModel
                 if (playSong == null)
                     playSong = new RelayCommand(() =>
                     {
-                        this.MainMenu.IsReady = false;
+                        // this.MainMenu.IsReady = false;
                         foreach (PlayerVM pvm in this.players)
                             pvm.ChoicesEnabled = true;
                     });

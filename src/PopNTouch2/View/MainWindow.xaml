@@ -78,14 +78,6 @@
         </s:ScatterView>
 
         <!-- Temporary list to choose a song -->
-        <!-- FIXME -->
-        <!-- 
-        <PopNTouch2:MainMenuView Visibility="{Binding Path=StartButtonVisibility, Converter={StaticResource inverseVisibilityConverter}}" >
-            <PopNTouch2:MainMenuView.DataContext>
-                <ViewModel:MainWindowVM/>
-            </PopNTouch2:MainMenuView.DataContext>
-        </PopNTouch2:MainMenuView>
-        -->
         <PopNTouch2:MainMenuView DataContext="{Binding MainMenu}" Visibility="{Binding Visibility}" />
         
         <!-- Play song -->

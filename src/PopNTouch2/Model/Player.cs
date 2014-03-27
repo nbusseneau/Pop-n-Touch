@@ -30,7 +30,12 @@ namespace PopNTouch2.Model
         }
         public delegate void TickHandler(Player p, NoteTicked nt);
 
-        public Player() { }
+        public Player() 
+        {
+            this.Difficulty = Difficulty.Undefined;
+            this.Instrument = Instrument.Undefined;
+            this.Ready = false;
+        }
 
         public void InformNewGame()
         {
@@ -40,14 +45,17 @@ namespace PopNTouch2.Model
 
         public void IMReady()
         {
-            this.SheetMusic = GameMaster.Instance.SheetBuilder.BuildSheet(GameMaster.Instance.Game.Song, Instrument, Difficulty);
+            // FIXME : Uncomment these lines once everything is correctly instanciated
+            // this.SheetMusic = GameMaster.Instance.SheetBuilder.BuildSheet(GameMaster.Instance.Game.Song, Instrument, Difficulty);
             this.Ready = true;
-            GameMaster.Instance.Ready();
+            // GameMaster.Instance.Ready();
         }
 
         public void NotReadyAnymore()
         {
             this.Ready = false;
+            this.Difficulty = Difficulty.Undefined;
+            this.Instrument = Instrument.Undefined;
         }
 
         /*

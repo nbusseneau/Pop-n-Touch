@@ -92,12 +92,17 @@ namespace PopNTouch2.Model
         }
 
         // Attribute ok ? See later
-        public void NewPlayer()
+        public void NewPlayer(Player player)
         {
-            Player player = new Player();
             this.Players.Add(player);
             if (this.UpToDateGame)
                 player.InformNewGame();
+        }
+
+        public void NewPlayer()
+        {
+            Player player = new Player();
+            this.NewPlayer(player);
         }
 
         // Called by a player > at least one player existing and ready

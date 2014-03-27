@@ -7,6 +7,7 @@ namespace PopNTouch2.Model
 {
     public enum Instrument
     {
+        Undefined,
         Guitar,
         Violin,
         Piano,
