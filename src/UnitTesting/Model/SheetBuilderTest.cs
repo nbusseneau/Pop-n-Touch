@@ -43,5 +43,22 @@ namespace UnitTesting.Model
             Assert.AreEqual(0, sm.Notes.Count);
             Assert.AreEqual(0, sm.Bonuses.Count);
         }
+
+       /* [TestMethod]
+        public void BpmChanged()
+        {
+            // Arrange
+            SheetBuilder sb = new SheetBuilder(path);
+            List<Tuple<Instrument, Difficulty>> sheets = new List<Tuple<Instrument, Difficulty>>();
+            sheets.Add(Tuple.Create(Instrument.Violin, Difficulty.Beginner));
+            Song s = new Song("au clair de la lune", null, null, sheets, 90);
+
+            // Act
+            SheetMusic sm = sb.BuildSheet(s, Instrument.Violin, Difficulty.Expert);
+
+            // Assert
+            // Don't know what to test
+            // ??
+        }*/
     }
 }

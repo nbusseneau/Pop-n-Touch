@@ -32,6 +32,7 @@ Here is what to do to fix it right away:
    For example, "Whole None Fa" is a valid note referring to a whole Fa without any accidental.
    The file "Guitar-Beginner.sheet" for "Au Clair de la Lune" is a simple and complete example of what you must do.
    Be careful: rests are treated as notes and should be mentioned!
+Bpm change todo
 
    Valid values:
      - Length: Whole, Half, Quarter, Eighth;

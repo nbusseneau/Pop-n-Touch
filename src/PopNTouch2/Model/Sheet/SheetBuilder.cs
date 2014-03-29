@@ -30,7 +30,7 @@ namespace PopNTouch2.Model
 
             if (!File.Exists(filePath))
             {
-                Console.WriteLine("No file found for that song, instrument and difficulty. " + filePath);
+                Console.WriteLine("No file found for that song, instrument and difficulty : " + filePath);
                 return sheetMusic;
             }
 
@@ -41,11 +41,21 @@ namespace PopNTouch2.Model
             foreach(string line in lines)
             {
                 string[] infos = line.Split(' ');
-                Length length = (Length)Enum.Parse(typeof(Length), infos[0], true);
-                Accidental accidental = (Accidental)Enum.Parse(typeof(Accidental), infos[1], true);
-                Height height = (Height)Enum.Parse(typeof(Height), infos[2], true);
-                time = millitick * LengthValue(length);
-                sheetMusic.Notes.Add(new Tuple<double, Note>(time, NoteFactory.Instance.GetNote(length, accidental, height)));
+                // Bpm change
+                if (infos[0].ToLowerInvariant() == "bpm")
+                {
+                    double newBpm = Convert.ToDouble(infos[1]);
+                    millitick = 60.0 / newBpm * 1000;
+                }
+                // Classic note
+                else
+                {
+                    Length length = (Length)Enum.Parse(typeof(Length), infos[0], true);
+                    Accidental accidental = (Accidental)Enum.Parse(typeof(Accidental), infos[1], true);
+                    Height height = (Height)Enum.Parse(typeof(Height), infos[2], true);
+                    time = millitick * LengthValue(length);
+                    sheetMusic.Notes.Add(new Tuple<double, Note>(time, NoteFactory.Instance.GetNote(length, accidental, height)));
+                }
             }
             return sheetMusic;
         }
@@ -67,5 +77,34 @@ namespace PopNTouch2.Model
                     return 0.0;
             }
         }
+
+        // Test de temps d'apparition des notes
+       /* public static void Main()
+        {
+            GameMaster gm = GameMaster.Instance;
+            foreach (Song song in gm.Songs)
+            {
+                Console.WriteLine(song.Title);
+            }
+            Player player = new Player();
+            gm.NewPlayer(player);
+            List<Tuple<Instrument, Difficulty>> sheets = new List<Tuple<Instrument,Difficulty>>();
+            sheets.Add(Tuple.Create(Instrument.Piano, Difficulty.Classic));
+            Song newBorn = new Song("New Born", "Muse", "2001", sheets, 147);
+            gm.SelectSong(newBorn);
+            player.Instrument = Instrument.Piano;
+            player.Difficulty = Difficulty.Classic;
+            player.SheetMusic = GameMaster.Instance.SheetBuilder.BuildSheet(GameMaster.Instance.Game.Song, player.Instrument, player.Difficulty);
+            player.IMReady();
+            gm.Ready();
+            player.Tick += delegate(Player sender, Player.NoteTicked nt)
+            {
+                if (nt.Note.Height == Height.Sol || nt.Note.Height == Height.Fa)
+                    Console.WriteLine(nt.Note.Height + " " + nt.Note.Accidental);
+            };
+            player.ReadSheet();
+
+            while (true) { }
+        }*/
     }
 }
