@@ -12,11 +12,13 @@ namespace PopNTouch2.ViewModel
     {
         public Player Player { get; set; }
 
-        /// <summary>
-        /// Handles all of this Player's choices before starting the game : difficulty, instrument, ready
-        /// </summary>
+        // Handles all of this Player's choices before starting the game : difficulty, instrument, ready
         #region Difficulty / Intrument choices
 
+        /// <summary>
+        /// Boolean property, are the choices enabled for the player to choose?
+        /// Handles pretty much all of this region's visibility
+        /// </summary>
         private bool choicesEnabled = false;
         public bool ChoicesEnabled
         {
@@ -28,7 +30,14 @@ namespace PopNTouch2.ViewModel
             }
         }
 
+        /// <summary>
+        /// Has the player picked a Difficulty?
+        /// </summary>
         private bool diffPicked = false;
+
+        /// <summary>
+        /// Command, launched when player picks a difficulty
+        /// </summary>
         private ICommand pickDifficulty;
         public ICommand PickDifficulty
         {
@@ -62,7 +71,14 @@ namespace PopNTouch2.ViewModel
             }
         }
 
+        /// <summary>
+        /// Has the player picked a Difficulty?
+        /// </summary>
         private bool instruPicked = false;
+
+        /// <summary>
+        /// Command, launched when player picks an instrument
+        /// </summary>
         private ICommand pickInstrument;
         public ICommand PickInstrument
         {
@@ -88,7 +104,9 @@ namespace PopNTouch2.ViewModel
             }
         }
 
-
+        /// <summary>
+        /// Property, Has the player made all his choices?
+        /// </summary>
         private bool choicesMade = false;
         public bool ChoicesMade
         {
@@ -100,6 +118,9 @@ namespace PopNTouch2.ViewModel
             }
         }
 
+        /// <summary>
+        /// Checks whether or not the player has made all his choices
+        /// </summary>
         private void checkChoicesState()
         {
             if (this.diffPicked && this.instruPicked)
@@ -108,6 +129,9 @@ namespace PopNTouch2.ViewModel
                 this.ChoicesMade = false;
         }
 
+        /// <summary>
+        /// Property, two-way bound to the Ready check button
+        /// </summary>
         private bool readyChecked = false;
         public bool ReadyChecked
         {
@@ -116,9 +140,28 @@ namespace PopNTouch2.ViewModel
             {
                 this.readyChecked = value;
                 RaisePropertyChanged("ReadyChecked");
+                this.ReadyNotChecked = !value;
             }
         }
 
+        /// <summary>
+        /// ReadyChecked inverted property
+        /// Consider using a Converter if this pops too often
+        /// </summary>
+        private bool readyNotChecked = true;
+        public bool ReadyNotChecked
+        {
+            get { return this.readyNotChecked; }
+            set
+            {
+                this.readyNotChecked = value;
+                RaisePropertyChanged("ReadyNotChecked");
+            }
+        }
+
+        /// <summary>
+        /// Command, launched when the player clicks the Ready button (in either state)
+        /// </summary>
         private ICommand clickReady;
         public ICommand ClickReady
         {
@@ -132,8 +175,6 @@ namespace PopNTouch2.ViewModel
                         else
                         {
                             this.Player.NotReadyAnymore();
-                            this.diffPicked = false;
-                            this.instruPicked = false;
                             this.checkChoicesState();
                         }
                         RaisePropertyChanged("Player");

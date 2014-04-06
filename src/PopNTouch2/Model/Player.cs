@@ -54,8 +54,6 @@ namespace PopNTouch2.Model
         public void NotReadyAnymore()
         {
             this.Ready = false;
-            this.Difficulty = Difficulty.Undefined;
-            this.Instrument = Instrument.Undefined;
         }
 
         /*

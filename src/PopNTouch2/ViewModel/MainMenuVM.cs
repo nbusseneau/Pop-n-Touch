@@ -11,6 +11,9 @@ namespace PopNTouch2.ViewModel
 {
     public class MainMenuVM : ViewModelBase
     {
+        /// <summary>
+        /// Is the MainMenu ready to get to next stage?
+        /// </summary>
         private bool isReady = false;
         public bool IsReady
         {
@@ -22,6 +25,10 @@ namespace PopNTouch2.ViewModel
             }
         }
 
+        /// <summary>
+        /// Global MainMenu visibility
+        /// Should maybe be changed to boolean
+        /// </summary>
         private Visibility visibility = Visibility.Collapsed;
         public Visibility Visibility
         {
@@ -30,9 +37,7 @@ namespace PopNTouch2.ViewModel
                   RaisePropertyChanged("Visibility"); }
         }
 
-        /// <summary>
-        /// Song Selection
-        /// </summary>
+        // Song Selection
         #region Song Selection
 
         // FIXME : Temporary, will be a Song in the future

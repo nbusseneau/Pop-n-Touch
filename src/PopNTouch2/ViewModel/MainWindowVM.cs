@@ -13,17 +13,22 @@ namespace PopNTouch2.ViewModel
 {
     public class MainWindowVM : ViewModelBase
     {
-        /// <summary>
-        /// StartButton Behaviour, Properties and On Click Bindings
-        /// </summary>
+        // StartButton Behaviour, Properties and On Click Bindings
         #region StartButton
 
+        /// <summary>
+        /// Is the animated Start button visible?
+        /// May be changed to a boolean
+        /// </summary>
         private Visibility startButtonVisibility = Visibility.Visible;
         public Visibility StartButtonVisibility
         {
             get { return this.startButtonVisibility; }
         }
 
+        /// <summary>
+        /// Command launched when start button is pressed
+        /// </summary>
         ICommand startGame;
         public ICommand StartGame
         {
@@ -44,11 +49,12 @@ namespace PopNTouch2.ViewModel
 
         #endregion
 
-        /// <summary>
-        /// MainMenu 
-        /// </summary>
+        // MainMenu 
         #region MainMenu
 
+        /// <summary>
+        /// MainMenu ViewModel reference
+        /// </summary>
         private MainMenuVM mainMenu = new MainMenuVM();
         public MainMenuVM MainMenu
         {
@@ -57,11 +63,13 @@ namespace PopNTouch2.ViewModel
 
         #endregion
 
-        /// <summary>
-        /// PlaySong buttons 
-        /// </summary>
+        // PlaySong buttons 
         #region PlaySong
 
+        /// <summary>
+        /// Command launched when the "+" button is pressed
+        /// Adds a player to the game
+        /// </summary>
         ICommand addPlayer;
         public ICommand AddPlayer
         {
@@ -82,6 +90,10 @@ namespace PopNTouch2.ViewModel
             }
         }
 
+        /// <summary>
+        /// Command launched when the "x" button is pressed
+        /// Removes all players from the game
+        /// </summary>
         ICommand eraseAll;
         public ICommand EraseAll
         {
@@ -99,6 +111,9 @@ namespace PopNTouch2.ViewModel
             }
         }
 
+        /// <summary>
+        /// Command launched when the Play button is pressed
+        /// </summary>
         ICommand playSong;
         public ICommand PlaySong
         {
@@ -117,13 +132,14 @@ namespace PopNTouch2.ViewModel
 
         #endregion
 
-        /// <summary>
-        /// Players behaviour, listing and observation
-        /// </summary>
+        // Players behaviour, listing and observation
         #region PlayerTabs
 
+        /// <summary>
+        /// Observable list of Player ViewModels
+        /// Watched in XAML
+        /// </summary>
         private ObservableCollection<PlayerVM> players = new ObservableCollection<PlayerVM>();
-
         public IEnumerable<PlayerVM> Players
         {
             get { return this.players; }
