@@ -62,6 +62,16 @@
                 <Grid.Resources>
                     <Style x:Key="ButtonStyle" TargetType="{x:Type s:SurfaceButton}">
                         <Setter Property="Background" Value="Transparent"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding ReadyChecked}" Value="True">
+                                <Setter Property="Opacity" Value="0.5"/>
+                                <Setter Property="IsHitTestVisible" Value="False"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding ReadyChecked}" Value="False">
+                                <Setter Property="Opacity" Value="1"/>
+                                <Setter Property="IsHitTestVisible" Value="True"/>
+                            </DataTrigger>
+                        </Style.Triggers>
                     </Style>
                     <Style x:Key="SelectedEasyButtonStyle" TargetType="{x:Type s:SurfaceButton}" BasedOn="{StaticResource ButtonStyle}">
                         <Style.Triggers>
@@ -87,21 +97,21 @@
                 </Grid.Resources>
                 
                 <TextBlock Text="Difficulty" Foreground="Black" FontWeight="Bold" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="66,10,69,0"/>
-                <s:SurfaceButton Style="{StaticResource SelectedEasyButtonStyle}" Command="{Binding PickDifficulty}" CommandParameter="Beginner" IsHitTestVisible="{Binding ReadyNotChecked}" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Margin="10,86,0,0" Width="51">
+                <s:SurfaceButton Style="{StaticResource SelectedEasyButtonStyle}" Command="{Binding PickDifficulty}" CommandParameter="Beginner" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Margin="10,86,0,0" Width="51">
                     <Image Source="../Resources/UI/BTNP_Easy.png" IsHitTestVisible="False"/>
                 </s:SurfaceButton>
-                <s:SurfaceButton Style="{StaticResource SelectedMediumButtonStyle}" Command="{Binding PickDifficulty}" CommandParameter="Classic" IsHitTestVisible="{Binding ReadyNotChecked}" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Margin="106,86,0,0" Width="51">
+                <s:SurfaceButton Style="{StaticResource SelectedMediumButtonStyle}" Command="{Binding PickDifficulty}" CommandParameter="Classic" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Margin="106,86,0,0" Width="51">
                     <Image Source="../Resources/UI/BTNP_Medium.png" IsHitTestVisible="False"/>
                 </s:SurfaceButton>
-                <s:SurfaceButton Style="{StaticResource SelectedHardButtonStyle}" Command="{Binding PickDifficulty}" CommandParameter="Expert" IsHitTestVisible="{Binding ReadyNotChecked}" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Margin="206,86,0,0" Width="51">
+                <s:SurfaceButton Style="{StaticResource SelectedHardButtonStyle}" Command="{Binding PickDifficulty}" CommandParameter="Expert" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Margin="206,86,0,0" Width="51">
                     <Image Source="../Resources/UI/BTNP_Hard.png" IsHitTestVisible="False"/>
                 </s:SurfaceButton>
             </Grid>
             <Grid Background="Transparent">
                 <TextBlock Text="Instrument" Foreground="Black" FontWeight="Bold" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="76,10,59,0"/>
-                <s:SurfaceButton Background="Red" Command="{Binding PickInstrument}" CommandParameter="instr1" IsHitTestVisible="{Binding ReadyNotChecked}" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Margin="133,86,0,0" Width="51"/>
-                <s:SurfaceButton Background="Red" Command="{Binding PickInstrument}" CommandParameter="instr2" IsHitTestVisible="{Binding ReadyNotChecked}" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Margin="32,86,0,0" Width="51"/>
-                <s:SurfaceButton Background="Red" Command="{Binding PickInstrument}" CommandParameter="instr3" IsHitTestVisible="{Binding ReadyNotChecked}" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Margin="240,86,0,0" Width="51"/>
+                <s:SurfaceButton Background="Red" Command="{Binding PickInstrument}" CommandParameter="instr1" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Margin="133,86,0,0" Width="51"/>
+                <s:SurfaceButton Background="Red" Command="{Binding PickInstrument}" CommandParameter="instr2" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Margin="32,86,0,0" Width="51"/>
+                <s:SurfaceButton Background="Red" Command="{Binding PickInstrument}" CommandParameter="instr3" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Margin="240,86,0,0" Width="51"/>
             </Grid>
         </StackPanel>
 

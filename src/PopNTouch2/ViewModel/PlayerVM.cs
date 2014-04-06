@@ -140,22 +140,6 @@ namespace PopNTouch2.ViewModel
             {
                 this.readyChecked = value;
                 RaisePropertyChanged("ReadyChecked");
-                this.ReadyNotChecked = !value;
-            }
-        }
-
-        /// <summary>
-        /// ReadyChecked inverted property
-        /// Consider using a Converter if this pops too often
-        /// </summary>
-        private bool readyNotChecked = true;
-        public bool ReadyNotChecked
-        {
-            get { return this.readyNotChecked; }
-            set
-            {
-                this.readyNotChecked = value;
-                RaisePropertyChanged("ReadyNotChecked");
             }
         }
 
