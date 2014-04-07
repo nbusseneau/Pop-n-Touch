@@ -12,14 +12,16 @@ namespace PopNTouch2.Model
         public String Year { get; private set; }
         public List<Tuple<Instrument, Difficulty>> Sheets { get; private set; }
         public int Bpm { get; set; }
+        public int Index { get; private set; }
 
-        public Song(string title, string author, string year, List<Tuple<Instrument, Difficulty>> sheets, int bpm)
+        public Song(string title, string author, string year, List<Tuple<Instrument, Difficulty>> sheets, int bpm, int index = 0)
         {
             this.Title = title;
             this.Author = author;
             this.Year = year;
             this.Sheets = sheets;
             this.Bpm = bpm;
+            this.Index = index;
         }
     }
 }

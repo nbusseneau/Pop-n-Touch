@@ -8,7 +8,29 @@
              mc:Ignorable="d" 
              d:DesignHeight="1080" d:DesignWidth="1920">
     
-    <Grid>
+    <s:ScatterView ItemsSource="{Binding Songs}" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <s:ScatterView.Resources>
+            <DataTemplate DataType="{x:Type ViewModel:SongVM}">
+                <s:ScatterViewItem Background="Green">
+                    <!-- NEEDS FIXING : CommandParameter seems to be always null -->
+                    <!-- <s:SurfaceButton Content="{Binding Song.Title}" Command="{Binding MenuVM.SelectSong}" CommandParameter="{Binding Song.Index}" Background="LightBlue" Width="180" Height="40" VerticalAlignment="Center" HorizontalAlignment="Center"/> -->
+                    <s:SurfaceButton Content="{Binding Song.Title}" Command="{Binding MenuVM.SelectSong}" Background="LightBlue" Width="180" Height="40" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                </s:ScatterViewItem>
+            </DataTemplate>
+        </s:ScatterView.Resources>
+        <s:ScatterView.ItemContainerStyle>
+            <Style TargetType="{x:Type s:ScatterViewItem}">
+                <Setter Property="Height" Value="50"/>
+                <Setter Property="Width" Value="200"/>
+                <Setter Property="BorderThickness" Value="0"/>
+                <Setter Property="CanScale" Value="False"/>
+                <Setter Property="CanMove" Value="True" />
+                <Setter Property="CanRotate" Value="True" />
+            </Style>
+        </s:ScatterView.ItemContainerStyle>
+    </s:ScatterView>
+
+        <!--
         <s:SurfaceButton Name="btnSong1" Height="50" Width="250" HorizontalAlignment="Center" Margin="0,0,-570,-370" VerticalAlignment="Center" Content="Les 4 saisons" Padding="12" RenderTransformOrigin="0.5,0.5" Background="#99237695" BorderBrush="White" Command="{Binding SelectSong}" CommandParameter="1">
             <s:SurfaceButton.RenderTransform>
                 <TransformGroup>
@@ -50,5 +72,5 @@
                 </TransformGroup>
             </s:SurfaceButton.RenderTransform>
         </s:SurfaceButton>
-    </Grid>
+        -->
 </UserControl>

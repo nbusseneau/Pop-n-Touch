@@ -37,6 +37,7 @@ namespace PopNTouch2.Model
         {
             List<Song> songs = new List<Song>();
             string[] dirs = Directory.GetDirectories(this.SongsDirectory);
+            int index = 0;
             foreach (string songDirectory in dirs)
             {
                 string title = null, author = null, year = null;
@@ -69,8 +70,8 @@ namespace PopNTouch2.Model
                         Difficulty difficulty = (Difficulty)Enum.Parse(typeof(Difficulty), diff, true);
                         sheets.Add(Tuple.Create(instrument, difficulty));
                     }
-
-                    songs.Add(new Song(title, author, year, sheets, bpm));
+                    songs.Add(new Song(title, author, year, sheets, bpm, index));
+                    index++;
                 }
             }
 

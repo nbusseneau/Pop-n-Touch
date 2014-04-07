@@ -8,6 +8,7 @@
              xmlns:s="http://schemas.microsoft.com/surface/2008"
              mc:Ignorable="d" 
              Background="{x:Null}"
+             CanScale="False"
              d:DesignHeight="400" d:DesignWidth="650">
 
     <s:ScatterViewItem.Resources>

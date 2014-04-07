@@ -28,6 +28,7 @@ namespace PopNTouch2.ViewModel
 
         /// <summary>
         /// Command launched when start button is pressed
+        /// Must handle basic instanciations
         /// </summary>
         ICommand startGame;
         public ICommand StartGame
@@ -39,6 +40,10 @@ namespace PopNTouch2.ViewModel
                     {
                         this.startButtonVisibility = Visibility.Collapsed;
                         RaisePropertyChanged("StartButtonVisibility");
+
+                        foreach(Song s in GameMaster.Instance.Songs)
+                            this.MainMenu.songs.Add(new SongVM(s, this.MainMenu));
+                        RaisePropertyChanged("Songs");
 
                         // FIXME Temporary
                         this.mainMenu.Visibility = Visibility.Visible;
