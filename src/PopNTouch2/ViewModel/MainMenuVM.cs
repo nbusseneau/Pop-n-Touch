@@ -12,6 +12,13 @@ namespace PopNTouch2.ViewModel
 {
     public class MainMenuVM : ViewModelBase
     {
+        private MainWindowVM MainWindow { get; set; }
+
+        public MainMenuVM(MainWindowVM mainWindow)
+        {
+            this.MainWindow = mainWindow;
+        }
+
         /// <summary>
         /// Is the MainMenu ready to get to next stage?
         /// </summary>
@@ -107,6 +114,8 @@ namespace PopNTouch2.ViewModel
                         // FIXME : Temporary
                         this.Visibility = Visibility.Collapsed;
                         this.IsReady = true;
+                        GameMaster.Instance.SelectSong(this.SelectedSong);
+                        this.MainWindow.UpdatePlayers();
                     }
                     );
 

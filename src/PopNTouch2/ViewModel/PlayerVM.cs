@@ -5,12 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using PopNTouch2.Model;
+using System.Collections.ObjectModel;
 
 namespace PopNTouch2.ViewModel
 {
     public class PlayerVM : ViewModelBase
     {
         public Player Player { get; set; }
+
+        private Song loadedSong;
 
         // Handles all of this Player's choices before starting the game : difficulty, instrument, ready
         #region Difficulty / Intrument choices
@@ -71,6 +74,34 @@ namespace PopNTouch2.ViewModel
             }
         }
 
+                /// <summary>
+        /// Observable list of Songs
+        /// Watched in XAML
+        /// </summary>
+        private ObservableCollection<Instrument> instruments;
+        public IEnumerable<Instrument> Instruments
+        {
+            get { return this.instruments; }
+            set
+            {
+                this.instruments = new ObservableCollection<Instrument>(value);
+                RaisePropertyChanged("Instruments");
+            }
+        }
+
+        /// <summary>
+        /// Check if the selected song is different, and update accordingly
+        /// </summary>
+        public void UpdateSong()
+        {
+            Song currentSong = this.Player.CurrentGame.Song;
+            if (this.loadedSong != currentSong)
+            {
+                this.Instruments = currentSong.GetInstruments();
+                this.loadedSong = currentSong;
+            }
+        }
+
         /// <summary>
         /// Has the player picked a Difficulty?
         /// </summary>
@@ -94,7 +125,7 @@ namespace PopNTouch2.ViewModel
                             default:
                                 throw new ArgumentException();
                         } */
-                        RaisePropertyChanged("Player.Instrument");
+                        RaisePropertyChanged("Player");
                         this.instruPicked = true;
                         this.checkChoicesState();
                     }

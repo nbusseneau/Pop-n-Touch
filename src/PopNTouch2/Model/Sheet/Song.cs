@@ -23,5 +23,19 @@ namespace PopNTouch2.Model
             this.Bpm = bpm;
             this.Index = index;
         }
+
+        /// <summary>
+        /// Get list of available instruments for this song
+        /// </summary>
+        /// <returns>List of Instruments</returns>
+        public List<Instrument> GetInstruments()
+        {
+            List<Instrument> instruments = new List<Instrument>();
+            foreach (Tuple<Instrument, Difficulty> pair in this.Sheets)
+            {
+                instruments.Add(pair.Item1);
+            }
+            return instruments;
+        }
     }
 }

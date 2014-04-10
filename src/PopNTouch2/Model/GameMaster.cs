@@ -8,10 +8,6 @@ namespace PopNTouch2.Model
 {
     public sealed class GameMaster
     {
-        /*private List<Player> players;
-        private Game game;
-        private Boolean upToDateGame;
-        private SheetBuilder sheetBuilder;*/
         private static readonly GameMaster instance = new GameMaster();
         private string SongsDirectory = @"Resources\Songs\";
 

@@ -7,9 +7,6 @@ namespace PopNTouch2.Model
 {
     public class Game
     {
-        /*private Song song;
-        private Boolean isPlaying;*/
-
         public Song Song { get; set; }
         public Boolean IsPlaying { get; set; }
 
