@@ -5,7 +5,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{3046FB26-B719-4ED9-84F0-3AF59FA426DD}</ProjectGuid>
-    <OutputType>WinExe</OutputType>
+    <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>PopNTouch2</RootNamespace>
     <AssemblyName>PopNTouch2</AssemblyName>
@@ -52,8 +52,7 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>
-    </StartupObject>
+    <StartupObject>PopNTouch2.Model.SheetBuilder</StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />

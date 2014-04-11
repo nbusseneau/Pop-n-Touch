@@ -21,8 +21,6 @@ namespace PopNTouch2.Model
         public SheetMusic BuildSheet(Song song, Instrument instr, Difficulty diff)
         {
             SheetMusic sheetMusic = new SheetMusic();
-            int bpm = song.Bpm;
-            double millitick = 60.0 / bpm * 1000;
             
             // Find the file
             string fileName = instr.ToString() + "-" + diff.ToString() + this.extension;
@@ -36,7 +34,18 @@ namespace PopNTouch2.Model
 
             // Read the file and build sheet
             string[] lines = File.ReadAllLines(filePath);
-            sheetMusic.TimeRest = millitick * this.LengthValue(Length.Whole);
+            double bpm = 0;
+            if (lines[0].Split(' ')[0] == "bpm")
+            {
+                bpm = Convert.ToDouble(lines[0].Split(' ')[1]);
+            }
+            else
+            {
+                Console.WriteLine("No bpm.");
+                return sheetMusic;
+            }
+            double millitick = 60.0 / bpm * 1000;
+            sheetMusic.FirstRest = millitick * this.LengthValue(Length.Whole);
             double time = 0;
             foreach(string line in lines)
             {
@@ -79,7 +88,7 @@ namespace PopNTouch2.Model
         }
 
         // Test de temps d'apparition des notes
-       /* public static void Main()
+        public static void Main()
         {
             GameMaster gm = GameMaster.Instance;
             foreach (Song song in gm.Songs)
@@ -90,7 +99,7 @@ namespace PopNTouch2.Model
             gm.NewPlayer(player);
             List<Tuple<Instrument, Difficulty>> sheets = new List<Tuple<Instrument,Difficulty>>();
             sheets.Add(Tuple.Create(Instrument.Piano, Difficulty.Classic));
-            Song newBorn = new Song("New Born", "Muse", "2001", sheets, 147);
+            Song newBorn = new Song("New Born", "Muse", "2001", sheets);
             gm.SelectSong(newBorn);
             player.Instrument = Instrument.Piano;
             player.Difficulty = Difficulty.Classic;
@@ -105,6 +114,6 @@ namespace PopNTouch2.Model
             player.ReadSheet();
 
             while (true) { }
-        }*/
+        }
     }
 }

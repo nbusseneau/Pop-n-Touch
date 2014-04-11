@@ -78,7 +78,7 @@ namespace PopNTouch2.Model
         public void ReadSheet()
         {
             this.enumerator = this.SheetMusic.Notes.GetEnumerator();
-            this.Timer = new Timer(this.SheetMusic.TimeRest);
+            this.Timer = new Timer(this.SheetMusic.FirstRest);
             this.Timer.AutoReset = false;
             this.Timer.Elapsed += new ElapsedEventHandler(OnTimerTicked);
             this.Timer.Start();

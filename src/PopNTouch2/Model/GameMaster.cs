@@ -70,7 +70,7 @@ namespace PopNTouch2.Model
                         sheets.Add(Tuple.Create(instrument, difficulty));
                     }
 
-                    songs.Add(new Song(title, author, year, sheets, bpm));
+                    songs.Add(new Song(title, author, year, sheets));
                 }
             }
 

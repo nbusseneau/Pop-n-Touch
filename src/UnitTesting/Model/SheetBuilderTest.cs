@@ -18,7 +18,7 @@ namespace UnitTesting.Model
             SheetBuilder sb = new SheetBuilder(path);
             List<Tuple<Instrument, Difficulty>> sheets = new List<Tuple<Instrument, Difficulty>>();
             sheets.Add(Tuple.Create(Instrument.Guitar, Difficulty.Beginner));
-            Song s = new Song("au clair de la lune", null, null, sheets, 90);
+            Song s = new Song("au clair de la lune", null, null, sheets);
 
             // Act
             SheetMusic sm = sb.BuildSheet(s, Instrument.Guitar, Difficulty.Beginner);
@@ -34,7 +34,7 @@ namespace UnitTesting.Model
             SheetBuilder sb = new SheetBuilder(path);
             List<Tuple<Instrument, Difficulty>> sheets = new List<Tuple<Instrument, Difficulty>>();
             sheets.Add(Tuple.Create(Instrument.Violin, Difficulty.Beginner));
-            Song s = new Song("au clair de la lune", null, null, sheets, 90);
+            Song s = new Song("au clair de la lune", null, null, sheets);
 
             // Act
             SheetMusic sm = sb.BuildSheet(s, Instrument.Violin, Difficulty.Expert);
