@@ -74,17 +74,17 @@ namespace PopNTouch2.ViewModel
             }
         }
 
-                /// <summary>
-        /// Observable list of Songs
+        /// <summary>
+        /// Observable list of Instruments
         /// Watched in XAML
         /// </summary>
-        private ObservableCollection<Instrument> instruments;
-        public IEnumerable<Instrument> Instruments
+        private ObservableCollection<InstrumentVM> instruments;
+        public IEnumerable<InstrumentVM> Instruments
         {
             get { return this.instruments; }
             set
             {
-                this.instruments = new ObservableCollection<Instrument>(value);
+                this.instruments = (ObservableCollection<InstrumentVM>)value;
                 RaisePropertyChanged("Instruments");
             }
         }
@@ -97,7 +97,13 @@ namespace PopNTouch2.ViewModel
             Song currentSong = this.Player.CurrentGame.Song;
             if (this.loadedSong != currentSong)
             {
-                this.Instruments = currentSong.GetInstruments();
+                ObservableCollection<InstrumentVM> newList = new ObservableCollection<InstrumentVM>();
+                // TODO : Store existing InstrumentVM instead of creating another each time
+                foreach (Instrument instrument in currentSong.GetInstruments())
+                {
+                    newList.Add(new InstrumentVM(instrument));
+                }
+                this.Instruments = newList;
                 this.loadedSong = currentSong;
             }
         }
@@ -185,8 +191,9 @@ namespace PopNTouch2.ViewModel
                 if (this.clickReady == null)
                     this.clickReady = new RelayCommand( () =>
                     {
-                        if (this.readyChecked)
+                        if (this.readyChecked) {
                             this.Player.IMReady();
+                        }
                         else
                         {
                             this.Player.NotReadyAnymore();

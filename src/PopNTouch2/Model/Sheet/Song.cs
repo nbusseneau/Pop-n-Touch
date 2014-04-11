@@ -33,7 +33,11 @@ namespace PopNTouch2.Model
             List<Instrument> instruments = new List<Instrument>();
             foreach (Tuple<Instrument, Difficulty> pair in this.Sheets)
             {
-                instruments.Add(pair.Item1);
+                Instrument instrument = pair.Item1;
+                if (!instruments.Contains(instrument))
+                {
+                    instruments.Add(pair.Item1);
+                }
             }
             return instruments;
         }

@@ -101,6 +101,7 @@
     <Compile Include="Model\Sheet\SheetMusic.cs" />
     <Compile Include="Model\Sheet\Song.cs" />
     <Compile Include="ViewModel\BonusVM.cs" />
+    <Compile Include="ViewModel\InstrumentVM.cs" />
     <Compile Include="ViewModel\MainMenuVM.cs" />
     <Compile Include="ViewModel\MainWindowVM.cs" />
     <Compile Include="ViewModel\NoteButtonVM.cs" />
