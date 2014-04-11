@@ -8,10 +8,6 @@ namespace PopNTouch2.Model
 {
     public sealed class GameMaster
     {
-        /*private List<Player> players;
-        private Game game;
-        private Boolean upToDateGame;
-        private SheetBuilder sheetBuilder;*/
         private static readonly GameMaster instance = new GameMaster();
         private string SongsDirectory = @"Resources\Songs\";
 
@@ -37,6 +33,7 @@ namespace PopNTouch2.Model
         {
             List<Song> songs = new List<Song>();
             string[] dirs = Directory.GetDirectories(this.SongsDirectory);
+            int index = 0;
             foreach (string songDirectory in dirs)
             {
                 string title = null, author = null, year = null;
@@ -70,7 +67,8 @@ namespace PopNTouch2.Model
                         sheets.Add(Tuple.Create(instrument, difficulty));
                     }
 
-                    songs.Add(new Song(title, author, year, sheets));
+                    songs.Add(new Song(title, author, year, sheets, index));
+                    index++;
                 }
             }
 

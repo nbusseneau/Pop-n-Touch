@@ -5,12 +5,15 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using PopNTouch2.Model;
+using System.Collections.ObjectModel;
 
 namespace PopNTouch2.ViewModel
 {
     public class PlayerVM : ViewModelBase
     {
         public Player Player { get; set; }
+
+        private Song loadedSong;
 
         // Handles all of this Player's choices before starting the game : difficulty, instrument, ready
         #region Difficulty / Intrument choices
@@ -72,6 +75,40 @@ namespace PopNTouch2.ViewModel
         }
 
         /// <summary>
+        /// Observable list of Instruments
+        /// Watched in XAML
+        /// </summary>
+        private ObservableCollection<InstrumentVM> instruments;
+        public IEnumerable<InstrumentVM> Instruments
+        {
+            get { return this.instruments; }
+            set
+            {
+                this.instruments = (ObservableCollection<InstrumentVM>)value;
+                RaisePropertyChanged("Instruments");
+            }
+        }
+
+        /// <summary>
+        /// Check if the selected song is different, and update accordingly
+        /// </summary>
+        public void UpdateSong()
+        {
+            Song currentSong = this.Player.CurrentGame.Song;
+            if (this.loadedSong != currentSong)
+            {
+                ObservableCollection<InstrumentVM> newList = new ObservableCollection<InstrumentVM>();
+                // TODO : Store existing InstrumentVM instead of creating another each time
+                foreach (Instrument instrument in currentSong.GetInstruments())
+                {
+                    newList.Add(new InstrumentVM(instrument));
+                }
+                this.Instruments = newList;
+                this.loadedSong = currentSong;
+            }
+        }
+
+        /// <summary>
         /// Has the player picked a Difficulty?
         /// </summary>
         private bool instruPicked = false;
@@ -94,7 +131,7 @@ namespace PopNTouch2.ViewModel
                             default:
                                 throw new ArgumentException();
                         } */
-                        RaisePropertyChanged("Player.Instrument");
+                        RaisePropertyChanged("Player");
                         this.instruPicked = true;
                         this.checkChoicesState();
                     }
@@ -154,8 +191,9 @@ namespace PopNTouch2.ViewModel
                 if (this.clickReady == null)
                     this.clickReady = new RelayCommand( () =>
                     {
-                        if (this.readyChecked)
+                        if (this.readyChecked) {
                             this.Player.IMReady();
+                        }
                         else
                         {
                             this.Player.NotReadyAnymore();

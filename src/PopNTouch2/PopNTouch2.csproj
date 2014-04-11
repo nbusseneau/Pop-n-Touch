@@ -100,6 +100,7 @@
     <Compile Include="Model\Sheet\SheetMusic.cs" />
     <Compile Include="Model\Sheet\Song.cs" />
     <Compile Include="ViewModel\BonusVM.cs" />
+    <Compile Include="ViewModel\InstrumentVM.cs" />
     <Compile Include="ViewModel\MainMenuVM.cs" />
     <Compile Include="ViewModel\MainWindowVM.cs" />
     <Compile Include="ViewModel\NoteButtonVM.cs" />
@@ -107,6 +108,7 @@
     <Compile Include="ViewModel\RelayCommand.cs" />
     <Compile Include="ViewModel\ScoreVM.cs" />
     <Compile Include="ViewModel\SheetMusicVM.cs" />
+    <Compile Include="ViewModel\SongVM.cs" />
     <Compile Include="ViewModel\ViewModelBase.cs" />
     <Compile Include="View\MainMenuView.xaml.cs">
       <DependentUpon>MainMenuView.xaml</DependentUpon>

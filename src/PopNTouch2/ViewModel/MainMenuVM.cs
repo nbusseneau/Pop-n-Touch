@@ -6,11 +6,19 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using PopNTouch2.Model;
 using System.Windows;
+using System.Collections.ObjectModel;
 
 namespace PopNTouch2.ViewModel
 {
     public class MainMenuVM : ViewModelBase
     {
+        private MainWindowVM MainWindow { get; set; }
+
+        public MainMenuVM(MainWindowVM mainWindow)
+        {
+            this.MainWindow = mainWindow;
+        }
+
         /// <summary>
         /// Is the MainMenu ready to get to next stage?
         /// </summary>
@@ -33,39 +41,81 @@ namespace PopNTouch2.ViewModel
         public Visibility Visibility
         {
             get { return this.visibility; }
-            set { this.visibility = value;
-                  RaisePropertyChanged("Visibility"); }
+            set
+            {
+                this.visibility = value;
+                RaisePropertyChanged("Visibility");
+            }
         }
 
         // Song Selection
         #region Song Selection
 
-        // FIXME : Temporary, will be a Song in the future
-        private string selectedSong;
-        public string SelectedSong
+        /// <summary>
+        /// Observable list of Songs
+        /// Watched in XAML
+        /// </summary>
+        public ObservableCollection<SongVM> songs = new ObservableCollection<SongVM>();
+        public IEnumerable<SongVM> Songs
+        {
+            get { return this.songs; }
+        }
+
+        /// <summary>
+        /// Currently selected song
+        /// </summary>
+        private Song selectedSong;
+        public Song SelectedSong
         {
             get
             {
                 return this.selectedSong;
             }
+            set
+            {
+                this.selectedSong = value;
+                RaisePropertyChanged("SelectedSong");
+            }
         }
 
+        /// <summary>
+        /// Command launched when a player clicks on any of the main menu song items
+        /// Takes a integer Song Index as a parameter
+        /// Sets the Selected Song
+        /// </summary>
         ICommand selectSong;
         public ICommand SelectSong
         {
+            /* 
             get
             {
                 if (this.selectSong == null)
-                    this.selectSong = new RelayCommand<string>(songId =>
+                    this.selectSong = new RelayCommand<int>(songId =>
                     {
-                        // TODO : Convert from string songId to Song
-                        this.selectedSong = songId;
-                        RaisePropertyChanged("SelectedSong");
+                        this.SelectedSong = GameMaster.Instance.Songs[songId];
                         // FIXME : Temporary
-                        this.visibility = Visibility.Collapsed;
-                        RaisePropertyChanged("Visibility");
-                        this.isReady = true;
-                        RaisePropertyChanged("IsReady");
+                        this.Visibility = Visibility.Collapsed;
+                        this.IsReady = true;
+                    }
+                    );
+
+                return this.selectSong;
+            }
+            */
+
+            // FIXME : temporary, to get past the CommandParameter Error
+            // Use the above commented version once fixed
+            get
+            {
+                if (this.selectSong == null)
+                    this.selectSong = new RelayCommand(() =>
+                    {
+                        this.SelectedSong = GameMaster.Instance.Songs[0];
+                        // FIXME : Temporary
+                        this.Visibility = Visibility.Collapsed;
+                        this.IsReady = true;
+                        GameMaster.Instance.SelectSong(this.SelectedSong);
+                        this.MainWindow.UpdatePlayers();
                     }
                     );
 

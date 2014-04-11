@@ -13,6 +13,11 @@ namespace PopNTouch2.ViewModel
 {
     public class MainWindowVM : ViewModelBase
     {
+        public MainWindowVM()
+        {
+            this.mainMenu = new MainMenuVM(this);
+        }
+
         // StartButton Behaviour, Properties and On Click Bindings
         #region StartButton
 
@@ -28,6 +33,7 @@ namespace PopNTouch2.ViewModel
 
         /// <summary>
         /// Command launched when start button is pressed
+        /// Must handle basic instanciations
         /// </summary>
         ICommand startGame;
         public ICommand StartGame
@@ -39,6 +45,10 @@ namespace PopNTouch2.ViewModel
                     {
                         this.startButtonVisibility = Visibility.Collapsed;
                         RaisePropertyChanged("StartButtonVisibility");
+
+                        foreach(Song s in GameMaster.Instance.Songs)
+                            this.MainMenu.songs.Add(new SongVM(s, this.MainMenu));
+                        RaisePropertyChanged("Songs");
 
                         // FIXME Temporary
                         this.mainMenu.Visibility = Visibility.Visible;
@@ -55,7 +65,7 @@ namespace PopNTouch2.ViewModel
         /// <summary>
         /// MainMenu ViewModel reference
         /// </summary>
-        private MainMenuVM mainMenu = new MainMenuVM();
+        private MainMenuVM mainMenu;
         public MainMenuVM MainMenu
         {
             get { return this.mainMenu; }
@@ -82,6 +92,7 @@ namespace PopNTouch2.ViewModel
                         PlayerVM playerVM = new PlayerVM();
                         playerVM.Player = player;
                         GameMaster.Instance.NewPlayer(player);
+                        playerVM.UpdateSong();
                         this.players.Add(playerVM);
                         RaisePropertyChanged("Players");
 
@@ -143,6 +154,17 @@ namespace PopNTouch2.ViewModel
         public IEnumerable<PlayerVM> Players
         {
             get { return this.players; }
+        }
+
+        /// <summary>
+        /// Updates every player's Song
+        /// </summary>
+        public void UpdatePlayers()
+        {
+            foreach (PlayerVM p in this.players)
+            {
+                p.UpdateSong();
+            }
         }
 
         #endregion
