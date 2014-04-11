@@ -8,13 +8,6 @@ namespace PopNTouch2.Model
 {
     public class Player
     {
-        /*private GameMaster gameMaster;
-        private SheetMusic sheetmusic;
-        private Game currentGame;
-        private Boolean ready;
-        private List<Instrument> availableInstruments;
-        private Instrument instrument;
-        private Difficulty difficulty; */
         private List<Tuple<double, Note>>.Enumerator enumerator;
 
         public SheetMusic SheetMusic { get; set; }
@@ -22,6 +15,7 @@ namespace PopNTouch2.Model
         public Boolean Ready { get; set; }
         public Instrument Instrument { get; set; }
         public Difficulty Difficulty { get; set; }
+        public int Score { get; set; }
         public Timer Timer { get; set; }
         public event TickHandler Tick;
         public class NoteTicked : EventArgs
@@ -35,6 +29,7 @@ namespace PopNTouch2.Model
             this.Difficulty = Difficulty.Undefined;
             this.Instrument = Instrument.Undefined;
             this.Ready = false;
+            this.Score = 0;
         }
 
         public void InformNewGame()
@@ -48,6 +43,7 @@ namespace PopNTouch2.Model
             // FIXME : Uncomment these lines once everything is correctly instanciated
             // this.SheetMusic = GameMaster.Instance.SheetBuilder.BuildSheet(GameMaster.Instance.Game.Song, Instrument, Difficulty);
             this.Ready = true;
+            this.Score = 0;
             // GameMaster.Instance.Ready();
         }
 
@@ -97,6 +93,44 @@ namespace PopNTouch2.Model
                 this.Timer.Interval = this.enumerator.Current.Item1;
                 this.Timer.Start();
             }
+        }
+
+        /// <summary>
+        /// Update Player score when a note is played
+        /// </summary>
+        /// <param name="difference">The difference, in seconds, between when the note 
+        /// should have been played and when it was actually played.</param>
+        public void NoteScored(double difference)
+        // The figures may have to be changed
+        {
+            // Multipliers
+            int aScore = 10;
+            int bScore = 5;
+            int cScore = 1;
+            int nope = 0;
+
+            // Delays
+            double aDelay = 0.25;
+            double bDelay = 0.5;
+            double cDelay = 1.0;
+
+            if (difference <= aDelay)
+            {
+                this.Score += aScore;
+            }
+            else if (difference <= bDelay)
+            {
+                this.Score += bScore;
+            }
+            else if (difference <= cDelay)
+            {
+                this.Score += cScore;
+            }
+            else
+            {
+                this.Score += nope;
+            }
+
         }
     }
 }

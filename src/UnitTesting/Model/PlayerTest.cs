@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using PopNTouch2.Model;
 using System.Collections.Generic;
+using System.Timers;
 using System.Threading;
 
 namespace UnitTesting.Model
@@ -107,6 +108,22 @@ namespace UnitTesting.Model
 
             // Assert
             Assert.AreNotEqual(0, eventFired);
+        }
+
+        [TestMethod]
+        public void NoteScored()
+        {
+            // Arrange
+            Player p = new Player();
+
+            // Act
+            for (double d = 0; d < 1.5; d += 0.1)
+            {
+                p.NoteScored(d);
+            }
+
+            // Assert
+            Assert.AreEqual(50, p.Score);
         }
     }
 }

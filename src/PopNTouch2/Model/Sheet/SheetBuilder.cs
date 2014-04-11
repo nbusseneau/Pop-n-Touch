@@ -45,7 +45,7 @@ namespace PopNTouch2.Model
                 return sheetMusic;
             }
             double millitick = 60.0 / bpm * 1000;
-            sheetMusic.FirstRest = millitick * this.LengthValue(Length.Whole);
+            sheetMusic.FirstRest = millitick * SheetBuilder.LengthValue(Length.Whole);
             double time = 0;
             foreach(string line in lines)
             {
@@ -69,7 +69,7 @@ namespace PopNTouch2.Model
             return sheetMusic;
         }
 
-        public double LengthValue(Length length)
+        public static double LengthValue(Length length)
         {
             switch (length)
             {
@@ -88,7 +88,7 @@ namespace PopNTouch2.Model
         }
 
         // Test de temps d'apparition des notes
-        public static void Main()
+        /*public static void Main()
         {
             GameMaster gm = GameMaster.Instance;
             foreach (Song song in gm.Songs)
@@ -114,6 +114,6 @@ namespace PopNTouch2.Model
             player.ReadSheet();
 
             while (true) { }
-        }
+        }*/
     }
 }
