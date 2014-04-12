@@ -276,6 +276,15 @@
   <ItemGroup>
     <Resource Include="Resources\UI\BTNP_Cancel.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\UI\Instruments\BTNP_Guitar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\UI\Instruments\BTNP_Piano.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\UI\Instruments\BTNP_Violin.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

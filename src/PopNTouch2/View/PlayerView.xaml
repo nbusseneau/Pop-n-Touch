@@ -125,10 +125,25 @@
                     <Style x:Key="InstrumentButtonStyle" TargetType="{x:Type s:SurfaceButton}" BasedOn="{StaticResource ButtonStyle}">
                         <Style.Triggers>
                             <DataTrigger Binding="{Binding Instrument}" Value="Guitar">
-                                <Setter Property="Content" Value="Guitar" />
+                                <Setter Property="Content">
+                                    <Setter.Value>
+                                        <Image Source="../Resources/UI/Instruments/BTNP_Guitar.png" IsHitTestVisible="False"/>
+                                    </Setter.Value>
+                                </Setter>
                             </DataTrigger>
                             <DataTrigger Binding="{Binding Instrument}" Value="Violin">
-                                <Setter Property="Content" Value="Violin" />
+                                <Setter Property="Content">
+                                    <Setter.Value>
+                                        <Image Source="../Resources/UI/Instruments/BTNP_Violin.png" IsHitTestVisible="False"/>
+                                    </Setter.Value>
+                                </Setter>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Instrument}" Value="Piano">
+                                <Setter Property="Content">
+                                    <Setter.Value>
+                                        <Image Source="../Resources/UI/Instruments/BTNP_Piano.png" IsHitTestVisible="False"/>
+                                    </Setter.Value>
+                                </Setter>
                             </DataTrigger>
                         </Style.Triggers>
                     </Style>

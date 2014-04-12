@@ -124,19 +124,13 @@ namespace PopNTouch2.ViewModel
                 if (this.pickInstrument == null)
                     this.pickInstrument = new RelayCommand<string>(arg =>
                     {
-                        /*
                         Instrument instrument = (Instrument)Enum.Parse(typeof(Instrument), arg);
-                        switch (instrument)
-                        {
-                            default:
-                                throw new ArgumentException();
-                        } */
+                        this.Player.Instrument = instrument;
                         RaisePropertyChanged("Player");
                         this.instruPicked = true;
                         this.checkChoicesState();
                     }
                     );
-
                 return this.pickInstrument;
             }
         }
