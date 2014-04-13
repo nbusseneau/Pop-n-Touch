@@ -43,12 +43,11 @@ namespace PopNTouch2.Model
                 // Check for metadata
                 if (File.Exists(metadata)) {
                     string[] lines = File.ReadAllLines(metadata);
-                    if (lines.Length == 4)
+                    if (lines.Length == 3)
                     {
                         title = lines[0];
                         author = lines[1];
                         year = lines[2];
-                        bpm = Convert.ToInt32(lines[3]);
                     }
                 }
 
