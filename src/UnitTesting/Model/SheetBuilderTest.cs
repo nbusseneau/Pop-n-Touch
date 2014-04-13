@@ -24,7 +24,8 @@ namespace UnitTesting.Model
             SheetMusic sm = sb.BuildSheet(s, Instrument.Guitar, Difficulty.Beginner);
 
             // Assert
-            Assert.AreNotEqual(0, sm.Notes.Count);
+            Assert.AreEqual(44, sm.Notes.Count);
+            Assert.AreEqual(440, sm.MaxScore);
         }
 
         [TestMethod]
@@ -42,23 +43,23 @@ namespace UnitTesting.Model
             // Assert
             Assert.AreEqual(0, sm.Notes.Count);
             Assert.AreEqual(0, sm.Bonuses.Count);
+            Assert.AreEqual(0, sm.MaxScore);
         }
 
-       /* [TestMethod]
+        [TestMethod]
         public void BpmChanged()
         {
             // Arrange
             SheetBuilder sb = new SheetBuilder(path);
             List<Tuple<Instrument, Difficulty>> sheets = new List<Tuple<Instrument, Difficulty>>();
             sheets.Add(Tuple.Create(Instrument.Violin, Difficulty.Beginner));
-            Song s = new Song("au clair de la lune", null, null, sheets, 90);
+            Song s = new Song("au clair de la lune", null, null, sheets);
 
             // Act
             SheetMusic sm = sb.BuildSheet(s, Instrument.Violin, Difficulty.Expert);
 
             // Assert
-            // Don't know what to test
-            // ??
-        }*/
+            Assert.Inconclusive();
+        }
     }
 }

@@ -29,7 +29,6 @@ namespace PopNTouch2.Model
             this.Difficulty = Difficulty.Undefined;
             this.Instrument = Instrument.Undefined;
             this.Ready = false;
-            this.Score = 0;
         }
 
         public void InformNewGame()
@@ -82,7 +81,12 @@ namespace PopNTouch2.Model
 
         public void OnTimerTicked(object source, ElapsedEventArgs e)
         {
-            if (this.enumerator.MoveNext())
+            double PreviousTime = 0;
+            if (this.enumerator.Current != null)
+            {
+                PreviousTime = this.enumerator.Current.Item1;
+            }
+            if (enumerator.MoveNext())
             {
                 if (Tick != null)
                 {
@@ -90,7 +94,7 @@ namespace PopNTouch2.Model
                     nt.Note = this.enumerator.Current.Item2;
                     Tick(this, nt);
                 }
-                this.Timer.Interval = this.enumerator.Current.Item1;
+                this.Timer.Interval = this.enumerator.Current.Item1 - PreviousTime;
                 this.Timer.Start();
             }
         }
