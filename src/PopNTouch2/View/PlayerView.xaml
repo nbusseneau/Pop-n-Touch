@@ -61,26 +61,23 @@
         
         <StackPanel Orientation="Horizontal" Visibility="{Binding Path=ChoicesEnabled, Converter={StaticResource bool2vis}}" HorizontalAlignment="Left" Width="615" Height="216" VerticalAlignment="Bottom" Margin="40,0,0,105">
             
-            <StackPanel.Resources>
-                <Style x:Key="ButtonStyle" TargetType="{x:Type s:SurfaceButton}">
-                    <Setter Property="Background" Value="Transparent"/>
-                    <Style.Triggers>
-                        <DataTrigger Binding="{Binding ReadyChecked}" Value="True">
-                            <Setter Property="Opacity" Value="0.5"/>
-                            <Setter Property="IsHitTestVisible" Value="False"/>
-                        </DataTrigger>
-                        <DataTrigger Binding="{Binding ReadyChecked}" Value="False">
-                            <Setter Property="Opacity" Value="1"/>
-                            <Setter Property="IsHitTestVisible" Value="True"/>
-                        </DataTrigger>
-                    </Style.Triggers>
-                </Style>
-            </StackPanel.Resources>
-            
             <!-- Difficulty buttons -->
             <Grid Background="Transparent">
                 <Grid.Resources>
-                    
+                    <Style x:Key="ButtonStyle" TargetType="{x:Type s:SurfaceButton}">
+                        <Setter Property="Background" Value="Transparent"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding ReadyChecked}" Value="True">
+                                <Setter Property="Opacity" Value="0.5"/>
+                                <Setter Property="IsHitTestVisible" Value="False"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding ReadyChecked}" Value="False">
+                                <Setter Property="Opacity" Value="1"/>
+                                <Setter Property="IsHitTestVisible" Value="True"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+
                     <!-- Difficulty buttons styles -->
                     <Style x:Key="SelectedEasyButtonStyle" TargetType="{x:Type s:SurfaceButton}" BasedOn="{StaticResource ButtonStyle}">
                         <Style.Triggers>
@@ -121,6 +118,20 @@
             <!-- Instrument buttons -->
             <Grid Background="Transparent">
                 <Grid.Resources>
+                    <Style x:Key="ButtonStyle" TargetType="{x:Type s:SurfaceButton}">
+                        <Setter Property="Background" Value="Transparent"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding PlayerVM.ReadyChecked}" Value="True">
+                                <Setter Property="Opacity" Value="0.5"/>
+                                <Setter Property="IsHitTestVisible" Value="False"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding PlayerVM.ReadyChecked}" Value="False">
+                                <Setter Property="Opacity" Value="1"/>
+                                <Setter Property="IsHitTestVisible" Value="True"/>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+
                     <!-- Instrument buttons styles -->
                     <Style x:Key="InstrumentButtonStyle" TargetType="{x:Type s:SurfaceButton}" BasedOn="{StaticResource ButtonStyle}">
                         <Style.Triggers>
@@ -159,7 +170,7 @@
                     </ItemsControl.ItemsPanel>
                     <ItemsControl.ItemTemplate>
                         <DataTemplate DataType="{x:Type ViewModel:InstrumentVM}" >
-                            <s:SurfaceButton Style="{StaticResource InstrumentButtonStyle}" Command="{Binding PickInstrument}" CommandParameter="{Binding Instrument}" Height="50" Width="50" Margin="10"/>
+                            <s:SurfaceButton Style="{StaticResource InstrumentButtonStyle}" Command="{Binding PickInstrument}" Height="50" Width="50" Margin="10"/>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>

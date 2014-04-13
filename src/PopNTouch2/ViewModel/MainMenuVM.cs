@@ -78,49 +78,14 @@ namespace PopNTouch2.ViewModel
             }
         }
 
-        /// <summary>
-        /// Command launched when a player clicks on any of the main menu song items
-        /// Takes a integer Song Index as a parameter
-        /// Sets the Selected Song
-        /// </summary>
-        ICommand selectSong;
-        public ICommand SelectSong
+        public void SelectSong (Song selectedSong)
         {
-            /* 
-            get
-            {
-                if (this.selectSong == null)
-                    this.selectSong = new RelayCommand<int>(songId =>
-                    {
-                        this.SelectedSong = GameMaster.Instance.Songs[songId];
-                        // FIXME : Temporary
-                        this.Visibility = Visibility.Collapsed;
-                        this.IsReady = true;
-                    }
-                    );
-
-                return this.selectSong;
-            }
-            */
-
-            // FIXME : temporary, to get past the CommandParameter Error
-            // Use the above commented version once fixed
-            get
-            {
-                if (this.selectSong == null)
-                    this.selectSong = new RelayCommand(() =>
-                    {
-                        this.SelectedSong = GameMaster.Instance.Songs[0];
-                        // FIXME : Temporary
-                        this.Visibility = Visibility.Collapsed;
-                        this.IsReady = true;
-                        GameMaster.Instance.SelectSong(this.SelectedSong);
-                        this.MainWindow.UpdatePlayers();
-                    }
-                    );
-
-                return this.selectSong;
-            }
+            this.SelectedSong = selectedSong;
+            // FIXME : Temporary
+            this.Visibility = Visibility.Collapsed;
+            this.IsReady = true;
+            GameMaster.Instance.SelectSong(this.SelectedSong);
+            this.MainWindow.UpdatePlayers();
         }
 
         #endregion

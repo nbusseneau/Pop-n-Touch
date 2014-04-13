@@ -101,7 +101,7 @@ namespace PopNTouch2.ViewModel
                 // TODO : Store existing InstrumentVM instead of creating another each time
                 foreach (Instrument instrument in currentSong.GetInstruments())
                 {
-                    newList.Add(new InstrumentVM(instrument));
+                    newList.Add(new InstrumentVM(instrument, this));
                 }
                 this.Instruments = newList;
                 this.loadedSong = currentSong;
@@ -113,26 +113,12 @@ namespace PopNTouch2.ViewModel
         /// </summary>
         private bool instruPicked = false;
 
-        /// <summary>
-        /// Command, launched when player picks an instrument
-        /// </summary>
-        private ICommand pickInstrument;
-        public ICommand PickInstrument
+        public void PickInstrument(Instrument instrument)
         {
-            get
-            {
-                if (this.pickInstrument == null)
-                    this.pickInstrument = new RelayCommand<string>(arg =>
-                    {
-                        Instrument instrument = (Instrument)Enum.Parse(typeof(Instrument), arg);
-                        this.Player.Instrument = instrument;
-                        RaisePropertyChanged("Player");
-                        this.instruPicked = true;
-                        this.checkChoicesState();
-                    }
-                    );
-                return this.pickInstrument;
-            }
+            this.Player.Instrument = instrument;
+            RaisePropertyChanged("Player");
+            this.instruPicked = true;
+            this.checkChoicesState();
         }
 
         /// <summary>
@@ -155,9 +141,13 @@ namespace PopNTouch2.ViewModel
         private void checkChoicesState()
         {
             if (this.diffPicked && this.instruPicked)
+            {
                 this.ChoicesMade = true;
+            }
             else
+            {
                 this.ChoicesMade = false;
+            }
         }
 
         /// <summary>

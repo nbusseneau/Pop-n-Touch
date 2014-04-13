@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Input;
 using PopNTouch2.Model;
 
 namespace PopNTouch2.ViewModel
@@ -15,6 +16,22 @@ namespace PopNTouch2.ViewModel
         {
             this.Song = song;
             this.MenuVM = menuVM;
+        }
+
+        private ICommand selectSong;
+        public ICommand SelectSong
+        {
+            get
+            {
+                if (this.selectSong == null)
+                    this.selectSong = new RelayCommand(() =>
+                    {
+                        this.MenuVM.SelectSong(this.Song);
+                    }
+                    );
+
+                return this.selectSong;
+            }
         }
     }
 }

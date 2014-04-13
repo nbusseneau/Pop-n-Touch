@@ -12,9 +12,7 @@
         <s:ScatterView.Resources>
             <DataTemplate DataType="{x:Type ViewModel:SongVM}">
                 <s:ScatterViewItem Background="Green">
-                    <!-- NEEDS FIXING : CommandParameter seems to be always null -->
-                    <!-- <s:SurfaceButton Content="{Binding Song.Title}" Command="{Binding MenuVM.SelectSong}" CommandParameter="{Binding Song.Index}" Background="LightBlue" Width="180" Height="40" VerticalAlignment="Center" HorizontalAlignment="Center"/> -->
-                    <s:SurfaceButton Content="{Binding Song.Title}" Command="{Binding MenuVM.SelectSong}" Background="LightBlue" Width="180" Height="40" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+                    <s:SurfaceButton Content="{Binding Song.Title}" Command="{Binding SelectSong}" Background="LightBlue" Width="180" Height="40" VerticalAlignment="Center" HorizontalAlignment="Center"/>
                 </s:ScatterViewItem>
             </DataTemplate>
         </s:ScatterView.Resources>
@@ -29,48 +27,4 @@
             </Style>
         </s:ScatterView.ItemContainerStyle>
     </s:ScatterView>
-
-        <!--
-        <s:SurfaceButton Name="btnSong1" Height="50" Width="250" HorizontalAlignment="Center" Margin="0,0,-570,-370" VerticalAlignment="Center" Content="Les 4 saisons" Padding="12" RenderTransformOrigin="0.5,0.5" Background="#99237695" BorderBrush="White" Command="{Binding SelectSong}" CommandParameter="1">
-            <s:SurfaceButton.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="35.872"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </s:SurfaceButton.RenderTransform>
-        </s:SurfaceButton>
-        <s:SurfaceButton Name="btnSong2" Height="100" Width="500" HorizontalAlignment="Center" Margin="0,0,-927,0" VerticalAlignment="Center" Content="Iron" Padding="22" FontSize="35" Background="#9923956B" BorderBrush="White" Command="{Binding SelectSong}" CommandParameter="2"/>
-        <s:SurfaceButton Name="btnSong3" Height="50" Width="250" HorizontalAlignment="Center" Margin="0,0,-570,370" VerticalAlignment="Center" Content="What Does The Fox Say ?" Padding="12" RenderTransformOrigin="0.5,0.5" Background="#99389523" BorderBrush="White" Command="{Binding SelectSong}" CommandParameter="3">
-            <s:SurfaceButton.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-35.513"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </s:SurfaceButton.RenderTransform>
-        </s:SurfaceButton>
-        <s:SurfaceButton Name="btnSong4" Height="40" Width="150" HorizontalAlignment="Center" Margin="0,0,-210,540" VerticalAlignment="Center" Content="Ashley's Roachclip" Padding="8" FontSize="15" RenderTransformOrigin="0.5,0.5" Background="#998B9523" BorderBrush="White" Command="{Binding SelectSong}" CommandParameter="4">
-            <s:SurfaceButton.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-70.513"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </s:SurfaceButton.RenderTransform>
-        </s:SurfaceButton>
-        <s:SurfaceButton Name="btnSong5" Height="40" Width="150" HorizontalAlignment="Center" Margin="0,0,150,550" VerticalAlignment="Center" Content="Highway To Hell" Padding="8" FontSize="15" RenderTransformOrigin="0.5,0.5" Background="#99955723" BorderBrush="White" Command="{Binding SelectSong}" CommandParameter="5">
-            <s:SurfaceButton.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-105.513"/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </s:SurfaceButton.RenderTransform>
-        </s:SurfaceButton>
-        -->
 </UserControl>
