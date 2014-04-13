@@ -90,6 +90,7 @@ namespace PopNTouch2.ViewModel
                     {
                         Player player = new Player();
                         PlayerVM playerVM = new PlayerVM();
+                        playerVM.ChoicesEnabled = true;
                         playerVM.Player = player;
                         GameMaster.Instance.NewPlayer(player);
                         playerVM.UpdateSong();
@@ -133,9 +134,6 @@ namespace PopNTouch2.ViewModel
                 if (playSong == null)
                     playSong = new RelayCommand(() =>
                     {
-                        // this.MainMenu.IsReady = false;
-                        foreach (PlayerVM pvm in this.players)
-                            pvm.ChoicesEnabled = true;
                     });
                 return this.playSong;
             }

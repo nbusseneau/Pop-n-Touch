@@ -9,6 +9,13 @@ namespace PopNTouch2.ViewModel
 {
     public class InstrumentVM : ViewModelBase
     {
+
+        public InstrumentVM(Instrument instrument, PlayerVM playerVM)
+        {
+            this.Instrument = instrument;
+            this.PlayerVM = playerVM;
+        }
+
         private Instrument instrument;
         public Instrument Instrument
         {
@@ -30,10 +37,19 @@ namespace PopNTouch2.ViewModel
             }
         }
 
-        public InstrumentVM(Instrument instrument, PlayerVM playerVM)
+        private bool selected = false;
+        public bool Selected
         {
-            this.Instrument = instrument;
-            this.PlayerVM = playerVM;
+            get
+            {
+                return this.selected;
+            }
+
+            set
+            {
+                this.selected = value;
+                RaisePropertyChanged("Selected");
+            }
         }
 
         /// <summary>
@@ -48,6 +64,7 @@ namespace PopNTouch2.ViewModel
                     this.pickInstrument = new RelayCommand(()=>
                     {
                         this.PlayerVM.PickInstrument(this.Instrument);
+                        this.Selected = true;
                     }
                     );
                 return this.pickInstrument;

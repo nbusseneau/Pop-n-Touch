@@ -109,7 +109,7 @@ namespace PopNTouch2.ViewModel
         }
 
         /// <summary>
-        /// Has the player picked a Difficulty?
+        /// Has the player picked an Instrument?
         /// </summary>
         private bool instruPicked = false;
 
@@ -118,6 +118,10 @@ namespace PopNTouch2.ViewModel
             this.Player.Instrument = instrument;
             RaisePropertyChanged("Player");
             this.instruPicked = true;
+            foreach (InstrumentVM ivm in this.instruments)
+            {
+                ivm.Selected = false;
+            }
             this.checkChoicesState();
         }
 

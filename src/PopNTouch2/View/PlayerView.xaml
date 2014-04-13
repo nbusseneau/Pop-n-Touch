@@ -119,7 +119,6 @@
             <Grid Background="Transparent">
                 <Grid.Resources>
                     <Style x:Key="ButtonStyle" TargetType="{x:Type s:SurfaceButton}">
-                        <Setter Property="Background" Value="Transparent"/>
                         <Style.Triggers>
                             <DataTrigger Binding="{Binding PlayerVM.ReadyChecked}" Value="True">
                                 <Setter Property="Opacity" Value="0.5"/>
@@ -128,6 +127,12 @@
                             <DataTrigger Binding="{Binding PlayerVM.ReadyChecked}" Value="False">
                                 <Setter Property="Opacity" Value="1"/>
                                 <Setter Property="IsHitTestVisible" Value="True"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Selected}" Value="True">
+                                <Setter Property="Background" Value="Violet"/>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Selected}" Value="False">
+                                <Setter Property="Background" Value="Transparent"/>
                             </DataTrigger>
                         </Style.Triggers>
                     </Style>
@@ -158,7 +163,6 @@
                             </DataTrigger>
                         </Style.Triggers>
                     </Style>
-                    
                 </Grid.Resources>
                 
                 <TextBlock Text="Instrument" Foreground="Black" FontWeight="Bold" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="76,10,59,0"/>
