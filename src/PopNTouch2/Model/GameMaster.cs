@@ -37,7 +37,6 @@ namespace PopNTouch2.Model
             foreach (string songDirectory in dirs)
             {
                 string title = null, author = null, year = null;
-                int bpm = 0;
                 string metadata = Path.Combine(songDirectory, "meta.data");
 
                 // Check for metadata
@@ -103,6 +102,7 @@ namespace PopNTouch2.Model
         }
 
         // Called by a player > at least one player existing and ready
+        // A revoir (appelé par la VM ?)
         public void Ready()
         {
             Boolean everyoneReady = true;

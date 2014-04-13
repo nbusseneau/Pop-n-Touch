@@ -70,9 +70,13 @@ namespace PopNTouch2.Model
         };
         */
 
-        public void ReadSheet()
+        public void ReadSheet(bool EnumGiven = false, List<Tuple<double, Note>>.Enumerator e = new List<Tuple<double, Note>>.Enumerator())
         {
             this.enumerator = this.SheetMusic.Notes.GetEnumerator();
+            if (EnumGiven)
+            {
+                this.enumerator = e;
+            }
             this.Timer = new Timer(this.SheetMusic.FirstRest);
             this.Timer.AutoReset = false;
             this.Timer.Elapsed += new ElapsedEventHandler(OnTimerTicked);
