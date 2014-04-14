@@ -15,6 +15,26 @@ namespace PopNTouch2.ViewModel
 
         private Song loadedSong;
 
+        /// <summary>
+        /// Boolean property to launch a flashing animation
+        /// </summary>
+        private bool flash = false;
+        public bool Flash
+        {
+            get { return this.flash; }
+            set
+            {
+                this.flash = value;
+                RaisePropertyChanged("Flash");
+            }
+        }
+
+        public void FlashAnimation()
+        {
+            this.Flash = true;
+            this.Flash = false;
+        }
+
         // Handles all of this Player's choices before starting the game : difficulty, instrument, ready
         #region Difficulty / Intrument choices
 

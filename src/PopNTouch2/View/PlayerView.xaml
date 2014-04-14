@@ -18,6 +18,11 @@
     <Grid Margin="0,0,0,0">
         
         <Grid.Resources>
+            <!-- Flashing effect -->
+            <Storyboard x:Key="flashAnimation">
+                <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0.2" To="1" AutoReverse="True" Duration="0:0:0.4" RepeatBehavior="0:0:2"/>
+            </Storyboard>
+            
             <!-- "Ready" button style -->
             <Style x:Key="ToggleButtonStyle" TargetType="{x:Type s:SurfaceToggleButton}">
                 <Style.Triggers>
@@ -41,10 +46,23 @@
                     </DataTrigger>
                 </Style.Triggers>
             </Style>
+            
         </Grid.Resources>
 
         <!-- Background border -->
-        <Image IsHitTestVisible="False" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" Source="../Resources/UI/BGP_PlayerView.png" Panel.ZIndex="-1"/>
+        <Image IsHitTestVisible="False" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" Source="../Resources/UI/BGP_PlayerView.png" Panel.ZIndex="-1">
+            <Image.Style>
+                <Style>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Flash}" Value="True">
+                            <DataTrigger.EnterActions>
+                                <BeginStoryboard Name="flash" Storyboard="{StaticResource flashAnimation}" />
+                            </DataTrigger.EnterActions>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Image.Style>
+        </Image>
 
         <!-- Stave -->
         <!--  <PopNTouch2:SheetMusicView Margin="35,96,36,105"/> -->

@@ -134,6 +134,20 @@ namespace PopNTouch2.ViewModel
                 if (playSong == null)
                     playSong = new RelayCommand(() =>
                     {
+                        bool allReady = true;
+                        foreach (PlayerVM pvm in this.players)
+                        {
+                            if (!pvm.ReadyChecked)
+                            {
+                                pvm.FlashAnimation();
+                                allReady = false;
+                            }
+                        }
+
+                        if (allReady)
+                        {
+                            // TODO
+                        }
                     });
                 return this.playSong;
             }
