@@ -58,20 +58,36 @@
         <s:ScatterView ItemsSource="{Binding Players}" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Panel.ZIndex="-1">
             <s:ScatterView.Resources>
                 <DataTemplate DataType="{x:Type ViewModel:PlayerVM}">
-                    <PopNTouch2:PlayerView/>
+                    <s:ScatterViewItem/>
                 </DataTemplate>
             </s:ScatterView.Resources>
             <s:ScatterView.ItemContainerStyle>
                 <Style TargetType="{x:Type s:ScatterViewItem}">
+                    <Setter Property="Background" Value="Transparent" />
+                    <Setter Property="BorderBrush" Value="{x:Null}" />
+                    <Setter Property="Foreground" Value="{DynamicResource {x:Static s:SurfaceColors.ScatterViewItemForegroundBrushKey}}" />
+                    <Setter Property="BorderThickness" Value="0" />
+                    <Setter Property="Width"  Value="650"/>
                     <Setter Property="Height" Value="400"/>
-                    <Setter Property="Width" Value="650"/>
-                    <Setter Property="MaxHeight" Value="600"/>
-                    <Setter Property="MinHeight" Value="200"/>
-                    <Setter Property="Background" Value="Transparent"/>
-                    <Setter Property="BorderThickness" Value="0"/>
                     <Setter Property="CanScale" Value="False"/>
-                    <Setter Property="CanMove" Value="True"/>
-                    <Setter Property="CanRotate" Value="True"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type s:ScatterViewItem}">
+                                <Grid x:Name="container" RenderTransformOrigin="{TemplateBinding RenderTransformOrigin}">
+                                    <Grid.RenderTransform>
+                                        <ScaleTransform ScaleX="1" ScaleY="1" />
+                                    </Grid.RenderTransform>
+
+                                    <PopNTouch2:PlayerView x:Name="Content"/>  
+                                </Grid>
+                                <ControlTemplate.Triggers>
+                                    <Trigger Property="IsEnabled" Value="False">
+                                        <Setter Property="Opacity" TargetName="Content" Value="0.4" />
+                                    </Trigger>
+                                </ControlTemplate.Triggers>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
                 </Style>
             </s:ScatterView.ItemContainerStyle>
             

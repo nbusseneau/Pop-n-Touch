@@ -18,7 +18,7 @@ namespace PopNTouch2.View
     /// <summary>
     /// Interaction logic for PlayerView.xaml
     /// </summary>
-    public partial class PlayerView : ScatterViewItem
+    public partial class PlayerView : UserControl
     {
         public PlayerView()
         {

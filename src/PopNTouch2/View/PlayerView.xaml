@@ -1,4 +1,4 @@
-﻿<s:ScatterViewItem x:Class="PopNTouch2.View.PlayerView"
+﻿<UserControl
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -6,14 +6,14 @@
              xmlns:PopNTouch2="clr-namespace:PopNTouch2.View"
              xmlns:ViewModel="clr-namespace:PopNTouch2.ViewModel"
              xmlns:s="http://schemas.microsoft.com/surface/2008"
+             x:Class="PopNTouch2.View.PlayerView"
              mc:Ignorable="d" 
              Background="{x:Null}"
-             CanScale="False"
              d:DesignHeight="400" d:DesignWidth="650">
 
-    <s:ScatterViewItem.Resources>
+    <UserControl.Resources>
         <BooleanToVisibilityConverter x:Key="bool2vis"/>
-    </s:ScatterViewItem.Resources>
+    </UserControl.Resources>
 
     <Grid Margin="0,0,0,0">
         
@@ -50,13 +50,13 @@
         </Grid.Resources>
 
         <!-- Background border -->
-        <Image IsHitTestVisible="False" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" Source="../Resources/UI/BGP_PlayerView.png" Panel.ZIndex="-1">
+        <Image IsHitTestVisible="True" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" Source="../Resources/UI/BGP_PlayerView.png" Panel.ZIndex="-1">
             <Image.Style>
                 <Style>
                     <Style.Triggers>
                         <DataTrigger Binding="{Binding Flash}" Value="True">
                             <DataTrigger.EnterActions>
-                                <BeginStoryboard Name="flash" Storyboard="{StaticResource flashAnimation}" />
+                                <BeginStoryboard x:Name="flash" Storyboard="{StaticResource flashAnimation}" />
                             </DataTrigger.EnterActions>
                         </DataTrigger>
                     </Style.Triggers>
@@ -69,15 +69,15 @@
 
         <!-- Feedback -->
         <!-- TODO : Make this a StoryBoard we can then launch -->
-        <Ellipse Name="fdbckCorrect" HorizontalAlignment="Left" Height="30" Margin="168,44,0,0" Stroke="Green" Fill="GreenYellow" VerticalAlignment="Top" Width="30" Visibility="Hidden"/>
-        <Ellipse Name="fdbckIncorrect" HorizontalAlignment="Left" Height="30" Margin="168,44,0,0" Stroke="OrangeRed" Fill="Red" VerticalAlignment="Top" Width="30" Visibility="Hidden"/>
+        <Ellipse x:Name="fdbckCorrect" HorizontalAlignment="Left" Height="30" Margin="168,44,0,0" Stroke="Green" Fill="GreenYellow" VerticalAlignment="Top" Width="30" Visibility="Hidden"/>
+        <Ellipse x:Name="fdbckIncorrect" HorizontalAlignment="Left" Height="30" Margin="168,44,0,0" Stroke="OrangeRed" Fill="Red" VerticalAlignment="Top" Width="30" Visibility="Hidden"/>
 
         <!-- Choices : Difficulty and Instrument -->
         <s:SurfaceToggleButton Style="{StaticResource ToggleButtonStyle}" Visibility="{Binding ChoicesEnabled, Converter={StaticResource bool2vis}}" IsEnabled="{Binding ChoicesMade}" IsChecked="{Binding ReadyChecked, Mode=TwoWay}" Command="{Binding ClickReady}" HorizontalAlignment="Left" Margin="294,10,0,0" VerticalAlignment="Top" Opacity="0.8">
             <Image />
         </s:SurfaceToggleButton>
         
-        <StackPanel Orientation="Horizontal" Visibility="{Binding Path=ChoicesEnabled, Converter={StaticResource bool2vis}}" HorizontalAlignment="Left" Width="615" Height="216" VerticalAlignment="Bottom" Margin="40,0,0,105">
+        <StackPanel Orientation="Horizontal" Visibility="{Binding ChoicesEnabled, Converter={StaticResource bool2vis}}" HorizontalAlignment="Left" Width="615" Height="216" VerticalAlignment="Bottom" Margin="40,0,0,105">
             
             <!-- Difficulty buttons -->
             <Grid Background="Transparent">
@@ -220,4 +220,4 @@
             <s:SurfaceButton HorizontalAlignment="Center" Grid.Column="6" VerticalAlignment="Bottom" Height="70" Width="70" Click="Button_Si_Click" ClickMode="Press" Content="" Background="{x:Null}"/>
         </Grid>
     </Grid>
-</s:ScatterViewItem>
+</UserControl>
