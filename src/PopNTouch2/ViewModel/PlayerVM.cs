@@ -215,18 +215,32 @@ namespace PopNTouch2.ViewModel
         }
         #endregion
 
-        public ScoreVM ScoreVM
+        #region SheetMusic
+
+        private SheetMusicVM sheetMusic = new SheetMusicVM();
+        public SheetMusicVM SheetMusic
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
+            get { return this.sheetMusic; }
             set
             {
+                this.sheetMusic = value;
+                RaisePropertyChanged("SheetMusic");
             }
         }
 
-        public SheetMusicVM SheetMusicVM
+        /// <summary>
+        /// Sets correct current sheet in SheetMusicVM
+        /// </summary>
+        public void PrepareSheet()
+        {
+            this.SheetMusic.Sheet = GameMaster.Instance.SheetBuilder.BuildSheet(this.loadedSong, this.Player.Instrument, this.Player.Difficulty);
+            this.SheetMusic.Visibility = true;
+        }
+
+        #endregion
+        
+
+        public ScoreVM ScoreVM
         {
             get
             {

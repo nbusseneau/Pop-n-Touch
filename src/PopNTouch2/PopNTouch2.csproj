@@ -52,7 +52,8 @@
     <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
-    <StartupObject>PopNTouch2.Model.App</StartupObject>
+    <StartupObject>
+    </StartupObject>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -125,12 +126,12 @@
     <Compile Include="View\ScoreView.xaml.cs">
       <DependentUpon>ScoreView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\SheetMusicView.xaml.cs">
-      <DependentUpon>SheetMusicView.xaml</DependentUpon>
-    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="View\SheetMusicView.xaml.cs">
+      <DependentUpon>SheetMusicView.xaml</DependentUpon>
     </Compile>
     <Page Include="View\MainMenuView.xaml">
       <SubType>Designer</SubType>

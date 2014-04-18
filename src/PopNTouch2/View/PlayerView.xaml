@@ -64,19 +64,11 @@
             </Image.Style>
         </Image>
 
-        <!-- Stave -->
-        <!--  <PopNTouch2:SheetMusicView Margin="35,96,36,105"/> -->
-
-        <!-- Feedback -->
-        <!-- TODO : Make this a StoryBoard we can then launch -->
-        <Ellipse x:Name="fdbckCorrect" HorizontalAlignment="Left" Height="30" Margin="168,44,0,0" Stroke="Green" Fill="GreenYellow" VerticalAlignment="Top" Width="30" Visibility="Hidden"/>
-        <Ellipse x:Name="fdbckIncorrect" HorizontalAlignment="Left" Height="30" Margin="168,44,0,0" Stroke="OrangeRed" Fill="Red" VerticalAlignment="Top" Width="30" Visibility="Hidden"/>
-
         <!-- Choices : Difficulty and Instrument -->
+        <!-- Ready ToggleButton -->
         <s:SurfaceToggleButton Style="{StaticResource ToggleButtonStyle}" Visibility="{Binding ChoicesEnabled, Converter={StaticResource bool2vis}}" IsEnabled="{Binding ChoicesMade}" IsChecked="{Binding ReadyChecked, Mode=TwoWay}" Command="{Binding ClickReady}" HorizontalAlignment="Left" Margin="294,10,0,0" VerticalAlignment="Top" Opacity="0.8">
             <Image />
         </s:SurfaceToggleButton>
-        
         <StackPanel Orientation="Horizontal" Visibility="{Binding ChoicesEnabled, Converter={StaticResource bool2vis}}" HorizontalAlignment="Left" Width="615" Height="216" VerticalAlignment="Bottom" Margin="40,0,0,105">
             
             <!-- Difficulty buttons -->
@@ -199,6 +191,14 @@
                 
             </Grid>
         </StackPanel>
+
+        <!-- Stave -->
+        <PopNTouch2:SheetMusicView DataContext="{Binding SheetMusic}" Visibility="{Binding Visibility, Converter={StaticResource bool2vis}}" Margin="35,96,36,105"/>
+        
+        <!-- Feedback -->
+        <!-- TODO : Make this a StoryBoard we can then launch -->
+        <Ellipse x:Name="fdbckCorrect" HorizontalAlignment="Left" Height="30" Margin="168,44,0,0" Stroke="Green" Fill="GreenYellow" VerticalAlignment="Top" Width="30" Visibility="Hidden"/>
+        <Ellipse x:Name="fdbckIncorrect" HorizontalAlignment="Left" Height="30" Margin="168,44,0,0" Stroke="OrangeRed" Fill="Red" VerticalAlignment="Top" Width="30" Visibility="Hidden"/>
 
         <!-- Bottom Buttons -->
         <Grid Margin="35,300,36,20" Panel.ZIndex="10">

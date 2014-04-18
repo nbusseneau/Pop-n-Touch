@@ -146,7 +146,7 @@ namespace PopNTouch2.ViewModel
 
                         if (allReady)
                         {
-                            // TODO
+                            this.DisablePlayerChoices();
                         }
                     });
                 return this.playSong;
@@ -176,6 +176,18 @@ namespace PopNTouch2.ViewModel
             foreach (PlayerVM p in this.players)
             {
                 p.UpdateSong();
+            }
+        }
+
+        /// <summary>
+        /// Disables every players' difficulty and instrument choice
+        /// </summary>
+        public void DisablePlayerChoices()
+        {
+            foreach (PlayerVM p in this.players)
+            {
+                p.ChoicesEnabled = false;
+                p.PrepareSheet();
             }
         }
 

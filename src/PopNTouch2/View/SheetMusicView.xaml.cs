@@ -12,7 +12,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace PopNTouch2.Model.View
+namespace PopNTouch2.View
 {
     /// <summary>
     /// Interaction logic for SheetMusicView.xaml
@@ -21,7 +21,7 @@ namespace PopNTouch2.Model.View
     {
         public SheetMusicView()
         {
-            //InitializeComponent();
+            InitializeComponent();
         }
     }
 }
