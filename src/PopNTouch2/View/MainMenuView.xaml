@@ -8,23 +8,41 @@
              mc:Ignorable="d" 
              d:DesignHeight="1080" d:DesignWidth="1920">
     
-    <s:ScatterView ItemsSource="{Binding Songs}" HorizontalAlignment="Center" VerticalAlignment="Center">
-        <s:ScatterView.Resources>
-            <DataTemplate DataType="{x:Type ViewModel:SongVM}">
-                <s:ScatterViewItem Background="Green">
-                    <s:SurfaceButton Content="{Binding Song.Title}" Command="{Binding SelectSong}" Background="LightBlue" Width="180" Height="40" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                </s:ScatterViewItem>
-            </DataTemplate>
-        </s:ScatterView.Resources>
-        <s:ScatterView.ItemContainerStyle>
-            <Style TargetType="{x:Type s:ScatterViewItem}">
-                <Setter Property="Height" Value="50"/>
-                <Setter Property="Width" Value="200"/>
-                <Setter Property="BorderThickness" Value="0"/>
-                <Setter Property="CanScale" Value="False"/>
-                <Setter Property="CanMove" Value="True" />
-                <Setter Property="CanRotate" Value="True" />
-            </Style>
-        </s:ScatterView.ItemContainerStyle>
+    <s:ScatterView MinHeight="1080" MaxHeight="1080" MaxWidth="1920" MinWidth="1920" Width="1920" Height="1080" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" Panel.ZIndex="10">
+        <s:ScatterViewItem ShowsActivationEffects="False" AngularDeceleration="0.1" Name="menu" MinHeight="1080" MaxHeight="1080" MaxWidth="1920" MinWidth="1920" Width="1920" CanMove="false" CanScale="false" CanRotate="true" Center="0,0" Orientation="0" Background="{x:Null}" RenderTransformOrigin="0.5,0.5" Margin="960,540,-960,-540" Height="1080" VerticalAlignment="Top" Panel.ZIndex="10">
+            
+            <s:ScatterViewItem.Resources>
+                <ImageBrush x:Key="BrushImgScroll1" ImageSource="../Resources/UI/Scrolls/BTNP_ScrollRoll1.png"/>
+                <ImageBrush x:Key="BrushImgScroll2" ImageSource="../Resources/UI/Scrolls/BTNP_ScrollRoll2.png"/>
+                <ImageBrush x:Key="BrushImgScroll3" ImageSource="../Resources/UI/Scrolls/BTNP_ScrollRoll3.png"/>
+                <ImageBrush x:Key="BrushImgScroll4" ImageSource="../Resources/UI/Scrolls/BTNP_ScrollRoll4.png"/>
+                <ImageBrush x:Key="BrushImgScroll5" ImageSource="../Resources/UI/Scrolls/BTNP_ScrollRoll5.png"/>
+            </s:ScatterViewItem.Resources>
+            
+            <Grid Height="1080" Width="1920">
+                <ItemsControl ItemsSource="{Binding Songs}">
+                    <ItemsControl.ItemTemplate>
+                        <DataTemplate DataType="{x:Type ViewModel:SongVM}" >
+                            <s:SurfaceButton Command="{Binding SelectSong}" Height="200" Width="100"  HorizontalAlignment="Center" Margin="{Binding Margin}" VerticalAlignment="Center" Padding="12" RenderTransformOrigin="0.5,0.5" Background="{x:Null}"  BorderBrush="White">
+                                <s:SurfaceButton.RenderTransform>
+                                    <TransformGroup>
+                                        <ScaleTransform/>
+                                        <SkewTransform/>
+                                        <RotateTransform Angle="{Binding Angle}"/>
+                                        <TranslateTransform/>
+                                    </TransformGroup>
+                                </s:SurfaceButton.RenderTransform>
+                                <Grid>
+                                    <TextBlock Text="{Binding Song.Title}" />
+                                    <!-- FIXME : Doesn't work for now (impossible to bind a dynamic resource) -->
+                                    <Image Height="200" Width="100" Source="{DynamicResource {Binding ImageKey}}"/>
+                                </Grid>
+                            </s:SurfaceButton>
+                        </DataTemplate>
+                    </ItemsControl.ItemTemplate>
+                </ItemsControl>
+            </Grid>
+        </s:ScatterViewItem>
     </s:ScatterView>
+
 </UserControl>

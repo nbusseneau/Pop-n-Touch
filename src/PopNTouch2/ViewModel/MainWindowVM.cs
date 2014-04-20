@@ -47,8 +47,7 @@ namespace PopNTouch2.ViewModel
                         RaisePropertyChanged("StartButtonVisibility");
 
                         foreach(Song s in GameMaster.Instance.Songs)
-                            this.MainMenu.songs.Add(new SongVM(s, this.MainMenu));
-                        RaisePropertyChanged("Songs");
+                            this.MainMenu.AddSong(new SongVM(s, this.MainMenu));
 
                         // FIXME Temporary
                         this.mainMenu.Visibility = Visibility.Visible;

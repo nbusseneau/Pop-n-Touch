@@ -7,16 +7,40 @@ using System.Windows.Input;
 using PopNTouch2.Model;
 using System.Windows;
 using System.Collections.ObjectModel;
+using System.Windows.Media;
 
 namespace PopNTouch2.ViewModel
 {
     public class MainMenuVM : ViewModelBase
     {
+        private const int MAX_DISPLAYED_SONGS = 5;
+
         private MainWindowVM MainWindow { get; set; }
 
         public MainMenuVM(MainWindowVM mainWindow)
         {
             this.MainWindow = mainWindow;
+            this.Angles = new List<double>()
+            {
+                45.682,
+                0,
+                -35.513,
+                -90,
+                35.513
+            };
+            this.Margins = new List<Thickness>() 
+            {
+                new Thickness(950,540,729,260),
+                new Thickness(0,0,-400,0),
+                new Thickness(0,0,-300,310),
+                new Thickness(910,230,910,0),
+                new Thickness(0,0,350,310),
+            };
+            this.ImageKeys = new List<String>();
+            for (int i = 1; i <= 5; i++)
+            {
+                this.ImageKeys.Add("BrushImgScroll" + i);
+            }
         }
 
         /// <summary>
@@ -51,6 +75,11 @@ namespace PopNTouch2.ViewModel
         // Song Selection
         #region Song Selection
 
+        // Song resources
+        private List<double> Angles { get; set; }
+        private List<Thickness> Margins { get; set; }
+        private List<String> ImageKeys { get; set; }
+
         /// <summary>
         /// Observable list of Songs
         /// Watched in XAML
@@ -78,6 +107,16 @@ namespace PopNTouch2.ViewModel
             }
         }
 
+        public void AddSong(SongVM songVM)
+        {
+            int param = this.songs.Count % MAX_DISPLAYED_SONGS;
+            songVM.Angle = this.Angles[param];
+            songVM.Margin = this.Margins[param];
+            songVM.ImageKey = this.ImageKeys[param];
+            this.songs.Add(songVM);
+            RaisePropertyChanged("Songs");
+        }
+
         public void SelectSong (Song selectedSong)
         {
             this.SelectedSong = selectedSong;
@@ -89,7 +128,6 @@ namespace PopNTouch2.ViewModel
         }
 
         #endregion
-
     }
 
 }

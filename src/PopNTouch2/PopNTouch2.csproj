@@ -262,6 +262,7 @@
   <ItemGroup>
     <None Include="Resources\Songs\Adding songs in Visual Studio.txt" />
   </ItemGroup>
+
   <ItemGroup>
     <Resource Include="Resources\UI\BTNP_Easy.png" />
   </ItemGroup>
@@ -285,6 +286,13 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\UI\Instruments\BTNP_Violin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\UI\Scrolls\BTNP_ScrollRoll1.png" />
+    <Resource Include="Resources\UI\Scrolls\BTNP_ScrollRoll2.png" />
+    <Resource Include="Resources\UI\Scrolls\BTNP_ScrollRoll3.png" />
+    <Resource Include="Resources\UI\Scrolls\BTNP_ScrollRoll4.png" />
+    <Resource Include="Resources\UI\Scrolls\BTNP_ScrollRoll5.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
