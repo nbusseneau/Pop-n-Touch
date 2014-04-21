@@ -35,7 +35,7 @@ namespace PopNTouch2.Model
             // Read the file and build sheet
             string[] lines = File.ReadAllLines(filePath);
             double bpm = 0;
-            if (lines[0].Split(' ')[0] == "bpm")
+            if (lines.Length != 0 && lines[0].Split(' ')[0] == "bpm")
             {
                 bpm = Convert.ToDouble(lines[0].Split(' ')[1]);
             }

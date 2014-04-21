@@ -110,10 +110,15 @@ namespace PopNTouch2.ViewModel
                 if (eraseAll == null)
                     eraseAll = new RelayCommand(() =>
                     {
-                        for (int i = this.players.Count - 1; i >= 0; i--)
-                            this.players.RemoveAt(i);
+                        int count = this.players.Count;
+                        this.players.Clear();
+                        for (int i = 0; i < count; i++)
+                            AddPlayer.Execute(null);
                         RaisePropertyChanged("Players");
 
+                        this.MainMenu.IsReady = false;
+                        this.MainMenu.Visibility = Visibility.Visible;
+                        
                     });
                 return this.eraseAll;
             }
