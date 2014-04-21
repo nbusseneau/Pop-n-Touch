@@ -17,7 +17,7 @@ namespace UnitTesting.Model
             gm.NewPlayer(player);
             List<Tuple<Instrument, Difficulty>> sheets = new List<Tuple<Instrument, Difficulty>>();
             sheets.Add(Tuple.Create(Instrument.Piano, Difficulty.Classic));
-            Song newBorn = new Song("New Born", "Muse", "2001", sheets);
+            Song newBorn = new Song("New Born", "Muse", "2001", sheets, null);
             gm.SelectSong(newBorn);
             player.Instrument = Instrument.Piano;
             player.Difficulty = Difficulty.Classic;
@@ -41,7 +41,7 @@ namespace UnitTesting.Model
             gm.NewPlayer(player);
             List<Tuple<Instrument, Difficulty>> sheets = new List<Tuple<Instrument,Difficulty>>();
             sheets.Add(Tuple.Create(Instrument.Piano, Difficulty.Classic));
-            Song newBorn = new Song("New Born", "Muse", "2001", sheets);
+            Song newBorn = new Song("New Born", "Muse", "2001", sheets, null);
             gm.SelectSong(newBorn);
             player.Instrument = Instrument.Piano;
             player.Difficulty = Difficulty.Classic;

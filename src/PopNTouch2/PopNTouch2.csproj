@@ -64,10 +64,6 @@
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.Surface.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
-    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Windows\Microsoft.NET\assembly\GAC_32\Microsoft.Xna.Framework\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.dll</HintPath>
-    </Reference>
     <Reference Include="System.Xaml">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
@@ -191,27 +187,33 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
-    <None Include="Resources\Songs\Au Clair de la Lune\Guitar-Classic.sheet">
+    <Content Include="Resources\Songs\Au Clair de la Lune\Guitar-Classic.sheet">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\Songs\Au Clair de la Lune\meta.data">
+    </Content>
+    <Content Include="Resources\Songs\Au Clair de la Lune\meta.data">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\Songs\Au Clair de la Lune\Guitar-Beginner.sheet">
+    </Content>
+    <Content Include="Resources\Songs\Au Clair de la Lune\Guitar-Beginner.sheet">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\Songs\Au Clair de la Lune\Violin-Beginner.sheet">
+    </Content>
+    <Content Include="Resources\Songs\Au Clair de la Lune\music.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\Songs\New Born\meta.data">
+    </Content>
+    <Content Include="Resources\Songs\Au Clair de la Lune\Violin-Beginner.sheet">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\Songs\New Born\Piano-Classic.sheet">
+    </Content>
+    <Content Include="Resources\Songs\New Born\meta.data">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
-    <None Include="Resources\Songs\Patates\Guitar-Beginner.sheet">
+    </Content>
+    <Content Include="Resources\Songs\New Born\music.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </None>
+    </Content>
+    <Content Include="Resources\Songs\New Born\Piano-Classic.sheet">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Songs\Patates\Guitar-Beginner.sheet">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -37,7 +37,9 @@ namespace PopNTouch2.Model
             foreach (string songDirectory in dirs)
             {
                 string title = null, author = null, year = null;
+                Uri file = null;
                 string metadata = Path.Combine(songDirectory, "meta.data");
+                string musicFile = Path.Combine(songDirectory, "music.mp3");
 
                 // Check for metadata
                 if (File.Exists(metadata)) {
@@ -50,8 +52,13 @@ namespace PopNTouch2.Model
                     }
                 }
 
-                // If metadata was found, we can add sheets
-                if (title != null)
+                if (File.Exists(musicFile))
+                {
+                    file = new Uri(musicFile, UriKind.Relative);
+                }
+
+                // If metadata and music file were found, we can add sheets
+                if (title != null && file != null)
                 {
                     List<Tuple<Instrument, Difficulty>> sheets = new List<Tuple<Instrument, Difficulty>>();
                     string[] sheetsFiles = Directory.GetFiles(songDirectory, "*.sheet");
@@ -65,7 +72,7 @@ namespace PopNTouch2.Model
                         sheets.Add(Tuple.Create(instrument, difficulty));
                     }
 
-                    songs.Add(new Song(title, author, year, sheets, index));
+                    songs.Add(new Song(title, author, year, sheets, file, index));
                     index++;
                 }
             }

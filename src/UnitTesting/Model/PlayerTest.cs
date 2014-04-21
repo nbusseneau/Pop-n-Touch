@@ -18,7 +18,7 @@ namespace UnitTesting.Model
             List<Tuple<Instrument, Difficulty>> sheets = new List<Tuple<Instrument, Difficulty>>();
             sheets.Add(Tuple.Create(Instrument.Violin, Difficulty.Beginner));
             sheets.Add(Tuple.Create(Instrument.Guitar, Difficulty.Beginner));
-            Song s = new Song("song", null, null, sheets);
+            Song s = new Song("song", null, null, sheets, null);
             Player p = new Player();
             gm.SelectSong(s);
 
@@ -38,7 +38,7 @@ namespace UnitTesting.Model
             List<Tuple<Instrument, Difficulty>> sheets = new List<Tuple<Instrument, Difficulty>>();
             sheets.Add(Tuple.Create(Instrument.Violin, Difficulty.Beginner));
             sheets.Add(Tuple.Create(Instrument.Guitar, Difficulty.Beginner));
-            Song s = new Song("au clair de la lune", null, null, sheets);
+            Song s = new Song("au clair de la lune", null, null, sheets, null);
             Player p = new Player();
 
             gm.SelectSong(s);
@@ -66,7 +66,7 @@ namespace UnitTesting.Model
             List<Tuple<Instrument, Difficulty>> sheets = new List<Tuple<Instrument, Difficulty>>();
             sheets.Add(Tuple.Create(Instrument.Violin, Difficulty.Beginner));
             sheets.Add(Tuple.Create(Instrument.Guitar, Difficulty.Beginner));
-            Song s = new Song("song", null, null, sheets);
+            Song s = new Song("song", null, null, sheets, null);
             Player p = new Player();
 
             gm.SelectSong(s);
@@ -90,7 +90,7 @@ namespace UnitTesting.Model
             List<Tuple<Instrument, Difficulty>> sheets = new List<Tuple<Instrument, Difficulty>>();
             sheets.Add(Tuple.Create(Instrument.Violin, Difficulty.Beginner));
             sheets.Add(Tuple.Create(Instrument.Guitar, Difficulty.Beginner));
-            Song s = new Song("Au clair de la lune", null, null, sheets);
+            Song s = new Song("Au clair de la lune", null, null, sheets, null);
             Player p = new Player();
             gm.SelectSong(s);
             p.InformNewGame();

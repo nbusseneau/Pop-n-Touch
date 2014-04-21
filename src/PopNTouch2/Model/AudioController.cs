@@ -2,17 +2,29 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows.Media;
 
 namespace PopNTouch2.Model
 {
     /// <summary>
-    /// Singleton responsible for playing all of the application's sounds, though XNA framework
+    /// Class responsible for playing sounds
+    /// Inherits from MediaPlayer
     /// </summary>
-    public class AudioController
+    public class AudioController : MediaPlayer
     {
-        public static AudioController INSTANCE = new AudioController();
+        public AudioController() : base()
+        {
+        }
 
+        public AudioController(Song song) : base()
+        {
+            this.Open(song.File);
+        }
 
-
+        public void Restart()
+        {
+            this.Stop();
+            this.Play();
+        }
     }
 }
