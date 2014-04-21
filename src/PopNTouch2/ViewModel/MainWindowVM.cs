@@ -88,11 +88,8 @@ namespace PopNTouch2.ViewModel
                     addPlayer = new RelayCommand(() =>
                     {
                         Player player = new Player();
-                        PlayerVM playerVM = new PlayerVM();
-                        playerVM.ChoicesEnabled = true;
-                        playerVM.Player = player;
                         GameMaster.Instance.NewPlayer(player);
-                        playerVM.UpdateSong();
+                        PlayerVM playerVM = new PlayerVM(player);
                         this.players.Add(playerVM);
                         RaisePropertyChanged("Players");
 
@@ -146,6 +143,8 @@ namespace PopNTouch2.ViewModel
                         if (allReady)
                         {
                             this.DisablePlayerChoices();
+                            GameMaster.Instance.Ready(false);
+                            GameMaster.Instance.Game.Launch(); //FIXME : Have a Countdown before launching
                         }
                     });
                 return this.playSong;

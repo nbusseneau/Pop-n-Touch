@@ -1,18 +1,21 @@
-﻿<UserControl x:Class="PopNTouch2.View.NoteView"
+﻿<s:ScatterViewItem x:Class="PopNTouch2.View.NoteView"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:PopNTouch2="clr-namespace:PopNTouch2.View"
+             xmlns:ViewModel="clr-namespace:PopNTouch2.ViewModel"
+             xmlns:s="http://schemas.microsoft.com/surface/2008"
              mc:Ignorable="d" 
              d:DesignHeight="260" d:DesignWidth="125">
-    
-    <UserControl.Resources>
+
+    <s:ScatterViewItem.Resources>
         <BitmapImage x:Key="Crotchet" UriSource="../Resources/UI/Notes/crotchet.png"></BitmapImage>
         <BitmapImage x:Key="Minim" UriSource="../Resources/UI/Notes/minim.png"></BitmapImage>
         <BitmapImage x:Key="Quaver" UriSource="../Resources/UI/Notes/quaver.png"></BitmapImage>
-    </UserControl.Resources>
+    </s:ScatterViewItem.Resources>
     
     <Grid>
         <Image Name="noteImage" Source="{DynamicResource Minim}" />
     </Grid>
-</UserControl>
+</s:ScatterViewItem>

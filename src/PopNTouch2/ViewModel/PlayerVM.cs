@@ -13,6 +13,13 @@ namespace PopNTouch2.ViewModel
     {
         public Player Player { get; set; }
 
+        public PlayerVM(Player player)
+        {
+            this.Player = player;
+            this.UpdateSong();
+            this.Player.Tick += new Player.TickHandler(OnPlayerTick);
+        }
+
         private Song loadedSong;
 
         /// <summary>
@@ -42,7 +49,7 @@ namespace PopNTouch2.ViewModel
         /// Boolean property, are the choices enabled for the player to choose?
         /// Handles pretty much all of this region's visibility
         /// </summary>
-        private bool choicesEnabled = false;
+        private bool choicesEnabled = true;
         public bool ChoicesEnabled
         {
             get { return this.choicesEnabled; }
@@ -234,7 +241,20 @@ namespace PopNTouch2.ViewModel
         public void PrepareSheet()
         {
             this.SheetMusic.Sheet = GameMaster.Instance.SheetBuilder.BuildSheet(this.loadedSong, this.Player.Instrument, this.Player.Difficulty);
+            this.Player.SheetMusic = this.SheetMusic.Sheet;
             this.SheetMusic.Visibility = true;
+        }
+
+        /// <summary>
+        /// Fired for each Player.Tick event
+        /// Adds a Note to be played in SheetMusic
+        /// </summary>
+        /// <param name="p"></param>
+        /// <param name="nt"></param>
+        public void OnPlayerTick(Player p, Player.NoteTicked nt)
+        {
+            this.SheetMusic.AddNote(nt.Note);
+            RaisePropertyChanged("SheetMusic");
         }
 
         #endregion

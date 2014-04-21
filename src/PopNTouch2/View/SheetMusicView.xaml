@@ -11,7 +11,39 @@
              d:DesignHeight="210" d:DesignWidth="580">
 
     <Grid>
-        <Image HorizontalAlignment="Center" VerticalAlignment="Top" Source="../Resources/UI/BGP_SheetMusic.png" Stretch="Fill"/>
-        <s:ScatterView Name="scatterViewStave" Margin="93,47,10,77" ></s:ScatterView>
+        <Image HorizontalAlignment="Center" VerticalAlignment="Top" Source="../Resources/UI/BGP_SheetMusic.png" Stretch="Fill" Panel.ZIndex="-1"/>
+        <s:ScatterView ItemsSource="{Binding Notes}" Margin="93,19,10,25" >
+            <s:ScatterView.Resources>
+                <DataTemplate DataType="{x:Type ViewModel:NoteVM}">
+                    <s:ScatterViewItem/>
+                </DataTemplate>
+            </s:ScatterView.Resources>
+            <s:ScatterView.ItemContainerStyle>
+                <Style TargetType="{x:Type s:ScatterViewItem}">
+                    <Setter Property="Background" Value="Transparent" />
+                    <Setter Property="BorderBrush" Value="{x:Null}" />
+                    <Setter Property="Foreground" Value="{DynamicResource {x:Static s:SurfaceColors.ScatterViewItemForegroundBrushKey}}" />
+                    <Setter Property="BorderThickness" Value="0" />
+                    <Setter Property="Width"  Value="125"/>
+                    <Setter Property="Height" Value="260"/>
+                    <Setter Property="CanScale" Value="False"/>
+                    <Setter Property="CanRotate" Value="False"/>
+                    <Setter Property="CanMove" Value="False"/>
+                    <Setter Property="Template">
+                        <Setter.Value>
+                            <ControlTemplate TargetType="{x:Type s:ScatterViewItem}">
+                                <Grid x:Name="container" RenderTransformOrigin="{TemplateBinding RenderTransformOrigin}">
+                                    <Grid.RenderTransform>
+                                        <ScaleTransform ScaleX="1" ScaleY="1" />
+                                    </Grid.RenderTransform>
+
+                                    <PopNTouch2:NoteView/>
+                                </Grid>
+                            </ControlTemplate>
+                        </Setter.Value>
+                    </Setter>
+                </Style>
+            </s:ScatterView.ItemContainerStyle>
+        </s:ScatterView>
     </Grid>
 </UserControl>

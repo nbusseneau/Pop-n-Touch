@@ -77,10 +77,7 @@ namespace PopNTouch2.Model
         {
             this.Game = new Game(song);
             this.UpToDateGame = true;
-            if (!this.Players.Any())
-            {
-                this.Players.Add(new Player());
-            }
+
             foreach (Player player in this.Players)
             {
                 player.InformNewGame();
@@ -103,17 +100,27 @@ namespace PopNTouch2.Model
 
         // Called by a player > at least one player existing and ready
         // A revoir (appelé par la VM ?)
-        public void Ready()
+        public void Ready(bool autolaunch = true)
         {
             Boolean everyoneReady = true;
             foreach (Player player in this.Players)
             {
                 everyoneReady &= player.Ready;
             }
+
+            if (!autolaunch)
+            {
+                return;
+            }
+
             if (everyoneReady && !this.Game.IsPlaying)
+            {
                 this.Game.Launch();
+            }
             else if (everyoneReady && this.Game.IsPlaying)
-                ; // Place the sheet reader to the right part of the sheet then play
+            {
+                // Place the sheet reader to the right part of the sheet then play 
+            }
         }
     }
 }

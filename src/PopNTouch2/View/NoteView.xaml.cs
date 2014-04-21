@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Surface.Presentation.Controls;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,7 +18,7 @@ namespace PopNTouch2.View
     /// <summary>
     /// Interaction logic for NoteView.xaml
     /// </summary>
-    public partial class NoteView : UserControl
+    public partial class NoteView : ScatterViewItem
     {
         public NoteView()
         {
