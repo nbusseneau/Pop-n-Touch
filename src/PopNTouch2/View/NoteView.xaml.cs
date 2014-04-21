@@ -18,7 +18,7 @@ namespace PopNTouch2.View
     /// <summary>
     /// Interaction logic for NoteView.xaml
     /// </summary>
-    public partial class NoteView : ScatterViewItem
+    public partial class NoteView : UserControl
     {
         public NoteView()
         {

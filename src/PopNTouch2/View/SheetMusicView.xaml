@@ -24,8 +24,8 @@
                     <Setter Property="BorderBrush" Value="{x:Null}" />
                     <Setter Property="Foreground" Value="{DynamicResource {x:Static s:SurfaceColors.ScatterViewItemForegroundBrushKey}}" />
                     <Setter Property="BorderThickness" Value="0" />
-                    <Setter Property="Width"  Value="125"/>
-                    <Setter Property="Height" Value="260"/>
+                    <Setter Property="Width"  Value="90"/>
+                    <Setter Property="Height" Value="200"/>
                     <Setter Property="CanScale" Value="False"/>
                     <Setter Property="CanRotate" Value="False"/>
                     <Setter Property="CanMove" Value="False"/>
