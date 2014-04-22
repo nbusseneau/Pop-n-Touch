@@ -7,7 +7,7 @@
              xmlns:ViewModel="clr-namespace:PopNTouch2.ViewModel"
              xmlns:s="http://schemas.microsoft.com/surface/2008"
              mc:Ignorable="d"
-             Background="Transparent" Height="200" Width="90">
+             Background="Transparent" Height="150" Width="90">
 
     <UserControl.Resources>
         <BitmapImage x:Key="Crotchet" UriSource="../Resources/UI/Notes/crotchet.png"></BitmapImage>
@@ -16,6 +16,6 @@
     </UserControl.Resources>
 
     <Grid Background="Transparent">
-        <Image Name="noteImage" Source="{DynamicResource Minim}" />
+        <Image Name="noteImage" Source="{DynamicResource Minim}" Stretch="None"/>
     </Grid>
 </UserControl>

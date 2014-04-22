@@ -13,6 +13,33 @@ namespace PopNTouch2.ViewModel
         public SheetMusic Sheet { get; set; }
 
         /// <summary>
+        /// Y axis distances to place each note correctly
+        /// </summary>
+        private Dictionary<Height, double> NoteOffsets { get; set; }
+
+        public SheetMusicVM()
+        {
+            double currentOffset = 150;
+            double offset = 20;
+            this.NoteOffsets = new Dictionary<Height, double>()
+            {
+                {Height.Do, currentOffset},
+                {Height.Rest, currentOffset / 2},
+            };
+
+            foreach (string s in Enum.GetNames(typeof(Height)))
+            {
+                Height h = (Height) Enum.Parse(typeof(Height), s);
+                if (h.Equals(Height.Do) || h.Equals(Height.Rest))
+                {
+                    continue;
+                }
+                currentOffset -= offset;
+                this.NoteOffsets.Add(h, currentOffset);
+            }
+        }
+
+        /// <summary>
         /// Observable list of Notes
         /// Watched in XAML
         /// </summary>
@@ -33,7 +60,9 @@ namespace PopNTouch2.ViewModel
         /// <param name="note"></param>
         public void AddNote(Note note)
         {
-            this.notes.Add(new NoteVM(note));
+            NoteVM nvm = new NoteVM(note);
+            nvm.SetStartCenter(this.NoteOffsets[note.Height]);
+            this.notes.Add(nvm);
             RaisePropertyChanged("Notes");
         }
 
