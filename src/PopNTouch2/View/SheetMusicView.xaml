@@ -12,6 +12,7 @@
 
     <Grid>
         <Grid.Resources>
+            
             <Style x:Key="ScatterNotesStyle" TargetType="{x:Type s:ScatterViewItem}">
                 <Setter Property="Background" Value="Transparent" />
                 <Setter Property="BorderBrush" Value="{x:Null}" />
@@ -26,13 +27,24 @@
                 <Setter Property="Template">
                     <Setter.Value>
                         <ControlTemplate TargetType="{x:Type s:ScatterViewItem}">
+                            
                             <Grid x:Name="container" RenderTransformOrigin="{TemplateBinding RenderTransformOrigin}">
                                 <Grid.RenderTransform>
                                     <ScaleTransform ScaleX="1" ScaleY="1" />
                                 </Grid.RenderTransform>
 
-                                <PopNTouch2:NoteView />
+                                <PopNTouch2:NoteView/>
                             </Grid>
+                            
+                            <ControlTemplate.Triggers>
+                                <EventTrigger RoutedEvent="Loaded">
+                                    <BeginStoryboard>
+                                        <Storyboard>
+                                            <PointAnimation Storyboard.TargetProperty="Center" From="550,-10" To="30,-10" Duration="0:0:2.5"/>
+                                        </Storyboard>
+                                    </BeginStoryboard>
+                                </EventTrigger>
+                            </ControlTemplate.Triggers>
                         </ControlTemplate>
                     </Setter.Value>
                 </Setter>
