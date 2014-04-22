@@ -38,9 +38,76 @@
                 </Setter>
             </Style>
         </Grid.Resources>
-        
+
         <Image HorizontalAlignment="Center" VerticalAlignment="Top" Source="../Resources/UI/BGP_SheetMusic.png" Stretch="Fill" Panel.ZIndex="-1"/>
-        <s:ScatterView ItemsSource="{Binding Notes}" Margin="10" >
+
+        <s:ScatterView ItemsSource="{Binding DoNotes}" Margin="10,165,10,30">
+            <s:ScatterView.Resources>
+                <DataTemplate DataType="{x:Type ViewModel:NoteVM}">
+                    <s:ScatterViewItem />
+                </DataTemplate>
+            </s:ScatterView.Resources>
+            <s:ScatterView.ItemContainerStyle>
+                <Style TargetType="{x:Type s:ScatterViewItem}" BasedOn="{StaticResource ScatterNotesStyle}" />
+            </s:ScatterView.ItemContainerStyle>
+        </s:ScatterView>
+
+        <s:ScatterView ItemsSource="{Binding ReNotes}" Margin="10,155,10,40">
+            <s:ScatterView.Resources>
+                <DataTemplate DataType="{x:Type ViewModel:NoteVM}">
+                    <s:ScatterViewItem />
+                </DataTemplate>
+            </s:ScatterView.Resources>
+            <s:ScatterView.ItemContainerStyle>
+                <Style TargetType="{x:Type s:ScatterViewItem}" BasedOn="{StaticResource ScatterNotesStyle}" />
+            </s:ScatterView.ItemContainerStyle>
+        </s:ScatterView>
+
+        <s:ScatterView ItemsSource="{Binding MiNotes}" Margin="10,145,10,50">
+            <s:ScatterView.Resources>
+                <DataTemplate DataType="{x:Type ViewModel:NoteVM}">
+                    <s:ScatterViewItem />
+                </DataTemplate>
+            </s:ScatterView.Resources>
+            <s:ScatterView.ItemContainerStyle>
+                <Style TargetType="{x:Type s:ScatterViewItem}" BasedOn="{StaticResource ScatterNotesStyle}" />
+            </s:ScatterView.ItemContainerStyle>
+        </s:ScatterView>
+
+        <s:ScatterView ItemsSource="{Binding FaNotes}" Margin="10,135,10,60" >
+            <s:ScatterView.Resources>
+                <DataTemplate DataType="{x:Type ViewModel:NoteVM}">
+                    <s:ScatterViewItem />
+                </DataTemplate>
+            </s:ScatterView.Resources>
+            <s:ScatterView.ItemContainerStyle>
+                <Style TargetType="{x:Type s:ScatterViewItem}" BasedOn="{StaticResource ScatterNotesStyle}" />
+            </s:ScatterView.ItemContainerStyle>
+        </s:ScatterView>
+
+        <s:ScatterView ItemsSource="{Binding SolNotes}" Margin="10,120,10,75" >
+            <s:ScatterView.Resources>
+                <DataTemplate DataType="{x:Type ViewModel:NoteVM}">
+                    <s:ScatterViewItem />
+                </DataTemplate>
+            </s:ScatterView.Resources>
+            <s:ScatterView.ItemContainerStyle>
+                <Style TargetType="{x:Type s:ScatterViewItem}" BasedOn="{StaticResource ScatterNotesStyle}" />
+            </s:ScatterView.ItemContainerStyle>
+        </s:ScatterView>
+
+        <s:ScatterView ItemsSource="{Binding LaNotes}" Margin="10,110,10,85" >
+            <s:ScatterView.Resources>
+                <DataTemplate DataType="{x:Type ViewModel:NoteVM}">
+                    <s:ScatterViewItem />
+                </DataTemplate>
+            </s:ScatterView.Resources>
+            <s:ScatterView.ItemContainerStyle>
+                <Style TargetType="{x:Type s:ScatterViewItem}" BasedOn="{StaticResource ScatterNotesStyle}" />
+            </s:ScatterView.ItemContainerStyle>
+        </s:ScatterView>
+
+        <s:ScatterView ItemsSource="{Binding SiNotes}" Margin="10,95,10,100">
             <s:ScatterView.Resources>
                 <DataTemplate DataType="{x:Type ViewModel:NoteVM}">
                     <s:ScatterViewItem />

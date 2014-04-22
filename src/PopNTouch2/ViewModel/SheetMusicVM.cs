@@ -12,47 +12,105 @@ namespace PopNTouch2.ViewModel
     {
         public SheetMusic Sheet { get; set; }
 
-        /// <summary>
-        /// Y axis distances to place each note correctly
-        /// </summary>
-        private Dictionary<Height, double> NoteOffsets { get; set; }
-
         public SheetMusicVM()
         {
-            double currentOffset = 150;
-            double offset = 20;
-            this.NoteOffsets = new Dictionary<Height, double>()
-            {
-                {Height.Do, currentOffset},
-                {Height.Rest, currentOffset / 2},
-            };
-
-            foreach (string s in Enum.GetNames(typeof(Height)))
-            {
-                Height h = (Height) Enum.Parse(typeof(Height), s);
-                if (h.Equals(Height.Do) || h.Equals(Height.Rest))
-                {
-                    continue;
-                }
-                currentOffset -= offset;
-                this.NoteOffsets.Add(h, currentOffset);
-            }
         }
 
         /// <summary>
         /// Observable list of Notes
         /// Watched in XAML
         /// </summary>
-        private ObservableCollection<NoteVM> notes = new AsyncObservableCollection<NoteVM>();
-        public IEnumerable<NoteVM> Notes
+        #region Notes ObservableCollections
+
+        private ObservableCollection<NoteVM> doNotes = new AsyncObservableCollection<NoteVM>();
+        public IEnumerable<NoteVM> DoNotes
         {
-            get { return this.notes; }
+            get { return this.doNotes; }
             set
             {
-                this.notes = (ObservableCollection<NoteVM>)value;
-                RaisePropertyChanged("Instruments");
+                this.doNotes = (ObservableCollection<NoteVM>)value;
+                RaisePropertyChanged("DoNotes");
             }
         }
+
+        private ObservableCollection<NoteVM> reNotes = new AsyncObservableCollection<NoteVM>();
+        public IEnumerable<NoteVM> ReNotes
+        {
+            get { return this.reNotes; }
+            set
+            {
+                this.reNotes = (ObservableCollection<NoteVM>)value;
+                RaisePropertyChanged("ReNotes");
+            }
+        }
+
+        private ObservableCollection<NoteVM> miNotes = new AsyncObservableCollection<NoteVM>();
+        public IEnumerable<NoteVM> MiNotes
+        {
+            get { return this.miNotes; }
+            set
+            {
+                this.miNotes = (ObservableCollection<NoteVM>)value;
+                RaisePropertyChanged("MiNotes");
+            }
+        }
+
+        private ObservableCollection<NoteVM> faNotes = new AsyncObservableCollection<NoteVM>();
+        public IEnumerable<NoteVM> FaNotes
+        {
+            get { return this.faNotes; }
+            set
+            {
+                this.faNotes = (ObservableCollection<NoteVM>)value;
+                RaisePropertyChanged("FaNotes");
+            }
+        }
+
+        private ObservableCollection<NoteVM> solNotes = new AsyncObservableCollection<NoteVM>();
+        public IEnumerable<NoteVM> SolNotes
+        {
+            get { return this.solNotes; }
+            set
+            {
+                this.solNotes = (ObservableCollection<NoteVM>)value;
+                RaisePropertyChanged("SolNotes");
+            }
+        }
+
+        private ObservableCollection<NoteVM> laNotes= new AsyncObservableCollection<NoteVM>();
+        public IEnumerable<NoteVM> LaNotes
+        {
+            get { return this.laNotes; }
+            set
+            {
+                this.laNotes = (ObservableCollection<NoteVM>)value;
+                RaisePropertyChanged("LaNotes");
+            }
+        }
+
+        private ObservableCollection<NoteVM> siNotes = new AsyncObservableCollection<NoteVM>();
+        public IEnumerable<NoteVM> SiNotes
+        {
+            get { return this.siNotes; }
+            set
+            {
+                this.siNotes = (ObservableCollection<NoteVM>)value;
+                RaisePropertyChanged("SiNotes");
+            }
+        }
+
+        private ObservableCollection<NoteVM> rests = new AsyncObservableCollection<NoteVM>();
+        public IEnumerable<NoteVM> Rests
+        {
+            get { return this.rests; }
+            set
+            {
+                this.rests = (ObservableCollection<NoteVM>)value;
+                RaisePropertyChanged("Rests");
+            }
+        }
+
+        #endregion
 
         /// <summary>
         /// Adds Note note to collection
@@ -61,9 +119,41 @@ namespace PopNTouch2.ViewModel
         public void AddNote(Note note)
         {
             NoteVM nvm = new NoteVM(note);
-            nvm.SetStartCenter(this.NoteOffsets[note.Height]);
-            this.notes.Add(nvm);
-            RaisePropertyChanged("Notes");
+            switch (note.Height)
+            {
+                case Height.Do :
+                    this.doNotes.Add(nvm);
+                    RaisePropertyChanged("DoNotes");
+                    break;
+                case Height.Re:
+                    this.reNotes.Add(nvm);
+                    RaisePropertyChanged("ReNotes");
+                    break;
+                case Height.Mi:
+                    this.miNotes.Add(nvm);
+                    RaisePropertyChanged("MiNotes");
+                    break;
+                case Height.Fa:
+                    this.faNotes.Add(nvm);
+                    RaisePropertyChanged("FaNotes");
+                    break;
+                case Height.Sol:
+                    this.solNotes.Add(nvm);
+                    RaisePropertyChanged("SolNotes");
+                    break;
+                case Height.La:
+                    this.laNotes.Add(nvm);
+                    RaisePropertyChanged("LaNotes");
+                    break;
+                case Height.Si:
+                    this.siNotes.Add(nvm);
+                    RaisePropertyChanged("SiNotes");
+                    break;
+                case Height.Rest:
+                    this.rests.Add(nvm);
+                    RaisePropertyChanged("Rests");
+                    break;
+            }
         }
 
         private bool visibility = false;

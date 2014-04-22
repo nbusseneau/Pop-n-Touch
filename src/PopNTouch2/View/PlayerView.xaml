@@ -16,13 +16,13 @@
     </UserControl.Resources>
 
     <Grid Margin="0,0,0,0">
-        
+
         <Grid.Resources>
             <!-- Flashing effect -->
             <Storyboard x:Key="flashAnimation">
                 <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0.2" To="1" AutoReverse="True" Duration="0:0:0.4" RepeatBehavior="0:0:2"/>
             </Storyboard>
-            
+
             <!-- "Ready" button style -->
             <Style x:Key="ToggleButtonStyle" TargetType="{x:Type s:SurfaceToggleButton}">
                 <Style.Triggers>
@@ -46,7 +46,7 @@
                     </DataTrigger>
                 </Style.Triggers>
             </Style>
-            
+
         </Grid.Resources>
 
         <!-- Background border -->
@@ -70,7 +70,7 @@
             <Image />
         </s:SurfaceToggleButton>
         <StackPanel Orientation="Horizontal" Visibility="{Binding ChoicesEnabled, Converter={StaticResource bool2vis}}" HorizontalAlignment="Left" Width="615" Height="216" VerticalAlignment="Bottom" Margin="40,0,0,105">
-            
+
             <!-- Difficulty buttons -->
             <Grid Background="Transparent">
                 <Grid.Resources>
@@ -110,9 +110,9 @@
                             </DataTrigger>
                         </Style.Triggers>
                     </Style>
-                    
+
                 </Grid.Resources>
-                
+
                 <TextBlock Text="Difficulty" Foreground="Black" FontWeight="Bold" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="66,10,69,0"/>
                 <s:SurfaceButton Style="{StaticResource SelectedEasyButtonStyle}" Command="{Binding PickDifficulty}" CommandParameter="Beginner" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Margin="10,86,0,0" Width="51">
                     <Image Source="../Resources/UI/BTNP_Easy.png" IsHitTestVisible="False"/>
@@ -174,7 +174,7 @@
                         </Style.Triggers>
                     </Style>
                 </Grid.Resources>
-                
+
                 <TextBlock Text="Instrument" Foreground="Black" FontWeight="Bold" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="76,10,59,0"/>
                 <ItemsControl ItemsSource="{Binding Instruments}">
                     <ItemsControl.ItemsPanel>
@@ -188,13 +188,13 @@
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>
-                
+
             </Grid>
         </StackPanel>
 
         <!-- Stave -->
-        <PopNTouch2:SheetMusicView DataContext="{Binding SheetMusic}" Visibility="{Binding Visibility, Converter={StaticResource bool2vis}}" Margin="35,96,36,105"/>
-        
+        <PopNTouch2:SheetMusicView DataContext="{Binding SheetMusic}" Visibility="{Binding Visibility, Converter={StaticResource bool2vis}}" Margin="35,96,0,0" HorizontalAlignment="Left" Width="580" Height="210" VerticalAlignment="Top"/>
+
         <!-- Feedback -->
         <!-- TODO : Make this a StoryBoard we can then launch -->
         <Ellipse x:Name="fdbckCorrect" HorizontalAlignment="Left" Height="30" Margin="168,44,0,0" Stroke="Green" Fill="GreenYellow" VerticalAlignment="Top" Width="30" Visibility="Hidden"/>

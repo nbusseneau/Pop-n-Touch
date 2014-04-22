@@ -28,11 +28,12 @@ namespace PopNTouch2.ViewModel
         public NoteVM(Note note)
         {
             this.Note = note;
+            this.SetStartCenter();
         }
 
-        public void SetStartCenter(double topOffset)
+        public void SetStartCenter()
         {
-            this.Center = new Point(CONTAINER_WIDTH - 30, topOffset);
+            this.Center = new Point(CONTAINER_WIDTH - 30, -10);
         }
     }
 }
