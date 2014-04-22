@@ -10,14 +10,15 @@
              Background="Transparent" Height="150" Width="90">
 
     <UserControl.Resources>
-        <BitmapImage x:Key="Quarter" UriSource="../Resources/UI/Notes/crotchet.png"></BitmapImage>
+        <BitmapImage x:Key="Whole" UriSource="../Resources/UI/Notes/whole.png"></BitmapImage>
         <BitmapImage x:Key="Half" UriSource="../Resources/UI/Notes/minim.png"></BitmapImage>
+        <BitmapImage x:Key="Quarter" UriSource="../Resources/UI/Notes/crotchet.png"></BitmapImage>
         <BitmapImage x:Key="Eighth" UriSource="../Resources/UI/Notes/quaver.png"></BitmapImage>
 
         <Style x:Key="NoteStyle" TargetType="{x:Type Image}">
             <Style.Triggers>
                 <DataTrigger Binding="{Binding Note.Length}" Value="Whole">
-                    <Setter Property="Source" Value="{DynamicResource Half}" />
+                    <Setter Property="Source" Value="{DynamicResource Whole}" />
                 </DataTrigger>
                 <DataTrigger Binding="{Binding Note.Length}" Value="Half">
                     <Setter Property="Source" Value="{DynamicResource Half}" />
