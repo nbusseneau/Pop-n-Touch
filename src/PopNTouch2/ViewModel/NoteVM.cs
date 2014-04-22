@@ -9,8 +9,6 @@ namespace PopNTouch2.ViewModel
 {
     public class NoteVM : ViewModelBase
     {
-        private const double CONTAINER_WIDTH = 580;
-
         public Note Note { get; set; }
 
         private Point center;
@@ -28,12 +26,6 @@ namespace PopNTouch2.ViewModel
         public NoteVM(Note note)
         {
             this.Note = note;
-            this.SetStartCenter();
-        }
-
-        public void SetStartCenter()
-        {
-            this.Center = new Point(CONTAINER_WIDTH - 30, -10);
         }
     }
 }

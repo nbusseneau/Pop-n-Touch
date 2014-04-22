@@ -21,6 +21,7 @@ namespace PopNTouch2.ViewModel
         }
 
         public event EventHandler CanExecuteChanged;
+
         public void Execute(object parameter)
         {
             if (execute != null)

@@ -87,12 +87,14 @@ namespace PopNTouch2.ViewModel
                 if (addPlayer == null)
                     addPlayer = new RelayCommand(() =>
                     {
-                        Player player = new Player();
-                        GameMaster.Instance.NewPlayer(player);
-                        PlayerVM playerVM = new PlayerVM(player);
-                        this.players.Add(playerVM);
-                        RaisePropertyChanged("Players");
-
+                        if (this.players.Count < 4) // FIXME : should be handled by RelayCommand.CanExecute (can't figure out how)
+                        {
+                            Player player = new Player();
+                            GameMaster.Instance.NewPlayer(player);
+                            PlayerVM playerVM = new PlayerVM(player);
+                            this.players.Add(playerVM);
+                            RaisePropertyChanged("Players");
+                        }
                     });
                 return this.addPlayer;
             }
