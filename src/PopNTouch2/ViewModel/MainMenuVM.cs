@@ -30,11 +30,11 @@ namespace PopNTouch2.ViewModel
             };
             this.Margins = new List<Thickness>() 
             {
-                new Thickness(950,540,729,260),
-                new Thickness(0,0,-400,0),
-                new Thickness(0,0,-300,310),
-                new Thickness(910,230,910,0),
-                new Thickness(0,0,350,310),
+                new Thickness(1018,582,802,298),
+                new Thickness(0,-1085,-380,0),
+                new Thickness(0,-1390,-280,0),
+                new Thickness(0,-1450,0,0),
+                new Thickness(0,-1280,370,0),
             };
             this.ImageKeys = new List<String>();
             for (int i = 1; i <= 5; i++)
