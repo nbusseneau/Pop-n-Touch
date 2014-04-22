@@ -10,38 +10,66 @@
     
     <s:ScatterView MinHeight="1080" MaxHeight="1080" MaxWidth="1920" MinWidth="1920" Width="1920" Height="1080" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" Panel.ZIndex="10">
         <s:ScatterViewItem ShowsActivationEffects="False" AngularDeceleration="0.1" Name="menu" MinHeight="1080" MaxHeight="1080" MaxWidth="1920" MinWidth="1920" Width="1920" CanMove="false" CanScale="false" CanRotate="true" Center="0,0" Orientation="0" Background="{x:Null}" RenderTransformOrigin="0.5,0.5" Margin="960,540,-960,-540" Height="1080" VerticalAlignment="Top" Panel.ZIndex="10">
-            
             <s:ScatterViewItem.Resources>
-                <ImageBrush x:Key="BrushImgScroll1" ImageSource="../Resources/UI/Scrolls/BTNP_ScrollRoll1.png"/>
-                <ImageBrush x:Key="BrushImgScroll2" ImageSource="../Resources/UI/Scrolls/BTNP_ScrollRoll2.png"/>
-                <ImageBrush x:Key="BrushImgScroll3" ImageSource="../Resources/UI/Scrolls/BTNP_ScrollRoll3.png"/>
-                <ImageBrush x:Key="BrushImgScroll4" ImageSource="../Resources/UI/Scrolls/BTNP_ScrollRoll4.png"/>
-                <ImageBrush x:Key="BrushImgScroll5" ImageSource="../Resources/UI/Scrolls/BTNP_ScrollRoll5.png"/>
+                <BitmapImage x:Key="ImgScroll1" UriSource="../Resources/UI/Scrolls/BTNP_ScrollRoll1.png"/>
+                <BitmapImage x:Key="ImgScroll2" UriSource="../Resources/UI/Scrolls/BTNP_ScrollRoll2.png"/>
+                <BitmapImage x:Key="ImgScroll3" UriSource="../Resources/UI/Scrolls/BTNP_ScrollRoll3.png"/>
+                <BitmapImage x:Key="ImgScroll4" UriSource="../Resources/UI/Scrolls/BTNP_ScrollRoll4.png"/>
+                <BitmapImage x:Key="ImgScroll5" UriSource="../Resources/UI/Scrolls/BTNP_ScrollRoll5.png"/>
+
+                <!-- Song button backgrounds style -->
+                <Style x:Key="SongButtonStyle" TargetType="{x:Type Image}">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding ImageIndex}" Value="0">
+                            <Setter Property="Source" Value="{DynamicResource ImgScroll1}"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ImageIndex}" Value="1">
+                            <Setter Property="Source" Value="{DynamicResource ImgScroll2}"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ImageIndex}" Value="2">
+                            <Setter Property="Source" Value="{DynamicResource ImgScroll3}"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ImageIndex}" Value="3">
+                            <Setter Property="Source" Value="{DynamicResource ImgScroll4}"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ImageIndex}" Value="4">
+                            <Setter Property="Source" Value="{DynamicResource ImgScroll5}"/>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
             </s:ScatterViewItem.Resources>
             
-            <Grid Height="1080" Width="1920">
-                <ItemsControl ItemsSource="{Binding Songs}">
-                    <ItemsControl.ItemTemplate>
-                        <DataTemplate DataType="{x:Type ViewModel:SongVM}" >
-                            <s:SurfaceButton Command="{Binding SelectSong}" Height="200" Width="100"  HorizontalAlignment="Center" Margin="{Binding Margin}" VerticalAlignment="Center" Padding="12" RenderTransformOrigin="0.5,0.5" Background="{x:Null}"  BorderBrush="White">
-                                <s:SurfaceButton.RenderTransform>
-                                    <TransformGroup>
-                                        <ScaleTransform/>
-                                        <SkewTransform/>
-                                        <RotateTransform Angle="{Binding Angle}"/>
-                                        <TranslateTransform/>
-                                    </TransformGroup>
-                                </s:SurfaceButton.RenderTransform>
-                                <Grid>
-                                    <TextBlock Text="{Binding Song.Title}" />
-                                    <!-- FIXME : Doesn't work for now (impossible to bind a dynamic resource) -->
-                                    <Image Height="200" Width="100" Source="{DynamicResource {Binding ImageKey}}"/>
-                                </Grid>
-                            </s:SurfaceButton>
-                        </DataTemplate>
-                    </ItemsControl.ItemTemplate>
-                </ItemsControl>
-            </Grid>
+            <s:ScatterViewItem.Template>
+                <ControlTemplate>
+                    <Grid Height="1080" Width="1920" x:Name="container" RenderTransformOrigin="{TemplateBinding RenderTransformOrigin}">
+                        <Grid.RenderTransform>
+                            <ScaleTransform ScaleX="1" ScaleY="1" />
+                        </Grid.RenderTransform>
+
+                        <ItemsControl ItemsSource="{Binding Songs}">
+                            <ItemsControl.ItemTemplate>
+                                <DataTemplate DataType="{x:Type ViewModel:SongVM}" >
+                                    <s:SurfaceButton Command="{Binding SelectSong}" Height="200" Width="100"  HorizontalAlignment="Center" Margin="{Binding Margin}" VerticalAlignment="Center" Padding="12" RenderTransformOrigin="0.5,0.5" Background="{x:Null}"  BorderBrush="White">
+                                        <s:SurfaceButton.RenderTransform>
+                                            <TransformGroup>
+                                                <ScaleTransform/>
+                                                <SkewTransform/>
+                                                <RotateTransform Angle="{Binding Angle}"/>
+                                                <TranslateTransform/>
+                                            </TransformGroup>
+                                        </s:SurfaceButton.RenderTransform>
+                                        <Grid>
+                                            <TextBlock Text="{Binding Song.Title}" />
+                                            <!-- FIXME : Doesn't work for now (impossible to bind a dynamic resource) -->
+                                            <Image Height="200" Width="100" Style="{StaticResource SongButtonStyle}"/>
+                                        </Grid>
+                                    </s:SurfaceButton>
+                                </DataTemplate>
+                            </ItemsControl.ItemTemplate>
+                        </ItemsControl>
+                    </Grid>
+                </ControlTemplate>
+            </s:ScatterViewItem.Template>
         </s:ScatterViewItem>
     </s:ScatterView>
 

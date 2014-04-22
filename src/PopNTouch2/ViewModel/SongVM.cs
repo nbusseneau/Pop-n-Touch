@@ -35,15 +35,9 @@ namespace PopNTouch2.ViewModel
             }
         }
 
-        private String imageKey;
-        public String ImageKey
+        public int ImageIndex
         {
-            get { return imageKey; }
-            set 
-            { 
-                imageKey = value;
-                RaisePropertyChanged("ImageKey");
-            }
+            get { return this.Song.Index % 5; }
         }
 
         public SongVM(Song song, MainMenuVM menuVM)

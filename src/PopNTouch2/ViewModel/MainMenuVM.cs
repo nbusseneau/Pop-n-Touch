@@ -112,7 +112,6 @@ namespace PopNTouch2.ViewModel
             int param = this.songs.Count % MAX_DISPLAYED_SONGS;
             songVM.Angle = this.Angles[param];
             songVM.Margin = this.Margins[param];
-            songVM.ImageKey = this.ImageKeys[param];
             this.songs.Add(songVM);
             RaisePropertyChanged("Songs");
         }
