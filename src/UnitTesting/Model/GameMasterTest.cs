@@ -69,7 +69,7 @@ namespace UnitTesting.Model
             }
 
             // Act
-            gameMaster.NewPlayer();
+            gameMaster.NewPlayer(new Player());
             int numberOne = 0;
             foreach (Player p in gameMaster.Players)
             {
@@ -93,7 +93,7 @@ namespace UnitTesting.Model
         {
             GameMaster gameMaster = GameMaster.Instance;
             gameMaster.SelectSong(song);
-            gameMaster.NewPlayer();
+            gameMaster.NewPlayer(new Player());
             gameMaster.Ready();
             Assert.IsFalse(gameMaster.Game.IsPlaying);
 

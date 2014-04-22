@@ -11,6 +11,7 @@ namespace PopNTouch2.Model
         public Song Song { get; set; }
         public Boolean IsPlaying { get; set; }
         public int TimeElapsed { get; set; }
+        public AudioController MusicPlayback { get; set; }
 
         public Game(Song s)
         {
@@ -35,6 +36,7 @@ namespace PopNTouch2.Model
                 this.TimeElapsed++;
             };
             timer.Start();
+            this.MusicPlayback = new AudioController(Song.File, true);
         }
 
         /// <summary>
