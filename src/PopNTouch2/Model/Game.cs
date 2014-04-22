@@ -17,10 +17,13 @@ namespace PopNTouch2.Model
             this.Song = s;
         }
 
+        /// <summary>
+        /// Launch the game 
+        /// Launch the sheet reading by players
+        /// Launch the time elapsed counter
+        /// </summary>
         public void Launch()
         {
-            System.Console.WriteLine("Le jeu se lance !");
-
             this.IsPlaying = true;
             foreach (Player player in GameMaster.Instance.Players)
             {
@@ -34,6 +37,10 @@ namespace PopNTouch2.Model
             timer.Start();
         }
 
+        /// <summary>
+        /// Add a player in the middle of a game
+        /// </summary>
+        /// <param name="player">The player to add</param>
         // Maybe not very accurate
         public void AddPlayerInGame(Player player)
         {

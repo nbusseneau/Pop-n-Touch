@@ -18,17 +18,21 @@ namespace PopNTouch2.Model
         public List<Song> Songs { get; private set; }
         public List<Player> Players { get; private set; }
         public Game Game { get; private set; }
-        public Boolean UpToDateGame { get; private set; }
+        public Boolean SongSelected { get; private set; }
         public SheetBuilder SheetBuilder { get; private set; }
 
         private GameMaster()
         {
             this.Songs = this.LoadSongs();
             this.Players = new List<Player>();
-            this.UpToDateGame = false;
+            this.SongSelected = false;
             this.SheetBuilder = new SheetBuilder(this.SongsDirectory);
         }
 
+        /// <summary>
+        /// Find and stock all the existing songs
+        /// </summary>
+        /// <returns>A list a the songs</returns>
         private List<Song> LoadSongs()
         {
             List<Song> songs = new List<Song>();
@@ -80,10 +84,15 @@ namespace PopNTouch2.Model
             return songs;
         }
 
+        /// <summary>
+        /// Select a song
+        /// Put the game up to date
+        /// </summary>
+        /// <param name="song">The selected song</param>
         public void SelectSong(Song song)
         {
             this.Game = new Game(song);
-            this.UpToDateGame = true;
+            this.SongSelected = true;
 
             foreach (Player player in this.Players)
             {
@@ -91,22 +100,18 @@ namespace PopNTouch2.Model
             }
         }
 
-        // Attribute ok ? See later
+        /// <summary>
+        /// Add a player before or during the game
+        /// </summary>
+        /// <param name="player">The added player</param>
         public void NewPlayer(Player player)
         {
             this.Players.Add(player);
-            if (this.UpToDateGame)
+            if (this.SongSelected)
                 player.InformNewGame();
         }
 
-        public void NewPlayer()
-        {
-            Player player = new Player();
-            this.NewPlayer(player);
-        }
-
-        // Called by a player > at least one player existing and ready
-        // A revoir (appelé par la VM ?)
+        // Really useful ?
         public void Ready(bool autolaunch = true)
         {
             Boolean everyoneReady = true;

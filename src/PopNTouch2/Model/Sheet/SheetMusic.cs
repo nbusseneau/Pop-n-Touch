@@ -8,7 +8,7 @@ namespace PopNTouch2.Model
     public class SheetMusic
     {
         public double FirstRest { get; set; }
-        // Represents a couple (time when the next note should appear relatively to the current note ~ length of the current note, note)
+        // Represents a couple (time when the note should appear, note)
         public List<Tuple<double, Note>> Notes { get; set; }
         public List<IBonus> Bonuses { get; set; }
         public int MaxScore { get; set; }

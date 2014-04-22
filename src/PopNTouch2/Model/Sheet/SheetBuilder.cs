@@ -18,6 +18,36 @@ namespace PopNTouch2.Model
             this.SongsDirectory = songsDirectory;
         }
 
+        /// <summary>
+        /// Associate a note length with a double value
+        /// </summary>
+        /// <param name="length"></param>
+        /// <returns></returns>
+        private static double LengthValue(Length length)
+        {
+            switch (length)
+            {
+                case Length.Eighth:
+                    return 0.5;
+                case Length.Quarter:
+                    return 1.0;
+                case Length.Half:
+                    return 2.0;
+                case Length.Whole:
+                    return 4.0;
+                default:
+                    Console.WriteLine("No associated Length. Put LengthValue in SheetBuilder up to date.");
+                    return 0.0;
+            }
+        }
+
+        /// <summary>
+        /// Build the sheet of the player
+        /// </summary>
+        /// <param name="song">The song chosen to be played</param>
+        /// <param name="instr">The instrument of the player</param>
+        /// <param name="diff">The difficulty chosen by the player</param>
+        /// <returns></returns>
         public SheetMusic BuildSheet(Song song, Instrument instr, Difficulty diff)
         {
             SheetMusic sheetMusic = new SheetMusic();
@@ -69,24 +99,6 @@ namespace PopNTouch2.Model
             // Set maximum score
             sheetMusic.MaxScore = sheetMusic.Notes.Count * 10;
             return sheetMusic;
-        }
-
-        public static double LengthValue(Length length)
-        {
-            switch (length)
-            {
-                case Length.Eighth:
-                    return 0.5;
-                case Length.Quarter:
-                    return 1.0;
-                case Length.Half:
-                    return 2.0;
-                case Length.Whole:
-                    return 4.0;
-                default:
-                    Console.WriteLine("No associated Length. Put LengthValue in SheetBuilder up to date.");
-                    return 0.0;
-            }
         }
 
         /*public static void Main()

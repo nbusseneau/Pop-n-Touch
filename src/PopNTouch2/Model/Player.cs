@@ -31,12 +31,19 @@ namespace PopNTouch2.Model
             this.Ready = false;
         }
 
+        /// <summary>
+        /// Inform the player a song is selected, a game is created 
+        /// and it can chose an instrument and a difficulty
+        /// </summary>
         public void InformNewGame()
         {
             this.CurrentGame = GameMaster.Instance.Game;
             this.Ready = false;
         }
 
+        /// <summary>
+        /// The player has chosen instrument and difficulty
+        /// </summary>
         public void IMReady()
         {
             // FIXME : Uncomment these lines once everything is correctly instanciated
@@ -46,6 +53,9 @@ namespace PopNTouch2.Model
             // GameMaster.Instance.Ready();
         }
 
+        /// <summary>
+        /// The player has something to do before launching the game
+        /// </summary>
         public void NotReadyAnymore()
         {
             this.Ready = false;
@@ -70,10 +80,15 @@ namespace PopNTouch2.Model
         };
         */
 
-        public void ReadSheet(bool EnumGiven = false, List<Tuple<double, Note>>.Enumerator e = new List<Tuple<double, Note>>.Enumerator())
+        /// <summary>
+        /// Launch the sheet reading of the player
+        /// </summary>
+        /// <param name="IsAnEnumeratorGiven">Is there a given enumerator in parameters ?</param>
+        /// <param name="e">Enumerator given when adding a player in a launched game</param>
+        public void ReadSheet(bool IsAnEnumeratorGiven = false, List<Tuple<double, Note>>.Enumerator e = new List<Tuple<double, Note>>.Enumerator())
         {
             this.enumerator = this.SheetMusic.Notes.GetEnumerator();
-            if (EnumGiven)
+            if (IsAnEnumeratorGiven)
             {
                 this.enumerator = e;
             }
@@ -83,7 +98,12 @@ namespace PopNTouch2.Model
             this.Timer.Start();
         }
 
-        public void OnTimerTicked(object source, ElapsedEventArgs e)
+        /// <summary>
+        /// Launch an event with the note to play when it has to be played
+        /// </summary>
+        /// <param name="source"></param>
+        /// <param name="e"></param>
+        private void OnTimerTicked(object source, ElapsedEventArgs e)
         {
             double PreviousTime = 0;
             if (this.enumerator.Current != null)
