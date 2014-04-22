@@ -10,12 +10,29 @@
              Background="Transparent" Height="150" Width="90">
 
     <UserControl.Resources>
-        <BitmapImage x:Key="Crotchet" UriSource="../Resources/UI/Notes/crotchet.png"></BitmapImage>
-        <BitmapImage x:Key="Minim" UriSource="../Resources/UI/Notes/minim.png"></BitmapImage>
-        <BitmapImage x:Key="Quaver" UriSource="../Resources/UI/Notes/quaver.png"></BitmapImage>
+        <BitmapImage x:Key="Quarter" UriSource="../Resources/UI/Notes/crotchet.png"></BitmapImage>
+        <BitmapImage x:Key="Half" UriSource="../Resources/UI/Notes/minim.png"></BitmapImage>
+        <BitmapImage x:Key="Eighth" UriSource="../Resources/UI/Notes/quaver.png"></BitmapImage>
+
+        <Style x:Key="NoteStyle" TargetType="{x:Type Image}">
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding Note.Length}" Value="Whole">
+                    <Setter Property="Source" Value="{DynamicResource Half}" />
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Note.Length}" Value="Half">
+                    <Setter Property="Source" Value="{DynamicResource Half}" />
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Note.Length}" Value="Quarter">
+                    <Setter Property="Source" Value="{DynamicResource Quarter}" />
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Note.Length}" Value="Eighth">
+                    <Setter Property="Source" Value="{DynamicResource Eighth}" />
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
     </UserControl.Resources>
 
     <Grid Background="Transparent">
-        <Image Name="noteImage" Source="{DynamicResource Minim}" Stretch="None"/>
+        <Image Style="{DynamicResource NoteStyle}" Stretch="None"/>
     </Grid>
 </UserControl>
