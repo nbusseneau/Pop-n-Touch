@@ -8,7 +8,7 @@ namespace PopNTouch2.Model
 {
     public class Player
     {
-        private List<Tuple<double, Note>>.Enumerator enumerator;
+        private List<Tuple<double, double, Note>>.Enumerator enumerator;
 
         public SheetMusic SheetMusic { get; set; }
         public Game CurrentGame { get; set; }
@@ -85,14 +85,15 @@ namespace PopNTouch2.Model
         /// </summary>
         /// <param name="IsAnEnumeratorGiven">Is there a given enumerator in parameters ?</param>
         /// <param name="e">Enumerator given when adding a player in a launched game</param>
-        public void ReadSheet(bool IsAnEnumeratorGiven = false, List<Tuple<double, Note>>.Enumerator e = new List<Tuple<double, Note>>.Enumerator())
+        public void ReadSheet(bool IsAnEnumeratorGiven = false, List<Tuple<double, double, Note>>.Enumerator e = new List<Tuple<double, double, Note>>.Enumerator())
         {
             this.enumerator = this.SheetMusic.Notes.GetEnumerator();
             if (IsAnEnumeratorGiven)
             {
                 this.enumerator = e;
             }
-            this.Timer = new Timer(this.SheetMusic.FirstRest);
+
+            this.Timer = new Timer(2000);
             this.Timer.AutoReset = false;
             this.Timer.Elapsed += new ElapsedEventHandler(OnTimerTicked);
             this.Timer.Start();
@@ -105,20 +106,21 @@ namespace PopNTouch2.Model
         /// <param name="e"></param>
         private void OnTimerTicked(object source, ElapsedEventArgs e)
         {
-            double PreviousTime = 0;
-            if (this.enumerator.Current != null)
+            double myTime = 0;
+            if (enumerator.Current == null)
             {
-                PreviousTime = this.enumerator.Current.Item1;
+                enumerator.MoveNext();
             }
+            if (Tick != null)
+            {
+                NoteTicked nt = new NoteTicked();
+                nt.Note = this.enumerator.Current.Item3;
+                Tick(this, nt);
+            }
+            myTime = this.enumerator.Current.Item1;
             if (enumerator.MoveNext())
             {
-                if (Tick != null)
-                {
-                    NoteTicked nt = new NoteTicked();
-                    nt.Note = this.enumerator.Current.Item2;
-                    Tick(this, nt);
-                }
-                this.Timer.Interval = this.enumerator.Current.Item1 - PreviousTime;
+                this.Timer.Interval = this.enumerator.Current.Item1 - myTime;
                 this.Timer.Start();
             }
         }

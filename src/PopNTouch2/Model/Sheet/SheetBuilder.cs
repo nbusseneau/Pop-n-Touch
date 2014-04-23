@@ -75,8 +75,8 @@ namespace PopNTouch2.Model
                 return sheetMusic;
             }
             double millitick = 60.0 / bpm * 1000;
-            sheetMusic.FirstRest = millitick * SheetBuilder.LengthValue(Length.Whole);
-            double time = 0;
+            double timeAppear = 0;
+            double timePlay = millitick * SheetBuilder.LengthValue(Length.Whole);
             foreach(string line in lines)
             {
                 string[] infos = line.Split(' ');
@@ -92,8 +92,9 @@ namespace PopNTouch2.Model
                     Length length = (Length)Enum.Parse(typeof(Length), infos[0], true);
                     Accidental accidental = (Accidental)Enum.Parse(typeof(Accidental), infos[1], true);
                     Height height = (Height)Enum.Parse(typeof(Height), infos[2], true);
-                    time += millitick * LengthValue(length);
-                    sheetMusic.Notes.Add(new Tuple<double, Note>(time, NoteFactory.Instance.GetNote(length, accidental, height)));
+                    sheetMusic.Notes.Add(new Tuple<double, double, Note>(timeAppear, timePlay, NoteFactory.Instance.GetNote(length, accidental, height)));
+                    timeAppear += millitick * LengthValue(length);
+                    timePlay += millitick * LengthValue(length);
                 }
             }
             // Set maximum score

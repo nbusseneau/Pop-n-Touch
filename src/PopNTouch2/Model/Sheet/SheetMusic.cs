@@ -7,16 +7,14 @@ namespace PopNTouch2.Model
 {
     public class SheetMusic
     {
-        public double FirstRest { get; set; }
-        // Represents a couple (time when the note should appear, note)
-        public List<Tuple<double, Note>> Notes { get; set; }
+        // Represents a triplet (time when the note should appear, time it should be played, note)
+        public List<Tuple<double, double, Note>> Notes { get; set; }
         public List<IBonus> Bonuses { get; set; }
         public int MaxScore { get; set; }
 
         public SheetMusic()
         {
-            this.FirstRest = 0;
-            this.Notes = new List<Tuple<double, Note>>();
+            this.Notes = new List<Tuple<double, double, Note>>();
             this.Bonuses = new List<IBonus>();
             this.MaxScore = 0;
         }

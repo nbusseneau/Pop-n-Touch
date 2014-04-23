@@ -46,7 +46,7 @@ namespace PopNTouch2.Model
         // Maybe not very accurate
         public void AddPlayerInGame(Player player)
         {
-            List<Tuple<double, Note>>.Enumerator enumerator = player.SheetMusic.Notes.GetEnumerator();
+            List<Tuple<double, double, Note>>.Enumerator enumerator = player.SheetMusic.Notes.GetEnumerator();
             double noteTime = 0;
             while(TimeElapsed > noteTime)
             {
