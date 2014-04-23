@@ -125,8 +125,7 @@ namespace PopNTouch2.ViewModel
             if (this.loadedSong != currentSong)
             {
                 ObservableCollection<InstrumentVM> newList = new ObservableCollection<InstrumentVM>();
-                // TODO : Store existing InstrumentVM instead of creating another each time
-                foreach (Instrument instrument in currentSong.GetInstruments())
+                foreach (Tuple<Instrument,Difficulty> instrument in currentSong.Sheets)
                 {
                     newList.Add(new InstrumentVM(instrument, this));
                 }
@@ -140,9 +139,10 @@ namespace PopNTouch2.ViewModel
         /// </summary>
         private bool instruPicked = false;
 
-        public void PickInstrument(Instrument instrument)
+        public void PickInstrument(Instrument instrument, Difficulty difficulty)
         {
             this.Player.Instrument = instrument;
+            this.Player.InstrumentDifficulty = difficulty;
             RaisePropertyChanged("Player");
             this.instruPicked = true;
             foreach (InstrumentVM ivm in this.instruments)
@@ -240,7 +240,7 @@ namespace PopNTouch2.ViewModel
         /// </summary>
         public void PrepareSheet()
         {
-            this.SheetMusic.Sheet = GameMaster.Instance.SheetBuilder.BuildSheet(this.loadedSong, this.Player.Instrument, this.Player.Difficulty);
+            this.SheetMusic.Sheet = GameMaster.Instance.SheetBuilder.BuildSheet(this.loadedSong, this.Player.Instrument, this.Player.InstrumentDifficulty);
             this.Player.SheetMusic = this.SheetMusic.Sheet;
             this.SheetMusic.Visibility = true;
         }

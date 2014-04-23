@@ -14,6 +14,7 @@ namespace PopNTouch2.Model
         public Game CurrentGame { get; set; }
         public Boolean Ready { get; set; }
         public Instrument Instrument { get; set; }
+        public Difficulty InstrumentDifficulty { get; set; }
         public Difficulty Difficulty { get; set; }
         public int Score { get; set; }
         public Timer Timer { get; set; }
@@ -28,6 +29,7 @@ namespace PopNTouch2.Model
         {
             this.Difficulty = Difficulty.Undefined;
             this.Instrument = Instrument.Undefined;
+            this.InstrumentDifficulty = Difficulty.Undefined;
             this.Ready = false;
         }
 

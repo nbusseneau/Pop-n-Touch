@@ -10,9 +10,10 @@ namespace PopNTouch2.ViewModel
     public class InstrumentVM : ViewModelBase
     {
 
-        public InstrumentVM(Instrument instrument, PlayerVM playerVM)
+        public InstrumentVM(Tuple<Instrument,Difficulty> instrument, PlayerVM playerVM)
         {
-            this.Instrument = instrument;
+            this.Instrument = instrument.Item1;
+            this.Difficulty = instrument.Item2;
             this.PlayerVM = playerVM;
         }
 
@@ -24,6 +25,17 @@ namespace PopNTouch2.ViewModel
             {
                 this.instrument = value;
                 RaisePropertyChanged("Instrument");
+            }
+        }
+
+        private Difficulty difficulty;
+        public Difficulty Difficulty
+        {
+            get { return this.difficulty; }
+            set
+            {
+                this.difficulty = value;
+                RaisePropertyChanged("Difficulty");
             }
         }
 
@@ -63,7 +75,7 @@ namespace PopNTouch2.ViewModel
                 if (this.pickInstrument == null)
                     this.pickInstrument = new RelayCommand(()=>
                     {
-                        this.PlayerVM.PickInstrument(this.Instrument);
+                        this.PlayerVM.PickInstrument(this.Instrument, this.Difficulty);
                         this.Selected = true;
                     }
                     );
