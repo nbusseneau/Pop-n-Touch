@@ -118,7 +118,7 @@ namespace PopNTouch2.ViewModel
         /// <param name="note"></param>
         public void AddNote(Note note)
         {
-            NoteVM nvm = new NoteVM(note);
+            NoteVM nvm = new NoteVM(note, this);
             switch (note.Height)
             {
                 case Height.Do :
@@ -151,6 +151,49 @@ namespace PopNTouch2.ViewModel
                     break;
                 case Height.Rest:
                     this.rests.Add(nvm);
+                    RaisePropertyChanged("Rests");
+                    break;
+            }
+        }
+
+        /// <summary>
+        /// Removes NoteVM nvm from collection
+        /// </summary>
+        /// <param name="note"></param>
+        public void RemoveNote(NoteVM nvm)
+        {
+            switch (nvm.Note.Height)
+            {
+                case Height.Do:
+                    this.doNotes.Remove(nvm);
+                    RaisePropertyChanged("DoNotes");
+                    break;
+                case Height.Re:
+                    this.reNotes.Remove(nvm);
+                    RaisePropertyChanged("ReNotes");
+                    break;
+                case Height.Mi:
+                    this.miNotes.Remove(nvm);
+                    RaisePropertyChanged("MiNotes");
+                    break;
+                case Height.Fa:
+                    this.faNotes.Remove(nvm);
+                    RaisePropertyChanged("FaNotes");
+                    break;
+                case Height.Sol:
+                    this.solNotes.Remove(nvm);
+                    RaisePropertyChanged("SolNotes");
+                    break;
+                case Height.La:
+                    this.laNotes.Remove(nvm);
+                    RaisePropertyChanged("LaNotes");
+                    break;
+                case Height.Si:
+                    this.siNotes.Remove(nvm);
+                    RaisePropertyChanged("SiNotes");
+                    break;
+                case Height.Rest:
+                    this.rests.Remove(nvm);
                     RaisePropertyChanged("Rests");
                     break;
             }
