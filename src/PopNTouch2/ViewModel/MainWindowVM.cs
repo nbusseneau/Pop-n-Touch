@@ -192,6 +192,7 @@ namespace PopNTouch2.ViewModel
             foreach (PlayerVM p in this.players)
             {
                 p.ChoicesEnabled = false;
+                p.IsFixed = false;
                 p.PrepareSheet();
             }
         }

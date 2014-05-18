@@ -13,6 +13,9 @@ namespace PopNTouch2.ViewModel
     {
         public Player Player { get; set; }
 
+        private Song loadedSong;
+
+
         public PlayerVM(Player player)
         {
             this.Player = player;
@@ -20,7 +23,19 @@ namespace PopNTouch2.ViewModel
             this.Player.Tick += new Player.TickHandler(OnPlayerTick);
         }
 
-        private Song loadedSong;
+        /// <summary>
+        /// Boolean property to set if position should be fixed
+        /// </summary>
+        private bool isFixed = true;
+        public bool IsFixed
+        {
+            get { return isFixed; }
+            set 
+            { 
+                isFixed = value;
+                RaisePropertyChanged("IsFixed");
+            }
+        }
 
         /// <summary>
         /// Boolean property to launch a flashing animation
