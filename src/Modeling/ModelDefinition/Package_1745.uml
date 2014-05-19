@@ -1,0 +1,1435 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
+  dslVersion="1.0.0.0"
+  Id="4e04e2c1-2bf7-4c5f-9109-b58085e7453c"
+  name="Model" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <ownedCommentsInternal>
+    <comment
+      Id="a01001c6-fe0f-414d-a7d9-a78876ea1688">
+      <body>Flyweight</body>
+      <annotatedElements>
+        <classMoniker
+          Id="12b304d4-0332-47a6-a271-dc3318565290"
+          LastKnownName="NoteFactory"
+          LastKnownLocation="Package_1745.uml" />
+      </annotatedElements>
+    </comment>
+  </ownedCommentsInternal>
+  <packagedElements>
+    <packageHasNamedElement>
+      <class
+        Id="921ae3f3-a7f1-4630-92a6-6c68dba1c367"
+        name="GameMaster"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="870bdd54-842b-4a52-b423-6b0e7a1ad00e"
+            isDerived="false"
+            sourceEndRoleName="GameMaster"
+            targetEndRoleName="Game"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="2a798951-c666-4248-9a32-bafb620357d6"
+              LastKnownName="Game"
+              LastKnownLocation="Package_1745.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4f4c4a40-62d2-4e71-8d6b-40ea44181c1b"
+                  name="GameMaster"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="6cea2400-7049-43b9-92ae-1aeafdce8ec0"
+                  name="Game"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="35c22c90-f6d2-43c8-af3a-d5246eab90b1"
+            isDerived="false"
+            sourceEndRoleName="GameMaster"
+            targetEndRoleName="Players"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="31519e2a-9032-49c6-887f-5d1344a8160a"
+              LastKnownName="Player"
+              LastKnownLocation="Package_1745.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="03bcd267-8712-401c-b3b9-d3b72593134c"
+                  name="GameMaster"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="885ce89d-9969-4946-b43c-02edebfce7e6"
+                  name="Players"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="0919f8ec-4fd4-4371-93e9-8f3f384b742b"
+                      name="Lower"
+                      value="1" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="98165f09-e40b-42bf-96d4-b1d272534cc5"
+                      name="Upper"
+                      value="4" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="faaf4bbd-b634-4735-a29f-e5e4f47044d3"
+            isDerived="false"
+            sourceEndRoleName="GameMaster"
+            targetEndRoleName="Songs"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="44ec9721-e26b-4492-805e-39533f9c7e14"
+              LastKnownName="Song"
+              LastKnownLocation="Package_1745.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="283b88d4-8ceb-461b-9c80-c9b11e1cf91b"
+                  name="GameMaster"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Shared"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="97f8ab7f-4c22-4ae6-9b2b-ef52fde69672"
+                  name="Songs"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="e66630d6-3351-47b3-af1e-86de63fb2b96"
+                      name="Lower"
+                      value="0" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="c435e67f-27d3-461f-a132-758bf0ec77c4"
+                      name="Upper"
+                      value="*" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="760a0202-f650-45a8-b433-b0b117bff6fb"
+            isDerived="false"
+            sourceEndRoleName="GameMaster"
+            targetEndRoleName="SheetBuilder"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="86feb192-5fe4-4f44-aaf3-e64ef63c4998"
+              LastKnownName="SheetBuilder"
+              LastKnownLocation="Package_1745.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7bf4f00e-600f-4586-b775-a170d0b9b341"
+                  name="GameMaster"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="947c4121-adf5-4498-8568-6f9029d809e4"
+                  name="SheetBuilder"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="f888eb1a-baba-48be-8b98-f94c6025a408"
+            name="Player[] players"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="22a68a97-5962-470e-aa19-836595e75075"
+            name="void selectSong"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="d23a91ee-72ca-4c51-8ae0-9c9805da8120"
+                  name="Song song"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="5bc27ea2-c7c6-46c1-b487-04a49ca8fb75"
+            name="void ready"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="b3db940f-4302-4a49-bb79-3c7cdfea3416"
+                  name="Player player"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="dd18f88d-955d-4bd1-b8f6-955a8c7bd9f6"
+            name="bool isEveryoneReady"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="3caf21da-9530-4d67-b6a0-230a1f142838"
+            name="void notReady"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0ed82bac-3137-4e91-a756-c20ca1f46ae2"
+                  name="Player player"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="2a798951-c666-4248-9a32-bafb620357d6"
+        name="Game"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="50530380-9cc0-4025-99aa-68832d7250e4"
+            isDerived="false"
+            sourceEndRoleName="Game"
+            targetEndRoleName="Song"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="44ec9721-e26b-4492-805e-39533f9c7e14"
+              LastKnownName="Song"
+              LastKnownLocation="Package_1745.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ba47dd8f-4d29-4c39-83f0-a095b8690090"
+                  name="Game"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="e5526c62-894b-47fd-81e9-7b06bc0f0581"
+                  name="Song"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="d79bb3f0-5a27-485f-8341-c516e72b5ded"
+            isDerived="false"
+            sourceEndRoleName="Game"
+            targetEndRoleName="AudioController"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="e6265268-d4c5-4b23-93d1-7a6ac8bdbe97"
+              LastKnownName="AudioController"
+              LastKnownLocation="Package_1745.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2ec85b20-0f3e-4394-93ad-fa9b3fb04561"
+                  name="Game"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3fdc96b7-5244-4e62-abc9-abfb4b5447f2"
+                  name="AudioController"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="5bc82783-c032-4a37-8112-08086d5cf553"
+            name="Song song"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="4ae0c6af-d4f5-40d2-a5fb-14b22ebb742b"
+            name="GameMaster master"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="c83e7747-07b7-44ac-ae89-67389866a774"
+            name="Game"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="9641b355-7b60-4a59-9340-420ae01a8191"
+                  name="Song song"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="bd41d980-f37e-4f12-a4b9-54519448e28e"
+            name="Instruments[] getInstruments"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="f0daa08b-4203-42ad-9a07-7ec1a29c1ca3"
+            name="void start"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <Interface
+        Id="e16bea6d-05d4-4f61-b50a-d96ec13a43f0"
+        name="IBonus"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="8af279a8-9b3b-459a-8620-40fdabcee7cf"
+        name="BonusInkBubble"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="1b4ae711-e9cb-4f3c-b31a-a307ab79a535">
+            <interfaceMoniker
+              Id="e16bea6d-05d4-4f61-b50a-d96ec13a43f0"
+              LastKnownName="IBonus"
+              LastKnownLocation="Package_1745.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="a354b14b-4ff7-450c-ba02-566cb544e8c8"
+        name="BonusAutoPilot"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <interfaceRealization
+            Id="90ee6d5d-c093-4799-96fc-58304cea8086">
+            <interfaceMoniker
+              Id="e16bea6d-05d4-4f61-b50a-d96ec13a43f0"
+              LastKnownName="IBonus"
+              LastKnownLocation="Package_1745.uml" />
+          </interfaceRealization>
+        </suppliersInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="39b3b420-8918-47a9-80ba-938decbeafdd"
+        name="Accidental"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="1abad4be-df3a-439a-9341-4647a608c237"
+            name="None" />
+          <enumerationLiteral
+            Id="b707249c-d3ae-441e-81a3-6324da24633c"
+            name="Flat" />
+          <enumerationLiteral
+            Id="6f8706dd-8e93-4417-9432-948ff2939f8b"
+            name="Sharp" />
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="44ec9721-e26b-4492-805e-39533f9c7e14"
+        name="Song"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="d5527a84-e79e-48bf-97c5-a552ebd48c8f"
+            isDerived="false"
+            sourceEndRoleName="Song"
+            targetEndRoleName="Instrument"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="ef2718ce-5840-40b9-b2a8-d0075b33340b"
+              LastKnownName="Instrument"
+              LastKnownLocation="Package_1745.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="087494fe-7f2a-4bf8-adc2-0b408530d411"
+                  name="Song"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="80facebd-f0ff-4962-9e10-9fa5dfebf4b1"
+                  name="Instrument"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="164fc369-9993-4ef5-bc6d-b531f3936784"
+            isDerived="false"
+            sourceEndRoleName="Song"
+            targetEndRoleName="Difficulty"
+            isLeaf="false"
+            isAbstract="false">
+            <enumerationMoniker
+              Id="43f87ed6-6e88-49a7-9580-4ab071987576"
+              LastKnownName="Difficulty"
+              LastKnownLocation="Package_1745.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7ffc2ab8-1f1d-4741-a574-e9711aeb8306"
+                  name="Song"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="ad4e7c23-7476-4de4-bae9-3722e21fa78e"
+                  name="Difficulty"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="13eb7eab-79b0-4b12-8f9e-395d0ddefbdc"
+            isDerived="false"
+            sourceEndRoleName="Song"
+            targetEndRoleName="Instrument"
+            isLeaf="false"
+            isAbstract="false">
+            <enumerationMoniker
+              Id="6b0c5334-1ec2-469f-bf94-b16be2692319"
+              LastKnownName="Instrument"
+              LastKnownLocation="Package_1745.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="13567e34-02e2-4e13-a712-764d7cf4d91c"
+                  name="Song"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="563d9080-a9a5-4e30-93ba-27e838892bb9"
+                  name="Instrument"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation
+            Id="b62c82bf-d402-4861-81d9-d585c93597ad"
+            name="Instruments[] getInstruments"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="ef2718ce-5840-40b9-b2a8-d0075b33340b"
+        name="Instrument"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="752a8912-ae48-4ca1-970f-c9b8d19706fb"
+        name="SheetMusic"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="722a0a17-1fc8-40a0-9cee-206830deeee3"
+            isDerived="false"
+            sourceEndRoleName="SheetMusic"
+            targetEndRoleName="Bonuses"
+            isLeaf="false"
+            isAbstract="false">
+            <interfaceMoniker
+              Id="e16bea6d-05d4-4f61-b50a-d96ec13a43f0"
+              LastKnownName="IBonus"
+              LastKnownLocation="Package_1745.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d052229f-5791-4a18-bdf9-455d0030202c"
+                  name="SheetMusic"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="71febc05-9d40-4032-a4cc-68eee11ecd18"
+                  name="Bonuses"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="f43f24f5-b998-4cf1-b305-0f3dff88b1d9"
+                      name="Lower"
+                      value="Some" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="98e12441-5314-411f-89a4-c8de5e5a4f21"
+                      name="Upper"
+                      value="Some" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="83dceabe-693d-427b-b7e1-b945b8c468b7"
+            isDerived="false"
+            sourceEndRoleName="SheetMusic"
+            targetEndRoleName="Note"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="e9dce7b0-c4c5-4f8f-a1e0-6596e578b147"
+              LastKnownName="Note"
+              LastKnownLocation="Package_1745.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="241dee88-f11c-4cd7-8924-0c8dd7b5f35d"
+                  name="SheetMusic"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9e511e76-96b2-42e8-baa8-fa2748bd86f4"
+                  name="Note"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="fb5648c5-3c81-4500-9bf5-44467e0b27d6"
+                      name="Lower"
+                      value="Many many" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="12c93905-d601-4950-acce-570419df3138"
+                      name="Upper"
+                      value="Many many" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="43f87ed6-6e88-49a7-9580-4ab071987576"
+        name="Difficulty"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="6716a5f7-3c68-4108-8f57-c138478a9b81"
+            name="Beginner" />
+          <enumerationLiteral
+            Id="6c4f8944-04b8-46f0-a8bd-ba176e5b62cd"
+            name="Expert" />
+          <enumerationLiteral
+            Id="e5bfd327-449b-4fff-a96c-fc654d0a9dde"
+            name="Classic" />
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="86feb192-5fe4-4f44-aaf3-e64ef63c4998"
+        name="SheetBuilder"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <ownedOperationsInternal>
+          <operation
+            Id="fe5823ee-c37a-46d4-98ea-e690bf31b274"
+            name="SheetBuilder"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="878df4ca-4224-40b0-92a5-33d3d5c3afe9"
+                  name="Song song"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="0e9c8b79-3294-4515-9580-a1dd7ce001f8"
+                  name="Instrument instrument"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="fdc246a4-3d57-4d9c-b282-6efdd3f697d5"
+                  name="Difficulty difficulty"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="820aa464-453f-4392-92dd-42a16cb46a5d"
+            name="SheetMusic buildSheet"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="101e520e-b85a-40da-b7b4-38c2627eed95"
+            name="void build"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="e6265268-d4c5-4b23-93d1-7a6ac8bdbe97"
+        name="AudioController"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="53f129d1-526e-4464-9abf-ecef3f175013"
+        name="Height"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="5f4c2ad7-418e-4192-bcfb-7f61778e0bb2"
+            name="Mi" />
+          <enumerationLiteral
+            Id="efa98120-3609-455e-91c7-36265daacbcd"
+            name="Fa" />
+          <enumerationLiteral
+            Id="73eb0495-c1c0-4359-90fa-a78adf37f08f"
+            name="Do" />
+          <enumerationLiteral
+            Id="94154cbe-57a8-432e-84da-be76cc39d7d8"
+            name="La" />
+          <enumerationLiteral
+            Id="26f7fb1c-2035-4215-992e-43dd64fc6e4c"
+            name="Sol" />
+          <enumerationLiteral
+            Id="fa960d9f-bbe8-4fd7-9d01-004d0f5c613a"
+            name="Re" />
+          <enumerationLiteral
+            Id="8ead402c-218a-41e9-836b-a6b0ee486ec5"
+            name="Si" />
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="ea8287d4-8278-4281-8cdf-66f98b61c47a"
+        name="Length"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="29cab4ba-1e08-43f5-9649-ce866fc63e12"
+            name="Whole" />
+          <enumerationLiteral
+            Id="3f693fa1-1f01-4e46-935b-f6176a1443b6"
+            name="Half" />
+          <enumerationLiteral
+            Id="fc72aa33-f812-4252-adb1-6cdcc9f75777"
+            name="Quarter" />
+          <enumerationLiteral
+            Id="982454a6-8cb8-47bd-bf37-03af85f828d6"
+            name="Eighth" />
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="12b304d4-0332-47a6-a271-dc3318565290"
+        name="NoteFactory"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="e94a3dad-a5f7-4202-a2f1-f0a6cc4dea0e"
+            isDerived="false"
+            sourceEndRoleName="NoteFactory"
+            targetEndRoleName="Note"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="e9dce7b0-c4c5-4f8f-a1e0-6596e578b147"
+              LastKnownName="Note"
+              LastKnownLocation="Package_1745.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a1b7b383-059d-46ac-a320-8d7c27ce0357"
+                  name="NoteFactory"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="a74d756d-1602-4eeb-b1a7-9523c1f12d65"
+                  name="Note"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true">
+                  <lowerValueInternal>
+                    <literalString
+                      Id="462384be-fc1d-4998-80b0-13c832f4c8fd"
+                      name="Lower"
+                      value="84" />
+                  </lowerValueInternal>
+                  <upperValueInternal>
+                    <literalString
+                      Id="4da20a6d-f605-4390-b29e-dfa78e867cd0"
+                      name="Upper"
+                      value="84" />
+                  </upperValueInternal>
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="31519e2a-9032-49c6-887f-5d1344a8160a"
+        name="Player"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="da8713cb-a951-4958-a4fc-9fa1ca80f674"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="SheetMusic"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="752a8912-ae48-4ca1-970f-c9b8d19706fb"
+              LastKnownName="SheetMusic"
+              LastKnownLocation="Package_1745.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="9ef21a11-2fe2-4a44-9157-1255224c4afb"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="Composite"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4d97afd9-3893-4f29-9eb9-017870ec8f66"
+                  name="SheetMusic"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="true" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="126d6a61-5eaf-4ff2-8a2c-c841bd56e34c"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="Game"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="2a798951-c666-4248-9a32-bafb620357d6"
+              LastKnownName="Game"
+              LastKnownLocation="Package_1745.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="928a9cb5-322c-46e0-90d1-89b7a93f1745"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="3837ff8f-d90c-430e-ac69-4a68fd4e7177"
+                  name="Game"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="6dcb0919-6a53-4c2e-b387-39fb3522617a"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="Difficulty"
+            isLeaf="false"
+            isAbstract="false">
+            <enumerationMoniker
+              Id="43f87ed6-6e88-49a7-9580-4ab071987576"
+              LastKnownName="Difficulty"
+              LastKnownLocation="Package_1745.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5342a5a3-1f2a-420a-ad60-fe3f0117a9d9"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="008e4acb-7cc6-44a0-8d9e-b72fd306111b"
+                  name="Difficulty"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="e8e5b39d-a57c-4634-993f-653bf38abc51"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="Instrument"
+            isLeaf="false"
+            isAbstract="false">
+            <classMoniker
+              Id="ef2718ce-5840-40b9-b2a8-d0075b33340b"
+              LastKnownName="Instrument"
+              LastKnownLocation="Package_1745.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="5fcdb50b-b725-4bad-b2df-aa8d451438f9"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="d7b399cb-0154-41a6-be29-648cfd327b3c"
+                  name="Instrument"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="1fcec805-a563-4c8b-bffa-3055bb0fd7c1"
+            isDerived="false"
+            sourceEndRoleName="Player"
+            targetEndRoleName="Instrument"
+            isLeaf="false"
+            isAbstract="false">
+            <enumerationMoniker
+              Id="6b0c5334-1ec2-469f-bf94-b16be2692319"
+              LastKnownName="Instrument"
+              LastKnownLocation="Package_1745.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="1caa4316-a01d-40f2-b715-ac6998a703f6"
+                  name="Player"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="8a1eab84-8de1-4d0b-b810-6b932be3eccc"
+                  name="Instrument"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+        <ownedAttributesInternal>
+          <property
+            Id="46e85309-345d-4e2f-a501-238f5fe08833"
+            name="string name"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="ea03b2cc-2ab5-409d-8518-1b32f71e3803"
+            name="Instrument instrument"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="af4ff5df-867c-493f-8032-18c54fee974f"
+            name="Difficulty difficulty"
+            visibility="Private"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="f49a449b-a350-4fbe-9811-603e56d90866"
+            name="Player"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="f8780dab-65c6-4f83-8a80-67b11611c985"
+                  name="string name"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="aca8bcf9-4766-4592-a70a-733581a68b4f"
+            name="void pickInstrument"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="aacaba12-c8f3-4c6e-af09-dfedef709dc1"
+                  name="Instrument instrument"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="cee43b15-59a1-4ae0-8d78-ca0b8b59b56a"
+            name="void pickDifficulty"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false">
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter
+                  Id="462507e5-a819-4004-bc6d-5aefbc19a1ca"
+                  name="difficulty"
+                  direction="In"
+                  isUnique="false" />
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation
+            Id="f10b0c69-831b-4666-bef7-7acb1b89881e"
+            name="void ready"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+          <operation
+            Id="f3f32d28-437a-443f-8108-ff5cb2e53219"
+            name="void cancel"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="e9dce7b0-c4c5-4f8f-a1e0-6596e578b147"
+        name="Note"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <targetEnds>
+          <association
+            Id="9bd94234-8b2d-43db-bcb8-5d7440d36520"
+            isDerived="false"
+            sourceEndRoleName="Note"
+            targetEndRoleName="Accidental"
+            isLeaf="false"
+            isAbstract="false">
+            <enumerationMoniker
+              Id="39b3b420-8918-47a9-80ba-938decbeafdd"
+              LastKnownName="Accidental"
+              LastKnownLocation="Package_1745.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b6562d69-d068-451d-ad8f-6c0c3a34f234"
+                  name="Note"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="4a4492ec-84ad-4cb0-a969-076eb38a3bf3"
+                  name="Accidental"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="edc6b4e6-4bb1-4ad2-ae7e-29495d951504"
+            isDerived="false"
+            sourceEndRoleName="Note"
+            targetEndRoleName="Height"
+            isLeaf="false"
+            isAbstract="false">
+            <enumerationMoniker
+              Id="53f129d1-526e-4464-9abf-ecef3f175013"
+              LastKnownName="Height"
+              LastKnownLocation="Package_1745.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="2e0ff4cd-32f0-4462-82c1-5bec6ab062b6"
+                  name="Note"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="b97a1959-8dc2-42df-b5dd-56aa6a534d32"
+                  name="Height"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="6b9b2a0e-62e3-452b-ab5a-c396a12f775a"
+            isDerived="false"
+            sourceEndRoleName="Note"
+            targetEndRoleName="Length"
+            isLeaf="false"
+            isAbstract="false">
+            <enumerationMoniker
+              Id="ea8287d4-8278-4281-8cdf-66f98b61c47a"
+              LastKnownName="Length"
+              LastKnownLocation="Package_1745.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="7d00fb66-e1e1-4b45-b924-0f688ae913bf"
+                  name="Note"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="c7bfa6c3-c444-4b6b-8202-e280477afd83"
+                  name="Length"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <enumeration
+        Id="6b0c5334-1ec2-469f-bf94-b16be2692319"
+        name="Instrument"
+        isAbstract="false"
+        isLeaf="false">
+        <ownedLiterals>
+          <enumerationLiteral
+            Id="dd31be4e-73aa-41c4-963e-e32b14856738"
+            name="Guitar" />
+          <enumerationLiteral
+            Id="6f988ea4-3c9e-4569-8587-5abdf7bd4f3c"
+            name="Piano" />
+          <enumerationLiteral
+            Id="d94511a9-f34b-4858-9a80-ff8adab34d6a"
+            name="Violin" />
+          <enumerationLiteral
+            Id="9ed0a92b-9e94-4cdb-97fa-9bc0fdc6065c"
+            name="Voice" />
+          <enumerationLiteral
+            Id="b4f8d879-ca5c-4bd1-8cfe-a6c86b736e6c"
+            name="..." />
+        </ownedLiterals>
+      </enumeration>
+    </packageHasNamedElement>
+  </packagedElements>
+</package>

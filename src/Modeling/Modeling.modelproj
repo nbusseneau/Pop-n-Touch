@@ -53,10 +53,19 @@
     <Content Include="ModelDefinition\Package1_1204.uml">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="ModelDefinition\Package1_1745.uml">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="ModelDefinition\Package2_1204.uml">
       <SubType>Content</SubType>
     </Content>
+    <Content Include="ModelDefinition\Package2_1745.uml">
+      <SubType>Content</SubType>
+    </Content>
     <Content Include="ModelDefinition\Package_1204.uml">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="ModelDefinition\Package_1745.uml">
       <SubType>Content</SubType>
     </Content>
     <Content Include="Modeling.classdiagram">
@@ -72,6 +81,13 @@
     <Content Include="Bonus.sequencediagram.layout">
       <SubType>Content</SubType>
       <DependentUpon>Bonus.sequencediagram</DependentUpon>
+    </Content>
+    <Content Include="Modeling fin.classdiagram">
+      <SubType>Content</SubType>
+    </Content>
+    <Content Include="Modeling fin.classdiagram.layout">
+      <SubType>Content</SubType>
+      <DependentUpon>Modeling fin.classdiagram</DependentUpon>
     </Content>
     <Folder Include="ModelDefinition\" />
     <Content Include="EndGame.usecasediagram">

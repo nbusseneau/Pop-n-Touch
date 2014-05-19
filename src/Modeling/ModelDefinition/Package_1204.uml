@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner"
+<package xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner"
   dslVersion="1.0.0.0"
   Id="ddae1ba9-57fe-4e90-a18b-cbd6f7dba023"
   name="Model" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
@@ -672,45 +672,6 @@
         isActiveClass="false">
         <targetEnds>
           <association
-            Id="ba0b0618-6af3-499c-9ee3-33e40e6ea68c"
-            isDerived="false"
-            sourceEndRoleName="SheetBuilder"
-            targetEndRoleName="Difficulty"
-            isLeaf="false"
-            isAbstract="false">
-            <enumerationMoniker
-              Id="3453abaa-033c-4981-a1fb-d6fe2279bf41"
-              LastKnownName="Difficulty"
-              LastKnownLocation="Package_1204.uml" />
-            <relationshipOwnedElementsInternal>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="8048fef3-5165-49fe-8960-ad4c2a826ba9"
-                  name="SheetBuilder"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false"
-                  isNavigableOwned="false" />
-              </associationHasOwnedEnds>
-              <associationHasOwnedEnds>
-                <memberEnd
-                  Id="316b6847-b75f-474f-93a8-0e3cb83e38d6"
-                  name="Difficulty"
-                  isLeaf="false"
-                  isStatic="false"
-                  isReadOnly="false"
-                  isDerived="false"
-                  isDerivedUnion="false"
-                  aggregation="None"
-                  isComposite="false" />
-              </associationHasOwnedEnds>
-            </relationshipOwnedElementsInternal>
-          </association>
-          <association
             Id="22d841ff-6e9f-4f95-ba7b-a38304746c2f"
             isDerived="false"
             sourceEndRoleName="SheetBuilder"
@@ -817,6 +778,45 @@
                 <memberEnd
                   Id="886a5804-0920-4189-9fe9-4ddee86f9696"
                   name="NoteFactory"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+          <association
+            Id="4fe44b56-5ecc-4000-999c-3a385da3e2f2"
+            isDerived="false"
+            sourceEndRoleName="SheetBuilder"
+            targetEndRoleName="Difficulty"
+            isLeaf="false"
+            isAbstract="false">
+            <enumerationMoniker
+              Id="3453abaa-033c-4981-a1fb-d6fe2279bf41"
+              LastKnownName="Difficulty"
+              LastKnownLocation="Package_1204.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="87196a17-a9b6-488e-9f72-9a1c1b55026f"
+                  name="SheetBuilder"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="bec10e71-a760-485d-920c-196995bc4282"
+                  name="Difficulty"
                   isLeaf="false"
                   isStatic="false"
                   isReadOnly="false"

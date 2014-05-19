@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ActivityDesigner" dslVersion="1.0.0.0" Id="42b111d9-aa66-4cde-8fe2-6b7c9361bc75" name="Modeling" linkedPackageId="9083596e-beba-4361-a1d4-f5b04dd77df0" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="42b111d9-aa66-4cde-8fe2-6b7c9361bc75" name="Modeling" linkedPackageId="9083596e-beba-4361-a1d4-f5b04dd77df0" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
   <packagedElements>
     <logicalClassDesignerModelHasPackages>
       <package Id="43925a60-c6c6-4e7b-8068-645590c5e255" name="Model">
@@ -282,22 +282,6 @@
             <class Id="ae008708-b54c-474d-883a-6c4519c5c8ec" name="SheetBuilder" isAbstract="false" isLeaf="false" isActiveClass="false">
               <elementDefinition Id="123fa27d-b5ec-4b76-a339-09f4052f5076" />
               <targetEnds>
-                <association Id="8fd19e64-042b-40a3-bd84-0aea1a83cde1" isDerived="false" sourceEndRoleName="SheetBuilder" targetEndRoleName="Difficulty" isLeaf="false" isAbstract="false">
-                  <enumerationMoniker Id="e131c747-f693-4384-8124-4e158065c18f" LastKnownName="Difficulty" />
-                  <relationshipOwnedElementsInternal>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="17233772-fd6d-4b88-8eff-0fdcbece9be0" name="SheetBuilder" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
-                        <elementDefinition Id="8048fef3-5165-49fe-8960-ad4c2a826ba9" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                    <associationHasOwnedEnds>
-                      <memberEnd Id="ca2f70c0-8ae9-4188-8a7d-472a3a246180" name="Difficulty" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
-                        <elementDefinition Id="316b6847-b75f-474f-93a8-0e3cb83e38d6" />
-                      </memberEnd>
-                    </associationHasOwnedEnds>
-                  </relationshipOwnedElementsInternal>
-                  <elementDefinition Id="ba0b0618-6af3-499c-9ee3-33e40e6ea68c" />
-                </association>
                 <association Id="d47ccde0-c4cd-429e-93ae-163588ec0e40" isDerived="false" sourceEndRoleName="SheetBuilder" targetEndRoleName="Instrument" isLeaf="false" isAbstract="false">
                   <classMoniker Id="7e0bc849-64e7-49df-8b70-e033e5c0b932" LastKnownName="Instrument" />
                   <relationshipOwnedElementsInternal>
@@ -345,6 +329,22 @@
                     </associationHasOwnedEnds>
                   </relationshipOwnedElementsInternal>
                   <elementDefinition Id="0bff262a-595f-4e9a-841f-d6418e88191f" />
+                </association>
+                <association Id="1cb58075-46f4-4c98-9b17-5e36db274989" isDerived="false" sourceEndRoleName="SheetBuilder" targetEndRoleName="Difficulty" isLeaf="false" isAbstract="false">
+                  <enumerationMoniker Id="e131c747-f693-4384-8124-4e158065c18f" LastKnownName="Difficulty" />
+                  <relationshipOwnedElementsInternal>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="d8d51ed5-d1bd-4ec8-a462-5098479fba93" name="SheetBuilder" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                        <elementDefinition Id="87196a17-a9b6-488e-9f72-9a1c1b55026f" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                    <associationHasOwnedEnds>
+                      <memberEnd Id="b976d3d4-fb3c-488b-be26-0d7901e8fa90" name="Difficulty" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                        <elementDefinition Id="bec10e71-a760-485d-920c-196995bc4282" />
+                      </memberEnd>
+                    </associationHasOwnedEnds>
+                  </relationshipOwnedElementsInternal>
+                  <elementDefinition Id="4fe44b56-5ecc-4000-999c-3a385da3e2f2" />
                 </association>
               </targetEnds>
               <ownedOperationsInternal>
