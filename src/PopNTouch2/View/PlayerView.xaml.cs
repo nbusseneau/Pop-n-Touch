@@ -24,13 +24,5 @@ namespace PopNTouch2.View
         {
             InitializeComponent();
         }
-
-        public void Button_Sol_Click(object sender, EventArgs e) { }
-        public void Button_La_Click(object sender, EventArgs e) { }
-        public void Button_Si_Click(object sender, EventArgs e) { }
-        public void Button_Do_Click(object sender, EventArgs e) { }
-        public void Button_Re_Click(object sender, EventArgs e) { }
-        public void Button_Mi_Click(object sender, EventArgs e) { }
-        public void Button_Fa_Click(object sender, EventArgs e) { }
     }
 }

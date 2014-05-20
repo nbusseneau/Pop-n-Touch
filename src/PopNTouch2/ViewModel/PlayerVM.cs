@@ -20,6 +20,8 @@ namespace PopNTouch2.ViewModel
 
         // Interval, in milliseconds, between each sheet cleaning
         private const double CLEANING_INTERVAL = 10000;
+        // Tolerance, in milliseconds, for which a pressed note is still considered valid
+        private const double TIMING_TOLERANCE = 1000;
 
 
         public PlayerVM(Player player)
@@ -305,10 +307,28 @@ namespace PopNTouch2.ViewModel
             RaisePropertyChanged("SheetMusic");
         }
 
-
+        /// <summary>
+        /// Knowing that the user pressed button height, computes which Note is supposed to be pressed and compares
+        /// </summary>
+        /// <param name="height"></param>
         public void PlayNote(Height height)
         {
-            // TODO
+            this.Player.Stopwatch.Stop();
+            double elapsedTime = this.Player.Stopwatch.ElapsedMilliseconds;
+            this.Player.Stopwatch.Start();
+
+            Tuple<double,double,Note> closestNoteInfo = this.Player.SheetMusic.Notes.Find(t => t.Item2 <= elapsedTime + TIMING_TOLERANCE && t.Item2 >= elapsedTime - TIMING_TOLERANCE);
+            if (closestNoteInfo != null && closestNoteInfo.Item3.Height == height)
+            {
+                double timingDifference = Math.Abs(closestNoteInfo.Item2 - elapsedTime);
+                this.Player.NoteScored(timingDifference / 1000);
+                this.SheetMusic.DisplayNoteScored();
+                // this.SheetMusic.RemoveNote(closestNoteInfo.Item3);
+            }
+            else
+            {
+                this.SheetMusic.DisplayNoteFailed();
+            }
         }
 
         #endregion

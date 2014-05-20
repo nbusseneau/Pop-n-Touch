@@ -122,6 +122,45 @@ namespace PopNTouch2.ViewModel
         }
 
         /// <summary>
+        /// Remove Note note from collections
+        /// </summary>
+        /// <param name="note"></param>
+        public void RemoveNote(Note note)
+        {
+            ObservableCollection<NoteVM> collection;
+            switch (note.Height)
+            {
+                case Height.Do:
+                    collection = this.doNotes;
+                    break;
+                case Height.Re:
+                    collection = this.reNotes;
+                    break;
+                case Height.Mi:
+                    collection = this.miNotes;
+                    break;
+                case Height.Fa:
+                    collection = this.faNotes;
+                    break;
+                case Height.Sol:
+                    collection = this.solNotes;
+                    break;
+                case Height.La:
+                    collection = this.laNotes;
+                    break;
+                case Height.Si:
+                    collection = this.siNotes;
+                    break;
+                case Height.Rest:
+                    collection = this.rests;
+                    break;
+                default:
+                    return;
+            }
+            collection.Remove(collection.First(nvm => nvm.Note.Equals(note)));
+        }
+
+        /// <summary>
         /// Okay, bear with me here, this one is tricky, but pretty cool
         /// This function basically cleans every Collection of NoteVM contained in this class
         /// To do so, we get all our own fields (wow amaze such leet skillz)
@@ -129,42 +168,63 @@ namespace PopNTouch2.ViewModel
         /// </summary>
         public void CleanNotes(Stopwatch playerStopwatch)
         {
-            FieldInfo[] fields = this.GetType().GetFields(BindingFlags.Instance | BindingFlags.NonPublic);
-            foreach (FieldInfo f in fields)
+            playerStopwatch.Stop();
+            double elapsedTime = playerStopwatch.ElapsedMilliseconds;
+            playerStopwatch.Start();
+
+            foreach (FieldInfo f in this.GetType().GetFields(BindingFlags.Instance | BindingFlags.NonPublic).Where(fi => fi.FieldType == typeof(ObservableCollection<NoteVM>)))
             {
-                if (f.FieldType == typeof(ObservableCollection<NoteVM>))
+                ObservableCollection<NoteVM> collection = (ObservableCollection<NoteVM>)f.GetValue(this);
+                for (int i = collection.Count - 1; i >= 0; i-- )
                 {
-                    ObservableCollection<NoteVM> collection = (ObservableCollection<NoteVM>)f.GetValue(this);
-                    for (int i = collection.Count - 1; i >= 0; i-- )
+                    double perfectTiming = this.Sheet.GetPerfectTiming(collection[i].Note); // We could keep the current Note index and speed up the search
+                    if (elapsedTime > perfectTiming + 20000d)
                     {
-                        double perfectTiming = this.Sheet.GetPerfectTiming(collection[i].Note); // We could keep the current Note index and speed up the search
-                        playerStopwatch.Stop();
-                        double elapsedTime = playerStopwatch.ElapsedMilliseconds;
-                        playerStopwatch.Start();
-                        if (elapsedTime > perfectTiming + 50000d)
-                        {
-                            collection.RemoveAt(i);
-                        }
+                        collection.RemoveAt(i);
                     }
                 }
-                
             }
         }
 
-        /* I'll just keep this here, example of Reflection with Properties
-         * 
-        public void RaiseAllCollectionChanged()
+        /// <summary>
+        /// Boolean property to launch a note missed animation
+        /// </summary>
+        private bool missedNoteAnim = false;
+        public bool MissedNoteAnim
         {
-            System.Reflection.PropertyInfo[] properties = this.GetType().GetProperties();
-            foreach (System.Reflection.PropertyInfo p in properties)
+            get { return this.missedNoteAnim; }
+            set
             {
-                if (p.PropertyType == typeof(IEnumerable<NoteVM>))
-                {
-                    RaisePropertyChanged(p.Name);
-                }
+                this.missedNoteAnim = value;
+                RaisePropertyChanged("MissedNoteAnim");
             }
         }
-         */
+
+        public void DisplayNoteFailed()
+        {
+            this.MissedNoteAnim = true;
+            this.MissedNoteAnim = false;
+        }
+
+        /// <summary>
+        /// Boolean property to launch a note scored animation
+        /// </summary>
+        private bool scoredNoteAnim = false;
+        public bool ScoredNoteAnim
+        {
+            get { return this.scoredNoteAnim; }
+            set
+            {
+                this.scoredNoteAnim = value;
+                RaisePropertyChanged("ScoredNoteAnim");
+            }
+        }
+
+        public void DisplayNoteScored()
+        {
+            this.ScoredNoteAnim = true;
+            this.ScoredNoteAnim = false;
+        }
 
         public List<BonusVM> BonusVM
         {
