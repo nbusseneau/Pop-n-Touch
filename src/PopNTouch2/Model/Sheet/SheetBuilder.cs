@@ -76,6 +76,8 @@ namespace PopNTouch2.Model
             }
             double millitick = 60.0 / bpm * 1000;
             double timeAppear = 0;
+            // Panic button : 
+            // double timePlay = timeAppear + 2500;
             double timePlay = millitick * SheetBuilder.LengthValue(Length.Whole);
             foreach(string line in lines)
             {

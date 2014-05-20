@@ -188,6 +188,9 @@
     <Content Include="Resources\Songs\Pokémon\Guitar-Classic.sheet">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Resources\UI\BTNP_Unlock.png" />
+    <Resource Include="Resources\UI\BTNP_Lock.png" />
+    <Resource Include="Resources\UI\BTNP_Sup.png" />
     <Resource Include="Resources\UI\Instruments\BTNP_Guitar.png" />
     <Resource Include="Resources\UI\Instruments\BTNP_Piano.png" />
     <Resource Include="Resources\UI\Instruments\BTNP_Violin.png" />

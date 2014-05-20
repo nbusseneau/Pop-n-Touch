@@ -91,7 +91,7 @@ namespace PopNTouch2.ViewModel
                         {
                             Player player = new Player();
                             GameMaster.Instance.NewPlayer(player);
-                            PlayerVM playerVM = new PlayerVM(player);
+                            PlayerVM playerVM = new PlayerVM(player, this);
                             this.players.Add(playerVM);
                             RaisePropertyChanged("Players");
                         }
@@ -118,7 +118,6 @@ namespace PopNTouch2.ViewModel
                         GameMaster.Instance.Game.Song = null;
                         for (int i = 0; i < count; i++)
                             AddPlayer.Execute(null);
-                        RaisePropertyChanged("Players");
 
                         this.MainMenu.IsReady = false;
                         this.MainMenu.Visibility = Visibility.Visible;
@@ -153,6 +152,10 @@ namespace PopNTouch2.ViewModel
                         {
                             this.DisablePlayerChoices();
                             this.MainMenu.IsReady = false;
+                            foreach (PlayerVM pvm in this.players)
+                            {
+                                pvm.BottomButtonsVisible = false;
+                            }
                             GameMaster.Instance.Game.Launch(); //FIXME : Have a Countdown before launching
                         }
                     });
@@ -197,6 +200,16 @@ namespace PopNTouch2.ViewModel
                 p.IsFixed = false;
                 p.PrepareSheet();
             }
+        }
+
+        /// <summary>
+        /// Remove the player
+        /// </summary>
+        /// <param name="playerVM"></param>
+        public void RemovePlayerVM(PlayerVM playerVM)
+        {
+            GameMaster.Instance.Players.Remove(playerVM.Player);
+            this.players.Remove(playerVM);
         }
 
         #endregion

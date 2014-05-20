@@ -47,6 +47,30 @@
                 </Style.Triggers>
             </Style>
 
+            <!-- "Lock" button style -->
+            <Style x:Key="LockButtonStyle" TargetType="{x:Type s:SurfaceToggleButton}">
+                <Style.Triggers>
+                    <DataTrigger Binding="{Binding LockChecked}" Value="False">
+                        <Setter Property="ContentTemplate">
+                            <Setter.Value>
+                                <DataTemplate>
+                                    <Image Width="50" Height="50" Source="../Resources/UI/BTNP_Lock.png" IsHitTestVisible="False" />
+                                </DataTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </DataTrigger>
+                    <DataTrigger Binding="{Binding LockChecked}" Value="True">
+                        <Setter Property="ContentTemplate">
+                            <Setter.Value>
+                                <DataTemplate>
+                                    <Image Width="50" Height="50" Source="../Resources/UI/BTNP_Unlock.png" IsHitTestVisible="False" />
+                                </DataTemplate>
+                            </Setter.Value>
+                        </Setter>
+                    </DataTrigger>
+                </Style.Triggers>
+            </Style>
+
         </Grid.Resources>
 
         <!-- Background border -->
@@ -218,6 +242,17 @@
             <s:SurfaceButton HorizontalAlignment="Center" Grid.Column="4" VerticalAlignment="Bottom" Height="70" Width="70" Command="{Binding ClickNoteButton}" CommandParameter="Sol" Content="" Background="{x:Null}"/>
             <s:SurfaceButton HorizontalAlignment="Center" Grid.Column="5" VerticalAlignment="Bottom" Height="70" Width="70" Command="{Binding ClickNoteButton}" CommandParameter="La" Content="" Background="{x:Null}"/>
             <s:SurfaceButton HorizontalAlignment="Center" Grid.Column="6" VerticalAlignment="Bottom" Height="70" Width="70" Command="{Binding ClickNoteButton}" CommandParameter="Si" Content="" Background="{x:Null}"/>
+        </Grid>
+        <!-- Sup. & lock buttons -->
+        <Grid Visibility="{Binding BottomButtonsVisible, Converter={StaticResource bool2vis}}" Margin="35,300,36,20" Panel.ZIndex="20" Background="Black">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <s:SurfaceButton HorizontalAlignment="Center" Grid.Column="0" VerticalAlignment="Bottom" Height="70" Width="70" Command="{Binding Removal}" Background="{x:Null}">
+                <Image Source="../Resources/UI/BTNP_Sup.png" IsHitTestVisible="False"/>
+            </s:SurfaceButton>
+            <s:SurfaceToggleButton Style="{StaticResource LockButtonStyle}" HorizontalAlignment="Center" Grid.Column="1" VerticalAlignment="Bottom" Height="70" Width="70" IsChecked="{Binding LockChecked, Mode=TwoWay}" Command="{Binding ClickLock}" Content="" Background="{x:Null}"/>
         </Grid>
     </Grid>
 </UserControl>

@@ -14,6 +14,8 @@ namespace PopNTouch2.ViewModel
     {
         public Player Player { get; set; }
 
+        private MainWindowVM MainWindowVM { get; set; }
+
         private Song loadedSong;
 
         private Timer CleaningTimer { get; set; }
@@ -24,11 +26,12 @@ namespace PopNTouch2.ViewModel
         private const double TIMING_TOLERANCE = 1000;
 
 
-        public PlayerVM(Player player)
+        public PlayerVM(Player player, MainWindowVM mvvm)
         {
             this.Player = player;
             this.UpdateSong();
             this.Player.Tick += new Player.TickHandler(OnPlayerTick);
+            this.MainWindowVM = mvvm;
         }
 
         /// <summary>
@@ -332,7 +335,79 @@ namespace PopNTouch2.ViewModel
         }
 
         #endregion
-        
+
+        // Bottom buttons gestion (sup. & lock)
+        #region Bottom buttons
+        private bool bottomButtonsVisible = true;
+        public bool BottomButtonsVisible
+        {
+            get { return this.bottomButtonsVisible; }
+            set
+            {
+                this.bottomButtonsVisible = value;
+                RaisePropertyChanged("BottomButtonsVisible");
+            }
+        }
+
+        /// <summary>
+        /// Command, launched when the player clicks the Suppress button to suppress itself
+        /// </summary>
+        private ICommand removal;
+        public ICommand Removal
+        {
+            get
+            {
+                if (this.removal == null)
+                    this.removal = new RelayCommand(() =>
+                    {
+                        MainWindowVM.RemovePlayerVM(this);
+                    }
+                    );
+                return this.removal;
+            }
+        }
+
+        /// <summary>
+        /// Property, two-way bound to the Lock button
+        /// </summary>
+        private bool lockChecked = false;
+        public bool LockChecked
+        {
+            get { return this.lockChecked; }
+            set
+            {
+                this.lockChecked = value;
+                RaisePropertyChanged("LockChecked");
+            }
+        }
+
+        /// <summary>
+        /// Command, launched when the player clicks the Lock button (in either state)
+        /// </summary>
+        private ICommand clickLock;
+        public ICommand ClickLock
+        {
+            get
+            {
+                if (this.clickLock == null)
+                    this.clickLock = new RelayCommand(() =>
+                    {
+                        if (this.LockChecked)
+                        {
+                            this.IsFixed = false;
+                        }
+                        else
+                        {
+                            this.IsFixed = true;
+                        }
+                        RaisePropertyChanged("ClickLock");
+                    }
+                    );
+                return this.clickLock;
+            }
+        }
+
+        #endregion
 
         public ScoreVM ScoreVM
         {
