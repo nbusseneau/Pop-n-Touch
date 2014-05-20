@@ -176,6 +176,18 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Content Include="Resources\Songs\Pokémon\music.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Songs\Pokémon\Guitar-Beginner.sheet">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Songs\Pokémon\meta.data">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Songs\Pokémon\Guitar-Classic.sheet">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Resource Include="Resources\UI\Instruments\BTNP_Guitar.png" />
     <Resource Include="Resources\UI\Instruments\BTNP_Piano.png" />
     <Resource Include="Resources\UI\Instruments\BTNP_Violin.png" />
@@ -213,9 +225,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Songs\New Born\Piano-Classic.sheet">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\Songs\Patates\Guitar-Beginner.sheet">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
@@ -298,6 +307,7 @@
     <Resource Include="Resources\UI\Scrolls\BTNP_ScrollRoll4.png" />
     <Resource Include="Resources\UI\Scrolls\BTNP_ScrollRoll5.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
