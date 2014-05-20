@@ -18,6 +18,23 @@ namespace PopNTouch2.Model
             this.Bonuses = new List<IBonus>();
             this.MaxScore = 0;
         }
+
+        /// <summary>
+        /// Returns time when the note Note should be played
+        /// </summary>
+        /// <param name="note"></param>
+        /// <returns></returns>
+        public double GetPerfectTiming(Note note)
+        {
+            foreach (Tuple<double, double, Note> triple in this.Notes)
+            {
+                if (triple.Item3.Equals(note))
+                {
+                    return triple.Item2;
+                }
+            }
+            return 0d;
+        }
     }
 }
 

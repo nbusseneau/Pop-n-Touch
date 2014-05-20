@@ -237,7 +237,7 @@ namespace PopNTouch2.ViewModel
         }
         #endregion
 
-        #region SheetMusic
+        #region SheetMusic & Play
 
         private SheetMusicVM sheetMusic = new SheetMusicVM();
         public SheetMusicVM SheetMusic
@@ -247,6 +247,26 @@ namespace PopNTouch2.ViewModel
             {
                 this.sheetMusic = value;
                 RaisePropertyChanged("SheetMusic");
+            }
+        }
+
+        /// <summary>
+        /// Command, launched when the player clicks one of the Note buttons
+        /// Command Parameter is note pressed's height
+        /// </summary>
+        private ICommand clickNoteButton;
+        public ICommand ClickNoteButton
+        {
+            get
+            {
+                if (this.clickNoteButton == null)
+                    this.clickNoteButton = new RelayCommand<string>(arg =>
+                    {
+                        Height height = (Height)Enum.Parse(typeof(Height), arg);
+                        this.PlayNote(height);
+                    }
+                    );
+                return this.clickNoteButton;
             }
         }
 
@@ -270,6 +290,14 @@ namespace PopNTouch2.ViewModel
         {
             this.SheetMusic.AddNote(nt.Note);
             RaisePropertyChanged("SheetMusic");
+        }
+
+
+        public void PlayNote(Height height)
+        {
+            // This should be moved elsewhere to be called less often
+            this.SheetMusic.CleanNotes(this.Player.Stopwatch);
+            // TODO
         }
 
         #endregion

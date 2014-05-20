@@ -211,13 +211,13 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <s:SurfaceButton HorizontalAlignment="Center" Grid.Column="0" VerticalAlignment="Bottom" Height="70" Width="70" Click="Button_Do_Click" ClickMode="Press" Content="" Background="{x:Null}"/>
-            <s:SurfaceButton HorizontalAlignment="Center" Grid.Column="1" VerticalAlignment="Bottom" Height="70" Width="70" Click="Button_Re_Click" ClickMode="Press" Content="" Background="{x:Null}"/>
-            <s:SurfaceButton HorizontalAlignment="Center" Grid.Column="2" VerticalAlignment="Bottom" Height="70" Width="70" Click="Button_Mi_Click" ClickMode="Press" Content="" Background="{x:Null}"/>
-            <s:SurfaceButton HorizontalAlignment="Center" Grid.Column="3" VerticalAlignment="Bottom" Height="70" Width="70" Click="Button_Fa_Click" ClickMode="Press" Content="" Background="{x:Null}"/>
-            <s:SurfaceButton HorizontalAlignment="Center" Grid.Column="4" VerticalAlignment="Bottom" Height="70" Width="70" Click="Button_Sol_Click" ClickMode="Press" Content="" Background="{x:Null}"/>
-            <s:SurfaceButton HorizontalAlignment="Center" Grid.Column="5" VerticalAlignment="Bottom" Height="70" Width="70" Click="Button_La_Click" ClickMode="Press" Content="" Background="{x:Null}"/>
-            <s:SurfaceButton HorizontalAlignment="Center" Grid.Column="6" VerticalAlignment="Bottom" Height="70" Width="70" Click="Button_Si_Click" ClickMode="Press" Content="" Background="{x:Null}"/>
+            <s:SurfaceButton HorizontalAlignment="Center" Grid.Column="0" VerticalAlignment="Bottom" Height="70" Width="70" Command="{Binding ClickNoteButton}" CommandParameter="Do" Content="" Background="{x:Null}"/>
+            <s:SurfaceButton HorizontalAlignment="Center" Grid.Column="1" VerticalAlignment="Bottom" Height="70" Width="70" Command="{Binding ClickNoteButton}" CommandParameter="Re" Content="" Background="{x:Null}"/>
+            <s:SurfaceButton HorizontalAlignment="Center" Grid.Column="2" VerticalAlignment="Bottom" Height="70" Width="70" Command="{Binding ClickNoteButton}" CommandParameter="Mi" Content="" Background="{x:Null}"/>
+            <s:SurfaceButton HorizontalAlignment="Center" Grid.Column="3" VerticalAlignment="Bottom" Height="70" Width="70" Command="{Binding ClickNoteButton}" CommandParameter="Fa" Content="" Background="{x:Null}"/>
+            <s:SurfaceButton HorizontalAlignment="Center" Grid.Column="4" VerticalAlignment="Bottom" Height="70" Width="70" Command="{Binding ClickNoteButton}" CommandParameter="Sol" Content="" Background="{x:Null}"/>
+            <s:SurfaceButton HorizontalAlignment="Center" Grid.Column="5" VerticalAlignment="Bottom" Height="70" Width="70" Command="{Binding ClickNoteButton}" CommandParameter="La" Content="" Background="{x:Null}"/>
+            <s:SurfaceButton HorizontalAlignment="Center" Grid.Column="6" VerticalAlignment="Bottom" Height="70" Width="70" Command="{Binding ClickNoteButton}" CommandParameter="Si" Content="" Background="{x:Null}"/>
         </Grid>
     </Grid>
 </UserControl>

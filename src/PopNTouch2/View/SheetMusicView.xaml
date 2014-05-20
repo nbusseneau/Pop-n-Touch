@@ -16,7 +16,7 @@
             <Storyboard x:Key="NoteSlideAnim">
                 <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.2"/>
                 <PointAnimation Storyboard.TargetProperty="Center" From="560,-10" To="30,-10" Duration="0:0:2.5"/>
-                <DoubleAnimation Storyboard.TargetProperty="Opacity" From="1" To="0" BeginTime="0:0:2.2" Duration="0:0:0.3"/>
+                <!--<DoubleAnimation Storyboard.TargetProperty="Opacity" From="1" To="0" BeginTime="0:0:2.2" Duration="0:0:0.3"/>-->
             </Storyboard>
 
             <Style x:Key="ScatterNotesStyle" TargetType="{x:Type s:ScatterViewItem}">
@@ -29,7 +29,7 @@
                 <Setter Property="CanScale" Value="False"/>
                 <Setter Property="CanRotate" Value="False"/>
                 <Setter Property="CanMove" Value="False"/>
-                <Setter Property="Center" Value="{Binding Center, Mode=TwoWay}"/>
+                <Setter Property="Center" Value="{Binding Center}"/>
                 <Setter Property="Template">
                     <Setter.Value>
                         <ControlTemplate TargetType="{x:Type s:ScatterViewItem}">

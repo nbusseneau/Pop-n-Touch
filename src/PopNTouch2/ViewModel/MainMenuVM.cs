@@ -76,6 +76,8 @@ namespace PopNTouch2.ViewModel
         #region Song Selection
 
         // Song resources
+        // Maybe these should be computed, but where?
+        // Keeping them here to avoid code-behind
         private List<double> Angles { get; set; }
         private List<Thickness> Margins { get; set; }
         private List<String> ImageKeys { get; set; }

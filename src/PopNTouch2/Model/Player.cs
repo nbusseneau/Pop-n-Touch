@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Timers;
@@ -18,6 +19,7 @@ namespace PopNTouch2.Model
         public Difficulty Difficulty { get; set; }
         public int Score { get; set; }
         public Timer Timer { get; set; }
+        public Stopwatch Stopwatch { get; set; }
         public event TickHandler Tick;
         public class NoteTicked : EventArgs
         {
@@ -30,6 +32,7 @@ namespace PopNTouch2.Model
             this.Difficulty = Difficulty.Undefined;
             this.Instrument = Instrument.Undefined;
             this.InstrumentDifficulty = Difficulty.Undefined;
+            this.Stopwatch = new Stopwatch();
             this.Ready = false;
         }
 
@@ -99,6 +102,7 @@ namespace PopNTouch2.Model
             this.Timer.AutoReset = false;
             this.Timer.Elapsed += new ElapsedEventHandler(OnTimerTicked);
             this.Timer.Start();
+            this.Stopwatch.Start();
         }
 
         /// <summary>
