@@ -37,13 +37,13 @@ namespace PopNTouch2.ViewModel
         /// <summary>
         /// Boolean property to set if position should be fixed
         /// </summary>
-        private bool isFixed = true;
-        public bool IsFixed
+        private bool canMove = true;
+        public bool CanMove
         {
-            get { return isFixed; }
+            get { return canMove; }
             set 
             { 
-                isFixed = value;
+                canMove = value;
                 RaisePropertyChanged("IsFixed");
             }
         }
@@ -394,11 +394,11 @@ namespace PopNTouch2.ViewModel
                     {
                         if (this.LockChecked)
                         {
-                            this.IsFixed = false;
+                            this.CanMove = false;
                         }
                         else
                         {
-                            this.IsFixed = true;
+                            this.CanMove = true;
                         }
                         RaisePropertyChanged("ClickLock");
                     }

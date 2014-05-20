@@ -176,16 +176,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Content Include="Resources\Songs\Pokémon\music.mp3">
+    <Content Include="Resources\Songs\Thème Pokémon\music.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\Songs\Pokémon\Guitar-Beginner.sheet">
+    <Content Include="Resources\Songs\Thème Pokémon\Guitar-Beginner.sheet">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\Songs\Pokémon\meta.data">
+    <Content Include="Resources\Songs\Thème Pokémon\meta.data">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\Songs\Pokémon\Guitar-Classic.sheet">
+    <Content Include="Resources\Songs\Thème Pokémon\Guitar-Classic.sheet">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Resource Include="Resources\UI\BTNP_Unlock.png" />
