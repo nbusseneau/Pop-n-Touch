@@ -21,7 +21,7 @@ namespace PopNTouch2.ViewModel
         // Interval, in milliseconds, between each sheet cleaning
         private const double CLEANING_INTERVAL = 10000;
         // Tolerance, in milliseconds, for which a pressed note is still considered valid
-        private const double TIMING_TOLERANCE = 1000;
+        private const double TIMING_TOLERANCE = 300;
 
 
         public PlayerVM(Player player)
@@ -323,7 +323,15 @@ namespace PopNTouch2.ViewModel
                 double timingDifference = Math.Abs(closestNoteInfo.Item2 - elapsedTime);
                 this.Player.NoteScored(timingDifference / 1000);
                 this.SheetMusic.DisplayNoteScored();
-                // this.SheetMusic.RemoveNote(closestNoteInfo.Item3);
+
+                // Worst bugfix ever, please, do look away
+                try
+                {
+                    this.SheetMusic.RemoveNote(closestNoteInfo.Item3);
+                } catch (InvalidOperationException e) 
+                {
+                    Console.WriteLine("On the fly Note removal exception caught : {0}", e);
+                }
             }
             else
             {

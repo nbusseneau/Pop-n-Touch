@@ -92,6 +92,9 @@ namespace PopNTouch2.ViewModel
         public void AddNote(Note note)
         {
             NoteVM nvm = new NoteVM(note);
+
+            Tuple<double, double, Note> noteInfo = this.Sheet.Notes.Find(t => t.Item3.Equals(note));
+            nvm.CreateClassicStoryboard(noteInfo.Item2 - noteInfo.Item1);
             switch (note.Height)
             {
                 case Height.Do :

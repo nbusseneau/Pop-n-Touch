@@ -37,21 +37,19 @@
                         <ControlTemplate TargetType="{x:Type s:ScatterViewItem}">
                             
                             <Grid x:Name="container" RenderTransformOrigin="{TemplateBinding RenderTransformOrigin}">
+                                
                                 <Grid.RenderTransform>
                                     <ScaleTransform ScaleX="1" ScaleY="1" />
                                 </Grid.RenderTransform>
 
                                 <PopNTouch2:NoteView/>
+                                
                             </Grid>
-                            
-                            <ControlTemplate.Triggers>
-                                <EventTrigger RoutedEvent="Loaded">
-                                    <BeginStoryboard Storyboard="{StaticResource NoteSlideAnim}"/>
-                                </EventTrigger>
-                            </ControlTemplate.Triggers>
                         </ControlTemplate>
                     </Setter.Value>
                 </Setter>
+                
+                
             </Style>
         </Grid.Resources>
 
@@ -96,14 +94,32 @@
         
         <!-- One ScatterView for each Note collection, really easier to setup and to change afterwards -->
         <s:ScatterView ItemsSource="{Binding DoNotes}" Margin="10,165,10,30">
-            <s:ScatterView.Resources>
-                <DataTemplate DataType="{x:Type ViewModel:NoteVM}">
-                    <s:ScatterViewItem />
+            <s:ScatterView.ItemTemplate>
+                <DataTemplate>
+                    <s:ScatterViewItem>
+                        <s:ScatterViewItem.Resources>
+                            <Storyboard x:Key="anim">
+                                <PointAnimation Storyboard.TargetProperty="Center" From="560,-10" To="30,-10" Duration="0:0:2.5"/>
+                            </Storyboard>
+                        </s:ScatterViewItem.Resources>
+                        <PopNTouch2:NoteView />
+                        <s:ScatterViewItem.Triggers>
+                            <EventTrigger RoutedEvent="Loaded">
+                                <BeginStoryboard Storyboard="{StaticResource anim}"/>
+                            </EventTrigger>
+                        </s:ScatterViewItem.Triggers>
+                    </s:ScatterViewItem>
                 </DataTemplate>
-            </s:ScatterView.Resources>
-            <s:ScatterView.ItemContainerStyle>
-                <Style TargetType="{x:Type s:ScatterViewItem}" BasedOn="{StaticResource ScatterNotesStyle}" />
-            </s:ScatterView.ItemContainerStyle>
+            </s:ScatterView.ItemTemplate>
+            <!--<s:ScatterView.ItemContainerStyle>
+                <Style TargetType="{x:Type s:ScatterViewItem}" BasedOn="{StaticResource ScatterNotesStyle}">
+                    <Style.Triggers>
+                        <EventTrigger RoutedEvent="Control.Loaded">
+                            <BeginStoryboard Storyboard="{Binding RelativeSource={x:Static RelativeSource.Self}, Path=Storyboard}"/>
+                        </EventTrigger>
+                    </Style.Triggers>
+                </Style>
+            </s:ScatterView.ItemContainerStyle>-->
         </s:ScatterView>
 
         <s:ScatterView ItemsSource="{Binding ReNotes}" Margin="10,155,10,40">

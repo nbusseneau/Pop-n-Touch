@@ -24,7 +24,7 @@ namespace PopNTouch2.View
     {
         public MainWindow()
         {
-            //InitializeComponent();
+            InitializeComponent();
         }
     }
 }
