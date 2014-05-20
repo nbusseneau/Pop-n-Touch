@@ -137,11 +137,11 @@ namespace PopNTouch2.ViewModel
                     ObservableCollection<NoteVM> collection = (ObservableCollection<NoteVM>)f.GetValue(this);
                     for (int i = collection.Count - 1; i >= 0; i-- )
                     {
-                        double perfectTiming = this.Sheet.GetPerfectTiming(collection[i].Note);
+                        double perfectTiming = this.Sheet.GetPerfectTiming(collection[i].Note); // We could keep the current Note index and speed up the search
                         playerStopwatch.Stop();
                         double elapsedTime = playerStopwatch.ElapsedMilliseconds;
                         playerStopwatch.Start();
-                        if (elapsedTime > perfectTiming + 10000d)
+                        if (elapsedTime > perfectTiming + 50000d)
                         {
                             collection.RemoveAt(i);
                         }

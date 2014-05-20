@@ -17,9 +17,6 @@ namespace PopNTouch2.ViewModel
         private Song loadedSong;
 
         private Timer CleaningTimer { get; set; }
-        public event TickHandler Tick;
-        public class CleanTick : EventArgs {}
-        public delegate void TickHandler(Player p);
 
         // Interval, in milliseconds, between each sheet cleaning
         private const double CLEANING_INTERVAL = 10000;
