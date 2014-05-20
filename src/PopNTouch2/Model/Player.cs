@@ -101,16 +101,17 @@ namespace PopNTouch2.Model
             this.Timer.AutoReset = false;
             this.Timer.Elapsed += new ElapsedEventHandler(OnTimerTicked);
             this.Timer.Start();
-            this.Stopwatch.Start();
         }
 
         /// <summary>
-        /// Launch an event with the note to play when it has to be played
+        /// Launch an event with the note to play when it has to be displayed
         /// </summary>
         /// <param name="source"></param>
         /// <param name="e"></param>
         private void OnTimerTicked(object source, ElapsedEventArgs e)
         {
+            this.Stopwatch.Start();
+
             double myTime = 0;
             if (enumerator.Current == null)
             {
