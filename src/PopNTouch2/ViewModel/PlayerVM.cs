@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using PopNTouch2.Model;
 using System.Collections.ObjectModel;
+using System.Timers;
 
 namespace PopNTouch2.ViewModel
 {
@@ -14,6 +15,14 @@ namespace PopNTouch2.ViewModel
         public Player Player { get; set; }
 
         private Song loadedSong;
+
+        private Timer CleaningTimer { get; set; }
+        public event TickHandler Tick;
+        public class CleanTick : EventArgs {}
+        public delegate void TickHandler(Player p);
+
+        // Interval, in milliseconds, between each sheet cleaning
+        private const double CLEANING_INTERVAL = 10000;
 
 
         public PlayerVM(Player player)
@@ -272,12 +281,18 @@ namespace PopNTouch2.ViewModel
 
         /// <summary>
         /// Sets correct current sheet in SheetMusicVM
+        /// Sets and starts CleaningTimer
         /// </summary>
         public void PrepareSheet()
         {
             this.SheetMusic.Sheet = GameMaster.Instance.SheetBuilder.BuildSheet(this.loadedSong, this.Player.Instrument, this.Player.InstrumentDifficulty);
             this.Player.SheetMusic = this.SheetMusic.Sheet;
             this.SheetMusic.Visibility = true;
+
+            this.CleaningTimer = new Timer(CLEANING_INTERVAL);
+            this.CleaningTimer.AutoReset = true;
+            this.CleaningTimer.Elapsed += new ElapsedEventHandler((source, e) => { this.SheetMusic.CleanNotes(this.Player.Stopwatch); });
+            this.CleaningTimer.Start();
         }
 
         /// <summary>
@@ -295,8 +310,6 @@ namespace PopNTouch2.ViewModel
 
         public void PlayNote(Height height)
         {
-            // This should be moved elsewhere to be called less often
-            this.SheetMusic.CleanNotes(this.Player.Stopwatch);
             // TODO
         }
 

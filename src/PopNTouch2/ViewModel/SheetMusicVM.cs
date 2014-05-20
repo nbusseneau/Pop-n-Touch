@@ -141,7 +141,7 @@ namespace PopNTouch2.ViewModel
                         playerStopwatch.Stop();
                         double elapsedTime = playerStopwatch.ElapsedMilliseconds;
                         playerStopwatch.Start();
-                        if (elapsedTime > perfectTiming + 5000d)
+                        if (elapsedTime > perfectTiming + 10000d)
                         {
                             collection.RemoveAt(i);
                         }
