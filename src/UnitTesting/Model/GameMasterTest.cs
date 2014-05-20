@@ -87,31 +87,5 @@ namespace UnitTesting.Model
                 Assert.IsInstanceOfType(p.Difficulty, typeof(Difficulty));
             }
         }
-
-        [TestMethod]
-        public void Ready()
-        {
-            GameMaster gameMaster = GameMaster.Instance;
-            gameMaster.SelectSong(song);
-            gameMaster.NewPlayer(new Player());
-            gameMaster.Ready();
-            Assert.IsFalse(gameMaster.Game.IsPlaying);
-
-            foreach (Player p in gameMaster.Players)
-            {
-                p.Ready = true;
-            }
-            gameMaster.Ready();
-            Assert.IsTrue(gameMaster.Game.IsPlaying);
-
-            /*gameMaster.NewPlayer();
-            foreach (Player p in gameMaster.Players)
-            {
-                p.Ready = true;
-            }
-            gameMaster.Ready();
-            Assert.Inconclusive("Adding a player in a playing game not yet implemented.");
-            */
-        }
     }
 }

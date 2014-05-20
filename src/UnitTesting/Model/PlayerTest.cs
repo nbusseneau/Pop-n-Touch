@@ -51,7 +51,7 @@ namespace UnitTesting.Model
             p.IMReady();
 
             // Assert
-            Assert.IsNotNull(p.SheetMusic);
+            // Assert.IsNotNull(p.SheetMusic); < Sheet building is presently done in the VM
             Assert.AreEqual(p.CurrentGame, gm.Game);
             Assert.IsTrue(p.Ready);
             Assert.IsNotNull(p.Instrument);

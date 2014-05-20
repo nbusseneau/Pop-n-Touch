@@ -47,7 +47,7 @@ namespace UnitTesting.Model
             player.Difficulty = Difficulty.Classic;
             player.SheetMusic = GameMaster.Instance.SheetBuilder.BuildSheet(GameMaster.Instance.Game.Song, player.Instrument, player.Difficulty);
             player.IMReady();
-            gm.Ready();
+            gm.Game.Launch();
             Player p2 = new Player();
             p2.Instrument = Instrument.Piano;
             p2.Difficulty = Difficulty.Classic;

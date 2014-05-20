@@ -282,6 +282,7 @@ namespace PopNTouch2.ViewModel
         /// </summary>
         public void PrepareSheet()
         {
+            // Build the sheet should be done in the Model
             this.SheetMusic.Sheet = GameMaster.Instance.SheetBuilder.BuildSheet(this.loadedSong, this.Player.Instrument, this.Player.InstrumentDifficulty);
             this.Player.SheetMusic = this.SheetMusic.Sheet;
             this.SheetMusic.Visibility = true;

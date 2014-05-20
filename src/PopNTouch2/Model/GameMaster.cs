@@ -110,29 +110,5 @@ namespace PopNTouch2.Model
             if (this.SongSelected)
                 player.InformNewGame();
         }
-
-        // Really useful ?
-        public void Ready(bool autolaunch = true)
-        {
-            Boolean everyoneReady = true;
-            foreach (Player player in this.Players)
-            {
-                everyoneReady &= player.Ready;
-            }
-
-            if (!autolaunch)
-            {
-                return;
-            }
-
-            if (everyoneReady && !this.Game.IsPlaying)
-            {
-                this.Game.Launch();
-            }
-            else if (everyoneReady && this.Game.IsPlaying)
-            {
-                // Place the sheet reader to the right part of the sheet then play 
-            }
-        }
     }
 }

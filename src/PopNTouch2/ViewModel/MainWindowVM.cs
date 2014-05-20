@@ -114,6 +114,7 @@ namespace PopNTouch2.ViewModel
                     {
                         int count = this.players.Count;
                         this.players.Clear();
+                        GameMaster.Instance.Players.Clear();
                         for (int i = 0; i < count; i++)
                             AddPlayer.Execute(null);
                         RaisePropertyChanged("Players");
@@ -150,7 +151,6 @@ namespace PopNTouch2.ViewModel
                         if (allReady)
                         {
                             this.DisablePlayerChoices();
-                            GameMaster.Instance.Ready(false);
                             GameMaster.Instance.Game.Launch(); //FIXME : Have a Countdown before launching
                         }
                     });
