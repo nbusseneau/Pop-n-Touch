@@ -44,7 +44,7 @@ namespace PopNTouch2.ViewModel
             set 
             { 
                 canMove = value;
-                RaisePropertyChanged("IsFixed");
+                RaisePropertyChanged("CanMove");
             }
         }
 
