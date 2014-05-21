@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Timers;
 using System.Windows.Media;
 
 namespace PopNTouch2.Model
@@ -14,23 +15,33 @@ namespace PopNTouch2.Model
         /// <summary>
         /// Instantiate an AudioController.
         /// <param name="filepath">Path of the file to be opened.</param>
-        /// <param name="playImmediately">If true, the file should be played as soon as loaded.</param>
+        /// <param name="delayStart">If set, wait for delayStart milliseconds before starting.</param>
         /// </summary> 
-        public AudioController(Uri filepath, bool playImmediately=false) : base()
+        public AudioController(Uri filepath, double delayStart = 0d) : base()
         {
             this.Open(filepath);
-            if (playImmediately)
+            if (delayStart == 0d)
             {
                 this.Play();
+            }
+            else
+            {
+                Timer timer = new Timer(delayStart);
+                timer.Elapsed += delegate(object source, ElapsedEventArgs e)
+                {
+                    this.Dispatcher.Invoke((Action)(() => { this.Play(); })); ;
+                    timer.Stop();
+                };
+                timer.Start();
             }
         }
 
         /// <summary>
         /// Instantiate an AudioController.
         /// <param name="song">Song to be opened.</param>
-        /// <param name="playImmediately">If true, the file should be played as soon as loaded. Defaults to false.</param>
+        /// <param name="delayStart">If set, wait for delayStart milliseconds before starting.</param>
         /// </summary> 
-        public AudioController(Song song, bool playImmediately=false) : this(song.File, playImmediately)
+        public AudioController(Song song, double delayStart = 0d) : this(song.File, delayStart)
         {
         }
 

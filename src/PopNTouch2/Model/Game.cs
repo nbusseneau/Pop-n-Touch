@@ -36,7 +36,7 @@ namespace PopNTouch2.Model
                 this.TimeElapsed++;
             };
             timer.Start();
-            this.MusicPlayback = new AudioController(Song.File, true);
+            this.MusicPlayback = new AudioController(Song.File, 3000);
         }
 
         /// <summary>

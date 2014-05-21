@@ -23,7 +23,7 @@ namespace PopNTouch2.ViewModel
         // Interval, in milliseconds, between each sheet cleaning
         private const double CLEANING_INTERVAL = 10000;
         // Tolerance, in milliseconds, for which a pressed note is still considered valid
-        private const double TIMING_TOLERANCE = 1000;
+        private const double TIMING_TOLERANCE = 500;
 
 
         public PlayerVM(Player player, MainWindowVM mvvm)
@@ -274,16 +274,7 @@ namespace PopNTouch2.ViewModel
                     this.clickNoteButton = new RelayCommand<string>(arg =>
                     {
                         Height height = (Height)Enum.Parse(typeof(Height), arg);
-
-                        // Worst bugfix ever, please, do look away
-                        try
-                        {
-                            this.PlayNote(height);
-                        }
-                        catch (ArgumentOutOfRangeException oore)
-                        {
-                            Console.WriteLine("Note button pressed exception caught : {0}", oore);
-                        }
+                        this.PlayNote(height);
                     }
                     );
                 return this.clickNoteButton;
@@ -330,13 +321,17 @@ namespace PopNTouch2.ViewModel
             this.Player.Stopwatch.Start();
 
             Tuple<double,double,Note> closestNoteInfo = this.Player.SheetMusic.Notes.Find(t => t.Item2 <= elapsedTime + TIMING_TOLERANCE && t.Item2 >= elapsedTime - TIMING_TOLERANCE);
-            if (closestNoteInfo != null && closestNoteInfo.Item3.Height == height)
+            if (closestNoteInfo == null)
+            {
+                this.SheetMusic.DisplayNoteFailed();
+            }
+            else if (closestNoteInfo.Item3.Height == height)
             {
                 double timingDifference = Math.Abs(closestNoteInfo.Item2 - elapsedTime);
                 this.Player.NoteScored(timingDifference / 1000);
                 this.SheetMusic.DisplayNoteScored();
 
-                // 2nd Worst bugfix ever, please, do look away
+                // FIXME : Worst bugfix ever, please, do look away
                 try
                 {
                     this.SheetMusic.RemoveNote(closestNoteInfo.Item3);
@@ -345,10 +340,6 @@ namespace PopNTouch2.ViewModel
                 {
                     Console.WriteLine("On the fly Note removal exception caught : {0}", e);
                 }
-            }
-            else
-            {
-                this.SheetMusic.DisplayNoteFailed();
             }
         }
 
