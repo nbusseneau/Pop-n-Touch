@@ -9,7 +9,7 @@
              d:DesignHeight="1080" d:DesignWidth="1920">
     
     <s:ScatterView MinHeight="1080" MaxHeight="1080" MaxWidth="1920" MinWidth="1920" Width="1920" Height="1080" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" Panel.ZIndex="10">
-        <s:ScatterViewItem ShowsActivationEffects="False" AngularDeceleration="0.1" Name="menu" MinHeight="1080" MaxHeight="1080" MaxWidth="1920" MinWidth="1920" Width="1920" CanMove="false" CanScale="false" CanRotate="true" Center="0,0" Orientation="0" Background="{x:Null}" RenderTransformOrigin="0.5,0.5" Margin="960,540,-960,-540" Height="1080" VerticalAlignment="Top" Panel.ZIndex="10">
+        <s:ScatterViewItem AngularDeceleration="270" Name="menu" MinHeight="1080" MaxHeight="1080" MaxWidth="1920" MinWidth="1920" Height="1080" Width="1920" CanMove="false" CanScale="false" CanRotate="true" Center="0,0" Orientation="0" Background="{x:Null}" RenderTransformOrigin="0.5,0.5" Margin="960,540,-960,-540" VerticalAlignment="Top" Panel.ZIndex="10">
             <s:ScatterViewItem.Resources>
                 <BitmapImage x:Key="ImgScroll1" UriSource="../Resources/UI/Scrolls/BTNP_ScrollRoll1.png"/>
                 <BitmapImage x:Key="ImgScroll2" UriSource="../Resources/UI/Scrolls/BTNP_ScrollRoll2.png"/>
