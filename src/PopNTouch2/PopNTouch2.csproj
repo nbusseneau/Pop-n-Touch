@@ -192,6 +192,7 @@
     <Resource Include="Resources\UI\Fonts\Exo-Thin.otf" />
     <Resource Include="Resources\UI\BGP_Score2.png" />
     <Resource Include="Resources\UI\BGP_Score.png" />
+    <Resource Include="Resources\UI\BTNP_AddPlayer.png" />
     <Resource Include="Resources\UI\BTNP_Unlock.png" />
     <Resource Include="Resources\UI\BTNP_Lock.png" />
     <Resource Include="Resources\UI\BTNP_Sup.png" />

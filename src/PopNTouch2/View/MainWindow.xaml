@@ -167,10 +167,12 @@
 
         <!-- Play song -->
         <s:SurfaceButton Visibility="{Binding MainMenu.IsReady, Converter={StaticResource bool2vis}}" Command="{Binding PlaySong}" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="{x:Null}">
-            <Image Height="220" Width="220" Source="../Resources/UI/BTNP_Play.png"/>
+            <Image Height="320" Width="320" Source="../Resources/UI/BTNP_Play.png"/>
         </s:SurfaceButton>
 
-        <s:SurfaceButton Visibility="{Binding MainMenu.IsReady, Converter={StaticResource bool2vis}}" Command="{Binding AddPlayer}" Content="+" HorizontalAlignment="Center" Margin="0,0,-270,0" VerticalAlignment="Center" Height="61" Width="54" FontSize="38" Background="#FF497A44"/>
+        <s:SurfaceButton Visibility="{Binding MainMenu.IsReady, Converter={StaticResource bool2vis}}" Command="{Binding AddPlayer}" HorizontalAlignment="Center" Margin="0,0,-270,0" VerticalAlignment="Center" Height="100" Width="100" FontSize="38" Background="{x:Null}">
+            <Image Height="100" Width="100" Source="../Resources/UI/BTNP_AddPlayer.png"/>
+        </s:SurfaceButton>
         <s:SurfaceButton Visibility="{Binding MainMenu.IsReady, Converter={StaticResource bool2vis}}" Command="{Binding EraseAll}" Content="X" HorizontalAlignment="Center" Margin="0,0,270,0" VerticalAlignment="Center" Height="61" Width="54" FontSize="38" Background="#FF783936"/>
 
     </Grid>
