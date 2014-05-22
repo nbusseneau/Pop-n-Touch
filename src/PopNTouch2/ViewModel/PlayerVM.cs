@@ -330,8 +330,8 @@ namespace PopNTouch2.ViewModel
                 this.SheetMusic.DisplayNoteScored();
                 closestNoteInfo.Item3.Hit();
                 this.Player.ScoreCombo();
+                this.ScoreVM.MaxCombo = this.Player.MaxCombo;
             }
-
             RaisePropertyChanged("Combo");
         }
 

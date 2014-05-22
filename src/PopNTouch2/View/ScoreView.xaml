@@ -12,8 +12,10 @@
         <!-- Background -->
         <Image Source="../Resources/UI/BGP_Score.png" Width="593" Height="216" Stretch="Fill"/>
 
-        <TextBlock Text="Score" FontFamily="../Resources/UI/Fonts/#Exo" Foreground="AntiqueWhite" FontWeight="Bold" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="66,10,69,0"/>
-        <TextBlock Text="{Binding Score}" Foreground="AntiqueWhite" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="66,100,69,0"/>
+        <TextBlock Text="Score" FontFamily="../Resources/UI/Fonts/#Exo" Foreground="AntiqueWhite" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="253,10,0,0"/>
+        <TextBlock Text="{Binding Score}" Foreground="AntiqueWhite" FontWeight="Bold" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="279,55,0,0" Width="38"/>
+        <TextBlock Text="Max Combo" FontFamily="../Resources/UI/Fonts/#Exo" Foreground="AntiqueWhite" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="219,100,0,0"/>
+        <TextBlock Text="{Binding MaxCombo}" Foreground="AntiqueWhite" FontWeight="Bold" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="279,154,0,0" Width="38"/>
     </Grid>
 
 </UserControl>

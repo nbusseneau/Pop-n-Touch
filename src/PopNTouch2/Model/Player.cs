@@ -128,7 +128,7 @@ namespace PopNTouch2.Model
                 this.Stopwatch.Stop();
                 nt.Note.StartPlaying(this.enumerator.Current.Item2 - this.Stopwatch.ElapsedMilliseconds + TIMING_TOLERANCE);
                 this.Stopwatch.Start();
-                nt.Note.Tick += new Note.TickHandler(() => { this.Combo = 0; });
+                //nt.Note.Tick += new Note.TickHandler(() => { this.Combo = 0; });
                 Tick(this, nt);
             }
             myTime = this.enumerator.Current.Item1;

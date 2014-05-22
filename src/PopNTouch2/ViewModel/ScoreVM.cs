@@ -8,6 +8,10 @@ namespace PopNTouch2.ViewModel
 {
     public class ScoreVM : ViewModelBase
     {
+        public ScoreVM()
+        {
+        }
+
         private int score = 0;
         public int Score
         {
@@ -19,8 +23,15 @@ namespace PopNTouch2.ViewModel
             }
         }
 
-        public ScoreVM()
+        private int maxCombo;
+        public int MaxCombo
         {
+            get { return this.maxCombo; }
+            set 
+            { 
+                this.maxCombo = value;
+                RaisePropertyChanged("MaxCombo");
+            }
         }
 
         private bool scoreVisibility = false;
