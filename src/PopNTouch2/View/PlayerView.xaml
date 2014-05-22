@@ -217,6 +217,7 @@
         </StackPanel>
 
         <!-- Stave -->
+        <TextBlock Text="{Binding Combo}" FontFamily="../Resources/UI/Fonts/#Exo" Foreground="Black" TextAlignment="Center" FontSize="25" Width="30" Margin="143,96,477,269" Visibility="{Binding SheetMusic.Visibility, Converter={StaticResource bool2vis}}"/>
         <PopNTouch2:SheetMusicView DataContext="{Binding SheetMusic}" Visibility="{Binding Visibility, Converter={StaticResource bool2vis}}" Margin="35,96,0,0" HorizontalAlignment="Left" Width="580" Height="210" VerticalAlignment="Top"/>
 
         <!-- Derpy derpatchouille (point d'exclamation jaune)-->

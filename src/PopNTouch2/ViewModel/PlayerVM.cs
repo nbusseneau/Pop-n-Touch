@@ -321,6 +321,7 @@ namespace PopNTouch2.ViewModel
             if (closestNoteInfo == null)
             {
                 this.SheetMusic.DisplayNoteFailed();
+                this.Player.Combo = 0;
             }
             else if (closestNoteInfo.Item3.Height == height)
             {
@@ -328,7 +329,10 @@ namespace PopNTouch2.ViewModel
                 this.Player.NoteScored(timingDifference / 1000);
                 this.SheetMusic.DisplayNoteScored();
                 closestNoteInfo.Item3.Hit();
+                this.Player.ScoreCombo();
             }
+
+            RaisePropertyChanged("Combo");
         }
 
         #endregion
@@ -408,6 +412,11 @@ namespace PopNTouch2.ViewModel
 
         // Score
         #region Score
+        public int Combo
+        {
+            get { return this.Player.Combo; }
+        }
+
         private ScoreVM scoreVM = new ScoreVM();
         public ScoreVM ScoreVM
         {

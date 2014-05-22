@@ -20,6 +20,8 @@ namespace PopNTouch2.Model
         public Difficulty InstrumentDifficulty { get; set; }
         public Difficulty Difficulty { get; set; }
         public int Score { get; set; }
+        public int Combo { get; set; }
+        public int MaxCombo { get; set; }
         public Timer Timer { get; set; }
         public Stopwatch Stopwatch { get; set; }
         public event TickHandler Tick;
@@ -126,7 +128,7 @@ namespace PopNTouch2.Model
                 this.Stopwatch.Stop();
                 nt.Note.StartPlaying(this.enumerator.Current.Item2 - this.Stopwatch.ElapsedMilliseconds + TIMING_TOLERANCE);
                 this.Stopwatch.Start();
-
+                nt.Note.Tick += new Note.TickHandler(() => { this.Combo = 0; });
                 Tick(this, nt);
             }
             myTime = this.enumerator.Current.Item1;
@@ -177,6 +179,15 @@ namespace PopNTouch2.Model
                 this.Score += nope;
             }
 
+        }
+
+        /// <summary>
+        /// Increments Player's combo info
+        /// </summary>
+        public void ScoreCombo()
+        {
+            this.Combo++;
+            this.MaxCombo = Math.Max(this.MaxCombo, this.Combo);
         }
     }
 }
