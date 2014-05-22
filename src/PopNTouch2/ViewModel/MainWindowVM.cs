@@ -165,10 +165,10 @@ namespace PopNTouch2.ViewModel
                         {
                             this.DisablePlayerChoices();
                             this.PlaySongButtonsVisible = false;
-                            this.MainMenu.IsReady = false;
                             foreach (PlayerVM pvm in this.players)
                             {
                                 pvm.BottomButtonsVisible = false;
+                                pvm.ScoreVM.ScoreVisibility = false;
                             }
                             GameMaster.Instance.Game.Launch(); //FIXME : Have a Countdown before launching
                             GameMaster.Instance.Game.MusicPlayback.MediaEnded += new EventHandler(ComputeEndGame);

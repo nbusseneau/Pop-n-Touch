@@ -36,7 +36,6 @@ namespace PopNTouch2.Model
             this.Difficulty = Difficulty.Undefined;
             this.Instrument = Instrument.Undefined;
             this.InstrumentDifficulty = Difficulty.Undefined;
-            this.Stopwatch = new Stopwatch();
             this.Ready = false;
         }
 
@@ -104,6 +103,7 @@ namespace PopNTouch2.Model
             this.Timer = new Timer(2000);
             this.Timer.AutoReset = false;
             this.Timer.Elapsed += new ElapsedEventHandler(OnTimerTicked);
+            this.Stopwatch = new Stopwatch();
             this.Timer.Start();
         }
 
