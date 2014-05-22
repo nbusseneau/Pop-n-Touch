@@ -175,7 +175,7 @@ namespace PopNTouch2.ViewModel
             foreach (FieldInfo f in this.GetType().GetFields(BindingFlags.Instance | BindingFlags.NonPublic).Where(fi => fi.FieldType == typeof(ObservableCollection<NoteVM>)))
             {
                 ObservableCollection<NoteVM> collection = (ObservableCollection<NoteVM>)f.GetValue(this);
-                for (int i = collection.Count - 1; i >= 0; i-- )
+                for (int i = collection.Count - 1; i >= 0; i--)
                 {
                     double perfectTiming = this.Sheet.GetPerfectTiming(collection[i].Note); // We could keep the current Note index and speed up the search
                     if (elapsedTime > perfectTiming + 20000d)

@@ -61,14 +61,14 @@ namespace PopNTouch2.ViewModel
         /// Global MainMenu visibility
         /// Should maybe be changed to boolean
         /// </summary>
-        private Visibility visibility = Visibility.Collapsed;
-        public Visibility Visibility
+        private bool isVisible = false;
+        public bool IsVisible
         {
-            get { return this.visibility; }
+            get { return this.isVisible; }
             set
             {
-                this.visibility = value;
-                RaisePropertyChanged("Visibility");
+                this.isVisible = value;
+                RaisePropertyChanged("IsVisible");
             }
         }
 
@@ -121,8 +121,7 @@ namespace PopNTouch2.ViewModel
         public void SelectSong (Song selectedSong)
         {
             this.SelectedSong = selectedSong;
-            // FIXME : Temporary
-            this.Visibility = Visibility.Collapsed;
+            this.IsVisible = false;
             this.IsReady = true;
             GameMaster.Instance.SelectSong(this.SelectedSong);
             this.MainWindow.UpdatePlayers();

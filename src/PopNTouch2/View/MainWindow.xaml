@@ -6,7 +6,7 @@
         xmlns:ViewModel="clr-namespace:PopNTouch2.ViewModel"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
         Title="Pop'n Touch 2 : Revengeance" Left="0" Top="0" Width="1920" Height="1080">
-    
+
     <Window.DataContext>
         <ViewModel:MainWindowVM/>
     </Window.DataContext>
@@ -14,8 +14,9 @@
     <Window.Resources>
         <BooleanToVisibilityConverter x:Key="bool2vis" />
         <ViewModel:InverseVisibilityConverter x:Key="inverseVisibilityConverter" />
-        
-        <Storyboard x:Key="startBtnAnim" Duration="0:0:1" RepeatBehavior="Forever" AutoReverse="True">
+
+        <!-- Start button heartbeat animation -->
+        <Storyboard x:Key="StartBtnAnimation" Duration="0:0:1" RepeatBehavior="Forever" AutoReverse="True">
             <DoubleAnimation From="1.0" To="1.1" 
             Storyboard.TargetName="startBtn"
             Storyboard.TargetProperty="(Grid.RenderTransform).(ScaleTransform.ScaleX)">
@@ -31,28 +32,94 @@
                 </DoubleAnimation.EasingFunction>
             </DoubleAnimation>
         </Storyboard>
+
+
+        <!-- Makes a character go up and down.-->
+        <DoubleAnimation 
+          x:Key="CharacterWaveAnimation" 
+          x:Shared="False" 
+          To="20"
+          AccelerationRatio="0.5" 
+          AutoReverse="True"
+          DecelerationRatio="0.5"       
+          Duration="0:0:1"
+          RepeatBehavior="Forever"
+          Storyboard.TargetName="titleTextBlock" 
+          />
+
+        <!-- Makes a character spin in a circle. -->
+        <DoubleAnimation 
+          x:Key="CharacterRotationAnimation" 
+          x:Shared="False" 
+          To="360"
+          AccelerationRatio="0.5" 
+          DecelerationRatio="0.5"
+          Duration="0:0:2" 
+          Storyboard.TargetName="titleTextBlock" 
+        />
+
+        <!-- Creates a pause between rotations 
+         of the entire string. -->
+        <DoubleAnimation 
+          x:Key="CharacterRotationPauseAnimation"
+          Duration="0:0:8"
+          Storyboard.TargetProperty="Opacity" 
+          />
+
+        <!-- Fades an element out -->
+        <Storyboard x:Key="FadeOutAnimation">
+            <DoubleAnimation 
+              Duration="0:0:1"
+              Storyboard.TargetProperty="Opacity"
+              From="1"
+              To="0"
+            />
+            
+            <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility">
+                <DiscreteObjectKeyFrame Value="{x:Static Visibility.Collapsed}" />
+            </ObjectAnimationUsingKeyFrames>
+        </Storyboard>
+        
     </Window.Resources>
 
     <Grid Background="Black">
-        
+
         <!-- Background -->
         <Image HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Source="../Resources/UI/BGP_Main.jpg" Panel.ZIndex="-10"/>
 
         <!-- Start screen-->
-        <s:SurfaceButton Name="startBtn" HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding StartGame}" Background="{x:Null}" RenderTransformOrigin="0.5,0.5" Visibility="{Binding StartButtonVisibility}">
+        <s:SurfaceButton Name="startBtn" HorizontalAlignment="Left" VerticalAlignment="Center" Command="{Binding StartGame}" Background="{x:Null}" RenderTransformOrigin="0.5,0.5" Margin="782,360,0,358">
             <s:SurfaceButton.RenderTransform>
                 <ScaleTransform x:Name="scaleBtnStart" ScaleX="1.0" ScaleY="1.0"/>
             </s:SurfaceButton.RenderTransform>
             <Image Height="320" Width="320" Source="../Resources/UI/BTNP_Start.png" />
             <s:SurfaceButton.Triggers>
                 <EventTrigger RoutedEvent="Image.Loaded">
-                    <BeginStoryboard Name="beginStartBtnAnim" Storyboard="{DynamicResource startBtnAnim}" />
+                    <BeginStoryboard Name="beginStartBtnAnim" Storyboard="{DynamicResource StartBtnAnimation}" />
                 </EventTrigger>
                 <EventTrigger RoutedEvent="s:SurfaceButton.Click">
                     <StopStoryboard BeginStoryboardName="beginStartBtnAnim" />
+                    <BeginStoryboard Storyboard.TargetName="startBtn" Storyboard="{DynamicResource FadeOutAnimation}"/>
                 </EventTrigger>
             </s:SurfaceButton.Triggers>
         </s:SurfaceButton>
+
+        <TextBlock Name="titleTextBlock" Foreground="Black" FontSize="110" FontFamily="../Resources/UI/Fonts/#Exo" HorizontalAlignment="Center" Loaded="StartTextAnimations" Text="REVENGEANCE" VerticalAlignment="Center" Margin="401,691,406,212">
+            <TextBlock.Style>
+                <Style>
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding StartScreenVisible}" Value="false">
+                            <DataTrigger.EnterActions>
+                                <BeginStoryboard Name="fadeOut" Storyboard="{StaticResource FadeOutAnimation}"/>
+                            </DataTrigger.EnterActions>
+                            <DataTrigger.ExitActions>
+                                <RemoveStoryboard BeginStoryboardName="fadeOut"/>
+                            </DataTrigger.ExitActions>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </TextBlock.Style>
+        </TextBlock>
 
         <!-- Players views -->
         <s:ScatterView ItemsSource="{Binding Players}" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Panel.ZIndex="-1">
@@ -80,7 +147,7 @@
                                         <ScaleTransform ScaleX="1" ScaleY="1" />
                                     </Grid.RenderTransform>
 
-                                    <PopNTouch2:PlayerView x:Name="Content"/>  
+                                    <PopNTouch2:PlayerView x:Name="Content"/>
                                 </Grid>
                                 <ControlTemplate.Triggers>
                                     <Trigger Property="IsEnabled" Value="False">
@@ -92,12 +159,12 @@
                     </Setter>
                 </Style>
             </s:ScatterView.ItemContainerStyle>
-            
+
         </s:ScatterView>
 
-        <!-- Temporary list to choose a song -->
-        <PopNTouch2:MainMenuView DataContext="{Binding MainMenu}" Visibility="{Binding Visibility}" />
-        
+        <!-- Main Menu -->
+        <PopNTouch2:MainMenuView DataContext="{Binding MainMenu}" Visibility="{Binding IsVisible, Converter={StaticResource bool2vis}}" />
+
         <!-- Play song -->
         <s:SurfaceButton Visibility="{Binding MainMenu.IsReady, Converter={StaticResource bool2vis}}" Command="{Binding PlaySong}" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="{x:Null}">
             <Image Height="220" Width="220" Source="../Resources/UI/BTNP_Play.png"/>

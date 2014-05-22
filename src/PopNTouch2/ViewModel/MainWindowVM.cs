@@ -18,17 +18,16 @@ namespace PopNTouch2.ViewModel
             this.mainMenu = new MainMenuVM(this);
         }
 
-        // StartButton Behaviour, Properties and On Click Bindings
-        #region StartButton
+        // Start screen Behaviour, Properties and On Click Bindings
+        #region Start screen
 
         /// <summary>
-        /// Is the animated Start button visible?
-        /// May be changed to a boolean
+        /// Is Start screen visible?
         /// </summary>
-        private Visibility startButtonVisibility = Visibility.Visible;
-        public Visibility StartButtonVisibility
+        private bool startScreenVisible = true;
+        public bool StartScreenVisible
         {
-            get { return this.startButtonVisibility; }
+            get { return this.startScreenVisible; }
         }
 
         /// <summary>
@@ -43,14 +42,13 @@ namespace PopNTouch2.ViewModel
                 if (startGame == null)
                     startGame = new RelayCommand(() =>
                     {
-                        this.startButtonVisibility = Visibility.Collapsed;
-                        RaisePropertyChanged("StartButtonVisibility");
+                        this.startScreenVisible = false;
+                        RaisePropertyChanged("StartScreenVisible");
 
                         foreach(Song s in GameMaster.Instance.Songs)
                             this.MainMenu.AddSong(new SongVM(s, this.MainMenu));
 
-                        // FIXME Temporary
-                        this.mainMenu.Visibility = Visibility.Visible;
+                        this.mainMenu.IsVisible = true;
                     });
                 return this.startGame;
             }
@@ -120,7 +118,7 @@ namespace PopNTouch2.ViewModel
                             AddPlayer.Execute(null);
 
                         this.MainMenu.IsReady = false;
-                        this.MainMenu.Visibility = Visibility.Visible;
+                        this.MainMenu.IsVisible = false;
                         
                     });
                 return this.eraseAll;
