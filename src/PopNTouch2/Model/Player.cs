@@ -135,10 +135,6 @@ namespace PopNTouch2.Model
                 this.Timer.Interval = this.enumerator.Current.Item1 - myTime;
                 this.Timer.Start();
             }
-            else
-            {
-                this.CurrentGame.PlayerFinished();
-            }
         }
 
         /// <summary>

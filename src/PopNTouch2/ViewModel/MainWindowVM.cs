@@ -146,7 +146,7 @@ namespace PopNTouch2.ViewModel
                             }
                         }
 
-                        if (allReady)
+                        if (allReady && players.Count > 0)
                         {
                             this.DisablePlayerChoices();
                             this.MainMenu.IsReady = false;
@@ -155,7 +155,7 @@ namespace PopNTouch2.ViewModel
                                 pvm.BottomButtonsVisible = false;
                             }
                             GameMaster.Instance.Game.Launch(); //FIXME : Have a Countdown before launching
-                            GameMaster.Instance.Game.GameFinishedEvent += new Game.GameFinishedHandler(ComputeEndGame);
+                            GameMaster.Instance.Game.MusicPlayback.MediaEnded += new EventHandler(ComputeEndGame);
                         }
                     });
                 return this.playSong;
@@ -219,6 +219,7 @@ namespace PopNTouch2.ViewModel
         /// <param name="e"></param>
         public void ComputeEndGame(object sender, EventArgs e)
         {
+            System.Threading.Thread.Sleep(2000);
             foreach (PlayerVM pvm in this.Players)
             {
                 pvm.DisplayScore();
