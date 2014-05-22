@@ -14,6 +14,8 @@
         <BitmapImage x:Key="Half" UriSource="../Resources/UI/Notes/minim.png"></BitmapImage>
         <BitmapImage x:Key="Quarter" UriSource="../Resources/UI/Notes/crotchet.png"></BitmapImage>
         <BitmapImage x:Key="Eighth" UriSource="../Resources/UI/Notes/quaver.png"></BitmapImage>
+        <BitmapImage x:Key="Flat" UriSource="../Resources/UI/Notes/flat.png"></BitmapImage>
+        <BitmapImage x:Key="Sharp" UriSource="../Resources/UI/Notes/sharp.png"></BitmapImage>
 
         <Style x:Key="NoteStyle" TargetType="{x:Type Image}">
             <Style.Triggers>
@@ -31,9 +33,23 @@
                 </DataTrigger>
             </Style.Triggers>
         </Style>
+
+        <Style x:Key="AccidentalStyle" TargetType="{x:Type Image}">
+            <Setter Property="Width" Value="28"/>
+            <Setter Property="Height" Value="46"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding Note.Accidental}" Value="Flat">
+                    <Setter Property="Source" Value="{DynamicResource Flat}" />
+                </DataTrigger>
+                <DataTrigger Binding="{Binding Note.Accidental}" Value="Sharp">
+                    <Setter Property="Source" Value="{DynamicResource Sharp}" />
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
     </UserControl.Resources>
 
     <Grid Background="Transparent">
         <Image Style="{DynamicResource NoteStyle}" Stretch="None"/>
+        <Image Style="{DynamicResource AccidentalStyle}" Stretch="None" Margin="14,69,48,35"/>
     </Grid>
 </UserControl>
