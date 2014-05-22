@@ -3,9 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             mc:Ignorable="d" 
-             d:DesignHeight="300" d:DesignWidth="300">
+             mc:Ignorable="d" Width="593" Height="216">
+
     <Grid>
-            
+        <!-- Background -->
+        <Image Source="../Resources/UI/BNTP_BackgroundScore.png" Panel.ZIndex="-1"/>
+       
+        <TextBlock Text="Score" Foreground="AntiqueWhite" FontWeight="Bold" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="66,10,69,0"/>
+        <TextBlock Text="{Binding Score}" Foreground="AntiqueWhite" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="66,100,69,0"/>
     </Grid>
+
 </UserControl>

@@ -94,7 +94,7 @@ namespace PopNTouch2.ViewModel
             NoteVM nvm = new NoteVM(note);
             switch (note.Height)
             {
-                case Height.Do :
+                case Height.Do:
                     this.doNotes.Add(nvm);
                     break;
                 case Height.Re:

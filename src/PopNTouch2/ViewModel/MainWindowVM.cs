@@ -155,6 +155,7 @@ namespace PopNTouch2.ViewModel
                                 pvm.BottomButtonsVisible = false;
                             }
                             GameMaster.Instance.Game.Launch(); //FIXME : Have a Countdown before launching
+                            GameMaster.Instance.Game.GameFinishedEvent += new Game.GameFinishedHandler(ComputeEndGame);
                         }
                     });
                 return this.playSong;
@@ -208,6 +209,24 @@ namespace PopNTouch2.ViewModel
         {
             GameMaster.Instance.Players.Remove(playerVM.Player);
             this.players.Remove(playerVM);
+        }
+
+        /// <summary>
+        /// Display the score of each players
+        /// Display "replay" or whatever button
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        public void ComputeEndGame(object sender, EventArgs e)
+        {
+            foreach (PlayerVM pvm in this.Players)
+            {
+                pvm.DisplayScore();
+                pvm.BottomButtonsVisible = true;
+                pvm.CanMove = true;
+            }
+
+            // Button
         }
 
         #endregion

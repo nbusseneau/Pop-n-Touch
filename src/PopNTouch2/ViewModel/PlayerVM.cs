@@ -418,15 +418,29 @@ namespace PopNTouch2.ViewModel
 
         #endregion
 
+        // Score
+        #region Score
+        private ScoreVM scoreVM = new ScoreVM();
         public ScoreVM ScoreVM
         {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
+            get { return this.scoreVM; }
             set
             {
+                this.scoreVM = value;
+                RaisePropertyChanged("ScoreVM");
             }
         }
+
+        /// <summary>
+        /// Display the score screen
+        /// </summary>
+        public void DisplayScore()
+        {
+            this.SheetMusic.Visibility = false;
+            this.ScoreVM.ScoreVisibility = true;
+            this.ScoreVM.Score = this.Player.Score;
+        }
+
+        #endregion
     }
 }
