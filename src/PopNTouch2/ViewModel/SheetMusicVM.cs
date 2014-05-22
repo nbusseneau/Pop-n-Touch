@@ -226,26 +226,15 @@ namespace PopNTouch2.ViewModel
             this.ScoredNoteAnim = false;
         }
 
-        public List<BonusVM> BonusVM
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
-
-        public List<NoteButtonVM> NoteButtonVM
-        {
-            get
-            {
-                throw new System.NotImplementedException();
-            }
-            set
-            {
-            }
-        }
+        //public List<BonusVM> BonusVM
+        //{
+        //    get
+        //    {
+        //        throw new System.NotImplementedException();
+        //    }
+        //    set
+        //    {
+        //    }
+        //}
     }
 }

@@ -218,14 +218,9 @@
 
         <!-- Stave -->
         <PopNTouch2:SheetMusicView DataContext="{Binding SheetMusic}" Visibility="{Binding Visibility, Converter={StaticResource bool2vis}}" Margin="35,96,0,0" HorizontalAlignment="Left" Width="580" Height="210" VerticalAlignment="Top"/>
-        
+
         <!-- Derpy derpatchouille (point d'exclamation jaune)-->
-        <PopNTouch2:ScoreView DataContext="{Binding ScoreVM}" Visibility="{Binding ScoreVisibility, Converter={StaticResource bool2vis}}" Margin="28,80,0,0" HorizontalAlignment="Left" Width="593" Height="216" VerticalAlignment="Top"/>
-        
-        <!-- Feedback -->
-        <!-- TODO : Make this a StoryBoard we can then launch -->
-        <Ellipse x:Name="fdbckCorrect" HorizontalAlignment="Left" Height="30" Margin="168,44,0,0" Stroke="Green" Fill="GreenYellow" VerticalAlignment="Top" Width="30" Visibility="Hidden"/>
-        <Ellipse x:Name="fdbckIncorrect" HorizontalAlignment="Left" Height="30" Margin="168,44,0,0" Stroke="OrangeRed" Fill="Red" VerticalAlignment="Top" Width="30" Visibility="Hidden"/>
+        <PopNTouch2:ScoreView DataContext="{Binding ScoreVM}" Visibility="{Binding ScoreVisibility, Converter={StaticResource bool2vis}}" Margin="28,80,0,0" Height="216" Width="593" VerticalAlignment="Top" HorizontalAlignment="Left"/>
 
         <!-- Bottom Buttons -->
         <Grid Margin="35,300,36,20" Panel.ZIndex="10">

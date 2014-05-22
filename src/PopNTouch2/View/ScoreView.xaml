@@ -3,11 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
-             mc:Ignorable="d" Width="593" Height="216">
+             xmlns:PopNTouch2="clr-namespace:PopNTouch2.View"
+             xmlns:ViewModel="clr-namespace:PopNTouch2.ViewModel"
+             xmlns:s="http://schemas.microsoft.com/surface/2008"
+             mc:Ignorable="d" d:DesignWidth="593" d:DesignHeight="216">
 
     <Grid>
         <!-- Background -->
-        <Image Source="../Resources/UI/BNTP_BackgroundScore.png" Panel.ZIndex="-1"/>
+        <Image Source="../Resources/UI/BGP_Score.png" Width="593" Height="216" Stretch="Fill"/>
        
         <TextBlock Text="Score" Foreground="AntiqueWhite" FontWeight="Bold" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="66,10,69,0"/>
         <TextBlock Text="{Binding Score}" Foreground="AntiqueWhite" FontWeight="Bold" FontSize="20" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="66,100,69,0"/>

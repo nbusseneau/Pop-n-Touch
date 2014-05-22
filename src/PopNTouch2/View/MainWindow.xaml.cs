@@ -20,6 +20,8 @@ namespace PopNTouch2.View
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
+    /// Only used for complex start screen animation
+    /// Source : http://joshsmithonwpf.wordpress.com/2007/08/13/animating-text-in-wpf/
     /// </summary>
     public partial class MainWindow : SurfaceWindow
     {

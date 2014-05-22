@@ -23,7 +23,7 @@ namespace PopNTouch2.ViewModel
         {
         }
 
-        private bool scoreVisibility = true;
+        private bool scoreVisibility = false;
         public bool ScoreVisibility
         {
             get { return this.scoreVisibility; }
