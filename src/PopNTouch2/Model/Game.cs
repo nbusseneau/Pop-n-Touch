@@ -12,12 +12,10 @@ namespace PopNTouch2.Model
         public Boolean IsPlaying { get; set; }
         public int TimeElapsed { get; set; }
         public AudioController MusicPlayback { get; set; }
-        int playersFinished { get; set; }
 
         public Game(Song s)
         {
             this.Song = s;
-            playersFinished = 0;
         }
 
         /// <summary>
@@ -39,6 +37,7 @@ namespace PopNTouch2.Model
             };
             timer.Start();
             this.MusicPlayback = new AudioController(Song.File, 3000);
+            this.MusicPlayback.MediaEnded += new EventHandler(AudioFinished);
         }
 
         /// <summary>
@@ -60,27 +59,11 @@ namespace PopNTouch2.Model
         }
 
         /// <summary>
-        /// Launch an event when the game is finished (song finished & sheets read)
+        /// Do what to do when the song is finished
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        public delegate void GameFinishedHandler(object sender, EventArgs e);
-        public event GameFinishedHandler GameFinishedEvent;
-
-        /// <summary>
-        /// Count number of player who have finished and launch the GameFinishedEvent
-        /// </summary>
-        public void PlayerFinished()
+        public void AudioFinished(object sender, EventArgs e)
         {
-            playersFinished++;
-            if (playersFinished == GameMaster.Instance.Players.Count)
-            {
-                this.IsPlaying = false;
-                if (GameFinishedEvent != null)
-                {
-                    GameFinishedEvent(this, null);
-                }
-            }
+            this.IsPlaying = false;
         }
     }
 }
