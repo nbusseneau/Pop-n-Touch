@@ -10,6 +10,8 @@ namespace PopNTouch2.Model
     public class Player
     {
         private List<Tuple<double, double, Note>>.Enumerator enumerator;
+        // Tolerance, in milliseconds, for which a pressed note is still considered valid
+        public const double TIMING_TOLERANCE = 500;
 
         public SheetMusic SheetMusic { get; set; }
         public Game CurrentGame { get; set; }
@@ -121,6 +123,10 @@ namespace PopNTouch2.Model
             {
                 NoteTicked nt = new NoteTicked();
                 nt.Note = this.enumerator.Current.Item3;
+                this.Stopwatch.Stop();
+                nt.Note.StartPlaying(this.enumerator.Current.Item2 - this.Stopwatch.ElapsedMilliseconds + TIMING_TOLERANCE);
+                this.Stopwatch.Start();
+
                 Tick(this, nt);
             }
             myTime = this.enumerator.Current.Item1;

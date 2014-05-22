@@ -90,6 +90,7 @@
     <Compile Include="Model\Notes\Note.cs" />
     <Compile Include="Model\Notes\Length.cs" />
     <Compile Include="Model\Notes\NoteFactory.cs" />
+    <Compile Include="Model\Notes\NoteState.cs" />
     <Compile Include="Model\Player.cs" />
     <Compile Include="Model\Sheet\Difficulty.cs" />
     <Compile Include="Model\Sheet\Instrument.cs" />

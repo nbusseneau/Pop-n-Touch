@@ -137,7 +137,7 @@
 
                 </Grid.Resources>
 
-                <TextBlock Text="Difficulty" Foreground="Black" FontWeight="Bold" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="66,10,69,0"/>
+                <TextBlock Text="Difficulty" FontFamily="../Resources/UI/Fonts/#Exo" Foreground="Black" FontWeight="Bold" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="66,10,69,0"/>
                 <s:SurfaceButton Style="{StaticResource SelectedEasyButtonStyle}" Command="{Binding PickDifficulty}" CommandParameter="Beginner" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Margin="10,86,0,0" Width="51">
                     <Image Source="../Resources/UI/BTNP_Easy.png" IsHitTestVisible="False"/>
                 </s:SurfaceButton>
@@ -199,7 +199,7 @@
                     </Style>
                 </Grid.Resources>
 
-                <TextBlock Text="Instrument" Foreground="Black" FontWeight="Bold" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="76,10,59,0"/>
+                <TextBlock Text="Instrument" FontFamily="../Resources/UI/Fonts/#Exo" Foreground="Black" FontWeight="Bold" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="76,10,59,0"/>
                 <ItemsControl ItemsSource="{Binding Instruments}">
                     <ItemsControl.ItemsPanel>
                         <ItemsPanelTemplate>

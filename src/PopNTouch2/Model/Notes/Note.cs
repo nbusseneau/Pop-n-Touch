@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Timers;
 
 namespace PopNTouch2.Model
 {
@@ -10,12 +11,32 @@ namespace PopNTouch2.Model
         public Length Length { get; private set; }
         public Accidental Accidental { get; private set; }
         public Height Height { get; private set; }
+        public NoteState State { get; set; }
+
+        public Timer Timer { get; set; }
+        public event TickHandler Tick;
+        public delegate void TickHandler();
 
         public Note(Length l, Accidental a, Height h)
         {
             this.Length = l;
             this.Accidental = a;
             this.Height = h;
+            this.State = NoteState.Playing;
+        }
+
+        public void StartPlaying(double timerInterval)
+        {
+            this.State = NoteState.Playing;
+            this.Timer = new Timer(timerInterval);
+            this.Timer.Elapsed += new ElapsedEventHandler((sender, e) => { this.State = NoteState.Missed ;});
+            this.Timer.Start();
+        }
+
+        public void Hit()
+        {
+            this.State = NoteState.Hit;
+            this.Timer.Stop();
         }
     }
 }
