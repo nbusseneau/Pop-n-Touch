@@ -42,10 +42,6 @@
                                             <Storyboard>
                                                 <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.2"/>
                                                 <PointAnimation Storyboard.TargetProperty="Center" From="560,-10" To="30,-10" Duration="0:0:2.5"/>
-                                                <DoubleAnimation Storyboard.TargetProperty="Opacity" From="1" To="0" BeginTime="0:0:2.2" Duration="0:0:0.3"/>
-                                                <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility" BeginTime="0:0:2.5">
-                                                    <DiscreteObjectKeyFrame Value="{x:Static Visibility.Collapsed}" />
-                                                </ObjectAnimationUsingKeyFrames>
                                             </Storyboard>
                                         </BeginStoryboard>
                                     </DataTrigger.EnterActions>
@@ -67,7 +63,7 @@
                                     <DataTrigger.EnterActions>
                                         <BeginStoryboard>
                                             <Storyboard>
-                                                <DoubleAnimation Storyboard.TargetProperty="Opacity" From="1" To="0" Duration="0:0:0.3"/>
+                                                <DoubleAnimation Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.3"/>
                                                 <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility">
                                                     <DiscreteObjectKeyFrame Value="{x:Static Visibility.Collapsed}" />
                                                 </ObjectAnimationUsingKeyFrames>

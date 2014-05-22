@@ -327,16 +327,7 @@ namespace PopNTouch2.ViewModel
                 double timingDifference = Math.Abs(closestNoteInfo.Item2 - elapsedTime);
                 this.Player.NoteScored(timingDifference / 1000);
                 this.SheetMusic.DisplayNoteScored();
-
-                // FIXME : Worst bugfix ever, please, do look away
-                try
-                {
-                    this.SheetMusic.RemoveNote(closestNoteInfo.Item3);
-                }
-                catch (InvalidOperationException e)
-                {
-                    Console.WriteLine("On the fly Note removal exception caught : {0}", e);
-                }
+                closestNoteInfo.Item3.Hit();
             }
         }
 

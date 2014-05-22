@@ -29,13 +29,21 @@ namespace PopNTouch2.Model
         {
             this.State = NoteState.Playing;
             this.Timer = new Timer(timerInterval);
-            this.Timer.Elapsed += new ElapsedEventHandler((sender, e) => { this.State = NoteState.Missed ;});
+            this.Timer.Elapsed += new ElapsedEventHandler((sender, e) => { this.Miss(); });
             this.Timer.Start();
         }
 
         public void Hit()
         {
             this.State = NoteState.Hit;
+            this.Tick();
+            this.Timer.Stop();
+        }
+
+        public void Miss()
+        {
+            this.State = NoteState.Missed;
+            this.Tick();
             this.Timer.Stop();
         }
     }

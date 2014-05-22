@@ -27,10 +27,10 @@ namespace PopNTouch2.ViewModel
         {
             this.Note = note;
             this.State = this.Note.State;
-            this.Note.Tick += new Note.TickHandler(OnNoteTick);
+            this.Note.Tick += new Note.TickHandler(UpdateNoteState);
         }
 
-        private void OnNoteTick()
+        public void UpdateNoteState()
         {
             this.State = this.Note.State;
         }
