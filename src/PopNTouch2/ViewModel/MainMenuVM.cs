@@ -123,6 +123,7 @@ namespace PopNTouch2.ViewModel
             this.SelectedSong = selectedSong;
             this.IsVisible = false;
             this.IsReady = true;
+            this.MainWindow.PlaySongButtonsVisible = true;
             GameMaster.Instance.SelectSong(this.SelectedSong);
             this.MainWindow.UpdatePlayers();
         }

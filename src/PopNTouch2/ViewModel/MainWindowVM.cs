@@ -74,7 +74,21 @@ namespace PopNTouch2.ViewModel
         #region PlaySong
 
         /// <summary>
-        /// Command launched when the "+" button is pressed
+        /// Visibility of PlaySong, AddAPlayer and ReturnToMenu buttons
+        /// </summary>
+        private bool playSongButtonsVisible = false;
+        public bool PlaySongButtonsVisible
+        {
+            get { return this.playSongButtonsVisible; }
+            set
+            {
+                this.playSongButtonsVisible = value;
+                RaisePropertyChanged("PlaySongButtonsVisible");
+            }
+        }
+
+        /// <summary>
+        /// Command launched when the "AddAPlayer" button is pressed
         /// Adds a player to the game
         /// </summary>
         ICommand addPlayer;
@@ -99,16 +113,16 @@ namespace PopNTouch2.ViewModel
         }
 
         /// <summary>
-        /// Command launched when the "x" button is pressed
+        /// Command launched when the "ReturnToMenu" button is pressed
         /// Removes all players from the game
         /// </summary>
-        ICommand eraseAll;
-        public ICommand EraseAll
+        ICommand returnToMenu;
+        public ICommand ReturnToMenu
         {
             get
             {
-                if (eraseAll == null)
-                    eraseAll = new RelayCommand(() =>
+                if (returnToMenu == null)
+                    returnToMenu = new RelayCommand(() =>
                     {
                         int count = this.players.Count;
                         this.players.Clear();
@@ -118,10 +132,11 @@ namespace PopNTouch2.ViewModel
                             AddPlayer.Execute(null);
 
                         this.MainMenu.IsReady = false;
-                        this.MainMenu.IsVisible = false;
+                        this.MainMenu.IsVisible = true;
+                        this.PlaySongButtonsVisible = false;
                         
                     });
-                return this.eraseAll;
+                return this.returnToMenu;
             }
         }
 
@@ -149,6 +164,7 @@ namespace PopNTouch2.ViewModel
                         if (allReady && players.Count > 0)
                         {
                             this.DisablePlayerChoices();
+                            this.PlaySongButtonsVisible = false;
                             this.MainMenu.IsReady = false;
                             foreach (PlayerVM pvm in this.players)
                             {
@@ -227,7 +243,7 @@ namespace PopNTouch2.ViewModel
                 pvm.CanMove = true;
             }
 
-            // Button
+            PlaySongButtonsVisible = true;
         }
 
         #endregion
