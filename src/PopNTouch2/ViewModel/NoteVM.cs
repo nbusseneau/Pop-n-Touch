@@ -18,7 +18,7 @@ namespace PopNTouch2.ViewModel
             get { return state; }
             set 
             { 
-                state = value;
+                this.state = value;
                 RaisePropertyChanged("State");
             }
         }
