@@ -186,9 +186,6 @@
     <Content Include="Resources\Songs\Thème Pokémon\meta.data">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\Songs\Thème Pokémon\Guitar-Classic.sheet">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Resource Include="Resources\UI\BTNP_BackToMenu.png" />
     <Resource Include="Resources\UI\BTNP_MenuPetalBlue.png" />
     <Resource Include="Resources\UI\BTNP_MenuPetalGreen.png" />
