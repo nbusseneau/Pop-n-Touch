@@ -7,7 +7,7 @@
              xmlns:ViewModel="clr-namespace:PopNTouch2.ViewModel"
              xmlns:s="http://schemas.microsoft.com/surface/2008"
              mc:Ignorable="d"
-             Background="Transparent" Height="150" Width="90">
+             Background="Transparent" Height="100" Width="60">
 
     <UserControl.Resources>
         <BitmapImage x:Key="Whole" UriSource="../Resources/UI/Notes/whole.png"></BitmapImage>
@@ -16,6 +16,7 @@
         <BitmapImage x:Key="Eighth" UriSource="../Resources/UI/Notes/quaver.png"></BitmapImage>
         <BitmapImage x:Key="Flat" UriSource="../Resources/UI/Notes/flat.png"></BitmapImage>
         <BitmapImage x:Key="Sharp" UriSource="../Resources/UI/Notes/sharp.png"></BitmapImage>
+        <BitmapImage x:Key="Line" UriSource="../Resources/UI/Notes/line.png"></BitmapImage>
 
         <Style x:Key="NoteStyle" TargetType="{x:Type Image}">
             <Style.Triggers>
@@ -35,8 +36,8 @@
         </Style>
 
         <Style x:Key="AccidentalStyle" TargetType="{x:Type Image}">
-            <Setter Property="Width" Value="28"/>
-            <Setter Property="Height" Value="46"/>
+            <Setter Property="Width" Value="18"/>
+            <Setter Property="Height" Value="35"/>
             <Style.Triggers>
                 <DataTrigger Binding="{Binding Note.Accidental}" Value="Flat">
                     <Setter Property="Source" Value="{DynamicResource Flat}" />
@@ -46,10 +47,21 @@
                 </DataTrigger>
             </Style.Triggers>
         </Style>
+
+        <Style x:Key="LineStyle" TargetType="{x:Type Image}">
+            <Setter Property="Width" Value="55"/>
+            <Setter Property="Height" Value="20"/>
+            <Style.Triggers>
+                <DataTrigger Binding="{Binding Note.Height}" Value="Do">
+                    <Setter Property="Source" Value="{DynamicResource Line}" />
+                </DataTrigger>
+            </Style.Triggers>
+        </Style>
     </UserControl.Resources>
 
     <Grid Background="Transparent">
-        <Image Style="{DynamicResource NoteStyle}" Stretch="None"/>
-        <Image Style="{DynamicResource AccidentalStyle}" Stretch="None" Margin="14,69,48,35"/>
+        <Image Style="{DynamicResource NoteStyle}" Stretch="Fill"/>
+        <Image Style="{DynamicResource AccidentalStyle}" Stretch="Fill" Margin="-2,68,44,-3"/>
+        <Image Style="{DynamicResource LineStyle}" Stretch="Fill" Margin="1,71,4,9"/>
     </Grid>
 </UserControl>

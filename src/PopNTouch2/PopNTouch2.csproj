@@ -186,6 +186,8 @@
     <Content Include="Resources\Songs\Thème Pokémon\meta.data">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Resources\UI\Notes\line.png" />
+    <Resource Include="Resources\UI\BGP_PlayerViewButtons.png" />
     <Resource Include="Resources\UI\BTNP_Delete.png" />
     <Resource Include="Resources\UI\BTNP_BackToMenu.png" />
     <Resource Include="Resources\UI\BTNP_MenuPetalBlue.png" />

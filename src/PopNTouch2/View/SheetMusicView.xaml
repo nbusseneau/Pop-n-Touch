@@ -19,15 +19,15 @@
                 <Setter Property="BorderBrush" Value="{x:Null}" />
                 <Setter Property="Foreground" Value="{DynamicResource {x:Static s:SurfaceColors.ScatterViewItemForegroundBrushKey}}" />
                 <Setter Property="BorderThickness" Value="0" />
-                <Setter Property="Width"  Value="90"/>
-                <Setter Property="Height" Value="150"/>
+                <Setter Property="Width"  Value="60"/>
+                <Setter Property="Height" Value="100"/>
                 <Setter Property="CanScale" Value="False"/>
                 <Setter Property="CanRotate" Value="False"/>
                 <Setter Property="CanMove" Value="False"/>
                 <Setter Property="Template">
                     <Setter.Value>
                         <ControlTemplate TargetType="{x:Type s:ScatterViewItem}">
-                            
+
                             <Grid x:Name="container" RenderTransformOrigin="{TemplateBinding RenderTransformOrigin}">
                                 <Grid.RenderTransform>
                                     <ScaleTransform ScaleX="1" ScaleY="1" />
@@ -104,7 +104,7 @@
                     <ColorAnimation Storyboard.TargetProperty="Fill.Color" From="{x:Null}" To="Green" Duration="0:0:0.1" AutoReverse="True"/>
                 </Storyboard>
             </Rectangle.Resources>
-            
+
             <Rectangle.Style>
                 <Style>
                     <Style.Triggers>
@@ -121,15 +121,15 @@
                     </Style.Triggers>
                 </Style>
             </Rectangle.Style>
-            
+
             <Rectangle.Fill>
                 <SolidColorBrush Color="Transparent" />
             </Rectangle.Fill>
         </Rectangle>
 
-        
+
         <!-- One ScatterView for each Note collection, really easier to setup and to change afterwards -->
-        <s:ScatterView ItemsSource="{Binding DoNotes}" Margin="10,165,10,30">
+        <s:ScatterView ItemsSource="{Binding DoNotes}" Margin="10,153,10,42">
             <s:ScatterView.Resources>
                 <DataTemplate DataType="{x:Type ViewModel:NoteVM}">
                     <s:ScatterViewItem  />
@@ -140,7 +140,7 @@
             </s:ScatterView.ItemContainerStyle>
         </s:ScatterView>
 
-        <s:ScatterView ItemsSource="{Binding ReNotes}" Margin="10,155,10,40">
+        <s:ScatterView ItemsSource="{Binding ReNotes}" Margin="10,144,10,51">
             <s:ScatterView.Resources>
                 <DataTemplate DataType="{x:Type ViewModel:NoteVM}">
                     <s:ScatterViewItem />
@@ -151,7 +151,7 @@
             </s:ScatterView.ItemContainerStyle>
         </s:ScatterView>
 
-        <s:ScatterView ItemsSource="{Binding MiNotes}" Margin="10,145,10,50">
+        <s:ScatterView ItemsSource="{Binding MiNotes}" Margin="10,131,10,64">
             <s:ScatterView.Resources>
                 <DataTemplate DataType="{x:Type ViewModel:NoteVM}">
                     <s:ScatterViewItem />
@@ -162,7 +162,7 @@
             </s:ScatterView.ItemContainerStyle>
         </s:ScatterView>
 
-        <s:ScatterView ItemsSource="{Binding FaNotes}" Margin="10,135,10,60" >
+        <s:ScatterView ItemsSource="{Binding FaNotes}" Margin="10,120,10,75" >
             <s:ScatterView.Resources>
                 <DataTemplate DataType="{x:Type ViewModel:NoteVM}">
                     <s:ScatterViewItem />
@@ -173,7 +173,7 @@
             </s:ScatterView.ItemContainerStyle>
         </s:ScatterView>
 
-        <s:ScatterView ItemsSource="{Binding SolNotes}" Margin="10,120,10,75" >
+        <s:ScatterView ItemsSource="{Binding SolNotes}" Margin="10,108,10,87" >
             <s:ScatterView.Resources>
                 <DataTemplate DataType="{x:Type ViewModel:NoteVM}">
                     <s:ScatterViewItem />
@@ -184,7 +184,7 @@
             </s:ScatterView.ItemContainerStyle>
         </s:ScatterView>
 
-        <s:ScatterView ItemsSource="{Binding LaNotes}" Margin="10,110,10,85" >
+        <s:ScatterView ItemsSource="{Binding LaNotes}" Margin="10,97,10,98" >
             <s:ScatterView.Resources>
                 <DataTemplate DataType="{x:Type ViewModel:NoteVM}">
                     <s:ScatterViewItem />
@@ -195,7 +195,7 @@
             </s:ScatterView.ItemContainerStyle>
         </s:ScatterView>
 
-        <s:ScatterView ItemsSource="{Binding SiNotes}" Margin="10,95,10,100">
+        <s:ScatterView ItemsSource="{Binding SiNotes}" Margin="10,83,10,112">
             <s:ScatterView.Resources>
                 <DataTemplate DataType="{x:Type ViewModel:NoteVM}">
                     <s:ScatterViewItem />

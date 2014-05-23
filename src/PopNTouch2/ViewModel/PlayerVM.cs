@@ -366,6 +366,15 @@ namespace PopNTouch2.ViewModel
                 RaisePropertyChanged("BottomButtonsVisible");
             }
         }
+        public bool PlayButtonsVisible
+        {
+            get { return !this.bottomButtonsVisible; }
+            set
+            {
+                this.bottomButtonsVisible = !value;
+                RaisePropertyChanged("PlayButtonsVisible");
+            }
+        }
 
         /// <summary>
         /// Command, launched when the player clicks the Suppress button to suppress itself
