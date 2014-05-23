@@ -219,9 +219,6 @@
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
-    <Content Include="Resources\Songs\Au Clair de la Lune\Guitar-Classic.sheet">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="Resources\Songs\Au Clair de la Lune\meta.data">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

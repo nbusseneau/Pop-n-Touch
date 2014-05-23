@@ -86,6 +86,8 @@ namespace PopNTouch2.Model
         public void AudioFinished(object sender, EventArgs e)
         {
             this.IsPlaying = false;
+            this.MusicPlayback.Close();
+            this.TimeElapsed.Reset();
         }
     }
 }

@@ -142,6 +142,12 @@ namespace PopNTouch2.Model
                 this.Timer.Interval = this.enumerator.Current.Item1 - myTime;
                 this.Timer.Start();
             }
+            // End
+            else
+            {
+                this.Timer.Close();
+                this.Stopwatch.Reset();
+            }
         }
 
         /// <summary>

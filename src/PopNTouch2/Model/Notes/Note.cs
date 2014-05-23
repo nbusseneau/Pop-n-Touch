@@ -45,14 +45,26 @@ namespace PopNTouch2.Model
         {
             this.State = NoteState.Hit;
             this.Tick();
-            this.Timer.Stop();
+            this.Timer.Close();
         }
 
         public void Miss()
         {
             this.State = NoteState.Missed;
             this.Tick();
-            this.Timer.Stop();
+            this.Timer.Close();
+        }
+
+        public void Pause()
+        {
+            this.State = NoteState.Paused;
+            this.Tick();
+        }
+
+        public void Resume()
+        {
+            this.State = NoteState.Playing;
+            this.Tick();
         }
     }
 }

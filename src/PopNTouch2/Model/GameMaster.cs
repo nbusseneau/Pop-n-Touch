@@ -125,7 +125,7 @@ namespace PopNTouch2.Model
                 {
                     if (noteInfo.Item3.State == NoteState.Playing)
                     {
-                        noteInfo.Item3.State = NoteState.Paused;
+                        noteInfo.Item3.Pause();
                     }
                 }
             }
@@ -143,7 +143,7 @@ namespace PopNTouch2.Model
                 {
                     if (noteInfo.Item3.State == NoteState.Paused)
                     {
-                        noteInfo.Item3.State = NoteState.Playing;
+                        noteInfo.Item3.Resume();
                     }
                 }
             }
