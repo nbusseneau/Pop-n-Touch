@@ -164,19 +164,70 @@ namespace PopNTouch2.ViewModel
                         if (allReady && players.Count > 0)
                         {
                             this.DisablePlayerChoices();
-                            this.PlaySongButtonsVisible = false;
                             foreach (PlayerVM pvm in this.players)
                             {
                                 pvm.BottomButtonsVisible = false;
                                 pvm.ScoreVM.ScoreVisibility = false;
                             }
-                            GameMaster.Instance.Game.Launch(); //FIXME : Have a Countdown before launching
-                            GameMaster.Instance.Game.MusicPlayback.MediaEnded += new EventHandler(ComputeEndGame);
+                            this.PlaySongButtonsVisible = false;
+                            this.PauseVisibility = true;
+
+                            if (!GameMaster.Instance.Game.IsPlaying)
+                            {
+                                GameMaster.Instance.Game.Launch(); //FIXME : Have a Countdown before launching
+                                GameMaster.Instance.Game.MusicPlayback.MediaEnded += new EventHandler(ComputeEndGame);
+                            }
+                            else
+                            {
+                                GameMaster.Instance.Game.Depause();
+                            }
                         }
                     });
                 return this.playSong;
             }
         }
+
+        /// <summary>
+        /// Visibility of Pause
+        /// </summary>
+        private bool pauseVisibility = false;
+        public bool PauseVisibility
+        {
+            get { return this.pauseVisibility; }
+            set
+            {
+                this.pauseVisibility = value;
+                RaisePropertyChanged("PauseVisibility");
+            }
+        }
+
+        /// <summary>
+        /// Command launched when the "Pause" button is pressed
+        /// Pauses
+        /// </summary>
+        ICommand pause;
+        public ICommand Pause
+        {
+            get
+            {
+                if (pause == null)
+                    pause = new RelayCommand(() =>
+                    {
+                        this.PauseVisibility = false;
+                        this.PlaySongButtonsVisible = true;
+                        foreach (PlayerVM pvm in Players)
+                        {
+                            pvm.BottomButtonsVisible = true;
+                            pvm.CanMove = true;
+                        }
+
+                        GameMaster.Instance.Game.Pause();
+                        // Pause storyboards
+                    });
+                return this.pause;
+            }
+        }
+
 
         #endregion
 

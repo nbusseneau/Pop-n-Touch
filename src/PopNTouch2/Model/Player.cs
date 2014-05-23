@@ -51,13 +51,18 @@ namespace PopNTouch2.Model
 
         /// <summary>
         /// The player has chosen instrument and difficulty
+        /// Building sheet must be done here and not in the VM
         /// </summary>
         public void IMReady()
         {
             // FIXME : Uncomment these lines once everything is correctly instanciated
             // this.SheetMusic = GameMaster.Instance.SheetBuilder.BuildSheet(GameMaster.Instance.Game.Song, Instrument, Difficulty);
+            if (CurrentGame.IsPlaying)
+            {
+                this.SheetMusic = GameMaster.Instance.SheetBuilder.BuildSheet(GameMaster.Instance.Game.Song, Instrument, Difficulty);
+                GameMaster.Instance.Game.AddPlayerInGame(this);
+            }
             this.Ready = true;
-            this.Score = 0;
         }
 
         /// <summary>
@@ -184,6 +189,16 @@ namespace PopNTouch2.Model
         {
             this.Combo++;
             this.MaxCombo = Math.Max(this.MaxCombo, this.Combo);
+        }
+
+        /// <summary>
+        /// Set all the player's scores to 0
+        /// </summary>
+        public void ResetScores()
+        {
+            this.Score = 0;
+            this.Combo = 0;
+            this.MaxCombo = 0;
         }
     }
 }

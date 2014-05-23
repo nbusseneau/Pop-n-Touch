@@ -88,8 +88,8 @@
         <Image HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Source="../Resources/UI/BGP_Main.jpg" Panel.ZIndex="-10"/>
 
         <!-- Start screen-->
-        <s:SurfaceButton Name="startBtn" HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding StartGame}" Background="{x:Null}" RenderTransformOrigin="0.5,0.5">
-        <!-- <s:SurfaceButton Name="startBtn" HorizontalAlignment="Left" VerticalAlignment="Center" Command="{Binding StartGame}" Background="{x:Null}" RenderTransformOrigin="0.5,0.5" Margin="782,360,0,358"> -->
+        <!-- <s:SurfaceButton Name="startBtn" HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding StartGame}" Background="{x:Null}" RenderTransformOrigin="0.5,0.5"> -->
+        <s:SurfaceButton Name="startBtn" HorizontalAlignment="Left" VerticalAlignment="Center" Command="{Binding StartGame}" Background="{x:Null}" RenderTransformOrigin="0.5,0.5" Margin="782,360,0,358">
             <s:SurfaceButton.RenderTransform>
                 <ScaleTransform x:Name="scaleBtnStart" ScaleX="1.0" ScaleY="1.0"/>
             </s:SurfaceButton.RenderTransform>
@@ -169,6 +169,9 @@
         <!-- Play song -->
         <s:SurfaceButton Visibility="{Binding PlaySongButtonsVisible, Converter={StaticResource bool2vis}}" Command="{Binding PlaySong}" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="{x:Null}">
             <Image Height="320" Width="320" Source="../Resources/UI/BTNP_Play.png"/>
+        </s:SurfaceButton>
+        <s:SurfaceButton Visibility="{Binding PauseVisibility, Converter={StaticResource bool2vis}}" Command="{Binding Pause}" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Background="{x:Null}">
+            <Image Height="250" Width="250" Source="../Resources/UI/BTNP_Pause.png"/>
         </s:SurfaceButton>
 
         <s:SurfaceButton Visibility="{Binding PlaySongButtonsVisible, Converter={StaticResource bool2vis}}" Command="{Binding AddPlayer}" HorizontalAlignment="Center" Margin="0,0,-270,0" VerticalAlignment="Center" Height="100" Width="100" FontSize="38" Background="{x:Null}">
