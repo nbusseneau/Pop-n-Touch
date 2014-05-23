@@ -335,6 +335,22 @@ namespace PopNTouch2.ViewModel
             }
             RaisePropertyChanged("Combo");
         }
+        
+        public void Pause()
+        {
+            foreach (Height h in Enum.GetValues(typeof(Height)))
+            {
+                foreach(NoteVM nvm in this.SheetMusic.GetHeightCollection(h)) 
+                {
+                    nvm.UpdateNoteState();
+                }
+            }
+        }
+
+        public void Resume()
+        {
+            this.Pause();
+        }
 
         #endregion
 

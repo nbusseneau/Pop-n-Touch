@@ -110,5 +110,41 @@ namespace PopNTouch2.Model
             if (this.SongSelected)
                 player.InformNewGame();
         }
+
+        /// <summary>
+        /// Pauses the game
+        /// </summary>
+        public void Pause()
+        {
+            this.Game.Pause();
+            foreach (Player player in this.Players)
+            {
+                foreach (Tuple<double,double,Note> noteInfo in player.SheetMusic.Notes)
+                {
+                    if (noteInfo.Item3.State == NoteState.Playing)
+                    {
+                        noteInfo.Item3.State = NoteState.Paused;
+                    }
+                }
+            }
+        }
+
+        /// <summary>
+        /// Resumes the game
+        /// </summary>
+        public void Resume()
+        {
+            this.Game.Resume();
+            foreach (Player player in this.Players)
+            {
+                foreach (Tuple<double, double, Note> noteInfo in player.SheetMusic.Notes)
+                {
+                    if (noteInfo.Item3.State == NoteState.Paused)
+                    {
+                        noteInfo.Item3.State = NoteState.Playing;
+                    }
+                }
+            }
+        }
     }
 }

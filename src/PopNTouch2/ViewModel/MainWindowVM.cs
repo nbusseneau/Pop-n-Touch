@@ -179,7 +179,11 @@ namespace PopNTouch2.ViewModel
                             }
                             else
                             {
-                                GameMaster.Instance.Game.Resume();
+                                GameMaster.Instance.Resume();
+                                foreach (PlayerVM pvm in this.Players)
+                                {
+                                    pvm.Resume();
+                                }
                             }
                         }
                     });
@@ -221,8 +225,11 @@ namespace PopNTouch2.ViewModel
                             pvm.CanMove = true;
                         }
 
-                        GameMaster.Instance.Game.Pause();
-                        // Pause storyboards
+                        GameMaster.Instance.Pause();
+                        foreach (PlayerVM pvm in this.Players)
+                        {
+                            pvm.Pause();
+                        }
                     });
                 return this.pause;
             }
