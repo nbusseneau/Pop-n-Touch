@@ -166,14 +166,15 @@
         <PopNTouch2:MainMenuView DataContext="{Binding MainMenu}" Visibility="{Binding IsVisible, Converter={StaticResource bool2vis}}" />
 
         <!-- Play song -->
-        <s:SurfaceButton Visibility="{Binding MainMenu.IsReady, Converter={StaticResource bool2vis}}" Command="{Binding PlaySong}" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Background="{x:Null}">
-            <Image Height="320" Width="320" Source="../Resources/UI/BTNP_Play.png"/>
+        <s:SurfaceButton Visibility="{Binding MainMenu.IsReady, Converter={StaticResource bool2vis}}" Command="{Binding PlaySong}" HorizontalAlignment="Center" Margin="-7,0,0,0" VerticalAlignment="Center" Background="{x:Null}">
+            <Image Height="370" Width="370" Source="../Resources/UI/BTNP_Play.png"/>
         </s:SurfaceButton>
 
-        <s:SurfaceButton Visibility="{Binding MainMenu.IsReady, Converter={StaticResource bool2vis}}" Command="{Binding AddPlayer}" HorizontalAlignment="Center" Margin="0,0,-270,0" VerticalAlignment="Center" Height="100" Width="100" FontSize="38" Background="{x:Null}">
+        <s:SurfaceButton Visibility="{Binding MainMenu.IsReady, Converter={StaticResource bool2vis}}" Command="{Binding AddPlayer}" HorizontalAlignment="Center" Margin="200,-200,0,0" VerticalAlignment="Center" Height="100" Width="100" FontSize="38" Background="{x:Null}">
             <Image Height="100" Width="100" Source="../Resources/UI/BTNP_AddPlayer.png"/>
         </s:SurfaceButton>
-        <s:SurfaceButton Visibility="{Binding MainMenu.IsReady, Converter={StaticResource bool2vis}}" Command="{Binding EraseAll}" Content="X" HorizontalAlignment="Center" Margin="0,0,270,0" VerticalAlignment="Center" Height="61" Width="54" FontSize="38" Background="#FF783936"/>
-
+        <s:SurfaceButton Visibility="{Binding MainMenu.IsReady, Converter={StaticResource bool2vis}}" Command="{Binding EraseAll}"  HorizontalAlignment="Center" Margin="-222,217,0,0" VerticalAlignment="Center" Height="100" Width="100" FontSize="38" Background="{x:Null}">
+            <Image Height="100" Width="100" Source="../Resources/UI/BTNP_BackToMenu.png"/>
+        </s:SurfaceButton>
     </Grid>
 </s:SurfaceWindow>
