@@ -243,13 +243,13 @@
             <s:SurfaceButton HorizontalAlignment="Center" Grid.Column="6" VerticalAlignment="Bottom" Height="70" Width="70" Command="{Binding ClickNoteButton}" CommandParameter="Si" Content="" Background="{x:Null}"/>
         </Grid>
         <!-- Sup. & lock buttons -->
-        <Grid Visibility="{Binding BottomButtonsVisible, Converter={StaticResource bool2vis}}" Margin="35,300,36,20" Panel.ZIndex="20" Background="Black">
+        <Grid Visibility="{Binding BottomButtonsVisible, Converter={StaticResource bool2vis}}" Margin="35,300,36,20" Panel.ZIndex="20">
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <s:SurfaceButton HorizontalAlignment="Center" Grid.Column="0" VerticalAlignment="Bottom" Height="70" Width="70" Command="{Binding Removal}" Background="{x:Null}">
-                <Image Source="../Resources/UI/BTNP_Sup.png" IsHitTestVisible="False"/>
+                <Image Source="../Resources/UI/BTNP_Delete.png" IsHitTestVisible="False"/>
             </s:SurfaceButton>
             <s:SurfaceToggleButton Style="{StaticResource LockButtonStyle}" HorizontalAlignment="Center" Grid.Column="1" VerticalAlignment="Bottom" Height="70" Width="70" IsChecked="{Binding LockChecked, Mode=TwoWay}" Command="{Binding ClickLock}" Content="" Background="{x:Null}"/>
         </Grid>

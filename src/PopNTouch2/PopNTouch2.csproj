@@ -186,6 +186,15 @@
     <Content Include="Resources\Songs\Thème Pokémon\meta.data">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Resources\UI\BTNP_Delete.png" />
+    <Resource Include="Resources\UI\BTNP_BackToMenu.png" />
+    <Resource Include="Resources\UI\BTNP_MenuPetalBlue.png" />
+    <Resource Include="Resources\UI\BTNP_MenuPetalGreen.png" />
+    <Resource Include="Resources\UI\BTNP_MenuPetalOrange.png" />
+    <Resource Include="Resources\UI\BTNP_MenuPetalPink.png" />
+    <Resource Include="Resources\UI\BTNP_MenuPetalPurple.png" />
+    <Resource Include="Resources\UI\BTNP_MenuPetalRed.png" />
+    <Resource Include="Resources\UI\BTNP_MenuPetalYellow.png" />
     <Resource Include="Resources\UI\BTNP_Pause.png" />
     <Resource Include="Resources\UI\Notes\flat.png" />
     <Resource Include="Resources\UI\Notes\sharp.png" />
@@ -195,7 +204,6 @@
     <Resource Include="Resources\UI\BTNP_AddPlayer.png" />
     <Resource Include="Resources\UI\BTNP_Unlock.png" />
     <Resource Include="Resources\UI\BTNP_Lock.png" />
-    <Resource Include="Resources\UI\BTNP_Sup.png" />
     <Resource Include="Resources\UI\Instruments\BTNP_Guitar.png" />
     <Resource Include="Resources\UI\Instruments\BTNP_Piano.png" />
     <Resource Include="Resources\UI\Instruments\BTNP_Violin.png" />
