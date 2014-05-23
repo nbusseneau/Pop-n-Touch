@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Timers;
@@ -10,14 +11,13 @@ namespace PopNTouch2.Model
     {
         public Song Song { get; set; }
         public Boolean IsPlaying { get; set; }
-        public int TimeElapsed { get; set; }
+        //public int TimeElapsed { get; set; }
+        public Stopwatch TimeElapsed { get; set; }
         public AudioController MusicPlayback { get; set; }
-        int playersFinished { get; set; }
 
         public Game(Song s)
         {
             this.Song = s;
-            playersFinished = 0;
         }
 
         /// <summary>
@@ -30,27 +30,47 @@ namespace PopNTouch2.Model
             this.IsPlaying = true;
             foreach (Player player in GameMaster.Instance.Players)
             {
+                player.ResetScores();
                 player.ReadSheet();
             }
-            Timer timer = new Timer(1000);
+            /*Timer timer = new Timer(1000);
             timer.Elapsed += delegate(object source, ElapsedEventArgs e)
             {
                 this.TimeElapsed++;
             };
-            timer.Start();
+            timer.Start();*/
+            this.TimeElapsed = new Stopwatch();
+            this.TimeElapsed.Start();
             this.MusicPlayback = new AudioController(Song.File, 3000);
+            this.MusicPlayback.MediaEnded += new EventHandler(AudioFinished);
+        }
+
+        public void Pause()
+        {
+            this.MusicPlayback.Pause();
+            this.TimeElapsed.Stop();
+        }
+
+        public void Resume()
+        {
+            this.MusicPlayback.Play();
+            this.TimeElapsed.Start();
         }
 
         /// <summary>
         /// Add a player in the middle of a game
+        /// Can only be done when the game is paused
         /// </summary>
         /// <param name="player">The player to add</param>
         // Maybe not very accurate
         public void AddPlayerInGame(Player player)
         {
+            this.TimeElapsed.Stop();
+            long time = this.TimeElapsed.ElapsedMilliseconds;
+
             List<Tuple<double, double, Note>>.Enumerator enumerator = player.SheetMusic.Notes.GetEnumerator();
             double noteTime = 0;
-            while(TimeElapsed > noteTime)
+            while(time > noteTime)
             {
                 enumerator.MoveNext();
                 noteTime = enumerator.Current.Item1;
@@ -60,27 +80,11 @@ namespace PopNTouch2.Model
         }
 
         /// <summary>
-        /// Launch an event when the game is finished (song finished & sheets read)
+        /// Do what to do when the song is finished
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
-        public delegate void GameFinishedHandler(object sender, EventArgs e);
-        public event GameFinishedHandler GameFinishedEvent;
-
-        /// <summary>
-        /// Count number of player who have finished and launch the GameFinishedEvent
-        /// </summary>
-        public void PlayerFinished()
+        public void AudioFinished(object sender, EventArgs e)
         {
-            playersFinished++;
-            if (playersFinished == GameMaster.Instance.Players.Count)
-            {
-                this.IsPlaying = false;
-                if (GameFinishedEvent != null)
-                {
-                    GameFinishedEvent(this, null);
-                }
-            }
+            this.IsPlaying = false;
         }
     }
 }

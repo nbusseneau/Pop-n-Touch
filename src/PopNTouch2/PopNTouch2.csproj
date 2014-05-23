@@ -90,6 +90,7 @@
     <Compile Include="Model\Notes\Note.cs" />
     <Compile Include="Model\Notes\Length.cs" />
     <Compile Include="Model\Notes\NoteFactory.cs" />
+    <Compile Include="Model\Notes\NoteState.cs" />
     <Compile Include="Model\Player.cs" />
     <Compile Include="Model\Sheet\Difficulty.cs" />
     <Compile Include="Model\Sheet\Instrument.cs" />
@@ -196,6 +197,9 @@
     <Resource Include="Resources\UI\BTNP_MenuPetalPurple.png" />
     <Resource Include="Resources\UI\BTNP_MenuPetalRed.png" />
     <Resource Include="Resources\UI\BTNP_MenuPetalYellow.png" />
+    <Resource Include="Resources\UI\BTNP_Pause.png" />
+    <Resource Include="Resources\UI\Notes\flat.png" />
+    <Resource Include="Resources\UI\Notes\sharp.png" />
     <Resource Include="Resources\UI\Fonts\Exo-Thin.otf" />
     <Resource Include="Resources\UI\BGP_Score2.png" />
     <Resource Include="Resources\UI\BGP_Score.png" />

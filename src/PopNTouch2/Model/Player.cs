@@ -10,6 +10,8 @@ namespace PopNTouch2.Model
     public class Player
     {
         private List<Tuple<double, double, Note>>.Enumerator enumerator;
+        // Tolerance, in milliseconds, for which a pressed note is still considered valid
+        public const double TIMING_TOLERANCE = 500;
 
         public SheetMusic SheetMusic { get; set; }
         public Game CurrentGame { get; set; }
@@ -18,6 +20,8 @@ namespace PopNTouch2.Model
         public Difficulty InstrumentDifficulty { get; set; }
         public Difficulty Difficulty { get; set; }
         public int Score { get; set; }
+        public int Combo { get; set; }
+        public int MaxCombo { get; set; }
         public Timer Timer { get; set; }
         public Stopwatch Stopwatch { get; set; }
         public event TickHandler Tick;
@@ -32,7 +36,6 @@ namespace PopNTouch2.Model
             this.Difficulty = Difficulty.Undefined;
             this.Instrument = Instrument.Undefined;
             this.InstrumentDifficulty = Difficulty.Undefined;
-            this.Stopwatch = new Stopwatch();
             this.Ready = false;
         }
 
@@ -48,13 +51,18 @@ namespace PopNTouch2.Model
 
         /// <summary>
         /// The player has chosen instrument and difficulty
+        /// Building sheet must be done here and not in the VM
         /// </summary>
         public void IMReady()
         {
             // FIXME : Uncomment these lines once everything is correctly instanciated
             // this.SheetMusic = GameMaster.Instance.SheetBuilder.BuildSheet(GameMaster.Instance.Game.Song, Instrument, Difficulty);
+            if (CurrentGame.IsPlaying)
+            {
+                this.SheetMusic = GameMaster.Instance.SheetBuilder.BuildSheet(GameMaster.Instance.Game.Song, Instrument, Difficulty);
+                GameMaster.Instance.Game.AddPlayerInGame(this);
+            }
             this.Ready = true;
-            this.Score = 0;
         }
 
         /// <summary>
@@ -100,6 +108,7 @@ namespace PopNTouch2.Model
             this.Timer = new Timer(2000);
             this.Timer.AutoReset = false;
             this.Timer.Elapsed += new ElapsedEventHandler(OnTimerTicked);
+            this.Stopwatch = new Stopwatch();
             this.Timer.Start();
         }
 
@@ -121,6 +130,10 @@ namespace PopNTouch2.Model
             {
                 NoteTicked nt = new NoteTicked();
                 nt.Note = this.enumerator.Current.Item3;
+                this.Stopwatch.Stop();
+                nt.Note.StartPlaying(this.enumerator.Current.Item2 - this.Stopwatch.ElapsedMilliseconds + TIMING_TOLERANCE);
+                this.Stopwatch.Start();
+                //nt.Note.Tick += new Note.TickHandler(() => { this.Combo = 0; });
                 Tick(this, nt);
             }
             myTime = this.enumerator.Current.Item1;
@@ -128,10 +141,6 @@ namespace PopNTouch2.Model
             {
                 this.Timer.Interval = this.enumerator.Current.Item1 - myTime;
                 this.Timer.Start();
-            }
-            else
-            {
-                this.CurrentGame.PlayerFinished();
             }
         }
 
@@ -171,6 +180,25 @@ namespace PopNTouch2.Model
                 this.Score += nope;
             }
 
+        }
+
+        /// <summary>
+        /// Increments Player's combo info
+        /// </summary>
+        public void ScoreCombo()
+        {
+            this.Combo++;
+            this.MaxCombo = Math.Max(this.MaxCombo, this.Combo);
+        }
+
+        /// <summary>
+        /// Set all the player's scores to 0
+        /// </summary>
+        public void ResetScores()
+        {
+            this.Score = 0;
+            this.Combo = 0;
+            this.MaxCombo = 0;
         }
     }
 }

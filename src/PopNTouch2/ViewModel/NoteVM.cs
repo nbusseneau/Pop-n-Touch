@@ -12,21 +12,27 @@ namespace PopNTouch2.ViewModel
     {
         public Note Note { get; set; }
 
-        private Point center;
-
-        public Point Center
+        private NoteState state;
+        public NoteState State
         {
-            get { return center; }
+            get { return state; }
             set 
-            {
-                center = value;
-                RaisePropertyChanged("Center");
+            { 
+                this.state = value;
+                RaisePropertyChanged("State");
             }
         }
 
         public NoteVM(Note note)
         {
             this.Note = note;
+            this.State = this.Note.State;
+            this.Note.Tick += new Note.TickHandler(UpdateNoteState);
+        }
+
+        public void UpdateNoteState()
+        {
+            this.State = this.Note.State;
         }
     }
 }

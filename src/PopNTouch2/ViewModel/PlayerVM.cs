@@ -22,10 +22,7 @@ namespace PopNTouch2.ViewModel
 
         // Interval, in milliseconds, between each sheet cleaning
         private const double CLEANING_INTERVAL = 10000;
-        // Tolerance, in milliseconds, for which a pressed note is still considered valid
-        private const double TIMING_TOLERANCE = 500;
-
-
+        
         public PlayerVM(Player player, MainWindowVM mvvm)
         {
             this.Player = player;
@@ -294,7 +291,7 @@ namespace PopNTouch2.ViewModel
 
             this.CleaningTimer = new Timer(CLEANING_INTERVAL);
             this.CleaningTimer.AutoReset = true;
-            this.CleaningTimer.Elapsed += new ElapsedEventHandler((source, e) => { this.SheetMusic.CleanNotes(this.Player.Stopwatch); });
+            //this.CleaningTimer.Elapsed += new ElapsedEventHandler((source, e) => { this.SheetMusic.CleanNotes(this.Player.Stopwatch); });
             this.CleaningTimer.Start();
         }
 
@@ -320,27 +317,39 @@ namespace PopNTouch2.ViewModel
             double elapsedTime = this.Player.Stopwatch.ElapsedMilliseconds;
             this.Player.Stopwatch.Start();
 
-            Tuple<double,double,Note> closestNoteInfo = this.Player.SheetMusic.Notes.Find(t => t.Item2 <= elapsedTime + TIMING_TOLERANCE && t.Item2 >= elapsedTime - TIMING_TOLERANCE);
+            Tuple<double, double, Note> closestNoteInfo = this.Player.SheetMusic.Notes.Find(t => t.Item2 <= elapsedTime + Player.TIMING_TOLERANCE && t.Item2 >= elapsedTime - Player.TIMING_TOLERANCE);
             if (closestNoteInfo == null)
             {
                 this.SheetMusic.DisplayNoteFailed();
+                this.Player.Combo = 0;
             }
             else if (closestNoteInfo.Item3.Height == height)
             {
                 double timingDifference = Math.Abs(closestNoteInfo.Item2 - elapsedTime);
                 this.Player.NoteScored(timingDifference / 1000);
                 this.SheetMusic.DisplayNoteScored();
-
-                // FIXME : Worst bugfix ever, please, do look away
-                try
+                closestNoteInfo.Item3.Hit();
+                this.SheetMusic.UpdateNoteState(closestNoteInfo.Item3);
+                this.Player.ScoreCombo();
+                this.ScoreVM.MaxCombo = this.Player.MaxCombo;
+            }
+            RaisePropertyChanged("Combo");
+        }
+        
+        public void Pause()
+        {
+            foreach (Height h in Enum.GetValues(typeof(Height)))
+            {
+                foreach(NoteVM nvm in this.SheetMusic.GetHeightCollection(h)) 
                 {
-                    this.SheetMusic.RemoveNote(closestNoteInfo.Item3);
-                }
-                catch (InvalidOperationException e)
-                {
-                    Console.WriteLine("On the fly Note removal exception caught : {0}", e);
+                    nvm.UpdateNoteState();
                 }
             }
+        }
+
+        public void Resume()
+        {
+            this.Pause();
         }
 
         #endregion
@@ -420,6 +429,11 @@ namespace PopNTouch2.ViewModel
 
         // Score
         #region Score
+        public int Combo
+        {
+            get { return this.Player.Combo; }
+        }
+
         private ScoreVM scoreVM = new ScoreVM();
         public ScoreVM ScoreVM
         {
