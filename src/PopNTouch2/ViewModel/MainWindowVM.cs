@@ -8,6 +8,7 @@ using System.Windows;
 using System.Windows.Data;
 using System.Windows.Input;
 using PopNTouch2.Model;
+using System.Timers;
 
 namespace PopNTouch2.ViewModel
 {
@@ -217,18 +218,21 @@ namespace PopNTouch2.ViewModel
                 if (pause == null)
                     pause = new RelayCommand(() =>
                     {
-                        this.PauseVisibility = false;
-                        this.PlaySongButtonsVisible = true;
-                        foreach (PlayerVM pvm in Players)
+                        if (GameMaster.Instance.Game.MusicPlayback.Position > TimeSpan.Zero)
                         {
-                            pvm.BottomButtonsVisible = true;
-                            pvm.CanMove = true;
-                        }
+                            this.PauseVisibility = false;
+                            this.PlaySongButtonsVisible = true;
+                            foreach (PlayerVM pvm in Players)
+                            {
+                                pvm.BottomButtonsVisible = true;
+                                pvm.CanMove = true;
+                            }
 
-                        GameMaster.Instance.Pause();
-                        foreach (PlayerVM pvm in this.Players)
-                        {
-                            pvm.Pause();
+                            GameMaster.Instance.Pause();
+                            foreach (PlayerVM pvm in this.Players)
+                            {
+                                pvm.Pause();
+                            }
                         }
                     });
                 return this.pause;
@@ -284,6 +288,7 @@ namespace PopNTouch2.ViewModel
             GameMaster.Instance.Players.Remove(playerVM.Player);
             this.players.Remove(playerVM);
         }
+        #endregion
 
         /// <summary>
         /// Display the score of each players
@@ -293,17 +298,20 @@ namespace PopNTouch2.ViewModel
         /// <param name="e"></param>
         public void ComputeEndGame(object sender, EventArgs e)
         {
-            System.Threading.Thread.Sleep(2000);
-            foreach (PlayerVM pvm in this.Players)
+            Timer timer = new Timer(2000);
+            timer.AutoReset = false;
+            timer.Elapsed += new ElapsedEventHandler((sender2, e2) =>
             {
-                pvm.DisplayScore();
-                pvm.BottomButtonsVisible = true;
-                pvm.CanMove = true;
-            }
-
-            PlaySongButtonsVisible = true;
+                foreach (PlayerVM pvm in this.Players)
+                {
+                    pvm.DisplayScore();
+                    pvm.BottomButtonsVisible = true;
+                    pvm.CanMove = true;
+                }
+                PauseVisibility = false;
+                PlaySongButtonsVisible = true;
+            });
+            timer.Start();
         }
-
-        #endregion
     }
 }

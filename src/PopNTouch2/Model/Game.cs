@@ -46,16 +46,28 @@ namespace PopNTouch2.Model
             this.MusicPlayback.MediaEnded += new EventHandler(AudioFinished);
         }
 
+        /// <summary>
+        /// Pause the sound and the timers associated
+        /// </summary>
         public void Pause()
         {
             this.MusicPlayback.Pause();
             this.TimeElapsed.Stop();
         }
 
+        /// <summary>
+        /// Resume the sound and the timers associated after a certain period of time
+        /// </summary>
         public void Resume()
         {
-            this.MusicPlayback.Play();
-            this.TimeElapsed.Start();
+            Timer timer = new Timer(GameMaster.TIMETOPLAY);
+            timer.Elapsed += delegate(object source, ElapsedEventArgs e)
+            {
+                this.MusicPlayback.Dispatcher.Invoke((Action)(() => { this.MusicPlayback.Play(); }));
+                this.TimeElapsed.Start();
+                timer.Close();
+            };
+            timer.Start();
         }
 
         /// <summary>
