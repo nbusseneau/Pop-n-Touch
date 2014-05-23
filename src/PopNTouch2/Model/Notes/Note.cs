@@ -22,7 +22,15 @@ namespace PopNTouch2.Model
             this.Length = l;
             this.Accidental = a;
             this.Height = h;
-            this.State = NoteState.Playing;
+            this.State = NoteState.Waiting;
+        }
+
+        public Note(Note n)
+        {
+            this.Length = n.Length;
+            this.Accidental = n.Accidental;
+            this.Height = n.Height;
+            this.State = NoteState.Waiting;
         }
 
         public void StartPlaying(double timerInterval)

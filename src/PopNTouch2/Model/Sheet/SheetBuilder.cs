@@ -77,7 +77,7 @@ namespace PopNTouch2.Model
             double millitick = 60.0 / bpm * 1000;
             double timeAppear = 0;
             // Panic button : 
-            double timePlay = timeAppear + 2500;
+            double timePlay = timeAppear + GameMaster.TIMETOPLAY;
             //double timePlay = millitick * SheetBuilder.LengthValue(Length.Whole);
             foreach(string line in lines)
             {
@@ -103,35 +103,5 @@ namespace PopNTouch2.Model
             sheetMusic.MaxScore = sheetMusic.Notes.Count * 10;
             return sheetMusic;
         }
-
-        /*public static void Main()
-        {
-            GameMaster gm = GameMaster.Instance;
-            Player player = new Player();
-            gm.NewPlayer(player);
-            List<Tuple<Instrument, Difficulty>> sheets = new List<Tuple<Instrument,Difficulty>>();
-            sheets.Add(Tuple.Create(Instrument.Piano, Difficulty.Classic));
-            Song newBorn = new Song("New Born", "Muse", "2001", sheets);
-            gm.SelectSong(newBorn);
-            player.Instrument = Instrument.Piano;
-            player.Difficulty = Difficulty.Classic;
-            player.SheetMusic = GameMaster.Instance.SheetBuilder.BuildSheet(GameMaster.Instance.Game.Song, player.Instrument, player.Difficulty);
-            player.IMReady();
-            gm.Ready();
-            Player p2 = new Player();
-            p2.Instrument = Instrument.Piano;
-            p2.Difficulty = Difficulty.Classic;
-            p2.SheetMusic = GameMaster.Instance.SheetBuilder.BuildSheet(GameMaster.Instance.Game.Song, player.Instrument, player.Difficulty);
-            System.Threading.Thread.Sleep(3000);
-            gm.Game.AddPlayerInGame(p2);
-
-            while (true) { }
-         * 
-         * 
-            player.Tick += delegate(Player sender, Player.NoteTicked nt)
-            {
-                Console.WriteLine(nt.Note.Height);
-            };
-        }*/
     }
 }

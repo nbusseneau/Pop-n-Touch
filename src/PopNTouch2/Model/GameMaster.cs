@@ -15,6 +15,8 @@ namespace PopNTouch2.Model
         {
             get { return instance; }
         }
+        // Big MVVM nope. Don't do that at home kids !
+        public static int TIMETOPLAY = 2500;
         public List<Song> Songs { get; private set; }
         public List<Player> Players { get; private set; }
         public Game Game { get; private set; }

@@ -129,7 +129,7 @@ namespace PopNTouch2.Model
             if (Tick != null)
             {
                 NoteTicked nt = new NoteTicked();
-                nt.Note = this.enumerator.Current.Item3;
+                nt.Note = new Note(this.enumerator.Current.Item3);
                 this.Stopwatch.Stop();
                 nt.Note.StartPlaying(this.enumerator.Current.Item2 - this.Stopwatch.ElapsedMilliseconds + TIMING_TOLERANCE);
                 this.Stopwatch.Start();

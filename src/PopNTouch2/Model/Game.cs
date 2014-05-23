@@ -41,7 +41,8 @@ namespace PopNTouch2.Model
             timer.Start();*/
             this.TimeElapsed = new Stopwatch();
             this.TimeElapsed.Start();
-            this.MusicPlayback = new AudioController(Song.File, 3000);
+            // Delay of playback ?
+            this.MusicPlayback = new AudioController(Song.File, GameMaster.TIMETOPLAY+500);
             this.MusicPlayback.MediaEnded += new EventHandler(AudioFinished);
         }
 
