@@ -38,7 +38,7 @@
                             <ControlTemplate.Triggers>
                                 <DataTrigger Binding="{Binding State}" Value="Playing">
                                     <DataTrigger.EnterActions>
-                                        <BeginStoryboard>
+                                        <BeginStoryboard Name="slideAnim">
                                             <Storyboard>
                                                 <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.2"/>
                                                 <PointAnimation Storyboard.TargetProperty="Center" From="560,-10" To="30,-10" Duration="0:0:2.5"/>
@@ -49,8 +49,12 @@
 
                                 <DataTrigger Binding="{Binding State}" Value="Hit">
                                     <DataTrigger.EnterActions>
-                                        <BeginStoryboard>
+                                        <StopStoryboard BeginStoryboardName="slideAnim"/>
+                                        <BeginStoryboard Name="hitVanishAnim">
                                             <Storyboard>
+                                                <DoubleAnimation Storyboard.TargetProperty="Width" To="0" Duration="0:0:0.2" />
+                                                <DoubleAnimation Storyboard.TargetProperty="Height" To="0" Duration="0:0:0.2" />
+                                                <DoubleAnimation Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.2"/>
                                                 <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility">
                                                     <DiscreteObjectKeyFrame Value="{x:Static Visibility.Collapsed}" />
                                                 </ObjectAnimationUsingKeyFrames>
@@ -61,7 +65,7 @@
 
                                 <DataTrigger Binding="{Binding State}" Value="Missed">
                                     <DataTrigger.EnterActions>
-                                        <BeginStoryboard>
+                                        <BeginStoryboard Name="missVanishAnim">
                                             <Storyboard>
                                                 <DoubleAnimation Storyboard.TargetProperty="Opacity" To="0" Duration="0:0:0.3"/>
                                                 <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="Visibility">
@@ -82,15 +86,13 @@
         <Image HorizontalAlignment="Center" VerticalAlignment="Top" Source="../Resources/UI/BGP_SheetMusic.png" Stretch="Fill" Panel.ZIndex="-1"/>
 
         <!-- Feedback zone, tells if the user hit or missed a note -->
-        <Rectangle HorizontalAlignment="Left" Height="137" Margin="118,37,0,0" Stroke="Transparent" VerticalAlignment="Top" Width="10" Opacity="0">
+        <Rectangle HorizontalAlignment="Left" Height="137" Margin="118,37,0,0" Stroke="Transparent" VerticalAlignment="Top" Width="10" Opacity="1">
             <Rectangle.Resources>
                 <Storyboard x:Key="missedNoteAnim">
-                    <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.2" AutoReverse="True"/>
-                    <ColorAnimation Storyboard.TargetProperty="Fill.Color" From="{x:Null}" To="Red" Duration="0:0:0.2" AutoReverse="True"/>
+                    <ColorAnimation Storyboard.TargetProperty="Fill.Color" From="{x:Null}" To="Red" Duration="0:0:0.1" AutoReverse="True"/>
                 </Storyboard>
                 <Storyboard x:Key="scoredNoteAnim">
-                    <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.2" AutoReverse="True"/>
-                    <ColorAnimation Storyboard.TargetProperty="Fill.Color" From="{x:Null}" To="Green" Duration="0:0:0.2" AutoReverse="True"/>
+                    <ColorAnimation Storyboard.TargetProperty="Fill.Color" From="{x:Null}" To="Green" Duration="0:0:0.1" AutoReverse="True"/>
                 </Storyboard>
             </Rectangle.Resources>
             
@@ -112,7 +114,7 @@
             </Rectangle.Style>
             
             <Rectangle.Fill>
-                <SolidColorBrush />
+                <SolidColorBrush Color="Transparent" />
             </Rectangle.Fill>
         </Rectangle>
 
@@ -121,7 +123,7 @@
         <s:ScatterView ItemsSource="{Binding DoNotes}" Margin="10,165,10,30">
             <s:ScatterView.Resources>
                 <DataTemplate DataType="{x:Type ViewModel:NoteVM}">
-                    <s:ScatterViewItem />
+                    <s:ScatterViewItem  />
                 </DataTemplate>
             </s:ScatterView.Resources>
             <s:ScatterView.ItemContainerStyle>

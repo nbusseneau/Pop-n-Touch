@@ -86,78 +86,53 @@ namespace PopNTouch2.ViewModel
         #endregion
 
         /// <summary>
+        /// Gets the ObservableCollection containing notes of Height height
+        /// </summary>
+        /// <param name="height"></param>
+        /// <returns></returns>
+        public ObservableCollection<NoteVM> GetHeightCollection(Height height)
+        {
+            switch (height)
+            {
+                case Height.Do:
+                    return this.doNotes;
+                case Height.Re:
+                    return this.reNotes;
+                case Height.Mi:
+                    return this.miNotes;
+                case Height.Fa:
+                    return this.faNotes;
+                case Height.Sol:
+                    return this.solNotes;
+                case Height.La:
+                    return this.laNotes;
+                case Height.Si:
+                    return this.siNotes;
+                case Height.Rest:
+                    return this.rests;
+                default:
+                    throw new ArgumentException();
+            }
+        }
+
+        /// <summary>
         /// Adds Note note to collection
         /// </summary>
         /// <param name="note"></param>
         public void AddNote(Note note)
         {
             NoteVM nvm = new NoteVM(note);
-            switch (note.Height)
-            {
-                case Height.Do:
-                    this.doNotes.Add(nvm);
-                    break;
-                case Height.Re:
-                    this.reNotes.Add(nvm);
-                    break;
-                case Height.Mi:
-                    this.miNotes.Add(nvm);
-                    break;
-                case Height.Fa:
-                    this.faNotes.Add(nvm);
-                    break;
-                case Height.Sol:
-                    this.solNotes.Add(nvm);
-                    break;
-                case Height.La:
-                    this.laNotes.Add(nvm);
-                    break;
-                case Height.Si:
-                    this.siNotes.Add(nvm);
-                    break;
-                case Height.Rest:
-                    this.rests.Add(nvm);
-                    break;
-            }
+            this.GetHeightCollection(note.Height).Add(nvm);
         }
 
         /// <summary>
-        /// Remove Note note from collections
+        /// Update State of Note note from collections
         /// </summary>
         /// <param name="note"></param>
-        public void RemoveNote(Note note)
+        public void UpdateNoteState(Note note)
         {
-            ObservableCollection<NoteVM> collection;
-            switch (note.Height)
-            {
-                case Height.Do:
-                    collection = this.doNotes;
-                    break;
-                case Height.Re:
-                    collection = this.reNotes;
-                    break;
-                case Height.Mi:
-                    collection = this.miNotes;
-                    break;
-                case Height.Fa:
-                    collection = this.faNotes;
-                    break;
-                case Height.Sol:
-                    collection = this.solNotes;
-                    break;
-                case Height.La:
-                    collection = this.laNotes;
-                    break;
-                case Height.Si:
-                    collection = this.siNotes;
-                    break;
-                case Height.Rest:
-                    collection = this.rests;
-                    break;
-                default:
-                    return;
-            }
-            collection.Remove(collection.First(nvm => nvm.Note.Equals(note)));
+            ObservableCollection<NoteVM> collection = this.GetHeightCollection(note.Height);
+            collection.First(nvm => nvm.Note.Equals(note)).UpdateNoteState();
         }
 
         /// <summary>

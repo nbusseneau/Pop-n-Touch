@@ -291,7 +291,7 @@ namespace PopNTouch2.ViewModel
 
             this.CleaningTimer = new Timer(CLEANING_INTERVAL);
             this.CleaningTimer.AutoReset = true;
-            this.CleaningTimer.Elapsed += new ElapsedEventHandler((source, e) => { this.SheetMusic.CleanNotes(this.Player.Stopwatch); });
+            //this.CleaningTimer.Elapsed += new ElapsedEventHandler((source, e) => { this.SheetMusic.CleanNotes(this.Player.Stopwatch); });
             this.CleaningTimer.Start();
         }
 
@@ -329,6 +329,7 @@ namespace PopNTouch2.ViewModel
                 this.Player.NoteScored(timingDifference / 1000);
                 this.SheetMusic.DisplayNoteScored();
                 closestNoteInfo.Item3.Hit();
+                this.SheetMusic.UpdateNoteState(closestNoteInfo.Item3);
                 this.Player.ScoreCombo();
                 this.ScoreVM.MaxCombo = this.Player.MaxCombo;
             }

@@ -179,7 +179,7 @@ namespace PopNTouch2.ViewModel
                             }
                             else
                             {
-                                GameMaster.Instance.Game.Depause();
+                                GameMaster.Instance.Game.Resume();
                             }
                         }
                     });

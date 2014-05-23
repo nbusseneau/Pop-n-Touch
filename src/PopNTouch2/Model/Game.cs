@@ -51,7 +51,7 @@ namespace PopNTouch2.Model
             this.TimeElapsed.Stop();
         }
 
-        public void Depause()
+        public void Resume()
         {
             this.MusicPlayback.Play();
             this.TimeElapsed.Start();
