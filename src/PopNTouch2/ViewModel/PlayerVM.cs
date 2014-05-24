@@ -331,7 +331,7 @@ namespace PopNTouch2.ViewModel
                 this.SheetMusic.UpdateNoteState(closestNoteInfo.Item3);
                 this.Player.ScoreCombo();
                 this.ScoreVM.MaxCombo = this.Player.MaxCombo;
-                this.ScoreVM.Precision = (int) (this.Player.Score / this.SheetMusic.Sheet.GetMaxScore() * 100);
+                this.ScoreVM.Precision = (int) Math.Floor((double) 100 * this.Player.Score/this.SheetMusic.Sheet.GetMaxScore());
             }
             RaisePropertyChanged("Combo");
         }

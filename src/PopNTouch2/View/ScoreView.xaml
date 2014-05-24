@@ -14,10 +14,10 @@
 
         <TextBlock Text="Score" FontFamily="../Resources/UI/Fonts/#Exo" Foreground="AntiqueWhite" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="256,12,0,0"/>
         <TextBlock Text="{Binding Score}" Foreground="AntiqueWhite" FontWeight="Bold" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="276,55,0,0" Width="38" TextAlignment="Center"/>
-        <TextBlock Text="Max Combo" FontFamily="../Resources/UI/Fonts/#Exo" Foreground="AntiqueWhite" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="99,100,0,0"/>
+        <TextBlock Text="Max Combo" FontFamily="../Resources/UI/Fonts/#Exo" Foreground="AntiqueWhite" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="89,100,0,0"/>
         <TextBlock Text="{Binding MaxCombo}" Foreground="AntiqueWhite" FontWeight="Bold" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="154,155,0,0" Width="38" TextAlignment="Center"/>
-        <TextBlock Text="Precision" FontFamily="../Resources/UI/Fonts/#Exo" Foreground="AntiqueWhite" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="343,100,0,0"/>
-        <TextBlock Text="{Binding Precision}" Foreground="AntiqueWhite" FontWeight="Bold" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="387,155,0,0" Width="38" TextAlignment="Center"/>
+        <TextBlock Text="Precision (%)" FontFamily="../Resources/UI/Fonts/#Exo" Foreground="AntiqueWhite" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="351,100,0,0"/>
+        <TextBlock Text="{Binding Precision}" Foreground="AntiqueWhite" FontWeight="Bold" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="411,155,0,0" Width="38" TextAlignment="Center"/>
     </Grid>
 
 </UserControl>
