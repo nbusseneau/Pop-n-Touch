@@ -138,15 +138,17 @@
                 </Grid.Resources>
 
                 <TextBlock Text="Difficulty" FontFamily="../Resources/UI/Fonts/#Exo" Foreground="Black" FontWeight="Bold" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="66,10,69,0"/>
-                <s:SurfaceButton Style="{StaticResource SelectedEasyButtonStyle}" Command="{Binding PickDifficulty}" CommandParameter="Beginner" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Margin="10,86,0,0" Width="51">
-                    <Image Source="../Resources/UI/BTNP_Easy.png" IsHitTestVisible="False"/>
+                <s:SurfaceButton Style="{StaticResource SelectedEasyButtonStyle}" Command="{Binding PickDifficulty}" CommandParameter="Beginner" HorizontalAlignment="Left" VerticalAlignment="Top" Height="75" Margin="30,70,0,0" Width="75">
+                    <Image Source="../Resources/UI/BTNP_Easy.png" IsHitTestVisible="False" Width="75" Height="75" Margin="-6, -2"/>
                 </s:SurfaceButton>
-                <s:SurfaceButton Style="{StaticResource SelectedMediumButtonStyle}" Command="{Binding PickDifficulty}" CommandParameter="Classic" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Margin="106,86,0,0" Width="51">
-                    <Image Source="../Resources/UI/BTNP_Medium.png" IsHitTestVisible="False"/>
+                <s:SurfaceButton Style="{StaticResource SelectedMediumButtonStyle}" Command="{Binding PickDifficulty}" CommandParameter="Classic" HorizontalAlignment="Right" VerticalAlignment="Top" Height="75" Margin="0,70,45,0" Width="75">
+                    <Image Source="../Resources/UI/BTNP_Medium.png" IsHitTestVisible="False" Width="75" Height="75" Margin="-6, -2"/>
                 </s:SurfaceButton>
-                <s:SurfaceButton Style="{StaticResource SelectedHardButtonStyle}" Command="{Binding PickDifficulty}" CommandParameter="Expert" HorizontalAlignment="Left" VerticalAlignment="Top" Height="50" Margin="206,86,0,0" Width="51">
-                    <Image Source="../Resources/UI/BTNP_Hard.png" IsHitTestVisible="False"/>
+                <!-- //FIXME: No Hard difficulty implemented
+                <s:SurfaceButton Style="{StaticResource SelectedHardButtonStyle}" Command="{Binding PickDifficulty}" CommandParameter="Expert" HorizontalAlignment="Left" VerticalAlignment="Top" Height="75" Margin="200,70,0,0" Width="75">
+                    <Image Source="../Resources/UI/BTNP_Hard.png" IsHitTestVisible="False" />
                 </s:SurfaceButton>
+                -->
             </Grid>
 
             <!-- Instrument buttons -->
@@ -208,7 +210,7 @@
                     </ItemsControl.ItemsPanel>
                     <ItemsControl.ItemTemplate>
                         <DataTemplate DataType="{x:Type ViewModel:InstrumentVM}" >
-                            <s:SurfaceButton Style="{StaticResource InstrumentButtonStyle}" Command="{Binding PickInstrument}" Height="50" Width="50" Margin="10"/>
+                            <s:SurfaceButton Style="{StaticResource InstrumentButtonStyle}" Command="{Binding PickInstrument}" Height="75" Width="75" Margin="10"/>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>
