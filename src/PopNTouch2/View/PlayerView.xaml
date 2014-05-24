@@ -219,8 +219,8 @@
         </StackPanel>
 
         <!-- Stave -->
-        <TextBlock Text="{Binding Combo}" FontFamily="../Resources/UI/Fonts/#Exo" Foreground="Black" TextAlignment="Center" FontSize="25" Width="30" Margin="143,96,477,269" Visibility="{Binding SheetMusic.Visibility, Converter={StaticResource bool2vis}}"/>
-        <PopNTouch2:SheetMusicView DataContext="{Binding SheetMusic}" Visibility="{Binding Visibility, Converter={StaticResource bool2vis}}" Margin="35,96,0,0" HorizontalAlignment="Left" Width="580" Height="210" VerticalAlignment="Top"/>
+        <TextBlock Text="{Binding Combo}" FontFamily="../Resources/UI/Fonts/#Exo" Foreground="Black" TextAlignment="Center" FontSize="25" Width="30" Margin="143,96,477,269" Visibility="{Binding SheetMusicVM.Visibility, Converter={StaticResource bool2vis}}"/>
+        <PopNTouch2:SheetMusicView DataContext="{Binding SheetMusicVM}" Visibility="{Binding Visibility, Converter={StaticResource bool2vis}}" Margin="35,96,0,0" HorizontalAlignment="Left" Width="580" Height="210" VerticalAlignment="Top"/>
 
         <!-- Score -->
         <PopNTouch2:ScoreView DataContext="{Binding ScoreVM}" Visibility="{Binding ScoreVisibility, Converter={StaticResource bool2vis}}" Margin="28,80,0,0" Height="216" Width="593" VerticalAlignment="Top" HorizontalAlignment="Left"/>
@@ -256,13 +256,13 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <s:SurfaceButton HorizontalAlignment="Center" Grid.Column="0" VerticalAlignment="Bottom" Height="70" Width="70" Command="{Binding ClickNoteButton}" CommandParameter="Do" Content="" Style="{DynamicResource NoteButtonStyle}" Background="Red"/>
-            <s:SurfaceButton HorizontalAlignment="Center" Grid.Column="1" VerticalAlignment="Bottom" Height="70" Width="70" Command="{Binding ClickNoteButton}" CommandParameter="Re" Content="" Style="{DynamicResource NoteButtonStyle}" Background="Orange"/>
-            <s:SurfaceButton HorizontalAlignment="Center" Grid.Column="2" VerticalAlignment="Bottom" Height="70" Width="70" Command="{Binding ClickNoteButton}" CommandParameter="Mi" Content="" Style="{DynamicResource NoteButtonStyle}" Background="Yellow"/>
-            <s:SurfaceButton HorizontalAlignment="Center" Grid.Column="3" VerticalAlignment="Bottom" Height="70" Width="70" Command="{Binding ClickNoteButton}" CommandParameter="Fa" Content="" Style="{DynamicResource NoteButtonStyle}" Background="Green"/>
-            <s:SurfaceButton HorizontalAlignment="Center" Grid.Column="4" VerticalAlignment="Bottom" Height="70" Width="70" Command="{Binding ClickNoteButton}" CommandParameter="Sol" Content="" Style="{DynamicResource NoteButtonStyle}" Background="Blue"/>
-            <s:SurfaceButton HorizontalAlignment="Center" Grid.Column="5" VerticalAlignment="Bottom" Height="70" Width="70" Command="{Binding ClickNoteButton}" CommandParameter="La" Content="" Style="{DynamicResource NoteButtonStyle}" Background="Indigo"/>
-            <s:SurfaceButton HorizontalAlignment="Center" Grid.Column="6" VerticalAlignment="Bottom" Height="70" Width="70" Command="{Binding ClickNoteButton}" CommandParameter="Si" Content="" Style="{DynamicResource NoteButtonStyle}" Background="Violet"/>
+            <s:SurfaceButton HorizontalAlignment="Center" Grid.Column="0" VerticalAlignment="Bottom" Height="70" Width="70" Command="{Binding ClickNoteButton}" CommandParameter="Do" Content="" Style="{DynamicResource NoteButtonStyle}" Background="Red" Margin="10,0,3,4"/>
+            <s:SurfaceButton HorizontalAlignment="Center" Grid.Column="1" VerticalAlignment="Bottom" Height="70" Width="70" Command="{Binding ClickNoteButton}" CommandParameter="Re" Content="" Style="{DynamicResource NoteButtonStyle}" Background="Orange" Margin="7,0,6,4"/>
+            <s:SurfaceButton HorizontalAlignment="Center" Grid.Column="2" VerticalAlignment="Bottom" Height="70" Width="70" Command="{Binding ClickNoteButton}" CommandParameter="Mi" Content="" Style="{DynamicResource NoteButtonStyle}" Background="Yellow" Margin="7,0,6,4"/>
+            <s:SurfaceButton HorizontalAlignment="Center" Grid.Column="3" VerticalAlignment="Bottom" Height="70" Width="70" Command="{Binding ClickNoteButton}" CommandParameter="Fa" Content="" Style="{DynamicResource NoteButtonStyle}" Background="Green" Margin="5,0,7,4"/>
+            <s:SurfaceButton HorizontalAlignment="Center" Grid.Column="4" VerticalAlignment="Bottom" Height="70" Width="70" Command="{Binding ClickNoteButton}" CommandParameter="Sol" Content="" Style="{DynamicResource NoteButtonStyle}" Background="Blue" Margin="3,0,10,4"/>
+            <s:SurfaceButton HorizontalAlignment="Center" Grid.Column="5" VerticalAlignment="Bottom" Height="70" Width="70" Command="{Binding ClickNoteButton}" CommandParameter="La" Content="" Style="{DynamicResource NoteButtonStyle}" Background="Indigo" Margin="5,0,7,4"/>
+            <s:SurfaceButton HorizontalAlignment="Center" Grid.Column="6" VerticalAlignment="Bottom" Height="70" Width="70" Command="{Binding ClickNoteButton}" CommandParameter="Si" Content="" Style="{DynamicResource NoteButtonStyle}" Background="Violet" Margin="6,0,7,4"/>
         </Grid>
         <!-- Sup. & lock buttons -->
         <Grid Visibility="{Binding BottomButtonsVisible, Converter={StaticResource bool2vis}}" Margin="35,300,36,20" Panel.ZIndex="20">

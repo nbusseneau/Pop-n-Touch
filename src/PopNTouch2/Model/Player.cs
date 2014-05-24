@@ -12,7 +12,7 @@ namespace PopNTouch2.Model
         private List<Tuple<double, double, Note>>.Enumerator enumerator;
 
         // Tolerance, in milliseconds, for which a pressed note is still considered valid
-        public const double TIMING_TOLERANCE = 500;
+        public const double TIMING_TOLERANCE = 800;
 
         // Score multipliers
         public const int PERFECT_SCORE = 10;

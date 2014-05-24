@@ -95,7 +95,7 @@
         <Image HorizontalAlignment="Center" VerticalAlignment="Top" Source="../Resources/UI/BGP_SheetMusic.png" Stretch="Fill" Panel.ZIndex="-1"/>
 
         <!-- Feedback zone, tells if the user hit or missed a note -->
-        <Rectangle HorizontalAlignment="Left" Height="137" Margin="118,37,0,0" Stroke="Transparent" VerticalAlignment="Top" Width="10" Opacity="1">
+        <Rectangle HorizontalAlignment="Left" Height="137" Margin="118,37,0,0" Stroke="Transparent" VerticalAlignment="Top" Width="10" Opacity="0.7">
             <Rectangle.Resources>
                 <Storyboard x:Key="missedNoteAnim">
                     <ColorAnimation Storyboard.TargetProperty="Fill.Color" From="{x:Null}" To="Red" Duration="0:0:0.1" AutoReverse="True"/>

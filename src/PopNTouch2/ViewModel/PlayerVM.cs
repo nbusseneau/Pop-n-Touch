@@ -229,7 +229,7 @@ namespace PopNTouch2.ViewModel
                         if (this.readyChecked) {
                             if (this.Player.Difficulty == Difficulty.Beginner)
                             {
-                                this.SheetMusic.easyMode = true;
+                                this.SheetMusicVM.easyMode = true;
                             }
                             this.Player.IMReady();
                         }
@@ -248,13 +248,13 @@ namespace PopNTouch2.ViewModel
 
         #region SheetMusic & Play
 
-        private SheetMusicVM sheetMusic = new SheetMusicVM();
-        public SheetMusicVM SheetMusic
+        private SheetMusicVM sheetMusicVM = new SheetMusicVM();
+        public SheetMusicVM SheetMusicVM
         {
-            get { return this.sheetMusic; }
+            get { return this.sheetMusicVM; }
             set
             {
-                this.sheetMusic = value;
+                this.sheetMusicVM = value;
                 RaisePropertyChanged("SheetMusic");
             }
         }
@@ -285,8 +285,8 @@ namespace PopNTouch2.ViewModel
         /// </summary>
         public void PrepareSheet()
         {
-            this.SheetMusic.Sheet = this.Player.SheetMusic;
-            this.SheetMusic.Visibility = true;
+            this.SheetMusicVM.Sheet = this.Player.SheetMusic;
+            this.SheetMusicVM.Visibility = true;
 
             //this.CleaningTimer = new Timer(CLEANING_INTERVAL);
             //this.CleaningTimer.AutoReset = true;
@@ -302,7 +302,7 @@ namespace PopNTouch2.ViewModel
         /// <param name="nt"></param>
         public void OnPlayerTick(Player p, Player.NoteTicked nt)
         {
-            this.SheetMusic.AddNote(nt.Note);
+            this.SheetMusicVM.AddNote(nt.Note);
             RaisePropertyChanged("SheetMusic");
         }
 
@@ -316,23 +316,43 @@ namespace PopNTouch2.ViewModel
             double elapsedTime = this.Player.Stopwatch.ElapsedMilliseconds;
             this.Player.Stopwatch.Start();
 
-            Tuple<double, double, Note> closestNoteInfo = this.Player.SheetMusic.Notes.Find(t => t.Item2 <= elapsedTime + Player.TIMING_TOLERANCE && t.Item2 >= elapsedTime - Player.TIMING_TOLERANCE);
-            if (closestNoteInfo == null)
+            List<Tuple<double, double, Note>> playingNotes = this.Player.SheetMusic.Notes.FindAll(t => t.Item3.State == NoteState.Playing && t.Item3.Height == height);
+            if (playingNotes.Count == 0)
             {
-                this.SheetMusic.DisplayNoteFailed();
+                this.SheetMusicVM.DisplayNoteFailed();
                 this.Player.Combo = 0;
+                RaisePropertyChanged("Combo");
+                return;
             }
-            else if (closestNoteInfo.Item3.Height == height)
+            
+            double bestTiming = Math.Abs(playingNotes[0].Item2 - elapsedTime);
+            Note bestNote = playingNotes[0].Item3;
+            for (int i = 1; i < playingNotes.Count; i++ )
             {
-                double timingDifference = Math.Abs(closestNoteInfo.Item2 - elapsedTime);
-                this.Player.NoteScored(timingDifference / 1000);
-                this.SheetMusic.DisplayNoteScored();
-                closestNoteInfo.Item3.Hit();
-                this.SheetMusic.UpdateNoteState(closestNoteInfo.Item3);
-                this.Player.ScoreCombo();
-                this.ScoreVM.MaxCombo = this.Player.MaxCombo;
-                this.ScoreVM.Precision = (int) Math.Floor((double) 100 * this.Player.Score/this.SheetMusic.Sheet.GetMaxScore());
+                double timing = Math.Abs(playingNotes[i].Item2 - elapsedTime);
+                if (timing < bestTiming)
+                {
+                    bestTiming = timing;
+                    bestNote = playingNotes[i].Item3;
+                }
             }
+
+            if (bestTiming > Player.TIMING_TOLERANCE)
+            {
+                this.SheetMusicVM.DisplayNoteFailed();
+                this.Player.Combo = 0;
+                RaisePropertyChanged("Combo");
+                return;
+            }
+
+            this.Player.NoteScored(bestTiming / 1000);
+            this.SheetMusicVM.DisplayNoteScored();
+            bestNote.Hit();
+            this.SheetMusicVM.UpdateNoteState(bestNote);
+            this.Player.ScoreCombo();
+            this.ScoreVM.MaxCombo = this.Player.MaxCombo;
+            this.ScoreVM.Precision = (int) Math.Floor((double) 100 * this.Player.Score/this.SheetMusicVM.Sheet.GetMaxScore());
+
             RaisePropertyChanged("Combo");
         }
         
@@ -340,7 +360,7 @@ namespace PopNTouch2.ViewModel
         {
             foreach (Height h in Enum.GetValues(typeof(Height)))
             {
-                foreach(NoteVM nvm in this.SheetMusic.GetHeightCollection(h)) 
+                foreach(NoteVM nvm in this.SheetMusicVM.GetHeightCollection(h)) 
                 {
                     nvm.UpdateNoteState();
                 }
@@ -455,7 +475,7 @@ namespace PopNTouch2.ViewModel
         /// </summary>
         public void DisplayScore()
         {
-            this.SheetMusic.Visibility = false;
+            this.SheetMusicVM.Visibility = false;
             this.ScoreVM.ScoreVisibility = true;
             this.ScoreVM.Score = this.Player.Score;
         }
