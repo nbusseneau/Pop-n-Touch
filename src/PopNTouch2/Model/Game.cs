@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
-using System.Timers;
 
 namespace PopNTouch2.Model
 {
@@ -60,14 +59,8 @@ namespace PopNTouch2.Model
         /// </summary>
         public void Resume()
         {
-            Timer timer = new Timer(GameMaster.TIMETOPLAY);
-            timer.Elapsed += delegate(object source, ElapsedEventArgs e)
-            {
-                this.MusicPlayback.Dispatcher.Invoke((Action)(() => { this.MusicPlayback.Play(); }));
-                this.TimeElapsed.Start();
-                timer.Close();
-            };
-            timer.Start();
+            this.MusicPlayback.Dispatcher.Invoke((Action)(() => { this.MusicPlayback.Play(); }));
+            this.TimeElapsed.Start();
         }
 
         /// <summary>
