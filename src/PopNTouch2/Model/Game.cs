@@ -76,7 +76,7 @@ namespace PopNTouch2.Model
 
             List<Tuple<double, double, Note>>.Enumerator enumerator = player.SheetMusic.Notes.GetEnumerator();
             double noteTime = 0;
-            while(time > noteTime)
+            while(time > noteTime + GameMaster.TIMETOPLAY)
             {
                 enumerator.MoveNext();
                 noteTime = enumerator.Current.Item1;
