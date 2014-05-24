@@ -5,6 +5,11 @@ using System.Text;
 
 namespace PopNTouch2.Model
 {
+    /// <summary>
+    /// This Factory was supposed to be used to generate FlyWeight Notes, to avoid instanciating like crazy
+    /// However, this proved a hindrance in the end, since we had to add a state machine to each Note, because of WPF and MVVM
+    /// Anyway, this makes M.Panda (and M.Blouin) sad D:
+    /// </summary>
     public sealed class NoteFactory
     {
         private static readonly NoteFactory instance = new NoteFactory();

@@ -184,7 +184,7 @@
             </s:ScatterView.ItemContainerStyle>
         </s:ScatterView>
 
-        <s:ScatterView ItemsSource="{Binding LaNotes}" Margin="10,97,10,98" >
+        <s:ScatterView ItemsSource="{Binding LaNotes}" Margin="10,96,10,99" >
             <s:ScatterView.Resources>
                 <DataTemplate DataType="{x:Type ViewModel:NoteVM}">
                     <s:ScatterViewItem />
