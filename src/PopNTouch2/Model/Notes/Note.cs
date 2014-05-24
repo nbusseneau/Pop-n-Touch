@@ -25,14 +25,6 @@ namespace PopNTouch2.Model
             this.State = NoteState.Waiting;
         }
 
-        public Note(Note n)
-        {
-            this.Length = n.Length;
-            this.Accidental = n.Accidental;
-            this.Height = n.Height;
-            this.State = NoteState.Waiting;
-        }
-
         public void StartPlaying(double timerInterval)
         {
             this.State = NoteState.Playing;
@@ -57,13 +49,20 @@ namespace PopNTouch2.Model
 
         public void Pause()
         {
+            this.Timer.Stop();
             this.State = NoteState.Paused;
             this.Tick();
         }
 
+        /// <summary>
+        /// Resumes the note
+        /// The note's state becomes waiting not to restart the "playing" animation
+        /// And to easily exit the "pause" animation
+        /// </summary>
         public void Resume()
         {
-            this.State = NoteState.Playing;
+            this.Timer.Start();
+            this.State = NoteState.Waiting;
             this.Tick();
         }
     }

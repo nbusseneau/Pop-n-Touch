@@ -58,15 +58,13 @@ namespace PopNTouch2.Model
 
         /// <summary>
         /// The player has chosen instrument and difficulty
-        /// Building sheet must be done here and not in the VM
+        /// Build the sheet
         /// </summary>
         public void IMReady()
         {
-            // FIXME : Uncomment these lines once everything is correctly instanciated
-            // this.SheetMusic = GameMaster.Instance.SheetBuilder.BuildSheet(GameMaster.Instance.Game.Song, Instrument, Difficulty);
+            this.SheetMusic = GameMaster.Instance.SheetBuilder.BuildSheet(GameMaster.Instance.Game.Song, Instrument, InstrumentDifficulty);
             if (CurrentGame.IsPlaying)
             {
-                this.SheetMusic = GameMaster.Instance.SheetBuilder.BuildSheet(GameMaster.Instance.Game.Song, Instrument, InstrumentDifficulty);
                 GameMaster.Instance.Game.AddPlayerInGame(this);
             }
             this.Ready = true;
@@ -143,7 +141,6 @@ namespace PopNTouch2.Model
                 // nt.Note.StartPlaying(this.enumerator.Current.Item2 - this.Stopwatch.ElapsedMilliseconds + TIMING_TOLERANCE);
                 nt.Note.StartPlaying(GameMaster.TIMETOPLAY);
                 this.Stopwatch.Start();
-                //nt.Note.Tick += new Note.TickHandler(() => { this.Combo = 0; });
                 Tick(this, nt);
             }
             myTime = this.enumerator.Current.Item1;
@@ -158,6 +155,24 @@ namespace PopNTouch2.Model
                 this.Timer.Close();
                 this.Stopwatch.Reset();
             }
+        }
+
+        /// <summary>
+        /// Pauses all the needed timers
+        /// </summary>
+        public void Pause()
+        {
+            this.Stopwatch.Stop();
+            this.Timer.Stop();
+        }
+
+        /// <summary>
+        /// Resumes all the needed timers
+        /// </summary>
+        public void Resume()
+        {
+            this.Stopwatch.Start();
+            this.Timer.Start();
         }
 
         /// <summary>

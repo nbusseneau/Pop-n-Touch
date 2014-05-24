@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Timers;
 
 namespace PopNTouch2.Model
 {
@@ -17,6 +18,7 @@ namespace PopNTouch2.Model
         }
         // Big MVVM nope. Don't do that at home kids !
         public static int TIMETOPLAY = 2500;
+        public static int TIMEBEFORERESUME = 1000;
         public List<Song> Songs { get; private set; }
         public List<Player> Players { get; private set; }
         public Game Game { get; private set; }
@@ -121,6 +123,7 @@ namespace PopNTouch2.Model
             this.Game.Pause();
             foreach (Player player in this.Players)
             {
+                player.Pause();
                 foreach (Tuple<double,double,Note> noteInfo in player.SheetMusic.Notes)
                 {
                     if (noteInfo.Item3.State == NoteState.Playing)
@@ -133,20 +136,28 @@ namespace PopNTouch2.Model
 
         /// <summary>
         /// Resumes the game
+        /// Wait TIMEBEFORERESUME milliseconds before resuming
         /// </summary>
         public void Resume()
         {
-            this.Game.Resume();
-            foreach (Player player in this.Players)
+            Timer timer = new Timer(GameMaster.TIMEBEFORERESUME);
+            timer.Elapsed += delegate(object source, ElapsedEventArgs e)
             {
-                foreach (Tuple<double, double, Note> noteInfo in player.SheetMusic.Notes)
+                this.Game.Resume();
+                foreach (Player player in this.Players)
                 {
-                    if (noteInfo.Item3.State == NoteState.Paused)
+                    player.Resume();
+                    foreach (Tuple<double, double, Note> noteInfo in player.SheetMusic.Notes)
                     {
-                        noteInfo.Item3.Resume();
+                        if (noteInfo.Item3.State == NoteState.Paused)
+                        {
+                            noteInfo.Item3.Resume();
+                        }
                     }
                 }
-            }
+                timer.Close();
+            };
+            timer.Start();
         }
     }
 }
