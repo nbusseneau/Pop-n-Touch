@@ -364,16 +364,12 @@ namespace PopNTouch2.ViewModel
             {
                 this.bottomButtonsVisible = value;
                 RaisePropertyChanged("BottomButtonsVisible");
+                RaisePropertyChanged("PlayButtonsVisible");
             }
         }
         public bool PlayButtonsVisible
         {
             get { return !this.bottomButtonsVisible; }
-            set
-            {
-                this.bottomButtonsVisible = !value;
-                RaisePropertyChanged("PlayButtonsVisible");
-            }
         }
 
         /// <summary>
