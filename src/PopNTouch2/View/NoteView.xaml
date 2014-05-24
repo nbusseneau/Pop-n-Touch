@@ -10,6 +10,8 @@
              Background="Transparent" Height="100" Width="60">
 
     <UserControl.Resources>
+        <BooleanToVisibilityConverter x:Key="bool2vis" />
+
         <BitmapImage x:Key="Whole" UriSource="../Resources/UI/Notes/whole.png"></BitmapImage>
         <BitmapImage x:Key="Half" UriSource="../Resources/UI/Notes/minim.png"></BitmapImage>
         <BitmapImage x:Key="Quarter" UriSource="../Resources/UI/Notes/crotchet.png"></BitmapImage>
@@ -60,7 +62,65 @@
     </UserControl.Resources>
 
     <Grid Background="Transparent">
-        <Image Style="{DynamicResource NoteStyle}" Stretch="Fill"/>
+
+        <Image Style="{DynamicResource NoteStyle}" Stretch="Fill" />
+        <Ellipse Margin="23,75,24,16" RenderTransformOrigin="1.632,0.2" Visibility="{Binding EasyMode, Converter={StaticResource bool2vis}}">
+            <Ellipse.Style>
+                <Style TargetType="Ellipse">
+                    <Style.Triggers>
+                        <DataTrigger Binding="{Binding Note.Height}" Value="Do">
+                            <Setter Property="Fill">
+                                <Setter.Value>
+                                    <SolidColorBrush Color="Red"/>
+                                </Setter.Value>
+                            </Setter>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Note.Height}" Value="Re">
+                            <Setter Property="Fill">
+                                <Setter.Value>
+                                    <SolidColorBrush Color="Orange"/>
+                                </Setter.Value>
+                            </Setter>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Note.Height}" Value="Mi">
+                            <Setter Property="Fill">
+                                <Setter.Value>
+                                    <SolidColorBrush Color="Yellow"/>
+                                </Setter.Value>
+                            </Setter>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Note.Height}" Value="Fa">
+                            <Setter Property="Fill">
+                                <Setter.Value>
+                                    <SolidColorBrush Color="Green"/>
+                                </Setter.Value>
+                            </Setter>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Note.Height}" Value="Sol">
+                            <Setter Property="Fill">
+                                <Setter.Value>
+                                    <SolidColorBrush Color="Blue"/>
+                                </Setter.Value>
+                            </Setter>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Note.Height}" Value="La">
+                            <Setter Property="Fill">
+                                <Setter.Value>
+                                    <SolidColorBrush Color="Indigo"/>
+                                </Setter.Value>
+                            </Setter>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding Note.Height}" Value="Si">
+                            <Setter Property="Fill">
+                                <Setter.Value>
+                                    <SolidColorBrush Color="Violet"/>
+                                </Setter.Value>
+                            </Setter>
+                        </DataTrigger>
+                    </Style.Triggers>
+                </Style>
+            </Ellipse.Style>
+        </Ellipse>
         <Image Style="{DynamicResource AccidentalStyle}" Stretch="Fill" Margin="-2,68,44,-3"/>
         <Image Style="{DynamicResource LineStyle}" Stretch="Fill" Margin="1,71,4,9"/>
     </Grid>

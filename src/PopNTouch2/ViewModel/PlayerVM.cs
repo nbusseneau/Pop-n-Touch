@@ -13,12 +13,10 @@ namespace PopNTouch2.ViewModel
     public class PlayerVM : ViewModelBase
     {
         public Player Player { get; set; }
-
         private MainWindowVM MainWindowVM { get; set; }
+        private Timer CleaningTimer { get; set; }
 
         private Song loadedSong;
-
-        private Timer CleaningTimer { get; set; }
 
         // Interval, in milliseconds, between each sheet cleaning
         private const double CLEANING_INTERVAL = 10000;
@@ -119,7 +117,6 @@ namespace PopNTouch2.ViewModel
                         this.checkChoicesState();
                     }
                     );
-
                 return this.pickDifficulty;
             }
         }
@@ -230,6 +227,10 @@ namespace PopNTouch2.ViewModel
                     this.clickReady = new RelayCommand( () =>
                     {
                         if (this.readyChecked) {
+                            if (this.Player.Difficulty == Difficulty.Beginner)
+                            {
+                                this.SheetMusic.easyMode = true;
+                            }
                             this.Player.IMReady();
                         }
                         else
@@ -330,7 +331,7 @@ namespace PopNTouch2.ViewModel
                 this.SheetMusic.UpdateNoteState(closestNoteInfo.Item3);
                 this.Player.ScoreCombo();
                 this.ScoreVM.MaxCombo = this.Player.MaxCombo;
-                this.ScoreVM.Precision = (int)this.Player.Score / this.SheetMusic.Sheet.GetMaxScore() * 100;
+                this.ScoreVM.Precision = (int) (this.Player.Score / this.SheetMusic.Sheet.GetMaxScore() * 100);
             }
             RaisePropertyChanged("Combo");
         }

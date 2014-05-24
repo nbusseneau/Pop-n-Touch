@@ -14,6 +14,8 @@ namespace PopNTouch2.ViewModel
     {
         public SheetMusic Sheet { get; set; }
 
+        public bool easyMode = false;
+
         public SheetMusicVM()
         {
         }
@@ -122,6 +124,10 @@ namespace PopNTouch2.ViewModel
         public void AddNote(Note note)
         {
             NoteVM nvm = new NoteVM(note);
+            if (this.easyMode)
+            {
+                nvm.EasyMode = true;
+            }
             this.GetHeightCollection(note.Height).Add(nvm);
         }
 

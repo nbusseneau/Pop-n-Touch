@@ -12,6 +12,13 @@ namespace PopNTouch2.ViewModel
     {
         public Note Note { get; set; }
 
+        public NoteVM(Note note)
+        {
+            this.Note = note;
+            this.State = this.Note.State;
+            this.Note.Tick += new Note.TickHandler(UpdateNoteState);
+        }
+
         private NoteState state;
         public NoteState State
         {
@@ -23,12 +30,17 @@ namespace PopNTouch2.ViewModel
             }
         }
 
-        public NoteVM(Note note)
+        private bool easyMode = false;
+        public bool EasyMode
         {
-            this.Note = note;
-            this.State = this.Note.State;
-            this.Note.Tick += new Note.TickHandler(UpdateNoteState);
+            get { return this.easyMode; }
+            set 
+            { 
+                this.easyMode = value;
+                RaisePropertyChanged("EasyMode");
+            }
         }
+
 
         public void UpdateNoteState()
         {
