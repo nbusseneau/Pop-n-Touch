@@ -140,6 +140,9 @@ namespace PopNTouch2.ViewModel
         /// This function basically cleans every Collection of NoteVM contained in this class
         /// To do so, we get all our own fields (wow amaze such leet skillz)
         /// Then, we compare Notes' perfect timing and current play time, and suppress them accordingly
+        /// 
+        /// NOT USED ANYMORE
+        /// But let's keep it to show off our amazing Reflection skills
         /// </summary>
         public void CleanNotes(Stopwatch playerStopwatch)
         {

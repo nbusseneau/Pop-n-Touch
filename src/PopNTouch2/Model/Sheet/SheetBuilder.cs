@@ -99,8 +99,6 @@ namespace PopNTouch2.Model
                     timePlay += millitick * LengthValue(length);
                 }
             }
-            // Set maximum score
-            sheetMusic.MaxScore = sheetMusic.Notes.Count * 10;
             return sheetMusic;
         }
     }

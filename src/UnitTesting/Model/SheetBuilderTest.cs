@@ -25,7 +25,7 @@ namespace UnitTesting.Model
 
             // Assert
             Assert.AreEqual(44, sm.Notes.Count);
-            Assert.AreEqual(440, sm.MaxScore);
+            Assert.AreEqual(440, sm.GetMaxScore());
         }
 
         [TestMethod]
@@ -43,7 +43,7 @@ namespace UnitTesting.Model
             // Assert
             Assert.AreEqual(0, sm.Notes.Count);
             Assert.AreEqual(0, sm.Bonuses.Count);
-            Assert.AreEqual(0, sm.MaxScore);
+            Assert.AreEqual(0, sm.GetMaxScore());
         }
 
         [TestMethod]

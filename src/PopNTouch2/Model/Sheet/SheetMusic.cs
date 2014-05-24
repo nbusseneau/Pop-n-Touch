@@ -10,13 +10,11 @@ namespace PopNTouch2.Model
         // Represents a triplet (time when the note should appear, time it should be played, note)
         public List<Tuple<double, double, Note>> Notes { get; set; }
         public List<IBonus> Bonuses { get; set; }
-        public int MaxScore { get; set; }
 
         public SheetMusic()
         {
             this.Notes = new List<Tuple<double, double, Note>>();
             this.Bonuses = new List<IBonus>();
-            this.MaxScore = 0;
         }
 
         /// <summary>
@@ -34,6 +32,15 @@ namespace PopNTouch2.Model
                 }
             }
             return 0d;
+        }
+
+        /// <summary>
+        /// Returns maximum score one can get with this Sheet
+        /// </summary>
+        /// <returns></returns>
+        public int GetMaxScore()
+        {
+            return this.Notes.Count * Player.PERFECT_SCORE;
         }
     }
 }

@@ -10,8 +10,15 @@ namespace PopNTouch2.Model
     public class Player
     {
         private List<Tuple<double, double, Note>>.Enumerator enumerator;
+
         // Tolerance, in milliseconds, for which a pressed note is still considered valid
         public const double TIMING_TOLERANCE = 500;
+
+        // Score multipliers
+        public const int PERFECT_SCORE = 10;
+        public const int GREAT_SCORE = 5;
+        public const int GOOD_SCORE = 1;
+        public const int MEH_SCORE = 0;
 
         public SheetMusic SheetMusic { get; set; }
         public Game CurrentGame { get; set; }
@@ -158,12 +165,6 @@ namespace PopNTouch2.Model
         public void NoteScored(double difference)
         // The figures may have to be changed
         {
-            // Multipliers
-            int aScore = 10;
-            int bScore = 5;
-            int cScore = 1;
-            int nope = 0;
-
             // Delays
             double aDelay = 0.25;
             double bDelay = 0.5;
@@ -171,19 +172,19 @@ namespace PopNTouch2.Model
 
             if (difference <= aDelay)
             {
-                this.Score += aScore;
+                this.Score += PERFECT_SCORE;
             }
             else if (difference <= bDelay)
             {
-                this.Score += bScore;
+                this.Score += GREAT_SCORE;
             }
             else if (difference <= cDelay)
             {
-                this.Score += cScore;
+                this.Score += GOOD_SCORE;
             }
             else
             {
-                this.Score += nope;
+                this.Score += MEH_SCORE;
             }
 
         }

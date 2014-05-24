@@ -289,10 +289,10 @@ namespace PopNTouch2.ViewModel
             this.Player.SheetMusic = this.SheetMusic.Sheet;
             this.SheetMusic.Visibility = true;
 
-            this.CleaningTimer = new Timer(CLEANING_INTERVAL);
-            this.CleaningTimer.AutoReset = true;
+            //this.CleaningTimer = new Timer(CLEANING_INTERVAL);
+            //this.CleaningTimer.AutoReset = true;
             //this.CleaningTimer.Elapsed += new ElapsedEventHandler((source, e) => { this.SheetMusic.CleanNotes(this.Player.Stopwatch); });
-            this.CleaningTimer.Start();
+            //this.CleaningTimer.Start();
         }
 
         /// <summary>
@@ -332,6 +332,7 @@ namespace PopNTouch2.ViewModel
                 this.SheetMusic.UpdateNoteState(closestNoteInfo.Item3);
                 this.Player.ScoreCombo();
                 this.ScoreVM.MaxCombo = this.Player.MaxCombo;
+                this.ScoreVM.Precision = (int)this.Player.Score / this.SheetMusic.Sheet.GetMaxScore() * 100;
             }
             RaisePropertyChanged("Combo");
         }

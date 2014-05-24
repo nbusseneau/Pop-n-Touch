@@ -34,6 +34,17 @@ namespace PopNTouch2.ViewModel
             }
         }
 
+        private int precision = 0;
+        public int Precision
+        {
+            get { return this.precision; }
+            set 
+            { 
+                this.precision = value;
+                RaisePropertyChanged("Precision");
+            }
+        }
+
         private bool scoreVisibility = false;
         public bool ScoreVisibility
         {
