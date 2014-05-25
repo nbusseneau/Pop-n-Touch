@@ -124,7 +124,7 @@
         </TextBlock>
 
         <!-- Players views -->
-        <s:ScatterView ItemsSource="{Binding Players}" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Panel.ZIndex="-1">
+        <s:ScatterView ItemsSource="{Binding Players}" HorizontalAlignment="Left" Margin="0,0,0,0" VerticalAlignment="Top" Panel.ZIndex="2">
             <s:ScatterView.Resources>
                 <DataTemplate DataType="{x:Type ViewModel:PlayerVM}">
                     <s:ScatterViewItem/>

@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace PopNTouch2.ViewModel
 {
+    /// <summary>
+    /// Handles display of the Score for a player
+    /// </summary>
     public class ScoreVM : ViewModelBase
     {
         public ScoreVM()

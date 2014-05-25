@@ -10,6 +10,9 @@ using System.Threading.Tasks;
 
 namespace PopNTouch2.ViewModel
 {
+    /// <summary>
+    /// Holder of many ObservableCollections, to store and display dynamically every NoteVM created from a Sheet
+    /// </summary>
     public class SheetMusicVM : ViewModelBase
     {
         public SheetMusic Sheet { get; set; }
@@ -155,6 +158,9 @@ namespace PopNTouch2.ViewModel
             }
         }
 
+        /// <summary>
+        /// Triggers animation for a missed note
+        /// </summary>
         public void DisplayNoteFailed()
         {
             this.MissedNoteAnim = true;
@@ -175,6 +181,9 @@ namespace PopNTouch2.ViewModel
             }
         }
 
+        /// <summary>
+        /// Triggers animation for a hit note
+        /// </summary>
         public void DisplayNoteScored()
         {
             this.ScoredNoteAnim = true;

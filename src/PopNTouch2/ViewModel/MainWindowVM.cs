@@ -12,8 +12,14 @@ using System.Timers;
 
 namespace PopNTouch2.ViewModel
 {
+    /// <summary>
+    /// Main class for display, handles most interactions like adding a player, starting / pausing a song, displaying MainMenu...
+    /// </summary>
     public class MainWindowVM : ViewModelBase
     {
+        /// <summary>
+        /// Create a new MainWindowVM
+        /// </summary>
         public MainWindowVM()
         {
             this.mainMenu = new MainMenuVM(this);

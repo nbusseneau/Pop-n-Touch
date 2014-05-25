@@ -11,12 +11,22 @@ using System.Windows.Media;
 
 namespace PopNTouch2.ViewModel
 {
+    /// <summary>
+    /// Class used to handle the main rotating Menu displaying available Songs
+    /// </summary>
     public class MainMenuVM : ViewModelBase
     {
+        /// <summary>
+        /// Maximum number of songs displayed at once
+        /// </summary>
         private const int MAX_DISPLAYED_SONGS = 5;
 
         private MainWindowVM MainWindow { get; set; }
 
+        /// <summary>
+        /// Creates a new MainMenuVM
+        /// </summary>
+        /// <param name="mainWindow">MainWindowVM parent</param>
         public MainMenuVM(MainWindowVM mainWindow)
         {
             this.MainWindow = mainWindow;
@@ -109,6 +119,10 @@ namespace PopNTouch2.ViewModel
             }
         }
 
+        /// <summary>
+        /// Add a new song to be displayed
+        /// </summary>
+        /// <param name="songVM">SongVM attached to the displayed song</param>
         public void AddSong(SongVM songVM)
         {
             int param = this.songs.Count % MAX_DISPLAYED_SONGS;
@@ -118,6 +132,10 @@ namespace PopNTouch2.ViewModel
             RaisePropertyChanged("Songs");
         }
 
+        /// <summary>
+        /// Select a Song from thoses displayed
+        /// </summary>
+        /// <param name="selectedSong">Song, the selected Song provided by its SongVM</param>
         public void SelectSong (Song selectedSong)
         {
             this.SelectedSong = selectedSong;
