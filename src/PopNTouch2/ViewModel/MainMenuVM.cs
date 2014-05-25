@@ -22,19 +22,19 @@ namespace PopNTouch2.ViewModel
             this.MainWindow = mainWindow;
             this.Angles = new List<double>()
             {
-                45.682,
-                0,
-                -35.513,
+                 0,
+                45,
+                90,
+                -45,
                 -90,
-                35.513
             };
             this.Margins = new List<Thickness>() 
             {
-                new Thickness(1018,582,802,298),
-                new Thickness(0,-1085,-380,0),
-                new Thickness(0,-1390,-280,0),
-                new Thickness(0,-1450,0,0),
-                new Thickness(0,-1280,370,0),
+                new Thickness(0,0,0,0),
+                new Thickness(250,-100,0,0),
+                new Thickness(350,-25,0,0),
+                new Thickness(0,0,0,0),
+                new Thickness(0,0,0,0),
             };
             this.ImageKeys = new List<String>();
             for (int i = 1; i <= 5; i++)

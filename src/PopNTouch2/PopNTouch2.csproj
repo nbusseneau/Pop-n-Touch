@@ -40,7 +40,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <Prefer32Bit>false</Prefer32Bit>
-    <DocumentationFile>bin\Debug\PopNTouch2.XML</DocumentationFile>
+    <DocumentationFile>bin\Debug\PopNTouch2_Documentation.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <PlatformTarget>x86</PlatformTarget>
@@ -55,6 +55,9 @@
   <PropertyGroup>
     <StartupObject>
     </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Resources\icon.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -181,6 +184,7 @@
     <Resource Include="Resources\icon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
+    <Resource Include="Resources\icon.ico" />
     <Content Include="Resources\Songs\Thème Pokémon\music.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -210,7 +214,6 @@
     <Resource Include="Resources\UI\BGP_PlayerViewButtons.png" />
     <Resource Include="Resources\UI\BTNP_Delete.png" />
     <Resource Include="Resources\UI\BTNP_BackToMenu.png" />
-    <Resource Include="Resources\UI\BTNP_MenuPetalBlue.png" />
     <Resource Include="Resources\UI\BTNP_MenuPetalGreen.png" />
     <Resource Include="Resources\UI\BTNP_MenuPetalOrange.png" />
     <Resource Include="Resources\UI\BTNP_MenuPetalPink.png" />
