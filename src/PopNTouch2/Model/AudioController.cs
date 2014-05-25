@@ -15,7 +15,7 @@ namespace PopNTouch2.Model
         /// <summary>
         /// Instantiate an AudioController.
         /// <param name="filepath">Path of the file to be opened.</param>
-        /// <param name="delayStart">If set, wait for delayStart milliseconds before starting.</param>
+        /// <param name="delayStart">If set, wait for delayStart milliseconds before starting. Defaults to 0d</param>
         /// </summary> 
         public AudioController(Uri filepath, double delayStart = 0d) : base()
         {
@@ -39,7 +39,7 @@ namespace PopNTouch2.Model
         /// <summary>
         /// Instantiate an AudioController.
         /// <param name="song">Song to be opened.</param>
-        /// <param name="delayStart">If set, wait for delayStart milliseconds before starting.</param>
+        /// <param name="delayStart">If set, wait for delayStart milliseconds before starting. Defaults to 0d</param>
         /// </summary> 
         public AudioController(Song song, double delayStart = 0d) : this(song.File, delayStart)
         {

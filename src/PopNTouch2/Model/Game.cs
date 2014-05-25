@@ -6,6 +6,9 @@ using System.Text;
 
 namespace PopNTouch2.Model
 {
+    /// <summary>
+    /// Class instanciated by GameMaster, represents an ongoing Game. Handles changing game state and music playing.
+    /// </summary>
     public class Game
     {
         public Song Song { get; set; }

@@ -7,6 +7,11 @@ using System.Timers;
 
 namespace PopNTouch2.Model
 {
+    /// <summary>
+    /// Singleton, overseer class from which all game modeling starts
+    /// Reach it from anywhere in PopNTouch2 namespace through its Instance
+    /// Provides access to all game resources and classes
+    /// </summary>
     public sealed class GameMaster
     {
         private static readonly GameMaster instance = new GameMaster();
@@ -17,6 +22,7 @@ namespace PopNTouch2.Model
             get { return instance; }
         }
         // Big MVVM nope. Don't do that at home kids !
+        // These are pattern breaking, but act as a fix for our daunting troubles with XAML Storyboards
         public static int TIMETOPLAY = 2500;
         public static int TIMEBEFORERESUME = 1000;
         public List<Song> Songs { get; private set; }
