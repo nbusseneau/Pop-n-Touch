@@ -138,10 +138,14 @@ namespace PopNTouch2.Model
                 this.enumerator = e;
             }
 
-            this.Timer = new Timer(2000);
+            this.Timer = new Timer(1);
             this.Timer.AutoReset = false;
             this.Timer.Elapsed += new ElapsedEventHandler(OnTimerTicked);
-            this.Stopwatch = new Stopwatch();
+            // We take the Game's Stopwatch if it exists to be sync with it
+            if (this.CurrentGame.TimeElapsed != null)
+                this.Stopwatch = this.CurrentGame.TimeElapsed;
+            else
+                this.Stopwatch = new Stopwatch();
             this.Timer.Start();
         }
 
@@ -152,6 +156,12 @@ namespace PopNTouch2.Model
         /// <param name="e"></param>
         private void OnTimerTicked(object source, ElapsedEventArgs e)
         {
+            // Use to make Game and Players sync, not very beautiful thing to do
+            if (this.CurrentGame.TimeElapsed == null)
+            {
+                this.CurrentGame.TimeElapsed = new Stopwatch();
+                this.CurrentGame.TimeElapsed.Start();
+            }
             this.Stopwatch.Start();
 
             double myTime = 0;
@@ -166,7 +176,7 @@ namespace PopNTouch2.Model
                 this.Stopwatch.Stop();
                 // Because of some timing divergences between Stopwatch and Timer, we had to go full PANIC MODE
                 // This is how it should be in a perfect world
-                // nt.Note.StartPlaying(this.enumerator.Current.Item2 - this.Stopwatch.ElapsedMilliseconds + TIMING_TOLERANCE);
+                // nt.Note.StartPlaying(this.enumerator.Current.Item2 - this.StopWatch.ElapsedMilliseconds + TIMING_TOLERANCE);
                 nt.Note.StartPlaying(GameMaster.TIMETOPLAY);
                 this.Stopwatch.Start();
                 Tick(this, nt);
@@ -201,20 +211,23 @@ namespace PopNTouch2.Model
         /// </summary>
         public void Resume()
         {
-            double interval = this.enumerator.Current.Item1 - this.Stopwatch.ElapsedMilliseconds + 70*nbPaused;
-            // If you want ABSOLULY to avoid exception
-            /*if (interval <= 0)
+            if (this.enumerator.Current != null)
             {
-                interval = 1;
-            }*/
-            this.Timer.Interval = interval;
-            this.Timer.Start();
+                double interval = this.enumerator.Current.Item1 - this.CurrentGame.TimeElapsed.ElapsedMilliseconds + 80 * nbPaused;
+                // If New Born
+                if (interval <= 0)
+                {
+                    interval = this.Timer.Interval;
+                }
+                this.Timer.Interval = interval;
+                this.Timer.Start();
+            }
             this.Stopwatch.Start();
         }
 
         private double GetPreviousNoteTimeAppear()
         {
-            long currentTime = this.Stopwatch.ElapsedMilliseconds;
+            long currentTime = this.CurrentGame.TimeElapsed.ElapsedMilliseconds;
             List<Tuple<double, double, Note>>.Enumerator enumerator = this.SheetMusic.Notes.GetEnumerator();
 
             enumerator.MoveNext();
