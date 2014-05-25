@@ -198,6 +198,9 @@
     <Resource Include="Resources\UI\Menu\BTNP_BubblePurple.png" />
     <Resource Include="Resources\UI\Menu\BTNP_BubbleRed.png" />
     <Resource Include="Resources\UI\Menu\BTNP_BubbleYellow.png" />
+    <Resource Include="Resources\UI\Instruments\BTNP_InstruHard.png" />
+    <Resource Include="Resources\UI\Instruments\BTNP_InstruMedium.png" />
+    <Resource Include="Resources\UI\Instruments\BTNP_InstruEasy.png" />
     <Resource Include="Resources\icon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>

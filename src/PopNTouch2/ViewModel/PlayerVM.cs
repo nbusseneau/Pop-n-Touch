@@ -22,9 +22,6 @@ namespace PopNTouch2.ViewModel
         /// Currently loaded Song for this PlayerVM
         /// </summary>
         private Song loadedSong;
-
-        // Interval, in milliseconds, between each sheet cleaning
-        private const double CLEANING_INTERVAL = 10000;
         
         /// <summary>
         /// Creates a new PlayerVM encapsulating player and child to mwvm
