@@ -169,11 +169,11 @@
 
         <!-- Play song -->
 
-        <s:SurfaceButton Visibility="{Binding PlaySongButtonsVisible, Converter={StaticResource bool2vis}}" Command="{Binding PlaySong}" HorizontalContentAlignment="Center" Margin="-10,0,0,0" VerticalContentAlignment="Center" Background="{x:Null}">
+        <s:SurfaceButton Visibility="{Binding PlaySongButtonsVisible, Converter={StaticResource bool2vis}}" Command="{Binding PlaySong}" HorizontalContentAlignment="Center" Margin="-10,0,0,0" VerticalContentAlignment="Center" Height="300" Width="300" Background="{x:Null}">
             <Image Height="250" Width="250" Source="../Resources/UI/BTNP_Play.png"/>
         </s:SurfaceButton>
 
-        <s:SurfaceButton Visibility="{Binding PauseVisibility, Converter={StaticResource bool2vis}}" Command="{Binding Pause}" HorizontalContentAlignment="Center" Margin="0" VerticalContentAlignment="Center" Background="{x:Null}">
+        <s:SurfaceButton Visibility="{Binding PauseVisibility, Converter={StaticResource bool2vis}}" Command="{Binding Pause}" HorizontalContentAlignment="Center" Margin="0" VerticalContentAlignment="Center" Height="300" Width="300" Background="{x:Null}">
             <Image Height="250" Width="250" Source="../Resources/UI/BTNP_Pause.png"/>
         </s:SurfaceButton>
 

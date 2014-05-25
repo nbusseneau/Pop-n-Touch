@@ -84,13 +84,13 @@ namespace PopNTouch2.Model
 
         /// <summary>
         /// Resumes the note
-        /// The note's state becomes waiting not to restart the "playing" animation
+        /// The note's state becomes resumed not to restart the "playing" animation
         /// And to easily exit the "pause" animation
         /// </summary>
         public void Resume()
         {
             this.MissTimer.Start();
-            this.State = NoteState.Waiting;
+            this.State = NoteState.Resumed;
             this.Tick();
         }
     }
