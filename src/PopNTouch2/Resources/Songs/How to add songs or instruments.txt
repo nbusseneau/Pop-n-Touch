@@ -1,4 +1,4 @@
-Missing your favorite song in Pop'n'Touch 2?
+Missing your favorite song in Pop'n Touch: Revengeance?
 Missing an instrument for an awesome song?
 
 Here is what to do to fix it right away:
@@ -6,21 +6,20 @@ Here is what to do to fix it right away:
 1. If the song does not already exist, create a directory with the song's name.
 2. If it is a new song, in the song's directory, add a new text file named "meta.data" (beware of the extension! It must be ".data" and not ".txt").
    This file describes your song in 4 lines:
-     Title
+     Song name (must be exact same as directory name)
      Author
      Year
-     BPM
    Example:
      Au Clair de la Lune
      Anonyme
      17XX
-     90
 3. In the song's directory, add a new text file named after the convention "Instrument-Difficulty.sheet" (beware of the extension! It must be ".sheet" and not ".txt").
    For example, "Guitar-Beginner.sheet" is a valid filename referring to the sheet for a Guitar at Beginner level.
    Available instruments:
      - Guitar;
      - Violin;
-     - Piano.
+     - Piano;
+	 - Doublebass.
    Valid difficulties:
      - Beginner;
 	 - Classic;
@@ -28,16 +27,17 @@ Here is what to do to fix it right away:
    You can add as many Instrument-Difficulty couples as you want!
 4. Once a sheet file is created, you need to fill it with the notes. It may be fastidious!
    You need to add one line for each and every note the sheet will have.
-   The lines must follow the convention "Length_of_the_note Accidental_of_the_note Height_of_the_note".
+   The first line must enact the BPM of the song with "bpm the_bpm".
+   For example, "bpm 90" is a valid BPM.
+   The rest of the lines must follow the convention "Length_of_the_note Accidental_of_the_note Height_of_the_note".
    For example, "Whole None Fa" is a valid note referring to a whole Fa without any accidental.
+   You can also change the BPM if you wish, just add a new "bpm the_bpm" line.
    The file "Guitar-Beginner.sheet" for "Au Clair de la Lune" is a simple and complete example of what you must do.
    Be careful: rests are treated as notes and should be mentioned!
-Bpm change todo
 
    Valid values:
      - Length: Whole, Half, Quarter, Eighth;
      - Accidental: None, Flat, Sharp;
      - Height: Do, Re, Mi, Fa, Sol, La, Si, Rest.
-5. Bonus todo
 
-If your sheet is poorly written and does not respect the conventions, you may not be able to play your new music/instrument, so be careful!
+If your sheet is poorly written and does not respect the conventions, you may not be able to play your new music/instrument and crash the application, so be careful!
