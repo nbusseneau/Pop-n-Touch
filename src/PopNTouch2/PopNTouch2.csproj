@@ -214,7 +214,6 @@
     <Resource Include="Resources\UI\BGP_PlayerViewButtons.png" />
     <Resource Include="Resources\UI\BTNP_Delete.png" />
     <Resource Include="Resources\UI\BTNP_BackToMenu.png" />
-    <Resource Include="Resources\UI\BTNP_MenuPetalBlue.png" />
     <Resource Include="Resources\UI\BTNP_MenuPetalGreen.png" />
     <Resource Include="Resources\UI\BTNP_MenuPetalOrange.png" />
     <Resource Include="Resources\UI\BTNP_MenuPetalPink.png" />

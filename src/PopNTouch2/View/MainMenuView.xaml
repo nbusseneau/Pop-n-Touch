@@ -7,41 +7,42 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              mc:Ignorable="d" 
              d:DesignHeight="1080" d:DesignWidth="1920">
-    
-    <s:ScatterView MinHeight="1080" MaxHeight="1080" MaxWidth="1920" MinWidth="1920" Width="1920" Height="1080" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0" Panel.ZIndex="10">
-        <s:ScatterViewItem AngularDeceleration="270" Name="menu" MinHeight="1080" MaxHeight="1080" MaxWidth="1920" MinWidth="1920" Height="1080" Width="1920" CanMove="false" CanScale="false" CanRotate="true" Center="0,0" Orientation="0" Background="{x:Null}" RenderTransformOrigin="0.5,0.5" Margin="960,540,-960,-540" VerticalAlignment="Top" Panel.ZIndex="10">
+
+    <s:ScatterView Width="1920" Height="1080" RenderTransformOrigin="0.5,0.5">
+        <s:ScatterViewItem Name="menu" Height="500" Width="500" Center="710,412" CanMove="False" CanScale="False" Orientation="0" AngularDeceleration="260" Background="AntiqueWhite" RenderTransformOrigin="0.5,0.5">
             <s:ScatterViewItem.Resources>
-                <BitmapImage x:Key="ImgScroll1" UriSource="../Resources/UI/Scrolls/BTNP_ScrollRoll1.png"/>
-                <BitmapImage x:Key="ImgScroll2" UriSource="../Resources/UI/Scrolls/BTNP_ScrollRoll2.png"/>
-                <BitmapImage x:Key="ImgScroll3" UriSource="../Resources/UI/Scrolls/BTNP_ScrollRoll3.png"/>
-                <BitmapImage x:Key="ImgScroll4" UriSource="../Resources/UI/Scrolls/BTNP_ScrollRoll4.png"/>
-                <BitmapImage x:Key="ImgScroll5" UriSource="../Resources/UI/Scrolls/BTNP_ScrollRoll5.png"/>
+                <ImageBrush x:Key="ImgScroll1" ImageSource="../Resources/UI/BTNP_MenuPetalRed.png"/>
+                <ImageBrush x:Key="ImgScroll2" ImageSource="../Resources/UI/BTNP_MenuPetalPink.png"/>
+                <ImageBrush x:Key="ImgScroll3" ImageSource="../Resources/UI/BTNP_MenuPetalYellow.png"/>
+                <ImageBrush x:Key="ImgScroll4" ImageSource="../Resources/UI/BTNP_MenuPetalOrange.png"/>
+                <ImageBrush x:Key="ImgScroll5" ImageSource="../Resources/UI/BTNP_MenuPetalPurple.png"/>
 
                 <!-- Song button backgrounds style -->
-                <Style x:Key="SongButtonStyle" TargetType="{x:Type Image}">
+
+                <Style x:Key="SongButtonStyle" TargetType="{x:Type TextBlock}">
                     <Style.Triggers>
                         <DataTrigger Binding="{Binding ImageIndex}" Value="0">
-                            <Setter Property="Source" Value="{DynamicResource ImgScroll1}"/>
+                            <Setter Property="Background" Value="{DynamicResource ImgScroll1}"/>
                         </DataTrigger>
                         <DataTrigger Binding="{Binding ImageIndex}" Value="1">
-                            <Setter Property="Source" Value="{DynamicResource ImgScroll2}"/>
+                            <Setter Property="Background" Value="{DynamicResource ImgScroll2}"/>
                         </DataTrigger>
                         <DataTrigger Binding="{Binding ImageIndex}" Value="2">
-                            <Setter Property="Source" Value="{DynamicResource ImgScroll3}"/>
+                            <Setter Property="Background" Value="{DynamicResource ImgScroll3}"/>
                         </DataTrigger>
                         <DataTrigger Binding="{Binding ImageIndex}" Value="3">
-                            <Setter Property="Source" Value="{DynamicResource ImgScroll4}"/>
+                            <Setter Property="Background" Value="{DynamicResource ImgScroll4}"/>
                         </DataTrigger>
                         <DataTrigger Binding="{Binding ImageIndex}" Value="4">
-                            <Setter Property="Source" Value="{DynamicResource ImgScroll5}"/>
+                            <Setter Property="Background" Value="{DynamicResource ImgScroll5}"/>
                         </DataTrigger>
                     </Style.Triggers>
                 </Style>
             </s:ScatterViewItem.Resources>
-            
+
             <s:ScatterViewItem.Template>
                 <ControlTemplate>
-                    <Grid Height="1080" Width="1920" x:Name="container" RenderTransformOrigin="{TemplateBinding RenderTransformOrigin}">
+                    <Grid x:Name="container" RenderTransformOrigin="{TemplateBinding RenderTransformOrigin}">
                         <Grid.RenderTransform>
                             <ScaleTransform ScaleX="1" ScaleY="1" />
                         </Grid.RenderTransform>
@@ -49,29 +50,15 @@
                         <ItemsControl ItemsSource="{Binding Songs}">
                             <ItemsControl.ItemTemplate>
                                 <DataTemplate DataType="{x:Type ViewModel:SongVM}" >
-                                    <s:SurfaceButton Command="{Binding SelectSong}" Height="200" Width="100"  HorizontalAlignment="Center" VerticalAlignment="Center" Margin="{Binding Margin}" Padding="12" RenderTransformOrigin="0.5,0.5" Background="{x:Null}"  BorderBrush="White">
-                                        
+                                    <s:SurfaceButton Command="{Binding SelectSong}" Height="150" Width="150" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="{Binding Margin}" RenderTransformOrigin="0.5,0.5" Background="{x:Null}">
                                         <s:SurfaceButton.RenderTransform>
-                                            <TransformGroup>
-                                                <ScaleTransform/>
-                                                <SkewTransform/>
-                                                <RotateTransform Angle="{Binding Angle}"/>
-                                                <TranslateTransform/>
-                                            </TransformGroup>
+
+                                            <RotateTransform Angle="{Binding Angle}"/>
+
                                         </s:SurfaceButton.RenderTransform>
-                                        
-                                        <s:SurfaceButton.Triggers>
-                                            <EventTrigger RoutedEvent="s:SurfaceButton.Click">
-                                                <SoundPlayerAction Source="../Resources/Sounds/SND_OK.wav"/>
-                                            </EventTrigger>
-                                        </s:SurfaceButton.Triggers>
-                                        
                                         <Grid>
-                                            <TextBlock Text="{Binding Song.Title}" />
-                                            <!-- FIXME : Doesn't work for now (impossible to bind a dynamic resource) -->
-                                            <Image Height="200" Width="100" Style="{StaticResource SongButtonStyle}"/>
+                                            <TextBlock Text="{Binding Song.Title}" FontFamily="Batang" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center" Padding="0,30,0,0" Height="100" Width="100" Style="{StaticResource SongButtonStyle}" />
                                         </Grid>
-                                        
                                     </s:SurfaceButton>
                                 </DataTemplate>
                             </ItemsControl.ItemTemplate>
