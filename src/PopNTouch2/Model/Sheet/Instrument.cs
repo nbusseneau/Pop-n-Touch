@@ -16,5 +16,6 @@ namespace PopNTouch2.Model
         Violin,
         Piano,
         DoubleBass,
+        Voice,
     }
 }

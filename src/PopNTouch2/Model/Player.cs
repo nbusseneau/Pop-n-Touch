@@ -201,7 +201,13 @@ namespace PopNTouch2.Model
         /// </summary>
         public void Resume()
         {
-            this.Timer.Interval = this.enumerator.Current.Item1 - this.Stopwatch.ElapsedMilliseconds + 70*nbPaused;
+            double interval = this.enumerator.Current.Item1 - this.Stopwatch.ElapsedMilliseconds + 70*nbPaused;
+            // If you want ABSOLULY to avoid exception
+            /*if (interval <= 0)
+            {
+                interval = 1;
+            }*/
+            this.Timer.Interval = interval;
             this.Timer.Start();
             this.Stopwatch.Start();
         }

@@ -219,6 +219,13 @@
                                     </Setter.Value>
                                 </Setter>
                             </DataTrigger>
+                            <DataTrigger Binding="{Binding Instrument}" Value="Voice">
+                                <Setter Property="Content">
+                                    <Setter.Value>
+                                        <Image Source="../Resources/UI/Instruments/BTNP_Voice.png" IsHitTestVisible="False"/>
+                                    </Setter.Value>
+                                </Setter>
+                            </DataTrigger>
                         </Style.Triggers>
                     </Style>
                 </Grid.Resources>
