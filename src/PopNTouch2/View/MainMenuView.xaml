@@ -9,7 +9,7 @@
              d:DesignHeight="1080" d:DesignWidth="1920">
 
     <s:ScatterView Width="1920" Height="1080" RenderTransformOrigin="0.5,0.5">
-        <s:ScatterViewItem Name="menu" Height="500" Width="500" Center="710,412" CanMove="False" CanScale="False" Orientation="0" AngularDeceleration="260" Background="AntiqueWhite" RenderTransformOrigin="0.5,0.5">
+        <s:ScatterViewItem Name="menu" Height="500" Width="500" Center="960,540" CanMove="False" CanScale="False" Orientation="0" AngularDeceleration="260" Background="AntiqueWhite" RenderTransformOrigin="0.5,0.5" Margin="-25,-21,25,21">
             <s:ScatterViewItem.Resources>
                 <ImageBrush x:Key="ImgScroll1" ImageSource="../Resources/UI/BTNP_MenuPetalRed.png"/>
                 <ImageBrush x:Key="ImgScroll2" ImageSource="../Resources/UI/BTNP_MenuPetalPink.png"/>
@@ -52,14 +52,20 @@
                                 <DataTemplate DataType="{x:Type ViewModel:SongVM}" >
                                     <s:SurfaceButton Command="{Binding SelectSong}" Height="150" Width="150" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="{Binding Margin}" RenderTransformOrigin="0.5,0.5" Background="{x:Null}">
                                         <s:SurfaceButton.RenderTransform>
-
                                             <RotateTransform Angle="{Binding Angle}"/>
-
                                         </s:SurfaceButton.RenderTransform>
+
+                                        <s:SurfaceButton.Triggers>
+                                            <EventTrigger RoutedEvent="s:SurfaceButton.Click">
+                                                <SoundPlayerAction Source="../Resources/Sounds/SND_OK.wav"/>
+                                            </EventTrigger>
+                                        </s:SurfaceButton.Triggers>
+
                                         <Grid>
                                             <TextBlock Text="{Binding Song.Title}" FontFamily="Batang" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center" Padding="0,30,0,0" Height="100" Width="100" Style="{StaticResource SongButtonStyle}" />
                                         </Grid>
                                     </s:SurfaceButton>
+                                    
                                 </DataTemplate>
                             </ItemsControl.ItemTemplate>
                         </ItemsControl>

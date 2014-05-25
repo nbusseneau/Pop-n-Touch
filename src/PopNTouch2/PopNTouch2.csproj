@@ -105,7 +105,6 @@
     <Compile Include="ViewModel\InstrumentVM.cs" />
     <Compile Include="ViewModel\MainMenuVM.cs" />
     <Compile Include="ViewModel\MainWindowVM.cs" />
-    <Compile Include="ViewModel\NoteButtonVM.cs" />
     <Compile Include="ViewModel\NoteVM.cs" />
     <Compile Include="ViewModel\PlayerVM.cs" />
     <Compile Include="ViewModel\RelayCommand.cs" />

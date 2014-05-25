@@ -10,17 +10,27 @@ using System.Timers;
 
 namespace PopNTouch2.ViewModel
 {
+    /// <summary>
+    /// Handles Player data and all Player-specific user actions (making choices, playing a note, scoring...)
+    /// </summary>
     public class PlayerVM : ViewModelBase
     {
         public Player Player { get; set; }
         private MainWindowVM MainWindowVM { get; set; }
-        private Timer CleaningTimer { get; set; }
 
+        /// <summary>
+        /// Currently loaded Song for this PlayerVM
+        /// </summary>
         private Song loadedSong;
 
         // Interval, in milliseconds, between each sheet cleaning
         private const double CLEANING_INTERVAL = 10000;
         
+        /// <summary>
+        /// Creates a new PlayerVM encapsulating player and child to mwvm
+        /// </summary>
+        /// <param name="player">Player to be encapsulated</param>
+        /// <param name="mwvm">MainWindowVM, parent</param>
         public PlayerVM(Player player, MainWindowVM mwvm)
         {
             this.Player = player;
@@ -76,6 +86,9 @@ namespace PopNTouch2.ViewModel
             }
         }
 
+        /// <summary>
+        /// Triggers a Flash
+        /// </summary>
         public void FlashAnimation()
         {
             this.Flash = true;
@@ -310,10 +323,6 @@ namespace PopNTouch2.ViewModel
         {
             this.SheetMusicVM.Sheet = this.Player.SheetMusic;
             this.SheetMusicVM.Visibility = true;
-            //this.CleaningTimer = new Timer(CLEANING_INTERVAL);
-            //this.CleaningTimer.AutoReset = true;
-            //this.CleaningTimer.Elapsed += new ElapsedEventHandler((source, e) => { this.SheetMusic.CleanNotes(this.Player.Stopwatch); });
-            //this.CleaningTimer.Start();
         }
 
         /// <summary>
@@ -330,6 +339,7 @@ namespace PopNTouch2.ViewModel
 
         /// <summary>
         /// Knowing that the user pressed button height, computes which Note is supposed to be pressed and compares
+        /// Could benefit from some refactoring
         /// </summary>
         /// <param name="height"></param>
         public void PlayNote(Height height)
@@ -378,6 +388,10 @@ namespace PopNTouch2.ViewModel
             RaisePropertyChanged("Combo");
         }
         
+        /// <summary>
+        /// Updates state of every Note
+        /// Launched when Game is paused
+        /// </summary>
         public void Pause()
         {
             foreach (Height h in Enum.GetValues(typeof(Height)))
@@ -389,6 +403,11 @@ namespace PopNTouch2.ViewModel
             }
         }
 
+        /// <summary>
+        /// Updates state of every Note
+        /// Launched when Game is resumed
+        /// For now, does the same as Pause
+        /// </summary>
         public void Resume()
         {
             this.Pause();
