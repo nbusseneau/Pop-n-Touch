@@ -62,7 +62,7 @@ namespace PopNTouch2.Model
         public void Resume()
         {
             this.Timer.Start();
-            this.State = NoteState.Waiting;
+            this.State = NoteState.Resumed;
             this.Tick();
         }
     }

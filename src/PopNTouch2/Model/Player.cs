@@ -10,6 +10,7 @@ namespace PopNTouch2.Model
     public class Player
     {
         private List<Tuple<double, double, Note>>.Enumerator enumerator;
+        private int nbPaused = 0;
 
         // Tolerance, in milliseconds, for which a pressed note is still considered valid
         public const double TIMING_TOLERANCE = 800;
@@ -154,6 +155,7 @@ namespace PopNTouch2.Model
             {
                 this.Timer.Close();
                 this.Stopwatch.Reset();
+                this.nbPaused = 0;
             }
         }
 
@@ -162,6 +164,7 @@ namespace PopNTouch2.Model
         /// </summary>
         public void Pause()
         {
+            this.nbPaused++;
             this.Stopwatch.Stop();
             this.Timer.Stop();
         }
@@ -171,8 +174,26 @@ namespace PopNTouch2.Model
         /// </summary>
         public void Resume()
         {
-            this.Stopwatch.Start();
+            this.Timer.Interval = this.enumerator.Current.Item1 - this.Stopwatch.ElapsedMilliseconds + 70*nbPaused;
             this.Timer.Start();
+            this.Stopwatch.Start();
+        }
+
+        private double GetPreviousNoteTimeAppear()
+        {
+            long currentTime = this.Stopwatch.ElapsedMilliseconds;
+            List<Tuple<double, double, Note>>.Enumerator enumerator = this.SheetMusic.Notes.GetEnumerator();
+
+            enumerator.MoveNext();
+            double previousNoteTime = 0;
+            double noteTime = enumerator.Current.Item1;
+            while (currentTime > noteTime)
+            {
+                enumerator.MoveNext();
+                previousNoteTime = noteTime;
+                noteTime = enumerator.Current.Item1;
+            }
+            return previousNoteTime;
         }
 
         /// <summary>

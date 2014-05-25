@@ -126,7 +126,7 @@ namespace PopNTouch2.Model
                 player.Pause();
                 foreach (Tuple<double,double,Note> noteInfo in player.SheetMusic.Notes)
                 {
-                    if (noteInfo.Item3.State == NoteState.Playing)
+                    if (noteInfo.Item3.State == NoteState.Playing || noteInfo.Item3.State == NoteState.Resumed)
                     {
                         noteInfo.Item3.Pause();
                     }

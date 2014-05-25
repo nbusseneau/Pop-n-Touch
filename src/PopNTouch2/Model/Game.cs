@@ -32,16 +32,9 @@ namespace PopNTouch2.Model
                 player.ResetScores();
                 player.ReadSheet();
             }
-            /*Timer timer = new Timer(1000);
-            timer.Elapsed += delegate(object source, ElapsedEventArgs e)
-            {
-                this.TimeElapsed++;
-            };
-            timer.Start();*/
             this.TimeElapsed = new Stopwatch();
             this.TimeElapsed.Start();
-            // Delay of playback ?
-            this.MusicPlayback = new AudioController(Song.File, GameMaster.TIMETOPLAY+500);
+            this.MusicPlayback = new AudioController(Song.File, GameMaster.TIMETOPLAY + 500);
             this.MusicPlayback.MediaEnded += new EventHandler(AudioFinished);
         }
 
@@ -68,7 +61,6 @@ namespace PopNTouch2.Model
         /// Can only be done when the game is paused
         /// </summary>
         /// <param name="player">The player to add</param>
-        // Maybe not very accurate
         public void AddPlayerInGame(Player player)
         {
             this.TimeElapsed.Stop();

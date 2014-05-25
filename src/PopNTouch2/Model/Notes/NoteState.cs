@@ -11,6 +11,7 @@ namespace PopNTouch2.Model
         Playing,
         Hit,
         Missed,
-        Paused
+        Paused,
+        Resumed
     }
 }
