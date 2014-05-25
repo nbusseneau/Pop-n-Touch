@@ -29,7 +29,9 @@ Quarter None Fa
 Eighth None Rest
 Quarter None Sol
 Eighth None Rest
-Whole None La
+Half None La
+Quarter None Rest
+Eighth None Rest
 Eighth None La
 Eighth None Do
 Quarter None Re
@@ -62,6 +64,7 @@ Eighth None Do
 Quarter None Re
 Half None Rest
 Quarter None Rest
+Eighth None Rest
 Whole None Rest
 Whole None Rest
 Whole None Rest

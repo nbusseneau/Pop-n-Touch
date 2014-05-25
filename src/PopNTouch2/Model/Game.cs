@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Text;
+using System.Timers;
 
 namespace PopNTouch2.Model
 {
@@ -13,7 +14,6 @@ namespace PopNTouch2.Model
     {
         public Song Song { get; set; }
         public Boolean IsPlaying { get; set; }
-        //public int TimeElapsed { get; set; }
         public Stopwatch TimeElapsed { get; set; }
         public AudioController MusicPlayback { get; set; }
 
@@ -35,9 +35,7 @@ namespace PopNTouch2.Model
                 player.ResetScores();
                 player.ReadSheet();
             }
-            this.TimeElapsed = new Stopwatch();
-            this.TimeElapsed.Start();
-            this.MusicPlayback = new AudioController(Song.File, GameMaster.TIMETOPLAY + 500);
+            this.MusicPlayback = new AudioController(Song.File, GameMaster.TIMEBEFORERESUME);
             this.MusicPlayback.MediaEnded += new EventHandler(AudioFinished);
         }
 
@@ -71,13 +69,13 @@ namespace PopNTouch2.Model
 
             List<Tuple<double, double, Note>>.Enumerator enumerator = player.SheetMusic.Notes.GetEnumerator();
             double noteTime = 0;
-            while(time > noteTime + GameMaster.TIMETOPLAY)
+            while(time > noteTime)
             {
                 enumerator.MoveNext();
                 noteTime = enumerator.Current.Item1;
             }
-            enumerator.MoveNext();
             player.ReadSheet(true, enumerator);
+            player.Pause();
         }
 
         /// <summary>

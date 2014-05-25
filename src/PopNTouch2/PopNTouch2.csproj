@@ -173,6 +173,16 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Content Include="Resources\Songs\Thème Pokémon\Piano-Beginner.sheet">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Resources\UI\Instruments\BTNP_Voice.png" />
+    <Content Include="Resources\Songs\New Born\Piano-Expert.sheet">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Songs\Thème Pokémon\Guitar-Classic.sheet">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Resource Include="Resources\UI\Player\BTNP_Delete.png" />
     <Resource Include="Resources\UI\Player\BGP_PlayerView.png" />
     <Resource Include="Resources\UI\Player\BGP_PlayerViewButtons.png" />
@@ -206,9 +216,6 @@
     </Resource>
     <Resource Include="Resources\icon.ico" />
     <Content Include="Resources\Songs\Thème Pokémon\music.mp3">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\Songs\Thème Pokémon\Guitar-Beginner.sheet">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Songs\Thème Pokémon\meta.data">
@@ -265,9 +272,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Songs\New Born\music.mp3">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\Songs\New Born\Piano-Classic.sheet">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

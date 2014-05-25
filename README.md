@@ -22,7 +22,8 @@ development practises and tools, and apply MVVM design pattern.
 Wanna play?
 -----------
 Please download [the latest release](https://github.com/Skymirrh/Pop-n-Touch/releases)
-(requires [.NET Framework 4](http://www.microsoft.com/en-us/download/details.aspx?id=17718))
+(requires [.NET Framework 4](http://www.microsoft.com/en-us/download/details.aspx?id=17718)
+and [Surface 2.0](http://www.microsoft.com/en-us/download/details.aspx?id=26716)) 
 and launch the game!
 
 *Please note that since we do not have the rights to redistribute music along
