@@ -169,20 +169,20 @@
 
         <!-- Play song -->
 
-        <s:SurfaceButton Visibility="{Binding PlaySongButtonsVisible, Converter={StaticResource bool2vis}}" Command="{Binding PlaySong}" HorizontalAlignment="Center" Margin="-7,0,0,0" VerticalAlignment="Center" Background="{x:Null}">
-            <Image Height="370" Width="370" Source="../Resources/UI/BTNP_Play.png"/>
+        <s:SurfaceButton Visibility="{Binding PlaySongButtonsVisible, Converter={StaticResource bool2vis}}" Command="{Binding PlaySong}" HorizontalContentAlignment="Center" Margin="-10,0,0,0" VerticalContentAlignment="Center" Background="{x:Null}">
+            <Image Height="250" Width="250" Source="../Resources/UI/BTNP_Play.png"/>
         </s:SurfaceButton>
-        
-        <s:SurfaceButton Visibility="{Binding PauseVisibility, Converter={StaticResource bool2vis}}" Command="{Binding Pause}" HorizontalAlignment="Center" Margin="0" VerticalAlignment="Center" Background="{x:Null}">
+
+        <s:SurfaceButton Visibility="{Binding PauseVisibility, Converter={StaticResource bool2vis}}" Command="{Binding Pause}" HorizontalContentAlignment="Center" Margin="0" VerticalContentAlignment="Center" Background="{x:Null}">
             <Image Height="250" Width="250" Source="../Resources/UI/BTNP_Pause.png"/>
         </s:SurfaceButton>
 
-        <s:SurfaceButton Visibility="{Binding PlaySongButtonsVisible, Converter={StaticResource bool2vis}}" Command="{Binding AddPlayer}" HorizontalAlignment="Center" Margin="200,-200,0,0" VerticalAlignment="Center" Height="100" Width="100" FontSize="38" Background="{x:Null}">
-            <Image Height="100" Width="100" Source="../Resources/UI/BTNP_AddPlayer.png"/>
+        <s:SurfaceButton Visibility="{Binding PlaySongButtonsVisible, Converter={StaticResource bool2vis}}" Command="{Binding AddPlayer}" HorizontalContentAlignment="Center" Margin="205,-205,0,0" VerticalContentAlignment="Center" Height="100" Width="100" FontSize="38" Background="{x:Null}">
+            <Image Height="70" Width="70" Source="../Resources/UI/BTNP_AddPlayer.png"/>
         </s:SurfaceButton>
-        
-        <s:SurfaceButton Visibility="{Binding PlaySongButtonsVisible, Converter={StaticResource bool2vis}}" Command="{Binding ReturnToMenu}"  HorizontalAlignment="Center" Margin="-222,217,0,0" VerticalAlignment="Center" Height="100" Width="100" FontSize="38" Background="{x:Null}">
-            <Image Height="100" Width="100" Source="../Resources/UI/BTNP_BackToMenu.png"/>
+
+        <s:SurfaceButton Visibility="{Binding PlaySongButtonsVisible, Converter={StaticResource bool2vis}}" Command="{Binding ReturnToMenu}"  HorizontalContentAlignment="Center" Margin="-222,217,0,0" VerticalContentAlignment="Center" Height="100" Width="100" FontSize="38" Background="{x:Null}">
+            <Image Height="70" Width="70" Source="../Resources/UI/BTNP_BackToMenu.png"/>
             <s:SurfaceButton.Triggers>
                 <EventTrigger RoutedEvent="s:SurfaceButton.Click">
                     <SoundPlayerAction Source="../Resources/Sounds/SND_Back.wav"/>

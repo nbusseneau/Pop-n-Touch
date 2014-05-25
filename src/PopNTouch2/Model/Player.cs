@@ -7,6 +7,11 @@ using System.Timers;
 
 namespace PopNTouch2.Model
 {
+    /// <summary>
+    /// Crucial class, represents a Player, eg a user.
+    /// Stores all of a Player's informations, such as his Instrument/Difficulty choices, the Game he's in, his current Score...
+    /// Also responsible for reading a SheetMusic according to his choices
+    /// </summary>
     public class Player
     {
         private List<Tuple<double, double, Note>>.Enumerator enumerator;
@@ -39,12 +44,34 @@ namespace PopNTouch2.Model
         }
         public delegate void TickHandler(Player p, NoteTicked nt);
 
+        /// <summary>
+        /// Creates a new Player, sets all of his choices to default
+        /// </summary>
         public Player() 
         {
             this.Difficulty = Difficulty.Undefined;
             this.Instrument = Instrument.Undefined;
             this.InstrumentDifficulty = Difficulty.Undefined;
             this.Ready = false;
+        }
+
+        /// <summary>
+        /// Resets all informations
+        /// </summary>
+        public void Reset()
+        {
+            this.Difficulty = Difficulty.Undefined;
+            this.Instrument = Instrument.Undefined;
+            this.InstrumentDifficulty = Difficulty.Undefined;
+            this.Ready = false;
+            this.ResetScores();
+            this.nbPaused = 0;
+            if (this.Timer != null)
+            {
+                this.Timer.Close();
+                this.Stopwatch.Stop();
+                this.Stopwatch.Reset();
+            }
         }
 
         /// <summary>

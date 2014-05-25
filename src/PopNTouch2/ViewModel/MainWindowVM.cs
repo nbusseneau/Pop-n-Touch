@@ -125,13 +125,15 @@ namespace PopNTouch2.ViewModel
                 if (returnToMenu == null)
                     returnToMenu = new RelayCommand(() =>
                     {
-                        int count = this.players.Count;
-                        this.players.Clear();
-                        GameMaster.Instance.Players.Clear();
                         GameMaster.Instance.Game.Song = null;
-                        for (int i = 0; i < count; i++)
-                            AddPlayer.Execute(null);
-
+                        foreach (Player player in GameMaster.Instance.Players)
+                        {
+                            player.Reset();
+                        }
+                        foreach (PlayerVM pvm in this.players)
+                        {
+                            pvm.Reset();
+                        }
                         this.MainMenu.IsReady = false;
                         this.MainMenu.IsVisible = true;
                         this.PlaySongButtonsVisible = false;
@@ -262,6 +264,7 @@ namespace PopNTouch2.ViewModel
         {
             foreach (PlayerVM p in this.players)
             {
+                p.ChoicesEnabled = true;
                 p.UpdateSong();
             }
         }

@@ -13,6 +13,22 @@
 
     <UserControl.Resources>
         <BooleanToVisibilityConverter x:Key="bool2vis"/>
+        <ControlTemplate x:Key="SurfaceToggleButtonNoBG" TargetType="{x:Type s:SurfaceToggleButton}">
+            <Grid x:Name="Grid" Background="Transparent" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
+                <Border x:Name="ButtonBody" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                <Border x:Name="PressOverlay" Background="{DynamicResource {ComponentResourceKey TypeInTargetAssembly={x:Type s:SurfaceColors}}}" Opacity="0" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                <ContentPresenter x:Name="Content" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
+            </Grid>
+            <ControlTemplate.Triggers>
+                <MultiTrigger>
+                    <MultiTrigger.Conditions>
+                        <Condition Property="IsEnabled" Value="False"/>
+                        <Condition Property="IsChecked" Value="False"/>
+                    </MultiTrigger.Conditions>
+                    <Setter Property="Opacity" TargetName="Content" Value="0.33"/>
+                </MultiTrigger>
+            </ControlTemplate.Triggers>
+        </ControlTemplate>
     </UserControl.Resources>
 
     <Grid Margin="0,0,0,0">
@@ -89,7 +105,7 @@
 
         <!-- Choices : Difficulty and Instrument -->
         <!-- Ready ToggleButton -->
-        <s:SurfaceToggleButton Style="{StaticResource ToggleButtonStyle}" Visibility="{Binding ChoicesEnabled, Converter={StaticResource bool2vis}}" IsEnabled="{Binding ChoicesMade}" IsChecked="{Binding ReadyChecked, Mode=TwoWay}" Command="{Binding ClickReady}" HorizontalAlignment="Left" Margin="294,10,0,0" VerticalAlignment="Top" Opacity="0.8" Background="Transparent">
+        <s:SurfaceToggleButton Template="{StaticResource SurfaceToggleButtonNoBG}" Style="{StaticResource ToggleButtonStyle}" Visibility="{Binding ChoicesEnabled, Converter={StaticResource bool2vis}}" IsEnabled="{Binding ChoicesMade}" IsChecked="{Binding ReadyChecked, Mode=TwoWay}" Command="{Binding ClickReady}" HorizontalAlignment="Left" Margin="294,10,0,0" VerticalAlignment="Top" Opacity="0.8" Background="Transparent">
             <Image />
         </s:SurfaceToggleButton>
         <StackPanel Orientation="Horizontal" Visibility="{Binding ChoicesEnabled, Converter={StaticResource bool2vis}}" HorizontalAlignment="Left" Width="615" Height="216" VerticalAlignment="Bottom" Margin="40,0,0,105">
@@ -279,8 +295,8 @@
             <s:SurfaceButton HorizontalAlignment="Center" Grid.Column="0" VerticalAlignment="Bottom" Height="70" Width="70" Command="{Binding Removal}" Background="{x:Null}">
                 <Image Source="../Resources/UI/BTNP_Delete.png" IsHitTestVisible="False"/>
             </s:SurfaceButton>
-            
-            <s:SurfaceToggleButton Style="{StaticResource LockButtonStyle}" HorizontalAlignment="Center" Grid.Column="1" VerticalAlignment="Bottom" Height="70" Width="70" IsChecked="{Binding LockChecked, Mode=TwoWay}" Command="{Binding ClickLock}" Content="" Background="{x:Null}"/>
+
+            <s:SurfaceToggleButton Template="{StaticResource SurfaceToggleButtonNoBG}" Style="{StaticResource LockButtonStyle}" HorizontalAlignment="Center" Grid.Column="1" VerticalAlignment="Bottom" Height="70" Width="70" IsChecked="{Binding LockChecked, Mode=TwoWay}" Command="{Binding ClickLock}" Content="" Background="{x:Null}"/>
         </Grid>
     </Grid>
 </UserControl>

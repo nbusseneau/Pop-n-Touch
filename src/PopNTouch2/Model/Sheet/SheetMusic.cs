@@ -11,27 +11,13 @@ namespace PopNTouch2.Model
         public List<Tuple<double, double, Note>> Notes { get; set; }
         public List<IBonus> Bonuses { get; set; }
 
+        /// <summary>
+        /// Creates a new SheetMusic with empty Notes and Bonuses
+        /// </summary>
         public SheetMusic()
         {
             this.Notes = new List<Tuple<double, double, Note>>();
             this.Bonuses = new List<IBonus>();
-        }
-
-        /// <summary>
-        /// Returns time when the note Note should be played
-        /// </summary>
-        /// <param name="note"></param>
-        /// <returns></returns>
-        public double GetPerfectTiming(Note note)
-        {
-            foreach (Tuple<double, double, Note> triple in this.Notes)
-            {
-                if (triple.Item3.Equals(note))
-                {
-                    return triple.Item2;
-                }
-            }
-            return 0d;
         }
 
         /// <summary>
