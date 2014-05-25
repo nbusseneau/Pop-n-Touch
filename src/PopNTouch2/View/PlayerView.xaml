@@ -36,6 +36,12 @@
                         </Setter>
                     </DataTrigger>
                     <DataTrigger Binding="{Binding Player.Ready}" Value="True">
+                        <DataTrigger.EnterActions>
+                            <SoundPlayerAction Source="../Resources/Sounds/SND_Ready.wav"/>
+                        </DataTrigger.EnterActions>
+                        <DataTrigger.ExitActions>
+                            <SoundPlayerAction Source="../Resources/Sounds/SND_Unready.wav"/>
+                        </DataTrigger.ExitActions>
                         <Setter Property="ContentTemplate">
                             <Setter.Value>
                                 <DataTemplate>
@@ -273,6 +279,7 @@
             <s:SurfaceButton HorizontalAlignment="Center" Grid.Column="0" VerticalAlignment="Bottom" Height="70" Width="70" Command="{Binding Removal}" Background="{x:Null}">
                 <Image Source="../Resources/UI/BTNP_Delete.png" IsHitTestVisible="False"/>
             </s:SurfaceButton>
+            
             <s:SurfaceToggleButton Style="{StaticResource LockButtonStyle}" HorizontalAlignment="Center" Grid.Column="1" VerticalAlignment="Bottom" Height="70" Width="70" IsChecked="{Binding LockChecked, Mode=TwoWay}" Command="{Binding ClickLock}" Content="" Background="{x:Null}"/>
         </Grid>
     </Grid>
