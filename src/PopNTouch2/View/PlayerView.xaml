@@ -130,21 +130,21 @@
                     <Style x:Key="SelectedEasyButtonStyle" TargetType="{x:Type s:SurfaceButton}" BasedOn="{StaticResource ButtonStyle}">
                         <Style.Triggers>
                             <DataTrigger Binding="{Binding Player.Difficulty}" Value="Beginner">
-                                <Setter Property="Background" Value="Green" />
+                                <Setter Property="Background" Value="MediumSeaGreen" />
                             </DataTrigger>
                         </Style.Triggers>
                     </Style>
                     <Style x:Key="SelectedMediumButtonStyle"  TargetType="{x:Type s:SurfaceButton}" BasedOn="{StaticResource ButtonStyle}">
                         <Style.Triggers>
                             <DataTrigger Binding="{Binding Player.Difficulty}" Value="Classic">
-                                <Setter Property="Background" Value="Orange" />
+                                <Setter Property="Background" Value="SandyBrown" />
                             </DataTrigger>
                         </Style.Triggers>
                     </Style>
                     <Style x:Key="SelectedHardButtonStyle" TargetType="{x:Type s:SurfaceButton}" BasedOn="{StaticResource ButtonStyle}">
                         <Style.Triggers>
                             <DataTrigger Binding="{Binding Player.Difficulty}" Value="Expert">
-                                <Setter Property="Background" Value="Red" />
+                                <Setter Property="Background" Value="OrangeRed" />
                             </DataTrigger>
                         </Style.Triggers>
                     </Style>
@@ -179,7 +179,7 @@
                                 <Setter Property="IsHitTestVisible" Value="True"/>
                             </DataTrigger>
                             <DataTrigger Binding="{Binding Selected}" Value="True">
-                                <Setter Property="Background" Value="Violet"/>
+                                <Setter Property="Background" Value="SkyBlue"/>
                             </DataTrigger>
                             <DataTrigger Binding="{Binding Selected}" Value="False">
                                 <Setter Property="Background" Value="Transparent"/>
