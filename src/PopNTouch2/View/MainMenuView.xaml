@@ -9,32 +9,37 @@
              d:DesignHeight="1080" d:DesignWidth="1920">
 
     <s:ScatterView Width="1920" Height="1080" RenderTransformOrigin="0.5,0.5">
-        <s:ScatterViewItem Name="menu" Height="500" Width="500" Center="710,412" CanMove="False" CanScale="False" Orientation="0" AngularDeceleration="260" Background="AntiqueWhite" RenderTransformOrigin="0.5,0.5">
+        <s:ScatterViewItem Name="menu" Height="500" Width="500" Center="960,540" CanMove="False" CanScale="False" Orientation="0" AngularDeceleration="260" Background="AntiqueWhite" RenderTransformOrigin="0.5,0.5" Margin="-14,-11,14,11">
             <s:ScatterViewItem.Resources>
-                <ImageBrush x:Key="ImgScroll1" ImageSource="../Resources/UI/BTNP_MenuPetalRed.png"/>
-                <ImageBrush x:Key="ImgScroll2" ImageSource="../Resources/UI/BTNP_MenuPetalPink.png"/>
-                <ImageBrush x:Key="ImgScroll3" ImageSource="../Resources/UI/BTNP_MenuPetalYellow.png"/>
-                <ImageBrush x:Key="ImgScroll4" ImageSource="../Resources/UI/BTNP_MenuPetalOrange.png"/>
-                <ImageBrush x:Key="ImgScroll5" ImageSource="../Resources/UI/BTNP_MenuPetalPurple.png"/>
+                
+                <!-- Button images resources -->
+                <ImageBrush x:Key="Red" ImageSource="../Resources/UI/Menu/BTNP_BubbleRed.png"/>
+                <ImageBrush x:Key="Pink" ImageSource="../Resources/UI/Menu/BTNP_BubblePink.png"/>
+                <ImageBrush x:Key="Yellow" ImageSource="../Resources/UI/Menu/BTNP_BubbleYellow.png"/>
+                <ImageBrush x:Key="Orange" ImageSource="../Resources/UI/Menu/BTNP_BubbleOrange.png"/>
+                <ImageBrush x:Key="Purple" ImageSource="../Resources/UI/Menu/BTNP_BubblePurple.png"/>
+                <ImageBrush x:Key="Green" ImageSource="../Resources/UI/Menu/BTNP_BubbleGreen.png"/>
 
                 <!-- Song button backgrounds style -->
-
                 <Style x:Key="SongButtonStyle" TargetType="{x:Type TextBlock}">
                     <Style.Triggers>
                         <DataTrigger Binding="{Binding ImageIndex}" Value="0">
-                            <Setter Property="Background" Value="{DynamicResource ImgScroll1}"/>
+                            <Setter Property="Background" Value="{DynamicResource Red}"/>
                         </DataTrigger>
                         <DataTrigger Binding="{Binding ImageIndex}" Value="1">
-                            <Setter Property="Background" Value="{DynamicResource ImgScroll2}"/>
+                            <Setter Property="Background" Value="{DynamicResource Green}"/>
                         </DataTrigger>
                         <DataTrigger Binding="{Binding ImageIndex}" Value="2">
-                            <Setter Property="Background" Value="{DynamicResource ImgScroll3}"/>
+                            <Setter Property="Background" Value="{DynamicResource Yellow}"/>
                         </DataTrigger>
                         <DataTrigger Binding="{Binding ImageIndex}" Value="3">
-                            <Setter Property="Background" Value="{DynamicResource ImgScroll4}"/>
+                            <Setter Property="Background" Value="{DynamicResource Pink}"/>
                         </DataTrigger>
                         <DataTrigger Binding="{Binding ImageIndex}" Value="4">
-                            <Setter Property="Background" Value="{DynamicResource ImgScroll5}"/>
+                            <Setter Property="Background" Value="{DynamicResource Orange}"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ImageIndex}" Value="5">
+                            <Setter Property="Background" Value="{DynamicResource Purple}"/>
                         </DataTrigger>
                     </Style.Triggers>
                 </Style>
@@ -47,19 +52,26 @@
                             <ScaleTransform ScaleX="1" ScaleY="1" />
                         </Grid.RenderTransform>
 
+                        <!-- Song buttons -->
                         <ItemsControl ItemsSource="{Binding Songs}">
                             <ItemsControl.ItemTemplate>
                                 <DataTemplate DataType="{x:Type ViewModel:SongVM}" >
-                                    <s:SurfaceButton Command="{Binding SelectSong}" Height="150" Width="150" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="{Binding Margin}" RenderTransformOrigin="0.5,0.5" Background="{x:Null}">
+                                    <s:SurfaceButton Template="{StaticResource SurfaceButtonNoBackground}" Command="{Binding SelectSong}" Height="150" Width="150" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="{Binding Margin}" RenderTransformOrigin="0.5,0.5" Background="{x:Null}">
                                         <s:SurfaceButton.RenderTransform>
-
                                             <RotateTransform Angle="{Binding Angle}"/>
-
                                         </s:SurfaceButton.RenderTransform>
+
+                                        <s:SurfaceButton.Triggers>
+                                            <EventTrigger RoutedEvent="s:SurfaceButton.Click">
+                                                <SoundPlayerAction Source="../Resources/Sounds/SND_OK.wav"/>
+                                            </EventTrigger>
+                                        </s:SurfaceButton.Triggers>
+
                                         <Grid>
                                             <TextBlock Text="{Binding Song.Title}" FontFamily="Batang" FontWeight="Bold" TextWrapping="Wrap" TextAlignment="Center" Padding="0,30,0,0" Height="100" Width="100" Style="{StaticResource SongButtonStyle}" />
                                         </Grid>
                                     </s:SurfaceButton>
+                                    
                                 </DataTemplate>
                             </ItemsControl.ItemTemplate>
                         </ItemsControl>

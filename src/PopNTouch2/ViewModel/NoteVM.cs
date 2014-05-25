@@ -8,10 +8,17 @@ using System.Windows.Input;
 
 namespace PopNTouch2.ViewModel
 {
+    /// <summary>
+    /// Prepares a Note for displaying, keeps track of its Note state
+    /// </summary>
     public class NoteVM : ViewModelBase
     {
         public Note Note { get; set; }
 
+        /// <summary>
+        /// Create a new NoteVM for Note note
+        /// </summary>
+        /// <param name="note">Note, encapsulated for display</param>
         public NoteVM(Note note)
         {
             this.Note = note;
@@ -19,6 +26,9 @@ namespace PopNTouch2.ViewModel
             this.Note.Tick += new Note.TickHandler(UpdateNoteState);
         }
 
+        /// <summary>
+        /// Copy of current Note state to launch animations
+        /// </summary>
         private NoteState state;
         public NoteState State
         {
@@ -30,6 +40,9 @@ namespace PopNTouch2.ViewModel
             }
         }
 
+        /// <summary>
+        /// Is this Note to be displayed for Easy Mode?
+        /// </summary>
         private bool easyMode = false;
         public bool EasyMode
         {
@@ -41,7 +54,9 @@ namespace PopNTouch2.ViewModel
             }
         }
 
-
+        /// <summary>
+        /// Checks Note state and update self
+        /// </summary>
         public void UpdateNoteState()
         {
             this.State = this.Note.State;

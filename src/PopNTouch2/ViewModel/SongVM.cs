@@ -8,10 +8,25 @@ using PopNTouch2.Model;
 
 namespace PopNTouch2.ViewModel
 {
+    /// <summary>
+    /// Prepares Songs for their display in the MainMenuVM
+    /// Bubbles their selection to MainMenuVM
+    /// </summary>
     public class SongVM : ViewModelBase
     {
         public Song Song { get; set; }
         public MainMenuVM MenuVM { get; set; }
+
+        /// <summary>
+        /// Creates a new SongVM for the Song song, child of MainMenuVM menuVM
+        /// </summary>
+        /// <param name="song"></param>
+        /// <param name="menuVM"></param>
+        public SongVM(Song song, MainMenuVM menuVM)
+        {
+            this.Song = song;
+            this.MenuVM = menuVM;
+        }
 
         private double angle;
         public double Angle
@@ -38,12 +53,6 @@ namespace PopNTouch2.ViewModel
         public int ImageIndex
         {
             get { return this.Song.Index % 5; }
-        }
-
-        public SongVM(Song song, MainMenuVM menuVM)
-        {
-            this.Song = song;
-            this.MenuVM = menuVM;
         }
 
         private ICommand selectSong;

@@ -35,12 +35,16 @@
 
                                 <PopNTouch2:NoteView/>
                             </Grid>
+                            
+                            <!-- Animations launched according to each Note State -->
                             <ControlTemplate.Triggers>
                                 <DataTrigger Binding="{Binding State}" Value="Playing">
                                     <DataTrigger.EnterActions>
                                         <BeginStoryboard Name="slideAnim">
                                             <Storyboard>
                                                 <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.2"/>
+                                                <!-- This animation's duration should be bound to some property in ViewModel to make it coherent with BPM.
+                                                We are limited by WPF and MVVM : no bindings in storyboards (freezable objects) -->
                                                 <PointAnimation Storyboard.TargetProperty="Center" From="560,-10" To="30,-10" Duration="0:0:2.5"/>
                                             </Storyboard>
                                         </BeginStoryboard>
@@ -92,7 +96,7 @@
         </Grid.Resources>
 
         <!-- Background picture, move with caution, unless you actually want to reposition every ScatterView -->
-        <Image HorizontalAlignment="Center" VerticalAlignment="Top" Source="../Resources/UI/BGP_SheetMusic.png" Stretch="Fill" Panel.ZIndex="-1"/>
+        <Image HorizontalAlignment="Center" VerticalAlignment="Top" Source="../Resources/UI/Player/BGP_SheetMusic.png" Stretch="Fill" Panel.ZIndex="-1"/>
 
         <!-- Feedback zone, tells if the user hit or missed a note -->
         <Rectangle HorizontalAlignment="Left" Height="137" Margin="118,37,0,0" Stroke="Transparent" VerticalAlignment="Top" Width="10" Opacity="0.7">

@@ -105,7 +105,6 @@
     <Compile Include="ViewModel\InstrumentVM.cs" />
     <Compile Include="ViewModel\MainMenuVM.cs" />
     <Compile Include="ViewModel\MainWindowVM.cs" />
-    <Compile Include="ViewModel\NoteButtonVM.cs" />
     <Compile Include="ViewModel\NoteVM.cs" />
     <Compile Include="ViewModel\PlayerVM.cs" />
     <Compile Include="ViewModel\RelayCommand.cs" />
@@ -118,9 +117,6 @@
     </Compile>
     <Compile Include="View\MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="View\NoteButtonView.xaml.cs">
-      <DependentUpon>NoteButtonView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\NoteView.xaml.cs">
       <DependentUpon>NoteView.xaml</DependentUpon>
@@ -143,10 +139,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\MainWindow.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="View\NoteButtonView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -185,14 +177,45 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Resource Include="Resources\UI\Instruments\BTNP_Voice.png" />
+    <Content Include="Resources\Songs\New Born\Piano-Expert.sheet">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Resources\Songs\Thème Pokémon\Guitar-Classic.sheet">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Resource Include="Resources\UI\Player\BTNP_Delete.png" />
+    <Resource Include="Resources\UI\Player\BGP_PlayerView.png" />
+    <Resource Include="Resources\UI\Player\BGP_PlayerViewButtons.png" />
+    <Resource Include="Resources\UI\Player\BGP_Score.png" />
+    <Resource Include="Resources\UI\Player\BGP_Score2.png" />
+    <Resource Include="Resources\UI\Player\BGP_SheetMusic.png" />
+    <Resource Include="Resources\UI\Player\BTNP_Cancel.png" />
+    <Resource Include="Resources\UI\Player\BTNP_Easy.png" />
+    <Resource Include="Resources\UI\Player\BTNP_Hard.png" />
+    <Resource Include="Resources\UI\Player\BTNP_Lock.png" />
+    <Resource Include="Resources\UI\Player\BTNP_Medium.png" />
+    <Resource Include="Resources\UI\Player\BTNP_Ready.png" />
+    <Resource Include="Resources\UI\Player\BTNP_Unlock.png" />
+    <Resource Include="Resources\UI\Main\BGP_Main.jpg" />
+    <Resource Include="Resources\UI\Main\BTNP_AddPlayer.png" />
+    <Resource Include="Resources\UI\Main\BTNP_BackToMenu.png" />
+    <Resource Include="Resources\UI\Main\BTNP_Pause.png" />
+    <Resource Include="Resources\UI\Main\BTNP_Play.png" />
+    <Resource Include="Resources\UI\Main\BTNP_Start.png" />
+    <Resource Include="Resources\UI\Menu\BTNP_BubbleGreen.png" />
+    <Resource Include="Resources\UI\Menu\BTNP_BubbleOrange.png" />
+    <Resource Include="Resources\UI\Menu\BTNP_BubblePink.png" />
+    <Resource Include="Resources\UI\Menu\BTNP_BubblePurple.png" />
+    <Resource Include="Resources\UI\Menu\BTNP_BubbleRed.png" />
+    <Resource Include="Resources\UI\Menu\BTNP_BubbleYellow.png" />
+    <Resource Include="Resources\UI\Instruments\BTNP_InstruHard.png" />
+    <Resource Include="Resources\UI\Instruments\BTNP_InstruMedium.png" />
+    <Resource Include="Resources\UI\Instruments\BTNP_InstruEasy.png" />
     <Resource Include="Resources\icon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\icon.ico" />
     <Content Include="Resources\Songs\Thème Pokémon\music.mp3">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\Songs\Thème Pokémon\Guitar-Beginner.sheet">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Songs\Thème Pokémon\meta.data">
@@ -215,24 +238,9 @@
     </Content>
     <Resource Include="Resources\UI\Instruments\BTNP_DoubleBass.png" />
     <Resource Include="Resources\UI\Notes\line.png" />
-    <Resource Include="Resources\UI\BGP_PlayerViewButtons.png" />
-    <Resource Include="Resources\UI\BTNP_Delete.png" />
-    <Resource Include="Resources\UI\BTNP_BackToMenu.png" />
-    <Resource Include="Resources\UI\BTNP_MenuPetalGreen.png" />
-    <Resource Include="Resources\UI\BTNP_MenuPetalOrange.png" />
-    <Resource Include="Resources\UI\BTNP_MenuPetalPink.png" />
-    <Resource Include="Resources\UI\BTNP_MenuPetalPurple.png" />
-    <Resource Include="Resources\UI\BTNP_MenuPetalRed.png" />
-    <Resource Include="Resources\UI\BTNP_MenuPetalYellow.png" />
-    <Resource Include="Resources\UI\BTNP_Pause.png" />
     <Resource Include="Resources\UI\Notes\flat.png" />
     <Resource Include="Resources\UI\Notes\sharp.png" />
     <Resource Include="Resources\UI\Fonts\Exo-Thin.otf" />
-    <Resource Include="Resources\UI\BGP_Score2.png" />
-    <Resource Include="Resources\UI\BGP_Score.png" />
-    <Resource Include="Resources\UI\BTNP_AddPlayer.png" />
-    <Resource Include="Resources\UI\BTNP_Unlock.png" />
-    <Resource Include="Resources\UI\BTNP_Lock.png" />
     <Resource Include="Resources\UI\Instruments\BTNP_Guitar.png" />
     <Resource Include="Resources\UI\Instruments\BTNP_Piano.png" />
     <Resource Include="Resources\UI\Instruments\BTNP_Violin.png" />
@@ -263,27 +271,9 @@
     <Content Include="Resources\Songs\New Born\music.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Resources\Songs\New Born\Piano-Classic.sheet">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\UI\BTNP_Play.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\UI\BGP_Main.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\UI\BTNP_Start.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\UI\BGP_PlayerView.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\UI\BGP_SheetMusic.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Resources\UI\Notes\crotchet.png" />
@@ -326,28 +316,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\Songs\Adding songs in Visual Studio.txt" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\UI\BTNP_Easy.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\UI\BTNP_Medium.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\UI\BTNP_Hard.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\UI\BTNP_Ready.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\UI\BTNP_Cancel.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Resources\UI\Scrolls\BTNP_ScrollRoll1.png" />
-    <Resource Include="Resources\UI\Scrolls\BTNP_ScrollRoll2.png" />
-    <Resource Include="Resources\UI\Scrolls\BTNP_ScrollRoll3.png" />
-    <Resource Include="Resources\UI\Scrolls\BTNP_ScrollRoll4.png" />
-    <Resource Include="Resources\UI\Scrolls\BTNP_ScrollRoll5.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

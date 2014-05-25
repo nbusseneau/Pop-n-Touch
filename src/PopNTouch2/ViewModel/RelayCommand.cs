@@ -8,6 +8,9 @@ using System.Windows.Media.Animation;
 
 namespace PopNTouch2.ViewModel
 {
+    /// <summary>
+    /// Inspired by MVVM Light pattern, used to relay easily every command sent from the View
+    /// </summary>
     public class RelayCommand : ICommand
     {
         private Action execute;
@@ -32,6 +35,10 @@ namespace PopNTouch2.ViewModel
 
     }
 
+    /// <summary>
+    /// Same as RelayCommand, but handles a parameter of type T
+    /// </summary>
+    /// <typeparam name="T">Type of the parameter passed via CommandParameter in View</typeparam>
     public class RelayCommand<T> : ICommand
     {
         private Action<T> execute;

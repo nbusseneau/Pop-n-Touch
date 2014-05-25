@@ -12,6 +12,7 @@
     <UserControl.Resources>
         <BooleanToVisibilityConverter x:Key="bool2vis" />
 
+        <!-- All bitmap sources -->
         <BitmapImage x:Key="Whole" UriSource="../Resources/UI/Notes/whole.png"></BitmapImage>
         <BitmapImage x:Key="Half" UriSource="../Resources/UI/Notes/minim.png"></BitmapImage>
         <BitmapImage x:Key="Quarter" UriSource="../Resources/UI/Notes/crotchet.png"></BitmapImage>
@@ -20,6 +21,7 @@
         <BitmapImage x:Key="Sharp" UriSource="../Resources/UI/Notes/sharp.png"></BitmapImage>
         <BitmapImage x:Key="Line" UriSource="../Resources/UI/Notes/line.png"></BitmapImage>
 
+        <!-- Notes styles -->
         <Style x:Key="NoteStyle" TargetType="{x:Type Image}">
             <Style.Triggers>
                 <DataTrigger Binding="{Binding Note.Length}" Value="Whole">
@@ -37,6 +39,7 @@
             </Style.Triggers>
         </Style>
 
+        <!-- Accidental styles -->
         <Style x:Key="AccidentalStyle" TargetType="{x:Type Image}">
             <Setter Property="Width" Value="18"/>
             <Setter Property="Height" Value="35"/>
@@ -50,6 +53,7 @@
             </Style.Triggers>
         </Style>
 
+        <!-- Style with crossing line, for Do note -->
         <Style x:Key="LineStyle" TargetType="{x:Type Image}">
             <Setter Property="Width" Value="55"/>
             <Setter Property="Height" Value="20"/>
@@ -61,9 +65,12 @@
         </Style>
     </UserControl.Resources>
 
+    
     <Grid Background="Transparent">
 
         <Image Style="{DynamicResource NoteStyle}" Stretch="Fill" />
+        
+        <!-- Easy mode clue -->
         <Ellipse Margin="23,75,24,16" RenderTransformOrigin="1.632,0.2" Visibility="{Binding EasyMode, Converter={StaticResource bool2vis}}">
             <Ellipse.Style>
                 <Style TargetType="Ellipse">
@@ -121,6 +128,7 @@
                 </Style>
             </Ellipse.Style>
         </Ellipse>
+        
         <Image Style="{DynamicResource AccidentalStyle}" Stretch="Fill" Margin="-2,68,44,-3"/>
         <Image Style="{DynamicResource LineStyle}" Stretch="Fill" Margin="1,71,4,9"/>
     </Grid>

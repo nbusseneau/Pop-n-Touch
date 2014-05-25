@@ -13,6 +13,10 @@ using System.Windows.Data;
 
 namespace PopNTouch2.ViewModel
 {
+    /// <summary>
+    /// Another chunk from MVVM Light, every ViewModel class inherits from this base
+    /// Handles DependencyProperty notificationsm saves a lot of hassle
+    /// </summary>
     public class ViewModelBase : INotifyPropertyChanged
     {
         protected void RaisePropertyChanged(string propertyName)
@@ -33,6 +37,16 @@ namespace PopNTouch2.ViewModel
         public event PropertyChangedEventHandler PropertyChanged;
     }
 
+    /// <summary>
+    /// Custom ObservableCollection class
+    /// Needed to bypass thread-safety of original ObservableCollection, since we need a thread launched by a Timer
+    /// to fill these collections
+    /// 
+    /// BEWARE OF CONCURRENT ACCESS
+    /// Updating these collection very quickly from various threads will give you a headache and magnificient Exceptions / Memory leaks
+    /// Try to only update in one way (always adding OR always removing, never do both dynamically)
+    /// </summary>
+    /// <typeparam name="T"></typeparam>
     public class AsyncObservableCollection<T> : ObservableCollection<T>
     {
         private SynchronizationContext _synchronizationContext = SynchronizationContext.Current;
@@ -84,28 +98,6 @@ namespace PopNTouch2.ViewModel
         {
             // We are in the creator thread, call the base implementation directly
             base.OnPropertyChanged((PropertyChangedEventArgs)param);
-        }
-    }
-
-    [ValueConversion(typeof(Visibility), typeof(Visibility))]
-    public class InverseVisibilityConverter : IValueConverter
-    {
-        public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
-        {
-            if (targetType != typeof(Visibility))
-                throw new InvalidOperationException("Trying to convert a non Visibility target");
-
-            Visibility vis = (Visibility)value;
-
-            if (vis == Visibility.Visible)
-                return Visibility.Collapsed;
-            else
-                return Visibility.Visible;
-        }
-
-        public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
-        {
-            throw new NotSupportedException();
         }
     }
 }
