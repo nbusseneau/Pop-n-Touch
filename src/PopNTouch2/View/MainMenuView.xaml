@@ -52,7 +52,7 @@
                         <ItemsControl ItemsSource="{Binding Songs}">
                             <ItemsControl.ItemTemplate>
                                 <DataTemplate DataType="{x:Type ViewModel:SongVM}" >
-                                    <s:SurfaceButton Command="{Binding SelectSong}" Height="150" Width="150" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="{Binding Margin}" RenderTransformOrigin="0.5,0.5" Background="{x:Null}">
+                                    <s:SurfaceButton Template="{StaticResource SurfaceButtonNoBackground}" Command="{Binding SelectSong}" Height="150" Width="150" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Margin="{Binding Margin}" RenderTransformOrigin="0.5,0.5" Background="{x:Null}">
                                         <s:SurfaceButton.RenderTransform>
                                             <RotateTransform Angle="{Binding Angle}"/>
                                         </s:SurfaceButton.RenderTransform>

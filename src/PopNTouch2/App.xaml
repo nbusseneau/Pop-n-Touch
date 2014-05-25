@@ -1,12 +1,27 @@
 ﻿<Application x:Class="PopNTouch2.Model.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:s="http://schemas.microsoft.com/surface/2008"
              StartupUri="View/MainWindow.xaml">
     <Application.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="/Microsoft.Surface.Presentation.Generic;v2.0.0.0;31bf3856ad364e35;component/themes\styles.xaml"/>
             </ResourceDictionary.MergedDictionaries>
+            <ControlTemplate x:Key="SurfaceButtonNoBackground" TargetType="{x:Type s:SurfaceButton}">
+                <Grid x:Name="Grid"
+        					SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
+                    <Rectangle  x:Name="PressOverlay"
+        						Opacity="0"
+        						Fill ="{DynamicResource {x:Static s:SurfaceColors.ButtonBackgroundPressedBrushKey}}" 							             
+        						SnapsToDevicePixels ="{TemplateBinding SnapsToDevicePixels}"/>
+                    <ContentPresenter  x:Name="Content"
+        						Margin="{TemplateBinding Padding}"  
+        						HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"		                                                                           
+        						VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+        						SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                </Grid>
+            </ControlTemplate>
         </ResourceDictionary>
     </Application.Resources>
 </Application>
