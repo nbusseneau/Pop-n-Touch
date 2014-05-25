@@ -219,6 +219,27 @@
                             </DataTrigger>
                         </Style.Triggers>
                     </Style>
+
+                    <!-- Instrument difficulty clue styles -->
+                    <BitmapImage x:Key="EasyInstrument" UriSource="../Resources/UI/Instruments/BTNP_InstruEasy.png"></BitmapImage>
+                    <BitmapImage x:Key="MediumInstrument" UriSource="../Resources/UI/Instruments/BTNP_InstruMedium.png"></BitmapImage>
+                    <BitmapImage x:Key="HardInstrument" UriSource="../Resources/UI/Instruments/BTNP_InstruHard.png"></BitmapImage>
+
+                    <Style x:Key="InstrumentDifficultyStyle" TargetType="{x:Type Image}">
+                        <Setter Property="Width" Value="25"/>
+                        <Setter Property="Height" Value="25"/>
+                        <Style.Triggers>
+                            <DataTrigger Binding="{Binding Difficulty}" Value="Beginner">
+                                <Setter Property="Source" Value="{DynamicResource EasyInstrument}" />
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Difficulty}" Value="Classic">
+                                <Setter Property="Source" Value="{DynamicResource MediumInstrument}" />
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Difficulty}" Value="Expert">
+                                <Setter Property="Source" Value="{DynamicResource HardInstrument}" />
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
                 </Grid.Resources>
 
                 <TextBlock Text="Instrument" FontFamily="../Resources/UI/Fonts/#Exo" Foreground="Black" FontWeight="Bold" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="76,10,59,0"/>
@@ -230,7 +251,10 @@
                     </ItemsControl.ItemsPanel>
                     <ItemsControl.ItemTemplate>
                         <DataTemplate DataType="{x:Type ViewModel:InstrumentVM}" >
-                            <s:SurfaceButton Style="{StaticResource InstrumentButtonStyle}" Command="{Binding PickInstrument}" Height="75" Width="75" Margin="10"/>
+                            <Grid Background="Transparent">
+                                <s:SurfaceButton Style="{StaticResource InstrumentButtonStyle}" Command="{Binding PickInstrument}" Height="75" Width="75" Margin="10"/>
+                                <Image Style="{DynamicResource InstrumentDifficultyStyle}" Stretch="Fill" Margin="50,50,0,0"/>
+                            </Grid>
                         </DataTemplate>
                     </ItemsControl.ItemTemplate>
                 </ItemsControl>

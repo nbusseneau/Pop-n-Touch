@@ -173,6 +173,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <Resource Include="Resources\UI\Instruments\BTNP_InstruHard.png" />
+    <Resource Include="Resources\UI\Instruments\BTNP_InstruMedium.png" />
+    <Resource Include="Resources\UI\Instruments\BTNP_InstruEasy.png" />
     <Resource Include="Resources\icon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Resource>
