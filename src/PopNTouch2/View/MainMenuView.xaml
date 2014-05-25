@@ -11,6 +11,8 @@
     <s:ScatterView Width="1920" Height="1080" RenderTransformOrigin="0.5,0.5">
         <s:ScatterViewItem Name="menu" Height="500" Width="500" Center="960,540" CanMove="False" CanScale="False" Orientation="0" AngularDeceleration="260" Background="AntiqueWhite" RenderTransformOrigin="0.5,0.5" Margin="-25,-21,25,21">
             <s:ScatterViewItem.Resources>
+                
+                <!-- Button images resources -->
                 <ImageBrush x:Key="ImgScroll1" ImageSource="../Resources/UI/BTNP_MenuPetalRed.png"/>
                 <ImageBrush x:Key="ImgScroll2" ImageSource="../Resources/UI/BTNP_MenuPetalPink.png"/>
                 <ImageBrush x:Key="ImgScroll3" ImageSource="../Resources/UI/BTNP_MenuPetalYellow.png"/>
@@ -18,7 +20,6 @@
                 <ImageBrush x:Key="ImgScroll5" ImageSource="../Resources/UI/BTNP_MenuPetalPurple.png"/>
 
                 <!-- Song button backgrounds style -->
-
                 <Style x:Key="SongButtonStyle" TargetType="{x:Type TextBlock}">
                     <Style.Triggers>
                         <DataTrigger Binding="{Binding ImageIndex}" Value="0">
@@ -47,6 +48,7 @@
                             <ScaleTransform ScaleX="1" ScaleY="1" />
                         </Grid.RenderTransform>
 
+                        <!-- Song buttons -->
                         <ItemsControl ItemsSource="{Binding Songs}">
                             <ItemsControl.ItemTemplate>
                                 <DataTemplate DataType="{x:Type ViewModel:SongVM}" >

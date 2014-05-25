@@ -44,6 +44,9 @@ namespace PopNTouch2.ViewModel
         /// </summary>
         public void Reset()
         {
+            this.diffPicked = false;
+            this.instruPicked = false;
+
             this.BottomButtonsVisible = true;
             this.CanMove = true;
             this.ChoicesEnabled = false;
