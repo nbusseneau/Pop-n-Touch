@@ -214,6 +214,9 @@
     <Content Include="Resources\Songs\Thème Pokémon\meta.data">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Resources\Sounds\SND_Nope.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="Resources\Sounds\SND_ClickStartButton.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

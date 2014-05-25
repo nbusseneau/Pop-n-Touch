@@ -23,7 +23,7 @@ namespace PopNTouch2.Model
         }
         // Big MVVM nope. Don't do that at home kids !
         // These are pattern breaking, but act as a fix for our daunting troubles with XAML Storyboards
-        public static int TIMETOPLAY = 2500;
+        public static int TIMETOPLAY = 2200;
         public static int TIMEBEFORERESUME = 1000;
         public List<Song> Songs { get; private set; }
         public List<Player> Players { get; private set; }

@@ -67,6 +67,7 @@
                     <DataTrigger Binding="{Binding Flash}" Value="True">
                         <DataTrigger.EnterActions>
                             <BeginStoryboard x:Name="flash" Storyboard="{StaticResource flashAnimation}" />
+                            <SoundPlayerAction Source="../Resources/Sounds/SND_Nope.wav"/>
                         </DataTrigger.EnterActions>
                     </DataTrigger>
                 </Style.Triggers>
