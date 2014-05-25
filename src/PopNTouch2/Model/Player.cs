@@ -47,6 +47,26 @@ namespace PopNTouch2.Model
         }
 
         /// <summary>
+        /// Resets all informations
+        /// </summary>
+        public void Reset()
+        {
+            this.Difficulty = Difficulty.Undefined;
+            this.Instrument = Instrument.Undefined;
+            this.InstrumentDifficulty = Difficulty.Undefined;
+            this.Ready = false;
+            this.Score = 0;
+            this.Combo = 0;
+            this.MaxCombo = 0;
+            if (this.Timer != null)
+            {
+                this.Timer.Close();
+                this.Stopwatch.Stop();
+                this.Stopwatch.Reset();
+            }
+        }
+
+        /// <summary>
         /// Inform the player a song is selected, a game is created 
         /// and it can chose an instrument and a difficulty
         /// </summary>

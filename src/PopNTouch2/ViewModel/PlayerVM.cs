@@ -21,12 +21,31 @@ namespace PopNTouch2.ViewModel
         // Interval, in milliseconds, between each sheet cleaning
         private const double CLEANING_INTERVAL = 10000;
         
-        public PlayerVM(Player player, MainWindowVM mvvm)
+        public PlayerVM(Player player, MainWindowVM mwvm)
         {
             this.Player = player;
             this.UpdateSong();
             this.Player.Tick += new Player.TickHandler(OnPlayerTick);
-            this.MainWindowVM = mvvm;
+            this.MainWindowVM = mwvm;
+        }
+
+        /// <summary>
+        /// Resets all PlayerVM info
+        /// </summary>
+        public void Reset()
+        {
+            this.BottomButtonsVisible = true;
+            this.CanMove = true;
+            this.ChoicesEnabled = false;
+            this.ChoicesMade = false;
+            this.Instruments = null;
+            this.LockChecked = false;
+            this.ReadyChecked = false;
+            this.SheetMusicVM = new SheetMusicVM();
+            this.ScoreVM = new ScoreVM();
+            this.UpdateSong();
+            RaisePropertyChanged("Combo");
+            RaisePropertyChanged("Player");
         }
 
         /// <summary>
@@ -144,13 +163,17 @@ namespace PopNTouch2.ViewModel
             Song currentSong = this.Player.CurrentGame.Song;
             if (this.loadedSong != currentSong)
             {
+                this.loadedSong = currentSong;
+                if (currentSong == null)
+                {
+                    return;
+                }
                 ObservableCollection<InstrumentVM> newList = new ObservableCollection<InstrumentVM>();
                 foreach (Tuple<Instrument,Difficulty> instrument in currentSong.Sheets)
                 {
                     newList.Add(new InstrumentVM(instrument, this));
                 }
                 this.Instruments = newList;
-                this.loadedSong = currentSong;
             }
         }
 
@@ -255,7 +278,7 @@ namespace PopNTouch2.ViewModel
             set
             {
                 this.sheetMusicVM = value;
-                RaisePropertyChanged("SheetMusic");
+                RaisePropertyChanged("SheetMusicVM");
             }
         }
 
@@ -287,7 +310,6 @@ namespace PopNTouch2.ViewModel
         {
             this.SheetMusicVM.Sheet = this.Player.SheetMusic;
             this.SheetMusicVM.Visibility = true;
-
             //this.CleaningTimer = new Timer(CLEANING_INTERVAL);
             //this.CleaningTimer.AutoReset = true;
             //this.CleaningTimer.Elapsed += new ElapsedEventHandler((source, e) => { this.SheetMusic.CleanNotes(this.Player.Stopwatch); });

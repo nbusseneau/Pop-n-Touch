@@ -178,7 +178,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <Resource Include="Resources\icon.png" />
+    <Resource Include="Resources\icon.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Content Include="Resources\Songs\Thème Pokémon\music.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
