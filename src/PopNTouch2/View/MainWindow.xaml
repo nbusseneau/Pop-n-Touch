@@ -78,7 +78,7 @@
     <Grid Background="Black">
 
         <!-- Background -->
-        <Image HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Source="../Resources/UI/BGP_Main.jpg" Panel.ZIndex="-10"/>
+        <Image HorizontalAlignment="Stretch" Margin="0,0,0,0" VerticalAlignment="Stretch" Source="../Resources/UI/Main/BGP_Main.jpg" Panel.ZIndex="-10"/>
 
         <!-- Start screen-->
         <!-- For Debug purpose on smaller screens, uncomment
@@ -87,7 +87,7 @@
             <s:SurfaceButton.RenderTransform>
                 <ScaleTransform x:Name="scaleBtnStart" ScaleX="1.0" ScaleY="1.0"/>
             </s:SurfaceButton.RenderTransform>
-            <Image Height="320" Width="320" Source="../Resources/UI/BTNP_Start.png" />
+            <Image Height="320" Width="320" Source="../Resources/UI/Main/BTNP_Start.png" />
             <s:SurfaceButton.Triggers>
                 <EventTrigger RoutedEvent="Image.Loaded">
                     <BeginStoryboard Name="beginStartBtnAnim" Storyboard="{DynamicResource StartBtnAnimation}" />
@@ -164,22 +164,22 @@
 
         <!-- Play song -->
         <s:SurfaceButton Template="{StaticResource SurfaceButtonNoBackground}" Visibility="{Binding PlaySongButtonsVisible, Converter={StaticResource bool2vis}}" Command="{Binding PlaySong}" Height="370" Width="370" HorizontalContentAlignment="Center" Margin="742,346,742,331" VerticalContentAlignment="Center" Background="{x:Null}" Panel.ZIndex="0">
-            <Image Height="355" Width="355" Source="../Resources/UI/BTNP_Play.png"/>
+            <Image Height="355" Width="355" Source="../Resources/UI/Main/BTNP_Play.png"/>
         </s:SurfaceButton>
 
         <!-- Pause song -->
         <s:SurfaceButton Template="{StaticResource SurfaceButtonNoBackground}" Visibility="{Binding PauseVisibility, Converter={StaticResource bool2vis}}" Command="{Binding Pause}" Height="370" Width="370" HorizontalContentAlignment="Center" Margin="742,346,742,331" VerticalContentAlignment="Center" Background="{x:Null}" Panel.ZIndex="0">
-            <Image Height="355" Width="355" Source="../Resources/UI/BTNP_Pause.png"/>
+            <Image Height="355" Width="355" Source="../Resources/UI/Main/BTNP_Pause.png"/>
         </s:SurfaceButton>
 
         <!-- Add player -->
         <s:SurfaceButton Template="{StaticResource SurfaceButtonNoBackground}" Visibility="{Binding PlaySongButtonsVisible, Converter={StaticResource bool2vis}}" Command="{Binding AddPlayer}" Height="115" Width="115" HorizontalContentAlignment="Center" Margin="1070,314,726,626" VerticalContentAlignment="Center" Background="{x:Null}" Panel.ZIndex="1">
-            <Image Height="101" Width="101" Source="../Resources/UI/BTNP_AddPlayer.png"/>
+            <Image Height="101" Width="101" Source="../Resources/UI/Main/BTNP_AddPlayer.png"/>
         </s:SurfaceButton>
 
         <!-- Back to menu -->
         <s:SurfaceButton Template="{StaticResource SurfaceButtonNoBackground}" Visibility="{Binding PlaySongButtonsVisible, Converter={StaticResource bool2vis}}" Command="{Binding ReturnToMenu}" Height="115" Width="115"  HorizontalContentAlignment="Center" Margin="720,634,1072,299" VerticalContentAlignment="Center" Background="{x:Null}">
-            <Image Height="101" Width="101" Source="../Resources/UI/BTNP_BackToMenu.png"/>
+            <Image Height="101" Width="101" Source="../Resources/UI/Main/BTNP_BackToMenu.png"/>
             <s:SurfaceButton.Triggers>
                 <EventTrigger RoutedEvent="s:SurfaceButton.Click">
                     <SoundPlayerAction Source="../Resources/Sounds/SND_Back.wav"/>

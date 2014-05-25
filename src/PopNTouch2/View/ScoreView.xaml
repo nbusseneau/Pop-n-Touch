@@ -10,7 +10,7 @@
 
     <Grid>
         <!-- Background -->
-        <Image Source="../Resources/UI/BGP_Score.png" Width="593" Height="216" Stretch="Fill"/>
+        <Image Source="../Resources/UI/Player/BGP_Score.png" Width="593" Height="216" Stretch="Fill"/>
 
         <!-- Score display -->
         <TextBlock Text="Score" FontFamily="../Resources/UI/Fonts/#Exo" Foreground="AntiqueWhite" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="256,12,0,0"/>

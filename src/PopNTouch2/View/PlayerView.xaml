@@ -44,7 +44,7 @@
                         <Setter Property="ContentTemplate">
                             <Setter.Value>
                                 <DataTemplate>
-                                    <Image Width="50" Height="50" Source="../Resources/UI/BTNP_Ready.png" IsHitTestVisible="False" />
+                                    <Image Width="50" Height="50" Source="../Resources/UI/Player/BTNP_Ready.png" IsHitTestVisible="False" />
                                 </DataTemplate>
                             </Setter.Value>
                         </Setter>
@@ -59,7 +59,7 @@
                         <Setter Property="ContentTemplate">
                             <Setter.Value>
                                 <DataTemplate>
-                                    <Image Width="50" Height="50" Source="../Resources/UI/BTNP_Cancel.png" IsHitTestVisible="False" />
+                                    <Image Width="50" Height="50" Source="../Resources/UI/Player/BTNP_Cancel.png" IsHitTestVisible="False" />
                                 </DataTemplate>
                             </Setter.Value>
                         </Setter>
@@ -79,7 +79,7 @@
                         <Setter Property="ContentTemplate">
                             <Setter.Value>
                                 <DataTemplate>
-                                    <Image Source="../Resources/UI/BTNP_Lock.png" IsHitTestVisible="False" />
+                                    <Image Source="../Resources/UI/Player/BTNP_Lock.png" IsHitTestVisible="False" />
                                 </DataTemplate>
                             </Setter.Value>
                         </Setter>
@@ -88,7 +88,7 @@
                         <Setter Property="ContentTemplate">
                             <Setter.Value>
                                 <DataTemplate>
-                                    <Image Source="../Resources/UI/BTNP_Unlock.png" IsHitTestVisible="False" />
+                                    <Image Source="../Resources/UI/Player/BTNP_Unlock.png" IsHitTestVisible="False" />
                                 </DataTemplate>
                             </Setter.Value>
                         </Setter>
@@ -99,7 +99,7 @@
         </Grid.Resources>
 
         <!-- Background border -->
-        <Image IsHitTestVisible="True" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" Source="../Resources/UI/BGP_PlayerView.png" Panel.ZIndex="-1"/>
+        <Image IsHitTestVisible="True" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" Source="../Resources/UI/Player/BGP_PlayerView.png" Panel.ZIndex="-1"/>
 
         <!-- Choices : Difficulty and Instrument -->
         <!-- Ready ToggleButton -->
@@ -152,14 +152,14 @@
 
                 <TextBlock Text="Difficulty" FontFamily="../Resources/UI/Fonts/#Exo" Foreground="Black" FontWeight="Bold" FontSize="30" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="66,10,69,0"/>
                 <s:SurfaceButton Style="{StaticResource SelectedEasyButtonStyle}" Command="{Binding PickDifficulty}" CommandParameter="Beginner" HorizontalAlignment="Left" VerticalAlignment="Top" Height="75" Margin="30,70,0,0" Width="75">
-                    <Image Source="../Resources/UI/BTNP_Easy.png" IsHitTestVisible="False" Width="75" Height="75" Margin="-6, -2"/>
+                    <Image Source="../Resources/UI/Player/BTNP_Easy.png" IsHitTestVisible="False" Width="75" Height="75" Margin="-6, -2"/>
                 </s:SurfaceButton>
                 <s:SurfaceButton Style="{StaticResource SelectedMediumButtonStyle}" Command="{Binding PickDifficulty}" CommandParameter="Classic" HorizontalAlignment="Right" VerticalAlignment="Top" Height="75" Margin="0,70,45,0" Width="75">
-                    <Image Source="../Resources/UI/BTNP_Medium.png" IsHitTestVisible="False" Width="75" Height="75" Margin="-6, -2"/>
+                    <Image Source="../Resources/UI/Player/BTNP_Medium.png" IsHitTestVisible="False" Width="75" Height="75" Margin="-6, -2"/>
                 </s:SurfaceButton>
                 <!-- //FIXME: No Hard difficulty implemented
                 <s:SurfaceButton Style="{StaticResource SelectedHardButtonStyle}" Command="{Binding PickDifficulty}" CommandParameter="Expert" HorizontalAlignment="Left" VerticalAlignment="Top" Height="75" Margin="200,70,0,0" Width="75">
-                    <Image Source="../Resources/UI/BTNP_Hard.png" IsHitTestVisible="False" />
+                    <Image Source="../Resources/UI/Player/BTNP_Hard.png" IsHitTestVisible="False" />
                 </s:SurfaceButton>
                 -->
             </Grid>
@@ -265,7 +265,7 @@
             </Grid.Resources>
 
             <Grid.Background>
-                <ImageBrush ImageSource="../Resources/UI/BGP_PlayerViewButtons.png"/>
+                <ImageBrush ImageSource="../Resources/UI/Player/BGP_PlayerViewButtons.png"/>
             </Grid.Background>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*"/>
@@ -291,7 +291,7 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
             <s:SurfaceButton Template="{StaticResource SurfaceButtonNoBackground}" HorizontalAlignment="Center" Grid.Column="0" VerticalAlignment="Bottom" Height="85" Width="86" Command="{Binding Removal}" Background="{x:Null}" Margin="0,0,0,-8">
-                <Image Source="../Resources/UI/BTNP_Delete.png" IsHitTestVisible="False"/>
+                <Image Source="../Resources/UI/Player/BTNP_Delete.png" IsHitTestVisible="False"/>
             </s:SurfaceButton>
 
             <s:SurfaceToggleButton Template="{StaticResource SurfaceToggleButtonNoBG}" Style="{StaticResource LockButtonStyle}" HorizontalAlignment="Center" Grid.Column="1" VerticalAlignment="Bottom" Height="85" Width="86" IsChecked="{Binding LockChecked, Mode=TwoWay}" Command="{Binding ClickLock}" Content="" Background="{x:Null}" Margin="102,-2,101,-3"/>

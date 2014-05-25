@@ -96,7 +96,7 @@
         </Grid.Resources>
 
         <!-- Background picture, move with caution, unless you actually want to reposition every ScatterView -->
-        <Image HorizontalAlignment="Center" VerticalAlignment="Top" Source="../Resources/UI/BGP_SheetMusic.png" Stretch="Fill" Panel.ZIndex="-1"/>
+        <Image HorizontalAlignment="Center" VerticalAlignment="Top" Source="../Resources/UI/Player/BGP_SheetMusic.png" Stretch="Fill" Panel.ZIndex="-1"/>
 
         <!-- Feedback zone, tells if the user hit or missed a note -->
         <Rectangle HorizontalAlignment="Left" Height="137" Margin="118,37,0,0" Stroke="Transparent" VerticalAlignment="Top" Width="10" Opacity="0.7">

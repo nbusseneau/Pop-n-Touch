@@ -13,29 +13,33 @@
             <s:ScatterViewItem.Resources>
                 
                 <!-- Button images resources -->
-                <ImageBrush x:Key="ImgScroll1" ImageSource="../Resources/UI/BTNP_MenuPetalRed.png"/>
-                <ImageBrush x:Key="ImgScroll2" ImageSource="../Resources/UI/BTNP_MenuPetalPink.png"/>
-                <ImageBrush x:Key="ImgScroll3" ImageSource="../Resources/UI/BTNP_MenuPetalYellow.png"/>
-                <ImageBrush x:Key="ImgScroll4" ImageSource="../Resources/UI/BTNP_MenuPetalOrange.png"/>
-                <ImageBrush x:Key="ImgScroll5" ImageSource="../Resources/UI/BTNP_MenuPetalPurple.png"/>
+                <ImageBrush x:Key="Red" ImageSource="../Resources/UI/Menu/BTNP_BubbleRed.png"/>
+                <ImageBrush x:Key="Pink" ImageSource="../Resources/UI/Menu/BTNP_BubblePink.png"/>
+                <ImageBrush x:Key="Yellow" ImageSource="../Resources/UI/Menu/BTNP_BubbleYellow.png"/>
+                <ImageBrush x:Key="Orange" ImageSource="../Resources/UI/Menu/BTNP_BubbleOrange.png"/>
+                <ImageBrush x:Key="Purple" ImageSource="../Resources/UI/Menu/BTNP_BubblePurple.png"/>
+                <ImageBrush x:Key="Green" ImageSource="../Resources/UI/Menu/BTNP_BubbleGreen.png"/>
 
                 <!-- Song button backgrounds style -->
                 <Style x:Key="SongButtonStyle" TargetType="{x:Type TextBlock}">
                     <Style.Triggers>
                         <DataTrigger Binding="{Binding ImageIndex}" Value="0">
-                            <Setter Property="Background" Value="{DynamicResource ImgScroll1}"/>
+                            <Setter Property="Background" Value="{DynamicResource Red}"/>
                         </DataTrigger>
                         <DataTrigger Binding="{Binding ImageIndex}" Value="1">
-                            <Setter Property="Background" Value="{DynamicResource ImgScroll2}"/>
+                            <Setter Property="Background" Value="{DynamicResource Green}"/>
                         </DataTrigger>
                         <DataTrigger Binding="{Binding ImageIndex}" Value="2">
-                            <Setter Property="Background" Value="{DynamicResource ImgScroll3}"/>
+                            <Setter Property="Background" Value="{DynamicResource Yellow}"/>
                         </DataTrigger>
                         <DataTrigger Binding="{Binding ImageIndex}" Value="3">
-                            <Setter Property="Background" Value="{DynamicResource ImgScroll4}"/>
+                            <Setter Property="Background" Value="{DynamicResource Pink}"/>
                         </DataTrigger>
                         <DataTrigger Binding="{Binding ImageIndex}" Value="4">
-                            <Setter Property="Background" Value="{DynamicResource ImgScroll5}"/>
+                            <Setter Property="Background" Value="{DynamicResource Orange}"/>
+                        </DataTrigger>
+                        <DataTrigger Binding="{Binding ImageIndex}" Value="5">
+                            <Setter Property="Background" Value="{DynamicResource Purple}"/>
                         </DataTrigger>
                     </Style.Triggers>
                 </Style>
