@@ -142,35 +142,6 @@ namespace PopNTouch2.ViewModel
         }
 
         /// <summary>
-        /// Okay, bear with me here, this one is tricky, but pretty cool
-        /// This function basically cleans every Collection of NoteVM contained in this class
-        /// To do so, we get all our own fields (wow amaze such leet skillz)
-        /// Then, we compare Notes' perfect timing and current play time, and suppress them accordingly
-        /// 
-        /// NOT USED ANYMORE
-        /// But let's keep it to show off our amazing Reflection skills
-        /// </summary>
-        public void CleanNotes(Stopwatch playerStopwatch)
-        {
-            playerStopwatch.Stop();
-            double elapsedTime = playerStopwatch.ElapsedMilliseconds;
-            playerStopwatch.Start();
-
-            foreach (FieldInfo f in this.GetType().GetFields(BindingFlags.Instance | BindingFlags.NonPublic).Where(fi => fi.FieldType == typeof(ObservableCollection<NoteVM>)))
-            {
-                ObservableCollection<NoteVM> collection = (ObservableCollection<NoteVM>)f.GetValue(this);
-                for (int i = collection.Count - 1; i >= 0; i--)
-                {
-                    double perfectTiming = this.Sheet.GetPerfectTiming(collection[i].Note); // We could keep the current Note index and speed up the search
-                    if (elapsedTime > perfectTiming + 20000d)
-                    {
-                        collection.RemoveAt(i);
-                    }
-                }
-            }
-        }
-
-        /// <summary>
         /// Boolean property to launch a note missed animation
         /// </summary>
         private bool missedNoteAnim = false;

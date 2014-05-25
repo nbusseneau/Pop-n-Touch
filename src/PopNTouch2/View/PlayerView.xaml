@@ -15,8 +15,6 @@
         <BooleanToVisibilityConverter x:Key="bool2vis"/>
         <ControlTemplate x:Key="SurfaceToggleButtonNoBG" TargetType="{x:Type s:SurfaceToggleButton}">
             <Grid x:Name="Grid" Background="Transparent" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}">
-                <Border x:Name="ButtonBody" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
-                <Border x:Name="PressOverlay" Background="{DynamicResource {ComponentResourceKey TypeInTargetAssembly={x:Type s:SurfaceColors}}}" Opacity="0" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
                 <ContentPresenter x:Name="Content" ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding Content}" ContentStringFormat="{TemplateBinding ContentStringFormat}" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}" Margin="{TemplateBinding Padding}" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" VerticalAlignment="{TemplateBinding VerticalContentAlignment}"/>
             </Grid>
             <ControlTemplate.Triggers>
@@ -81,7 +79,7 @@
                         <Setter Property="ContentTemplate">
                             <Setter.Value>
                                 <DataTemplate>
-                                    <Image Width="50" Height="50" Source="../Resources/UI/BTNP_Lock.png" IsHitTestVisible="False" />
+                                    <Image Source="../Resources/UI/BTNP_Lock.png" IsHitTestVisible="False" />
                                 </DataTemplate>
                             </Setter.Value>
                         </Setter>
@@ -90,7 +88,7 @@
                         <Setter Property="ContentTemplate">
                             <Setter.Value>
                                 <DataTemplate>
-                                    <Image Width="50" Height="50" Source="../Resources/UI/BTNP_Unlock.png" IsHitTestVisible="False" />
+                                    <Image Source="../Resources/UI/BTNP_Unlock.png" IsHitTestVisible="False" />
                                 </DataTemplate>
                             </Setter.Value>
                         </Setter>
@@ -249,7 +247,7 @@
 
         <!-- Bottom Buttons -->
         <Grid Visibility="{Binding PlayButtonsVisible, Converter={StaticResource bool2vis}}" Margin="35,300,36,20" Panel.ZIndex="10">
-            
+
             <Grid.Resources>
                 <Style x:Key="NoteButtonStyle" TargetType="{x:Type s:SurfaceButton}">
                     <Style.Triggers>
@@ -265,7 +263,7 @@
                     </Style.Triggers>
                 </Style>
             </Grid.Resources>
-            
+
             <Grid.Background>
                 <ImageBrush ImageSource="../Resources/UI/BGP_PlayerViewButtons.png"/>
             </Grid.Background>
@@ -292,11 +290,11 @@
                 <ColumnDefinition Width="*"/>
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
-            <s:SurfaceButton HorizontalAlignment="Center" Grid.Column="0" VerticalAlignment="Bottom" Height="70" Width="70" Command="{Binding Removal}" Background="{x:Null}">
+            <s:SurfaceButton Template="{StaticResource SurfaceButtonNoBackground}" HorizontalAlignment="Center" Grid.Column="0" VerticalAlignment="Bottom" Height="85" Width="86" Command="{Binding Removal}" Background="{x:Null}" Margin="0,0,0,-8">
                 <Image Source="../Resources/UI/BTNP_Delete.png" IsHitTestVisible="False"/>
             </s:SurfaceButton>
 
-            <s:SurfaceToggleButton Template="{StaticResource SurfaceToggleButtonNoBG}" Style="{StaticResource LockButtonStyle}" HorizontalAlignment="Center" Grid.Column="1" VerticalAlignment="Bottom" Height="70" Width="70" IsChecked="{Binding LockChecked, Mode=TwoWay}" Command="{Binding ClickLock}" Content="" Background="{x:Null}"/>
+            <s:SurfaceToggleButton Template="{StaticResource SurfaceToggleButtonNoBG}" Style="{StaticResource LockButtonStyle}" HorizontalAlignment="Center" Grid.Column="1" VerticalAlignment="Bottom" Height="85" Width="86" IsChecked="{Binding LockChecked, Mode=TwoWay}" Command="{Binding ClickLock}" Content="" Background="{x:Null}" Margin="102,-2,101,-3"/>
         </Grid>
     </Grid>
 </UserControl>
