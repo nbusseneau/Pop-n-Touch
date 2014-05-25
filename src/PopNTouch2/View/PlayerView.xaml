@@ -44,6 +44,11 @@
                             </Setter.Value>
                         </Setter>
                     </DataTrigger>
+                    <DataTrigger Binding="{Binding Flash}" Value="True">
+                        <DataTrigger.EnterActions>
+                            <BeginStoryboard x:Name="flash" Storyboard="{StaticResource flashAnimation}" />
+                        </DataTrigger.EnterActions>
+                    </DataTrigger>
                 </Style.Triggers>
             </Style>
 
@@ -74,23 +79,11 @@
         </Grid.Resources>
 
         <!-- Background border -->
-        <Image IsHitTestVisible="True" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" Source="../Resources/UI/BGP_PlayerView.png" Panel.ZIndex="-1">
-            <Image.Style>
-                <Style>
-                    <Style.Triggers>
-                        <DataTrigger Binding="{Binding Flash}" Value="True">
-                            <DataTrigger.EnterActions>
-                                <BeginStoryboard x:Name="flash" Storyboard="{StaticResource flashAnimation}" />
-                            </DataTrigger.EnterActions>
-                        </DataTrigger>
-                    </Style.Triggers>
-                </Style>
-            </Image.Style>
-        </Image>
+        <Image IsHitTestVisible="True" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0" Source="../Resources/UI/BGP_PlayerView.png" Panel.ZIndex="-1"/>
 
         <!-- Choices : Difficulty and Instrument -->
         <!-- Ready ToggleButton -->
-        <s:SurfaceToggleButton Style="{StaticResource ToggleButtonStyle}" Visibility="{Binding ChoicesEnabled, Converter={StaticResource bool2vis}}" IsEnabled="{Binding ChoicesMade}" IsChecked="{Binding ReadyChecked, Mode=TwoWay}" Command="{Binding ClickReady}" HorizontalAlignment="Left" Margin="294,10,0,0" VerticalAlignment="Top" Opacity="0.8">
+        <s:SurfaceToggleButton Style="{StaticResource ToggleButtonStyle}" Visibility="{Binding ChoicesEnabled, Converter={StaticResource bool2vis}}" IsEnabled="{Binding ChoicesMade}" IsChecked="{Binding ReadyChecked, Mode=TwoWay}" Command="{Binding ClickReady}" HorizontalAlignment="Left" Margin="294,10,0,0" VerticalAlignment="Top" Opacity="0.8" Background="Transparent">
             <Image />
         </s:SurfaceToggleButton>
         <StackPanel Orientation="Horizontal" Visibility="{Binding ChoicesEnabled, Converter={StaticResource bool2vis}}" HorizontalAlignment="Left" Width="615" Height="216" VerticalAlignment="Bottom" Margin="40,0,0,105">
@@ -194,6 +187,13 @@
                                 <Setter Property="Content">
                                     <Setter.Value>
                                         <Image Source="../Resources/UI/Instruments/BTNP_Piano.png" IsHitTestVisible="False"/>
+                                    </Setter.Value>
+                                </Setter>
+                            </DataTrigger>
+                            <DataTrigger Binding="{Binding Instrument}" Value="DoubleBass">
+                                <Setter Property="Content">
+                                    <Setter.Value>
+                                        <Image Source="../Resources/UI/Instruments/BTNP_DoubleBass.png" IsHitTestVisible="False"/>
                                     </Setter.Value>
                                 </Setter>
                             </DataTrigger>
