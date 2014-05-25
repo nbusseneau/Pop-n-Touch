@@ -201,6 +201,7 @@
     <Content Include="Resources\Sounds\SND_Unready.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Resources\UI\Instruments\BTNP_DoubleBass.png" />
     <Resource Include="Resources\UI\Notes\line.png" />
     <Resource Include="Resources\UI\BGP_PlayerViewButtons.png" />
     <Resource Include="Resources\UI\BTNP_Delete.png" />
@@ -243,9 +244,6 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Songs\Au Clair de la Lune\music.mp3">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
-    <Content Include="Resources\Songs\Au Clair de la Lune\Violin-Beginner.sheet">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="Resources\Songs\New Born\meta.data">
@@ -308,6 +306,9 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Resources\Songs\Au Clair de la Lune\DoubleBass-Beginner.sheet">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Resources\Songs\How to add songs or instruments.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
