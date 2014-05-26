@@ -9,7 +9,7 @@ instructions.
   <Application>
     <Title>Pop'n Touch : Revengeance</Title>
     <Description>Jeu de rythme multijoueur</Description>
-    <ExecutableFile>PopNTouch2.exe</ExecutableFile>
+    <ExecutableFile>Pop n Touch Revengeance.exe</ExecutableFile>
     <Arguments></Arguments>
     <IconImageFile>Resources\icon.png</IconImageFile>  
   </Application>

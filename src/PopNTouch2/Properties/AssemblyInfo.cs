@@ -7,12 +7,12 @@ using System.Windows;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("PopNTouch2")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyTitle("Pop'n Touch: Revengeance")]
+[assembly: AssemblyDescription("Multiplayer rhythm game")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("PopNTouch2")]
-[assembly: AssemblyCopyright("Copyright ©  2014")]
+[assembly: AssemblyProduct("Pop'n Touch: Revengeance")]
+[assembly: AssemblyCopyright("Copyright © 2014 Chloé Burlot, Nicolas Busseneau, Juliette Gourlaouen, Gwenegan Hudin")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

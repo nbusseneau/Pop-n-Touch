@@ -5,7 +5,7 @@
         xmlns:PopNTouch2="clr-namespace:PopNTouch2.View"
         xmlns:ViewModel="clr-namespace:PopNTouch2.ViewModel"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d"
-        Title="Pop'n Touch 2 : Revengeance" Left="0" Top="0" Width="1920" Height="1080">
+        Title="Pop'n Touch: Revengeance" Left="0" Top="0" Width="1920" Height="1080">
 
     <Window.DataContext>
         <ViewModel:MainWindowVM/>

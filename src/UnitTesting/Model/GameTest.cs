@@ -59,7 +59,7 @@ namespace UnitTesting.Model
 
             // Assert
             Assert.IsTrue(gm.Game.IsPlaying);
-            Assert.IsTrue(gm.Game.GameStopwatch >= 1);
+            Assert.IsTrue(gm.Game.GameStopwatch.ElapsedTicks >= 1);
         }
     }
 }
