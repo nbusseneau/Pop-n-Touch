@@ -344,9 +344,9 @@ namespace PopNTouch2.ViewModel
         /// <param name="height"></param>
         public void PlayNote(Height height)
         {
-            this.Player.Stopwatch.Stop();
+            CloneableStopwatch csw = this.Player.Stopwatch.Clone();
+            csw.Stop();
             double elapsedTime = this.Player.Stopwatch.ElapsedMilliseconds;
-            this.Player.Stopwatch.Start();
 
             List<Tuple<double, double, Note>> playingNotes = this.Player.SheetMusic.Notes.FindAll(t => t.Item3.State == NoteState.Playing && t.Item3.Height == height);
             if (playingNotes.Count == 0)

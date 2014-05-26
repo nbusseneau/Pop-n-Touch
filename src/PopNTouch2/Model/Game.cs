@@ -14,7 +14,7 @@ namespace PopNTouch2.Model
     {
         public Song Song { get; set; }
         public Boolean IsPlaying { get; set; }
-        public Stopwatch TimeElapsed { get; set; }
+        public CloneableStopwatch GameStopwatch { get; set; }
         public AudioController MusicPlayback { get; set; }
 
         public Game(Song s)
@@ -45,7 +45,7 @@ namespace PopNTouch2.Model
         public void Pause()
         {
             this.MusicPlayback.Pause();
-            this.TimeElapsed.Stop();
+            this.GameStopwatch.Stop();
         }
 
         /// <summary>
@@ -54,7 +54,7 @@ namespace PopNTouch2.Model
         public void Resume()
         {
             this.MusicPlayback.Dispatcher.Invoke((Action)(() => { this.MusicPlayback.Play(); }));
-            this.TimeElapsed.Start();
+            this.GameStopwatch.Start();
         }
 
         /// <summary>
@@ -64,8 +64,8 @@ namespace PopNTouch2.Model
         /// <param name="player">The player to add</param>
         public void AddPlayerInGame(Player player)
         {
-            this.TimeElapsed.Stop();
-            long time = this.TimeElapsed.ElapsedMilliseconds;
+            this.GameStopwatch.Stop();
+            long time = this.GameStopwatch.ElapsedMilliseconds;
 
             List<Tuple<double, double, Note>>.Enumerator enumerator = player.SheetMusic.Notes.GetEnumerator();
             double noteTime = 0;
@@ -85,7 +85,7 @@ namespace PopNTouch2.Model
         {
             this.IsPlaying = false;
             this.MusicPlayback.Close();
-            this.TimeElapsed.Reset();
+            this.GameStopwatch.Reset();
         }
     }
 }

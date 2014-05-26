@@ -87,6 +87,7 @@
     <Compile Include="Model\Bonus\BonusAutoPilot.cs" />
     <Compile Include="Model\Bonus\BonusInkBubble.cs" />
     <Compile Include="Model\Bonus\IBonus.cs" />
+    <Compile Include="Model\CloneableStopwatch.cs" />
     <Compile Include="Model\Game.cs" />
     <Compile Include="Model\GameMaster.cs" />
     <Compile Include="Model\Notes\Accidental.cs" />

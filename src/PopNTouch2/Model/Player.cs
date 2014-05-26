@@ -36,7 +36,7 @@ namespace PopNTouch2.Model
         public int Combo { get; set; }
         public int MaxCombo { get; set; }
         public Timer Timer { get; set; }
-        public Stopwatch Stopwatch { get; set; }
+        public CloneableStopwatch Stopwatch { get; set; }
         public event TickHandler Tick;
         public class NoteTicked : EventArgs
         {
@@ -142,10 +142,10 @@ namespace PopNTouch2.Model
             this.Timer.AutoReset = false;
             this.Timer.Elapsed += new ElapsedEventHandler(OnTimerTicked);
             // We take the Game's Stopwatch if it exists to be sync with it
-            if (this.CurrentGame.TimeElapsed != null)
-                this.Stopwatch = this.CurrentGame.TimeElapsed;
+            if (this.CurrentGame.GameStopwatch != null)
+                this.Stopwatch = this.CurrentGame.GameStopwatch.Clone();
             else
-                this.Stopwatch = new Stopwatch();
+                this.Stopwatch = new CloneableStopwatch();
             this.Timer.Start();
         }
 
@@ -157,10 +157,10 @@ namespace PopNTouch2.Model
         private void OnTimerTicked(object source, ElapsedEventArgs e)
         {
             // Use to make Game and Players sync, not very beautiful thing to do
-            if (this.CurrentGame.TimeElapsed == null)
+            if (this.CurrentGame.GameStopwatch == null)
             {
-                this.CurrentGame.TimeElapsed = new Stopwatch();
-                this.CurrentGame.TimeElapsed.Start();
+                this.CurrentGame.GameStopwatch = new CloneableStopwatch();
+                this.CurrentGame.GameStopwatch.Start();
             }
             this.Stopwatch.Start();
 
@@ -213,7 +213,7 @@ namespace PopNTouch2.Model
         {
             if (this.enumerator.Current != null)
             {
-                double interval = this.enumerator.Current.Item1 - this.CurrentGame.TimeElapsed.ElapsedMilliseconds + 80 * nbPaused;
+                double interval = this.enumerator.Current.Item1 - this.CurrentGame.GameStopwatch.ElapsedMilliseconds + 80 * nbPaused;
                 // If New Born
                 if (interval <= 0)
                 {
@@ -227,7 +227,7 @@ namespace PopNTouch2.Model
 
         private double GetPreviousNoteTimeAppear()
         {
-            long currentTime = this.CurrentGame.TimeElapsed.ElapsedMilliseconds;
+            long currentTime = this.CurrentGame.GameStopwatch.ElapsedMilliseconds;
             List<Tuple<double, double, Note>>.Enumerator enumerator = this.SheetMusic.Notes.GetEnumerator();
 
             enumerator.MoveNext();
