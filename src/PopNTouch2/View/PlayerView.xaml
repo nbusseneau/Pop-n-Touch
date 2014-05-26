@@ -76,7 +76,7 @@
             <!-- "Lock" button style -->
             <Style x:Key="LockButtonStyle" TargetType="{x:Type s:SurfaceToggleButton}">
                 <Style.Triggers>
-                    <DataTrigger Binding="{Binding LockChecked}" Value="False">
+                    <DataTrigger Binding="{Binding CanMove}" Value="True">
                         <Setter Property="ContentTemplate">
                             <Setter.Value>
                                 <DataTemplate>
@@ -85,7 +85,7 @@
                             </Setter.Value>
                         </Setter>
                     </DataTrigger>
-                    <DataTrigger Binding="{Binding LockChecked}" Value="True">
+                    <DataTrigger Binding="{Binding CanMove}" Value="False">
                         <Setter Property="ContentTemplate">
                             <Setter.Value>
                                 <DataTemplate>

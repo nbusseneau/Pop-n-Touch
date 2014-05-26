@@ -177,7 +177,7 @@ namespace PopNTouch2.Model
                 // Because of some timing divergences between Stopwatch and Timer, we had to go full PANIC MODE
                 // This is how it should be in a perfect world
                 // nt.Note.StartPlaying(this.enumerator.Current.Item2 - this.StopWatch.ElapsedMilliseconds + TIMING_TOLERANCE);
-                nt.Note.StartPlaying(GameMaster.TIMETOPLAY);
+                nt.Note.StartPlaying(GameMaster.TIMETOPLAY + 300);
                 this.Stopwatch.Start();
                 Tick(this, nt);
             }

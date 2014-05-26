@@ -49,7 +49,6 @@ namespace PopNTouch2.ViewModel
             this.ChoicesEnabled = false;
             this.ChoicesMade = false;
             this.Instruments = null;
-            this.LockChecked = false;
             this.ReadyChecked = false;
             this.SheetMusicVM = new SheetMusicVM();
             this.ScoreVM = new ScoreVM();
@@ -60,6 +59,7 @@ namespace PopNTouch2.ViewModel
 
         /// <summary>
         /// Boolean property to set if position should be fixed
+        /// Two-way bound to the Lock button
         /// </summary>
         private bool canMove = true;
         public bool CanMove
@@ -274,7 +274,6 @@ namespace PopNTouch2.ViewModel
                             this.Player.NotReadyAnymore();
                             this.checkChoicesState();
                         }
-                        RaisePropertyChanged("Player");
                     }
                     );
                 return this.clickReady;
@@ -452,20 +451,6 @@ namespace PopNTouch2.ViewModel
         }
 
         /// <summary>
-        /// Property, two-way bound to the Lock button
-        /// </summary>
-        private bool lockChecked = false;
-        public bool LockChecked
-        {
-            get { return this.lockChecked; }
-            set
-            {
-                this.lockChecked = value;
-                RaisePropertyChanged("LockChecked");
-            }
-        }
-
-        /// <summary>
         /// Command, launched when the player clicks the Lock button (in either state)
         /// </summary>
         private ICommand clickLock;
@@ -476,15 +461,7 @@ namespace PopNTouch2.ViewModel
                 if (this.clickLock == null)
                     this.clickLock = new RelayCommand(() =>
                     {
-                        if (this.LockChecked)
-                        {
-                            this.CanMove = false;
-                        }
-                        else
-                        {
-                            this.CanMove = true;
-                        }
-                        RaisePropertyChanged("ClickLock");
+                        this.canMove = !this.canMove;
                     }
                     );
                 return this.clickLock;

@@ -19,6 +19,7 @@ namespace PopNTouch2.Model
         /// </summary> 
         public AudioController(Uri filepath, double delayStart = 0d) : base()
         {
+            this.Volume = 1.0;
             this.Open(filepath);
             if (delayStart == 0d)
             {

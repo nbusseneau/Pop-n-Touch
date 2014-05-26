@@ -310,7 +310,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Resources\Songs\Au Clair de la Lune\DoubleBass-Beginner.sheet">
+    <Content Include="Resources\Songs\Au Clair de la Lune\DoubleBass-Classic.sheet">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <None Include="Resources\Songs\How to add songs or instruments.txt">
