@@ -83,11 +83,11 @@
         <!-- Start screen-->
         <!-- For Debug purpose on smaller screens, uncomment
         <s:SurfaceButton Name="startBtn" HorizontalAlignment="Center" VerticalAlignment="Center" Command="{Binding StartGame}" Background="{x:Null}" RenderTransformOrigin="0.5,0.5">-->
-        <s:SurfaceButton Template="{StaticResource SurfaceButtonNoBackground}" Name="startBtn" HorizontalAlignment="Left" VerticalAlignment="Center" Command="{Binding StartGame}" Background="{x:Null}" IsHitTestVisible="{Binding StartScreenVisible}" RenderTransformOrigin="0.5,0.5" Margin="782,360,0,358">
+        <s:SurfaceButton Template="{StaticResource SurfaceButtonNoBackground}" Name="startBtn" HorizontalAlignment="Left" VerticalAlignment="Center" Command="{Binding StartGame}" Background="{x:Null}" IsHitTestVisible="{Binding StartScreenVisible}" RenderTransformOrigin="0.5,0.5" Margin="784,365,0,371">
             <s:SurfaceButton.RenderTransform>
                 <ScaleTransform x:Name="scaleBtnStart" ScaleX="1.0" ScaleY="1.0"/>
             </s:SurfaceButton.RenderTransform>
-            <Image Height="320" Width="320" Source="../Resources/UI/Main/BTNP_Start.png" />
+            <Image Height="316" Width="314" Source="../Resources/UI/Main/BTNP_Start.png" />
             <s:SurfaceButton.Triggers>
                 <EventTrigger RoutedEvent="Image.Loaded">
                     <BeginStoryboard Name="beginStartBtnAnim" Storyboard="{DynamicResource StartBtnAnimation}" />

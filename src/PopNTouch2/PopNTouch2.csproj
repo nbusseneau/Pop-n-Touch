@@ -176,6 +176,7 @@
     <Content Include="Resources\Songs\Thème Pokémon\Piano-Beginner.sheet">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Resource Include="Resources\UI\Menu\BTNP_BubbleBlue.png" />
     <Resource Include="Resources\UI\Instruments\BTNP_Voice.png" />
     <Content Include="Resources\Songs\New Born\Piano-Expert.sheet">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
