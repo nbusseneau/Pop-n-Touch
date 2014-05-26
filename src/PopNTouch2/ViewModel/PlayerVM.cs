@@ -274,6 +274,7 @@ namespace PopNTouch2.ViewModel
                             this.Player.NotReadyAnymore();
                             this.checkChoicesState();
                         }
+                        RaisePropertyChanged("Player");
                     }
                     );
                 return this.clickReady;
@@ -461,7 +462,7 @@ namespace PopNTouch2.ViewModel
                 if (this.clickLock == null)
                     this.clickLock = new RelayCommand(() =>
                     {
-                        this.canMove = !this.canMove;
+                        this.CanMove = !this.CanMove;
                     }
                     );
                 return this.clickLock;
