@@ -211,9 +211,9 @@
     <Resource Include="Resources\UI\Instruments\BTNP_InstruHard.png" />
     <Resource Include="Resources\UI\Instruments\BTNP_InstruMedium.png" />
     <Resource Include="Resources\UI\Instruments\BTNP_InstruEasy.png" />
-    <Resource Include="Resources\icon.png">
+    <Content Include="Resources\icon.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Resource>
+    </Content>
     <Resource Include="Resources\icon.ico" />
     <Content Include="Resources\Songs\Thème Pokémon\music.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
