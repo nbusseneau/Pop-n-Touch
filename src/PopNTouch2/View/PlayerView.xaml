@@ -272,7 +272,7 @@
 
         <!-- Stave -->
         <TextBlock Text="{Binding Combo}" FontFamily="../Resources/UI/Fonts/#Exo" Foreground="Black" TextAlignment="Center" FontSize="25" Width="30" Margin="143,96,477,269" Visibility="{Binding SheetMusicVM.Visibility, Converter={StaticResource bool2vis}}"/>
-        <PopNTouch2:SheetMusicView DataContext="{Binding SheetMusicVM}" Visibility="{Binding Visibility, Converter={StaticResource bool2vis}}" Margin="35,96,0,0" HorizontalAlignment="Left" Width="580" Height="210" VerticalAlignment="Top"/>
+        <PopNTouch2:SheetMusicView DataContext="{Binding SheetMusicVM}" Visibility="{Binding Visibility, Converter={StaticResource bool2vis}}" Margin="35,87,0,0" HorizontalAlignment="Left" Width="580" Height="210" VerticalAlignment="Top"/>
 
         <!-- Score -->
         <PopNTouch2:ScoreView DataContext="{Binding ScoreVM}" Visibility="{Binding ScoreVisibility, Converter={StaticResource bool2vis}}" Margin="28,80,0,0" Height="216" Width="593" VerticalAlignment="Top" HorizontalAlignment="Left"/>
