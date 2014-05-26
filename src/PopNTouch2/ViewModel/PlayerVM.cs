@@ -346,7 +346,7 @@ namespace PopNTouch2.ViewModel
         {
             CloneableStopwatch csw = this.Player.Stopwatch.Clone();
             csw.Stop();
-            double elapsedTime = this.Player.Stopwatch.ElapsedMilliseconds;
+            double elapsedTime = csw.ElapsedMilliseconds;
 
             List<Tuple<double, double, Note>> playingNotes = this.Player.SheetMusic.Notes.FindAll(t => t.Item3.State == NoteState.Playing && t.Item3.Height == height);
             if (playingNotes.Count == 0)
